@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Forms · Diarito UI Library</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Englebert&amp;family=Noto+Sans+KR:wght@400;500;600;700&amp;family=Poor+Story&amp;family=Roboto:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons@3.3.1/css/regular/rounded.css" rel="stylesheet"/>
+<link href="https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-straight/css/uicons-regular-straight.css" rel="stylesheet"/>
+<link href="assets/images/favicon-64.png" rel="icon" type="image/png"/>
+<link href="assets/css/diarito-components.css" rel="stylesheet"/>
+<link href="assets/css/docs.css" rel="stylesheet"/>
+</head>
+<body data-page="forms">
+<script src="assets/js/auth.js"></script>
+<div class="diarito-app">
+<aside class="diarito-sidebar docs-sidebar" data-diarito-sidebar="" id="diarito-sidebar"><div class="diarito-sidebar__brand"><a aria-label="Go to Typography" class="docs-wordmark-link" href="typography.html"><span class="diarito-wordmark diarito-wordmark--full">Diarito</span><span aria-hidden="true" class="diarito-wordmark diarito-wordmark--compact">D</span></a></div><div class="diarito-sidebar__scroll" data-diarito-nav-root=""><div class="diarito-nav-section"><div class="diarito-nav-section__label">Components</div><ul class="diarito-nav"><li><a class="diarito-nav__link" data-docs-nav="typography" href="typography.html"><span class="diarito-icon" data-icon="file"></span><span class="diarito-nav__label">Typography</span></a></li><li><a class="diarito-nav__link" data-docs-nav="foundations" href="foundations.html"><span class="diarito-icon" data-icon="palette"></span><span class="diarito-nav__label">Colors &amp; tokens</span></a></li><li><a class="diarito-nav__link" data-docs-nav="textures" href="textures.html"><span class="diarito-icon" data-icon="layers"></span><span class="diarito-nav__label">Textures</span></a></li><li><a class="diarito-nav__link" data-docs-nav="buttons" href="buttons.html"><span class="diarito-icon" data-icon="apps"></span><span class="diarito-nav__label">Buttons</span></a></li><li><a class="diarito-nav__link" data-docs-nav="badges" href="badges.html"><span class="diarito-icon" data-icon="verified"></span><span class="diarito-nav__label">Badges</span></a></li><li><a class="diarito-nav__link" data-docs-nav="alerts" href="alerts.html"><span class="diarito-icon" data-icon="alert"></span><span class="diarito-nav__label">Inline alerts</span></a></li><li><a class="diarito-nav__link" data-docs-nav="cards" href="cards.html"><span class="diarito-icon" data-icon="card"></span><span class="diarito-nav__label">Cards</span></a></li><li><a class="diarito-nav__link" data-docs-nav="forms" href="forms.html"><span class="diarito-icon" data-icon="edit"></span><span class="diarito-nav__label">Forms</span></a></li><li><a class="diarito-nav__link" data-docs-nav="navigation" href="navigation.html"><span class="diarito-icon" data-icon="list"></span><span class="diarito-nav__label">Tabs &amp; steppers</span></a></li><li><a class="diarito-nav__link" data-docs-nav="breadcrumbs" href="breadcrumbs-pagination.html"><span class="diarito-icon" data-icon="arrowRight"></span><span class="diarito-nav__label">Breadcrumbs &amp; pagination</span></a></li><li><a class="diarito-nav__link" data-docs-nav="tables" href="tables.html"><span class="diarito-icon" data-icon="layers"></span><span class="diarito-nav__label">Tables</span></a></li><li><a class="diarito-nav__link" data-docs-nav="toasts" href="toasts.html"><span class="diarito-icon" data-icon="notification"></span><span class="diarito-nav__label">Toasts</span></a></li><li><a class="diarito-nav__link" data-docs-nav="modals" href="modals.html"><span class="diarito-icon" data-icon="window"></span><span class="diarito-nav__label">Modals</span></a></li><li><a class="diarito-nav__link" data-docs-nav="states" href="states.html"><span class="diarito-icon" data-icon="search"></span><span class="diarito-nav__label">States</span></a></li><li><a class="diarito-nav__link" data-docs-nav="rules" href="rules.html"><span class="diarito-icon" data-icon="book"></span><span class="diarito-nav__label">Rules</span></a></li><li><a class="diarito-nav__link" data-docs-nav="landing" href="landing.html"><span class="diarito-icon" data-icon="globe"></span><span class="diarito-nav__label">Landing Page</span></a></li></ul></div></div></aside>
+<div class="diarito-sidebar-backdrop" data-diarito-sidebar-backdrop=""></div>
+<div class="diarito-main">
+<header class="diarito-topbar">
+<button aria-controls="diarito-sidebar" aria-expanded="false" aria-label="Toggle navigation" class="diarito-button diarito-button--ghost diarito-button--icon diarito-topbar__menu" data-diarito-sidebar-toggle="" type="button"><span class="diarito-icon" data-icon="menu"></span></button>
+<div class="diarito-topbar__actions"><button class="diarito-button diarito-button--neutral diarito-button--sm" data-library-logout="" type="button"><span class="diarito-icon" data-icon="logout"></span>Exit</button></div>
+</header>
+<main class="diarito-content">
+<div class="diarito-page-header">
+<div>
+<h1 class="diarito-page-header__title">Forms</h1>
+<p class="diarito-page-header__description docs-page-intro">Text, contact, date, quantity, selection, file, color, and state fields built with Diarito’s real controls.</p>
+</div>
+</div>
+<section class="docs-section">
+<div class="docs-section-heading"><div><h2>Text, contact & search</h2><p>Native types change their semantics, not the visual identity: same height, surface, radius, and typography. Controls use the approved one-pixel border and focus state.</p></div></div>
+<div class="docs-example">
+<div class="docs-example__meta"><span>Preview</span><span>HTML</span></div>
+<div class="docs-example__preview docs-example__preview--plain"><div class="docs-form-sample-grid"><div class="diarito-form-field"><label class="diarito-label" for="input-text">Text <span class="diarito-required">*</span></label><input class="diarito-input" id="input-text" type="text" value="Diarito"/><span class="diarito-field-help">Optional helper text.</span></div><div class="diarito-form-field"><label class="diarito-label" for="input-email">Email</label><input class="diarito-input" id="input-email" type="email" value="hola@diarito.app"/></div><div class="diarito-form-field"><label class="diarito-label" for="input-phone">Phone</label><input class="diarito-input" id="input-phone" type="tel" value="9999-9999"/></div><div class="diarito-form-field"><label class="diarito-label" for="input-url">Website</label><input class="diarito-input" id="input-url" type="url" value="https://diarito.app"/></div><div class="diarito-form-field"><label class="diarito-label" for="input-password">Password</label><div class="diarito-input-action"><input autocomplete="off" class="diarito-input" id="input-password" type="password" value="DIARITO2026!"/><button aria-label="Show password" class="diarito-input-action__button" data-diarito-password-toggle="input-password" type="button"><span class="diarito-icon" data-icon="eye"></span></button></div></div><div class="diarito-form-field"><label class="diarito-label" for="input-search">Search</label><div class="diarito-search-field"><span class="diarito-icon" data-icon="search"></span><input class="diarito-input" id="input-search" placeholder="Search..." type="search"/></div></div></div></div>
+<div class="docs-code-shell"><button class="docs-code-copy" data-code-copy="" type="button">Copy</button><pre><code>&lt;input class="diarito-input" type="text"&gt;
+&lt;input class="diarito-input" type="email"&gt;
+&lt;input class="diarito-input" type="tel"&gt;
+&lt;input class="diarito-input" type="url"&gt;
+&lt;div class="diarito-input-action"&gt;
+  &lt;input class="diarito-input" id="password" type="password"&gt;
+  &lt;button class="diarito-input-action__button" data-diarito-password-toggle="password"&gt;&lt;span class="diarito-icon" data-icon="eye"&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class="diarito-search-field"&gt;
+  &lt;span class="diarito-icon" data-icon="search"&gt;&lt;/span&gt;
+  &lt;input class="diarito-input" type="search"&gt;
+&lt;/div&gt;</code></pre></div>
+</div>
+</section><section class="docs-section">
+<div class="docs-section-heading"><div><h2>Quantities, dates & time</h2><p>Numeric and temporal inputs keep the same base control. Prefixes and suffixes are added as input groups, not as floating text outside the field.</p></div></div>
+<div class="docs-example">
+<div class="docs-example__meta"><span>Preview</span><span>HTML</span></div>
+<div class="docs-example__preview docs-example__preview--plain"><div class="docs-form-sample-grid docs-form-sample-grid--3"><div class="diarito-form-field"><label class="diarito-label" for="input-number">Quantity</label><input class="diarito-input" id="input-number" min="0" type="number" value="25"/></div><div class="diarito-form-field"><label class="diarito-label" for="input-date">Date</label><input class="diarito-input" id="input-date" type="date" value="2026-09-21"/></div><div class="diarito-form-field"><label class="diarito-label" for="input-time">Time</label><input class="diarito-input" id="input-time" type="time" value="14:30"/></div><div class="diarito-form-field"><label class="diarito-label" for="input-datetime">Date & time</label><input class="diarito-input" id="input-datetime" type="datetime-local" value="2026-09-21T14:30"/></div><div class="diarito-form-field"><label class="diarito-label" for="input-percent">Percentage</label><div class="diarito-input-group"><input class="diarito-input" id="input-percent" type="number" value="25"/><span class="diarito-input-group__suffix">%</span></div></div><div class="diarito-form-field"><label class="diarito-label" for="input-money">Amount</label><div class="diarito-input-group"><span class="diarito-input-group__addon">$</span><input class="diarito-input" id="input-money" step="0.01" type="number" value="125.00"/></div></div></div></div>
+<div class="docs-code-shell"><button class="docs-code-copy" data-code-copy="" type="button">Copy</button><pre><code>&lt;input class="diarito-input" type="number"&gt;
+&lt;input class="diarito-input" type="date"&gt;
+&lt;input class="diarito-input" type="time"&gt;
+&lt;input class="diarito-input" type="datetime-local"&gt;
+&lt;div class="diarito-input-group"&gt;
+  &lt;input class="diarito-input" type="number"&gt;
+  &lt;span class="diarito-input-group__suffix"&gt;%&lt;/span&gt;
+&lt;/div&gt;</code></pre></div>
+</div>
+</section><section class="docs-section">
+<div class="docs-section-heading"><div><h2>Selection</h2><p>Selects, multi-selects, radios, checkboxes, and switches are chosen based on the number of options and decision type, without inventing screen-specific visual variants.</p></div></div>
+<div class="docs-example">
+<div class="docs-example__meta"><span>Preview</span><span>HTML</span></div>
+<div class="docs-example__preview docs-example__preview--plain"><div class="docs-form-sample-grid"><div class="diarito-form-field"><label class="diarito-label" for="input-select">Select</label><select class="diarito-select" id="input-select"><option>Spanish</option><option>English</option><option>한국어</option></select></div><div class="diarito-form-field"><label class="diarito-label" for="input-multiple">Multiple select</label><select class="diarito-select" id="input-multiple" multiple=""><option selected="">Daily writing</option><option selected="">Conversation</option><option>Vocabulary</option><option>Pronunciation</option></select></div><fieldset class="diarito-form-fieldset"><legend>Visibility</legend><div class="diarito-stack diarito-stack--sm"><label class="diarito-check"><input checked="" name="demo-mode" type="radio"/><span>Public</span></label><label class="diarito-check"><input name="demo-mode" type="radio"/><span>Only me</span></label></div></fieldset><fieldset class="diarito-form-fieldset"><legend>Options</legend><div class="diarito-stack diarito-stack--sm"><label class="diarito-check"><input checked="" type="checkbox"/><span>Send notifications</span></label><label class="diarito-switch"><input checked="" type="checkbox"/><span class="diarito-switch__track"><span class="diarito-switch__thumb"></span></span><span class="diarito-switch__label">Active</span></label></div></fieldset></div></div>
+<div class="docs-code-shell"><button class="docs-code-copy" data-code-copy="" type="button">Copy</button><pre><code>&lt;select class="diarito-select"&gt;...&lt;/select&gt;
+&lt;select class="diarito-select" multiple&gt;...&lt;/select&gt;
+&lt;label class="diarito-check"&gt;&lt;input type="radio" name="mode"&gt;&lt;span&gt;Virtual&lt;/span&gt;&lt;/label&gt;
+&lt;label class="diarito-check"&gt;&lt;input type="checkbox"&gt;&lt;span&gt;Send notifications&lt;/span&gt;&lt;/label&gt;
+&lt;label class="diarito-switch"&gt;&lt;input type="checkbox"&gt;&lt;span class="diarito-switch__track"&gt;&lt;span class="diarito-switch__thumb"&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="diarito-switch__label"&gt;Active&lt;/span&gt;&lt;/label&gt;</code></pre></div>
+</div>
+</section><section class="docs-section">
+<div class="docs-section-heading"><div><h2>Content, files, color & readonly</h2><p>Textareas, file uploads, color pickers, and read-only values follow the existing Diarito patterns.</p></div></div>
+<div class="docs-example">
+<div class="docs-example__meta"><span>Preview</span><span>HTML</span></div>
+<div class="docs-example__preview docs-example__preview--plain"><div class="docs-form-sample-grid"><div class="diarito-form-field"><label class="diarito-label" for="input-textarea">Description</label><textarea class="diarito-textarea" id="input-textarea">Descriptive text for the record.</textarea></div><div class="diarito-form-field"><label class="diarito-label" for="input-file">File</label><input class="diarito-input" id="input-file" type="file"/><span class="diarito-field-help">PDF, PNG, or JPG depending on context.</span></div><div class="diarito-form-field"><label class="diarito-label" for="input-color-text">Primary color</label><div class="diarito-color-input"><input class="diarito-input" id="input-color-text" type="text" value="#00BFA0"/><input aria-label="Seleccionar color principal" class="diarito-color-input__picker" type="color" value="#00bfa0"/></div></div><div class="diarito-form-field"><label class="diarito-label">Code</label><div class="diarito-readonly-field"><span class="diarito-code">HN-000128</span></div></div></div></div>
+<div class="docs-code-shell"><button class="docs-code-copy" data-code-copy="" type="button">Copy</button><pre><code>&lt;textarea class="diarito-textarea"&gt;&lt;/textarea&gt;
+&lt;input class="diarito-input" type="file"&gt;
+&lt;div class="diarito-color-input"&gt;
+  &lt;input class="diarito-input" type="text" value="#00BFA0"&gt;
+  &lt;input class="diarito-color-input__picker" type="color" value="#00bfa0"&gt;
+&lt;/div&gt;
+&lt;div class="diarito-readonly-field"&gt;&lt;span class="diarito-code"&gt;HN-000128&lt;/span&gt;&lt;/div&gt;</code></pre></div>
+</div>
+</section><section class="docs-section">
+<div class="docs-section-heading"><div><h2>Field states</h2><p>Disabled, error, and helper text are states of the same control. We do not create visually different inputs for each screen.</p></div></div>
+<div class="docs-example">
+<div class="docs-example__meta"><span>Preview</span><span>HTML</span></div>
+<div class="docs-example__preview docs-example__preview--plain"><div class="docs-form-sample-grid"><div class="diarito-form-field"><label class="diarito-label">Disabled field</label><input class="diarito-input" disabled="" value="Not editable"/></div><div class="diarito-form-field"><label class="diarito-label">Disabled select</label><select class="diarito-select" disabled=""><option>Unavailable</option></select></div><div class="diarito-form-field has-error"><label class="diarito-label" for="input-invalid">Email with error</label><input aria-invalid="true" class="diarito-input" id="input-invalid" value="invalid-email"/><span class="diarito-field-error">Enter a valid email.</span></div><div class="diarito-form-field"><label class="diarito-label" for="input-helper">Field with helper text</label><input class="diarito-input" id="input-helper" placeholder="e.g. HN-000001"/><span class="diarito-field-help">Helper text explains format or context without competing with the label.</span></div></div></div>
+<div class="docs-code-shell"><button class="docs-code-copy" data-code-copy="" type="button">Copy</button><pre><code>&lt;input class="diarito-input" disabled&gt;
+&lt;select class="diarito-select" disabled&gt;...&lt;/select&gt;
+&lt;div class="diarito-form-field has-error"&gt;
+  &lt;label class="diarito-label"&gt;Email&lt;/label&gt;
+  &lt;input class="diarito-input" aria-invalid="true"&gt;
+  &lt;span class="diarito-field-error"&gt;Enter a valid email.&lt;/span&gt;
+&lt;/div&gt;</code></pre></div>
+</div>
+</section></main>
+</div>
+</div>
+<div aria-atomic="true" aria-live="polite" class="diarito-toast-region"></div>
+<script src="assets/js/diarito-components.js"></script>
+<script src="assets/js/library.js"></script>
+</body>
+</html>

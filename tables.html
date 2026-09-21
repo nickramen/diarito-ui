@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Tables · Diarito UI Library</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Englebert&amp;family=Noto+Sans+KR:wght@400;500;600;700&amp;family=Poor+Story&amp;family=Roboto:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons@3.3.1/css/regular/rounded.css" rel="stylesheet"/>
+<link href="https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-straight/css/uicons-regular-straight.css" rel="stylesheet"/>
+<link href="assets/images/favicon-64.png" rel="icon" type="image/png"/>
+<link href="assets/css/diarito-components.css" rel="stylesheet"/>
+<link href="assets/css/docs.css" rel="stylesheet"/>
+</head>
+<body data-page="tables">
+<script src="assets/js/auth.js"></script>
+<div class="diarito-app">
+<aside class="diarito-sidebar docs-sidebar" data-diarito-sidebar="" id="diarito-sidebar"><div class="diarito-sidebar__brand"><a aria-label="Go to Typography" class="docs-wordmark-link" href="typography.html"><span class="diarito-wordmark diarito-wordmark--full">Diarito</span><span aria-hidden="true" class="diarito-wordmark diarito-wordmark--compact">D</span></a></div><div class="diarito-sidebar__scroll" data-diarito-nav-root=""><div class="diarito-nav-section"><div class="diarito-nav-section__label">Components</div><ul class="diarito-nav"><li><a class="diarito-nav__link" data-docs-nav="typography" href="typography.html"><span class="diarito-icon" data-icon="file"></span><span class="diarito-nav__label">Typography</span></a></li><li><a class="diarito-nav__link" data-docs-nav="foundations" href="foundations.html"><span class="diarito-icon" data-icon="palette"></span><span class="diarito-nav__label">Colors &amp; tokens</span></a></li><li><a class="diarito-nav__link" data-docs-nav="textures" href="textures.html"><span class="diarito-icon" data-icon="layers"></span><span class="diarito-nav__label">Textures</span></a></li><li><a class="diarito-nav__link" data-docs-nav="buttons" href="buttons.html"><span class="diarito-icon" data-icon="apps"></span><span class="diarito-nav__label">Buttons</span></a></li><li><a class="diarito-nav__link" data-docs-nav="badges" href="badges.html"><span class="diarito-icon" data-icon="verified"></span><span class="diarito-nav__label">Badges</span></a></li><li><a class="diarito-nav__link" data-docs-nav="alerts" href="alerts.html"><span class="diarito-icon" data-icon="alert"></span><span class="diarito-nav__label">Inline alerts</span></a></li><li><a class="diarito-nav__link" data-docs-nav="cards" href="cards.html"><span class="diarito-icon" data-icon="card"></span><span class="diarito-nav__label">Cards</span></a></li><li><a class="diarito-nav__link" data-docs-nav="forms" href="forms.html"><span class="diarito-icon" data-icon="edit"></span><span class="diarito-nav__label">Forms</span></a></li><li><a class="diarito-nav__link" data-docs-nav="navigation" href="navigation.html"><span class="diarito-icon" data-icon="list"></span><span class="diarito-nav__label">Tabs &amp; steppers</span></a></li><li><a class="diarito-nav__link" data-docs-nav="breadcrumbs" href="breadcrumbs-pagination.html"><span class="diarito-icon" data-icon="arrowRight"></span><span class="diarito-nav__label">Breadcrumbs &amp; pagination</span></a></li><li><a class="diarito-nav__link" data-docs-nav="tables" href="tables.html"><span class="diarito-icon" data-icon="layers"></span><span class="diarito-nav__label">Tables</span></a></li><li><a class="diarito-nav__link" data-docs-nav="toasts" href="toasts.html"><span class="diarito-icon" data-icon="notification"></span><span class="diarito-nav__label">Toasts</span></a></li><li><a class="diarito-nav__link" data-docs-nav="modals" href="modals.html"><span class="diarito-icon" data-icon="window"></span><span class="diarito-nav__label">Modals</span></a></li><li><a class="diarito-nav__link" data-docs-nav="states" href="states.html"><span class="diarito-icon" data-icon="search"></span><span class="diarito-nav__label">States</span></a></li><li><a class="diarito-nav__link" data-docs-nav="rules" href="rules.html"><span class="diarito-icon" data-icon="book"></span><span class="diarito-nav__label">Rules</span></a></li><li><a class="diarito-nav__link" data-docs-nav="landing" href="landing.html"><span class="diarito-icon" data-icon="globe"></span><span class="diarito-nav__label">Landing Page</span></a></li></ul></div></div></aside>
+<div class="diarito-sidebar-backdrop" data-diarito-sidebar-backdrop=""></div>
+<div class="diarito-main">
+<header class="diarito-topbar">
+<button aria-controls="diarito-sidebar" aria-expanded="false" aria-label="Toggle navigation" class="diarito-button diarito-button--ghost diarito-button--icon diarito-topbar__menu" data-diarito-sidebar-toggle="" type="button"><span class="diarito-icon" data-icon="menu"></span></button>
+<div class="diarito-topbar__actions"><button class="diarito-button diarito-button--neutral diarito-button--sm" data-library-logout="" type="button"><span class="diarito-icon" data-icon="logout"></span>Exit</button></div>
+</header>
+<main class="diarito-content">
+<div class="diarito-page-header">
+<div>
+<h1 class="diarito-page-header__title">Tables</h1>
+<p class="diarito-page-header__description docs-page-intro">Administrative tables with toolbar, secondary cells, actions, and footer.</p>
+</div>
+</div>
+<section class="docs-section">
+<div class="docs-section-heading"><div><h2>Administrative table</h2><p>Toolbar on top, horizontal scroll when needed, primary/secondary text, and grouped actions.</p></div></div>
+<div class="docs-example">
+<div class="docs-example__meta"><span>Preview</span><span>HTML</span></div>
+<div class="docs-example__preview docs-example__preview--plain"><div class="diarito-card"><div class="diarito-data-toolbar"><div class="diarito-search-input"><span class="diarito-icon" data-icon="search"></span><input class="diarito-input" placeholder="Search person..." type="search"/></div><div class="diarito-data-toolbar__actions"><button class="diarito-button diarito-button--secondary diarito-button--sm"><span class="diarito-icon" data-icon="filter"></span>Filters</button><button class="diarito-button diarito-button--primary diarito-button--sm"><span class="diarito-icon" data-icon="plus"></span>New</button></div></div><div class="diarito-table-wrap"><table class="diarito-table docs-table-demo"><thead><tr><th>Person</th><th>Email</th><th>States</th><th>Last activity</th><th class="diarito-text-right">Actions</th></tr></thead><tbody><tr><td><div class="diarito-table__person"><span class="diarito-avatar diarito-avatar--sm diarito-avatar--initials">AL</span><div><span class="diarito-table__primary">Ana Lopez</span><span class="diarito-table__secondary diarito-code">HN-000128</span></div></div></td><td><span class="diarito-table__primary">ana.lopez@example.com</span><span class="diarito-table__secondary">Email verified</span></td><td><span class="diarito-badge diarito-badge--success">Active</span></td><td><span class="diarito-table__primary">20/09/2026</span><span class="diarito-table__secondary">14:30</span></td><td><div class="diarito-table__actions"><button aria-label="View" class="diarito-action-button diarito-action-button--view"><span class="diarito-icon" data-icon="eye"></span></button><button aria-label="Edit" class="diarito-action-button diarito-action-button--edit"><span class="diarito-icon" data-icon="edit"></span></button></div></td></tr><tr><td><div class="diarito-table__person"><span class="diarito-avatar diarito-avatar--sm diarito-avatar--accent diarito-avatar--initials">CM</span><div><span class="diarito-table__primary">Carlos Mejia</span><span class="diarito-table__secondary diarito-code">HN-000129</span></div></div></td><td><span class="diarito-table__primary">carlos.mejia@example.com</span><span class="diarito-table__secondary">Invitation sent</span></td><td><span class="diarito-badge diarito-badge--warning">Pending</span></td><td><span class="diarito-table__primary">18/09/2026</span><span class="diarito-table__secondary">09:15</span></td><td><div class="diarito-table__actions"><button aria-label="View" class="diarito-action-button diarito-action-button--view"><span class="diarito-icon" data-icon="eye"></span></button><button aria-label="Edit" class="diarito-action-button diarito-action-button--edit"><span class="diarito-icon" data-icon="edit"></span></button></div></td></tr></tbody></table></div><div class="diarito-table-footer"><p class="diarito-table-footer__summary">Showing 2 of 24 records</p><div class="diarito-pagination"><button aria-label="Previous page" disabled="" title="Previous page"><span class="diarito-icon" data-icon="arrowLeft"></span></button><button aria-current="page" class="is-active">1</button><button>2</button><button>3</button><button aria-label="Next page" title="Next page"><span class="diarito-icon" data-icon="arrowRight"></span></button></div></div></div></div>
+<div class="docs-code-shell"><button class="docs-code-copy" data-code-copy="" type="button">Copy</button><pre><code>&lt;div class="diarito-table-wrap"&gt;
+  &lt;table class="diarito-table"&gt;...&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class="diarito-table-footer"&gt;
+  &lt;p class="diarito-table-footer__summary"&gt;Showing 2 of 24 records&lt;/p&gt;
+  &lt;nav class="diarito-pagination" aria-label="Record pagination"&gt;
+    &lt;button aria-label="Previous page" disabled&gt;&lt;span class="diarito-icon" data-icon="arrowLeft"&gt;&lt;/span&gt;&lt;/button&gt;
+    &lt;button class="is-active" aria-current="page"&gt;1&lt;/button&gt;
+    &lt;button&gt;2&lt;/button&gt;
+    &lt;button&gt;3&lt;/button&gt;
+    &lt;button aria-label="Next page"&gt;&lt;span class="diarito-icon" data-icon="arrowRight"&gt;&lt;/span&gt;&lt;/button&gt;
+  &lt;/nav&gt;
+&lt;/div&gt;</code></pre></div>
+</div>
+</section>
+</main>
+</div>
+</div>
+<div aria-atomic="true" aria-live="polite" class="diarito-toast-region"></div>
+<script src="assets/js/diarito-components.js"></script>
+<script src="assets/js/library.js"></script>
+</body>
+</html>

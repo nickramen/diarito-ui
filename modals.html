@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Modals · Diarito UI Library</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Englebert&amp;family=Noto+Sans+KR:wght@400;500;600;700&amp;family=Poor+Story&amp;family=Roboto:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons@3.3.1/css/regular/rounded.css" rel="stylesheet"/>
+<link href="https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-straight/css/uicons-regular-straight.css" rel="stylesheet"/>
+<link href="assets/images/favicon-64.png" rel="icon" type="image/png"/>
+<link href="assets/css/diarito-components.css" rel="stylesheet"/>
+<link href="assets/css/docs.css" rel="stylesheet"/>
+</head>
+<body data-page="modals">
+<script src="assets/js/auth.js"></script>
+<div class="diarito-app">
+<aside class="diarito-sidebar docs-sidebar" data-diarito-sidebar="" id="diarito-sidebar"><div class="diarito-sidebar__brand"><a aria-label="Go to Typography" class="docs-wordmark-link" href="typography.html"><span class="diarito-wordmark diarito-wordmark--full">Diarito</span><span aria-hidden="true" class="diarito-wordmark diarito-wordmark--compact">D</span></a></div><div class="diarito-sidebar__scroll" data-diarito-nav-root=""><div class="diarito-nav-section"><div class="diarito-nav-section__label">Components</div><ul class="diarito-nav"><li><a class="diarito-nav__link" data-docs-nav="typography" href="typography.html"><span class="diarito-icon" data-icon="file"></span><span class="diarito-nav__label">Typography</span></a></li><li><a class="diarito-nav__link" data-docs-nav="foundations" href="foundations.html"><span class="diarito-icon" data-icon="palette"></span><span class="diarito-nav__label">Colors &amp; tokens</span></a></li><li><a class="diarito-nav__link" data-docs-nav="textures" href="textures.html"><span class="diarito-icon" data-icon="layers"></span><span class="diarito-nav__label">Textures</span></a></li><li><a class="diarito-nav__link" data-docs-nav="buttons" href="buttons.html"><span class="diarito-icon" data-icon="apps"></span><span class="diarito-nav__label">Buttons</span></a></li><li><a class="diarito-nav__link" data-docs-nav="badges" href="badges.html"><span class="diarito-icon" data-icon="verified"></span><span class="diarito-nav__label">Badges</span></a></li><li><a class="diarito-nav__link" data-docs-nav="alerts" href="alerts.html"><span class="diarito-icon" data-icon="alert"></span><span class="diarito-nav__label">Inline alerts</span></a></li><li><a class="diarito-nav__link" data-docs-nav="cards" href="cards.html"><span class="diarito-icon" data-icon="card"></span><span class="diarito-nav__label">Cards</span></a></li><li><a class="diarito-nav__link" data-docs-nav="forms" href="forms.html"><span class="diarito-icon" data-icon="edit"></span><span class="diarito-nav__label">Forms</span></a></li><li><a class="diarito-nav__link" data-docs-nav="navigation" href="navigation.html"><span class="diarito-icon" data-icon="list"></span><span class="diarito-nav__label">Tabs &amp; steppers</span></a></li><li><a class="diarito-nav__link" data-docs-nav="breadcrumbs" href="breadcrumbs-pagination.html"><span class="diarito-icon" data-icon="arrowRight"></span><span class="diarito-nav__label">Breadcrumbs &amp; pagination</span></a></li><li><a class="diarito-nav__link" data-docs-nav="tables" href="tables.html"><span class="diarito-icon" data-icon="layers"></span><span class="diarito-nav__label">Tables</span></a></li><li><a class="diarito-nav__link" data-docs-nav="toasts" href="toasts.html"><span class="diarito-icon" data-icon="notification"></span><span class="diarito-nav__label">Toasts</span></a></li><li><a class="diarito-nav__link" data-docs-nav="modals" href="modals.html"><span class="diarito-icon" data-icon="window"></span><span class="diarito-nav__label">Modals</span></a></li><li><a class="diarito-nav__link" data-docs-nav="states" href="states.html"><span class="diarito-icon" data-icon="search"></span><span class="diarito-nav__label">States</span></a></li><li><a class="diarito-nav__link" data-docs-nav="rules" href="rules.html"><span class="diarito-icon" data-icon="book"></span><span class="diarito-nav__label">Rules</span></a></li><li><a class="diarito-nav__link" data-docs-nav="landing" href="landing.html"><span class="diarito-icon" data-icon="globe"></span><span class="diarito-nav__label">Landing Page</span></a></li></ul></div></div></aside>
+<div class="diarito-sidebar-backdrop" data-diarito-sidebar-backdrop=""></div>
+<div class="diarito-main">
+<header class="diarito-topbar">
+<button aria-controls="diarito-sidebar" aria-expanded="false" aria-label="Toggle navigation" class="diarito-button diarito-button--ghost diarito-button--icon diarito-topbar__menu" data-diarito-sidebar-toggle="" type="button"><span class="diarito-icon" data-icon="menu"></span></button>
+<div class="diarito-topbar__actions"><button class="diarito-button diarito-button--neutral diarito-button--sm" data-library-logout="" type="button"><span class="diarito-icon" data-icon="logout"></span>Exit</button></div>
+</header>
+<main class="diarito-content">
+<div class="diarito-page-header">
+<div>
+<h1 class="diarito-page-header__title">Modals</h1>
+<p class="diarito-page-header__description docs-page-intro">Modal dialogs with header, body, footer, and accessible closing behavior.</p>
+</div>
+</div>
+<section class="docs-section">
+<div class="docs-section-heading"><div><h2>Modal & dropdown</h2><p>Modals have a clear header/body/footer structure and close with Escape, the backdrop, or close buttons.</p></div></div>
+<div class="docs-example">
+<div class="docs-example__meta"><span>Preview</span><span>HTML</span></div>
+<div class="docs-example__preview"><div class="docs-component-row"><button class="diarito-button diarito-button--primary" data-diarito-modal-open="docs-modal" type="button"><span class="diarito-icon" data-icon="window"></span>Open modal</button><div class="diarito-dropdown"><button aria-expanded="false" class="diarito-button diarito-button--secondary" data-diarito-dropdown-trigger="" type="button"><span class="diarito-icon" data-icon="apps"></span>More options <span class="diarito-icon" data-icon="chevronDown"></span></button><div class="diarito-dropdown__menu" data-diarito-dropdown-menu=""><button class="diarito-dropdown__item" type="button"><span class="diarito-icon" data-icon="edit"></span>Edit</button><button class="diarito-dropdown__item" type="button"><span class="diarito-icon" data-icon="copy"></span>Duplicate</button><div class="diarito-dropdown__divider"></div><button class="diarito-dropdown__item diarito-dropdown__item--danger" type="button"><span class="diarito-icon" data-icon="trash"></span>Delete</button></div></div></div></div><div aria-hidden="true" aria-labelledby="docs-modal-title" aria-modal="true" class="diarito-modal" data-diarito-modal="docs-modal" role="dialog"><div class="diarito-modal__dialog"><div class="diarito-modal__header"><div><h2 id="docs-modal-title">Confirm changes</h2><p>Review the information before continuing.</p></div><button aria-label="Close" class="diarito-modal__close" data-diarito-modal-close="" type="button"><span class="diarito-icon" data-icon="close"></span></button></div><div class="diarito-modal__body"><p class="docs-modal-demo-message">This is a functional static modal with Diarito’s base behavior.</p></div><div class="diarito-modal__footer"><button class="diarito-button diarito-button--secondary" data-diarito-modal-close="" type="button">Cancel</button><button class="diarito-button diarito-button--primary" data-diarito-modal-close="" type="button">Confirm</button></div></div></div></div>
+<div class="docs-code-shell"><button class="docs-code-copy" data-code-copy="" type="button">Copy</button><pre><code>&lt;button class="diarito-button diarito-button--primary" data-diarito-modal-open="example-modal"&gt;Open modal&lt;/button&gt;
+
+&lt;div class="diarito-modal" data-diarito-modal="example-modal" aria-hidden="true"&gt;
+  &lt;div class="diarito-modal__dialog"&gt;
+    &lt;div class="diarito-modal__header"&gt;...&lt;/div&gt;
+    &lt;div class="diarito-modal__body"&gt;...&lt;/div&gt;
+    &lt;div class="diarito-modal__footer"&gt;
+      &lt;button data-diarito-modal-close&gt;Cancel&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+</section></main></div>
+</div>
+<div aria-atomic="true" aria-live="polite" class="diarito-toast-region"></div>
+<script src="assets/js/diarito-components.js"></script>
+<script src="assets/js/library.js"></script>
+</body>
+</html>

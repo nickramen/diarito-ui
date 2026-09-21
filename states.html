@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>States · Diarito UI Library</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Englebert&amp;family=Noto+Sans+KR:wght@400;500;600;700&amp;family=Poor+Story&amp;family=Roboto:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons@3.3.1/css/regular/rounded.css" rel="stylesheet"/>
+<link href="https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-straight/css/uicons-regular-straight.css" rel="stylesheet"/>
+<link href="assets/images/favicon-64.png" rel="icon" type="image/png"/>
+<link href="assets/css/diarito-components.css" rel="stylesheet"/>
+<link href="assets/css/docs.css" rel="stylesheet"/>
+</head>
+<body data-page="states">
+<script src="assets/js/auth.js"></script>
+<div class="diarito-app">
+<aside class="diarito-sidebar docs-sidebar" data-diarito-sidebar="" id="diarito-sidebar"><div class="diarito-sidebar__brand"><a aria-label="Go to Typography" class="docs-wordmark-link" href="typography.html"><span class="diarito-wordmark diarito-wordmark--full">Diarito</span><span aria-hidden="true" class="diarito-wordmark diarito-wordmark--compact">D</span></a></div><div class="diarito-sidebar__scroll" data-diarito-nav-root=""><div class="diarito-nav-section"><div class="diarito-nav-section__label">Components</div><ul class="diarito-nav"><li><a class="diarito-nav__link" data-docs-nav="typography" href="typography.html"><span class="diarito-icon" data-icon="file"></span><span class="diarito-nav__label">Typography</span></a></li><li><a class="diarito-nav__link" data-docs-nav="foundations" href="foundations.html"><span class="diarito-icon" data-icon="palette"></span><span class="diarito-nav__label">Colors &amp; tokens</span></a></li><li><a class="diarito-nav__link" data-docs-nav="textures" href="textures.html"><span class="diarito-icon" data-icon="layers"></span><span class="diarito-nav__label">Textures</span></a></li><li><a class="diarito-nav__link" data-docs-nav="buttons" href="buttons.html"><span class="diarito-icon" data-icon="apps"></span><span class="diarito-nav__label">Buttons</span></a></li><li><a class="diarito-nav__link" data-docs-nav="badges" href="badges.html"><span class="diarito-icon" data-icon="verified"></span><span class="diarito-nav__label">Badges</span></a></li><li><a class="diarito-nav__link" data-docs-nav="alerts" href="alerts.html"><span class="diarito-icon" data-icon="alert"></span><span class="diarito-nav__label">Inline alerts</span></a></li><li><a class="diarito-nav__link" data-docs-nav="cards" href="cards.html"><span class="diarito-icon" data-icon="card"></span><span class="diarito-nav__label">Cards</span></a></li><li><a class="diarito-nav__link" data-docs-nav="forms" href="forms.html"><span class="diarito-icon" data-icon="edit"></span><span class="diarito-nav__label">Forms</span></a></li><li><a class="diarito-nav__link" data-docs-nav="navigation" href="navigation.html"><span class="diarito-icon" data-icon="list"></span><span class="diarito-nav__label">Tabs &amp; steppers</span></a></li><li><a class="diarito-nav__link" data-docs-nav="breadcrumbs" href="breadcrumbs-pagination.html"><span class="diarito-icon" data-icon="arrowRight"></span><span class="diarito-nav__label">Breadcrumbs &amp; pagination</span></a></li><li><a class="diarito-nav__link" data-docs-nav="tables" href="tables.html"><span class="diarito-icon" data-icon="layers"></span><span class="diarito-nav__label">Tables</span></a></li><li><a class="diarito-nav__link" data-docs-nav="toasts" href="toasts.html"><span class="diarito-icon" data-icon="notification"></span><span class="diarito-nav__label">Toasts</span></a></li><li><a class="diarito-nav__link" data-docs-nav="modals" href="modals.html"><span class="diarito-icon" data-icon="window"></span><span class="diarito-nav__label">Modals</span></a></li><li><a class="diarito-nav__link" data-docs-nav="states" href="states.html"><span class="diarito-icon" data-icon="search"></span><span class="diarito-nav__label">States</span></a></li><li><a class="diarito-nav__link" data-docs-nav="rules" href="rules.html"><span class="diarito-icon" data-icon="book"></span><span class="diarito-nav__label">Rules</span></a></li><li><a class="diarito-nav__link" data-docs-nav="landing" href="landing.html"><span class="diarito-icon" data-icon="globe"></span><span class="diarito-nav__label">Landing Page</span></a></li></ul></div></div></aside>
+<div class="diarito-sidebar-backdrop" data-diarito-sidebar-backdrop=""></div>
+<div class="diarito-main">
+<header class="diarito-topbar">
+<button aria-controls="diarito-sidebar" aria-expanded="false" aria-label="Toggle navigation" class="diarito-button diarito-button--ghost diarito-button--icon diarito-topbar__menu" data-diarito-sidebar-toggle="" type="button"><span class="diarito-icon" data-icon="menu"></span></button>
+<div class="diarito-topbar__actions"><button class="diarito-button diarito-button--neutral diarito-button--sm" data-library-logout="" type="button"><span class="diarito-icon" data-icon="logout"></span>Exit</button></div>
+</header>
+<main class="diarito-content">
+<div class="diarito-page-header">
+<div>
+<h1 class="diarito-page-header__title">States</h1>
+<p class="diarito-page-header__description docs-page-intro">Search and selection states that keep the same visual pattern from an empty field to a loaded result.</p>
+</div>
+</div>
+<section class="docs-section">
+<div class="docs-section-heading"><div><h2>Search bar</h2><p>The search bar is a normal system input with an integrated search icon. It does not need a card, internal title, or extra background.</p></div></div>
+<div class="docs-example">
+<div class="docs-example__meta"><span>Preview</span><span>HTML</span></div>
+<div class="docs-example__preview"><div class="diarito-search-field"><span class="diarito-icon" data-icon="search"></span><input aria-label="Search records" class="diarito-input" placeholder="Search by name, email, or code..." type="search"/></div></div>
+<div class="docs-code-shell"><button class="docs-code-copy" data-code-copy="" type="button">Copy</button><pre><code>&lt;div class="diarito-search-field"&gt;
+  &lt;span class="diarito-icon" data-icon="search"&gt;&lt;/span&gt;
+  &lt;input class="diarito-input" type="search" placeholder="Search by name, email, or code..." aria-label="Search records"&gt;
+&lt;/div&gt;</code></pre></div>
+</div>
+</section><section class="docs-section">
+<div class="docs-section-heading"><div><h2>Empty search</h2><p>When a search finishes with no matches, keep the same search bar and show an empty state directly below.</p></div></div>
+<div class="docs-example">
+<div class="docs-example__meta"><span>Preview</span><span>HTML</span></div>
+<div class="docs-example__preview docs-example__preview--plain"><div class="docs-search-state"><div class="docs-search-state__surface"><div class="docs-search-state__toolbar"><div class="diarito-search-field"><span class="diarito-icon" data-icon="search"></span><input aria-label="Search records" class="diarito-input" type="search" value="space weather"/></div></div><div class="diarito-empty"><div class="diarito-empty__icon"><span class="diarito-icon" data-icon="search"></span></div><h3>No results</h3><p>We found no records matching “space weather”.</p></div></div></div></div>
+<div class="docs-code-shell"><button class="docs-code-copy" data-code-copy="" type="button">Copy</button><pre><code>&lt;div class="diarito-search-field"&gt;...&lt;/div&gt;
+&lt;div class="diarito-empty"&gt;
+  &lt;div class="diarito-empty__icon"&gt;&lt;span class="diarito-icon" data-icon="search"&gt;&lt;/span&gt;&lt;/div&gt;
+  &lt;h3&gt;No results&lt;/h3&gt;
+  &lt;p&gt;We found no records matching the search.&lt;/p&gt;
+&lt;/div&gt;</code></pre></div>
+</div>
+</section><section class="docs-section">
+<div class="docs-section-heading"><div><h2>Loading search</h2><p>The loading state belongs to the search result. The search bar does not disappear or change structure.</p></div></div>
+<div class="docs-example">
+<div class="docs-example__meta"><span>Preview</span><span>HTML</span></div>
+<div class="docs-example__preview docs-example__preview--plain"><div class="docs-search-state"><div class="docs-search-state__surface"><div class="docs-search-state__toolbar"><div class="diarito-search-field"><span class="diarito-icon" data-icon="search"></span><input aria-label="Search records" class="diarito-input" type="search" value="Environmental management"/></div></div><div class="docs-search-loading"><span aria-hidden="true" class="diarito-spinner"></span><span>Searching records…</span></div></div></div></div>
+<div class="docs-code-shell"><button class="docs-code-copy" data-code-copy="" type="button">Copy</button><pre><code>&lt;div class="diarito-search-field"&gt;...&lt;/div&gt;
+&lt;div class="docs-search-loading" aria-live="polite"&gt;
+  &lt;span class="diarito-spinner" aria-hidden="true"&gt;&lt;/span&gt;
+  &lt;span&gt;Searching records…&lt;/span&gt;
+&lt;/div&gt;</code></pre></div>
+</div>
+</section><section class="docs-section">
+<div class="docs-section-heading"><div><h2>Completed search</h2><p>When the natural result is an administrative list, the successful state ends in a table, a “Showing X of X records” summary, and system pagination.</p></div></div>
+<div class="docs-example">
+<div class="docs-example__meta"><span>Preview</span><span>HTML</span></div>
+<div class="docs-example__preview docs-example__preview--plain"><div class="docs-search-state"><div class="docs-search-state__surface"><div class="docs-search-state__toolbar"><div class="diarito-search-field"><span class="diarito-icon" data-icon="search"></span><input aria-label="Search records" class="diarito-input" type="search" value="coreano"/></div></div><div class="diarito-table-wrap"><table class="diarito-table"><thead><tr><th>Name</th><th>Type</th><th>States</th></tr></thead><tbody><tr><td><span class="diarito-table__primary">My first week studying Korean</span></td><td>Entry</td><td><span class="diarito-badge diarito-badge--success">Visible</span></td></tr><tr><td><span class="diarito-table__primary">Words I learned today</span></td><td>Entry</td><td><span class="diarito-badge diarito-badge--neutral">Private</span></td></tr><tr><td><span class="diarito-table__primary">What I understood from my conversation</span></td><td>Entry</td><td><span class="diarito-badge diarito-badge--success">Visible</span></td></tr></tbody></table></div><div class="diarito-table-footer"><p class="diarito-table-footer__summary">Showing 3 of 3 records</p><nav aria-label="Result pagination" class="diarito-pagination"><button aria-label="Previous page" disabled="" type="button"><span class="diarito-icon" data-icon="arrowLeft"></span></button><button aria-current="page" class="is-active" type="button">1</button><button aria-label="Next page" disabled="" type="button"><span class="diarito-icon" data-icon="arrowRight"></span></button></nav></div></div></div></div>
+<div class="docs-code-shell"><button class="docs-code-copy" data-code-copy="" type="button">Copy</button><pre><code>&lt;div class="diarito-search-field"&gt;...&lt;/div&gt;
+&lt;div class="diarito-table-wrap"&gt;
+  &lt;table class="diarito-table"&gt;...&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class="diarito-table-footer"&gt;
+  &lt;p class="diarito-table-footer__summary"&gt;Showing 3 of 3 records&lt;/p&gt;
+  &lt;nav class="diarito-pagination" aria-label="Result pagination"&gt;...&lt;/nav&gt;
+&lt;/div&gt;</code></pre></div>
+</div>
+</section><section class="docs-section">
+<div class="docs-section-heading"><div><h2>Searchable input / autocomplete</h2><p>For relationships such as member, conversation, or recipient, use a searchable input and a matching-results panel. The user types a few characters and then selects a specific result.</p></div></div>
+<div class="docs-example">
+<div class="docs-example__meta"><span>Preview</span><span>HTML</span></div>
+<div class="docs-example__preview docs-example__preview--plain"><div class="diarito-form-field docs-autocomplete" data-demo-searchable=""><label class="diarito-label" for="demo-member-search">Member</label><div class="diarito-creatable-control"><span class="diarito-icon" data-icon="search"></span><input autocomplete="off" class="diarito-input" data-demo-searchable-input="" id="demo-member-search" placeholder="Type to search for a member..." type="search" value="Mar"/></div><div class="diarito-creatable-panel" data-demo-searchable-panel=""><button class="diarito-creatable-option" data-search-value="maru.study" type="button"><span>maru.study</span><small class="docs-autocomplete-meta">Learning Spanish · South Korea</small></button><button class="diarito-creatable-option" data-search-value="marco.writes" type="button"><span>marco.writes</span><small class="docs-autocomplete-meta">Learning Korean · Honduras</small></button><button class="diarito-creatable-option" data-search-value="marta.diary" type="button"><span>marta.diary</span><small class="docs-autocomplete-meta">Learning English · Spain</small></button><div class="diarito-searchable-empty" data-demo-searchable-empty="" hidden="">No matches.</div></div><span class="diarito-field-help">Type at least 2 characters and select a match.</span></div></div>
+<div class="docs-code-shell"><button class="docs-code-copy" data-code-copy="" type="button">Copy</button><pre><code>&lt;div class="diarito-form-field"&gt;
+  &lt;label class="diarito-label" for="member-search"&gt;Member&lt;/label&gt;
+  &lt;div class="diarito-creatable-control"&gt;
+    &lt;span class="diarito-icon" data-icon="search"&gt;&lt;/span&gt;
+    &lt;input class="diarito-input" id="member-search" type="search" autocomplete="off" placeholder="Type to search for a member..."&gt;
+  &lt;/div&gt;
+  &lt;div class="diarito-creatable-panel"&gt;
+    &lt;button class="diarito-creatable-option" type="button"&gt;Maria Fernanda Lopez&lt;/button&gt;
+    &lt;button class="diarito-creatable-option" type="button"&gt;Marco Antonio Reyes&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+</div>
+</section></main>
+</div>
+</div>
+<div aria-atomic="true" aria-live="polite" class="diarito-toast-region"></div>
+<script src="assets/js/diarito-components.js"></script>
+<script src="assets/js/library.js"></script>
+</body>
+</html>

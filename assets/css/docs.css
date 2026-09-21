@@ -1,0 +1,728 @@
+:root {
+  --docs-code-bg: #20272c;
+  --docs-code-text: #edf5f5;
+  --docs-preview-grid: rgba(6, 26, 59, 0.05);
+}
+
+
+.diarito-topbar {
+  padding: 0.85rem 1.5rem;
+}
+
+.docs-login-body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  background-color: var(--diarito-blue-300);
+  background-image:
+    linear-gradient(rgba(var(--diarito-blue-700-rgb), .12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--diarito-blue-700-rgb), .12) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+.docs-login-card {
+  width: min(100%, 29rem);
+  padding: 2rem;
+  border: 1px solid var(--diarito-border);
+  border-radius: var(--diarito-radius-lg);
+  background: var(--diarito-white);
+}
+
+.docs-login-logo {
+  width: 12rem;
+  max-height: 4rem;
+  object-fit: contain;
+  margin: 0 auto 1.5rem;
+}
+
+.docs-login-card h1 {
+  margin: 0 0 .5rem;
+  color: var(--diarito-primary-700);
+  text-align: center;
+}
+
+.docs-login-card > p {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.docs-pin-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: .65rem;
+}
+
+.docs-pin-error {
+  min-height: 1.35rem;
+  margin-top: .6rem;
+  color: var(--diarito-danger-700);
+  font-size: .78rem;
+}
+
+
+.docs-sidebar-label {
+  padding: .75rem .75rem .35rem;
+  color: var(--diarito-neutral-500);
+  font-size: .6875rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.docs-sidebar-meta {
+  padding: .8rem 1rem;
+  border-top: 1px solid var(--diarito-border);
+  color: var(--diarito-text-muted);
+  font-size: .72rem;
+}
+
+
+
+.docs-page-intro {
+  max-width: 52rem;
+}
+
+.docs-page-intro code,
+.docs-inline-code {
+  padding: .12rem .35rem;
+  border-radius: .3rem;
+  color: var(--diarito-primary-700);
+  background: var(--diarito-primary-50);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .82em;
+}
+
+
+
+
+
+
+
+
+.docs-section {
+  margin-top: 1.25rem;
+}
+
+.docs-section + .docs-section {
+  margin-top: 1.5rem;
+}
+
+.docs-section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: .7rem;
+}
+
+.docs-section-heading h2,
+.docs-section-heading h3,
+.docs-section-heading p {
+  margin: 0;
+}
+
+.docs-section-heading p {
+  max-width: 46rem;
+  margin-top: .2rem;
+  font-size: .8rem;
+}
+
+.docs-example {
+  overflow: hidden;
+  border: 1px solid var(--diarito-border);
+  border-radius: var(--diarito-radius-md);
+  background: var(--diarito-white);
+}
+
+.docs-example__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .7rem .9rem;
+  border-bottom: 1px solid var(--diarito-border);
+}
+
+.docs-example__meta span {
+  color: var(--diarito-text-muted);
+  font-size: .75rem;
+}
+
+.docs-example__preview {
+  min-width: 0;
+  padding: 1.2rem;
+  background:
+    linear-gradient(var(--docs-preview-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--docs-preview-grid) 1px, transparent 1px),
+    var(--diarito-white);
+  background-size: 10px 10px;
+}
+
+.docs-example__preview--plain {
+  background: var(--diarito-white);
+}
+
+body[data-page="typography"] .docs-example__preview {
+  background: var(--diarito-white);
+}
+
+.docs-example__preview--narrow {
+  max-width: 42rem;
+}
+
+.docs-code-shell {
+  position: relative;
+  border-top: 1px solid var(--diarito-border);
+  background: var(--docs-code-bg);
+}
+
+.docs-code-shell pre {
+  margin: 0;
+  padding: 1rem 1.1rem;
+  overflow: auto;
+  color: var(--docs-code-text);
+  font: 0.76rem/1.55 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  white-space: pre;
+  tab-size: 2;
+}
+
+.docs-code-copy {
+  position: absolute;
+  top: .6rem;
+  right: .6rem;
+  min-height: 2rem;
+  padding: .35rem .58rem;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: .35rem;
+  color: var(--diarito-white);
+  background: rgba(255,255,255,.07);
+  font-size: .7rem;
+}
+
+.docs-code-copy:hover {
+  background: rgba(255,255,255,.14);
+}
+
+.docs-token-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .8rem;
+}
+
+.docs-color-token {
+  overflow: hidden;
+  border: 1px solid var(--diarito-border);
+  border-radius: var(--diarito-radius-sm);
+  background: var(--diarito-white);
+}
+
+.docs-color-token__swatch {
+  min-height: 5.2rem;
+}
+
+.docs-color-token__copy {
+  padding: .7rem .8rem;
+}
+
+.docs-color-token__copy strong,
+.docs-color-token__copy span,
+.docs-color-token__copy code {
+  display: block;
+}
+
+.docs-color-token__copy strong {
+  color: var(--diarito-text-primary);
+  font-size: .8rem;
+}
+
+.docs-color-token__copy span,
+.docs-color-token__copy code {
+  margin-top: .15rem;
+  color: var(--diarito-text-muted);
+  font-size: .7rem;
+}
+
+.docs-type-row {
+  display: grid;
+  grid-template-columns: minmax(10rem, 15rem) minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 1rem;
+  padding: .85rem 0;
+  border-bottom: 1px solid var(--diarito-border);
+}
+
+.docs-type-row:last-child {
+  border-bottom: 0;
+}
+
+.docs-type-row__meta {
+  color: var(--diarito-text-muted);
+  font-size: .72rem;
+}
+
+.docs-component-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .75rem;
+}
+
+.docs-component-row + .docs-component-row {
+  margin-top: 1rem;
+}
+
+.docs-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.docs-form-demo {
+  max-width: 54rem;
+}
+
+.docs-table-demo {
+  min-width: 50rem;
+}
+
+.docs-toast-demo-region {
+  position: static;
+  width: min(100%, 28rem);
+  display: grid;
+  gap: .6rem;
+}
+
+.docs-demo-note {
+  margin: .8rem 0 0;
+  color: var(--diarito-text-muted);
+  font-size: .75rem;
+}
+
+
+.docs-logout {
+  width: 100%;
+  justify-content: flex-start;
+}
+
+
+.docs-modal-demo-message {
+  margin: 0;
+}
+
+
+
+
+
+
+.docs-sidebar .diarito-nav__link.is-active {
+  color: var(--diarito-primary-700);
+  background: var(--diarito-primary-50);
+  border-left-color: var(--diarito-primary-500);
+}
+
+@media (max-width: 72rem) {
+  .docs-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .docs-token-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 48rem) {
+  .docs-card-grid,
+  .docs-token-grid { grid-template-columns: 1fr; }
+  .docs-type-row { grid-template-columns: 1fr; gap: .3rem; }
+  .docs-example__preview { padding: 1rem; }
+  .docs-pin-row { grid-template-columns: 1fr; }
+}
+
+
+.docs-search-state {
+  display: grid;
+  gap: 1rem;
+}
+
+.docs-search-state__surface {
+  overflow: visible;
+  border: 1px solid var(--diarito-border);
+  border-radius: var(--diarito-radius-md);
+  background: var(--diarito-white);
+}
+
+.docs-search-state__toolbar {
+  padding: 1rem 1.15rem;
+}
+
+.docs-search-loading {
+  min-height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+  color: var(--diarito-text-muted);
+}
+
+.docs-autocomplete {
+  position: relative;
+  max-width: 34rem;
+}
+
+.docs-autocomplete .diarito-creatable-panel {
+  position: absolute;
+  top: calc(100% + .35rem);
+  margin-top: 0;
+}
+
+.docs-autocomplete-meta {
+  display: block;
+  margin-top: .15rem;
+  color: var(--diarito-text-muted);
+  font-size: .72rem;
+}
+
+.docs-form-sample-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.05rem 1.25rem;
+}
+
+.docs-form-sample-grid--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 52rem) {
+  .docs-form-sample-grid,
+  .docs-form-sample-grid--3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Diarito wordmark replaces image branding in the static library. */
+.diarito-wordmark {
+  display: inline-block;
+  color: var(--diarito-purple-700);
+  font-family: var(--diarito-font-body-latin);
+  font-size: 1.95rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0;
+}
+.docs-login-wordmark {
+  display: block;
+  margin: 0 auto 1.5rem;
+  color: var(--diarito-purple-700);
+  font-family: var(--diarito-font-body-latin);
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+}
+.docs-rule-section {
+  max-width: 68rem;
+  padding: 0 0 1.25rem;
+}
+.docs-rule-section + .docs-rule-section {
+  margin-top: 1.25rem;
+}
+.docs-rule-section h2 { margin-bottom: .55rem; }
+.docs-rule-section h3 { margin: 1rem 0 .4rem; }
+.docs-rule-section p { margin-bottom: .7rem; }
+.docs-rule-section ul,
+.docs-rule-section ol { margin: .45rem 0 0; padding-left: 1.25rem; color: var(--diarito-text-secondary); }
+.docs-rule-section li + li { margin-top: .3rem; }
+.docs-font-sample {
+  margin: 0;
+  color: var(--diarito-text-primary);
+  font-size: 1.65rem;
+  line-height: 1.25;
+}
+
+.diarito-searchable-empty { padding: .75rem .8rem; color: var(--diarito-text-muted); font-size: .8rem; }
+
+/* Documentation shell follows the no-shadow direction too. */
+.docs-example, .docs-login-card, .docs-color-token, .docs-code-shell { box-shadow: none !important; }
+
+
+/* Grouped palette documentation: families instead of a flat swatch wall. */
+.docs-palette-families {
+  display: grid;
+  gap: 1rem;
+}
+.docs-palette-family {
+  display: grid;
+  grid-template-columns: minmax(8rem, 11rem) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+.docs-palette-family__heading {
+  padding-top: .15rem;
+}
+.docs-palette-family__heading strong {
+  display: block;
+  color: var(--diarito-text-primary);
+  font-size: .88rem;
+  font-weight: 600;
+}
+.docs-palette-family__heading span {
+  display: block;
+  margin-top: .2rem;
+  color: var(--diarito-text-muted);
+  font-size: .74rem;
+  line-height: 1.35;
+}
+.docs-palette-family__swatches {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .75rem;
+}
+@media (max-width: 48rem) {
+  .docs-palette-family { grid-template-columns: 1fr; gap: .5rem; }
+  .docs-palette-family__swatches { grid-template-columns: 1fr; }
+}
+
+
+/* ==========================================================================
+   Diarito palette and texture documentation · 1.0.4
+   ========================================================================== */
+.docs-role-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: .75rem;
+}
+.docs-role-card {
+  min-width: 0;
+  padding: .8rem;
+  border-radius: var(--diarito-radius-md);
+  background: var(--diarito-gray-100);
+}
+.docs-role-card__top {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+}
+.docs-role-card__swatch {
+  width: 2rem;
+  height: 2rem;
+  flex: 0 0 2rem;
+  border-radius: var(--diarito-radius-sm);
+}
+.docs-role-card strong {
+  display: block;
+  color: var(--diarito-text-primary);
+  font-size: .82rem;
+}
+.docs-role-card span,
+.docs-role-card code {
+  display: block;
+  margin-top: .18rem;
+  color: var(--diarito-text-muted);
+  font-size: .7rem;
+}
+
+.docs-usage-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: .75rem;
+}
+.docs-color-usage {
+  min-height: 7.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .55rem;
+  padding: .9rem;
+  border-radius: var(--diarito-radius-md);
+  color: var(--usage-fg);
+  background: var(--usage-bg);
+  text-align: center;
+}
+.docs-color-usage__icon {
+  width: 2.15rem;
+  height: 2.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 2.15rem;
+  border-radius: 50%;
+  background: rgba(255,255,255,.42);
+  font-size: 1rem;
+}
+.docs-color-usage__icon .diarito-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+.docs-color-usage strong {
+  display: block;
+  font-size: .8rem;
+}
+.docs-color-usage span {
+  display: block;
+  margin-top: .15rem;
+  font-size: .7rem;
+  line-height: 1.35;
+}
+
+.docs-state-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .75rem;
+}
+
+.docs-palette-complete {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem 1.5rem;
+}
+.docs-palette-complete__family {
+  min-width: 0;
+}
+.docs-palette-complete__family h3 {
+  margin: 0 0 .6rem;
+  font-size: .9rem;
+}
+.docs-palette-complete__swatches {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .45rem;
+}
+.docs-mini-swatch {
+  min-width: 0;
+}
+.docs-mini-swatch__color {
+  height: 2.1rem;
+  border-radius: var(--diarito-radius-sm);
+}
+.docs-mini-swatch strong,
+.docs-mini-swatch span {
+  display: block;
+}
+.docs-mini-swatch strong {
+  margin-top: .35rem;
+  color: var(--diarito-text-primary);
+  font-size: .68rem;
+}
+.docs-mini-swatch span {
+  margin-top: .1rem;
+  color: var(--diarito-text-muted);
+  font-size: .62rem;
+}
+
+.docs-texture-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+.docs-texture-grid--brand {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.docs-texture-card .diarito-card__body {
+  padding: 0;
+}
+.docs-texture-preview {
+  min-height: 10rem;
+  border-radius: 0;
+  background-color: var(--diarito-white);
+}
+.docs-texture--grid-original {
+  background-image:
+    linear-gradient(rgba(6, 26, 59, .05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 26, 59, .05) 1px, transparent 1px);
+  background-size: 10px 10px;
+}
+.docs-texture--grid-medium {
+  background-image:
+    linear-gradient(rgba(6, 26, 59, .06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 26, 59, .06) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+.docs-texture--grid-wide {
+  background-image:
+    linear-gradient(rgba(6, 26, 59, .07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 26, 59, .07) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.docs-texture--lines-compact {
+  background-image: linear-gradient(to bottom, rgba(6, 26, 59, .07) 1px, transparent 1px);
+  background-size: 100% 14px;
+}
+.docs-texture--lines-medium {
+  background-image: linear-gradient(to bottom, rgba(6, 26, 59, .07) 1px, transparent 1px);
+  background-size: 100% 24px;
+}
+.docs-texture--lines-wide {
+  background-image: linear-gradient(to bottom, rgba(6, 26, 59, .07) 1px, transparent 1px);
+  background-size: 100% 36px;
+}
+.docs-texture--color-grid {
+  background-color: var(--texture-bg);
+  background-image:
+    linear-gradient(rgba(var(--texture-line-rgb), .12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--texture-line-rgb), .12) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+.docs-texture--blue {
+  --texture-bg: var(--diarito-blue-300);
+  --texture-line-rgb: var(--diarito-blue-700-rgb);
+}
+.docs-texture--green {
+  --texture-bg: var(--diarito-green-300);
+  --texture-line-rgb: var(--diarito-green-700-rgb);
+}
+.docs-texture--pink {
+  --texture-bg: var(--diarito-pink-300);
+  --texture-line-rgb: var(--diarito-pink-700-rgb);
+}
+.docs-texture--purple {
+  --texture-bg: var(--diarito-purple-300);
+  --texture-line-rgb: var(--diarito-purple-700-rgb);
+}
+.docs-texture--defined {
+  min-height: 13rem;
+}
+.docs-texture-card .diarito-card__footer {
+  justify-content: flex-start;
+  font-size: .72rem;
+  color: var(--diarito-text-muted);
+}
+
+@media (max-width: 70rem) {
+  .docs-role-grid,
+  .docs-usage-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .docs-texture-grid--brand { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 48rem) {
+  .docs-role-grid,
+  .docs-usage-grid,
+  .docs-state-grid,
+  .docs-palette-complete,
+  .docs-texture-grid,
+  .docs-texture-grid--brand { grid-template-columns: 1fr; }
+}
+
+/* Blue is the dominant Diarito brand color in the documentation shell. */
+.diarito-wordmark,
+.docs-login-wordmark {
+  color: var(--diarito-blue-700) !important;
+}
+
+
+/* Diarito UI Library · 1.0.7 shell refinements */
+.docs-wordmark-link {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.diarito-wordmark--compact { display: none; }
+@media (min-width: 64.01rem) {
+  .diarito-app.is-sidebar-collapsed .diarito-wordmark--full { display: none; }
+  .diarito-app.is-sidebar-collapsed .diarito-wordmark--compact {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .diarito-app.is-sidebar-collapsed .docs-wordmark-link { justify-content: center; }
+}

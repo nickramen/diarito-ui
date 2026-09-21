@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Landing Page · Diarito UI Library</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Englebert&amp;family=Noto+Sans+KR:wght@400;500;600;700&amp;family=Poor+Story&amp;family=Roboto:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons@3.3.1/css/regular/rounded.css" rel="stylesheet"/>
+<link href="https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-straight/css/uicons-regular-straight.css" rel="stylesheet"/>
+<link href="assets/images/favicon-64.png" rel="icon" type="image/png"/>
+<link href="assets/css/diarito-components.css" rel="stylesheet"/>
+<link href="assets/css/docs.css" rel="stylesheet"/>
+<link href="assets/css/landing.css" rel="stylesheet"/></head>
+<body data-page="landing">
+<script src="assets/js/auth.js"></script>
+<div class="diarito-app">
+<aside class="diarito-sidebar docs-sidebar" data-diarito-sidebar="" id="diarito-sidebar"><div class="diarito-sidebar__brand"><a aria-label="Go to Typography" class="docs-wordmark-link" href="typography.html"><span class="diarito-wordmark diarito-wordmark--full">Diarito</span><span aria-hidden="true" class="diarito-wordmark diarito-wordmark--compact">D</span></a></div><div class="diarito-sidebar__scroll" data-diarito-nav-root=""><div class="diarito-nav-section"><div class="diarito-nav-section__label">Components</div><ul class="diarito-nav"><li><a class="diarito-nav__link" data-docs-nav="typography" href="typography.html"><span class="diarito-icon" data-icon="file"></span><span class="diarito-nav__label">Typography</span></a></li><li><a class="diarito-nav__link" data-docs-nav="foundations" href="foundations.html"><span class="diarito-icon" data-icon="palette"></span><span class="diarito-nav__label">Colors &amp; tokens</span></a></li><li><a class="diarito-nav__link" data-docs-nav="textures" href="textures.html"><span class="diarito-icon" data-icon="layers"></span><span class="diarito-nav__label">Textures</span></a></li><li><a class="diarito-nav__link" data-docs-nav="buttons" href="buttons.html"><span class="diarito-icon" data-icon="apps"></span><span class="diarito-nav__label">Buttons</span></a></li><li><a class="diarito-nav__link" data-docs-nav="badges" href="badges.html"><span class="diarito-icon" data-icon="verified"></span><span class="diarito-nav__label">Badges</span></a></li><li><a class="diarito-nav__link" data-docs-nav="alerts" href="alerts.html"><span class="diarito-icon" data-icon="alert"></span><span class="diarito-nav__label">Inline alerts</span></a></li><li><a class="diarito-nav__link" data-docs-nav="cards" href="cards.html"><span class="diarito-icon" data-icon="card"></span><span class="diarito-nav__label">Cards</span></a></li><li><a class="diarito-nav__link" data-docs-nav="forms" href="forms.html"><span class="diarito-icon" data-icon="edit"></span><span class="diarito-nav__label">Forms</span></a></li><li><a class="diarito-nav__link" data-docs-nav="navigation" href="navigation.html"><span class="diarito-icon" data-icon="list"></span><span class="diarito-nav__label">Tabs &amp; steppers</span></a></li><li><a class="diarito-nav__link" data-docs-nav="breadcrumbs" href="breadcrumbs-pagination.html"><span class="diarito-icon" data-icon="arrowRight"></span><span class="diarito-nav__label">Breadcrumbs &amp; pagination</span></a></li><li><a class="diarito-nav__link" data-docs-nav="tables" href="tables.html"><span class="diarito-icon" data-icon="layers"></span><span class="diarito-nav__label">Tables</span></a></li><li><a class="diarito-nav__link" data-docs-nav="toasts" href="toasts.html"><span class="diarito-icon" data-icon="notification"></span><span class="diarito-nav__label">Toasts</span></a></li><li><a class="diarito-nav__link" data-docs-nav="modals" href="modals.html"><span class="diarito-icon" data-icon="window"></span><span class="diarito-nav__label">Modals</span></a></li><li><a class="diarito-nav__link" data-docs-nav="states" href="states.html"><span class="diarito-icon" data-icon="search"></span><span class="diarito-nav__label">States</span></a></li><li><a class="diarito-nav__link" data-docs-nav="rules" href="rules.html"><span class="diarito-icon" data-icon="book"></span><span class="diarito-nav__label">Rules</span></a></li><li><a class="diarito-nav__link" data-docs-nav="landing" href="landing.html"><span class="diarito-icon" data-icon="globe"></span><span class="diarito-nav__label">Landing Page</span></a></li></ul></div></div></aside>
+<div class="diarito-sidebar-backdrop" data-diarito-sidebar-backdrop=""></div>
+<div class="diarito-main">
+<header class="diarito-topbar">
+<button aria-controls="diarito-sidebar" aria-expanded="false" aria-label="Toggle navigation" class="diarito-button diarito-button--ghost diarito-button--icon diarito-topbar__menu" data-diarito-sidebar-toggle="" type="button"><span class="diarito-icon" data-icon="menu"></span></button>
+<div class="diarito-topbar__actions"><button class="diarito-button diarito-button--neutral diarito-button--sm" data-library-logout="" type="button"><span class="diarito-icon" data-icon="logout"></span>Exit</button></div>
+</header>
+<main class="diarito-content">
+<div class="docs-landing-page">
+<section aria-label="Landing language controls" class="landing-toolbar">
+<div>
+<span class="landing-toolbar__eyebrow">Landing Page</span>
+<p data-i18n="preview_note">Interactive public-page preview. Switch languages without reloading.</p>
+</div>
+<div aria-label="Language" class="landing-language" role="group">
+<button class="landing-language__button is-active" data-landing-lang="en" type="button">EN</button>
+<button class="landing-language__button" data-landing-lang="es" type="button">ES</button>
+<button class="landing-language__button" data-landing-lang="ko" type="button">KO</button>
+</div>
+</section>
+<div class="landing-site" data-landing-root="">
+<header class="landing-public-nav">
+<a class="landing-brand" href="#">Diarito</a>
+<nav aria-label="Public navigation" class="landing-public-links">
+<a data-i18n="nav_how" href="#how">How it works</a>
+<a data-i18n="nav_community" href="#community">Community</a>
+<a data-i18n="nav_about" href="#about">About</a>
+</nav>
+<div class="landing-public-actions">
+<a class="landing-text-link" data-i18n="log_in" href="#">Log in</a>
+<a class="diarito-button diarito-button--primary" data-i18n="join_now" href="#join">Join now</a>
+</div>
+</header>
+<div class="landing-public-main">
+<section class="landing-hero">
+<div class="landing-hero__copy">
+<span class="landing-pill" data-i18n="hero_eyebrow">A small place for daily language practice</span>
+<h1 data-i18n="hero_title">Write a little. Learn a lot.</h1>
+<p data-i18n="hero_body">Diarito turns a few minutes of daily writing into language practice you can actually keep doing.</p>
+<div class="landing-hero__actions">
+<a class="diarito-button diarito-button--primary" data-i18n="start_writing" href="#join">Start writing</a>
+<a class="landing-soft-link" data-i18n="see_how" href="#how">See how it works</a>
+</div>
+<div class="landing-hero__meta">
+<span><span class="diarito-icon" data-icon="checkCircle"></span><span data-i18n="meta_daily">Daily, low-pressure practice</span></span>
+<span><span class="diarito-icon" data-icon="globe"></span><span data-i18n="meta_languages">English · Spanish · Korean</span></span>
+</div>
+</div>
+<div class="landing-media landing-media--hero">
+<img alt="" data-i18n-alt="hero_image_alt" src=""/>
+</div>
+</section>
+<section class="landing-section" id="how">
+<div class="landing-section__heading">
+<span class="landing-section__eyebrow" data-i18n="how_eyebrow">How it works</span>
+<h2 data-i18n="how_title">One tiny writing habit, three useful steps.</h2>
+<p data-i18n="how_body">Write what happened, get helpful feedback, and keep the words that matter to you.</p>
+</div>
+<div class="landing-feature-grid">
+<article class="landing-feature landing-feature--blue">
+<span class="landing-feature__icon"><span class="diarito-icon" data-icon="edit"></span></span>
+<span class="landing-feature__number">01</span>
+<h3 data-i18n="step_1_title">Write your day</h3>
+<p data-i18n="step_1_body">A few sentences are enough. Practice with real thoughts instead of textbook prompts.</p>
+</article>
+<article class="landing-feature landing-feature--green">
+<span class="landing-feature__icon"><span class="diarito-icon" data-icon="star"></span></span>
+<span class="landing-feature__number">02</span>
+<h3 data-i18n="step_2_title">Learn from feedback</h3>
+<p data-i18n="step_2_body">See clearer alternatives, corrections, and useful expressions while your context is still fresh.</p>
+</article>
+<article class="landing-feature landing-feature--purple">
+<span class="landing-feature__icon"><span class="diarito-icon" data-icon="users"></span></span>
+<span class="landing-feature__number">03</span>
+<h3 data-i18n="step_3_title">Keep showing up</h3>
+<p data-i18n="step_3_body">Build a personal archive, notice your progress, and connect with people learning too.</p>
+</article>
+</div>
+</section>
+<section class="landing-split" id="community">
+<div class="landing-media landing-media--feature"><img alt="" data-i18n-alt="community_image_alt" src=""/></div>
+<div class="landing-split__copy">
+<span class="landing-section__eyebrow" data-i18n="community_eyebrow">A diary that can be social</span>
+<h2 data-i18n="community_title">Share when you want. Keep it private when you do not.</h2>
+<p data-i18n="community_body">Your entries can stay yours, or become part of a friendly feed where language learners exchange encouragement and perspective.</p>
+<ul class="landing-check-list">
+<li><span class="diarito-icon" data-icon="checkCircle"></span><span data-i18n="community_point_1">Choose visibility entry by entry.</span></li>
+<li><span class="diarito-icon" data-icon="checkCircle"></span><span data-i18n="community_point_2">Follow people learning languages you care about.</span></li>
+<li><span class="diarito-icon" data-icon="checkCircle"></span><span data-i18n="community_point_3">Turn corrections into vocabulary you remember.</span></li>
+</ul>
+</div>
+</section>
+<section class="landing-diary-strip" id="about">
+<div>
+<span class="landing-section__eyebrow" data-i18n="habit_eyebrow">Built for consistency</span>
+<h2 data-i18n="habit_title">Your language practice should fit inside your actual life.</h2>
+</div>
+<p data-i18n="habit_body">No giant lesson plan. No pressure to sound perfect. Just a place to write regularly and make tomorrow’s sentence a little easier than today’s.</p>
+</section>
+<section class="landing-cta" id="join">
+<div>
+<span class="landing-section__eyebrow" data-i18n="cta_eyebrow">Your next entry can be one sentence.</span>
+<h2 data-i18n="cta_title">Start your Diarito.</h2>
+<p data-i18n="cta_body">Pick the language you want to practice and write about something that actually happened to you today.</p>
+</div>
+<a class="diarito-button diarito-button--primary diarito-button--lg" data-i18n="create_account" href="#">Create an account</a>
+</section>
+</div>
+<footer class="landing-public-footer">
+<strong>Diarito</strong>
+<span data-i18n="footer_copy">A small daily writing space for language learners.</span>
+<span>© 2026 Diarito</span>
+</footer>
+</div>
+</div>
+</main>
+</div>
+</div>
+<div aria-atomic="true" aria-live="polite" class="diarito-toast-region"></div>
+<script src="assets/js/diarito-components.js"></script>
+<script src="assets/js/library.js"></script>
+<script src="assets/js/landing-i18n.js"></script></body>
+</html>

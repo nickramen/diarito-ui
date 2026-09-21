@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Tabs & steppers · Diarito UI Library</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Englebert&amp;family=Noto+Sans+KR:wght@400;500;600;700&amp;family=Poor+Story&amp;family=Roboto:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons@3.3.1/css/regular/rounded.css" rel="stylesheet"/>
+<link href="https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-straight/css/uicons-regular-straight.css" rel="stylesheet"/>
+<link href="assets/images/favicon-64.png" rel="icon" type="image/png"/>
+<link href="assets/css/diarito-components.css" rel="stylesheet"/>
+<link href="assets/css/docs.css" rel="stylesheet"/>
+</head>
+<body data-page="navigation">
+<script src="assets/js/auth.js"></script>
+<div class="diarito-app">
+<aside class="diarito-sidebar docs-sidebar" data-diarito-sidebar="" id="diarito-sidebar"><div class="diarito-sidebar__brand"><a aria-label="Go to Typography" class="docs-wordmark-link" href="typography.html"><span class="diarito-wordmark diarito-wordmark--full">Diarito</span><span aria-hidden="true" class="diarito-wordmark diarito-wordmark--compact">D</span></a></div><div class="diarito-sidebar__scroll" data-diarito-nav-root=""><div class="diarito-nav-section"><div class="diarito-nav-section__label">Components</div><ul class="diarito-nav"><li><a class="diarito-nav__link" data-docs-nav="typography" href="typography.html"><span class="diarito-icon" data-icon="file"></span><span class="diarito-nav__label">Typography</span></a></li><li><a class="diarito-nav__link" data-docs-nav="foundations" href="foundations.html"><span class="diarito-icon" data-icon="palette"></span><span class="diarito-nav__label">Colors &amp; tokens</span></a></li><li><a class="diarito-nav__link" data-docs-nav="textures" href="textures.html"><span class="diarito-icon" data-icon="layers"></span><span class="diarito-nav__label">Textures</span></a></li><li><a class="diarito-nav__link" data-docs-nav="buttons" href="buttons.html"><span class="diarito-icon" data-icon="apps"></span><span class="diarito-nav__label">Buttons</span></a></li><li><a class="diarito-nav__link" data-docs-nav="badges" href="badges.html"><span class="diarito-icon" data-icon="verified"></span><span class="diarito-nav__label">Badges</span></a></li><li><a class="diarito-nav__link" data-docs-nav="alerts" href="alerts.html"><span class="diarito-icon" data-icon="alert"></span><span class="diarito-nav__label">Inline alerts</span></a></li><li><a class="diarito-nav__link" data-docs-nav="cards" href="cards.html"><span class="diarito-icon" data-icon="card"></span><span class="diarito-nav__label">Cards</span></a></li><li><a class="diarito-nav__link" data-docs-nav="forms" href="forms.html"><span class="diarito-icon" data-icon="edit"></span><span class="diarito-nav__label">Forms</span></a></li><li><a class="diarito-nav__link" data-docs-nav="navigation" href="navigation.html"><span class="diarito-icon" data-icon="list"></span><span class="diarito-nav__label">Tabs &amp; steppers</span></a></li><li><a class="diarito-nav__link" data-docs-nav="breadcrumbs" href="breadcrumbs-pagination.html"><span class="diarito-icon" data-icon="arrowRight"></span><span class="diarito-nav__label">Breadcrumbs &amp; pagination</span></a></li><li><a class="diarito-nav__link" data-docs-nav="tables" href="tables.html"><span class="diarito-icon" data-icon="layers"></span><span class="diarito-nav__label">Tables</span></a></li><li><a class="diarito-nav__link" data-docs-nav="toasts" href="toasts.html"><span class="diarito-icon" data-icon="notification"></span><span class="diarito-nav__label">Toasts</span></a></li><li><a class="diarito-nav__link" data-docs-nav="modals" href="modals.html"><span class="diarito-icon" data-icon="window"></span><span class="diarito-nav__label">Modals</span></a></li><li><a class="diarito-nav__link" data-docs-nav="states" href="states.html"><span class="diarito-icon" data-icon="search"></span><span class="diarito-nav__label">States</span></a></li><li><a class="diarito-nav__link" data-docs-nav="rules" href="rules.html"><span class="diarito-icon" data-icon="book"></span><span class="diarito-nav__label">Rules</span></a></li><li><a class="diarito-nav__link" data-docs-nav="landing" href="landing.html"><span class="diarito-icon" data-icon="globe"></span><span class="diarito-nav__label">Landing Page</span></a></li></ul></div></div></aside>
+<div class="diarito-sidebar-backdrop" data-diarito-sidebar-backdrop=""></div>
+<div class="diarito-main">
+<header class="diarito-topbar">
+<button aria-controls="diarito-sidebar" aria-expanded="false" aria-label="Toggle navigation" class="diarito-button diarito-button--ghost diarito-button--icon diarito-topbar__menu" data-diarito-sidebar-toggle="" type="button"><span class="diarito-icon" data-icon="menu"></span></button>
+<div class="diarito-topbar__actions"><button class="diarito-button diarito-button--neutral diarito-button--sm" data-library-logout="" type="button"><span class="diarito-icon" data-icon="logout"></span>Exit</button></div>
+</header>
+<main class="diarito-content">
+<div class="diarito-page-header">
+<div>
+<h1 class="diarito-page-header__title">Tabs & steppers</h1>
+<p class="diarito-page-header__description docs-page-intro">Segmented tabs and steppers used for internal navigation and step-based flows.</p>
+</div>
+</div>
+<section class="docs-section">
+<div class="docs-section-heading"><div><h2>Tabs</h2><p>Tabs are segmented buttons. The block keeps bottom spacing before the associated content.</p></div></div>
+<div class="docs-example">
+<div class="docs-example__meta"><span>Preview</span><span>HTML</span></div>
+<div class="docs-example__preview"><div class="diarito-tabs" data-diarito-tabs=""><div class="diarito-tabs__list" role="tablist"><button aria-controls="panel-a" aria-selected="true" class="diarito-tabs__button" id="tab-a" role="tab" type="button">Information</button><button aria-controls="panel-b" aria-selected="false" class="diarito-tabs__button" id="tab-b" role="tab" tabindex="-1" type="button">Activity</button><button aria-controls="panel-c" aria-selected="false" class="diarito-tabs__button" id="tab-c" role="tab" tabindex="-1" type="button">Audit</button></div><div aria-labelledby="tab-a" class="diarito-tab-panel is-active" id="panel-a" role="tabpanel"><p class="diarito-m-0">Information tab content.</p></div><div aria-labelledby="tab-b" class="diarito-tab-panel" id="panel-b" role="tabpanel"><p class="diarito-m-0">Activity tab content.</p></div><div aria-labelledby="tab-c" class="diarito-tab-panel" id="panel-c" role="tabpanel"><p class="diarito-m-0">Audit tab content.</p></div></div></div>
+<div class="docs-code-shell"><button class="docs-code-copy" data-code-copy="" type="button">Copy</button><pre><code>&lt;div class="diarito-tabs" data-diarito-tabs&gt;
+  &lt;div class="diarito-tabs__list" role="tablist"&gt;
+    &lt;button class="diarito-tabs__button" role="tab" aria-controls="panel-a" aria-selected="true"&gt;Information&lt;/button&gt;
+    &lt;button class="diarito-tabs__button" role="tab" aria-controls="panel-b" aria-selected="false"&gt;Activity&lt;/button&gt;
+    &lt;button class="diarito-tabs__button" role="tab" aria-controls="panel-c" aria-selected="false"&gt;Audit&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="diarito-tab-panel is-active" id="panel-a"&gt;...&lt;/div&gt;
+  &lt;div class="diarito-tab-panel" id="panel-b"&gt;...&lt;/div&gt;
+  &lt;div class="diarito-tab-panel" id="panel-c"&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+</div>
+</section><section class="docs-section">
+<div class="docs-section-heading"><div><h2>Stepper with actions</h2><p>Step-based flows end with an action footer: Exit on the left and Previous + Continue on the right.</p></div></div>
+<div class="docs-example">
+<div class="docs-example__meta"><span>Preview</span><span>HTML</span></div>
+<div class="docs-example__preview docs-example__preview--plain"><article class="diarito-card">
+<div class="diarito-card__body">
+<div class="diarito-stepper diarito-stepper--segmented" style="--diarito-step-count:4">
+<button class="diarito-step is-complete" type="button"><span class="diarito-step__number">1</span><span class="diarito-step__label">Data</span></button>
+<button class="diarito-step is-active" type="button"><span class="diarito-step__number">2</span><span class="diarito-step__label">Design</span></button>
+<button class="diarito-step" type="button"><span class="diarito-step__number">3</span><span class="diarito-step__label">Review</span></button>
+<button class="diarito-step" type="button"><span class="diarito-step__number">4</span><span class="diarito-step__label">Publish</span></button>
+</div>
+<p class="diarito-m-0 diarito-text-muted">Content for the active step.</p>
+</div>
+<div class="diarito-card__footer diarito-card__footer--workflow">
+<button class="diarito-button diarito-button--secondary" type="button">Exit</button>
+<div class="diarito-card__footer-actions">
+<button class="diarito-button diarito-button--secondary" type="button"><span class="diarito-icon" data-icon="arrowLeft"></span>Previous</button>
+<button class="diarito-button diarito-button--primary" type="button">Continue<span class="diarito-icon" data-icon="arrowRight"></span></button>
+</div>
+</div>
+</article></div>
+<div class="docs-code-shell"><button class="docs-code-copy" data-code-copy="" type="button">Copy</button><pre><code>&lt;article class="diarito-card"&gt;
+  &lt;div class="diarito-card__body"&gt;
+    &lt;div class="diarito-stepper diarito-stepper--segmented" style="--diarito-step-count:4"&gt;
+      &lt;button class="diarito-step is-complete"&gt;&lt;span class="diarito-step__number"&gt;1&lt;/span&gt;&lt;span class="diarito-step__label"&gt;Data&lt;/span&gt;&lt;/button&gt;
+      &lt;button class="diarito-step is-active"&gt;&lt;span class="diarito-step__number"&gt;2&lt;/span&gt;&lt;span class="diarito-step__label"&gt;Design&lt;/span&gt;&lt;/button&gt;
+      &lt;button class="diarito-step"&gt;&lt;span class="diarito-step__number"&gt;3&lt;/span&gt;&lt;span class="diarito-step__label"&gt;Review&lt;/span&gt;&lt;/button&gt;
+      &lt;button class="diarito-step"&gt;&lt;span class="diarito-step__number"&gt;4&lt;/span&gt;&lt;span class="diarito-step__label"&gt;Publish&lt;/span&gt;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Content for the active step.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="diarito-card__footer diarito-card__footer--workflow"&gt;
+    &lt;button class="diarito-button diarito-button--secondary"&gt;Exit&lt;/button&gt;
+    &lt;div class="diarito-card__footer-actions"&gt;
+      &lt;button class="diarito-button diarito-button--secondary"&gt;&lt;span class="diarito-icon" data-icon="arrowLeft"&gt;&lt;/span&gt;Previous&lt;/button&gt;
+      &lt;button class="diarito-button diarito-button--primary"&gt;Continue&lt;span class="diarito-icon" data-icon="arrowRight"&gt;&lt;/span&gt;&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre></div>
+</div>
+</section></main>
+</div>
+</div>
+<div aria-atomic="true" aria-live="polite" class="diarito-toast-region"></div>
+<script src="assets/js/diarito-components.js"></script>
+<script src="assets/js/library.js"></script>
+</body>
+</html>
