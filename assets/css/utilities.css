@@ -1,0 +1,29 @@
+
+.diarito-stack { display: grid; gap: var(--diarito-space-4); }
+.diarito-stack--sm { gap: var(--diarito-space-2); }
+.diarito-stack--lg { gap: var(--diarito-space-6); }
+.diarito-inline { display: flex; align-items: center; flex-wrap: wrap; gap: var(--diarito-space-3); }
+.diarito-inline--sm { gap: var(--diarito-space-2); }
+.diarito-inline--between { justify-content: space-between; }
+.diarito-grow { flex: 1; }
+.diarito-text-muted { color: var(--diarito-gray-700) !important; }
+.diarito-text-olive { color: var(--diarito-olive) !important; }
+.diarito-text-error { color: var(--diarito-error) !important; }
+.diarito-bg-purple { background: var(--diarito-purple) !important; }
+.diarito-bg-lime { background: var(--diarito-lime) !important; }
+.diarito-bg-olive { background: var(--diarito-olive) !important; }
+.diarito-bg-neutral { background: var(--diarito-gray-100) !important; }
+.diarito-hidden { display: none !important; }
+.diarito-nowrap { white-space: nowrap; }
+.diarito-full { width: 100%; }
+.diarito-visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
