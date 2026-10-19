@@ -90,3 +90,39 @@
   .docs-shell-demo .diarito-shell { grid-template-columns: 1fr; padding-bottom: 0; }
   .docs-shell-demo .diarito-sidebar-compact { display: none; }
 }
+
+
+/* 1.1.1 documentation cleanup: clearer component groups and quieter examples. */
+.docs-group-heading {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: var(--diarito-space-3);
+  margin-top: var(--diarito-space-9);
+  padding: var(--diarito-space-3) 0;
+  border-bottom: var(--diarito-border);
+}
+.docs-group-heading__icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  display: grid;
+  place-items: center;
+  border-radius: var(--diarito-radius-md);
+  color: var(--diarito-olive);
+  background: var(--diarito-lime-soft);
+}
+.docs-group-heading strong,
+.docs-group-heading span { display: block; }
+.docs-group-heading strong { color: var(--diarito-ink); }
+.docs-group-heading span { margin-top: .15rem; color: var(--diarito-gray-700); font-size: var(--diarito-text-xs); }
+.docs-group-heading + .docs-section { padding-top: var(--diarito-space-6); }
+.docs-principles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--diarito-space-3); margin-top: var(--diarito-space-5); }
+.docs-principle { padding: var(--diarito-space-4); border: var(--diarito-border); border-radius: var(--diarito-radius-md); background: var(--diarito-white); }
+.docs-principle i { color: var(--diarito-olive); }
+.docs-principle strong { display: block; margin-top: var(--diarito-space-2); font-size: var(--diarito-text-sm); }
+.docs-principle span { display: block; margin-top: .2rem; color: var(--diarito-gray-700); font-size: var(--diarito-text-xs); line-height: 1.45; }
+.docs-example { box-shadow: none; }
+.docs-example__bar { background: color-mix(in srgb, var(--diarito-gray-100) 54%, var(--diarito-white)); }
+.docs-section + .docs-section { margin-top: var(--diarito-space-2); }
+@media (max-width: 60rem) { .docs-principles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 36rem) { .docs-principles { grid-template-columns: 1fr; } }
