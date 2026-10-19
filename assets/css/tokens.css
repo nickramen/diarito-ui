@@ -5,10 +5,10 @@
   --diarito-olive: #7E9026;
 
   /* Semantic states stay separate from the brand palette. */
-  --diarito-error: #D92D20;
-  --diarito-warning: #B7791F;
-  --diarito-success: #18864B;
-  --diarito-info: #2563EB;
+  --diarito-error: #AC5C60;
+  --diarito-warning: #8F7135;
+  --diarito-success: #4F8064;
+  --diarito-info: #53769F;
 
   /* Controlled neutrals. */
   --diarito-white: #FFFFFF;
@@ -31,10 +31,10 @@
   --diarito-purple-soft: color-mix(in srgb, var(--diarito-purple) 26%, var(--diarito-white));
   --diarito-lime-soft: color-mix(in srgb, var(--diarito-lime) 35%, var(--diarito-white));
   --diarito-olive-soft: color-mix(in srgb, var(--diarito-olive) 13%, var(--diarito-white));
-  --diarito-error-soft: color-mix(in srgb, var(--diarito-error) 9%, var(--diarito-white));
-  --diarito-warning-soft: color-mix(in srgb, var(--diarito-warning) 11%, var(--diarito-white));
-  --diarito-success-soft: color-mix(in srgb, var(--diarito-success) 9%, var(--diarito-white));
-  --diarito-info-soft: color-mix(in srgb, var(--diarito-info) 8%, var(--diarito-white));
+  --diarito-error-soft: color-mix(in srgb, var(--diarito-error) 10%, var(--diarito-white));
+  --diarito-warning-soft: color-mix(in srgb, var(--diarito-warning) 12%, var(--diarito-white));
+  --diarito-success-soft: color-mix(in srgb, var(--diarito-success) 10%, var(--diarito-white));
+  --diarito-info-soft: color-mix(in srgb, var(--diarito-info) 10%, var(--diarito-white));
 
   /* Typography. */
   --diarito-font-ui: "Roboto", "Noto Sans KR", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;

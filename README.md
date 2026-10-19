@@ -1,10 +1,18 @@
-# Diarito UI Library 1.1.0
+# Diarito UI Library 1.1.1
 
 Static UI component library for Diarito. This phase is intentionally limited to HTML, CSS, Flaticon UIcons, and a very small amount of native JavaScript used only by the documentation demo.
 
 There is no authentication, login, registration, session handling, backend, database, Supabase, ASP.NET Core, or app business logic in this version.
 
-## What changed in 1.1.0
+## 1.1.1 refinement
+
+- Softened the semantic states to a dusty red (`#AC5C60`), muted ochre (`#8F7135`), sage green (`#4F8064`), and calm blue (`#53769F`).
+- Kept semantic colors separate from Purple, Lime, and Olive.
+- Simplified status pills, alerts, tabs, cards, and button interaction so the system feels calmer and less corporate.
+- Reorganized the visual documentation into clearer groups: Actions & input, Content & feedback, Navigation & layers, Layout, and Diarito patterns.
+- Still plain HTML + CSS. Native JavaScript remains limited to small documentation interactions. **React is not used in this phase.**
+
+## What 1.1.0 established
 
 - Replaced the active brand palette with three temporary brand colors only:
   - `#CFA8FF` — Purple
@@ -51,7 +59,7 @@ assets/
 
 ## Migration note for the existing GitHub repository
 
-The current repository is 1.0.7 and contains individual legacy documentation pages plus a large `assets/css/diarito-components.css`. Version 1.1.0 introduces the new system beside those files instead of overwriting them immediately. The canonical `index.html` loads only `diarito-system.css` and `docs-library.css`; legacy pages/styles can be retired after visual comparison. This avoids silently breaking existing reference pages while making the new palette and component set authoritative.
+The current repository is 1.0.7 and contains individual legacy documentation pages plus a large `assets/css/diarito-components.css`. Version 1.1.x introduces the new system beside those files instead of overwriting them immediately. The canonical `index.html` loads only `diarito-system.css` and `docs-library.css`; legacy pages/styles can be retired after visual comparison. This avoids silently breaking existing reference pages while making the new palette and component set authoritative.
 
 ## Using tokens
 

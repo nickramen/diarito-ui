@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.1.1 — State palette + component cleanup
+
+- Replaced the semantic states with softer, less corporate colors: error `#AC5C60`, warning `#8F7135`, success `#4F8064`, info `#53769F`.
+- Kept state surfaces derived from those colors rather than adding extra palette values.
+- Simplified status pills and alert borders.
+- Removed button hover lift and reduced visual noise in tabs/cards.
+- Reorganized the component documentation into clearer functional groups.
+- Added a short principles row to make the design rules easier to scan.
+- No React, authentication, backend, database, or business logic added.
+
 ## 1.1.0 — UI component library refactor
 
 ### Added
