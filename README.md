@@ -1,32 +1,16 @@
-# Diarito UI Library 1.1.1
+# Diarito UI Library 1.2.0
 
-Static UI component library for Diarito. This phase is intentionally limited to HTML, CSS, Flaticon UIcons, and a very small amount of native JavaScript used only by the documentation demo.
+Diarito's reusable HTML, CSS and native JavaScript component system.
 
-There is no authentication, login, registration, session handling, backend, database, Supabase, ASP.NET Core, or app business logic in this version.
+This phase deliberately does **not** use React. The goal is to lock the visual contract first so a future React implementation can map stable HTML/CSS components to reusable React components without visual drift.
 
-## 1.1.1 refinement
+## Core rule
 
-- Softened the semantic states to a dusty red (`#AC5C60`), muted ochre (`#8F7135`), sage green (`#4F8064`), and calm blue (`#53769F`).
-- Kept semantic colors separate from Purple, Lime, and Olive.
-- Simplified status pills, alerts, tabs, cards, and button interaction so the system feels calmer and less corporate.
-- Reorganized the visual documentation into clearer groups: Actions & input, Content & feedback, Navigation & layers, Layout, and Diarito patterns.
-- Still plain HTML + CSS. Native JavaScript remains limited to small documentation interactions. **React is not used in this phase.**
+Screens compose the system; screens do not redefine it.
 
-## What 1.1.0 established
+A screen may position a shared button inside a toolbar. It should not give that button a new height, radius, color, border or hover treatment. If a new visual variant is genuinely needed, it is added to the shared component library first.
 
-- Replaced the active brand palette with three temporary brand colors only:
-  - `#CFA8FF` — Purple
-  - `#F1FF9C` — Lime
-  - `#7E9026` — Olive
-- Kept semantic state colors separate: error/red, warning/yellow, success/green, info/blue.
-- Reduced neutrals to white, near-black ink, and three gray roles.
-- Organized CSS into tokens, base, components, patterns, utilities, and documentation styles.
-- Rebuilt `index.html` as the navigable component library instead of a PIN/access screen.
-- Added Diarito-specific patterns for note cards, note previews, collections, pin/lock states, action rows, quick actions, and note list/detail layouts.
-- Standardized icons on Flaticon UIcons Regular Rounded.
-- Added responsive shell patterns inspired by the structural discipline of Korespeng, without copying Korespeng features or its React stack.
-
-## Project structure
+## Structure
 
 ```text
 index.html
@@ -38,143 +22,136 @@ assets/
   css/
     tokens.css
     base.css
+    layout.css
     components.css
     patterns.css
     utilities.css
-    docs-library.css
     diarito-system.css
+    docs-library.css
   js/
+    diarito.js
     library-docs.js
 ```
 
-### CSS responsibilities
+## CSS layers
 
-- `tokens.css`: colors, typography, spacing, radii, borders, shadows, layout constants.
-- `base.css`: reset/defaults, page/section foundations, typography and generic surfaces.
-- `components.css`: buttons, fields, selects, checks/radios, switches, badges, alerts, cards, lists, tabs, accordion, dropdown, tooltip, modal, avatars, icon actions.
-- `patterns.css`: compact sidebar, top bar, toolbar, grids, detail panel, notes and collection patterns, quick actions, responsive layout behavior.
-- `utilities.css`: small layout/text/background helper classes.
-- `docs-library.css`: styles only for the visual documentation page.
-- `diarito-system.css`: canonical entry point that imports the reusable system styles. The legacy `diarito-components.css` from 1.0.7 can remain untouched during migration.
+- `tokens.css` - brand, states, neutrals, typography, spacing, radius, border, shadows, motion and layout values.
+- `base.css` - reset, typography defaults, focus, selection, display type and icon baseline.
+- `layout.css` - `diarito-section`, `diarito-container`, grid, stack, cluster, split and surface primitives.
+- `components.css` - buttons, fields, choices, switches, labels, alerts, empty states, cards, lists, tabs, accordion, dropdown, tooltip and modal.
+- `patterns.css` - toolbar, topbar, sidebar item, detail panel and Diarito-specific note/collection patterns.
+- `utilities.css` - intentionally small helper set.
+- `diarito-system.css` - canonical import entrypoint.
+- `docs-library.css` - documentation UI only. Never required by product screens.
 
-## Migration note for the existing GitHub repository
+## JavaScript
 
-The current repository is 1.0.7 and contains individual legacy documentation pages plus a large `assets/css/diarito-components.css`. Version 1.1.x introduces the new system beside those files instead of overwriting them immediately. The canonical `index.html` loads only `diarito-system.css` and `docs-library.css`; legacy pages/styles can be retired after visual comparison. This avoids silently breaking existing reference pages while making the new palette and component set authoritative.
+`assets/js/diarito.js` contains generic behavior only:
 
-## Using tokens
+- dropdown open/close;
+- tabs;
+- native dialog modal open/close;
+- dismissible feedback;
+- Escape handling.
 
-Prefer semantic aliases before raw brand tokens when the intent is clear.
+It contains no application state, auth, API calls, storage, backend or business logic.
 
-```css
-.my-component {
-  color: var(--diarito-color-text);
-  border: var(--diarito-border);
-  background: var(--diarito-color-surface);
-  border-radius: var(--diarito-radius-md);
-  padding: var(--diarito-space-4);
-}
+## Layout contract
+
+Use sections and containers consistently:
+
+```html
+<section class="diarito-section">
+  <div class="diarito-container">
+    ...
+  </div>
+</section>
 ```
 
-Brand color examples:
+Available section modifiers:
 
-```css
-var(--diarito-purple)
-var(--diarito-lime)
-var(--diarito-olive)
+```text
+diarito-section--compact
+diarito-section--flush
+diarito-section--muted
+diarito-section--lime
+diarito-section--purple
 ```
 
-State color examples:
+Available container modifiers:
 
-```css
-var(--diarito-error)
-var(--diarito-warning)
-var(--diarito-success)
-var(--diarito-info)
+```text
+diarito-container--sm
+diarito-container--md
+diarito-container--xl
+diarito-container--fluid
 ```
 
-Do not create new decorative hex colors inside components. If a lighter surface is needed, derive it from an approved token with `color-mix()` or add a deliberate token in `tokens.css`.
+Composition primitives:
 
-## Common classes
+```text
+diarito-grid
+  --2 / --3 / --4 / --auto
 
-### Buttons
+diarito-stack
+  --xs / --sm / --lg / --xl
+
+diarito-cluster
+  --sm / --between
+
+diarito-split
+```
+
+## Component contract
+
+Components use one base class and explicit modifiers.
 
 ```html
 <button class="diarito-button diarito-button--primary">Primary</button>
 <button class="diarito-button diarito-button--secondary">Secondary</button>
 <button class="diarito-button diarito-button--ghost">Ghost</button>
-<button class="diarito-button diarito-button--secondary diarito-button--icon" aria-label="More actions">
-  <i class="fi fi-rr-menu-dots-vertical"></i>
-</button>
+<button class="diarito-button diarito-button--danger">Delete</button>
 ```
 
-### Forms
+Sizes and shape are shared modifiers:
 
-```html
-<label class="diarito-field">
-  <span class="diarito-label">Title</span>
-  <input class="diarito-input" type="text">
-  <span class="diarito-help">Helpful supporting text.</span>
-</label>
+```text
+diarito-button--sm
+diarito-button--lg
+diarito-button--icon
+diarito-button--block
 ```
 
-Use `diarito-textarea`, `diarito-select`, `diarito-choice`, and `diarito-switch` for the related controls.
+The same rule applies to status, alerts and other component families.
 
-### Feedback
+## Tokens
 
-```html
-<div class="diarito-alert diarito-alert--success">...</div>
-<span class="diarito-status diarito-status--warning">Draft</span>
+Brand:
+
+- Purple `#CFA8FF`
+- Lime `#F1FF9C`
+- Olive `#7E9026`
+
+Semantic states:
+
+- Error `#AC5C60`
+- Warning `#8F7135`
+- Success `#4F8064`
+- Info `#53769F`
+
+State colors are reserved for meaning, not decoration.
+
+## Future React mapping
+
+Do not migrate yet. When screens are visually approved, the mapping should be direct:
+
+```text
+.diarito-button        -> <Button />
+.diarito-input         -> <Input />
+.diarito-card          -> <Card />
+.diarito-alert         -> <Alert />
+.diarito-note-card     -> <NoteCard />
+.diarito-collection-item -> <CollectionItem />
 ```
 
-Available semantic modifiers: `--success`, `--warning`, `--error`, and `--info`.
-
-### Cards and product patterns
-
-```html
-<article class="diarito-card">...</article>
-<article class="diarito-note-card">...</article>
-<div class="diarito-note-preview">...</div>
-<div class="diarito-collection-item">...</div>
-<div class="diarito-quick-actions">...</div>
-```
-
-## Iconography
-
-The library uses Flaticon UIcons Regular Rounded:
-
-```html
-<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
-<i class="fi fi-rr-document"></i>
-```
-
-Avoid mixing icon families within the same interface unless the chosen Flaticon family lacks a required symbol.
-
-## Responsive rule
-
-Components are expected to work from approximately 320px upward. The base breakpoints currently focus on:
-
-- small/mobile: up to `48rem`;
-- medium/tablet: up to `64rem`;
-- desktop: above those widths.
-
-Do not design an entire desktop feature and treat mobile as a compression pass. Change the layout behavior when needed.
-
-## Minimal JavaScript
-
-`assets/js/library-docs.js` exists only for the documentation page:
-
-- active section navigation;
-- tabs;
-- native `<dialog>` open/close behavior.
-
-Dropdowns and accordions use native `<details>` elements. Tooltips are CSS-based.
-
-## Consistency rules
-
-1. Use the existing tokens before adding a new one.
-2. Brand colors are Purple, Lime, and Olive. Status colors are not decorative colors.
-3. Prefer borders and spacing before shadows.
-4. Keep one control height and one focus treatment across forms.
-5. Keep component modifiers explicit, for example `diarito-button--primary` or `diarito-status--success`.
-6. Use product patterns only when they add Diarito meaning. Generic UI should remain generic.
-7. Keep the component library free of authentication, backend, database, and business logic during this phase.
+React should implement the already-approved component contract rather than invent a second visual system.

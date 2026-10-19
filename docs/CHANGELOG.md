@@ -1,36 +1,28 @@
 # Changelog
 
-## 1.1.1 — State palette + component cleanup
+## 1.2.0 - Component contract and layout foundation
 
-- Replaced the semantic states with softer, less corporate colors: error `#AC5C60`, warning `#8F7135`, success `#4F8064`, info `#53769F`.
-- Kept state surfaces derived from those colors rather than adding extra palette values.
-- Simplified status pills and alert borders.
-- Removed button hover lift and reduced visual noise in tabs/cards.
-- Reorganized the component documentation into clearer functional groups.
-- Added a short principles row to make the design rules easier to scan.
-- No React, authentication, backend, database, or business logic added.
+- Reframed the library as Diarito's internal Bootstrap-like component system.
+- Added a dedicated `layout.css` layer.
+- Standardized `diarito-section` and `diarito-container` primitives with variants.
+- Added grid, stack, cluster and split composition primitives.
+- Clarified the rule that screens may compose shared components but must not restyle their visual internals.
+- Standardized button variants, sizes and destructive action styling.
+- Added form error state.
+- Added generic dropdown behavior and dismissible feedback to `diarito.js`.
+- Kept tabs and modal behavior generic and framework-free.
+- Rebuilt the visual library page around the actual reusable system instead of documentation-only styling experiments.
+- Added version query strings to CSS/JS links to avoid stale browser cache during rapid local iteration.
+- React remains out of scope.
 
-## 1.1.0 — UI component library refactor
+## 1.1.1 - State palette + component cleanup
 
-### Added
-- Modular design-system structure: tokens, base, components, patterns, utilities, and docs.
-- Documented base components requested for the current Diarito UI phase.
-- Diarito-specific note, preview, collection, visual-state, action-row, quick-action, and list/detail patterns.
-- Compact sidebar, top bar, toolbar, card grid, detail panel, and responsive behavior patterns.
-- Flaticon UIcons Regular Rounded as the documented icon family.
-- `VERSION.txt` and versioned changelog.
+- Softer semantic state palette: error `#AC5C60`, warning `#8F7135`, success `#4F8064`, info `#53769F`.
+- Quieter status pills, alerts, tabs, cards and button interaction.
+- Documentation reorganized into clearer functional groups.
 
-### Changed
-- Active brand palette is now limited to `#CFA8FF`, `#F1FF9C`, and `#7E9026`.
-- Semantic red/yellow/green/blue colors are reserved for error/warning/success/info.
-- `index.html` is now the navigable component library rather than a PIN/access screen.
-- Documentation interactions use only a small native JavaScript file.
+## 1.1.0 - Base design system
 
-### Out of scope by design
-- Authentication and login.
-- Registration and user sessions.
-- Backend and database work.
-- Supabase.
-- ASP.NET Core.
-- React/Vite migration.
-- Product business logic.
+- Brand palette changed to `#CFA8FF`, `#F1FF9C`, and `#7E9026`.
+- Added modular tokens, base, components, patterns and utilities.
+- Added Diarito-specific note and collection patterns.
