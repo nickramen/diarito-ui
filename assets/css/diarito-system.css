@@ -1,0 +1,9 @@
+/*
+ * Diarito UI Library 1.1.0
+ * Compatibility entrypoint for consumers that prefer one stylesheet.
+ */
+@import url('./tokens.css');
+@import url('./base.css');
+@import url('./components.css');
+@import url('./patterns.css');
+@import url('./utilities.css');
