@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Diarito UI Library 1.1.0</title>
+  <title>Diarito UI Library 1.1.1</title>
   <meta name="description" content="Diarito UI component library and base design system.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
     <aside class="docs-sidebar" aria-label="Component library navigation">
       <a class="docs-brand" href="#overview">
         <span class="docs-brand__mark">D</span>
-        <span class="docs-brand__copy"><strong>Diarito</strong><span>UI Library · 1.1.0</span></span>
+        <span class="docs-brand__copy"><strong>Diarito</strong><span>UI Library · 1.1.1</span></span>
       </a>
       <nav class="docs-nav">
         <span class="docs-nav__label">Foundations</span>
@@ -27,14 +27,18 @@
         <a data-doc-nav href="#spacing"><i class="fi fi-rr-ruler-combined"></i> Spacing & shape</a>
         <a data-doc-nav href="#icons"><i class="fi fi-rr-apps"></i> Iconography</a>
 
-        <span class="docs-nav__label">Components</span>
+        <span class="docs-nav__label">Actions & input</span>
         <a data-doc-nav href="#buttons"><i class="fi fi-rr-cursor-finger"></i> Buttons</a>
-        <a data-doc-nav href="#forms"><i class="fi fi-rr-edit"></i> Forms</a>
-        <a data-doc-nav href="#labels"><i class="fi fi-rr-tags"></i> Labels</a>
-        <a data-doc-nav href="#feedback"><i class="fi fi-rr-info"></i> Feedback</a>
-        <a data-doc-nav href="#cards"><i class="fi fi-rr-rectangle-list"></i> Cards & lists</a>
-        <a data-doc-nav href="#overlays"><i class="fi fi-rr-window-maximize"></i> Overlays</a>
-        <a data-doc-nav href="#navigation"><i class="fi fi-rr-menu-burger"></i> Navigation</a>
+        <a data-doc-nav href="#forms"><i class="fi fi-rr-edit"></i> Inputs & controls</a>
+
+        <span class="docs-nav__label">Content & feedback</span>
+        <a data-doc-nav href="#labels"><i class="fi fi-rr-tags"></i> Labels & status</a>
+        <a data-doc-nav href="#feedback"><i class="fi fi-rr-info"></i> Feedback states</a>
+        <a data-doc-nav href="#cards"><i class="fi fi-rr-rectangle-list"></i> Cards & rows</a>
+
+        <span class="docs-nav__label">Navigation & layers</span>
+        <a data-doc-nav href="#navigation"><i class="fi fi-rr-menu-burger"></i> Tabs & accordion</a>
+        <a data-doc-nav href="#overlays"><i class="fi fi-rr-window-maximize"></i> Modal & menus</a>
 
         <span class="docs-nav__label">Patterns</span>
         <a data-doc-nav href="#layout"><i class="fi fi-rr-layout-fluid"></i> Layout</a>
@@ -58,7 +62,7 @@
             <a class="diarito-dropdown__item" href="#diarito">Diarito patterns</a>
           </div>
         </details>
-        <span class="diarito-badge">v1.1.0</span>
+        <span class="diarito-badge">v1.1.1</span>
       </header>
 
       <main class="docs-content">
@@ -74,12 +78,19 @@
           </div>
         </section>
 
+        <div class="docs-principles" aria-label="Component library principles">
+          <div class="docs-principle"><i class="fi fi-rr-compress-alt"></i><strong>One spacing rhythm</strong><span>Controls and surfaces reuse the same compact spacing scale.</span></div>
+          <div class="docs-principle"><i class="fi fi-rr-border-style-alt"></i><strong>Borders before shadows</strong><span>Structure comes from spacing and quiet borders, not floating boxes everywhere.</span></div>
+          <div class="docs-principle"><i class="fi fi-rr-palette"></i><strong>States mean something</strong><span>Red, yellow, green, and blue appear only when the UI is communicating status.</span></div>
+          <div class="docs-principle"><i class="fi fi-rr-browser"></i><strong>Native before custom</strong><span>HTML controls are preferred when they already provide the behavior we need.</span></div>
+        </div>
+
         <section class="docs-section" id="colors" data-doc-section>
           <div class="docs-section-header">
             <div class="docs-section-header__copy">
               <span class="docs-kicker">Foundations</span>
               <h2>Color tokens</h2>
-              <p>The active brand palette is intentionally limited to three colors. Red, yellow, green, and blue are reserved for semantic states.</p>
+              <p>The active brand palette is intentionally limited to three colors. Red, yellow, green, and blue are reserved for semantic states and intentionally softened so feedback feels clear without becoming visually loud.</p>
             </div>
           </div>
 
@@ -107,10 +118,10 @@
             <div class="docs-example__bar"><strong>Semantic states</strong><span>Do not reuse these as decorative brand colors.</span></div>
             <div class="docs-example__preview">
               <div class="diarito-state-swatches">
-                <div class="diarito-state-swatch diarito-state-swatch--error"><strong>Error</strong><span>#D92D20</span></div>
-                <div class="diarito-state-swatch diarito-state-swatch--warning"><strong>Warning</strong><span>#B7791F</span></div>
-                <div class="diarito-state-swatch diarito-state-swatch--success"><strong>Success</strong><span>#18864B</span></div>
-                <div class="diarito-state-swatch diarito-state-swatch--info"><strong>Info</strong><span>#2563EB</span></div>
+                <div class="diarito-state-swatch diarito-state-swatch--error"><strong>Error</strong><span>#AC5C60</span></div>
+                <div class="diarito-state-swatch diarito-state-swatch--warning"><strong>Warning</strong><span>#8F7135</span></div>
+                <div class="diarito-state-swatch diarito-state-swatch--success"><strong>Success</strong><span>#4F8064</span></div>
+                <div class="diarito-state-swatch diarito-state-swatch--info"><strong>Info</strong><span>#53769F</span></div>
               </div>
             </div>
           </div>
@@ -166,6 +177,8 @@
           </div></div>
         </section>
 
+        <div class="docs-group-heading" aria-hidden="true"><span class="docs-group-heading__icon"><i class="fi fi-rr-cursor-finger"></i></span><div><strong>Actions & input</strong><span>Things people click, type into, select, or toggle.</span></div></div>
+
         <section class="docs-section" id="buttons" data-doc-section>
           <div class="docs-section-header"><div class="docs-section-header__copy"><span class="docs-kicker">Components</span><h2>Buttons</h2><p>Primary is purple, secondary uses olive as the interactive line, and ghost is neutral. Icon-only buttons use the same states and sizing.</p></div></div>
           <div class="docs-example"><div class="docs-example__preview docs-component-row">
@@ -196,8 +209,10 @@
           </div></div>
         </section>
 
+        <div class="docs-group-heading" aria-hidden="true"><span class="docs-group-heading__icon"><i class="fi fi-rr-tags"></i></span><div><strong>Content & feedback</strong><span>Labels, status, feedback, cards, and repeatable content rows.</span></div></div>
+
         <section class="docs-section" id="labels" data-doc-section>
-          <div class="docs-section-header"><div class="docs-section-header__copy"><span class="docs-kicker">Components</span><h2>Badges, chips, tags & status pills</h2><p>Brand labels and semantic status are deliberately separate so purple does not accidentally mean “error” on Tuesday.</p></div></div>
+          <div class="docs-section-header"><div class="docs-section-header__copy"><span class="docs-kicker">Components</span><h2>Labels & status</h2><p>Brand labels and semantic status are deliberately separate so purple does not accidentally mean “error” on Tuesday.</p></div></div>
           <div class="docs-example"><div class="docs-example__preview diarito-stack">
             <div class="docs-component-row"><span class="diarito-badge">New</span><span class="diarito-chip"><i class="fi fi-rr-user"></i> Personal</span><span class="diarito-tag">journal</span><span class="diarito-tag">travel</span></div>
             <div class="docs-component-row"><span class="diarito-status diarito-status--success">Synced</span><span class="diarito-status diarito-status--warning">Draft</span><span class="diarito-status diarito-status--error">Failed</span><span class="diarito-status diarito-status--info">Shared</span></div>
@@ -205,7 +220,7 @@
         </section>
 
         <section class="docs-section" id="feedback" data-doc-section>
-          <div class="docs-section-header"><div class="docs-section-header__copy"><span class="docs-kicker">Components</span><h2>Alerts & empty states</h2><p>State colors only appear when the UI is communicating state. Empty states remain brand/neutral, not warning-colored theater.</p></div></div>
+          <div class="docs-section-header"><div class="docs-section-header__copy"><span class="docs-kicker">Components</span><h2>Feedback states & empty states</h2><p>State colors only appear when the UI is communicating state. The palette is muted enough to sit beside Diarito’s brand colors without feeling clinical or alarm-heavy.</p></div></div>
           <div class="docs-example"><div class="docs-example__preview diarito-stack">
             <div class="diarito-alert diarito-alert--success"><i class="fi fi-rr-check-circle"></i><div><strong>Saved</strong><p>Your note was saved locally.</p></div></div>
             <div class="diarito-alert diarito-alert--warning"><i class="fi fi-rr-triangle-warning"></i><div><strong>Unsaved changes</strong><p>There are edits that have not been stored yet.</p></div></div>
@@ -218,7 +233,7 @@
         </section>
 
         <section class="docs-section" id="cards" data-doc-section>
-          <div class="docs-section-header"><div class="docs-section-header__copy"><span class="docs-kicker">Components</span><h2>Cards, list items & action rows</h2><p>Cards create grouping, not decoration. Prefer borders and spacing before shadows.</p></div></div>
+          <div class="docs-section-header"><div class="docs-section-header__copy"><span class="docs-kicker">Components</span><h2>Cards & content rows</h2><p>Cards create grouping, not decoration. Prefer borders and spacing before shadows.</p></div></div>
           <div class="diarito-card-grid">
             <article class="diarito-card"><div class="diarito-card__header"><h3>Simple card</h3></div><div class="diarito-card__body"><p>Reusable content surface with header, body, and optional footer.</p></div><div class="diarito-card__footer"><button class="diarito-button diarito-button--ghost diarito-button--sm" type="button">Open</button></div></article>
             <article class="diarito-card diarito-card--raised"><div class="diarito-card__body"><div class="diarito-inline"><span class="diarito-avatar">NR</span><div><strong>Nicole</strong><div class="diarito-help">Updated 8 min ago</div></div></div><p style="margin:1rem 0 0">Raised cards are reserved for emphasis, not the default.</p></div></article>
@@ -227,15 +242,7 @@
           <div class="docs-example"><div class="docs-example__preview"><div class="diarito-action-row"><span class="diarito-icon-box"><i class="fi fi-rr-bell"></i></span><div class="diarito-action-row__content"><strong>Daily reminder</strong><span>Remind me to write every evening</span></div><label class="diarito-switch" aria-label="Enable daily reminder"><input type="checkbox" checked><span class="diarito-switch__track"></span></label></div></div></div>
         </section>
 
-        <section class="docs-section" id="overlays" data-doc-section>
-          <div class="docs-section-header"><div class="docs-section-header__copy"><span class="docs-kicker">Components</span><h2>Modal, dropdown & tooltip</h2><p>Use native dialog/details when possible. The component library adds only the styling and minimal interaction glue.</p></div></div>
-          <div class="docs-example"><div class="docs-example__preview docs-component-row">
-            <button class="diarito-button diarito-button--primary" type="button" data-modal-open="demo-modal"><i class="fi fi-rr-window-maximize"></i> Open modal</button>
-            <details class="diarito-dropdown"><summary class="diarito-button diarito-button--secondary"><i class="fi fi-rr-menu-dots"></i> Actions</summary><div class="diarito-dropdown__menu"><button class="diarito-dropdown__item" type="button"><i class="fi fi-rr-edit"></i> Rename</button><button class="diarito-dropdown__item" type="button"><i class="fi fi-rr-copy"></i> Duplicate</button><button class="diarito-dropdown__item diarito-dropdown__item--danger" type="button"><i class="fi fi-rr-trash"></i> Delete</button></div></details>
-            <button class="diarito-button diarito-button--ghost diarito-button--icon diarito-tooltip" type="button" aria-label="Archive note" data-tooltip="Archive note"><i class="fi fi-rr-box"></i></button>
-          </div></div>
-          <dialog class="diarito-modal" id="demo-modal"><div class="diarito-modal__header"><div><h3>Move note</h3><p class="diarito-help" style="margin:.25rem 0 0">Choose a destination collection.</p></div><button class="diarito-button diarito-button--ghost diarito-button--icon diarito-button--sm" type="button" aria-label="Close modal" data-modal-close><i class="fi fi-rr-cross-small"></i></button></div><div class="diarito-modal__body"><label class="diarito-field"><span class="diarito-label">Collection</span><select class="diarito-select"><option>Personal</option><option>Research</option><option>Work</option></select></label></div><div class="diarito-modal__footer"><button class="diarito-button diarito-button--ghost" type="button" data-modal-close>Cancel</button><button class="diarito-button diarito-button--primary" type="button" data-modal-close>Move note</button></div></dialog>
-        </section>
+        <div class="docs-group-heading" aria-hidden="true"><span class="docs-group-heading__icon"><i class="fi fi-rr-menu-burger"></i></span><div><strong>Navigation & layers</strong><span>Moving between sibling views and opening temporary UI above the current surface.</span></div></div>
 
         <section class="docs-section" id="navigation" data-doc-section>
           <div class="docs-section-header"><div class="docs-section-header__copy"><span class="docs-kicker">Components</span><h2>Tabs & accordion</h2><p>Tabs switch sibling content. Accordions use native details elements and do not need JavaScript.</p></div></div>
@@ -246,6 +253,17 @@
             <div class="diarito-tab-panel" id="tab-shared" role="tabpanel" hidden><p>Shared notes and collections appear here.</p></div>
           </div></div>
           <div class="docs-example"><div class="docs-example__preview"><div class="diarito-accordion"><details open><summary>What belongs in a note card?</summary><div class="diarito-accordion__content">Title, concise preview, useful metadata, state, and only the actions that belong at card level.</div></details><details><summary>When should I use a modal?</summary><div class="diarito-accordion__content">For short focused tasks that do not deserve a new page or side panel.</div></details></div></div></div>
+        </section>
+
+
+        <section class="docs-section" id="overlays" data-doc-section>
+          <div class="docs-section-header"><div class="docs-section-header__copy"><span class="docs-kicker">Components</span><h2>Modal, menus & tooltip</h2><p>Use native dialog/details when possible. The component library adds only the styling and minimal interaction glue.</p></div></div>
+          <div class="docs-example"><div class="docs-example__preview docs-component-row">
+            <button class="diarito-button diarito-button--primary" type="button" data-modal-open="demo-modal"><i class="fi fi-rr-window-maximize"></i> Open modal</button>
+            <details class="diarito-dropdown"><summary class="diarito-button diarito-button--secondary"><i class="fi fi-rr-menu-dots"></i> Actions</summary><div class="diarito-dropdown__menu"><button class="diarito-dropdown__item" type="button"><i class="fi fi-rr-edit"></i> Rename</button><button class="diarito-dropdown__item" type="button"><i class="fi fi-rr-copy"></i> Duplicate</button><button class="diarito-dropdown__item diarito-dropdown__item--danger" type="button"><i class="fi fi-rr-trash"></i> Delete</button></div></details>
+            <button class="diarito-button diarito-button--ghost diarito-button--icon diarito-tooltip" type="button" aria-label="Archive note" data-tooltip="Archive note"><i class="fi fi-rr-box"></i></button>
+          </div></div>
+          <dialog class="diarito-modal" id="demo-modal"><div class="diarito-modal__header"><div><h3>Move note</h3><p class="diarito-help" style="margin:.25rem 0 0">Choose a destination collection.</p></div><button class="diarito-button diarito-button--ghost diarito-button--icon diarito-button--sm" type="button" aria-label="Close modal" data-modal-close><i class="fi fi-rr-cross-small"></i></button></div><div class="diarito-modal__body"><label class="diarito-field"><span class="diarito-label">Collection</span><select class="diarito-select"><option>Personal</option><option>Research</option><option>Work</option></select></label></div><div class="diarito-modal__footer"><button class="diarito-button diarito-button--ghost" type="button" data-modal-close>Cancel</button><button class="diarito-button diarito-button--primary" type="button" data-modal-close>Move note</button></div></dialog>
         </section>
 
         <section class="docs-section" id="layout" data-doc-section>
@@ -280,7 +298,7 @@
           <div class="diarito-alert diarito-alert--info"><i class="fi fi-rr-mobile-notch"></i><div><strong>Baseline rule</strong><p>Every new component should be checked at approximately 320px, 768px, and desktop widths before it joins the library.</p></div></div>
         </section>
 
-        <footer class="docs-footer">Diarito UI Library 1.1.0 · HTML + CSS · Flaticon UIcons · Native JavaScript only where the documentation needs interaction.</footer>
+        <footer class="docs-footer">Diarito UI Library 1.1.1 · HTML + CSS · Flaticon UIcons · Native JavaScript only where the documentation needs interaction.</footer>
       </main>
     </div>
   </div>
