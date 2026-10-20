@@ -14,7 +14,7 @@
 </head>
 <body class="docs-body">
   <header class="docs-topbar">
-    <div class="docs-topbar__inner">
+    <div class="docs-topbar__inner diarito-container docs-container">
       <a class="diarito-brand" href="#overview">
         <span class="diarito-brand__mark">D</span>
         <span>Diarito</span>
@@ -28,8 +28,8 @@
   </header>
 
   <main class="docs-main">
-    <section class="docs-hero" id="overview">
-      <div class="docs-hero__inner">
+    <section class="docs-hero diarito-section" id="overview">
+      <div class="docs-hero__inner diarito-container docs-container">
         <span class="diarito-kicker">Diarito UI Library · HTML + CSS + JS</span>
         <h1 class="diarito-display">A quieter system with stronger structure.</h1>
         <p>Version 2.2.3 adds light and dark theme foundations, sharper radii, smaller default buttons and stronger semantic state labels while keeping the library neutral and reusable.</p>
@@ -43,7 +43,7 @@
     </section>
 
     <nav class="docs-navstrip" aria-label="Quick navigation">
-      <div class="docs-navstrip__inner">
+      <div class="docs-navstrip__inner diarito-container docs-container">
         <a data-doc-nav class="is-active" href="#foundation">Foundation</a>
         <a data-doc-nav href="#components">Components</a>
         <a data-doc-nav href="#feedback">Feedback</a>
@@ -54,7 +54,7 @@
       </div>
     </nav>
 
-    <section class="docs-section" id="foundation" data-doc-section>
+    <section class="docs-section diarito-section diarito-container docs-container" id="foundation" data-doc-section>
       <div class="docs-section__intro">
         <span class="docs-kicker">01 / Foundation</span>
         <h2>Color, type, spacing and shape.</h2>
@@ -114,7 +114,7 @@
       </div>
     </section>
 
-    <section class="docs-section" id="components" data-doc-section>
+    <section class="docs-section diarito-section diarito-container docs-container" id="components" data-doc-section>
       <div class="docs-section__intro">
         <span class="docs-kicker">02 / Components</span>
         <h2>Reusable controls, not page-specific styling.</h2>
@@ -169,7 +169,7 @@
       </div>
     </section>
 
-    <section class="docs-section" id="feedback" data-doc-section>
+    <section class="docs-section diarito-section diarito-container docs-container" id="feedback" data-doc-section>
       <div class="docs-section__intro">
         <span class="docs-kicker">03 / Feedback & layers</span>
         <h2>Status without turning the page into a traffic light.</h2>
@@ -213,7 +213,7 @@
       <dialog class="diarito-modal" id="demo-modal"><div class="diarito-modal__header"><h3>Modal title</h3><button class="diarito-button diarito-button--ghost diarito-button--icon diarito-button--sm" data-diarito-modal-close aria-label="Close"><i class="fi fi-rr-cross-small"></i></button></div><div class="diarito-modal__body"><p>Modal content uses the same spacing, border and action hierarchy as the rest of Diarito.</p></div><div class="diarito-modal__footer"><button class="diarito-button diarito-button--ghost" data-diarito-modal-close>Cancel</button><button class="diarito-button diarito-button--primary">Confirm</button></div></dialog>
     </section>
 
-    <section class="docs-section" id="data" data-doc-section>
+    <section class="docs-section diarito-section diarito-container docs-container" id="data" data-doc-section>
       <div class="docs-section__intro"><span class="docs-kicker">04 / Structured UI</span><h2>Stats, tables and denser product surfaces.</h2><p>The references use dense information inside clean white frames. Diarito can do the same without becoming an admin dashboard everywhere.</p></div>
       <div class="docs-showcase-grid">
         <article class="docs-showcase is-wide"><div class="docs-showcase__head"><div><h3>Activity stats</h3><p>Compact metrics inside a white frame.</p></div></div><div class="diarito-stat-grid"><div class="diarito-stat"><span>Notes</span><strong>184</strong><small>+12 this month</small></div><div class="diarito-stat"><span>Words</span><strong>31.2K</strong><small>+8.4%</small></div><div class="diarito-stat"><span>Replies</span><strong>428</strong><small>+19</small></div><div class="diarito-stat"><span>Streak</span><strong>12d</strong><small>personal best</small></div></div><div class="diarito-mock-window" style="margin-top:1rem"><div class="diarito-mock-window__body diarito-stats-chart"><svg viewBox="0 0 1000 160" preserveAspectRatio="none" aria-label="Example activity chart"><polyline vector-effect="non-scaling-stroke" fill="none" stroke="var(--diarito-color-text-strong)" stroke-width="3" points="0,135 120,116 240,104 360,95 480,84 600,62 735,32 865,18 1000,16"/><polyline vector-effect="non-scaling-stroke" fill="none" stroke="var(--diarito-color-text-subtle)" stroke-width="2" stroke-dasharray="6 6" points="0,150 145,142 290,132 435,118 580,100 725,86 860,76 1000,62"/></svg></div></div></article>
@@ -264,7 +264,7 @@
       </div>
     </section>
 
-    <section class="docs-section" id="feed" data-doc-section>
+    <section class="docs-section diarito-section diarito-container docs-container" id="feed" data-doc-section>
       <div class="docs-section__intro"><span class="docs-kicker">05 / Product pattern</span><h2>Diarito feed.</h2><p>A realistic scrollable social/editorial pattern: one reading column, visible composer, lightweight metadata and enough content to judge the rhythm properly.</p></div>
       <div class="docs-showcase-grid">
         <article class="docs-showcase is-full">
@@ -288,7 +288,7 @@
       </div>
     </section>
 
-    <section class="docs-section" id="patterns" data-doc-section>
+    <section class="docs-section diarito-section diarito-container docs-container" id="patterns" data-doc-section>
       <div class="docs-section__intro"><span class="docs-kicker">06 / Diarito patterns</span><h2>Notes, collections, rows and page structure.</h2><p>Product-specific patterns sit above generic components, but still obey the same tokens and spacing rules.</p></div>
       <div class="docs-showcase-grid">
         <article class="docs-showcase"><div class="docs-showcase__head"><div><h3>Note cards</h3><p>Both variants use the same card header/body/footer contract. Only the ruled body changes the writing surface.</p></div></div>
@@ -313,7 +313,7 @@
       </div>
     </section>
 
-    <section class="docs-section" id="rules" data-doc-section>
+    <section class="docs-section diarito-section diarito-container docs-container" id="rules" data-doc-section>
       <div class="docs-section__intro"><span class="docs-kicker">07 / Governance</span><h2>Rules that keep Diarito consistent.</h2><p>This consolidates the useful rules from the original Diarito library with the decisions fixed during the 2.x rebuild.</p></div>
       <div class="docs-showcase-grid">
         <article class="docs-showcase is-full">
@@ -343,12 +343,12 @@
     </section>
 
     <footer class="docs-footer">
-      <div class="docs-footer__block docs-footer__block--main"><div class="docs-footer__block-inner"><div class="docs-footer__main">
+      <div class="docs-footer__block docs-footer__block--main"><div class="docs-footer__block-inner diarito-container docs-container"><div class="docs-footer__main">
         <div class="docs-footer__brand"><a class="diarito-brand" href="#overview"><span class="diarito-brand__mark">D</span><span>Diarito</span></a><p>A reusable HTML, CSS and native JavaScript design system for a quieter, more consistent Diarito.</p><span class="diarito-tag diarito-tag--gray">UI Library v2.2.3</span></div>
         <div class="docs-footer__links"><div class="docs-footer__group"><span class="docs-footer__label">Library</span><a href="#foundation">Foundation</a><a href="#components">Components</a><a href="#feedback">Feedback</a><a href="#data">Data</a></div><div class="docs-footer__group"><span class="docs-footer__label">Product patterns</span><a href="#feed">Feed</a><a href="#patterns">Diarito patterns</a><a href="#rules">Rules</a></div><div class="docs-footer__group"><span class="docs-footer__label">Project</span><a href="https://github.com/nickramen/diarito-ui">GitHub</a><a href="README.md">README</a><a href="docs/CHANGELOG.md">Changelog</a></div></div>
       </div></div></div>
-      <div class="docs-footer__block docs-footer__block--social"><div class="docs-footer__block-inner"><span class="docs-footer__label">Diarito around the web</span><div class="docs-footer__social-grid"><a class="docs-footer__social-link" href="#" aria-label="Discord demo link"><i class="fi fi-rr-users-alt"></i><span>Discord</span></a><a class="docs-footer__social-link" href="#" aria-label="X demo link"><i class="fi fi-rr-at"></i><span>X</span></a><a class="docs-footer__social-link" href="#" aria-label="Reddit demo link"><i class="fi fi-rr-comment-alt"></i><span>Reddit</span></a><a class="docs-footer__social-link" href="#" aria-label="TikTok demo link"><i class="fi fi-rr-play-alt"></i><span>TikTok</span></a><a class="docs-footer__social-link" href="#" aria-label="Instagram demo link"><i class="fi fi-rr-camera"></i><span>Instagram</span></a></div></div></div>
-      <div class="docs-footer__block docs-footer__block--bottom"><div class="docs-footer__block-inner"><div class="docs-footer__bottom"><span>&copy; 2026 Diarito. UI library prototype.</span><span>HTML + CSS + native JS</span></div></div></div>
+      <div class="docs-footer__block docs-footer__block--social"><div class="docs-footer__block-inner diarito-container docs-container"><span class="docs-footer__label">Diarito around the web</span><div class="docs-footer__social-grid"><a class="docs-footer__social-link" href="#" aria-label="Discord demo link"><i class="fi fi-rr-users-alt"></i><span>Discord</span></a><a class="docs-footer__social-link" href="#" aria-label="X demo link"><i class="fi fi-rr-at"></i><span>X</span></a><a class="docs-footer__social-link" href="#" aria-label="Reddit demo link"><i class="fi fi-rr-comment-alt"></i><span>Reddit</span></a><a class="docs-footer__social-link" href="#" aria-label="TikTok demo link"><i class="fi fi-rr-play-alt"></i><span>TikTok</span></a><a class="docs-footer__social-link" href="#" aria-label="Instagram demo link"><i class="fi fi-rr-camera"></i><span>Instagram</span></a></div></div></div>
+      <div class="docs-footer__block docs-footer__block--bottom"><div class="docs-footer__block-inner diarito-container docs-container"><div class="docs-footer__bottom"><span>&copy; 2026 Diarito. UI library prototype.</span><span>HTML + CSS + native JS</span></div></div></div>
     </footer>
   </main>
 
