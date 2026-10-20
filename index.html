@@ -264,62 +264,41 @@
     </section>
 
     <section class="docs-section" id="rules" data-doc-section>
-      <div class="docs-section__intro"><span class="docs-kicker">07 / Governance</span><h2>Rules that keep the future React app consistent.</h2><p>If a component exists here, screens use it. If a new variant is needed, it is added here first.</p></div>
+      <div class="docs-section__intro"><span class="docs-kicker">07 / Governance</span><h2>Rules that keep Diarito consistent.</h2><p>This consolidates the useful rules from the original Diarito library with the decisions fixed during the 2.x rebuild.</p></div>
       <div class="docs-showcase-grid">
-        <article class="docs-showcase is-full"><div class="docs-showcase__head"><div><h3>Component contract</h3><p>One source of truth for visual decisions.</p></div></div><div class="diarito-card diarito-card--flat"><div class="diarito-card__body"><div class="diarito-action-row"><span class="diarito-badge">01</span><div class="diarito-action-row__content"><strong>Reuse</strong><span>Never recreate a shared button, input, card, status, tab or modal inside page CSS.</span></div></div><div class="diarito-action-row"><span class="diarito-badge">02</span><div class="diarito-action-row__content"><strong>Compose</strong><span>Pages may arrange components with section, container, grid, stack and cluster primitives.</span></div></div><div class="diarito-action-row"><span class="diarito-badge">03</span><div class="diarito-action-row__content"><strong>Tokenize</strong><span>New colors, spacing or shape values become tokens before they become CSS literals.</span></div></div><div class="diarito-action-row"><span class="diarito-badge">04</span><div class="diarito-action-row__content"><strong>React later</strong><span>When the visual screens are approved, these classes map into reusable React components rather than being redesigned.</span></div></div></div></div></article>
+        <article class="docs-showcase is-full">
+          <div class="docs-showcase__head"><div><h3>Master rules</h3><p>The library is the visual source of truth. Screens compose it; they do not quietly fork it.</p></div></div>
+          <div class="docs-rules">
+            <section class="docs-rule-group"><h4>01 · General principle</h4><ul><li>Diarito should feel light, friendly, clear, contemporary and consistent.</li><li>Reuse an existing component before creating a new variant.</li><li>Reusable classes use the <code>.diarito-*</code> namespace.</li><li>Generic UI stays neutral; brand colors remain available as tokens, not decoration.</li></ul></section>
+            <section class="docs-rule-group"><h4>02 · Component governance</h4><ul><li>If a shared component exists, a screen does not recreate its radius, height, color, border or hover behavior.</li><li>New reusable variants are added to the library first, then consumed by screens.</li><li>Page CSS may arrange components; it may not redefine their visual internals.</li></ul></section>
+            <section class="docs-rule-group"><h4>03 · Tokens & themes</h4><ul><li>New colors, spacing, radii, shadows and z-index values become tokens before component literals.</li><li>Light is the default theme. Dark and future themes override semantic roles instead of component CSS.</li><li>The library does not force OS-theme detection or persistence.</li></ul></section>
+            <section class="docs-rule-group"><h4>04 · Typography</h4><ul><li>Roboto and Noto Sans KR are the operational UI pair.</li><li>Englebert and Poor Story are display fonts for short expressive moments, not forms, tables or long body text.</li><li>Labels stay visible; placeholders never replace labels.</li></ul></section>
+            <section class="docs-rule-group"><h4>05 · Color & semantic states</h4><ul><li>Success, warning, error and info use Tailwind 500 as their semantic base.</li><li>State text uses Tailwind 700 in light mode and contrast-safe semantic text roles in dark mode.</li><li>Important meaning never depends on color alone.</li><li>Do not introduce isolated hex values when a semantic token exists.</li></ul></section>
+            <section class="docs-rule-group"><h4>06 · Layout & spacing</h4><ul><li>Pages use <code>.diarito-section</code> + <code>.diarito-container</code> as the page-level contract.</li><li>Peer sections share the same max-width unless a deliberate reading-width pattern says otherwise.</li><li>Spacing comes from the shared scale.</li><li>Editorial/product documentation favors one central scrolling column over dashboard fragmentation.</li></ul></section>
+            <section class="docs-rule-group"><h4>07 · Borders, radius & shadows</h4><ul><li>Cards, tables, form controls and overlays may use structural 1px borders.</li><li>Buttons, badges, tags, alerts, tabs and pagination remain borderless.</li><li>No border-left-only state accents.</li><li>Use the shared sharper radius scale.</li><li>Shadows are subtle and compact; no large spaced/blurred decorative shadows.</li></ul></section>
+            <section class="docs-rule-group"><h4>08 · Cards & surfaces</h4><ul><li>Cards use semantic surfaces, structural borders and shared radius tokens.</li><li>Cards do not clip overlays by default; use <code>.diarito-card--clip</code> only when content genuinely needs clipping.</li><li>Header/body/footer separators are structural, not decoration.</li></ul></section>
+            <section class="docs-rule-group"><h4>09 · Buttons & actions</h4><ul><li>Small is the default button size; medium and large are opt-in.</li><li>Buttons use no border and do not jump on hover.</li><li>Icon-only buttons require an accessible label.</li><li>Quick actions need icon, title and useful supporting text or they should not exist.</li></ul></section>
+            <section class="docs-rule-group"><h4>10 · Forms</h4><ul><li>Inputs, selects and textareas use a semantic surface, neutral 1px border and visible focus state.</li><li>Form controls stay medium-height even though buttons default small.</li><li>Desktop forms may use columns; mobile collapses them when needed.</li><li>Autocomplete/searchable fields keep real IDs separate from visible labels when applicable.</li></ul></section>
+            <section class="docs-rule-group"><h4>11 · Navigation, tabs & accordion</h4><ul><li>Tabs have normal and selected states; avoid decorative hover choreography.</li><li>Scrollable tab rows hide their native scrollbar while remaining scrollable.</li><li>Accordions use accessible buttons with <code>aria-expanded</code>, smooth transitions and reduced-motion support.</li><li>Sticky navigation must not create stray borders or lines while scrolling.</li></ul></section>
+            <section class="docs-rule-group"><h4>12 · Dropdowns, tooltips & modals</h4><ul><li>Overlay z-index values come from the shared layer scale.</li><li>A higher z-index cannot escape a clipped ancestor; clipping is opt-in on containers that may host overlays.</li><li>Dropdown triggers manage <code>aria-expanded</code>; Escape closes open menus.</li><li>Tooltips supplement labels; they never hide essential information.</li><li>Modals use the browser top layer.</li></ul></section>
+            <section class="docs-rule-group"><h4>13 · Tables, lists & data</h4><ul><li>Tables prioritize readability and do not draw spreadsheet borders around every cell.</li><li>Long content truncates only when the column requires it.</li><li>Tables may scroll horizontally on mobile.</li><li>Status in dense data remains compact and semantic.</li></ul></section>
+            <section class="docs-rule-group"><h4>14 · Feedback, loading & empty states</h4><ul><li>Alerts communicate persistent page context; transient results belong to toast-style feedback when that pattern is added.</li><li>Do not turn every result into success green.</li><li>Empty states explain what is missing and offer one useful next action.</li><li>Loading belongs to the component waiting for data rather than blocking the whole page.</li></ul></section>
+            <section class="docs-rule-group"><h4>15 · Responsive & accessibility</h4><ul><li>Desktop and mobile preserve the same visual language.</li><li>Grids collapse when appropriate; navigation transforms rather than merely shrinking.</li><li>Visible focus is never removed.</li><li>Tabs, accordions and dropdowns expose their state with ARIA.</li><li>Respect <code>prefers-reduced-motion</code>.</li></ul></section>
+            <section class="docs-rule-group"><h4>16 · Code hygiene & prohibited patterns</h4><ul><li>No Bootstrap or heavy UI framework unless deliberately approved later.</li><li>No decorative gradients in the core system.</li><li>No reusable inline CSS in product screens.</li><li>No arbitrary page-specific clones of shared components.</li><li>No backend, authentication or product business logic inside the UI library.</li><li>Use Flaticon UIcons consistently for the current icon language.</li></ul></section>
+            <section class="docs-rule-group"><h4>17 · React migration contract</h4><ul><li>HTML/CSS remains the visual specification until screens are approved.</li><li>React components map to the approved library rather than inventing a second design system.</li><li>Props represent deliberate variants that already exist in the contract.</li><li>The shared system should prevent the “90% consistent, 10% floating” problem by construction.</li></ul></section>
+            <section class="docs-rule-group"><h4>18 · Final review checklist</h4><ol><li>Does it reuse an existing component?</li><li>Does it use semantic tokens rather than raw values?</li><li>Does it align to the correct section/container width?</li><li>Are spacing and radius values from the scale?</li><li>Do semantic states use the correct meaning and accessible text?</li><li>Does it work in light and dark?</li><li>Does it remain usable on mobile and keyboard?</li><li>Would it still make sense outside this one screen?</li></ol></section>
+          </div>
+        </article>
       </div>
     </section>
+
     <footer class="docs-footer">
-      <div class="docs-footer__inner">
-      <div class="docs-footer__main">
-        <div class="docs-footer__brand">
-          <a class="diarito-brand" href="#overview">
-            <span class="diarito-brand__mark">D</span>
-            <span>Diarito</span>
-          </a>
-          <p>A reusable HTML, CSS and native JavaScript design system for a quieter, more consistent Diarito.</p>
-          <span class="diarito-tag">UI Library v2.1.0</span>
-        </div>
-
-        <div class="docs-footer__links">
-          <div class="docs-footer__group">
-            <span class="docs-footer__label">Library</span>
-            <a href="#foundation">Foundation</a>
-            <a href="#components">Components</a>
-            <a href="#feedback">Feedback</a>
-            <a href="#data">Data</a>
-          </div>
-          <div class="docs-footer__group">
-            <span class="docs-footer__label">Product patterns</span>
-            <a href="#feed">Feed</a>
-            <a href="#patterns">Diarito patterns</a>
-            <a href="#rules">Rules</a>
-          </div>
-          <div class="docs-footer__group">
-            <span class="docs-footer__label">Project</span>
-            <a href="https://github.com/nickramen/diarito-ui">GitHub</a>
-            <a href="README.md">README</a>
-            <a href="docs/CHANGELOG.md">Changelog</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="docs-footer__social">
-        <span class="docs-footer__label">Diarito around the web</span>
-        <div class="docs-footer__social-grid">
-          <a class="docs-footer__social-link" href="#" aria-label="Discord demo link"><i class="fi fi-rr-users-alt"></i><span>Discord</span></a>
-          <a class="docs-footer__social-link" href="#" aria-label="X demo link"><i class="fi fi-rr-at"></i><span>X</span></a>
-          <a class="docs-footer__social-link" href="#" aria-label="Reddit demo link"><i class="fi fi-rr-comment-alt"></i><span>Reddit</span></a>
-          <a class="docs-footer__social-link" href="#" aria-label="TikTok demo link"><i class="fi fi-rr-play-alt"></i><span>TikTok</span></a>
-          <a class="docs-footer__social-link" href="#" aria-label="Instagram demo link"><i class="fi fi-rr-camera"></i><span>Instagram</span></a>
-        </div>
-      </div>
-
-      <div class="docs-footer__bottom">
-        <span>&copy; 2026 Diarito. UI library prototype.</span>
-        <span>HTML + CSS + native JS</span>
-      </div>
-      </div>
+      <div class="docs-footer__block docs-footer__block--main"><div class="docs-footer__block-inner"><div class="docs-footer__main">
+        <div class="docs-footer__brand"><a class="diarito-brand" href="#overview"><span class="diarito-brand__mark">D</span><span>Diarito</span></a><p>A reusable HTML, CSS and native JavaScript design system for a quieter, more consistent Diarito.</p><span class="diarito-tag diarito-tag--gray">UI Library v2.2.0</span></div>
+        <div class="docs-footer__links"><div class="docs-footer__group"><span class="docs-footer__label">Library</span><a href="#foundation">Foundation</a><a href="#components">Components</a><a href="#feedback">Feedback</a><a href="#data">Data</a></div><div class="docs-footer__group"><span class="docs-footer__label">Product patterns</span><a href="#feed">Feed</a><a href="#patterns">Diarito patterns</a><a href="#rules">Rules</a></div><div class="docs-footer__group"><span class="docs-footer__label">Project</span><a href="https://github.com/nickramen/diarito-ui">GitHub</a><a href="README.md">README</a><a href="docs/CHANGELOG.md">Changelog</a></div></div>
+      </div></div></div>
+      <div class="docs-footer__block docs-footer__block--social"><div class="docs-footer__block-inner"><span class="docs-footer__label">Diarito around the web</span><div class="docs-footer__social-grid"><a class="docs-footer__social-link" href="#" aria-label="Discord demo link"><i class="fi fi-rr-users-alt"></i><span>Discord</span></a><a class="docs-footer__social-link" href="#" aria-label="X demo link"><i class="fi fi-rr-at"></i><span>X</span></a><a class="docs-footer__social-link" href="#" aria-label="Reddit demo link"><i class="fi fi-rr-comment-alt"></i><span>Reddit</span></a><a class="docs-footer__social-link" href="#" aria-label="TikTok demo link"><i class="fi fi-rr-play-alt"></i><span>TikTok</span></a><a class="docs-footer__social-link" href="#" aria-label="Instagram demo link"><i class="fi fi-rr-camera"></i><span>Instagram</span></a></div></div></div>
+      <div class="docs-footer__block docs-footer__block--bottom"><div class="docs-footer__block-inner"><div class="docs-footer__bottom"><span>&copy; 2026 Diarito. UI library prototype.</span><span>HTML + CSS + native JS</span></div></div></div>
     </footer>
   </main>
 
