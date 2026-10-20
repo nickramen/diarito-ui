@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.2.5 - Page shell, row actions and ruled-note refinement
+
+- Removed double horizontal padding from the Page shell demo.
+- Prevented a notebook rule from appearing above the first line of ruled-note text.
+- Added working dropdown menus to all data-table row ellipsis actions.
+- Added reusable portaled dropdown positioning for menus inside overflow containers.
+- Renamed the table CTA from Add member to Add.
+- Added a top border to the sticky navstrip.
+- Increased the hero grid to 20px x 20px.
+
 ## 2.2.4 - Responsive containers, hero grid and table refinement
 
 - Added a 10px x 10px neutral grid background to the hero only.
