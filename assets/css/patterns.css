@@ -33,6 +33,7 @@
 .diarito-mock-window__dots { display: inline-flex; gap: .3rem; }
 .diarito-mock-window__dots span { width: .45rem; height: .45rem; border-radius: 50%; background: var(--diarito-color-border-strong); }
 .diarito-mock-window__body { padding: 0 var(--diarito-space-5); }
+.diarito-page-shell-demo { padding-inline: 0; }
 
 /* Feed */
 .diarito-feed { border-top: var(--diarito-border); }
@@ -80,19 +81,24 @@
 .diarito-note-card .diarito-note-card__body--ruled {
   --diarito-note-line-height: 1.9rem;
   --diarito-note-line-color: color-mix(in srgb, var(--diarito-color-text-subtle) 46%, transparent);
+  position: relative;
   line-height: var(--diarito-note-line-height);
   background-color: var(--diarito-color-control);
+}
+.diarito-note-card__body--ruled::before {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  top: calc(var(--diarito-space-5) + var(--diarito-note-line-height) - 1px);
+  bottom: 0;
+  pointer-events: none;
   background-image: repeating-linear-gradient(
     to bottom,
-    transparent 0,
-    transparent calc(var(--diarito-note-line-height) - 1px),
-    var(--diarito-note-line-color) calc(var(--diarito-note-line-height) - 1px),
-    var(--diarito-note-line-color) var(--diarito-note-line-height)
+    var(--diarito-note-line-color) 0 1px,
+    transparent 1px var(--diarito-note-line-height)
   );
-  background-position: 0 calc(var(--diarito-space-5) - .3rem);
-  background-size: 100% var(--diarito-note-line-height);
 }
-.diarito-note-card__body--ruled p { line-height: var(--diarito-note-line-height); }
+.diarito-note-card__body--ruled p { position: relative; z-index: 1; line-height: var(--diarito-note-line-height); }
 .diarito-note-card__body--ruled p + p { margin-top: var(--diarito-note-line-height); }
 .diarito-note-card__footer { display: flex; align-items: center; justify-content: space-between; gap: var(--diarito-space-3); }
 .diarito-note-preview { display: flex; align-items: center; gap: var(--diarito-space-3); padding: var(--diarito-space-3) 0; border-bottom: var(--diarito-border); }
