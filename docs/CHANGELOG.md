@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.1.0 - Light/dark themes, sharper shape and small default buttons
+
+- Added semantic light and dark theme foundations using `data-theme`.
+- Kept light as the explicit default with a pure white body canvas.
+- Added a small native `DiaritoTheme` API without system-theme auto detection or persistence.
+- Kept Tailwind 500 state bases and added Tailwind 700 state text colors in light mode.
+- Added contrast-safe lighter state text roles for dark mode.
+- Reduced radius tokens across the system.
+- Made the small button size the default and added an explicit medium modifier.
+- Updated component and documentation surfaces to consume semantic theme roles.
+
 ## 2.0.2 - Documentation canvas and footer refinement
 
 - Changed the library page canvas to soft gray with white bordered showcase cards.

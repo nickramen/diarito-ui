@@ -2,10 +2,10 @@
 .diarito-full { width: 100%; }
 .diarito-nowrap { white-space: nowrap; }
 .diarito-hidden { display: none !important; }
-.diarito-text-muted { color: var(--diarito-gray-600) !important; }
+.diarito-text-muted { color: var(--diarito-color-text-muted) !important; }
 .diarito-text-center { text-align: center; }
-.diarito-bg-soft { background: var(--diarito-gray-050) !important; }
-.diarito-bg-panel { background: var(--diarito-gray-100) !important; }
+.diarito-bg-soft { background: var(--diarito-color-surface-soft) !important; }
+.diarito-bg-panel { background: var(--diarito-color-panel) !important; }
 .diarito-visually-hidden {
   position: absolute !important;
   width: 1px !important;

@@ -1,6 +1,46 @@
 (() => {
   'use strict';
 
+
+  const themeRoot = document.documentElement;
+  const allowedThemes = new Set(['light', 'dark']);
+  const normalizeTheme = (theme) => allowedThemes.has(theme) ? theme : 'light';
+
+  const updateThemeControls = () => {
+    const theme = normalizeTheme(themeRoot.dataset.theme);
+    document.querySelectorAll('[data-diarito-theme-toggle]').forEach((button) => {
+      const next = theme === 'dark' ? 'light' : 'dark';
+      button.setAttribute('aria-pressed', String(theme === 'dark'));
+      button.setAttribute('aria-label', `Switch to ${next} theme`);
+      const label = button.querySelector('[data-diarito-theme-label]');
+      if (label) label.textContent = next === 'dark' ? 'Dark' : 'Light';
+      const icon = button.querySelector('.fi');
+      if (icon) icon.className = theme === 'dark' ? 'fi fi-rr-sun' : 'fi fi-rr-moon';
+    });
+  };
+
+  const setTheme = (theme) => {
+    themeRoot.dataset.theme = normalizeTheme(theme);
+    updateThemeControls();
+    document.dispatchEvent(new CustomEvent('diarito:themechange', { detail: { theme: themeRoot.dataset.theme } }));
+    return themeRoot.dataset.theme;
+  };
+
+  if (!allowedThemes.has(themeRoot.dataset.theme)) themeRoot.dataset.theme = 'light';
+  window.DiaritoTheme = Object.freeze({
+    get: () => normalizeTheme(themeRoot.dataset.theme),
+    set: setTheme,
+    toggle: () => setTheme(themeRoot.dataset.theme === 'dark' ? 'light' : 'dark')
+  });
+
+  document.querySelectorAll('[data-diarito-theme-toggle]').forEach((button) => {
+    button.addEventListener('click', () => window.DiaritoTheme.toggle());
+  });
+  document.querySelectorAll('[data-diarito-theme-set]').forEach((button) => {
+    button.addEventListener('click', () => setTheme(button.dataset.diaritoThemeSet));
+  });
+  updateThemeControls();
+
   const closeDropdowns = (except = null) => {
     document.querySelectorAll('[data-diarito-dropdown].is-open').forEach((root) => {
       if (root === except) return;

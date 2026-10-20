@@ -3,7 +3,7 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   color: var(--diarito-color-text);
-  background: var(--diarito-white);
+  background: var(--diarito-color-bg);
   font-family: var(--diarito-font-ui);
   font-size: var(--diarito-text-md);
   line-height: 1.55;
@@ -17,7 +17,7 @@ button:disabled, input:disabled, select:disabled, textarea:disabled { cursor: no
 img { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 p { margin: 0 0 1rem; color: var(--diarito-color-text-muted); }
-h1, h2, h3, h4, h5, h6 { margin: 0; color: var(--diarito-ink); line-height: 1.08; letter-spacing: -0.025em; }
+h1, h2, h3, h4, h5, h6 { margin: 0; color: var(--diarito-color-text-strong); line-height: 1.08; letter-spacing: -0.025em; }
 h1 { font-size: var(--diarito-text-3xl); }
 h2 { font-size: var(--diarito-text-2xl); }
 h3 { font-size: var(--diarito-text-xl); }
@@ -26,7 +26,7 @@ small { font-size: var(--diarito-text-xs); }
 hr { border: 0; border-top: var(--diarito-border); margin: var(--diarito-space-7) 0; }
 code, kbd, pre { font-family: var(--diarito-font-mono); }
 
-::selection { color: var(--diarito-black); background: var(--diarito-gray-200); }
+::selection { color: var(--diarito-color-text-strong); background: var(--diarito-color-control-hover); }
 :focus-visible { outline: none; box-shadow: var(--diarito-focus-ring); }
 
 .fi { line-height: 1; }
@@ -63,7 +63,7 @@ code, kbd, pre { font-family: var(--diarito-font-mono); }
 .diarito-surface {
   border: var(--diarito-border);
   border-radius: var(--diarito-radius-md);
-  background: var(--diarito-white);
+  background: var(--diarito-color-surface);
 }
 
 .diarito-panel {
