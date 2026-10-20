@@ -120,4 +120,17 @@
     applyFilters();
   });
 
+
+  document.querySelectorAll('[data-demo-table-states]').forEach((root) => {
+    const segmented = root.querySelector('[data-diarito-segmented]');
+    const panels = [...root.querySelectorAll('[data-demo-table-state-panel]')];
+    if (!segmented || !panels.length) return;
+    segmented.addEventListener('diarito:segmentchange', (event) => {
+      const value = event.detail?.value;
+      panels.forEach((panel) => {
+        panel.hidden = panel.dataset.demoTableStatePanel !== value;
+      });
+    });
+  });
+
 })();
