@@ -1,8 +1,27 @@
-# Diarito UI Library 2.0.2
+# Diarito UI Library 2.1.0
 
 Diarito's reusable HTML, CSS and native JavaScript design system.
 
-Version 2.0.2 refines the 2.0 neutral-first reset while keeping the existing Diarito fonts and reusable architecture.
+Version 2.1.0 adds semantic light/dark theme support and sharpens the component contract while keeping the existing Diarito fonts and reusable architecture.
+
+## 2.1.0 theme and shape refinement
+
+- Light is the default theme and the body canvas is white.
+- Dark is implemented through semantic theme tokens using `data-theme="dark"`.
+- Theme selection is explicit; the library does not automatically follow the operating system and does not persist a theme preference.
+- `DiaritoTheme.get()`, `.set()`, and `.toggle()` provide a tiny native-JS theme API.
+- State base colors stay Tailwind 500; state label text uses Tailwind 700 in light theme and lighter contrast-safe tones in dark theme.
+- Radius tokens are smaller across cards, controls and documentation surfaces.
+- Small is now the default button size; explicit `--md` and `--lg` variants remain available.
+
+### Theme contract
+
+```html
+<html data-theme="light">
+<html data-theme="dark">
+```
+
+Components consume semantic roles such as `--diarito-color-surface`, `--diarito-color-text`, `--diarito-color-control`, and `--diarito-color-action-bg`. New themes should override those roles instead of rewriting component CSS.
 
 ## 2.0.1 refinement
 
@@ -29,7 +48,7 @@ Version 2.0.2 refines the 2.0 neutral-first reset while keeping the existing Dia
 - White nested UI surfaces.
 - Black / near-black for primary actions and strongest hierarchy.
 - Lime `#F1FF9C`, Purple `#CFA8FF`, and Olive `#7E9026` remain brand palette tokens, but the component library stays neutral and does not use them to style generic controls.
-- Thin gray borders, generous radius, restrained shadows.
+- Thin gray borders, sharper radius, restrained shadows.
 - Semantic red / yellow / green / blue reserved for state communication only.
 
 The reference screenshots were used as visual inspiration for spacing, neutral hierarchy, large rounded feature panels and nested white UI, not as a pixel-for-pixel copy of another product.
@@ -135,6 +154,7 @@ Size / shape modifiers:
 
 ```text
 diarito-button--sm
+diarito-button--md
 diarito-button--lg
 diarito-button--icon
 diarito-button--block
