@@ -37,9 +37,9 @@
 .diarito-button--block { width: 100%; }
 
 /* Forms */
-.diarito-field { display: grid; gap: var(--diarito-space-2); }
+.diarito-field { display: grid; gap: var(--diarito-space-2); align-content: start; }
 .diarito-field__row { display: flex; align-items: center; justify-content: space-between; gap: var(--diarito-space-3); }
-.diarito-label { color: var(--diarito-color-text-strong); font-size: var(--diarito-text-sm); font-weight: var(--diarito-weight-medium); }
+.diarito-label { margin: 0; color: var(--diarito-color-text-strong); font-size: var(--diarito-text-sm); font-weight: var(--diarito-weight-medium); line-height: 1.25; }
 .diarito-help { color: var(--diarito-color-text-muted); font-size: var(--diarito-text-xs); }
 .diarito-input, .diarito-textarea, .diarito-select {
   width: 100%;
@@ -97,6 +97,8 @@
 .diarito-alert { display: grid; grid-template-columns: auto minmax(0,1fr) auto; gap: var(--diarito-space-3); padding: var(--diarito-space-4); border: 0; border-radius: var(--diarito-radius-md); background: var(--diarito-color-control); }
 .diarito-alert > i { margin-top: .15rem; color: var(--diarito-state, var(--diarito-color-text-muted)); }
 .diarito-alert p { margin: .2rem 0 0; color: inherit; font-size: var(--diarito-text-sm); opacity: .86; }
+.diarito-alert [data-diarito-dismiss] { color: inherit; background: transparent; }
+.diarito-alert [data-diarito-dismiss]:hover { color: inherit; background: transparent; }
 .diarito-alert--success { --diarito-state: var(--diarito-success); color: var(--diarito-success-text); background: var(--diarito-success-soft); }
 .diarito-alert--warning { --diarito-state: var(--diarito-warning); color: var(--diarito-warning-text); background: var(--diarito-warning-soft); }
 .diarito-alert--error { --diarito-state: var(--diarito-error); color: var(--diarito-error-text); background: var(--diarito-error-soft); }
