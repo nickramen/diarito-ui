@@ -255,7 +255,15 @@
         closeCombobox(root);
       }
     });
-    options.forEach((option) => option.addEventListener('click', () => select(option)));
+    options.forEach((option) => {
+      option.setAttribute('aria-selected', 'false');
+      option.addEventListener('click', () => select(option));
+    });
+    root.addEventListener('focusout', () => {
+      window.setTimeout(() => {
+        if (!root.contains(document.activeElement)) closeCombobox(root);
+      }, 0);
+    });
   });
 
   document.querySelectorAll('[data-diarito-dropzone]').forEach((root) => {
@@ -283,15 +291,22 @@
       event.preventDefault();
       root.classList.remove('is-dragover');
       const files = event.dataTransfer?.files;
-      if (files?.length) {
-        try {
-          const transfer = new DataTransfer();
-          [...files].forEach((file) => transfer.items.add(file));
-          input.files = transfer.files;
-        } catch (_) {}
-        update(files);
-        input.dispatchEvent(new Event('change', { bubbles: true }));
-      }
+      if (!files?.length) return;
+
+      let assigned = false;
+      try {
+        const transfer = new DataTransfer();
+        [...files].forEach((file) => transfer.items.add(file));
+        input.files = transfer.files;
+        assigned = true;
+      } catch (_) {}
+
+      update(files);
+      if (assigned) input.dispatchEvent(new Event('change', { bubbles: true }));
+      root.dispatchEvent(new CustomEvent('diarito:filesdrop', {
+        bubbles: true,
+        detail: { files: [...files] }
+      }));
     });
     update(input.files);
   });
