@@ -1,12 +1,26 @@
-# Diarito UI Library 2.2.3
+# Diarito UI Library 2.2.4
 
 Diarito's reusable HTML, CSS and native JavaScript design system.
 
-Version 2.2.3 refines header navigation, table filtering and note-card independence while keeping the HTML + CSS + native-JS architecture.
+Version 2.2.4 tightens responsive containers, hero grid treatment and data-table scrolling while keeping the HTML + CSS + native-JS architecture.
 
 
 
 
+
+
+## 2.2.4 responsive containers, hero grid and table refinement
+
+- Added a neutral 10px x 10px grid background only to the documentation hero.
+- Refactored the core container contract to use inline padding instead of subtractive width/margin spacing.
+- Increased the responsive gutter and aligned topbar, hero, sticky navigation, documentation sections and footer bands to the same section/container system.
+- Preserved footer horizontal gutters by switching band spacing to `padding-block`.
+- Added compact theme-aware scrollbars globally.
+- Removed the data table's internal vertical scrollbar; wide tables scroll horizontally only.
+- Expanded the demo table to 10 records to reflect the standard 10/25 record page pattern.
+- Made the Filter count tag compact without the default tag min-height.
+- Switched table pagination to double-angle navigation icons.
+- Removed the accidental mobile toolbar gap caused by the desktop flex-basis.
 
 ## 2.2.3 header, table filters and ruled-note refinement
 
