@@ -152,20 +152,18 @@
         </article>
 
         <article class="docs-showcase">
-          <div class="docs-showcase__head"><div><h3>Labels & chips</h3><p>Small, quiet and semantic.</p></div></div>
-          <div class="docs-demo-row">
-            <span class="diarito-badge">New</span><span class="diarito-chip"><i class="fi fi-rr-user"></i> Personal</span><span class="diarito-tag">journal</span><span class="diarito-tag">한국어</span>
+          <div class="docs-showcase__head"><div><h3>Badges, chips & tags</h3><p>Badges and chips stay neutral. Tags can be black, gray, or semantic when the label itself carries meaning.</p></div></div>
+          <div class="docs-demo-stack">
+            <div class="docs-demo-group"><span class="docs-demo-group__label">Neutral</span><div class="docs-demo-row"><span class="diarito-badge">New</span><span class="diarito-chip"><i class="fi fi-rr-user"></i> Personal</span><span class="diarito-tag diarito-tag--gray">journal</span><span class="diarito-tag diarito-tag--dark">product</span></div></div>
+            <div class="docs-demo-group"><span class="docs-demo-group__label">Semantic tags</span><div class="docs-demo-row"><span class="diarito-tag diarito-tag--success">success</span><span class="diarito-tag diarito-tag--warning">warning</span><span class="diarito-tag diarito-tag--error">error</span><span class="diarito-tag diarito-tag--info">info</span></div></div>
           </div>
         </article>
 
         <article class="docs-showcase">
-          <div class="docs-showcase__head"><div><h3>Icons & avatars</h3><p>Flaticon UIcons Regular Rounded throughout.</p></div></div>
-          <div class="docs-demo-row">
-            <span class="diarito-avatar">N</span><span class="diarito-avatar diarito-avatar--lg">D</span>
-            <span class="diarito-icon-box"><i class="fi fi-rr-document"></i></span>
-            <span class="diarito-icon-box"><i class="fi fi-rr-folder"></i></span>
-            <span class="diarito-icon-box"><i class="fi fi-rr-sparkles"></i></span>
-            <span class="diarito-icon-box diarito-icon-box--outline"><i class="fi fi-rr-lock"></i></span>
+          <div class="docs-showcase__head"><div><h3>Avatars & icon boxes</h3><p>Avatars identify people. Icon boxes give standalone actions or concepts a consistent visual container.</p></div></div>
+          <div class="docs-demo-stack">
+            <div class="docs-demo-group"><span class="docs-demo-group__label">Avatars · default / large</span><div class="docs-demo-row"><span class="diarito-avatar">N</span><span class="diarito-avatar diarito-avatar--lg">D</span></div></div>
+            <div class="docs-demo-group"><span class="docs-demo-group__label">Icon boxes · one style / optional large</span><div class="docs-demo-row"><span class="diarito-icon-box"><i class="fi fi-rr-document"></i></span><span class="diarito-icon-box"><i class="fi fi-rr-folder"></i></span><span class="diarito-icon-box diarito-icon-box--lg"><i class="fi fi-rr-sparkles"></i></span></div></div>
           </div>
         </article>
       </div>
@@ -186,17 +184,31 @@
         </div></article>
         <article class="docs-showcase is-narrow"><div class="docs-showcase__head"><div><h3>Empty state</h3><p>One explanation, one next action.</p></div></div><div class="diarito-card diarito-card--flat"><div class="diarito-empty"><span class="diarito-empty__icon"><i class="fi fi-rr-document"></i></span><strong>No notes yet</strong><p>Start this collection with the first entry.</p><button class="diarito-button diarito-button--primary">New note</button></div></div></article>
 
-        <article class="docs-showcase"><div class="docs-showcase__head"><div><h3>Tabs & accordion</h3><p>Quiet containers, obvious current state.</p></div></div><div class="diarito-card diarito-card--flat"><div class="diarito-card__body" data-diarito-tabs>
-          <div class="diarito-tabs" role="tablist"><button class="diarito-tab" role="tab" aria-selected="true" aria-controls="panel-notes">Notes</button><button class="diarito-tab" role="tab" aria-selected="false" aria-controls="panel-collections" tabindex="-1">Collections</button><button class="diarito-tab" role="tab" aria-selected="false" aria-controls="panel-shared" tabindex="-1">Shared</button></div>
-          <div class="diarito-tab-panel" id="panel-notes" role="tabpanel">Notes panel</div><div class="diarito-tab-panel" id="panel-collections" role="tabpanel" hidden>Collections panel</div><div class="diarito-tab-panel" id="panel-shared" role="tabpanel" hidden>Shared panel</div>
-          <div class="diarito-accordion" style="margin-top:1rem"><details open><summary>What belongs in the library?</summary><div class="diarito-accordion__body"><p>Anything reused across screens or anything whose inconsistency would create visual drift.</p></div></details><details><summary>Can screens restyle buttons?</summary><div class="diarito-accordion__body"><p>No. New visual variants belong here first.</p></div></details></div>
-        </div></div></article>
+        <article class="docs-showcase">
+          <div class="docs-showcase__head"><div><h3>Tabs</h3><p>Only normal and selected states matter. The row can scroll on small screens without showing a scrollbar.</p></div></div>
+          <div data-diarito-tabs>
+            <div class="diarito-tabs" role="tablist"><button class="diarito-tab" role="tab" aria-selected="true" aria-controls="panel-notes">Notes</button><button class="diarito-tab" role="tab" aria-selected="false" aria-controls="panel-collections" tabindex="-1">Collections</button><button class="diarito-tab" role="tab" aria-selected="false" aria-controls="panel-shared" tabindex="-1">Shared</button></div>
+            <div class="diarito-tab-panel" id="panel-notes" role="tabpanel">Notes panel</div><div class="diarito-tab-panel" id="panel-collections" role="tabpanel" hidden>Collections panel</div><div class="diarito-tab-panel" id="panel-shared" role="tabpanel" hidden>Shared panel</div>
+          </div>
+        </article>
 
-        <article class="docs-showcase"><div class="docs-showcase__head"><div><h3>Dropdown, tooltip & modal</h3><p>Native JavaScript only.</p></div></div><div class="diarito-card diarito-card--flat"><div class="diarito-card__body docs-demo-row">
-          <div class="diarito-dropdown" data-diarito-dropdown><button class="diarito-button diarito-button--secondary" data-diarito-dropdown-trigger aria-expanded="false">Actions</button><div class="diarito-dropdown__menu" data-diarito-dropdown-menu hidden><button class="diarito-dropdown__item">Rename</button><button class="diarito-dropdown__item">Duplicate</button><button class="diarito-dropdown__item">Archive</button></div></div>
-          <button class="diarito-button diarito-button--secondary diarito-button--icon diarito-tooltip" data-tooltip="Pin note" aria-label="Pin note"><i class="fi fi-rr-thumbtack"></i></button>
-          <button class="diarito-button diarito-button--primary" data-diarito-modal-open="demo-modal">Open modal</button>
-        </div></div></article>
+        <article class="docs-showcase">
+          <div class="docs-showcase__head"><div><h3>Accordion</h3><p>Accessible triggers with a smooth open/close transition.</p></div></div>
+          <div class="diarito-accordion" data-diarito-accordion data-diarito-accordion-single>
+            <div class="diarito-accordion__item is-open"><button class="diarito-accordion__trigger" type="button" aria-expanded="true" aria-controls="accordion-library"><span>What belongs in the library?</span><i class="fi fi-rr-angle-small-down diarito-accordion__icon"></i></button><div class="diarito-accordion__panel" id="accordion-library"><div class="diarito-accordion__panel-inner"><div class="diarito-accordion__body"><p>Anything reused across screens, or anything whose inconsistency would create visual drift.</p></div></div></div></div>
+            <div class="diarito-accordion__item"><button class="diarito-accordion__trigger" type="button" aria-expanded="false" aria-controls="accordion-buttons"><span>Can screens restyle buttons?</span><i class="fi fi-rr-angle-small-down diarito-accordion__icon"></i></button><div class="diarito-accordion__panel" id="accordion-buttons" aria-hidden="true"><div class="diarito-accordion__panel-inner"><div class="diarito-accordion__body"><p>No. New visual variants belong in the component library first.</p></div></div></div></div>
+            <div class="diarito-accordion__item"><button class="diarito-accordion__trigger" type="button" aria-expanded="false" aria-controls="accordion-theme"><span>Where do themes live?</span><i class="fi fi-rr-angle-small-down diarito-accordion__icon"></i></button><div class="diarito-accordion__panel" id="accordion-theme" aria-hidden="true"><div class="diarito-accordion__panel-inner"><div class="diarito-accordion__body"><p>Themes override semantic tokens. They do not rewrite component CSS.</p></div></div></div></div>
+          </div>
+        </article>
+
+        <article class="docs-showcase">
+          <div class="docs-showcase__head"><div><h3>Dropdown, tooltip & modal</h3><p>Dropdown and tooltip use controlled overlay layers; modal uses the browser top layer.</p></div></div>
+          <div class="docs-overlay-stage">
+            <div class="diarito-dropdown" data-diarito-dropdown><button class="diarito-button diarito-button--secondary" data-diarito-dropdown-trigger aria-expanded="false">Actions</button><div class="diarito-dropdown__menu" data-diarito-dropdown-menu hidden><button class="diarito-dropdown__item">Rename</button><button class="diarito-dropdown__item">Duplicate</button><button class="diarito-dropdown__item">Archive</button></div></div>
+            <button class="diarito-button diarito-button--secondary diarito-button--icon diarito-tooltip" data-tooltip="Pin note" aria-label="Pin note"><i class="fi fi-rr-thumbtack"></i></button>
+            <button class="diarito-button diarito-button--primary" data-diarito-modal-open="demo-modal">Open modal</button>
+          </div>
+        </article>
       </div>
       <dialog class="diarito-modal" id="demo-modal"><div class="diarito-modal__header"><h3>Modal title</h3><button class="diarito-button diarito-button--ghost diarito-button--icon diarito-button--sm" data-diarito-modal-close aria-label="Close"><i class="fi fi-rr-cross-small"></i></button></div><div class="diarito-modal__body"><p>Modal content uses the same spacing, border and action hierarchy as the rest of Diarito.</p></div><div class="diarito-modal__footer"><button class="diarito-button diarito-button--ghost" data-diarito-modal-close>Cancel</button><button class="diarito-button diarito-button--primary">Confirm</button></div></dialog>
     </section>
