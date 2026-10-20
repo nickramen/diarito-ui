@@ -1,5 +1,17 @@
 # Changelog
 
+## 2.2.1 - Visual QA refinement
+
+- Removed the sticky topbar compositing seam by using a solid page-background surface.
+- Unified the radius demos so 16px and 12px samples share the same visual treatment.
+- Normalized form label/control spacing.
+- Made all alert examples dismissible with neutral hover behavior.
+- Moved Actions to the end of the overlay demo.
+- Made the activity chart fill its chart card.
+- Changed mock-window body padding to `0 var(--diarito-space-5)`.
+- Added standard and ruled long-form note card patterns.
+- Removed Quick actions from the canonical component library.
+
 ## 2.2.0 - Interaction, feed and governance refinement
 
 - Removed sticky navigation artifacts and hid tab/nav scrollbars without removing scroll behavior.
