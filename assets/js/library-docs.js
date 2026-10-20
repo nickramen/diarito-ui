@@ -133,4 +133,60 @@
     });
   });
 
+
+  document.querySelectorAll('[data-demo-entry-composer]').forEach((composer) => {
+    const input = composer.querySelector('[data-demo-entry-input]');
+    const publish = composer.querySelector('[data-demo-entry-publish]');
+    const state = composer.querySelector('[data-demo-save-state]');
+    if (!input || !publish || !state) return;
+
+    let saveTimer = 0;
+    const setState = (mode, icon, text) => {
+      state.className = `diarito-save-state diarito-save-state--${mode}`;
+      state.innerHTML = `<i class="${icon}"></i> ${text}`;
+    };
+
+    input.addEventListener('input', () => {
+      window.clearTimeout(saveTimer);
+      setState('unsaved', 'fi fi-rr-circle-small', 'Unsaved changes');
+      saveTimer = window.setTimeout(() => {
+        setState('saving', 'fi fi-rr-refresh', 'Saving...');
+        saveTimer = window.setTimeout(() => setState('saved', 'fi fi-rr-check-circle', 'Saved just now'), 500);
+      }, 450);
+    });
+
+    publish.addEventListener('click', () => {
+      const value = input.value.trim();
+      if (!value) {
+        window.DiaritoToast?.show({ title: 'Write something first', message: 'Your entry is still empty.', state: 'warning' });
+        input.focus();
+        return;
+      }
+      setState('saved', 'fi fi-rr-check-circle', 'Published');
+      window.DiaritoToast?.show({ title: 'Entry published', message: 'Demo only. No entry was stored.', state: 'success' });
+    });
+  });
+
+  document.querySelectorAll('[data-diarito-toggle="follow"]').forEach((button) => {
+    button.addEventListener('diarito:togglechange', (event) => {
+      button.innerHTML = event.detail?.active
+        ? '<i class="fi fi-rr-check"></i> Following'
+        : '<i class="fi fi-rr-user-add"></i> Follow';
+    });
+  });
+
+  document.querySelectorAll('.diarito-visibility-selector [data-diarito-segmented]').forEach((segmented) => {
+    const root = segmented.closest('.diarito-visibility-selector');
+    const summary = root?.querySelector('.diarito-visibility-selector__summary span');
+    if (!summary) return;
+    const messages = {
+      private: 'Private entries are visible only to you.',
+      shared: 'Shared entries are visible only to people you choose.',
+      public: 'Public entries can appear in the community feed.'
+    };
+    segmented.addEventListener('diarito:segmentchange', (event) => {
+      summary.textContent = messages[event.detail?.value] || messages.private;
+    });
+  });
+
 })();
