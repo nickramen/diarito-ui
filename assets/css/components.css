@@ -277,6 +277,7 @@
 
 /* File upload / dropzone */
 .diarito-dropzone {
+  position: relative;
   display: grid;
   justify-items: center;
   gap: var(--diarito-space-3);
