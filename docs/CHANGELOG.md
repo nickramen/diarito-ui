@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.2.2 - Note cards and advanced data table
+
+- Reworked note cards into a shared card header/body/footer structure.
+- Displayed both note variants in one desktop row with responsive single-column fallback.
+- Limited notebook ruling to the ruled note body and synchronized rule spacing with line-height.
+- Added a reusable scrollable data table with toolbar, search, filters, sticky headers and pagination.
+- Added lightweight interactive filtering to the table demo.
+
 ## 2.2.1 - Visual QA refinement
 
 - Removed the sticky topbar compositing seam by using a solid page-background surface.
