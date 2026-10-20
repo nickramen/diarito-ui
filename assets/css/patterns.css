@@ -176,6 +176,7 @@
   .diarito-note-grid { grid-template-columns: 1fr; }
   .diarito-data-table__toolbar { align-items: stretch; justify-content: flex-start; flex-direction: column; }
   .diarito-data-table__toolbar-main,
+  .diarito-data-table__toolbar-main { flex: 0 0 auto; }
   .diarito-data-table__toolbar-actions { width: 100%; margin-left: 0; }
   .diarito-data-table__search { min-width: 100%; flex: 1; }
   .diarito-nav { display: none; }
