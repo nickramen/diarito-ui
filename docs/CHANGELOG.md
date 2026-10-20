@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.3.0 - Feed-first library and fake product feed
+
+- Removed the permanent documentation sidebar from the canonical library view.
+- Added a centered sticky top navigation and single-column scrolling documentation rhythm.
+- Added reusable `diarito-feed`, composer, feed item, action, attachment, and feed avatar patterns.
+- Added a fake Diarito feed using the real design-system tokens and components.
+- Reduced documentation chrome so component examples feel closer to the future product UI.
+- Kept the 1.2.0 reusable component contract and token architecture intact.
+- No React, authentication, backend, database, or business logic added.
+
 ## 1.2.0 - Component contract and layout foundation
 
 - Reframed the library as Diarito's internal Bootstrap-like component system.
