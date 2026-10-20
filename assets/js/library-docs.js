@@ -56,7 +56,7 @@
     const rows = [...root.querySelectorAll('[data-demo-table-row]')];
     const count = root.querySelector('[data-demo-table-count]');
     const empty = root.querySelector('[data-demo-table-empty]');
-    const modal = root.querySelector('[data-demo-table-filter-modal]');
+    const modal = document.getElementById(root.dataset.demoTableFilterModalId || '');
     const filterCount = root.querySelector('[data-demo-table-filter-count]');
     const controls = {
       status: modal?.querySelector('[data-demo-table-filter-status]'),
