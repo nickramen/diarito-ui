@@ -1,6 +1,6 @@
 :root { --docs-content-max: 70rem; }
 .docs-body { background: var(--diarito-color-bg); }
-.docs-topbar { position: sticky; top: 0; z-index: 70; border: 0; outline: 0; background: var(--diarito-color-bg); box-shadow: none; }
+.docs-topbar { position: sticky; top: 0; z-index: 70; border: 0; border-bottom: var(--diarito-border); outline: 0; background: var(--diarito-color-bg); box-shadow: none; }
 .docs-topbar__inner { width: min(calc(100% - 2rem), var(--docs-content-max)); min-height: 4rem; margin-inline: auto; display: flex; align-items: center; justify-content: space-between; gap: var(--diarito-space-4); }
 .docs-topbar__actions { display: flex; align-items: center; gap: var(--diarito-space-2); }
 
