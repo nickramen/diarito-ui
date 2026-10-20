@@ -193,3 +193,50 @@
   .diarito-pricing { grid-template-columns: 1fr; }
   .diarito-pricing__summary { border-left: 0; border-top: var(--diarito-border); }
 }
+
+/* Activity / timeline */
+.diarito-timeline { display: grid; }
+.diarito-timeline__item { position: relative; display: grid; grid-template-columns: auto minmax(0,1fr); gap: var(--diarito-space-3); padding-bottom: var(--diarito-space-5); }
+.diarito-timeline__item:last-child { padding-bottom: 0; }
+.diarito-timeline__rail { position: relative; width: 2.25rem; display: flex; justify-content: center; }
+.diarito-timeline__rail::after { content: ''; position: absolute; top: 1.8rem; bottom: calc(var(--diarito-space-2) * -1); width: 1px; background: var(--diarito-color-border-strong); }
+.diarito-timeline__item:last-child .diarito-timeline__rail::after { display: none; }
+.diarito-timeline__marker { position: relative; z-index: 1; width: 1.8rem; height: 1.8rem; display: grid; place-items: center; border-radius: 50%; color: var(--diarito-color-text-strong); background: var(--diarito-color-control); font-size: var(--diarito-text-xs); }
+.diarito-timeline__content { min-width: 0; padding-top: .15rem; }
+.diarito-timeline__content strong { display: block; }
+.diarito-timeline__content p { margin: .3rem 0 0; color: var(--diarito-color-text-secondary); font-size: var(--diarito-text-sm); }
+.diarito-timeline__meta { display: block; margin-top: .35rem; color: var(--diarito-color-text-muted); font-size: var(--diarito-text-xs); }
+
+/* Advanced data table states / bulk selection */
+.diarito-data-table__select-cell { width: 2.75rem; text-align: center !important; }
+.diarito-data-table__select-cell .diarito-choice { align-items: center; }
+.diarito-data-table__select-cell .diarito-choice input { margin-top: 0; }
+.diarito-data-table tbody tr.is-selected { background: var(--diarito-color-surface-soft); }
+.diarito-data-table__bulkbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--diarito-space-3);
+  flex-wrap: wrap;
+  padding: var(--diarito-space-3) var(--diarito-space-4);
+  border-bottom: var(--diarito-border);
+  background: var(--diarito-color-control);
+}
+.diarito-data-table__bulkbar[hidden] { display: none; }
+.diarito-data-table__bulkbar-copy { color: var(--diarito-color-text-secondary); font-size: var(--diarito-text-sm); }
+.diarito-data-table__bulkbar-actions { display: flex; align-items: center; gap: var(--diarito-space-2); flex-wrap: wrap; }
+.diarito-table-state {
+  min-height: 12rem;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: var(--diarito-space-3);
+  padding: var(--diarito-space-7);
+  color: var(--diarito-color-text-muted);
+  text-align: center;
+}
+.diarito-table-state strong { color: var(--diarito-color-text-strong); }
+.diarito-table-state p { max-width: 30rem; margin: 0; }
+.diarito-table-state--error .diarito-icon-box { color: var(--diarito-error-text); background: var(--diarito-error-soft); }
+.diarito-table-skeleton { display: grid; gap: var(--diarito-space-3); width: 100%; }
+.diarito-table-skeleton__row { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: var(--diarito-space-3); }
