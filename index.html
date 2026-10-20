@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Diarito UI Library 2.0.0</title>
+  <title>Diarito UI Library 2.0.1</title>
   <meta name="description" content="Diarito HTML, CSS and native JavaScript UI component library.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Englebert&family=Noto+Sans+KR:wght@400;500;600;700&family=Poor+Story&family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
-  <link rel="stylesheet" href="assets/css/diarito-system.css?v=2.0.0">
-  <link rel="stylesheet" href="assets/css/docs-library.css?v=2.0.0">
+  <link rel="stylesheet" href="assets/css/diarito-system.css?v=2.0.1">
+  <link rel="stylesheet" href="assets/css/docs-library.css?v=2.0.1">
 </head>
 <body class="docs-body">
   <header class="docs-topbar">
@@ -26,7 +26,7 @@
         <a href="#patterns">Patterns</a>
       </nav>
       <div class="docs-topbar__actions">
-        <span class="diarito-tag">v2.0.0</span>
+        <span class="diarito-tag">v2.0.1</span>
         <a class="diarito-button diarito-button--primary diarito-button--sm" href="#components">View components</a>
       </div>
     </div>
@@ -37,7 +37,7 @@
       <div class="docs-hero__inner">
         <span class="diarito-kicker">Diarito UI Library · HTML + CSS + JS</span>
         <h1 class="diarito-display">A quieter system with stronger structure.</h1>
-        <p>Version 2.0 rebuilds the library around neutral surfaces, black controls, generous spacing and deliberate brand accents. Lime leads the brand, purple accents moments that need personality, and the component contract stays reusable enough to map cleanly into React later.</p>
+        <p>Version 2.0.1 tightens the library around one centered column, consistent margins, neutral components and black/gray interface hierarchy. Brand colors remain documented as tokens, but the component library itself stays neutral so states and content carry the visual meaning.</p>
         <div class="docs-hero__meta">
           <span class="diarito-chip"><i class="fi fi-rr-code-simple"></i> HTML + CSS</span>
           <span class="diarito-chip"><i class="fi fi-rr-settings-sliders"></i> Native JS only</span>
@@ -69,7 +69,7 @@
       <div class="docs-showcase-grid">
         <article class="docs-showcase is-wide">
           <div class="docs-showcase__head">
-            <div><h3>Color roles</h3><p>Black and gray build the interface. Lime and purple remain unmistakably Diarito without becoming wallpaper.</p></div>
+            <div><h3>Color roles</h3><p>Black and gray build the interface. Lime and purple remain available as brand tokens, but are intentionally not applied to library components.</p></div>
             <span class="docs-showcase__arrow">→</span>
           </div>
           <div class="docs-swatch-grid">
@@ -82,7 +82,7 @@
 
         <article class="docs-showcase is-narrow">
           <div class="docs-showcase__head">
-            <div><h3>State colors</h3><p>Reserved for meaning, not decoration.</p></div>
+            <div><h3>State colors</h3><p>Tailwind 500: red, yellow, green and blue. Reserved for meaning, not decoration.</p></div>
           </div>
           <div class="docs-demo-stack">
             <span class="diarito-status diarito-status--success">Success</span>
@@ -119,16 +119,15 @@
 
       <div class="docs-showcase-grid">
         <article class="docs-showcase is-full">
-          <div class="docs-showcase__head"><div><h3>Buttons</h3><p>Black is the decisive UI action. Lime is a brand-forward action. Purple stays accent-level.</p></div><span class="docs-showcase__arrow">→</span></div>
+          <div class="docs-showcase__head"><div><h3>Buttons</h3><p>Black is the decisive UI action. Secondary and quiet actions stay in gray; brand colors are not used to style library controls.</p></div><span class="docs-showcase__arrow">→</span></div>
           <div class="docs-component-table">
             <div class="docs-component-row"><div class="docs-component-row__label"><strong>Primary</strong><span>High-confidence action</span></div><div class="docs-demo-row"><button class="diarito-button diarito-button--primary">Continue <i class="fi fi-rr-arrow-right"></i></button><button class="diarito-button diarito-button--primary diarito-button--sm">Small</button><button class="diarito-button diarito-button--primary" disabled>Disabled</button></div></div>
-            <div class="docs-component-row"><div class="docs-component-row__label"><strong>Brand</strong><span>Diarito moment</span></div><div class="docs-demo-row"><button class="diarito-button diarito-button--brand">Create note</button><button class="diarito-button diarito-button--accent">Accent</button></div></div>
             <div class="docs-component-row"><div class="docs-component-row__label"><strong>Secondary</strong><span>Quiet utility action</span></div><div class="docs-demo-row"><button class="diarito-button diarito-button--secondary">Secondary</button><button class="diarito-button diarito-button--ghost">Ghost</button><button class="diarito-button diarito-button--danger">Delete</button><button class="diarito-button diarito-button--secondary diarito-button--icon" aria-label="More"><i class="fi fi-rr-menu-dots-vertical"></i></button></div></div>
           </div>
         </article>
 
         <article class="docs-showcase is-wide">
-          <div class="docs-showcase__head"><div><h3>Forms</h3><p>White controls, thin borders and a black focus edge with purple focus glow.</p></div></div>
+          <div class="docs-showcase__head"><div><h3>Forms</h3><p>White controls, thin borders and a restrained neutral focus ring.</p></div></div>
           <div class="diarito-card diarito-card--flat"><div class="diarito-card__body docs-demo-grid">
             <label class="diarito-field"><span class="diarito-label">Title</span><input class="diarito-input" placeholder="Untitled note"><span class="diarito-help">Keep it easy to recognize later.</span></label>
             <label class="diarito-field"><span class="diarito-label">Collection</span><select class="diarito-select"><option>Personal</option><option>Work</option><option>Language practice</option></select></label>
@@ -151,7 +150,7 @@
         <article class="docs-showcase">
           <div class="docs-showcase__head"><div><h3>Labels & chips</h3><p>Small, quiet and semantic.</p></div></div>
           <div class="docs-demo-row">
-            <span class="diarito-badge">New</span><span class="diarito-chip"><i class="fi fi-rr-user"></i> Personal</span><span class="diarito-tag">journal</span><span class="diarito-tag diarito-tag--brand">한국어</span>
+            <span class="diarito-badge">New</span><span class="diarito-chip"><i class="fi fi-rr-user"></i> Personal</span><span class="diarito-tag">journal</span><span class="diarito-tag">한국어</span>
           </div>
         </article>
 
@@ -160,8 +159,8 @@
           <div class="docs-demo-row">
             <span class="diarito-avatar">N</span><span class="diarito-avatar diarito-avatar--lg">D</span>
             <span class="diarito-icon-box"><i class="fi fi-rr-document"></i></span>
-            <span class="diarito-icon-box diarito-icon-box--brand"><i class="fi fi-rr-folder"></i></span>
-            <span class="diarito-icon-box diarito-icon-box--accent"><i class="fi fi-rr-sparkles"></i></span>
+            <span class="diarito-icon-box"><i class="fi fi-rr-folder"></i></span>
+            <span class="diarito-icon-box"><i class="fi fi-rr-sparkles"></i></span>
             <span class="diarito-icon-box diarito-icon-box--outline"><i class="fi fi-rr-lock"></i></span>
           </div>
         </article>
@@ -175,7 +174,7 @@
         <p>Color appears in small, meaningful doses. Containers remain neutral.</p>
       </div>
       <div class="docs-showcase-grid">
-        <article class="docs-showcase is-wide"><div class="docs-showcase__head"><div><h3>Alerts</h3><p>Neutral cards with a semantic edge.</p></div></div><div class="docs-demo-stack">
+        <article class="docs-showcase is-wide"><div class="docs-showcase__head"><div><h3>Alerts</h3><p>Borderless feedback surfaces with semantic color used only for meaning.</p></div></div><div class="docs-demo-stack">
           <div class="diarito-alert diarito-alert--success"><i class="fi fi-rr-check-circle"></i><div><strong>Saved</strong><p>Your note is up to date.</p></div><button class="diarito-button diarito-button--ghost diarito-button--icon diarito-button--sm" data-diarito-dismiss aria-label="Dismiss"><i class="fi fi-rr-cross-small"></i></button></div>
           <div class="diarito-alert diarito-alert--warning"><i class="fi fi-rr-triangle-warning"></i><div><strong>Unsaved changes</strong><p>There are local edits that have not been saved.</p></div><span></span></div>
           <div class="diarito-alert diarito-alert--error"><i class="fi fi-rr-cross-circle"></i><div><strong>Could not save</strong><p>Try again after checking your connection.</p></div><span></span></div>
@@ -219,9 +218,9 @@
               <div class="diarito-reading">
                 <div class="diarito-feed-switch"><button class="is-active">For you</button><button>Following</button><button>Practice</button></div>
                 <div class="diarito-feed-composer"><span class="diarito-avatar">N</span><input class="diarito-feed-composer__input" placeholder="Write something..."><button class="diarito-button diarito-button--primary diarito-button--sm">Post</button></div>
-                <article class="diarito-feed-item"><span class="diarito-avatar">Y</span><div class="diarito-feed-item__main"><div class="diarito-feed-item__header"><strong>yuna</strong><span>· 12 min</span></div><div class="diarito-feed-item__text"><p>오늘은 스페인어로 회의할 때 쓸 수 있는 표현을 정리했어요. Tiny wins, but they add up.</p></div><div class="diarito-feed-item__tags"><span class="diarito-tag diarito-tag--brand">한국어</span><span class="diarito-tag">Spanish</span></div><div class="diarito-feed-actions"><button class="diarito-feed-action"><i class="fi fi-rr-comment"></i> 8</button><button class="diarito-feed-action"><i class="fi fi-rr-heart"></i> 24</button><button class="diarito-feed-action"><i class="fi fi-rr-arrows-retweet"></i> 3</button><button class="diarito-feed-action"><i class="fi fi-rr-bookmark"></i></button></div></div></article>
-                <article class="diarito-feed-item"><span class="diarito-avatar" style="background:var(--diarito-purple)">S</span><div class="diarito-feed-item__main"><div class="diarito-feed-item__header"><strong>sowon</strong><span>· 34 min</span></div><div class="diarito-feed-item__text"><p>What’s one phrase you learned this week that you actually used in real life?</p></div><div class="diarito-feed-attachment"><span class="diarito-kicker">Community prompt</span><h4 style="margin-top:.5rem">Small language wins</h4><p style="margin:.35rem 0 0">Share the phrase and where you used it.</p></div><div class="diarito-feed-actions"><button class="diarito-feed-action"><i class="fi fi-rr-comment"></i> 19</button><button class="diarito-feed-action"><i class="fi fi-rr-heart"></i> 41</button><button class="diarito-feed-action"><i class="fi fi-rr-bookmark"></i></button></div></div></article>
-                <article class="diarito-feed-item"><span class="diarito-avatar">N</span><div class="diarito-feed-item__main"><div class="diarito-feed-item__header"><strong>nickramen</strong><span>· 1h</span></div><div class="diarito-feed-item__text"><p>I made a small collection for phrases I keep hearing but never remember at the right moment.</p></div><div class="diarito-feed-attachment"><div class="diarito-collection-item" style="border:0;padding:0;background:transparent"><span class="diarito-icon-box diarito-icon-box--brand"><i class="fi fi-rr-folder"></i></span><div class="diarito-collection-item__content"><strong>Actually useful Korean</strong><span>18 notes · shared collection</span></div><button class="diarito-button diarito-button--secondary diarito-button--sm">Open</button></div></div><div class="diarito-feed-actions"><button class="diarito-feed-action"><i class="fi fi-rr-comment"></i> 5</button><button class="diarito-feed-action"><i class="fi fi-rr-heart"></i> 17</button><button class="diarito-feed-action"><i class="fi fi-rr-share"></i></button></div></div></article>
+                <article class="diarito-feed-item"><span class="diarito-avatar">Y</span><div class="diarito-feed-item__main"><div class="diarito-feed-item__header"><strong>yuna</strong><span>· 12 min</span></div><div class="diarito-feed-item__text"><p>오늘은 스페인어로 회의할 때 쓸 수 있는 표현을 정리했어요. Tiny wins, but they add up.</p></div><div class="diarito-feed-item__tags"><span class="diarito-tag">한국어</span><span class="diarito-tag">Spanish</span></div><div class="diarito-feed-actions"><button class="diarito-feed-action"><i class="fi fi-rr-comment"></i> 8</button><button class="diarito-feed-action"><i class="fi fi-rr-heart"></i> 24</button><button class="diarito-feed-action"><i class="fi fi-rr-arrows-retweet"></i> 3</button><button class="diarito-feed-action"><i class="fi fi-rr-bookmark"></i></button></div></div></article>
+                <article class="diarito-feed-item"><span class="diarito-avatar" >S</span><div class="diarito-feed-item__main"><div class="diarito-feed-item__header"><strong>sowon</strong><span>· 34 min</span></div><div class="diarito-feed-item__text"><p>What’s one phrase you learned this week that you actually used in real life?</p></div><div class="diarito-feed-attachment"><span class="diarito-kicker">Community prompt</span><h4 style="margin-top:.5rem">Small language wins</h4><p style="margin:.35rem 0 0">Share the phrase and where you used it.</p></div><div class="diarito-feed-actions"><button class="diarito-feed-action"><i class="fi fi-rr-comment"></i> 19</button><button class="diarito-feed-action"><i class="fi fi-rr-heart"></i> 41</button><button class="diarito-feed-action"><i class="fi fi-rr-bookmark"></i></button></div></div></article>
+                <article class="diarito-feed-item"><span class="diarito-avatar">N</span><div class="diarito-feed-item__main"><div class="diarito-feed-item__header"><strong>nickramen</strong><span>· 1h</span></div><div class="diarito-feed-item__text"><p>I made a small collection for phrases I keep hearing but never remember at the right moment.</p></div><div class="diarito-feed-attachment"><div class="diarito-collection-item" style="border:0;padding:0;background:transparent"><span class="diarito-icon-box"><i class="fi fi-rr-folder"></i></span><div class="diarito-collection-item__content"><strong>Actually useful Korean</strong><span>18 notes · shared collection</span></div><button class="diarito-button diarito-button--secondary diarito-button--sm">Open</button></div></div><div class="diarito-feed-actions"><button class="diarito-feed-action"><i class="fi fi-rr-comment"></i> 5</button><button class="diarito-feed-action"><i class="fi fi-rr-heart"></i> 17</button><button class="diarito-feed-action"><i class="fi fi-rr-share"></i></button></div></div></article>
               </div>
             </div>
           </div>
@@ -233,9 +232,9 @@
       <div class="docs-section__intro"><span class="docs-kicker">06 / Diarito patterns</span><h2>Notes, collections, rows and page structure.</h2><p>Product-specific patterns sit above generic components, but still obey the same tokens and spacing rules.</p></div>
       <div class="docs-showcase-grid">
         <article class="docs-showcase"><div class="docs-showcase__head"><div><h3>Note cards</h3><p>Used when a note needs a contained preview.</p></div></div><div class="docs-demo-stack"><article class="diarito-note-card diarito-note-card--highlight"><div class="diarito-note-card__meta"><span>Today · 3:12 PM</span><span class="diarito-visual-state is-pinned"><i class="fi fi-rr-thumbtack"></i> Pinned</span></div><h3>Ideas for the next iteration</h3><div class="diarito-note-card__preview">Keep the library strict enough that future screens rarely need local CSS.</div><div class="diarito-note-card__footer"><div class="docs-demo-row"><span class="diarito-tag">product</span><span class="diarito-tag">ideas</span></div><div class="diarito-icon-actions"><button class="diarito-button diarito-button--ghost diarito-button--icon diarito-button--sm"><i class="fi fi-rr-lock"></i></button><button class="diarito-button diarito-button--ghost diarito-button--icon diarito-button--sm"><i class="fi fi-rr-menu-dots-vertical"></i></button></div></div></article></div></article>
-        <article class="docs-showcase"><div class="docs-showcase__head"><div><h3>Note previews</h3><p>Compact reading for search, panels and lists.</p></div></div><div class="diarito-card diarito-card--flat"><div class="diarito-card__body"><div class="diarito-note-preview"><span class="diarito-icon-box"><i class="fi fi-rr-document"></i></span><div class="diarito-note-preview__copy"><strong>Meeting notes</strong><span>Decisions, next steps and the thing everyone forgets...</span></div><span class="diarito-help">8m</span></div><div class="diarito-note-preview"><span class="diarito-icon-box diarito-icon-box--brand"><i class="fi fi-rr-document"></i></span><div class="diarito-note-preview__copy"><strong>Places to visit</strong><span>Santa Lucía, Cantarranas, Valle de Ángeles...</span></div><span class="diarito-help">2d</span></div></div></div></article>
-        <article class="docs-showcase"><div class="docs-showcase__head"><div><h3>Collections</h3><p>Folder rows reuse the same icon, button and metadata pieces.</p></div></div><div class="docs-demo-stack"><div class="diarito-collection-item"><span class="diarito-icon-box diarito-icon-box--brand"><i class="fi fi-rr-folder"></i></span><div class="diarito-collection-item__content"><strong>Work</strong><span>18 notes · updated today</span></div><button class="diarito-button diarito-button--ghost diarito-button--icon diarito-button--sm"><i class="fi fi-rr-menu-dots-vertical"></i></button></div><div class="diarito-collection-item"><span class="diarito-icon-box"><i class="fi fi-rr-folder"></i></span><div class="diarito-collection-item__content"><strong>Travel</strong><span>7 notes · updated 2 days ago</span></div><button class="diarito-button diarito-button--ghost diarito-button--icon diarito-button--sm"><i class="fi fi-rr-menu-dots-vertical"></i></button></div></div></article>
-        <article class="docs-showcase"><div class="docs-showcase__head"><div><h3>Quick actions</h3><p>A few high-frequency shortcuts, not a wall of buttons.</p></div></div><div class="diarito-quick-actions"><button class="diarito-quick-action"><span class="diarito-icon-box diarito-icon-box--brand"><i class="fi fi-rr-plus"></i></span><strong>New note</strong></button><button class="diarito-quick-action"><span class="diarito-icon-box"><i class="fi fi-rr-folder-plus"></i></span><strong>New collection</strong></button><button class="diarito-quick-action"><span class="diarito-icon-box diarito-icon-box--accent"><i class="fi fi-rr-search"></i></span><strong>Find something</strong></button></div></article>
+        <article class="docs-showcase"><div class="docs-showcase__head"><div><h3>Note previews</h3><p>Compact reading for search, panels and lists.</p></div></div><div class="diarito-card diarito-card--flat"><div class="diarito-card__body"><div class="diarito-note-preview"><span class="diarito-icon-box"><i class="fi fi-rr-document"></i></span><div class="diarito-note-preview__copy"><strong>Meeting notes</strong><span>Decisions, next steps and the thing everyone forgets...</span></div><span class="diarito-help">8m</span></div><div class="diarito-note-preview"><span class="diarito-icon-box"><i class="fi fi-rr-document"></i></span><div class="diarito-note-preview__copy"><strong>Places to visit</strong><span>Santa Lucía, Cantarranas, Valle de Ángeles...</span></div><span class="diarito-help">2d</span></div></div></div></article>
+        <article class="docs-showcase"><div class="docs-showcase__head"><div><h3>Collections</h3><p>Folder rows reuse the same icon, button and metadata pieces.</p></div></div><div class="docs-demo-stack"><div class="diarito-collection-item"><span class="diarito-icon-box"><i class="fi fi-rr-folder"></i></span><div class="diarito-collection-item__content"><strong>Work</strong><span>18 notes · updated today</span></div><button class="diarito-button diarito-button--ghost diarito-button--icon diarito-button--sm"><i class="fi fi-rr-menu-dots-vertical"></i></button></div><div class="diarito-collection-item"><span class="diarito-icon-box"><i class="fi fi-rr-folder"></i></span><div class="diarito-collection-item__content"><strong>Travel</strong><span>7 notes · updated 2 days ago</span></div><button class="diarito-button diarito-button--ghost diarito-button--icon diarito-button--sm"><i class="fi fi-rr-menu-dots-vertical"></i></button></div></div></article>
+        <article class="docs-showcase"><div class="docs-showcase__head"><div><h3>Quick actions</h3><p>A few high-frequency shortcuts, not a wall of buttons.</p></div></div><div class="diarito-quick-actions"><button class="diarito-quick-action"><span class="diarito-icon-box"><i class="fi fi-rr-plus"></i></span><strong>New note</strong></button><button class="diarito-quick-action"><span class="diarito-icon-box"><i class="fi fi-rr-folder-plus"></i></span><strong>New collection</strong></button><button class="diarito-quick-action"><span class="diarito-icon-box"><i class="fi fi-rr-search"></i></span><strong>Find something</strong></button></div></article>
 
         <article class="docs-showcase is-full"><div class="docs-showcase__head"><div><h3>Page shell</h3><p>Sections and containers remain the page-level contract for static HTML now and React later.</p></div></div><div class="diarito-mock-window"><div class="diarito-mock-window__bar"><div class="diarito-mock-window__dots"><span></span><span></span><span></span></div></div><div class="diarito-mock-window__body"><div class="diarito-topbar"><a class="diarito-brand"><span class="diarito-brand__mark">D</span><span>Diarito</span></a><div class="diarito-nav"><a class="is-active">Home</a><a>Notes</a><a>Community</a></div><button class="diarito-button diarito-button--primary diarito-button--sm">New note</button></div><section class="diarito-section diarito-section--compact"><div class="diarito-container diarito-container--md"><div class="diarito-section-header"><div class="diarito-section-header__copy"><span class="diarito-kicker">Your notes</span><h2>Everything worth keeping.</h2><p>Page-level spacing and hierarchy without inventing new component styles.</p></div><div class="diarito-section-header__actions"><button class="diarito-button diarito-button--secondary">Filter</button></div></div><div class="diarito-grid diarito-grid--3"><article class="diarito-card"><div class="diarito-card__body">Card</div></article><article class="diarito-card"><div class="diarito-card__body">Card</div></article><article class="diarito-card"><div class="diarito-card__body">Card</div></article></div></div></section></div></div></article>
       </div>
@@ -248,10 +247,10 @@
       </div>
     </section>
 
-    <footer class="docs-footer"><strong>Diarito UI Library 2.0.0</strong><span>Built from scratch in HTML + CSS + native JS. Fonts retained; visual system reset.</span></footer>
+    <footer class="docs-footer"><strong>Diarito UI Library 2.0.1</strong><span>Built from scratch in HTML + CSS + native JS. Fonts retained; visual system reset.</span></footer>
   </main>
 
-  <script src="assets/js/diarito.js?v=2.0.0"></script>
-  <script src="assets/js/library-docs.js?v=2.0.0"></script>
+  <script src="assets/js/diarito.js?v=2.0.1"></script>
+  <script src="assets/js/library-docs.js?v=2.0.1"></script>
 </body>
 </html>

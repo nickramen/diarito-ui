@@ -17,15 +17,15 @@
   --diarito-white: #FFFFFF;
 
   /* Semantic states */
-  --diarito-error: #AC5C60;
-  --diarito-warning: #8F7135;
-  --diarito-success: #4F8064;
-  --diarito-info: #53769F;
+  --diarito-error: #EF4444;
+  --diarito-warning: #EAB308;
+  --diarito-success: #22C55E;
+  --diarito-info: #3B82F6;
 
   /* Semantic roles */
-  --diarito-color-primary: var(--diarito-lime);
-  --diarito-color-primary-strong: var(--diarito-olive);
-  --diarito-color-accent: var(--diarito-purple);
+  --diarito-color-primary: var(--diarito-black);
+  --diarito-color-primary-strong: var(--diarito-black);
+  --diarito-color-accent: var(--diarito-gray-100);
   --diarito-color-text: var(--diarito-ink);
   --diarito-color-text-muted: var(--diarito-gray-600);
   --diarito-color-text-subtle: var(--diarito-gray-400);
@@ -108,5 +108,5 @@
   --diarito-transition: 200ms ease;
 
   /* Focus */
-  --diarito-focus-ring: 0 0 0 3px color-mix(in srgb, var(--diarito-purple) 42%, transparent);
+  --diarito-focus-ring: 0 0 0 3px color-mix(in srgb, var(--diarito-black) 14%, transparent);
 }

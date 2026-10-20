@@ -8,7 +8,7 @@
   padding-block: .8rem;
 }
 .diarito-brand { display: inline-flex; align-items: center; gap: .65rem; font-weight: var(--diarito-weight-bold); }
-.diarito-brand__mark { width: 2rem; height: 2rem; display: grid; place-items: center; border-radius: .6rem; color: var(--diarito-black); background: var(--diarito-lime); font-family: var(--diarito-font-display); font-size: 1.15rem; }
+.diarito-brand__mark { width: 2rem; height: 2rem; display: grid; place-items: center; border-radius: .6rem; color: var(--diarito-black); background: var(--diarito-gray-100); font-family: var(--diarito-font-display); font-size: 1.15rem; }
 .diarito-nav { display: flex; align-items: center; gap: .25rem; }
 .diarito-nav a { padding: .55rem .7rem; border-radius: .6rem; color: var(--diarito-gray-600); font-size: var(--diarito-text-sm); }
 .diarito-nav a:hover, .diarito-nav a.is-active { color: var(--diarito-black); background: var(--diarito-gray-100); }
@@ -19,7 +19,7 @@
 .diarito-sidebar-nav { display: grid; gap: .15rem; }
 .diarito-sidebar-item { display: flex; align-items: center; gap: .65rem; min-height: 2.45rem; padding: .55rem .65rem; border-radius: .65rem; color: var(--diarito-gray-600); font-size: var(--diarito-text-sm); }
 .diarito-sidebar-item:hover { color: var(--diarito-black); background: var(--diarito-gray-100); }
-.diarito-sidebar-item.is-active { color: var(--diarito-black); background: var(--diarito-lime-soft); }
+.diarito-sidebar-item.is-active { color: var(--diarito-black); background: var(--diarito-gray-100); }
 
 /* Large product-demo feature panels */
 .diarito-feature-panel { min-height: 100%; padding: clamp(1.5rem, 3vw, 2rem); border-radius: var(--diarito-radius-lg); background: var(--diarito-gray-100); }
@@ -57,7 +57,7 @@
 
 /* Diarito product patterns */
 .diarito-note-card { display: grid; gap: var(--diarito-space-4); padding: var(--diarito-space-5); border: var(--diarito-border-strong); border-radius: var(--diarito-radius-md); background: var(--diarito-white); box-shadow: var(--diarito-shadow-xs); }
-.diarito-note-card--highlight { background: var(--diarito-lime-soft); }
+.diarito-note-card--highlight { background: var(--diarito-gray-100); }
 .diarito-note-card__meta { display: flex; align-items: center; justify-content: space-between; gap: var(--diarito-space-3); color: var(--diarito-gray-600); font-size: var(--diarito-text-xs); }
 .diarito-note-card__preview { color: var(--diarito-gray-800); }
 .diarito-note-card__footer { display: flex; align-items: center; justify-content: space-between; gap: var(--diarito-space-3); }
@@ -78,7 +78,7 @@
 .diarito-icon-actions { display: flex; align-items: center; gap: .15rem; }
 
 .diarito-quick-actions { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: var(--diarito-space-3); }
-.diarito-quick-action { display: flex; align-items: center; gap: var(--diarito-space-3); padding: var(--diarito-space-4); border: var(--diarito-border-strong); border-radius: var(--diarito-radius-md); background: var(--diarito-white); text-align: left; }
+.diarito-quick-action { display: flex; align-items: center; gap: var(--diarito-space-3); padding: var(--diarito-space-4); border: 0; border-radius: var(--diarito-radius-md); background: var(--diarito-gray-100); text-align: left; }
 .diarito-quick-action:hover { background: var(--diarito-gray-050); }
 
 /* Stats and tables */

@@ -3,8 +3,8 @@
 .diarito-section--flush { padding-block: 0; }
 .diarito-section--soft { background: var(--diarito-color-surface-soft); }
 .diarito-section--dark { color: var(--diarito-white); background: var(--diarito-black); }
-.diarito-section--lime { background: var(--diarito-lime-soft); }
-.diarito-section--purple { background: var(--diarito-purple-soft); }
+.diarito-section--lime { background: var(--diarito-gray-100); }
+.diarito-section--purple { background: var(--diarito-gray-050); }
 
 .diarito-container {
   width: min(calc(100% - (var(--diarito-gutter) * 2)), var(--diarito-container-lg));
