@@ -1,5 +1,22 @@
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--diarito-color-border-strong) transparent;
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--diarito-color-border-strong) transparent;
+}
+*::-webkit-scrollbar { width: .45rem; height: .45rem; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: var(--diarito-radius-pill);
+  background: var(--diarito-color-border-strong);
+  background-clip: padding-box;
+}
+*::-webkit-scrollbar-thumb:hover { background: var(--diarito-color-text-subtle); background-clip: padding-box; }
 body {
   margin: 0;
   color: var(--diarito-color-text);
