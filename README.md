@@ -1,10 +1,20 @@
-# Diarito UI Library 2.2.1
+# Diarito UI Library 2.2.2
 
 Diarito's reusable HTML, CSS and native JavaScript design system.
 
-Version 2.2.1 applies focused visual-QA refinements to the 2.2 component system without changing the HTML + CSS + native-JS architecture.
+Version 2.2.2 refines Diarito note-card structure and adds an advanced reusable data-table pattern while keeping the HTML + CSS + native-JS architecture.
 
 
+
+
+## 2.2.2 note cards and advanced data table
+
+- Note-card variants now render side by side on desktop and collapse to one column on mobile.
+- Both note variants use the shared `diarito-card` header/body/footer contract.
+- Only the ruled note body receives notebook lines; header and footer remain standard card surfaces.
+- Ruled-note line spacing is synchronized with text line-height to keep copy aligned to the writing grid.
+- Added a reusable advanced data-table shell with toolbar, search, filters, sticky headers, scrollable body and pagination.
+- Added lightweight demo filtering for the table without introducing app/business logic.
 
 ## 2.2.1 visual QA refinement
 
