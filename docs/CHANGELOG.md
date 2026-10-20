@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.3.1 - Lime primary, purple accent
+
+- Lime is now the primary brand and interaction color.
+- Purple is now the accent color.
+- Olive remains the stronger supporting tone.
+- Primary buttons use lime with olive support; secondary buttons use purple accents.
+- Shared components reference semantic brand-role tokens where possible.
+- No React, backend, authentication, or product logic added.
+
 ## 1.3.0 - Feed-first library and fake product feed
 
 - Removed the permanent documentation sidebar from the canonical library view.
