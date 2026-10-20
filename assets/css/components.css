@@ -1,220 +1,161 @@
-/* ========================================================================== 
-   Buttons
-   ========================================================================== */
+/* Buttons */
 .diarito-button {
   min-height: var(--diarito-control-height);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: var(--diarito-space-2);
-  padding: 0.65rem 1rem;
+  padding: .7rem 1rem;
   border: 1px solid transparent;
-  border-radius: var(--diarito-radius-md);
+  border-radius: var(--diarito-radius-sm);
   color: var(--diarito-ink);
   background: transparent;
   font-weight: var(--diarito-weight-semibold);
   line-height: 1;
-  text-decoration: none;
   white-space: nowrap;
-  transition: background var(--diarito-transition-fast), border-color var(--diarito-transition-fast), color var(--diarito-transition-fast), opacity var(--diarito-transition-fast);
+  transition: opacity var(--diarito-transition-fast), background var(--diarito-transition-fast), border-color var(--diarito-transition-fast), transform var(--diarito-transition-fast);
 }
-.diarito-button:disabled,
-.diarito-button.is-disabled { opacity: 0.45; pointer-events: none; }
-.diarito-button--primary {
-  border-color: var(--diarito-color-primary-strong);
-  color: var(--diarito-ink);
-  background: var(--diarito-color-primary);
-}
-.diarito-button--primary:hover:not(:disabled) {
-  background: color-mix(in srgb, var(--diarito-color-primary) 84%, var(--diarito-color-primary-strong));
-}
-.diarito-button--secondary {
-  border-color: var(--diarito-color-accent);
-  color: var(--diarito-ink);
-  background: var(--diarito-white);
-}
-.diarito-button--secondary:hover:not(:disabled) { background: var(--diarito-color-accent-soft); }
-.diarito-button--ghost { color: var(--diarito-gray-700); background: transparent; }
-.diarito-button--ghost:hover:not(:disabled) { color: var(--diarito-ink); background: var(--diarito-gray-100); }
-.diarito-button--danger { border-color: var(--diarito-error); color: var(--diarito-white); background: var(--diarito-error); }
-.diarito-button--danger:hover:not(:disabled) { background: color-mix(in srgb, var(--diarito-error) 86%, var(--diarito-ink)); }
-.diarito-button--sm { min-height: 2.25rem; padding: 0.45rem 0.75rem; font-size: var(--diarito-text-sm); }
-.diarito-button--lg { min-height: 3.15rem; padding: 0.8rem 1.2rem; }
-.diarito-button--icon { width: var(--diarito-control-height); padding-inline: 0; }
-.diarito-button--icon.diarito-button--sm { width: 2.25rem; }
+.diarito-button:hover:not(:disabled) { transform: translateY(-1px); }
+.diarito-button:active:not(:disabled) { transform: translateY(0); }
+.diarito-button:disabled, .diarito-button.is-disabled { opacity: .42; pointer-events: none; }
+.diarito-button--primary { color: var(--diarito-white); background: var(--diarito-black); border-color: var(--diarito-black); }
+.diarito-button--primary:hover:not(:disabled) { background: color-mix(in srgb, var(--diarito-black) 88%, var(--diarito-white)); }
+.diarito-button--brand { color: var(--diarito-black); background: var(--diarito-lime); border-color: color-mix(in srgb, var(--diarito-olive) 42%, var(--diarito-lime)); }
+.diarito-button--brand:hover:not(:disabled) { background: color-mix(in srgb, var(--diarito-lime) 86%, var(--diarito-white)); }
+.diarito-button--secondary { border-color: var(--diarito-gray-300); background: var(--diarito-white); box-shadow: var(--diarito-shadow-xs); }
+.diarito-button--secondary:hover:not(:disabled) { background: var(--diarito-gray-050); }
+.diarito-button--ghost { color: var(--diarito-gray-800); }
+.diarito-button--ghost:hover:not(:disabled) { background: var(--diarito-gray-100); }
+.diarito-button--accent { border-color: color-mix(in srgb, var(--diarito-purple) 52%, var(--diarito-gray-200)); background: var(--diarito-purple-soft); }
+.diarito-button--danger { color: var(--diarito-white); background: var(--diarito-error); }
+.diarito-button--sm { min-height: 2.2rem; padding: .52rem .75rem; font-size: var(--diarito-text-sm); }
+.diarito-button--lg { min-height: var(--diarito-control-height-lg); padding: .85rem 1.25rem; }
+.diarito-button--icon { width: var(--diarito-control-height); padding: 0; }
+.diarito-button--icon.diarito-button--sm { width: 2.2rem; }
 .diarito-button--block { width: 100%; }
 
-/* ========================================================================== 
-   Forms
-   ========================================================================== */
+/* Forms */
 .diarito-field { display: grid; gap: var(--diarito-space-2); }
 .diarito-field__row { display: flex; align-items: center; justify-content: space-between; gap: var(--diarito-space-3); }
-.diarito-label { color: var(--diarito-ink); font-size: var(--diarito-text-sm); font-weight: var(--diarito-weight-semibold); }
-.diarito-help { color: var(--diarito-gray-700); font-size: var(--diarito-text-xs); }
-.diarito-field.is-error .diarito-label,
-.diarito-field.is-error .diarito-help { color: var(--diarito-error); }
-
-.diarito-input,
-.diarito-textarea,
-.diarito-select {
+.diarito-label { color: var(--diarito-ink); font-size: var(--diarito-text-sm); font-weight: var(--diarito-weight-medium); }
+.diarito-help { color: var(--diarito-color-text-muted); font-size: var(--diarito-text-xs); }
+.diarito-input, .diarito-textarea, .diarito-select {
   width: 100%;
-  border: var(--diarito-border);
-  border-radius: var(--diarito-radius-md);
+  border: var(--diarito-border-strong);
+  border-radius: var(--diarito-radius-sm);
   color: var(--diarito-ink);
   background: var(--diarito-white);
   transition: border-color var(--diarito-transition-fast), box-shadow var(--diarito-transition-fast), background var(--diarito-transition-fast);
 }
-.diarito-input,
-.diarito-select { min-height: var(--diarito-control-height); padding: 0.68rem 0.8rem; }
-.diarito-textarea { min-height: 7.25rem; padding: 0.8rem; resize: vertical; }
-.diarito-input::placeholder,
-.diarito-textarea::placeholder { color: color-mix(in srgb, var(--diarito-gray-700) 66%, var(--diarito-white)); }
-.diarito-input:hover:not(:disabled),
-.diarito-textarea:hover:not(:disabled),
-.diarito-select:hover:not(:disabled) { border-color: color-mix(in srgb, var(--diarito-color-primary-strong) 58%, var(--diarito-gray-300)); }
-.diarito-input:focus,
-.diarito-textarea:focus,
-.diarito-select:focus { border-color: var(--diarito-color-primary-strong); outline: 0; box-shadow: var(--diarito-focus-ring); }
-.diarito-field.is-error .diarito-input,
-.diarito-field.is-error .diarito-textarea,
-.diarito-field.is-error .diarito-select { border-color: var(--diarito-error); }
-.diarito-input:disabled,
-.diarito-textarea:disabled,
-.diarito-select:disabled { color: var(--diarito-gray-700); background: var(--diarito-gray-100); }
-
-.diarito-search { position: relative; display: block; }
-.diarito-search > i { position: absolute; left: 0.85rem; top: 50%; transform: translateY(-50%); color: var(--diarito-gray-700); pointer-events: none; }
+.diarito-input, .diarito-select { min-height: var(--diarito-control-height); padding: .68rem .8rem; }
+.diarito-textarea { min-height: 8rem; padding: .8rem; resize: vertical; }
+.diarito-input::placeholder, .diarito-textarea::placeholder { color: var(--diarito-gray-400); }
+.diarito-input:hover:not(:disabled), .diarito-textarea:hover:not(:disabled), .diarito-select:hover:not(:disabled) { border-color: var(--diarito-gray-400); }
+.diarito-input:focus, .diarito-textarea:focus, .diarito-select:focus { outline: 0; border-color: var(--diarito-black); box-shadow: var(--diarito-focus-ring); }
+.diarito-input:disabled, .diarito-textarea:disabled, .diarito-select:disabled { color: var(--diarito-gray-600); background: var(--diarito-gray-100); }
+.diarito-field.is-error .diarito-label, .diarito-field.is-error .diarito-help { color: var(--diarito-error); }
+.diarito-field.is-error .diarito-input, .diarito-field.is-error .diarito-textarea, .diarito-field.is-error .diarito-select { border-color: var(--diarito-error); }
+.diarito-search { position: relative; }
+.diarito-search > i { position: absolute; left: .85rem; top: 50%; transform: translateY(-50%); color: var(--diarito-gray-600); pointer-events: none; }
 .diarito-search .diarito-input { padding-left: 2.5rem; }
 
 .diarito-choice { display: inline-flex; align-items: flex-start; gap: var(--diarito-space-2); color: var(--diarito-ink); font-size: var(--diarito-text-sm); }
-.diarito-choice input { width: 1.05rem; height: 1.05rem; margin: 0.18rem 0 0; accent-color: var(--diarito-color-primary-strong); }
-
+.diarito-choice input { width: 1rem; height: 1rem; margin-top: .2rem; accent-color: var(--diarito-black); }
 .diarito-switch { display: inline-flex; align-items: center; gap: var(--diarito-space-3); color: var(--diarito-ink); font-size: var(--diarito-text-sm); }
 .diarito-switch input { position: absolute; opacity: 0; pointer-events: none; }
-.diarito-switch__track { width: 2.75rem; height: 1.55rem; position: relative; flex: 0 0 auto; border: var(--diarito-border); border-radius: var(--diarito-radius-pill); background: var(--diarito-gray-100); transition: background var(--diarito-transition-fast), border-color var(--diarito-transition-fast); }
-.diarito-switch__track::after { content: ''; position: absolute; top: 0.18rem; left: 0.18rem; width: 1.05rem; height: 1.05rem; border: var(--diarito-border); border-radius: 50%; background: var(--diarito-white); transition: transform var(--diarito-transition-fast); }
-.diarito-switch input:checked + .diarito-switch__track { border-color: var(--diarito-color-primary-strong); background: var(--diarito-color-primary); }
-.diarito-switch input:checked + .diarito-switch__track::after { transform: translateX(1.18rem); }
+.diarito-switch__track { width: 2.75rem; height: 1.55rem; position: relative; flex: 0 0 auto; border-radius: var(--diarito-radius-pill); background: var(--diarito-gray-300); transition: background var(--diarito-transition-fast); }
+.diarito-switch__track::after { content: ''; position: absolute; top: .2rem; left: .2rem; width: 1.15rem; height: 1.15rem; border-radius: 50%; background: var(--diarito-white); box-shadow: var(--diarito-shadow-xs); transition: transform var(--diarito-transition-fast); }
+.diarito-switch input:checked + .diarito-switch__track { background: var(--diarito-black); }
+.diarito-switch input:checked + .diarito-switch__track::after { transform: translateX(1.2rem); }
 .diarito-switch input:focus-visible + .diarito-switch__track { box-shadow: var(--diarito-focus-ring); }
 
-/* ========================================================================== 
-   Labels and status
-   ========================================================================== */
-.diarito-badge,
-.diarito-chip,
-.diarito-tag,
-.diarito-status {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  width: fit-content;
-  border-radius: var(--diarito-radius-pill);
-  font-size: var(--diarito-text-xs);
-  font-weight: var(--diarito-weight-semibold);
-  line-height: 1.1;
-  white-space: nowrap;
+/* Labels */
+.diarito-badge, .diarito-chip, .diarito-tag, .diarito-status {
+  display: inline-flex; align-items: center; gap: .35rem; width: fit-content;
+  border-radius: var(--diarito-radius-pill); font-size: var(--diarito-text-xs); font-weight: var(--diarito-weight-medium); line-height: 1;
 }
-.diarito-badge { min-height: 1.75rem; padding: 0.34rem 0.58rem; background: var(--diarito-color-accent-soft); }
-.diarito-chip { min-height: 1.9rem; padding: 0.4rem 0.62rem; border: var(--diarito-border); background: var(--diarito-white); }
-.diarito-tag { min-height: 1.75rem; padding: 0.34rem 0.58rem; color: var(--diarito-color-primary-strong); background: var(--diarito-color-primary-soft); }
-.diarito-status { min-height: 1.75rem; padding: 0.34rem 0.58rem; border: 1px solid color-mix(in srgb, currentColor 28%, var(--diarito-gray-300)); }
-.diarito-status::before { content: ''; width: 0.42rem; height: 0.42rem; flex: 0 0 auto; border-radius: 50%; background: currentColor; }
+.diarito-badge { min-height: 1.7rem; padding: .35rem .6rem; background: var(--diarito-purple-soft); }
+.diarito-chip { min-height: 1.9rem; padding: .42rem .65rem; border: var(--diarito-border-strong); background: var(--diarito-white); box-shadow: var(--diarito-shadow-xs); }
+.diarito-tag { min-height: 1.7rem; padding: .35rem .6rem; background: var(--diarito-gray-100); }
+.diarito-tag--brand { background: var(--diarito-lime-soft); }
+.diarito-status { min-height: 1.7rem; padding: .35rem .6rem; border: 1px solid color-mix(in srgb, currentColor 28%, var(--diarito-gray-200)); }
+.diarito-status::before { content: ''; width: .4rem; height: .4rem; border-radius: 50%; background: currentColor; }
 .diarito-status--success { color: var(--diarito-success); background: var(--diarito-success-soft); }
 .diarito-status--warning { color: var(--diarito-warning); background: var(--diarito-warning-soft); }
 .diarito-status--error { color: var(--diarito-error); background: var(--diarito-error-soft); }
 .diarito-status--info { color: var(--diarito-info); background: var(--diarito-info-soft); }
 
-/* ========================================================================== 
-   Alerts and empty states
-   ========================================================================== */
-.diarito-alert { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: start; gap: var(--diarito-space-3); padding: var(--diarito-space-4); border: var(--diarito-border); border-left: 3px solid currentColor; border-radius: var(--diarito-radius-md); }
-.diarito-alert > i { margin-top: 0.15rem; }
-.diarito-alert p { margin: 0.2rem 0 0; color: var(--diarito-gray-700); font-size: var(--diarito-text-sm); }
-.diarito-alert--success { color: var(--diarito-success); background: var(--diarito-success-soft); }
-.diarito-alert--warning { color: var(--diarito-warning); background: var(--diarito-warning-soft); }
-.diarito-alert--error { color: var(--diarito-error); background: var(--diarito-error-soft); }
-.diarito-alert--info { color: var(--diarito-info); background: var(--diarito-info-soft); }
+/* Alerts */
+.diarito-alert { display: grid; grid-template-columns: auto minmax(0,1fr) auto; gap: var(--diarito-space-3); padding: var(--diarito-space-4); border: var(--diarito-border-strong); border-radius: var(--diarito-radius-md); background: var(--diarito-white); }
+.diarito-alert > i { margin-top: .15rem; }
+.diarito-alert p { margin: .2rem 0 0; font-size: var(--diarito-text-sm); }
+.diarito-alert--success { border-left: 3px solid var(--diarito-success); }
+.diarito-alert--warning { border-left: 3px solid var(--diarito-warning); }
+.diarito-alert--error { border-left: 3px solid var(--diarito-error); }
+.diarito-alert--info { border-left: 3px solid var(--diarito-info); }
 
-.diarito-empty { display: grid; justify-items: center; gap: var(--diarito-space-3); padding: var(--diarito-space-8); text-align: center; }
-.diarito-empty__icon { width: 3rem; height: 3rem; display: grid; place-items: center; border-radius: var(--diarito-radius-lg); color: var(--diarito-color-primary-strong); background: var(--diarito-color-primary-soft); }
-.diarito-empty p { max-width: 30rem; margin-bottom: 0; }
-
-/* ========================================================================== 
-   Cards, list items, avatars, icon boxes
-   ========================================================================== */
-.diarito-card { overflow: hidden; border: var(--diarito-border); border-radius: var(--diarito-radius-lg); background: var(--diarito-white); }
-.diarito-card--raised { box-shadow: var(--diarito-shadow-sm); }
-.diarito-card__header,
-.diarito-card__body,
-.diarito-card__footer { padding: var(--diarito-space-4); }
+/* Cards */
+.diarito-card { overflow: hidden; border: var(--diarito-border-strong); border-radius: var(--diarito-radius-md); background: var(--diarito-white); box-shadow: var(--diarito-shadow-xs); }
+.diarito-card__header, .diarito-card__body, .diarito-card__footer { padding: var(--diarito-space-5); }
 .diarito-card__header { border-bottom: var(--diarito-border); }
-.diarito-card__footer { border-top: var(--diarito-border); background: color-mix(in srgb, var(--diarito-gray-100) 56%, var(--diarito-white)); }
-.diarito-card__header h3,
-.diarito-card__body p:last-child,
-.diarito-card__footer p:last-child { margin-bottom: 0; }
+.diarito-card__footer { border-top: var(--diarito-border); }
+.diarito-card--flat { box-shadow: none; }
+.diarito-card--soft { border: 0; background: var(--diarito-gray-100); box-shadow: none; }
 
-.diarito-avatar { width: 2.5rem; height: 2.5rem; display: inline-grid; place-items: center; flex: 0 0 auto; overflow: hidden; border: var(--diarito-border); border-radius: 50%; color: var(--diarito-color-primary-strong); background: var(--diarito-color-primary-soft); font-weight: var(--diarito-weight-bold); }
+/* Avatars and icons */
+.diarito-avatar { width: 2.5rem; height: 2.5rem; display: inline-grid; place-items: center; overflow: hidden; flex: 0 0 auto; border-radius: 50%; color: var(--diarito-black); background: var(--diarito-lime); font-weight: var(--diarito-weight-semibold); }
 .diarito-avatar--sm { width: 2rem; height: 2rem; font-size: var(--diarito-text-xs); }
-.diarito-avatar--lg { width: 3.25rem; height: 3.25rem; font-size: var(--diarito-text-lg); }
+.diarito-avatar--lg { width: 3.25rem; height: 3.25rem; }
 .diarito-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.diarito-icon-box { width: 2.55rem; height: 2.55rem; display: inline-grid; place-items: center; border-radius: var(--diarito-radius-sm); color: var(--diarito-black); background: var(--diarito-gray-100); }
+.diarito-icon-box--brand { background: var(--diarito-lime); }
+.diarito-icon-box--accent { background: var(--diarito-purple-soft); }
+.diarito-icon-box--outline { border: var(--diarito-border-strong); background: var(--diarito-white); }
 
-.diarito-icon-box { width: 2.6rem; height: 2.6rem; display: inline-grid; place-items: center; flex: 0 0 auto; border-radius: var(--diarito-radius-md); color: var(--diarito-ink); background: var(--diarito-color-accent-soft); }
-.diarito-icon-box--lime { color: var(--diarito-color-primary-strong); background: var(--diarito-color-primary-soft); }
-.diarito-icon-box--outline { border: var(--diarito-border); background: var(--diarito-white); }
-
+/* Lists and rows */
 .diarito-list { display: grid; margin: 0; padding: 0; list-style: none; }
-.diarito-list-item,
-.diarito-action-row { min-width: 0; display: flex; align-items: center; gap: var(--diarito-space-3); padding: var(--diarito-space-3) 0; border-bottom: var(--diarito-border); }
-.diarito-list-item:last-child,
-.diarito-action-row:last-child { border-bottom: 0; }
-.diarito-list-item__content,
-.diarito-action-row__content { min-width: 0; flex: 1; }
-.diarito-list-item__content strong,
-.diarito-list-item__content span,
-.diarito-action-row__content strong,
-.diarito-action-row__content span { display: block; }
-.diarito-list-item__content span,
-.diarito-action-row__content span { margin-top: 0.1rem; color: var(--diarito-gray-700); font-size: var(--diarito-text-xs); }
+.diarito-list-item, .diarito-action-row { min-width: 0; display: flex; align-items: center; gap: var(--diarito-space-3); padding: var(--diarito-space-3) 0; border-bottom: var(--diarito-border); }
+.diarito-list-item:last-child, .diarito-action-row:last-child { border-bottom: 0; }
+.diarito-list-item__content, .diarito-action-row__content { min-width: 0; flex: 1; }
+.diarito-list-item__content strong, .diarito-list-item__content span, .diarito-action-row__content strong, .diarito-action-row__content span { display: block; }
+.diarito-list-item__content span, .diarito-action-row__content span { margin-top: .15rem; color: var(--diarito-gray-600); font-size: var(--diarito-text-xs); }
 
-/* ========================================================================== 
-   Tabs and accordion
-   ========================================================================== */
-.diarito-tabs { display: flex; gap: var(--diarito-space-1); padding: 0.25rem; border: var(--diarito-border); border-radius: var(--diarito-radius-md); background: var(--diarito-gray-100); overflow-x: auto; }
-.diarito-tab { min-height: 2.4rem; flex: 0 0 auto; padding: 0.55rem 0.85rem; border: 0; border-radius: calc(var(--diarito-radius-md) - 0.2rem); color: var(--diarito-gray-700); background: transparent; font-size: var(--diarito-text-sm); font-weight: var(--diarito-weight-semibold); }
-.diarito-tab:hover { color: var(--diarito-ink); }
-.diarito-tab[aria-selected="true"] { color: var(--diarito-ink); background: var(--diarito-white); box-shadow: inset 0 0 0 1px var(--diarito-gray-300); }
+/* Tabs */
+.diarito-tabs { display: flex; gap: var(--diarito-space-1); padding: .25rem; overflow-x: auto; border-radius: var(--diarito-radius-sm); background: var(--diarito-gray-100); }
+.diarito-tab { min-height: 2.35rem; padding: .55rem .85rem; border: 0; border-radius: calc(var(--diarito-radius-sm) - .2rem); color: var(--diarito-gray-600); background: transparent; font-size: var(--diarito-text-sm); font-weight: var(--diarito-weight-medium); }
+.diarito-tab[aria-selected="true"] { color: var(--diarito-black); background: var(--diarito-white); box-shadow: var(--diarito-shadow-xs); }
 .diarito-tab-panel { padding-top: var(--diarito-space-4); }
 .diarito-tab-panel[hidden] { display: none; }
 
+/* Accordion */
 .diarito-accordion { border-top: var(--diarito-border); }
 .diarito-accordion details { border-bottom: var(--diarito-border); }
-.diarito-accordion summary { display: flex; align-items: center; justify-content: space-between; gap: var(--diarito-space-3); padding: var(--diarito-space-4) 0; font-weight: var(--diarito-weight-semibold); list-style: none; }
+.diarito-accordion summary { display: flex; align-items: center; justify-content: space-between; gap: var(--diarito-space-3); padding: var(--diarito-space-4) 0; font-weight: var(--diarito-weight-medium); list-style: none; }
 .diarito-accordion summary::-webkit-details-marker { display: none; }
-.diarito-accordion summary::after { content: '+'; color: var(--diarito-olive); font-size: 1.2rem; }
+.diarito-accordion summary::after { content: '+'; color: var(--diarito-gray-600); font-size: 1.25rem; }
 .diarito-accordion details[open] summary::after { content: '-'; }
 .diarito-accordion__body { padding: 0 0 var(--diarito-space-4); }
-.diarito-accordion__body p:last-child { margin-bottom: 0; }
 
-/* ========================================================================== 
-   Dropdown, tooltip, modal
-   ========================================================================== */
+/* Dropdown */
 .diarito-dropdown { position: relative; display: inline-block; }
-.diarito-dropdown__menu { position: absolute; top: calc(100% + 0.4rem); right: 0; z-index: 60; min-width: 12rem; padding: var(--diarito-space-2); border: var(--diarito-border); border-radius: var(--diarito-radius-md); background: var(--diarito-white); box-shadow: var(--diarito-shadow-md); }
+.diarito-dropdown__menu { position: absolute; top: calc(100% + .45rem); right: 0; z-index: 60; min-width: 12rem; padding: .4rem; border: var(--diarito-border-strong); border-radius: var(--diarito-radius-sm); background: var(--diarito-white); box-shadow: var(--diarito-shadow-sm); }
 .diarito-dropdown__menu[hidden] { display: none; }
-.diarito-dropdown__item { width: 100%; display: flex; align-items: center; gap: var(--diarito-space-2); padding: 0.6rem 0.7rem; border: 0; border-radius: var(--diarito-radius-sm); color: var(--diarito-ink); background: transparent; font-size: var(--diarito-text-sm); text-align: left; text-decoration: none; }
+.diarito-dropdown__item { width: 100%; display: flex; align-items: center; gap: var(--diarito-space-2); padding: .65rem .7rem; border: 0; border-radius: .55rem; color: var(--diarito-black); background: transparent; font-size: var(--diarito-text-sm); text-align: left; }
 .diarito-dropdown__item:hover { background: var(--diarito-gray-100); }
 
+/* Tooltip */
 .diarito-tooltip { position: relative; }
-.diarito-tooltip::after { content: attr(data-tooltip); position: absolute; left: 50%; bottom: calc(100% + 0.45rem); z-index: 80; transform: translate(-50%, 0.2rem); padding: 0.35rem 0.5rem; border-radius: var(--diarito-radius-sm); color: var(--diarito-white); background: var(--diarito-ink); font-size: var(--diarito-text-xs); font-weight: var(--diarito-weight-medium); white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity var(--diarito-transition-fast), transform var(--diarito-transition-fast); }
-.diarito-tooltip:hover::after,
-.diarito-tooltip:focus-visible::after { opacity: 1; transform: translate(-50%, 0); }
+.diarito-tooltip::after { content: attr(data-tooltip); position: absolute; left: 50%; bottom: calc(100% + .45rem); z-index: 80; transform: translate(-50%, .2rem); padding: .35rem .5rem; border-radius: .45rem; color: var(--diarito-white); background: var(--diarito-black); font-size: var(--diarito-text-xs); opacity: 0; pointer-events: none; white-space: nowrap; transition: opacity var(--diarito-transition-fast), transform var(--diarito-transition-fast); }
+.diarito-tooltip:hover::after, .diarito-tooltip:focus-visible::after { opacity: 1; transform: translate(-50%, 0); }
 
+/* Modal */
 .diarito-modal { width: min(calc(100% - 2rem), 34rem); padding: 0; border: 0; border-radius: var(--diarito-radius-lg); color: var(--diarito-ink); background: var(--diarito-white); box-shadow: var(--diarito-shadow-md); }
-.diarito-modal::backdrop { background: color-mix(in srgb, var(--diarito-ink) 36%, transparent); }
-.diarito-modal__header,
-.diarito-modal__body,
-.diarito-modal__footer { padding: var(--diarito-space-5); }
+.diarito-modal::backdrop { background: rgba(17,17,17,.42); }
+.diarito-modal__header, .diarito-modal__body, .diarito-modal__footer { padding: var(--diarito-space-5); }
 .diarito-modal__header { display: flex; align-items: center; justify-content: space-between; gap: var(--diarito-space-3); border-bottom: var(--diarito-border); }
-.diarito-modal__header h3 { margin: 0; }
-.diarito-modal__body p:last-child { margin-bottom: 0; }
 .diarito-modal__footer { display: flex; justify-content: flex-end; gap: var(--diarito-space-2); border-top: var(--diarito-border); }
+
+/* Empty */
+.diarito-empty { display: grid; justify-items: center; gap: var(--diarito-space-3); padding: var(--diarito-space-9); text-align: center; }
+.diarito-empty__icon { width: 3rem; height: 3rem; display: grid; place-items: center; border-radius: var(--diarito-radius-sm); color: var(--diarito-black); background: var(--diarito-lime); }
+.diarito-empty p { max-width: 28rem; margin-bottom: 0; }

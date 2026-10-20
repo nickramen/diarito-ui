@@ -1,30 +1,32 @@
-# Diarito UI Library 1.3.1
+# Diarito UI Library 2.0.0
 
-Diarito's reusable HTML, CSS and native JavaScript component system.
+Diarito's reusable HTML, CSS and native JavaScript design system.
 
-This phase deliberately does **not** use React. The goal is to lock the visual contract first so a future React implementation can map stable HTML/CSS components to reusable React components without visual drift.
+Version 2.0.0 is a full visual reset. It keeps the existing Diarito fonts and the reusable architecture, but rebuilds the component styling from scratch around a quieter neutral-first interface.
 
-## 1.3.1 brand-role refinement
+## Visual direction
 
-- Lime `#F1FF9C` is now the **primary** brand and interaction color.
-- Purple `#CFA8FF` is now the **accent** color.
-- Olive `#7E9026` remains the stronger supporting tone.
-- Generic components now prefer semantic role tokens instead of hard-coding raw brand colors.
+- White page canvas.
+- Light gray large panels for grouping and feature areas.
+- White nested UI surfaces.
+- Black / near-black for primary actions and strongest hierarchy.
+- Lime `#F1FF9C` as the main Diarito brand color.
+- Purple `#CFA8FF` as a controlled accent color.
+- Olive `#7E9026` as strong supporting brand tone when needed.
+- Thin gray borders, generous radius, restrained shadows.
+- Semantic red / yellow / green / blue reserved for state communication only.
 
-## 1.3.0 feed-first direction
+The reference screenshots were used as visual inspiration for spacing, neutral hierarchy, large rounded feature panels and nested white UI, not as a pixel-for-pixel copy of another product.
 
-- The canonical library no longer uses a permanent documentation sidebar.
-- Navigation is a small sticky top row and the entire library scrolls as one centered reading column.
-- `patterns.css` now includes a reusable `diarito-feed` family for composer, feed items, actions, attachments, feed filters and collection previews.
-- `index.html` starts with a fake Diarito feed so shared components can be evaluated in realistic product context.
-- The visual rhythm is inspired by the simplicity of modern social reading feeds, while keeping Diarito's own tokens and product patterns.
-- The 1.2.0 component contract remains unchanged: screens compose shared pieces and do not redefine them.
+## Kept from previous Diarito versions
 
-## Core rule
-
-Screens compose the system; screens do not redefine it.
-
-A screen may position a shared button inside a toolbar. It should not give that button a new height, radius, color, border or hover treatment. If a new visual variant is genuinely needed, it is added to the shared component library first.
+- Roboto + Noto Sans KR for UI/body.
+- Englebert + Poor Story for display accents.
+- Flaticon UIcons Regular Rounded.
+- HTML + CSS first.
+- Small framework-free JavaScript for generic component interactions only.
+- `section` / `container` page composition.
+- token -> base -> layout -> components -> patterns -> utilities architecture.
 
 ## Structure
 
@@ -49,28 +51,15 @@ assets/
     library-docs.js
 ```
 
-## CSS layers
+## Canonical stylesheet
 
-- `tokens.css` - brand, states, neutrals, typography, spacing, radius, border, shadows, motion and layout values.
-- `base.css` - reset, typography defaults, focus, selection, display type and icon baseline.
-- `layout.css` - `diarito-section`, `diarito-container`, grid, stack, cluster, split and surface primitives.
-- `components.css` - buttons, fields, choices, switches, labels, alerts, empty states, cards, lists, tabs, accordion, dropdown, tooltip and modal.
-- `patterns.css` - toolbar, topbar, sidebar item, detail panel and Diarito-specific note/collection patterns.
-- `utilities.css` - intentionally small helper set.
-- `diarito-system.css` - canonical import entrypoint.
-- `docs-library.css` - documentation UI only. Never required by product screens.
+Product screens should load:
 
-## JavaScript
+```html
+<link rel="stylesheet" href="assets/css/diarito-system.css">
+```
 
-`assets/js/diarito.js` contains generic behavior only:
-
-- dropdown open/close;
-- tabs;
-- native dialog modal open/close;
-- dismissible feedback;
-- Escape handling.
-
-It contains no application state, auth, API calls, storage, backend or business logic.
+`docs-library.css` is only for the component-library showcase.
 
 ## Layout contract
 
@@ -84,19 +73,16 @@ Use sections and containers consistently:
 </section>
 ```
 
-Available section modifiers:
+Useful variants:
 
 ```text
 diarito-section--compact
 diarito-section--flush
-diarito-section--muted
+diarito-section--soft
+diarito-section--dark
 diarito-section--lime
 diarito-section--purple
-```
 
-Available container modifiers:
-
-```text
 diarito-container--sm
 diarito-container--md
 diarito-container--xl
@@ -106,30 +92,32 @@ diarito-container--fluid
 Composition primitives:
 
 ```text
-diarito-grid
-  --2 / --3 / --4 / --auto
-
-diarito-stack
-  --xs / --sm / --lg / --xl
-
-diarito-cluster
-  --sm / --between
-
+diarito-grid --2 / --3 / --4 / --auto
+diarito-stack --xs / --sm / --lg / --xl
+diarito-cluster --sm / --between
 diarito-split
+diarito-reading
+diarito-feature-grid
 ```
 
-## Component contract
+## Component rule
 
-Components use one base class and explicit modifiers.
+Screens compose the shared system. Screens do not redefine it.
+
+If a shared component already exists, do not recreate its radius, color, height, border or hover behavior in a page stylesheet. Add a deliberate variant to the component library instead.
+
+### Buttons
 
 ```html
 <button class="diarito-button diarito-button--primary">Primary</button>
+<button class="diarito-button diarito-button--brand">Brand</button>
 <button class="diarito-button diarito-button--secondary">Secondary</button>
 <button class="diarito-button diarito-button--ghost">Ghost</button>
-<button class="diarito-button diarito-button--danger">Delete</button>
+<button class="diarito-button diarito-button--accent">Accent</button>
+<button class="diarito-button diarito-button--danger">Danger</button>
 ```
 
-Sizes and shape are shared modifiers:
+Size / shape modifiers:
 
 ```text
 diarito-button--sm
@@ -138,36 +126,30 @@ diarito-button--icon
 diarito-button--block
 ```
 
-The same rule applies to status, alerts and other component families.
+## Generic JavaScript
 
-## Tokens
+`assets/js/diarito.js` only handles reusable interface behavior:
 
-Brand roles:
+- dropdown open/close;
+- tabs;
+- native `<dialog>` modal open/close;
+- dismissible feedback;
+- Escape handling.
 
-- Primary: Lime `#F1FF9C`
-- Accent: Purple `#CFA8FF`
-- Strong support: Olive `#7E9026`
-
-Semantic states:
-
-- Error `#AC5C60`
-- Warning `#8F7135`
-- Success `#4F8064`
-- Info `#53769F`
-
-State colors are reserved for meaning, not decoration.
+It contains no authentication, localStorage, API calls, app data, backend or product business logic.
 
 ## Future React mapping
 
-Do not migrate yet. When screens are visually approved, the mapping should be direct:
+React remains out of scope for this phase. Once real screens are visually approved, the mapping should be direct:
 
 ```text
-.diarito-button        -> <Button />
-.diarito-input         -> <Input />
-.diarito-card          -> <Card />
-.diarito-alert         -> <Alert />
-.diarito-note-card     -> <NoteCard />
+.diarito-button          -> <Button />
+.diarito-input           -> <Input />
+.diarito-card            -> <Card />
+.diarito-alert           -> <Alert />
+.diarito-feed-item       -> <FeedItem />
+.diarito-note-card       -> <NoteCard />
 .diarito-collection-item -> <CollectionItem />
 ```
 
-React should implement the already-approved component contract rather than invent a second visual system.
+React should implement this approved component contract rather than invent a second visual system.
