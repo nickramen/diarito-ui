@@ -1,5 +1,19 @@
 # Changelog
 
+## 2.2.0 - Interaction, feed and governance refinement
+
+- Removed sticky navigation artifacts and hid tab/nav scrollbars without removing scroll behavior.
+- Simplified icon boxes to one canonical style plus a large variant.
+- Extended semantic alert text coloring.
+- Split tabs and accordion demos and added smooth accessible accordion behavior.
+- Fixed dropdown/tooltip overlay clipping and added a shared z-index scale.
+- Matched pricing elevation to the feed mock-window elevation and tightened shadow tokens.
+- Rebuilt the feed as a scrollable interactive demo with more realistic content.
+- Added dark, gray and semantic tag variants.
+- Improved quick-action hierarchy and hover behavior.
+- Restored and modernized the original Diarito governance rules.
+- Rebuilt the footer into three full-width bordered bands.
+
 ## 2.1.0 - Light/dark themes, sharper shape and small default buttons
 
 - Added semantic light and dark theme foundations using `data-theme`.
