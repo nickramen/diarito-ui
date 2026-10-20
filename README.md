@@ -1,8 +1,8 @@
-# Diarito UI Library 2.0.1
+# Diarito UI Library 2.0.2
 
 Diarito's reusable HTML, CSS and native JavaScript design system.
 
-Version 2.0.1 refines the 2.0 neutral-first reset while keeping the existing Diarito fonts and reusable architecture.
+Version 2.0.2 refines the 2.0 neutral-first reset while keeping the existing Diarito fonts and reusable architecture.
 
 ## 2.0.1 refinement
 
@@ -14,9 +14,17 @@ Version 2.0.1 refines the 2.0 neutral-first reset while keeping the existing Dia
 - Cards, tables, form controls and overlays keep borders when they provide real structure.
 - Alerts no longer use a left border.
 
+## 2.0.2 documentation refinement
+
+- The documentation canvas now uses a soft gray page background with white bordered showcase cards.
+- Topbar navigation is simplified; the sticky section strip is the single library navigation.
+- Vertical rhythm is standardized between section intro, showcase cards, and following sections.
+- Footer is rebuilt with brand/project links, social-channel examples, and a compact copyright row.
+- Footer and library chrome remain neutral; brand colors stay documented but are not used decoratively.
+
 ## Visual direction
 
-- White page canvas.
+- Soft gray documentation canvas with white content/showcase surfaces.
 - Light gray large panels for grouping and feature areas.
 - White nested UI surfaces.
 - Black / near-black for primary actions and strongest hierarchy.
