@@ -77,7 +77,7 @@
 .diarito-note-card__body { color: var(--diarito-color-text-secondary); }
 .diarito-note-card__body p { margin: 0; color: inherit; }
 .diarito-note-card__body p + p { margin-top: var(--diarito-space-4); }
-.diarito-note-card__body--ruled {
+.diarito-note-card .diarito-note-card__body--ruled {
   --diarito-note-line-height: 1.9rem;
   --diarito-note-line-color: color-mix(in srgb, var(--diarito-color-text-subtle) 46%, transparent);
   line-height: var(--diarito-note-line-height);
