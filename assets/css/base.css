@@ -50,7 +50,7 @@ hr { margin: var(--diarito-space-7) 0; border: 0; border-top: var(--diarito-bord
   box-shadow: var(--diarito-focus-ring);
 }
 
-::selection { background: var(--diarito-purple); color: var(--diarito-ink); }
+::selection { background: var(--diarito-color-accent); color: var(--diarito-ink); }
 
 .diarito-display {
   font-family: var(--diarito-font-display);
