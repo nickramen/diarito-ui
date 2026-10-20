@@ -50,4 +50,38 @@
     });
   });
 
+
+  document.querySelectorAll('[data-demo-table]').forEach((root) => {
+    const search = root.querySelector('[data-demo-table-search]');
+    const status = root.querySelector('[data-demo-table-status]');
+    const role = root.querySelector('[data-demo-table-role]');
+    const rows = [...root.querySelectorAll('[data-demo-table-row]')];
+    const count = root.querySelector('[data-demo-table-count]');
+    const empty = root.querySelector('[data-demo-table-empty]');
+
+    const applyFilters = () => {
+      const query = (search?.value || '').trim().toLowerCase();
+      const statusValue = status?.value || '';
+      const roleValue = role?.value || '';
+      let visible = 0;
+
+      rows.forEach((row) => {
+        const matchesQuery = !query || row.textContent.toLowerCase().includes(query);
+        const matchesStatus = !statusValue || row.dataset.status === statusValue;
+        const matchesRole = !roleValue || row.dataset.role === roleValue;
+        const show = matchesQuery && matchesStatus && matchesRole;
+        row.hidden = !show;
+        if (show) visible += 1;
+      });
+
+      if (count) count.textContent = String(visible);
+      if (empty) empty.hidden = visible !== 0;
+    };
+
+    search?.addEventListener('input', applyFilters);
+    status?.addEventListener('change', applyFilters);
+    role?.addEventListener('change', applyFilters);
+    applyFilters();
+  });
+
 })();
