@@ -41,12 +41,37 @@
   });
   updateThemeControls();
 
+  const dropdowns = new Map();
+
+  const positionDropdown = (entry) => {
+    if (!entry.portal || entry.menu.hidden) return;
+    const rect = entry.trigger.getBoundingClientRect();
+    const gap = 7;
+    const viewportGap = 8;
+    entry.menu.style.position = 'fixed';
+    entry.menu.style.top = `${rect.bottom + gap}px`;
+    entry.menu.style.right = 'auto';
+    const menuWidth = entry.menu.offsetWidth;
+    const left = Math.min(
+      window.innerWidth - menuWidth - viewportGap,
+      Math.max(viewportGap, rect.right - menuWidth)
+    );
+    entry.menu.style.left = `${left}px`;
+  };
+
+  const closeDropdown = (root) => {
+    const entry = dropdowns.get(root);
+    if (!entry) return;
+    root.classList.remove('is-open');
+    entry.trigger.setAttribute('aria-expanded', 'false');
+    entry.menu.setAttribute('hidden', '');
+    if (entry.portal && entry.menu.parentElement !== root) root.append(entry.menu);
+    entry.menu.removeAttribute('style');
+  };
+
   const closeDropdowns = (except = null) => {
-    document.querySelectorAll('[data-diarito-dropdown].is-open').forEach((root) => {
-      if (root === except) return;
-      root.classList.remove('is-open');
-      root.querySelector('[data-diarito-dropdown-menu]')?.setAttribute('hidden', '');
-      root.querySelector('[data-diarito-dropdown-trigger]')?.setAttribute('aria-expanded', 'false');
+    dropdowns.forEach((entry, root) => {
+      if (root !== except && root.classList.contains('is-open')) closeDropdown(root);
     });
   };
 
@@ -54,16 +79,34 @@
     const trigger = root.querySelector('[data-diarito-dropdown-trigger]');
     const menu = root.querySelector('[data-diarito-dropdown-menu]');
     if (!trigger || !menu) return;
+    const entry = { root, trigger, menu, portal: root.hasAttribute('data-diarito-dropdown-portal') };
+    dropdowns.set(root, entry);
+
     trigger.addEventListener('click', (event) => {
       event.stopPropagation();
       const willOpen = !root.classList.contains('is-open');
       closeDropdowns(root);
-      root.classList.toggle('is-open', willOpen);
-      trigger.setAttribute('aria-expanded', String(willOpen));
-      menu.toggleAttribute('hidden', !willOpen);
+      if (!willOpen) {
+        closeDropdown(root);
+        return;
+      }
+
+      root.classList.add('is-open');
+      trigger.setAttribute('aria-expanded', 'true');
+      if (entry.portal) document.body.append(menu);
+      menu.removeAttribute('hidden');
+      positionDropdown(entry);
     });
   });
 
+  const repositionOpenDropdowns = () => {
+    dropdowns.forEach((entry, root) => {
+      if (root.classList.contains('is-open')) positionDropdown(entry);
+    });
+  };
+
+  window.addEventListener('resize', repositionOpenDropdowns);
+  document.addEventListener('scroll', repositionOpenDropdowns, true);
   document.addEventListener('click', () => closeDropdowns());
 
   document.querySelectorAll('[data-diarito-tabs]').forEach((root) => {
