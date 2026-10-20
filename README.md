@@ -1,8 +1,17 @@
-# Diarito UI Library 1.2.0
+# Diarito UI Library 1.3.0
 
 Diarito's reusable HTML, CSS and native JavaScript component system.
 
 This phase deliberately does **not** use React. The goal is to lock the visual contract first so a future React implementation can map stable HTML/CSS components to reusable React components without visual drift.
+
+## 1.3.0 feed-first direction
+
+- The canonical library no longer uses a permanent documentation sidebar.
+- Navigation is a small sticky top row and the entire library scrolls as one centered reading column.
+- `patterns.css` now includes a reusable `diarito-feed` family for composer, feed items, actions, attachments, feed filters and collection previews.
+- `index.html` starts with a fake Diarito feed so shared components can be evaluated in realistic product context.
+- The visual rhythm is inspired by the simplicity of modern social reading feeds, while keeping Diarito's own tokens and product patterns.
+- The 1.2.0 component contract remains unchanged: screens compose shared pieces and do not redefine them.
 
 ## Core rule
 
