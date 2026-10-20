@@ -7,13 +7,16 @@
 .diarito-section--purple { background: var(--diarito-color-surface-soft); }
 
 .diarito-container {
-  width: min(calc(100% - (var(--diarito-gutter) * 2)), var(--diarito-container-lg));
+  --diarito-container-width: var(--diarito-container-lg);
+  width: 100%;
+  max-width: calc(var(--diarito-container-width) + (var(--diarito-gutter) * 2));
   margin-inline: auto;
+  padding-inline: var(--diarito-gutter);
 }
-.diarito-container--sm { max-width: var(--diarito-container-sm); }
-.diarito-container--md { max-width: var(--diarito-container-md); }
-.diarito-container--xl { max-width: var(--diarito-container-xl); }
-.diarito-container--fluid { width: calc(100% - (var(--diarito-gutter) * 2)); max-width: none; }
+.diarito-container--sm { --diarito-container-width: var(--diarito-container-sm); }
+.diarito-container--md { --diarito-container-width: var(--diarito-container-md); }
+.diarito-container--xl { --diarito-container-width: var(--diarito-container-xl); }
+.diarito-container--fluid { max-width: none; }
 
 .diarito-stack { display: grid; gap: var(--diarito-space-4); }
 .diarito-stack--xs { gap: var(--diarito-space-2); }
