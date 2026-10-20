@@ -1,8 +1,20 @@
 :root {
-  /* Brand */
-  --diarito-purple: #CFA8FF;
+  /* Diarito brand */
   --diarito-lime: #F1FF9C;
+  --diarito-purple: #CFA8FF;
   --diarito-olive: #7E9026;
+
+  /* Neutral system */
+  --diarito-black: #111111;
+  --diarito-ink: #191919;
+  --diarito-gray-800: #4F4F4F;
+  --diarito-gray-600: #777777;
+  --diarito-gray-400: #BDBDBD;
+  --diarito-gray-300: #DADADA;
+  --diarito-gray-200: #E8E8E8;
+  --diarito-gray-100: #F2F2F2;
+  --diarito-gray-050: #F8F8F8;
+  --diarito-white: #FFFFFF;
 
   /* Semantic states */
   --diarito-error: #AC5C60;
@@ -10,54 +22,49 @@
   --diarito-success: #4F8064;
   --diarito-info: #53769F;
 
-  /* Neutrals */
-  --diarito-white: #FFFFFF;
-  --diarito-ink: #1F211B;
-  --diarito-gray-700: #5D6158;
-  --diarito-gray-300: #D9DDD3;
-  --diarito-gray-100: #F5F6F2;
-
-  /* Semantic brand roles. Raw palette values stay stable; roles can evolve. */
+  /* Semantic roles */
   --diarito-color-primary: var(--diarito-lime);
-  --diarito-color-primary-soft: var(--diarito-lime-soft);
   --diarito-color-primary-strong: var(--diarito-olive);
   --diarito-color-accent: var(--diarito-purple);
-  --diarito-color-accent-soft: var(--diarito-purple-soft);
-  --diarito-color-highlight: var(--diarito-purple); /* compatibility alias */
-  --diarito-color-strong: var(--diarito-olive);
   --diarito-color-text: var(--diarito-ink);
-  --diarito-color-text-muted: var(--diarito-gray-700);
-  --diarito-color-border: var(--diarito-gray-300);
+  --diarito-color-text-muted: var(--diarito-gray-600);
+  --diarito-color-text-subtle: var(--diarito-gray-400);
+  --diarito-color-border: var(--diarito-gray-200);
+  --diarito-color-border-strong: var(--diarito-gray-300);
   --diarito-color-surface: var(--diarito-white);
-  --diarito-color-surface-muted: var(--diarito-gray-100);
+  --diarito-color-surface-soft: var(--diarito-gray-050);
+  --diarito-color-panel: var(--diarito-gray-100);
+  --diarito-color-action: var(--diarito-black);
 
-  /* Derived surfaces. No extra decorative hex values. */
+  /* Derived surfaces */
+  --diarito-lime-soft: color-mix(in srgb, var(--diarito-lime) 28%, var(--diarito-white));
   --diarito-purple-soft: color-mix(in srgb, var(--diarito-purple) 24%, var(--diarito-white));
-  --diarito-lime-soft: color-mix(in srgb, var(--diarito-lime) 34%, var(--diarito-white));
-  --diarito-olive-soft: color-mix(in srgb, var(--diarito-olive) 12%, var(--diarito-white));
-  --diarito-error-soft: color-mix(in srgb, var(--diarito-error) 10%, var(--diarito-white));
-  --diarito-warning-soft: color-mix(in srgb, var(--diarito-warning) 12%, var(--diarito-white));
-  --diarito-success-soft: color-mix(in srgb, var(--diarito-success) 10%, var(--diarito-white));
-  --diarito-info-soft: color-mix(in srgb, var(--diarito-info) 10%, var(--diarito-white));
+  --diarito-error-soft: color-mix(in srgb, var(--diarito-error) 9%, var(--diarito-white));
+  --diarito-warning-soft: color-mix(in srgb, var(--diarito-warning) 10%, var(--diarito-white));
+  --diarito-success-soft: color-mix(in srgb, var(--diarito-success) 9%, var(--diarito-white));
+  --diarito-info-soft: color-mix(in srgb, var(--diarito-info) 9%, var(--diarito-white));
 
-  /* Typography */
+  /* Existing Diarito fonts only */
   --diarito-font-ui: "Roboto", "Noto Sans KR", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --diarito-font-display: "Englebert", "Poor Story", var(--diarito-font-ui);
   --diarito-font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
+  /* Type scale */
   --diarito-text-xs: 0.75rem;
   --diarito-text-sm: 0.875rem;
   --diarito-text-md: 1rem;
   --diarito-text-lg: 1.125rem;
-  --diarito-text-xl: 1.5rem;
-  --diarito-text-2xl: clamp(1.9rem, 4vw, 2.75rem);
+  --diarito-text-xl: 1.375rem;
+  --diarito-text-2xl: 1.75rem;
+  --diarito-text-3xl: clamp(2.15rem, 5vw, 3.75rem);
+  --diarito-text-4xl: clamp(3rem, 8vw, 5.8rem);
 
   --diarito-weight-regular: 400;
   --diarito-weight-medium: 500;
   --diarito-weight-semibold: 600;
   --diarito-weight-bold: 700;
 
-  /* Spacing: 4px base */
+  /* Spacing */
   --diarito-space-1: 0.25rem;
   --diarito-space-2: 0.5rem;
   --diarito-space-3: 0.75rem;
@@ -68,35 +75,38 @@
   --diarito-space-8: 2.5rem;
   --diarito-space-9: 3rem;
   --diarito-space-10: 4rem;
+  --diarito-space-11: 5rem;
+  --diarito-space-12: 6rem;
 
   /* Shape */
-  --diarito-radius-sm: 0.5rem;
-  --diarito-radius-md: 0.75rem;
-  --diarito-radius-lg: 1rem;
-  --diarito-radius-xl: 1.25rem;
+  --diarito-radius-xs: 0.5rem;
+  --diarito-radius-sm: 0.75rem;
+  --diarito-radius-md: 1rem;
+  --diarito-radius-lg: 1.5rem;
+  --diarito-radius-xl: 2rem;
   --diarito-radius-pill: 999px;
 
-  --diarito-border-width: 1px;
-  --diarito-border: var(--diarito-border-width) solid var(--diarito-color-border);
-  --diarito-border-strong: var(--diarito-border-width) solid color-mix(in srgb, var(--diarito-gray-700) 35%, var(--diarito-gray-300));
+  /* Borders and shadows */
+  --diarito-border: 1px solid var(--diarito-color-border);
+  --diarito-border-strong: 1px solid var(--diarito-color-border-strong);
+  --diarito-shadow-xs: 0 1px 2px rgba(17,17,17,.06);
+  --diarito-shadow-sm: 0 8px 24px rgba(17,17,17,.06);
+  --diarito-shadow-md: 0 18px 46px rgba(17,17,17,.10);
 
-  /* Shadows */
-  --diarito-shadow-sm: 0 1px 2px color-mix(in srgb, var(--diarito-ink) 8%, transparent);
-  --diarito-shadow-md: 0 12px 30px color-mix(in srgb, var(--diarito-ink) 10%, transparent);
+  /* Layout */
+  --diarito-container-sm: 44rem;
+  --diarito-container-md: 68rem;
+  --diarito-container-lg: 82rem;
+  --diarito-container-xl: 94rem;
+  --diarito-gutter: clamp(1rem, 3vw, 2.25rem);
+  --diarito-section-space: clamp(3.5rem, 7vw, 7rem);
+  --diarito-control-height: 2.75rem;
+  --diarito-control-height-lg: 3.25rem;
 
   /* Motion */
   --diarito-transition-fast: 140ms ease;
   --diarito-transition: 200ms ease;
 
-  /* Layout */
-  --diarito-container-sm: 42rem;
-  --diarito-container-md: 64rem;
-  --diarito-container-lg: 78rem;
-  --diarito-container-xl: 90rem;
-  --diarito-section-space: clamp(2.75rem, 6vw, 5.5rem);
-  --diarito-gutter: clamp(1rem, 3vw, 2rem);
-  --diarito-control-height: 2.75rem;
-
   /* Focus */
-  --diarito-focus-ring: 0 0 0 3px color-mix(in srgb, var(--diarito-color-accent) 46%, transparent);
+  --diarito-focus-ring: 0 0 0 3px color-mix(in srgb, var(--diarito-purple) 42%, transparent);
 }

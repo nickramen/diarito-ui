@@ -1,11 +1,8 @@
-/* Core page primitives. Screens compose these; they do not redefine them. */
-.diarito-section {
-  padding-block: var(--diarito-section-space);
-}
-
-.diarito-section--compact { padding-block: clamp(1.5rem, 4vw, 3rem); }
+.diarito-section { padding-block: var(--diarito-section-space); }
+.diarito-section--compact { padding-block: clamp(2rem, 4vw, 3.5rem); }
 .diarito-section--flush { padding-block: 0; }
-.diarito-section--muted { background: var(--diarito-gray-100); }
+.diarito-section--soft { background: var(--diarito-color-surface-soft); }
+.diarito-section--dark { color: var(--diarito-white); background: var(--diarito-black); }
 .diarito-section--lime { background: var(--diarito-lime-soft); }
 .diarito-section--purple { background: var(--diarito-purple-soft); }
 
@@ -18,65 +15,59 @@
 .diarito-container--xl { max-width: var(--diarito-container-xl); }
 .diarito-container--fluid { width: calc(100% - (var(--diarito-gutter) * 2)); max-width: none; }
 
-.diarito-section-header {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: var(--diarito-space-5);
-  margin-bottom: var(--diarito-space-6);
-}
-.diarito-section-header__copy { max-width: 46rem; }
-.diarito-section-header h2 { margin-bottom: var(--diarito-space-2); }
-.diarito-section-header p { margin-bottom: 0; }
-.diarito-section-header__actions { display: flex; align-items: center; flex-wrap: wrap; gap: var(--diarito-space-2); }
+.diarito-stack { display: grid; gap: var(--diarito-space-4); }
+.diarito-stack--xs { gap: var(--diarito-space-2); }
+.diarito-stack--sm { gap: var(--diarito-space-3); }
+.diarito-stack--lg { gap: var(--diarito-space-7); }
+.diarito-stack--xl { gap: var(--diarito-space-10); }
+
+.diarito-cluster { display: flex; align-items: center; flex-wrap: wrap; gap: var(--diarito-space-3); }
+.diarito-cluster--sm { gap: var(--diarito-space-2); }
+.diarito-cluster--between { justify-content: space-between; }
 
 .diarito-grid { display: grid; gap: var(--diarito-space-4); }
 .diarito-grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .diarito-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .diarito-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-.diarito-grid--auto { grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); }
+.diarito-grid--auto { grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr)); }
 
-.diarito-stack { display: grid; gap: var(--diarito-space-4); }
-.diarito-stack--xs { gap: var(--diarito-space-1); }
-.diarito-stack--sm { gap: var(--diarito-space-2); }
-.diarito-stack--lg { gap: var(--diarito-space-6); }
-.diarito-stack--xl { gap: var(--diarito-space-8); }
+.diarito-split { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(18rem, .75fr); gap: var(--diarito-space-4); }
+.diarito-reading { width: min(100%, 44rem); margin-inline: auto; }
 
-.diarito-cluster {
+.diarito-feature-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--diarito-space-4); }
+.diarito-feature-grid > * { grid-column: span 6; }
+.diarito-feature-grid > .is-wide { grid-column: span 8; }
+.diarito-feature-grid > .is-narrow { grid-column: span 4; }
+.diarito-feature-grid > .is-full { grid-column: 1 / -1; }
+
+.diarito-section-header {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: var(--diarito-space-3);
+  align-items: end;
+  justify-content: space-between;
+  gap: var(--diarito-space-5);
+  margin-bottom: var(--diarito-space-6);
 }
-.diarito-cluster--sm { gap: var(--diarito-space-2); }
-.diarito-cluster--between { justify-content: space-between; }
-
-.diarito-split {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.38fr);
-  gap: var(--diarito-space-6);
-  align-items: start;
-}
-
-.diarito-surface {
-  border: var(--diarito-border);
-  border-radius: var(--diarito-radius-lg);
-  background: var(--diarito-white);
-}
-.diarito-surface--muted { background: var(--diarito-gray-100); }
-.diarito-surface--purple { background: var(--diarito-purple-soft); }
-.diarito-surface--lime { background: var(--diarito-lime-soft); }
-
-.diarito-divider { height: 1px; background: var(--diarito-color-border); }
+.diarito-section-header__copy { max-width: 44rem; }
+.diarito-section-header__copy > * + * { margin-top: var(--diarito-space-2); }
+.diarito-section-header__actions { flex: 0 0 auto; }
 
 @media (max-width: 64rem) {
   .diarito-grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .diarito-split { grid-template-columns: 1fr; }
+  .diarito-feature-grid > *,
+  .diarito-feature-grid > .is-wide,
+  .diarito-feature-grid > .is-narrow { grid-column: span 6; }
 }
 
 @media (max-width: 48rem) {
-  .diarito-section-header { align-items: flex-start; flex-direction: column; }
   .diarito-grid--2,
   .diarito-grid--3,
-  .diarito-grid--4 { grid-template-columns: 1fr; }
+  .diarito-grid--4,
+  .diarito-split { grid-template-columns: 1fr; }
+  .diarito-feature-grid { grid-template-columns: 1fr; }
+  .diarito-feature-grid > *,
+  .diarito-feature-grid > .is-wide,
+  .diarito-feature-grid > .is-narrow,
+  .diarito-feature-grid > .is-full { grid-column: 1; }
+  .diarito-section-header { align-items: flex-start; flex-direction: column; }
+  .diarito-section-header__actions { width: 100%; }
 }
