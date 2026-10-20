@@ -1,8 +1,24 @@
-# Diarito UI Library 2.1.0
+# Diarito UI Library 2.2.0
 
 Diarito's reusable HTML, CSS and native JavaScript design system.
 
-Version 2.1.0 adds semantic light/dark theme support and sharpens the component contract while keeping the existing Diarito fonts and reusable architecture.
+Version 2.2.0 refines navigation, overlays, feed, tags, accordion, governance and footer structure while preserving the theme-ready component contract.
+
+
+## 2.2.0 interaction and governance refinement
+
+- Removed the stray sticky topbar/nav line and hid native scrollbars from horizontal tab/navigation rows.
+- Simplified icon boxes to one canonical visual style with an optional large size.
+- Alert titles and body copy now share the semantic state text role.
+- Split tabs and accordion into separate component demos.
+- Rebuilt accordion behavior with accessible buttons and smooth reduced-motion-aware transitions.
+- Fixed dropdown/tooltip clipping with controlled overlay layers and opt-in card clipping.
+- Pricing now uses the same compact elevation as the feed mock window.
+- Rebuilt the feed as a scrollable, more realistic demo with a visible composer and temporary posting interaction.
+- Added black, gray and semantic tag variants; note tags use the high-contrast dark variant.
+- Reworked quick actions with useful supporting copy and a clear hover hierarchy.
+- Restored and updated the full governance/rules system from the original Diarito library.
+- Rebuilt the footer as three full-width bordered bands.
 
 ## 2.1.0 theme and shape refinement
 
