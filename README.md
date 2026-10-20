@@ -1,14 +1,37 @@
-# Diarito UI Library 2.2.5
+# Diarito UI Library 2.3.0
 
 Diarito's reusable HTML, CSS and native JavaScript design system.
 
-Version 2.2.5 refines the page-shell demo, ruled notes, table row actions, navigation borders and hero grid while keeping the HTML + CSS + native-JS architecture.
+Version 2.3.0 adds the application-ready interaction layer to Diarito while keeping the library HTML + CSS + native JavaScript only.
 
 
 
 
 
 
+
+
+## 2.3.0 application-ready component layer
+
+This release adds 15 reusable component families without introducing React, Bootstrap or another UI framework:
+
+1. Toasts / snackbars.
+2. Skeleton loaders + spinner.
+3. Progress bars.
+4. Breadcrumbs.
+5. Standalone pagination.
+6. Button groups.
+7. Input groups.
+8. Combobox / autocomplete.
+9. File upload / dropzone.
+10. Drawer / offcanvas.
+11. Popover.
+12. Confirmation dialog.
+13. Segmented control.
+14. Activity / timeline.
+15. Advanced table states + bulk selection.
+
+Behavior that is reusable across screens lives in `assets/js/diarito.js`: combobox selection, dropzone state, segmented controls, drawers, popovers, toast creation and bulk-table selection. Demo-only state switching remains in `library-docs.js`.
 
 ## 2.2.5 page shell, row actions and ruled-note refinement
 
@@ -240,11 +263,17 @@ diarito-button--block
 
 `assets/js/diarito.js` only handles reusable interface behavior:
 
-- dropdown open/close;
-- tabs;
+- dropdown open/close, including portaled row-action menus;
+- tabs, accordion and segmented controls;
+- combobox filtering/selection;
+- file dropzone selection state;
 - native `<dialog>` modal open/close;
+- drawer / offcanvas open/close;
+- popover open/close;
+- toast creation/dismissal;
 - dismissible feedback;
-- Escape handling.
+- bulk-table selection;
+- Escape handling for reusable overlays.
 
 It contains no authentication, localStorage, API calls, app data, backend or product business logic.
 
