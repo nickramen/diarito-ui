@@ -1,5 +1,17 @@
 # Changelog
 
+## 2.2.4 - Responsive containers, hero grid and table refinement
+
+- Added a 10px x 10px neutral grid background to the hero only.
+- Reworked the shared container contract to use horizontal padding and a larger responsive gutter.
+- Unified documentation topbar, hero, nav, sections and footer bands on the shared container contract.
+- Added compact theme-aware page scrollbars.
+- Removed internal vertical scrolling from the data table and kept horizontal overflow only.
+- Expanded the data-table demo to 10 records.
+- Compacted the Filter count tag.
+- Switched pagination arrows to double-angle icons.
+- Fixed the oversized mobile toolbar gap.
+
 ## 2.2.3 - Header, table filters and ruled-note refinement
 
 - Restored the bottom border on the sticky top header.
