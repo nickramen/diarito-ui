@@ -134,6 +134,7 @@
   --diarito-z-dropdown: 90;
   --diarito-z-tooltip: 100;
   --diarito-z-overlay: 120;
+  --diarito-z-toast: 140;
 
   /* Motion */
   --diarito-transition-fast: 140ms ease;
