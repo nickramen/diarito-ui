@@ -79,6 +79,36 @@
     }));
   });
 
+
+  document.querySelectorAll('[data-diarito-accordion]').forEach((root) => {
+    const items = [...root.querySelectorAll('.diarito-accordion__item')];
+    items.forEach((item) => {
+      const trigger = item.querySelector('.diarito-accordion__trigger');
+      const panel = item.querySelector('.diarito-accordion__panel');
+      if (!trigger || !panel) return;
+      const sync = (open) => {
+        item.classList.toggle('is-open', open);
+        trigger.setAttribute('aria-expanded', String(open));
+        panel.setAttribute('aria-hidden', String(!open));
+      };
+      sync(item.classList.contains('is-open'));
+      trigger.addEventListener('click', () => {
+        const willOpen = !item.classList.contains('is-open');
+        if (willOpen && root.hasAttribute('data-diarito-accordion-single')) {
+          items.forEach((other) => {
+            if (other === item) return;
+            const otherTrigger = other.querySelector('.diarito-accordion__trigger');
+            const otherPanel = other.querySelector('.diarito-accordion__panel');
+            other.classList.remove('is-open');
+            otherTrigger?.setAttribute('aria-expanded', 'false');
+            otherPanel?.setAttribute('aria-hidden', 'true');
+          });
+        }
+        sync(willOpen);
+      });
+    });
+  });
+
   document.querySelectorAll('[data-diarito-modal-open]').forEach((button) => {
     button.addEventListener('click', () => document.getElementById(button.dataset.diaritoModalOpen)?.showModal?.());
   });
