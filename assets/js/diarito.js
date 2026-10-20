@@ -202,6 +202,8 @@
     const options = [...root.querySelectorAll('[data-diarito-combobox-option]')];
     if (!input || !menu || !options.length) return;
 
+    root.addEventListener('click', (event) => event.stopPropagation());
+
     let activeIndex = -1;
     const visibleOptions = () => options.filter((option) => !option.hidden);
 
@@ -228,6 +230,7 @@
       const value = option.dataset.diaritoComboboxValue || label;
       input.value = label;
       input.dataset.value = value;
+      options.forEach((candidate) => candidate.setAttribute('aria-selected', String(candidate === option)));
       closeCombobox(root);
       input.dispatchEvent(new CustomEvent('diarito:comboboxchange', { bubbles: true, detail: { value, label } }));
     };
