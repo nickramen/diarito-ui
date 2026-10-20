@@ -33,6 +33,27 @@ This release adds 15 reusable component families without introducing React, Boot
 
 Behavior that is reusable across screens lives in `assets/js/diarito.js`: combobox selection, dropzone state, segmented controls, drawers, popovers, toast creation and bulk-table selection. Demo-only state switching remains in `library-docs.js`.
 
+
+Core class contracts:
+
+```text
+diarito-toast / diarito-toast-region
+diarito-spinner / diarito-skeleton
+diarito-progress
+diarito-breadcrumbs
+diarito-pagination
+diarito-button-group
+diarito-input-group
+diarito-combobox
+diarito-dropzone
+diarito-drawer
+diarito-popover
+diarito-confirm
+diarito-segmented
+diarito-timeline
+diarito-data-table__bulkbar / diarito-table-state
+```
+
 ## 2.2.5 page shell, row actions and ruled-note refinement
 
 - Removed the Page shell demo's double horizontal gutter by letting the inner container own the spacing.
