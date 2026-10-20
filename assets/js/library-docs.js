@@ -53,34 +53,70 @@
 
   document.querySelectorAll('[data-demo-table]').forEach((root) => {
     const search = root.querySelector('[data-demo-table-search]');
-    const status = root.querySelector('[data-demo-table-status]');
-    const role = root.querySelector('[data-demo-table-role]');
     const rows = [...root.querySelectorAll('[data-demo-table-row]')];
     const count = root.querySelector('[data-demo-table-count]');
     const empty = root.querySelector('[data-demo-table-empty]');
+    const modal = document.getElementById(root.dataset.demoTableFilterModalId || '');
+    const filterCount = root.querySelector('[data-demo-table-filter-count]');
+    const controls = {
+      status: modal?.querySelector('[data-demo-table-filter-status]'),
+      role: modal?.querySelector('[data-demo-table-filter-role]'),
+      native: modal?.querySelector('[data-demo-table-filter-native]'),
+      learning: modal?.querySelector('[data-demo-table-filter-learning]')
+    };
+    const applied = { status: '', role: '', native: '', learning: '' };
+
+    const syncModal = () => {
+      Object.entries(controls).forEach(([key, control]) => {
+        if (control) control.value = applied[key];
+      });
+    };
+
+    const renderFilterCount = () => {
+      const activeCount = Object.values(applied).filter(Boolean).length;
+      if (!filterCount) return;
+      filterCount.textContent = String(activeCount);
+      filterCount.hidden = activeCount === 0;
+    };
 
     const applyFilters = () => {
       const query = (search?.value || '').trim().toLowerCase();
-      const statusValue = status?.value || '';
-      const roleValue = role?.value || '';
       let visible = 0;
 
       rows.forEach((row) => {
         const matchesQuery = !query || row.textContent.toLowerCase().includes(query);
-        const matchesStatus = !statusValue || row.dataset.status === statusValue;
-        const matchesRole = !roleValue || row.dataset.role === roleValue;
-        const show = matchesQuery && matchesStatus && matchesRole;
+        const matchesStatus = !applied.status || row.dataset.status === applied.status;
+        const matchesRole = !applied.role || row.dataset.role === applied.role;
+        const matchesNative = !applied.native || row.dataset.native === applied.native;
+        const matchesLearning = !applied.learning || row.dataset.learning === applied.learning;
+        const show = matchesQuery && matchesStatus && matchesRole && matchesNative && matchesLearning;
         row.hidden = !show;
         if (show) visible += 1;
       });
 
       if (count) count.textContent = String(visible);
       if (empty) empty.hidden = visible !== 0;
+      renderFilterCount();
     };
 
     search?.addEventListener('input', applyFilters);
-    status?.addEventListener('change', applyFilters);
-    role?.addEventListener('change', applyFilters);
+
+    modal?.querySelector('[data-demo-table-filter-clear]')?.addEventListener('click', () => {
+      Object.values(controls).forEach((control) => {
+        if (control) control.value = '';
+      });
+    });
+
+    modal?.querySelector('[data-demo-table-filter-apply]')?.addEventListener('click', () => {
+      Object.entries(controls).forEach(([key, control]) => {
+        applied[key] = control?.value || '';
+      });
+      applyFilters();
+      modal.close();
+    });
+
+    modal?.addEventListener('close', syncModal);
+    syncModal();
     applyFilters();
   });
 

@@ -66,29 +66,31 @@
 .diarito-feed-attachment { margin-top: var(--diarito-space-3); padding: var(--diarito-space-4); border: var(--diarito-border-strong); border-radius: var(--diarito-radius-md); background: var(--diarito-color-surface-soft); }
 
 /* Diarito product patterns */
-.diarito-note-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: var(--diarito-space-4); align-items: stretch; }
-.diarito-note-card { height: 100%; background: var(--diarito-color-control); }
+.diarito-note-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: var(--diarito-space-4); align-items: start; }
+.diarito-note-card { height: auto; align-self: start; background: var(--diarito-color-control); }
 .diarito-note-card .diarito-card__header,
 .diarito-note-card .diarito-card__body,
 .diarito-note-card .diarito-card__footer { background: transparent; }
 .diarito-note-card__header { display: grid; gap: var(--diarito-space-3); }
 .diarito-note-card__meta { display: flex; align-items: center; justify-content: space-between; gap: var(--diarito-space-3); color: var(--diarito-color-text-muted); font-size: var(--diarito-text-xs); }
 .diarito-note-card__header h3 { margin: 0; font-size: var(--diarito-text-lg); }
-.diarito-note-card__body { min-height: 13.5rem; color: var(--diarito-color-text-secondary); }
+.diarito-note-card__body { color: var(--diarito-color-text-secondary); }
 .diarito-note-card__body p { margin: 0; color: inherit; }
 .diarito-note-card__body p + p { margin-top: var(--diarito-space-4); }
-.diarito-note-card__body--ruled {
+.diarito-note-card .diarito-note-card__body--ruled {
   --diarito-note-line-height: 1.9rem;
+  --diarito-note-line-color: color-mix(in srgb, var(--diarito-color-text-subtle) 46%, transparent);
   line-height: var(--diarito-note-line-height);
   background-color: var(--diarito-color-control);
-  background-image: linear-gradient(
+  background-image: repeating-linear-gradient(
     to bottom,
+    transparent 0,
     transparent calc(var(--diarito-note-line-height) - 1px),
-    var(--diarito-color-border-strong) calc(var(--diarito-note-line-height) - 1px),
-    var(--diarito-color-border-strong) var(--diarito-note-line-height)
+    var(--diarito-note-line-color) calc(var(--diarito-note-line-height) - 1px),
+    var(--diarito-note-line-color) var(--diarito-note-line-height)
   );
+  background-position: 0 calc(var(--diarito-space-5) - .3rem);
   background-size: 100% var(--diarito-note-line-height);
-  background-position: 0 calc(var(--diarito-space-5) - .15rem);
 }
 .diarito-note-card__body--ruled p { line-height: var(--diarito-note-line-height); }
 .diarito-note-card__body--ruled p + p { margin-top: var(--diarito-note-line-height); }
@@ -131,6 +133,8 @@
 .diarito-data-table__toolbar { display: flex; align-items: center; justify-content: space-between; gap: var(--diarito-space-3); flex-wrap: wrap; padding: var(--diarito-space-4); border-bottom: var(--diarito-border); }
 .diarito-data-table__toolbar-main,
 .diarito-data-table__toolbar-actions { display: flex; align-items: center; gap: var(--diarito-space-2); flex-wrap: wrap; }
+.diarito-data-table__toolbar-main { flex: 1 1 18rem; }
+.diarito-data-table__toolbar-actions { margin-left: auto; }
 .diarito-data-table__search { position: relative; min-width: min(19rem, 100%); }
 .diarito-data-table__search i { position: absolute; left: .8rem; top: 50%; transform: translateY(-50%); color: var(--diarito-color-text-muted); pointer-events: none; }
 .diarito-data-table__search .diarito-input { padding-left: 2.25rem; }
