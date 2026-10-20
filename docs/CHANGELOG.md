@@ -1,5 +1,25 @@
 # Changelog
 
+## 2.3.0 - Application-ready component layer
+
+- Added toast/snackbar notifications.
+- Added skeleton loaders and spinner.
+- Added progress bars.
+- Added breadcrumbs.
+- Added standalone pagination.
+- Added button groups.
+- Added input groups.
+- Added combobox/autocomplete.
+- Added file upload/dropzone.
+- Added drawer/offcanvas.
+- Added popover.
+- Added confirmation dialog.
+- Added segmented control.
+- Added activity/timeline pattern.
+- Added advanced table states and bulk row selection.
+- Added reusable native-JavaScript behavior for the interactive components above.
+- Extended governance rules for navigation, forms, overlays, feedback and data-table states.
+
 ## 2.2.5 - Page shell, row actions and ruled-note refinement
 
 - Removed double horizontal padding from the Page shell demo.
