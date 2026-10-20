@@ -17,9 +17,13 @@
   --diarito-gray-300: #D9DDD3;
   --diarito-gray-100: #F5F6F2;
 
-  /* Semantic aliases */
-  --diarito-color-primary: var(--diarito-purple);
-  --diarito-color-highlight: var(--diarito-lime);
+  /* Semantic brand roles. Raw palette values stay stable; roles can evolve. */
+  --diarito-color-primary: var(--diarito-lime);
+  --diarito-color-primary-soft: var(--diarito-lime-soft);
+  --diarito-color-primary-strong: var(--diarito-olive);
+  --diarito-color-accent: var(--diarito-purple);
+  --diarito-color-accent-soft: var(--diarito-purple-soft);
+  --diarito-color-highlight: var(--diarito-purple); /* compatibility alias */
   --diarito-color-strong: var(--diarito-olive);
   --diarito-color-text: var(--diarito-ink);
   --diarito-color-text-muted: var(--diarito-gray-700);
@@ -94,5 +98,5 @@
   --diarito-control-height: 2.75rem;
 
   /* Focus */
-  --diarito-focus-ring: 0 0 0 3px color-mix(in srgb, var(--diarito-purple) 46%, transparent);
+  --diarito-focus-ring: 0 0 0 3px color-mix(in srgb, var(--diarito-color-accent) 46%, transparent);
 }
