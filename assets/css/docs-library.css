@@ -87,10 +87,9 @@
 
 .docs-footer { width: 100%; margin-top: 6rem; color: var(--diarito-color-text-muted); background: var(--diarito-color-surface); font-size: var(--diarito-text-sm); }
 .docs-footer__block { width: 100%; border-top: var(--diarito-border); }
-.docs-footer__block-inner { }
-.docs-footer__block--main .docs-footer__block-inner { padding: 3rem 0; }
-.docs-footer__block--social .docs-footer__block-inner { padding: 2rem 0; }
-.docs-footer__block--bottom .docs-footer__block-inner { padding: 1.5rem 0; }
+.docs-footer__block--main .docs-footer__block-inner { padding-block: 3rem; }
+.docs-footer__block--social .docs-footer__block-inner { padding-block: 2rem; }
+.docs-footer__block--bottom .docs-footer__block-inner { padding-block: 1.5rem; }
 .docs-footer__main { display: grid; grid-template-columns: minmax(16rem,1.35fr) minmax(0,2fr); gap: clamp(2rem,6vw,6rem); align-items: start; }
 .docs-footer__brand { display: grid; gap: var(--diarito-space-4); max-width: 28rem; }
 .docs-footer__brand p { margin: 0; }
