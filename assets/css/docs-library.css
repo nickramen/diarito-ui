@@ -1,6 +1,6 @@
 :root { --docs-content-max: 70rem; }
 .docs-body { background: var(--diarito-color-bg); }
-.docs-topbar { position: sticky; top: 0; z-index: 70; border-bottom: 0; background: color-mix(in srgb, var(--diarito-color-surface) 96%, transparent); backdrop-filter: blur(14px); }
+.docs-topbar { position: sticky; top: 0; z-index: 70; border: 0; outline: 0; background: var(--diarito-color-bg); box-shadow: none; }
 .docs-topbar__inner { width: min(calc(100% - 2rem), var(--docs-content-max)); min-height: 4rem; margin-inline: auto; display: flex; align-items: center; justify-content: space-between; gap: var(--diarito-space-4); }
 .docs-topbar__actions { display: flex; align-items: center; gap: var(--diarito-space-2); }
 
@@ -60,8 +60,11 @@
 .docs-rule-group p { margin-bottom: .55rem; }
 .docs-rule-group ul, .docs-rule-group ol { margin: 0; padding-left: 1.15rem; color: var(--diarito-color-text-secondary); }
 .docs-rule-group li + li { margin-top: .35rem; }
-.docs-demo-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: var(--diarito-space-4); }
+.docs-demo-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: var(--diarito-space-4); align-items: start; }
 .docs-code-note { margin-top: var(--diarito-space-4); padding: .8rem 1rem; border-radius: var(--diarito-radius-sm); color: var(--diarito-color-text-muted); background: var(--diarito-color-surface); font-family: var(--diarito-font-mono); font-size: var(--diarito-text-xs); }
+.docs-radius-sample { padding: var(--diarito-space-4); border: var(--diarito-border-strong); border-radius: var(--diarito-radius-md); background: var(--diarito-color-surface); box-shadow: var(--diarito-shadow-xs); }
+.docs-radius-sample--lg { border-radius: var(--diarito-radius-lg); }
+.docs-radius-sample p { margin: .25rem 0 0; font-size: var(--diarito-text-sm); }
 
 .docs-component-table { overflow: hidden; border: var(--diarito-border-strong); border-radius: var(--diarito-radius-md); background: var(--diarito-color-surface); }
 .docs-component-row { display: grid; grid-template-columns: 12rem minmax(0,1fr); gap: var(--diarito-space-5); align-items: start; padding: var(--diarito-space-5); border-bottom: var(--diarito-border); }
