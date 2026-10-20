@@ -1,5 +1,26 @@
 # Changelog
 
+## 2.4.0 - Diarito product-language layer
+
+- Added Entry / post composer.
+- Added Diary entry / post card.
+- Added shared post action bar.
+- Added Comment + reply thread.
+- Added Visibility selector.
+- Added Mood / check-in selector.
+- Added Attachment preview / media group.
+- Added Entry metadata row.
+- Added Day / date divider.
+- Added Daily writing prompt card.
+- Added Draft / autosave indicator.
+- Added Notification item.
+- Added Member mini profile.
+- Added Language practice block.
+- Added Writing streak / calendar heatmap.
+- Unified entry-action styling with the existing feed-action contract.
+- Added generic pressed/toggle behavior for reusable product actions.
+- Extended governance rules for Diarito-specific product composition.
+
 ## 2.3.0 - Application-ready component layer
 
 - Added toast/snackbar notifications.

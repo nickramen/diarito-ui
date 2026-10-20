@@ -1,8 +1,8 @@
-# Diarito UI Library 2.3.0
+# Diarito UI Library 2.4.0
 
 Diarito's reusable HTML, CSS and native JavaScript design system.
 
-Version 2.3.0 adds the application-ready interaction layer to Diarito while keeping the library HTML + CSS + native JavaScript only.
+Version 2.4.0 adds the Diarito-specific writing, publishing, diary and community pattern layer while keeping the library HTML + CSS + native JavaScript only.
 
 
 
@@ -10,6 +10,49 @@ Version 2.3.0 adds the application-ready interaction layer to Diarito while keep
 
 
 
+
+
+## 2.4.0 Diarito product-language layer
+
+This release adds 15 product-specific patterns without duplicating the primitive system:
+
+1. Entry / post composer.
+2. Diary entry / post card.
+3. Post action bar.
+4. Comment + reply thread.
+5. Visibility selector.
+6. Mood / check-in selector.
+7. Attachment preview / media group.
+8. Entry metadata row.
+9. Day / date divider.
+10. Daily writing prompt card.
+11. Draft / autosave indicator.
+12. Notification item.
+13. Member mini profile.
+14. Language practice block.
+15. Writing streak / calendar heatmap.
+
+These patterns intentionally compose the existing card, avatar, button, tag, dropdown, segmented-control, spinner, toast and status contracts. The post-action bar also shares its visual contract with the existing feed actions rather than creating a parallel interaction family.
+
+Reusable product-facing class contracts:
+
+```text
+diarito-entry-composer
+diarito-entry-card
+diarito-entry-actions / diarito-entry-action
+diarito-comment-thread / diarito-comment
+diarito-visibility-selector
+diarito-mood-selector / diarito-mood-option
+diarito-media-group / diarito-attachment-row
+diarito-entry-meta
+diarito-date-divider
+diarito-prompt-card
+diarito-save-state
+diarito-notification-item
+diarito-member-mini
+diarito-language-practice
+diarito-streak / diarito-streak-grid
+```
 
 ## 2.3.0 application-ready component layer
 
@@ -308,6 +351,10 @@ React remains out of scope for this phase. Once real screens are visually approv
 .diarito-card            -> <Card />
 .diarito-alert           -> <Alert />
 .diarito-feed-item       -> <FeedItem />
+.diarito-entry-composer  -> <EntryComposer />
+.diarito-entry-card      -> <EntryCard />
+.diarito-entry-actions   -> <EntryActions />
+.diarito-comment         -> <Comment />
 .diarito-note-card       -> <NoteCard />
 .diarito-collection-item -> <CollectionItem />
 ```

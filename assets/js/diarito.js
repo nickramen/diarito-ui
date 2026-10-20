@@ -181,6 +181,18 @@
     }));
   });
 
+  document.querySelectorAll('[data-diarito-toggle]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const active = button.getAttribute('aria-pressed') !== 'true';
+      button.setAttribute('aria-pressed', String(active));
+      button.classList.toggle('is-active', active);
+      button.dispatchEvent(new CustomEvent('diarito:togglechange', {
+        bubbles: true,
+        detail: { active, value: button.dataset.diaritoToggle || null }
+      }));
+    });
+  });
+
   const closeCombobox = (root) => {
     const input = root.querySelector('[data-diarito-combobox-input]');
     const menu = root.querySelector('[data-diarito-combobox-menu]');
