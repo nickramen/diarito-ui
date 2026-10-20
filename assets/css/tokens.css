@@ -129,6 +129,12 @@
   --diarito-control-height-lg: 3.25rem;
   --diarito-control-height: var(--diarito-control-height-md);
 
+  /* Layering */
+  --diarito-z-sticky: 50;
+  --diarito-z-dropdown: 90;
+  --diarito-z-tooltip: 100;
+  --diarito-z-overlay: 120;
+
   /* Motion */
   --diarito-transition-fast: 140ms ease;
   --diarito-transition: 200ms ease;
