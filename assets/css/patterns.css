@@ -13,7 +13,7 @@
 .diarito-sidebar-nav { display: grid; gap: var(--diarito-space-1); }
 .diarito-sidebar-item { min-height: 2.6rem; display: flex; align-items: center; gap: var(--diarito-space-3); padding: 0.55rem 0.7rem; border-radius: var(--diarito-radius-sm); color: var(--diarito-gray-700); text-decoration: none; }
 .diarito-sidebar-item:hover { color: var(--diarito-ink); background: var(--diarito-gray-100); }
-.diarito-sidebar-item.is-active { color: var(--diarito-olive); background: var(--diarito-lime-soft); }
+.diarito-sidebar-item.is-active { color: var(--diarito-color-primary-strong); background: var(--diarito-color-primary-soft); }
 
 .diarito-detail-panel { padding: var(--diarito-space-5); border: var(--diarito-border); border-radius: var(--diarito-radius-lg); background: var(--diarito-white); }
 
@@ -211,7 +211,7 @@
 }
 .diarito-feed-switch button:hover,
 .diarito-feed-switch button.is-active { color: var(--diarito-ink); }
-.diarito-feed-switch button.is-active::after { background: var(--diarito-olive); }
+.diarito-feed-switch button.is-active::after { background: var(--diarito-color-primary-strong); }
 
 /* Explicit alignment keeps feed identity media stable across browsers/renderers. */
 .diarito-feed-item > .diarito-avatar { align-self: start; width: 2.5rem; height: 2.5rem; }
