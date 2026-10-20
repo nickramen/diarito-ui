@@ -135,12 +135,28 @@
 .diarito-data-table__toolbar-actions { display: flex; align-items: center; gap: var(--diarito-space-2); flex-wrap: wrap; }
 .diarito-data-table__toolbar-main { flex: 1 1 18rem; }
 .diarito-data-table__toolbar-actions { margin-left: auto; }
+.diarito-data-table__filter-count {
+  min-height: 0;
+  min-width: 0;
+  padding: .12rem .35rem;
+  font-size: .68rem;
+  line-height: 1.05;
+}
 .diarito-data-table__search { position: relative; min-width: min(19rem, 100%); }
 .diarito-data-table__search i { position: absolute; left: .8rem; top: 50%; transform: translateY(-50%); color: var(--diarito-color-text-muted); pointer-events: none; }
 .diarito-data-table__search .diarito-input { padding-left: 2.25rem; }
-.diarito-data-table__scroller { max-height: 24rem; overflow: auto; scrollbar-gutter: stable; }
+.diarito-data-table__scroller {
+  max-height: none;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-gutter: auto;
+  scrollbar-width: thin;
+}
+.diarito-data-table__scroller::-webkit-scrollbar { height: .35rem; }
+.diarito-data-table__scroller::-webkit-scrollbar-track { background: transparent; }
+.diarito-data-table__scroller::-webkit-scrollbar-thumb { background: var(--diarito-color-border-strong); }
 .diarito-data-table__scroller .diarito-table { min-width: 64rem; }
-.diarito-data-table__scroller .diarito-table thead th { position: sticky; top: 0; z-index: 2; background: var(--diarito-color-surface-soft); }
+.diarito-data-table__scroller .diarito-table thead th { background: var(--diarito-color-surface-soft); }
 .diarito-data-table__identity { display: flex; align-items: center; gap: var(--diarito-space-3); min-width: 13rem; }
 .diarito-data-table__identity-copy { min-width: 0; }
 .diarito-data-table__identity-copy strong,
@@ -158,9 +174,10 @@
 
 @media (max-width: 48rem) {
   .diarito-note-grid { grid-template-columns: 1fr; }
-  .diarito-data-table__toolbar { align-items: stretch; flex-direction: column; }
+  .diarito-data-table__toolbar { align-items: stretch; justify-content: flex-start; flex-direction: column; }
   .diarito-data-table__toolbar-main,
-  .diarito-data-table__toolbar-actions { width: 100%; }
+  .diarito-data-table__toolbar-main { flex: 0 0 auto; }
+  .diarito-data-table__toolbar-actions { width: 100%; margin-left: 0; }
   .diarito-data-table__search { min-width: 100%; flex: 1; }
   .diarito-nav { display: none; }
   .diarito-feed-switch { top: 3.6rem; }

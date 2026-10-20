@@ -1,18 +1,26 @@
 :root { --docs-content-max: 70rem; }
+.docs-container { --diarito-container-width: var(--docs-content-max); }
 .docs-body { background: var(--diarito-color-bg); }
 .docs-topbar { position: sticky; top: 0; z-index: 70; border: 0; border-bottom: var(--diarito-border); outline: 0; background: var(--diarito-color-bg); box-shadow: none; }
-.docs-topbar__inner { width: min(calc(100% - 2rem), var(--docs-content-max)); min-height: 4rem; margin-inline: auto; display: flex; align-items: center; justify-content: space-between; gap: var(--diarito-space-4); }
+.docs-topbar__inner { min-height: 4rem; display: flex; align-items: center; justify-content: space-between; gap: var(--diarito-space-4); }
 .docs-topbar__actions { display: flex; align-items: center; gap: var(--diarito-space-2); }
 
 .docs-main { padding-bottom: 0; }
-.docs-hero { padding: clamp(4rem,10vw,8rem) 0 clamp(3rem,7vw,5rem); }
-.docs-hero__inner { width: min(calc(100% - 2rem), var(--docs-content-max)); margin-inline: auto; }
+.docs-hero {
+  padding-block: clamp(4rem,10vw,8rem) clamp(3rem,7vw,5rem);
+  background-color: var(--diarito-color-bg);
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--diarito-color-border-strong) 42%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--diarito-color-border-strong) 42%, transparent) 1px, transparent 1px);
+  background-size: 10px 10px;
+}
+.docs-hero__inner { position: relative; }
 .docs-hero h1 { max-width: 58rem; font-size: var(--diarito-text-4xl); }
 .docs-hero p { max-width: 44rem; margin-top: var(--diarito-space-5); font-size: var(--diarito-text-lg); }
 .docs-hero__meta { display: flex; flex-wrap: wrap; gap: var(--diarito-space-2); margin-top: var(--diarito-space-5); }
 
 .docs-navstrip { position: sticky; top: 4rem; z-index: 50; border-top: 0; border-bottom: var(--diarito-border); background: color-mix(in srgb, var(--diarito-color-surface) 96%, transparent); backdrop-filter: blur(14px); }
-.docs-navstrip__inner { width: min(calc(100% - 2rem), var(--docs-content-max)); margin-inline: auto; display: flex; overflow-x: auto; overflow-y: hidden; scrollbar-width: none; }
+.docs-navstrip__inner { display: flex; overflow-x: auto; overflow-y: hidden; scrollbar-width: none; }
 .docs-navstrip__inner::-webkit-scrollbar { display: none; }
 .docs-navstrip a { position: relative; flex: 0 0 auto; padding: .85rem 1rem; color: var(--diarito-color-text-muted); font-size: var(--diarito-text-sm); }
 .docs-navstrip a:first-child { padding-left: 0; }
@@ -20,7 +28,7 @@
 .docs-navstrip a:hover, .docs-navstrip a.is-active { color: var(--diarito-color-text-strong); }
 .docs-navstrip a.is-active::after { content: ''; position: absolute; left: 1rem; right: 1rem; bottom: -1px; height: 2px; background: var(--diarito-color-action-bg); }
 
-.docs-section { width: min(calc(100% - 2rem), var(--docs-content-max)); margin: 0 auto; padding-top: 5rem; scroll-margin-top: 8rem; }
+.docs-section { padding-block: 5rem 0; scroll-margin-top: 8rem; }
 .docs-section__intro { width: min(100%, 52rem); margin-bottom: 2rem; }
 .docs-section__intro .docs-kicker { display: block; margin-bottom: .45rem; color: var(--diarito-color-text-muted); font-family: var(--diarito-font-mono); font-size: var(--diarito-text-xs); }
 .docs-section__intro h2 { font-size: clamp(2rem,4vw,3.2rem); }
@@ -79,10 +87,9 @@
 
 .docs-footer { width: 100%; margin-top: 6rem; color: var(--diarito-color-text-muted); background: var(--diarito-color-surface); font-size: var(--diarito-text-sm); }
 .docs-footer__block { width: 100%; border-top: var(--diarito-border); }
-.docs-footer__block-inner { width: min(calc(100% - 2rem), var(--docs-content-max)); margin-inline: auto; }
-.docs-footer__block--main .docs-footer__block-inner { padding: 3rem 0; }
-.docs-footer__block--social .docs-footer__block-inner { padding: 2rem 0; }
-.docs-footer__block--bottom .docs-footer__block-inner { padding: 1.5rem 0; }
+.docs-footer__block--main .docs-footer__block-inner { padding-block: 3rem; }
+.docs-footer__block--social .docs-footer__block-inner { padding-block: 2rem; }
+.docs-footer__block--bottom .docs-footer__block-inner { padding-block: 1.5rem; }
 .docs-footer__main { display: grid; grid-template-columns: minmax(16rem,1.35fr) minmax(0,2fr); gap: clamp(2rem,6vw,6rem); align-items: start; }
 .docs-footer__brand { display: grid; gap: var(--diarito-space-4); max-width: 28rem; }
 .docs-footer__brand p { margin: 0; }

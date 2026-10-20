@@ -3,24 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Diarito UI Library 2.2.3</title>
+  <title>Diarito UI Library 2.2.4</title>
   <meta name="description" content="Diarito HTML, CSS and native JavaScript UI component library.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Englebert&family=Noto+Sans+KR:wght@400;500;600;700&family=Poor+Story&family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
-  <link rel="stylesheet" href="assets/css/diarito-system.css?v=2.2.3">
-  <link rel="stylesheet" href="assets/css/docs-library.css?v=2.2.3">
+  <link rel="stylesheet" href="assets/css/diarito-system.css?v=2.2.4">
+  <link rel="stylesheet" href="assets/css/docs-library.css?v=2.2.4">
 </head>
 <body class="docs-body">
   <header class="docs-topbar">
-    <div class="docs-topbar__inner">
+    <div class="docs-topbar__inner diarito-container docs-container">
       <a class="diarito-brand" href="#overview">
         <span class="diarito-brand__mark">D</span>
         <span>Diarito</span>
       </a>
       <div class="docs-topbar__actions">
-        <span class="diarito-tag">v2.2.3</span>
+        <span class="diarito-tag">v2.2.4</span>
         <button class="diarito-button diarito-button--secondary" type="button" data-diarito-theme-toggle aria-pressed="false" aria-label="Switch to dark theme"><i class="fi fi-rr-moon"></i><span data-diarito-theme-label>Dark</span></button>
         <a class="diarito-button diarito-button--primary" href="#components">View components</a>
       </div>
@@ -28,11 +28,11 @@
   </header>
 
   <main class="docs-main">
-    <section class="docs-hero" id="overview">
-      <div class="docs-hero__inner">
+    <section class="docs-hero diarito-section" id="overview">
+      <div class="docs-hero__inner diarito-container docs-container">
         <span class="diarito-kicker">Diarito UI Library · HTML + CSS + JS</span>
         <h1 class="diarito-display">A quieter system with stronger structure.</h1>
-        <p>Version 2.2.3 adds light and dark theme foundations, sharper radii, smaller default buttons and stronger semantic state labels while keeping the library neutral and reusable.</p>
+        <p>Version 2.2.4 tightens the responsive container contract, adds a 10px hero grid and refines table scrolling and pagination while keeping the library neutral and reusable.</p>
         <div class="docs-hero__meta">
           <span class="diarito-chip"><i class="fi fi-rr-code-simple"></i> HTML + CSS</span>
           <span class="diarito-chip"><i class="fi fi-rr-settings-sliders"></i> Native JS only</span>
@@ -43,7 +43,7 @@
     </section>
 
     <nav class="docs-navstrip" aria-label="Quick navigation">
-      <div class="docs-navstrip__inner">
+      <div class="docs-navstrip__inner diarito-container docs-container">
         <a data-doc-nav class="is-active" href="#foundation">Foundation</a>
         <a data-doc-nav href="#components">Components</a>
         <a data-doc-nav href="#feedback">Feedback</a>
@@ -54,7 +54,7 @@
       </div>
     </nav>
 
-    <section class="docs-section" id="foundation" data-doc-section>
+    <section class="docs-section diarito-section diarito-container docs-container" id="foundation" data-doc-section>
       <div class="docs-section__intro">
         <span class="docs-kicker">01 / Foundation</span>
         <h2>Color, type, spacing and shape.</h2>
@@ -114,7 +114,7 @@
       </div>
     </section>
 
-    <section class="docs-section" id="components" data-doc-section>
+    <section class="docs-section diarito-section diarito-container docs-container" id="components" data-doc-section>
       <div class="docs-section__intro">
         <span class="docs-kicker">02 / Components</span>
         <h2>Reusable controls, not page-specific styling.</h2>
@@ -169,7 +169,7 @@
       </div>
     </section>
 
-    <section class="docs-section" id="feedback" data-doc-section>
+    <section class="docs-section diarito-section diarito-container docs-container" id="feedback" data-doc-section>
       <div class="docs-section__intro">
         <span class="docs-kicker">03 / Feedback & layers</span>
         <h2>Status without turning the page into a traffic light.</h2>
@@ -213,19 +213,19 @@
       <dialog class="diarito-modal" id="demo-modal"><div class="diarito-modal__header"><h3>Modal title</h3><button class="diarito-button diarito-button--ghost diarito-button--icon diarito-button--sm" data-diarito-modal-close aria-label="Close"><i class="fi fi-rr-cross-small"></i></button></div><div class="diarito-modal__body"><p>Modal content uses the same spacing, border and action hierarchy as the rest of Diarito.</p></div><div class="diarito-modal__footer"><button class="diarito-button diarito-button--ghost" data-diarito-modal-close>Cancel</button><button class="diarito-button diarito-button--primary">Confirm</button></div></dialog>
     </section>
 
-    <section class="docs-section" id="data" data-doc-section>
+    <section class="docs-section diarito-section diarito-container docs-container" id="data" data-doc-section>
       <div class="docs-section__intro"><span class="docs-kicker">04 / Structured UI</span><h2>Stats, tables and denser product surfaces.</h2><p>The references use dense information inside clean white frames. Diarito can do the same without becoming an admin dashboard everywhere.</p></div>
       <div class="docs-showcase-grid">
         <article class="docs-showcase is-wide"><div class="docs-showcase__head"><div><h3>Activity stats</h3><p>Compact metrics inside a white frame.</p></div></div><div class="diarito-stat-grid"><div class="diarito-stat"><span>Notes</span><strong>184</strong><small>+12 this month</small></div><div class="diarito-stat"><span>Words</span><strong>31.2K</strong><small>+8.4%</small></div><div class="diarito-stat"><span>Replies</span><strong>428</strong><small>+19</small></div><div class="diarito-stat"><span>Streak</span><strong>12d</strong><small>personal best</small></div></div><div class="diarito-mock-window" style="margin-top:1rem"><div class="diarito-mock-window__body diarito-stats-chart"><svg viewBox="0 0 1000 160" preserveAspectRatio="none" aria-label="Example activity chart"><polyline vector-effect="non-scaling-stroke" fill="none" stroke="var(--diarito-color-text-strong)" stroke-width="3" points="0,135 120,116 240,104 360,95 480,84 600,62 735,32 865,18 1000,16"/><polyline vector-effect="non-scaling-stroke" fill="none" stroke="var(--diarito-color-text-subtle)" stroke-width="2" stroke-dasharray="6 6" points="0,150 145,142 290,132 435,118 580,100 725,86 860,76 1000,62"/></svg></div></div></article>
         <article class="docs-showcase is-full">
-          <div class="docs-showcase__head"><div><h3>Scrollable data table + toolbar</h3><p>A reusable admin-style table surface with search, filters, row actions, sticky headers and horizontal/vertical scrolling.</p></div></div>
+          <div class="docs-showcase__head"><div><h3>Scrollable data table + toolbar</h3><p>A reusable admin-style table surface with search, modal filters, row actions and horizontal overflow for wide column sets.</p></div></div>
           <div class="diarito-data-table" data-demo-table data-demo-table-filter-modal-id="table-filter-modal">
             <div class="diarito-data-table__toolbar">
               <div class="diarito-data-table__toolbar-main">
                 <label class="diarito-data-table__search"><i class="fi fi-rr-search"></i><input class="diarito-input" type="search" placeholder="Search members..." aria-label="Search members" data-demo-table-search></label>
               </div>
               <div class="diarito-data-table__toolbar-actions">
-                <button class="diarito-button diarito-button--secondary" type="button" data-diarito-modal-open="table-filter-modal"><i class="fi fi-rr-settings-sliders"></i> Filter <span class="diarito-tag diarito-tag--dark" data-demo-table-filter-count hidden>0</span></button>
+                <button class="diarito-button diarito-button--secondary" type="button" data-diarito-modal-open="table-filter-modal"><i class="fi fi-rr-settings-sliders"></i> Filter <span class="diarito-tag diarito-tag--dark diarito-data-table__filter-count" data-demo-table-filter-count hidden>0</span></button>
                 <button class="diarito-button diarito-button--secondary" type="button"><i class="fi fi-rr-download"></i> Export</button>
                 <button class="diarito-button diarito-button--primary" type="button"><i class="fi fi-rr-plus"></i> Add member</button>
               </div>
@@ -240,11 +240,15 @@
                   <tr data-demo-table-row data-status="active" data-role="member" data-native="korean" data-learning="english"><td><div class="diarito-data-table__identity"><span class="diarito-avatar diarito-avatar--sm">J</span><div class="diarito-data-table__identity-copy"><strong>Jiho</strong><span>@jiho</span></div></div></td><td>Member</td><td><span class="diarito-status diarito-status--success">Active</span></td><td>Korean</td><td>English</td><td>Oct 12, 2026</td><td><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" aria-label="More actions for Jiho"><i class="fi fi-rr-menu-dots-vertical"></i></button></td></tr>
                   <tr data-demo-table-row data-status="inactive" data-role="member" data-native="spanish" data-learning="english"><td><div class="diarito-data-table__identity"><span class="diarito-avatar diarito-avatar--sm">M</span><div class="diarito-data-table__identity-copy"><strong>Mari</strong><span>@mari</span></div></div></td><td>Member</td><td><span class="diarito-status">Inactive</span></td><td>Spanish</td><td>English</td><td>Oct 09, 2026</td><td><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" aria-label="More actions for Mari"><i class="fi fi-rr-menu-dots-vertical"></i></button></td></tr>
                   <tr data-demo-table-row data-status="active" data-role="member" data-native="english" data-learning="korean"><td><div class="diarito-data-table__identity"><span class="diarito-avatar diarito-avatar--sm">A</span><div class="diarito-data-table__identity-copy"><strong>Alex</strong><span>@alex</span></div></div></td><td>Member</td><td><span class="diarito-status diarito-status--info">Active</span></td><td>English</td><td>Korean</td><td>Oct 05, 2026</td><td><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" aria-label="More actions for Alex"><i class="fi fi-rr-menu-dots-vertical"></i></button></td></tr>
+                  <tr data-demo-table-row data-status="active" data-role="member" data-native="spanish" data-learning="english"><td><div class="diarito-data-table__identity"><span class="diarito-avatar diarito-avatar--sm">H</span><div class="diarito-data-table__identity-copy"><strong>Hana</strong><span>@hana</span></div></div></td><td>Member</td><td><span class="diarito-status diarito-status--success">Active</span></td><td>Spanish</td><td>English</td><td>Oct 03, 2026</td><td><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" aria-label="More actions for Hana"><i class="fi fi-rr-menu-dots-vertical"></i></button></td></tr>
+                  <tr data-demo-table-row data-status="pending" data-role="member" data-native="korean" data-learning="spanish"><td><div class="diarito-data-table__identity"><span class="diarito-avatar diarito-avatar--sm">M</span><div class="diarito-data-table__identity-copy"><strong>Min</strong><span>@min</span></div></div></td><td>Member</td><td><span class="diarito-status diarito-status--warning">Pending</span></td><td>Korean</td><td>Spanish</td><td>Oct 01, 2026</td><td><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" aria-label="More actions for Min"><i class="fi fi-rr-menu-dots-vertical"></i></button></td></tr>
+                  <tr data-demo-table-row data-status="inactive" data-role="member" data-native="spanish" data-learning="korean"><td><div class="diarito-data-table__identity"><span class="diarito-avatar diarito-avatar--sm">L</span><div class="diarito-data-table__identity-copy"><strong>Luis</strong><span>@luis</span></div></div></td><td>Member</td><td><span class="diarito-status">Inactive</span></td><td>Spanish</td><td>Korean</td><td>Sep 28, 2026</td><td><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" aria-label="More actions for Luis"><i class="fi fi-rr-menu-dots-vertical"></i></button></td></tr>
+                  <tr data-demo-table-row data-status="active" data-role="moderator" data-native="english" data-learning="spanish"><td><div class="diarito-data-table__identity"><span class="diarito-avatar diarito-avatar--sm">S</span><div class="diarito-data-table__identity-copy"><strong>Sofia</strong><span>@sofia</span></div></div></td><td>Moderator</td><td><span class="diarito-status diarito-status--success">Active</span></td><td>English</td><td>Spanish</td><td>Sep 24, 2026</td><td><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" aria-label="More actions for Sofia"><i class="fi fi-rr-menu-dots-vertical"></i></button></td></tr>
                 </tbody>
               </table>
             </div>
             <div class="diarito-data-table__empty" data-demo-table-empty hidden>No members match these filters.</div>
-            <div class="diarito-data-table__pagination"><span><strong data-demo-table-count>6</strong> members · showing page 1 of 3</span><div class="diarito-data-table__pagination-actions"><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" aria-label="Previous page"><i class="fi fi-rr-angle-small-left"></i></button><span class="diarito-tag diarito-tag--dark">1</span><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" aria-label="Next page"><i class="fi fi-rr-angle-small-right"></i></button></div></div>
+            <div class="diarito-data-table__pagination"><span><strong data-demo-table-count>10</strong> members · showing page 1 of 3</span><div class="diarito-data-table__pagination-actions"><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" aria-label="Previous page"><i class="fi fi-rr-angle-double-left"></i></button><span class="diarito-tag diarito-tag--dark">1</span><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" aria-label="Next page"><i class="fi fi-rr-angle-double-right"></i></button></div></div>
           </div>
           <dialog class="diarito-modal" id="table-filter-modal" data-demo-table-filter-modal>
             <div class="diarito-modal__header"><div><h3>Filter members</h3><p class="diarito-help">Combine any of these filters.</p></div><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" data-diarito-modal-close aria-label="Close filters"><i class="fi fi-rr-cross-small"></i></button></div>
@@ -264,7 +268,7 @@
       </div>
     </section>
 
-    <section class="docs-section" id="feed" data-doc-section>
+    <section class="docs-section diarito-section diarito-container docs-container" id="feed" data-doc-section>
       <div class="docs-section__intro"><span class="docs-kicker">05 / Product pattern</span><h2>Diarito feed.</h2><p>A realistic scrollable social/editorial pattern: one reading column, visible composer, lightweight metadata and enough content to judge the rhythm properly.</p></div>
       <div class="docs-showcase-grid">
         <article class="docs-showcase is-full">
@@ -288,7 +292,7 @@
       </div>
     </section>
 
-    <section class="docs-section" id="patterns" data-doc-section>
+    <section class="docs-section diarito-section diarito-container docs-container" id="patterns" data-doc-section>
       <div class="docs-section__intro"><span class="docs-kicker">06 / Diarito patterns</span><h2>Notes, collections, rows and page structure.</h2><p>Product-specific patterns sit above generic components, but still obey the same tokens and spacing rules.</p></div>
       <div class="docs-showcase-grid">
         <article class="docs-showcase"><div class="docs-showcase__head"><div><h3>Note cards</h3><p>Both variants use the same card header/body/footer contract. Only the ruled body changes the writing surface.</p></div></div>
@@ -313,7 +317,7 @@
       </div>
     </section>
 
-    <section class="docs-section" id="rules" data-doc-section>
+    <section class="docs-section diarito-section diarito-container docs-container" id="rules" data-doc-section>
       <div class="docs-section__intro"><span class="docs-kicker">07 / Governance</span><h2>Rules that keep Diarito consistent.</h2><p>This consolidates the useful rules from the original Diarito library with the decisions fixed during the 2.x rebuild.</p></div>
       <div class="docs-showcase-grid">
         <article class="docs-showcase is-full">
@@ -331,10 +335,10 @@
             <section class="docs-rule-group"><h4>10 · Forms</h4><ul><li>Inputs, selects and textareas use a semantic surface, neutral 1px border and visible focus state.</li><li>Form controls stay medium-height even though buttons default small.</li><li>Desktop forms may use columns; mobile collapses them when needed.</li><li>Autocomplete/searchable fields keep real IDs separate from visible labels when applicable.</li></ul></section>
             <section class="docs-rule-group"><h4>11 · Navigation, tabs & accordion</h4><ul><li>Tabs have normal and selected states; avoid decorative hover choreography.</li><li>Scrollable tab rows hide their native scrollbar while remaining scrollable.</li><li>Accordions use accessible buttons with <code>aria-expanded</code>, smooth transitions and reduced-motion support.</li><li>Sticky navigation must not create stray borders or lines while scrolling.</li></ul></section>
             <section class="docs-rule-group"><h4>12 · Dropdowns, tooltips & modals</h4><ul><li>Overlay z-index values come from the shared layer scale.</li><li>A higher z-index cannot escape a clipped ancestor; clipping is opt-in on containers that may host overlays.</li><li>Dropdown triggers manage <code>aria-expanded</code>; Escape closes open menus.</li><li>Tooltips supplement labels; they never hide essential information.</li><li>Modals use the browser top layer.</li></ul></section>
-            <section class="docs-rule-group"><h4>13 · Tables, lists & data</h4><ul><li>Tables prioritize readability and do not draw spreadsheet borders around every cell.</li><li>Administrative data tables use a shared toolbar, scroll container and pagination shell instead of page-specific chrome.</li><li>Long content truncates only when the column requires it.</li><li>Wide tables scroll horizontally; long table bodies may also scroll vertically with sticky headers.</li><li>Status in dense data remains compact and semantic.</li></ul></section>
+            <section class="docs-rule-group"><h4>13 · Tables, lists & data</h4><ul><li>Tables prioritize readability and do not draw spreadsheet borders around every cell.</li><li>Administrative data tables use a shared toolbar, scroll container and pagination shell instead of page-specific chrome.</li><li>Long content truncates only when the column requires it.</li><li>Wide tables scroll horizontally inside their own shell. Standard table pages show 10 or 25 records per page and rely on page scrolling rather than an internal vertical scrollbar.</li><li>Status in dense data remains compact and semantic.</li></ul></section>
             <section class="docs-rule-group"><h4>14 · Feedback, loading & empty states</h4><ul><li>Alerts communicate persistent page context; transient results belong to toast-style feedback when that pattern is added.</li><li>Do not turn every result into success green.</li><li>Empty states explain what is missing and offer one useful next action.</li><li>Loading belongs to the component waiting for data rather than blocking the whole page.</li></ul></section>
             <section class="docs-rule-group"><h4>15 · Responsive & accessibility</h4><ul><li>Desktop and mobile preserve the same visual language.</li><li>Grids collapse when appropriate; navigation transforms rather than merely shrinking.</li><li>Visible focus is never removed.</li><li>Tabs, accordions and dropdowns expose their state with ARIA.</li><li>Respect <code>prefers-reduced-motion</code>.</li></ul></section>
-            <section class="docs-rule-group"><h4>16 · Code hygiene & prohibited patterns</h4><ul><li>No Bootstrap or heavy UI framework unless deliberately approved later.</li><li>No decorative gradients in the core system. The ruled-note background is the explicit functional line-pattern exception.</li><li>No reusable inline CSS in product screens.</li><li>No arbitrary page-specific clones of shared components.</li><li>No backend, authentication or product business logic inside the UI library.</li><li>Use Flaticon UIcons consistently for the current icon language.</li></ul></section>
+            <section class="docs-rule-group"><h4>16 · Code hygiene & prohibited patterns</h4><ul><li>No Bootstrap or heavy UI framework unless deliberately approved later.</li><li>No decorative color gradients in the core system. Structural line patterns are allowed for the ruled-note body and the documentation hero grid.</li><li>No reusable inline CSS in product screens.</li><li>No arbitrary page-specific clones of shared components.</li><li>No backend, authentication or product business logic inside the UI library.</li><li>Use Flaticon UIcons consistently for the current icon language.</li></ul></section>
             <section class="docs-rule-group"><h4>17 · React migration contract</h4><ul><li>HTML/CSS remains the visual specification until screens are approved.</li><li>React components map to the approved library rather than inventing a second design system.</li><li>Props represent deliberate variants that already exist in the contract.</li><li>The shared system should prevent the “90% consistent, 10% floating” problem by construction.</li></ul></section>
             <section class="docs-rule-group"><h4>18 · Final review checklist</h4><ol><li>Does it reuse an existing component?</li><li>Does it use semantic tokens rather than raw values?</li><li>Does it align to the correct section/container width?</li><li>Are spacing and radius values from the scale?</li><li>Do semantic states use the correct meaning and accessible text?</li><li>Does it work in light and dark?</li><li>Does it remain usable on mobile and keyboard?</li><li>Would it still make sense outside this one screen?</li></ol></section>
           </div>
@@ -343,16 +347,16 @@
     </section>
 
     <footer class="docs-footer">
-      <div class="docs-footer__block docs-footer__block--main"><div class="docs-footer__block-inner"><div class="docs-footer__main">
-        <div class="docs-footer__brand"><a class="diarito-brand" href="#overview"><span class="diarito-brand__mark">D</span><span>Diarito</span></a><p>A reusable HTML, CSS and native JavaScript design system for a quieter, more consistent Diarito.</p><span class="diarito-tag diarito-tag--gray">UI Library v2.2.3</span></div>
+      <div class="docs-footer__block docs-footer__block--main"><div class="docs-footer__block-inner diarito-container docs-container"><div class="docs-footer__main">
+        <div class="docs-footer__brand"><a class="diarito-brand" href="#overview"><span class="diarito-brand__mark">D</span><span>Diarito</span></a><p>A reusable HTML, CSS and native JavaScript design system for a quieter, more consistent Diarito.</p><span class="diarito-tag diarito-tag--gray">UI Library v2.2.4</span></div>
         <div class="docs-footer__links"><div class="docs-footer__group"><span class="docs-footer__label">Library</span><a href="#foundation">Foundation</a><a href="#components">Components</a><a href="#feedback">Feedback</a><a href="#data">Data</a></div><div class="docs-footer__group"><span class="docs-footer__label">Product patterns</span><a href="#feed">Feed</a><a href="#patterns">Diarito patterns</a><a href="#rules">Rules</a></div><div class="docs-footer__group"><span class="docs-footer__label">Project</span><a href="https://github.com/nickramen/diarito-ui">GitHub</a><a href="README.md">README</a><a href="docs/CHANGELOG.md">Changelog</a></div></div>
       </div></div></div>
-      <div class="docs-footer__block docs-footer__block--social"><div class="docs-footer__block-inner"><span class="docs-footer__label">Diarito around the web</span><div class="docs-footer__social-grid"><a class="docs-footer__social-link" href="#" aria-label="Discord demo link"><i class="fi fi-rr-users-alt"></i><span>Discord</span></a><a class="docs-footer__social-link" href="#" aria-label="X demo link"><i class="fi fi-rr-at"></i><span>X</span></a><a class="docs-footer__social-link" href="#" aria-label="Reddit demo link"><i class="fi fi-rr-comment-alt"></i><span>Reddit</span></a><a class="docs-footer__social-link" href="#" aria-label="TikTok demo link"><i class="fi fi-rr-play-alt"></i><span>TikTok</span></a><a class="docs-footer__social-link" href="#" aria-label="Instagram demo link"><i class="fi fi-rr-camera"></i><span>Instagram</span></a></div></div></div>
-      <div class="docs-footer__block docs-footer__block--bottom"><div class="docs-footer__block-inner"><div class="docs-footer__bottom"><span>&copy; 2026 Diarito. UI library prototype.</span><span>HTML + CSS + native JS</span></div></div></div>
+      <div class="docs-footer__block docs-footer__block--social"><div class="docs-footer__block-inner diarito-container docs-container"><span class="docs-footer__label">Diarito around the web</span><div class="docs-footer__social-grid"><a class="docs-footer__social-link" href="#" aria-label="Discord demo link"><i class="fi fi-rr-users-alt"></i><span>Discord</span></a><a class="docs-footer__social-link" href="#" aria-label="X demo link"><i class="fi fi-rr-at"></i><span>X</span></a><a class="docs-footer__social-link" href="#" aria-label="Reddit demo link"><i class="fi fi-rr-comment-alt"></i><span>Reddit</span></a><a class="docs-footer__social-link" href="#" aria-label="TikTok demo link"><i class="fi fi-rr-play-alt"></i><span>TikTok</span></a><a class="docs-footer__social-link" href="#" aria-label="Instagram demo link"><i class="fi fi-rr-camera"></i><span>Instagram</span></a></div></div></div>
+      <div class="docs-footer__block docs-footer__block--bottom"><div class="docs-footer__block-inner diarito-container docs-container"><div class="docs-footer__bottom"><span>&copy; 2026 Diarito. UI library prototype.</span><span>HTML + CSS + native JS</span></div></div></div>
     </footer>
   </main>
 
-  <script src="assets/js/diarito.js?v=2.2.3"></script>
-  <script src="assets/js/library-docs.js?v=2.2.3"></script>
+  <script src="assets/js/diarito.js?v=2.2.4"></script>
+  <script src="assets/js/library-docs.js?v=2.2.4"></script>
 </body>
 </html>
