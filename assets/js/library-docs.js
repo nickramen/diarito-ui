@@ -9,4 +9,45 @@
     links.forEach((link) => link.classList.toggle('is-active', link.getAttribute('href') === `#${visible.target.id}`));
   }, { rootMargin: '-20% 0px -70% 0px', threshold: [0,.15,.5] });
   sections.forEach((section) => observer.observe(section));
+
+  document.querySelectorAll('[data-demo-feed-tabs]').forEach((root) => {
+    const buttons = [...root.querySelectorAll('button')];
+    buttons.forEach((button) => button.addEventListener('click', () => {
+      buttons.forEach((item) => item.classList.toggle('is-active', item === button));
+    }));
+  });
+
+  document.querySelectorAll('[data-demo-feed-composer]').forEach((composer) => {
+    const input = composer.querySelector('[data-demo-feed-input]');
+    const submit = composer.querySelector('[data-demo-feed-submit]');
+    const feed = composer.closest('[data-demo-feed]');
+    if (!input || !submit || !feed) return;
+    const publish = () => {
+      const value = input.value.trim();
+      if (!value) return;
+      const article = document.createElement('article');
+      article.className = 'diarito-feed-item';
+      article.innerHTML = `
+        <span class="diarito-avatar">N</span>
+        <div class="diarito-feed-item__main">
+          <div class="diarito-feed-item__header"><strong>nickramen</strong><span>· now</span></div>
+          <div class="diarito-feed-item__text"><p></p></div>
+          <div class="diarito-feed-item__tags"><span class="diarito-tag diarito-tag--dark">new post</span></div>
+          <div class="diarito-feed-actions">
+            <button class="diarito-feed-action" type="button"><i class="fi fi-rr-comment"></i> 0</button>
+            <button class="diarito-feed-action" type="button"><i class="fi fi-rr-heart"></i> 0</button>
+            <button class="diarito-feed-action" type="button"><i class="fi fi-rr-bookmark"></i></button>
+          </div>
+        </div>`;
+      article.querySelector('.diarito-feed-item__text p').textContent = value;
+      composer.insertAdjacentElement('afterend', article);
+      input.value = '';
+      input.focus();
+    };
+    submit.addEventListener('click', publish);
+    input.addEventListener('keydown', (event) => {
+      if ((event.ctrlKey || event.metaKey) && event.key === 'Enter') publish();
+    });
+  });
+
 })();
