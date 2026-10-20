@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.2.3 - Header, table filters and ruled-note refinement
+
+- Restored the bottom border on the sticky top header.
+- Replaced inline data-table filters with a Filter modal.
+- Added status, role, native-language and learning-language filter controls.
+- Added active-filter count feedback to the table toolbar.
+- Decoupled note-card heights so each card sizes independently.
+- Removed the forced note-body minimum height.
+- Fixed ruled-note selector specificity so horizontal lines render inside the body only.
+
 ## 2.2.2 - Note cards and advanced data table
 
 - Reworked note cards into a shared card header/body/footer structure.
