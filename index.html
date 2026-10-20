@@ -166,6 +166,80 @@
             <div class="docs-demo-group"><span class="docs-demo-group__label">Icon boxes · one style / optional large</span><div class="docs-demo-row"><span class="diarito-icon-box"><i class="fi fi-rr-document"></i></span><span class="diarito-icon-box"><i class="fi fi-rr-folder"></i></span><span class="diarito-icon-box diarito-icon-box--lg"><i class="fi fi-rr-sparkles"></i></span></div></div>
           </div>
         </article>
+
+        <article class="docs-showcase">
+          <div class="docs-showcase__head"><div><h3>Button group</h3><p>Related actions share one quiet container instead of becoming a row of unrelated buttons.</p></div></div>
+          <div class="docs-demo-stack">
+            <div class="diarito-button-group" role="group" aria-label="Editor formatting">
+              <button class="diarito-button diarito-button--ghost is-active" type="button" aria-pressed="true"><i class="fi fi-rr-bold"></i> Bold</button>
+              <button class="diarito-button diarito-button--ghost" type="button" aria-pressed="false"><i class="fi fi-rr-italic"></i> Italic</button>
+              <button class="diarito-button diarito-button--ghost" type="button" aria-pressed="false"><i class="fi fi-rr-link-alt"></i> Link</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="docs-showcase">
+          <div class="docs-showcase__head"><div><h3>Input group</h3><p>Prefixes, suffixes and related actions share the field border without creating nested controls.</p></div></div>
+          <div class="docs-demo-stack">
+            <label class="diarito-field"><span class="diarito-label">Username</span><span class="diarito-input-group"><span class="diarito-input-group__addon">@</span><input class="diarito-input" value="nickramen" aria-label="Username"></span></label>
+            <label class="diarito-field"><span class="diarito-label">Share link</span><span class="diarito-input-group"><input class="diarito-input" value="diarito.app/n/nickramen" aria-label="Share link"><button class="diarito-button diarito-button--secondary" type="button">Copy</button></span></label>
+          </div>
+        </article>
+
+        <article class="docs-showcase">
+          <div class="docs-showcase__head"><div><h3>Combobox / autocomplete</h3><p>Searchable options for languages, people and collections without replacing the visible label.</p></div></div>
+          <label class="diarito-field"><span class="diarito-label">Learning language</span>
+            <div class="diarito-combobox" data-diarito-combobox>
+              <div class="diarito-combobox__control"><input class="diarito-input" type="text" placeholder="Search languages..." role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="language-combobox-options" autocomplete="off" data-diarito-combobox-input><i class="fi fi-rr-angle-small-down"></i></div>
+              <div class="diarito-combobox__menu" id="language-combobox-options" role="listbox" data-diarito-combobox-menu hidden>
+                <button class="diarito-combobox__option" type="button" role="option" data-diarito-combobox-option data-diarito-combobox-value="ko" data-diarito-combobox-label="Korean"><span>Korean</span><span class="diarito-help">한국어</span></button>
+                <button class="diarito-combobox__option" type="button" role="option" data-diarito-combobox-option data-diarito-combobox-value="es" data-diarito-combobox-label="Spanish"><span>Spanish</span><span class="diarito-help">Español</span></button>
+                <button class="diarito-combobox__option" type="button" role="option" data-diarito-combobox-option data-diarito-combobox-value="en" data-diarito-combobox-label="English"><span>English</span><span class="diarito-help">English</span></button>
+                <button class="diarito-combobox__option" type="button" role="option" data-diarito-combobox-option data-diarito-combobox-value="ja" data-diarito-combobox-label="Japanese"><span>Japanese</span><span class="diarito-help">日本語</span></button>
+              </div>
+            </div>
+          </label>
+        </article>
+
+        <article class="docs-showcase">
+          <div class="docs-showcase__head"><div><h3>File upload / dropzone</h3><p>One reusable surface for attachments, images and future import flows.</p></div></div>
+          <label class="diarito-dropzone" data-diarito-dropzone>
+            <input type="file" multiple>
+            <span class="diarito-dropzone__icon"><i class="fi fi-rr-cloud-upload-alt"></i></span>
+            <strong>Drop files here or browse</strong>
+            <span class="diarito-dropzone__meta">Images, PDFs or documents · demo only</span>
+            <span class="diarito-tag diarito-tag--gray" data-diarito-dropzone-output>No file selected</span>
+          </label>
+        </article>
+
+        <article class="docs-showcase">
+          <div class="docs-showcase__head"><div><h3>Breadcrumbs</h3><p>Location hierarchy for collections, settings and deeper management views.</p></div></div>
+          <nav class="diarito-breadcrumbs" aria-label="Breadcrumb">
+            <ol><li><a href="#overview">Diarito</a></li><li><a href="#patterns">Collections</a></li><li><a href="#patterns">Language practice</a></li><li aria-current="page">Meeting notes</li></ol>
+          </nav>
+        </article>
+
+        <article class="docs-showcase">
+          <div class="docs-showcase__head"><div><h3>Standalone pagination</h3><p>Reusable outside tables for feeds, search results and long collection views.</p></div></div>
+          <nav class="diarito-pagination" aria-label="Example pagination">
+            <button class="diarito-pagination__item" type="button" aria-label="Previous page" disabled><i class="fi fi-rr-angle-double-left"></i></button>
+            <button class="diarito-pagination__item is-active" type="button" aria-current="page">1</button>
+            <button class="diarito-pagination__item" type="button">2</button>
+            <button class="diarito-pagination__item" type="button">3</button>
+            <span class="diarito-pagination__item" aria-hidden="true">…</span>
+            <button class="diarito-pagination__item" type="button">8</button>
+            <button class="diarito-pagination__item" type="button" aria-label="Next page"><i class="fi fi-rr-angle-double-right"></i></button>
+          </nav>
+        </article>
+
+        <article class="docs-showcase">
+          <div class="docs-showcase__head"><div><h3>Segmented control</h3><p>For compact mode choices such as feed scope or view type. It is not a substitute for page-level tabs.</p></div></div>
+          <div class="diarito-segmented" data-diarito-segmented aria-label="Feed scope">
+            <button class="diarito-segmented__item is-active" type="button" aria-pressed="true" data-diarito-segment="all">All</button>
+            <button class="diarito-segmented__item" type="button" aria-pressed="false" data-diarito-segment="notes">Notes</button>
+            <button class="diarito-segmented__item" type="button" aria-pressed="false" data-diarito-segment="collections">Collections</button>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -209,6 +283,62 @@
             <div class="diarito-dropdown" data-diarito-dropdown><button class="diarito-button diarito-button--secondary" data-diarito-dropdown-trigger aria-expanded="false">Actions</button><div class="diarito-dropdown__menu" data-diarito-dropdown-menu hidden><button class="diarito-dropdown__item">Rename</button><button class="diarito-dropdown__item">Duplicate</button><button class="diarito-dropdown__item">Archive</button></div></div>
           </div>
         </article>
+
+        <article class="docs-showcase">
+          <div class="docs-showcase__head"><div><h3>Toasts / snackbars</h3><p>Transient feedback belongs outside the page flow and disappears without shifting content.</p></div></div>
+          <div class="docs-demo-row">
+            <button class="diarito-button diarito-button--secondary" type="button" data-diarito-toast-trigger data-diarito-toast-state="success" data-diarito-toast-title="Note saved" data-diarito-toast-message="Your changes are up to date.">Success toast</button>
+            <button class="diarito-button diarito-button--secondary" type="button" data-diarito-toast-trigger data-diarito-toast-state="info" data-diarito-toast-title="Link copied" data-diarito-toast-message="The share link is ready to paste.">Info toast</button>
+            <button class="diarito-button diarito-button--secondary" type="button" data-diarito-toast-trigger data-diarito-toast-state="error" data-diarito-toast-title="Could not upload" data-diarito-toast-message="Try the attachment again.">Error toast</button>
+          </div>
+        </article>
+
+        <article class="docs-showcase">
+          <div class="docs-showcase__head"><div><h3>Skeletons & spinner</h3><p>Loading stays local to the component that is waiting instead of freezing the entire page.</p></div></div>
+          <div class="docs-demo-grid">
+            <div class="diarito-card diarito-card--flat"><div class="diarito-card__body"><div class="docs-demo-row" style="align-items:flex-start"><span class="diarito-skeleton diarito-skeleton--avatar"></span><div class="docs-demo-stack" style="flex:1"><span class="diarito-skeleton diarito-skeleton--title"></span><span class="diarito-skeleton diarito-skeleton--text"></span><span class="diarito-skeleton diarito-skeleton--text-short"></span></div></div></div></div>
+            <div class="diarito-card diarito-card--flat"><div class="diarito-card__body docs-demo-stack"><div class="docs-demo-row"><span class="diarito-spinner"></span><span>Loading notes…</span></div><button class="diarito-button diarito-button--primary" type="button" disabled><span class="diarito-spinner diarito-spinner--sm"></span> Saving</button></div></div>
+          </div>
+        </article>
+
+        <article class="docs-showcase">
+          <div class="docs-showcase__head"><div><h3>Progress bars</h3><p>Use neutral progress by default; semantic color is reserved for actual state meaning.</p></div></div>
+          <div class="docs-demo-stack">
+            <div class="diarito-progress" role="progressbar" aria-label="Profile completion" aria-valuemin="0" aria-valuemax="100" aria-valuenow="68"><div class="diarito-progress__meta"><strong>Profile completion</strong><span>68%</span></div><div class="diarito-progress__track"><div class="diarito-progress__bar" style="--diarito-progress-value:68%"></div></div></div>
+            <div class="diarito-progress diarito-progress--success" role="progressbar" aria-label="Import progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="92"><div class="diarito-progress__meta"><strong>Import</strong><span>92%</span></div><div class="diarito-progress__track"><div class="diarito-progress__bar" style="--diarito-progress-value:92%"></div></div></div>
+            <div class="diarito-progress diarito-progress--info" role="progressbar" aria-label="Language goal" aria-valuemin="0" aria-valuemax="100" aria-valuenow="41"><div class="diarito-progress__meta"><strong>Language goal</strong><span>41%</span></div><div class="diarito-progress__track"><div class="diarito-progress__bar" style="--diarito-progress-value:41%"></div></div></div>
+          </div>
+        </article>
+
+        <article class="docs-showcase">
+          <div class="docs-showcase__head"><div><h3>Drawer / offcanvas</h3><p>Useful for mobile navigation, contextual details and filters that should not become full pages.</p></div></div>
+          <button class="diarito-button diarito-button--primary" type="button" data-diarito-drawer-open="library-drawer"><i class="fi fi-rr-sidebar"></i> Open drawer</button>
+        </article>
+        <aside class="diarito-drawer" id="library-drawer" data-diarito-drawer aria-hidden="true">
+          <div class="diarito-drawer__backdrop"></div>
+          <div class="diarito-drawer__panel" role="dialog" aria-modal="true" aria-labelledby="library-drawer-title">
+            <div class="diarito-drawer__header"><h3 id="library-drawer-title">Note details</h3><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" data-diarito-drawer-close aria-label="Close drawer"><i class="fi fi-rr-cross-small"></i></button></div>
+            <div class="diarito-drawer__body"><div class="docs-demo-stack"><div><span class="diarito-help">Collection</span><strong>Language practice</strong></div><div><span class="diarito-help">Visibility</span><strong>Private</strong></div><div><span class="diarito-help">Updated</span><strong>Today · 3:12 PM</strong></div></div></div>
+            <div class="diarito-drawer__footer"><button class="diarito-button diarito-button--secondary" type="button" data-diarito-drawer-close>Close</button><button class="diarito-button diarito-button--primary" type="button">Open note</button></div>
+          </div>
+        </aside>
+
+        <article class="docs-showcase">
+          <div class="docs-showcase__head"><div><h3>Popover</h3><p>More useful than a tooltip when the trigger needs a small amount of interactive context.</p></div></div>
+          <div class="diarito-popover" data-diarito-popover>
+            <button class="diarito-button diarito-button--secondary" type="button" data-diarito-popover-trigger aria-expanded="false"><i class="fi fi-rr-eye"></i> Visibility</button>
+            <div class="diarito-popover__panel" data-diarito-popover-panel hidden><strong>Private note</strong><p>Only you can read this note until you change its visibility.</p><div class="docs-demo-row" style="margin-top:.75rem"><span class="diarito-tag diarito-tag--dark">Private</span><button class="diarito-button diarito-button--ghost" type="button">Change</button></div></div>
+          </div>
+        </article>
+
+        <article class="docs-showcase">
+          <div class="docs-showcase__head"><div><h3>Confirmation dialog</h3><p>Destructive actions get one canonical confirmation pattern instead of custom warning modals per screen.</p></div></div>
+          <button class="diarito-button diarito-button--danger" type="button" data-diarito-modal-open="confirm-delete-note"><i class="fi fi-rr-trash"></i> Delete note</button>
+        </article>
+        <dialog class="diarito-modal diarito-confirm" id="confirm-delete-note">
+          <div class="diarito-modal__body diarito-confirm__content"><span class="diarito-confirm__icon"><i class="fi fi-rr-trash"></i></span><div><h3>Delete this note?</h3><p>This removes the note from your collection. This demo does not delete anything.</p></div></div>
+          <div class="diarito-modal__footer"><button class="diarito-button diarito-button--ghost" type="button" data-diarito-modal-close>Cancel</button><button class="diarito-button diarito-button--danger" type="button" data-diarito-modal-close>Delete note</button></div>
+        </dialog>
       </div>
       <dialog class="diarito-modal" id="demo-modal"><div class="diarito-modal__header"><h3>Modal title</h3><button class="diarito-button diarito-button--ghost diarito-button--icon diarito-button--sm" data-diarito-modal-close aria-label="Close"><i class="fi fi-rr-cross-small"></i></button></div><div class="diarito-modal__body"><p>Modal content uses the same spacing, border and action hierarchy as the rest of Diarito.</p></div><div class="diarito-modal__footer"><button class="diarito-button diarito-button--ghost" data-diarito-modal-close>Cancel</button><button class="diarito-button diarito-button--primary">Confirm</button></div></dialog>
     </section>
@@ -265,6 +395,48 @@
         </article>
 
         <article class="docs-showcase is-full"><div class="docs-showcase__head"><div><h3>Plan / choice pattern</h3><p>A split decision surface with bold numbers and a single clear CTA.</p></div></div><div class="diarito-pricing"><div class="diarito-pricing__visual"><span class="diarito-kicker">Monthly writing goal</span><div class="diarito-price" style="margin-top:1rem">20,000</div><p style="margin-top:.8rem">words across notes, comments and practice entries</p><div style="height:9rem;display:flex;align-items:end;gap:1rem;margin-top:2rem"><div style="width:18%;height:38%;background:var(--diarito-color-action-bg);border-radius:.7rem .7rem 0 0"></div><div style="width:18%;height:50%;background:var(--diarito-color-control-hover);border-radius:.7rem .7rem 0 0"></div><div style="width:18%;height:64%;background:var(--diarito-color-control-hover);border-radius:.7rem .7rem 0 0"></div><div style="width:18%;height:78%;background:var(--diarito-color-control-hover);border-radius:.7rem .7rem 0 0"></div><div style="width:18%;height:95%;background:var(--diarito-color-control-hover);border-radius:.7rem .7rem 0 0"></div></div></div><div class="diarito-pricing__summary"><span class="diarito-help">Current plan</span><h2 style="margin-top:.4rem">Personal</h2><p>Everything needed to write, organize, practice and participate.</p><hr><div class="diarito-stack diarito-stack--sm"><span>✓ Notes & collections</span><span>✓ Language practice</span><span>✓ Community feed</span><span>✓ Private entries</span></div><button class="diarito-button diarito-button--primary diarito-button--block" style="margin-top:2rem">Continue <i class="fi fi-rr-arrow-right"></i></button></div></div></article>
+
+        <article class="docs-showcase">
+          <div class="docs-showcase__head"><div><h3>Activity / timeline</h3><p>Chronological activity for note history, moderation and audit-style events.</p></div></div>
+          <div class="diarito-timeline">
+            <div class="diarito-timeline__item"><div class="diarito-timeline__rail"><span class="diarito-timeline__marker"><i class="fi fi-rr-pencil"></i></span></div><div class="diarito-timeline__content"><strong>Note edited</strong><p>Nicole updated the summary and added two language tags.</p><span class="diarito-timeline__meta">Today · 3:12 PM</span></div></div>
+            <div class="diarito-timeline__item"><div class="diarito-timeline__rail"><span class="diarito-timeline__marker"><i class="fi fi-rr-comment"></i></span></div><div class="diarito-timeline__content"><strong>Comment added</strong><p>Yuna replied with a Korean phrasing suggestion.</p><span class="diarito-timeline__meta">Today · 2:41 PM</span></div></div>
+            <div class="diarito-timeline__item"><div class="diarito-timeline__rail"><span class="diarito-timeline__marker"><i class="fi fi-rr-share"></i></span></div><div class="diarito-timeline__content"><strong>Collection shared</strong><p>Language practice became visible to three members.</p><span class="diarito-timeline__meta">Yesterday · 6:20 PM</span></div></div>
+          </div>
+        </article>
+
+        <article class="docs-showcase is-full">
+          <div class="docs-showcase__head"><div><h3>Advanced table states + bulk selection</h3><p>Bulk actions and loading, empty and error states extend the existing data-table contract instead of creating a second table system.</p></div></div>
+          <div class="diarito-data-table" data-diarito-bulk-table>
+            <div class="diarito-data-table__bulkbar" data-diarito-bulkbar hidden>
+              <span class="diarito-data-table__bulkbar-copy"><strong data-diarito-bulk-count>0</strong> selected</span>
+              <div class="diarito-data-table__bulkbar-actions"><button class="diarito-button diarito-button--secondary" type="button">Move</button><button class="diarito-button diarito-button--danger" type="button">Archive</button><button class="diarito-button diarito-button--ghost" type="button" data-diarito-clear-selection>Clear</button></div>
+            </div>
+            <div class="diarito-data-table__scroller">
+              <table class="diarito-table">
+                <thead><tr><th class="diarito-data-table__select-cell"><label class="diarito-choice"><input type="checkbox" data-diarito-select-all aria-label="Select all rows"></label></th><th>Note</th><th>Collection</th><th>Status</th><th>Updated</th></tr></thead>
+                <tbody>
+                  <tr><td class="diarito-data-table__select-cell"><label class="diarito-choice"><input type="checkbox" data-diarito-row-select aria-label="Select Meeting notes"></label></td><td><strong>Meeting notes</strong></td><td>Work</td><td><span class="diarito-status diarito-status--success">Synced</span></td><td>8m ago</td></tr>
+                  <tr><td class="diarito-data-table__select-cell"><label class="diarito-choice"><input type="checkbox" data-diarito-row-select aria-label="Select Useful Korean"></label></td><td><strong>Useful Korean</strong></td><td>Language</td><td><span class="diarito-status diarito-status--info">Shared</span></td><td>1h ago</td></tr>
+                  <tr><td class="diarito-data-table__select-cell"><label class="diarito-choice"><input type="checkbox" data-diarito-row-select aria-label="Select Places to visit"></label></td><td><strong>Places to visit</strong></td><td>Travel</td><td><span class="diarito-status">Private</span></td><td>2d ago</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="docs-demo-stack" style="margin-top:var(--diarito-space-5)" data-demo-table-states>
+            <div class="diarito-segmented" data-diarito-segmented aria-label="Table state preview">
+              <button class="diarito-segmented__item is-active" type="button" aria-pressed="true" data-diarito-segment="loading">Loading</button>
+              <button class="diarito-segmented__item" type="button" aria-pressed="false" data-diarito-segment="empty">Empty</button>
+              <button class="diarito-segmented__item" type="button" aria-pressed="false" data-diarito-segment="error">Error</button>
+            </div>
+            <div class="diarito-card diarito-card--flat" data-demo-table-state-panel="loading">
+              <div class="diarito-table-state"><div class="diarito-table-skeleton"><div class="diarito-table-skeleton__row"><span class="diarito-skeleton"></span><span class="diarito-skeleton"></span><span class="diarito-skeleton"></span><span class="diarito-skeleton"></span></div><div class="diarito-table-skeleton__row"><span class="diarito-skeleton"></span><span class="diarito-skeleton"></span><span class="diarito-skeleton"></span><span class="diarito-skeleton"></span></div><div class="diarito-table-skeleton__row"><span class="diarito-skeleton"></span><span class="diarito-skeleton"></span><span class="diarito-skeleton"></span><span class="diarito-skeleton"></span></div></div></div>
+            </div>
+            <div class="diarito-card diarito-card--flat" data-demo-table-state-panel="empty" hidden><div class="diarito-table-state"><span class="diarito-icon-box"><i class="fi fi-rr-search"></i></span><strong>No matching notes</strong><p>Clear the current filters or try another search.</p><button class="diarito-button diarito-button--secondary" type="button">Clear filters</button></div></div>
+            <div class="diarito-card diarito-card--flat" data-demo-table-state-panel="error" hidden><div class="diarito-table-state diarito-table-state--error"><span class="diarito-icon-box"><i class="fi fi-rr-cross-circle"></i></span><strong>Could not load notes</strong><p>The table keeps its own error state instead of replacing the entire page.</p><button class="diarito-button diarito-button--secondary" type="button">Try again</button></div></div>
+          </div>
+        </article>
       </div>
     </section>
 
