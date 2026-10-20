@@ -1,11 +1,23 @@
-# Diarito UI Library 2.2.2
+# Diarito UI Library 2.2.3
 
 Diarito's reusable HTML, CSS and native JavaScript design system.
 
-Version 2.2.2 refines Diarito note-card structure and adds an advanced reusable data-table pattern while keeping the HTML + CSS + native-JS architecture.
+Version 2.2.3 refines header navigation, table filtering and note-card independence while keeping the HTML + CSS + native-JS architecture.
 
 
 
+
+
+## 2.2.3 header, table filters and ruled-note refinement
+
+- Restored the structural bottom border on the sticky top header/menu.
+- Replaced inline toolbar selects with one Filter button before Export.
+- Filter opens a modal containing status, role, native-language and learning-language filters.
+- Table filter count is surfaced on the Filter action when filters are active.
+- Note cards no longer stretch to the height of their sibling.
+- Removed the forced note-body minimum height so each card sizes to its own content.
+- Fixed ruled-note CSS specificity so horizontal notebook lines render only inside the ruled card body.
+- Kept the ruled line rhythm synchronized with the body line-height.
 
 ## 2.2.2 note cards and advanced data table
 
