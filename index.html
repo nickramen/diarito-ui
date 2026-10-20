@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Diarito UI Library 2.2.5</title>
+  <title>Diarito UI Library 2.3.0</title>
   <meta name="description" content="Diarito HTML, CSS and native JavaScript UI component library.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Englebert&family=Noto+Sans+KR:wght@400;500;600;700&family=Poor+Story&family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
-  <link rel="stylesheet" href="assets/css/diarito-system.css?v=2.2.5">
-  <link rel="stylesheet" href="assets/css/docs-library.css?v=2.2.5">
+  <link rel="stylesheet" href="assets/css/diarito-system.css?v=2.3.0">
+  <link rel="stylesheet" href="assets/css/docs-library.css?v=2.3.0">
 </head>
 <body class="docs-body">
   <header class="docs-topbar">
@@ -20,7 +20,7 @@
         <span>Diarito</span>
       </a>
       <div class="docs-topbar__actions">
-        <span class="diarito-tag">v2.2.5</span>
+        <span class="diarito-tag">v2.3.0</span>
         <button class="diarito-button diarito-button--secondary" type="button" data-diarito-theme-toggle aria-pressed="false" aria-label="Switch to dark theme"><i class="fi fi-rr-moon"></i><span data-diarito-theme-label>Dark</span></button>
         <a class="diarito-button diarito-button--primary" href="#components">View components</a>
       </div>
@@ -32,7 +32,7 @@
       <div class="docs-hero__inner diarito-container docs-container">
         <span class="diarito-kicker">Diarito UI Library · HTML + CSS + JS</span>
         <h1 class="diarito-display">A quieter system with stronger structure.</h1>
-        <p>Version 2.2.5 refines the page shell, adds a 20px hero grid and improves table row actions while keeping the library neutral and reusable.</p>
+        <p>Version 2.3.0 adds the missing application-ready interaction layer: navigation, loading, overlays, form helpers and advanced data states, still in HTML + CSS + native JavaScript.</p>
         <div class="docs-hero__meta">
           <span class="diarito-chip"><i class="fi fi-rr-code-simple"></i> HTML + CSS</span>
           <span class="diarito-chip"><i class="fi fi-rr-settings-sliders"></i> Native JS only</span>
@@ -503,12 +503,12 @@
             <section class="docs-rule-group"><h4>06 · Layout & spacing</h4><ul><li>Pages use <code>.diarito-section</code> + <code>.diarito-container</code> as the page-level contract.</li><li>Peer sections share the same max-width unless a deliberate reading-width pattern says otherwise.</li><li>Spacing comes from the shared scale.</li><li>Editorial/product documentation favors one central scrolling column over dashboard fragmentation.</li></ul></section>
             <section class="docs-rule-group"><h4>07 · Borders, radius & shadows</h4><ul><li>Cards, tables, form controls and overlays may use structural 1px borders.</li><li>Buttons, badges, tags, alerts, tabs and pagination remain borderless.</li><li>No border-left-only state accents.</li><li>Use the shared sharper radius scale.</li><li>Shadows are subtle and compact; no large spaced/blurred decorative shadows.</li></ul></section>
             <section class="docs-rule-group"><h4>08 · Cards & surfaces</h4><ul><li>Cards use semantic surfaces, structural borders and shared radius tokens.</li><li>Cards do not clip overlays by default; use <code>.diarito-card--clip</code> only when content genuinely needs clipping.</li><li>Header/body/footer separators are structural, not decoration.</li></ul></section>
-            <section class="docs-rule-group"><h4>09 · Buttons & actions</h4><ul><li>Small is the default button size; medium and large are opt-in.</li><li>Buttons use no border and do not jump on hover.</li><li>Icon-only buttons require an accessible label.</li></ul></section>
-            <section class="docs-rule-group"><h4>10 · Forms</h4><ul><li>Inputs, selects and textareas use a semantic surface, neutral 1px border and visible focus state.</li><li>Form controls stay medium-height even though buttons default small.</li><li>Desktop forms may use columns; mobile collapses them when needed.</li><li>Autocomplete/searchable fields keep real IDs separate from visible labels when applicable.</li></ul></section>
-            <section class="docs-rule-group"><h4>11 · Navigation, tabs & accordion</h4><ul><li>Tabs have normal and selected states; avoid decorative hover choreography.</li><li>Scrollable tab rows hide their native scrollbar while remaining scrollable.</li><li>Accordions use accessible buttons with <code>aria-expanded</code>, smooth transitions and reduced-motion support.</li><li>Sticky navigation must not create stray borders or lines while scrolling.</li></ul></section>
-            <section class="docs-rule-group"><h4>12 · Dropdowns, tooltips & modals</h4><ul><li>Overlay z-index values come from the shared layer scale.</li><li>A higher z-index cannot escape a clipped ancestor; clipping is opt-in on containers that may host overlays.</li><li>Dropdown triggers manage <code>aria-expanded</code>; Escape closes open menus.</li><li>Tooltips supplement labels; they never hide essential information.</li><li>Modals use the browser top layer.</li></ul></section>
-            <section class="docs-rule-group"><h4>13 · Tables, lists & data</h4><ul><li>Tables prioritize readability and do not draw spreadsheet borders around every cell.</li><li>Administrative data tables use a shared toolbar, scroll container and pagination shell instead of page-specific chrome.</li><li>Long content truncates only when the column requires it.</li><li>Wide tables scroll horizontally inside their own shell. Standard table pages show 10 or 25 records per page and rely on page scrolling rather than an internal vertical scrollbar.</li><li>Status in dense data remains compact and semantic.</li></ul></section>
-            <section class="docs-rule-group"><h4>14 · Feedback, loading & empty states</h4><ul><li>Alerts communicate persistent page context; transient results belong to toast-style feedback when that pattern is added.</li><li>Do not turn every result into success green.</li><li>Empty states explain what is missing and offer one useful next action.</li><li>Loading belongs to the component waiting for data rather than blocking the whole page.</li></ul></section>
+            <section class="docs-rule-group"><h4>09 · Buttons & actions</h4><ul><li>Small is the default button size; medium and large are opt-in.</li><li>Buttons use no border and do not jump on hover.</li><li>Icon-only buttons require an accessible label.</li><li>Button groups are for tightly related actions; unrelated CTAs remain visually separate.</li></ul></section>
+            <section class="docs-rule-group"><h4>10 · Forms</h4><ul><li>Inputs, selects and textareas use a semantic surface, neutral 1px border and visible focus state.</li><li>Form controls stay medium-height even though buttons default small.</li><li>Desktop forms may use columns; mobile collapses them when needed.</li><li>Input groups share one structural border rather than nesting multiple bordered controls.</li><li>Comboboxes keep visible labels separate from stored values and remain keyboard usable.</li><li>Dropzones handle file selection and drag/drop presentation only; upload business logic belongs to the product layer.</li></ul></section>
+            <section class="docs-rule-group"><h4>11 · Navigation, tabs & accordion</h4><ul><li>Tabs have normal and selected states; avoid decorative hover choreography.</li><li>Segmented controls are for compact mode choices, not page-level navigation.</li><li>Breadcrumbs communicate hierarchy; pagination communicates position in a result set.</li><li>Scrollable tab rows hide their native scrollbar while remaining scrollable.</li><li>Accordions use accessible buttons with <code>aria-expanded</code>, smooth transitions and reduced-motion support.</li><li>Sticky navigation must not create stray borders or lines while scrolling.</li></ul></section>
+            <section class="docs-rule-group"><h4>12 · Dropdowns, tooltips & modals</h4><ul><li>Overlay z-index values come from the shared layer scale.</li><li>A higher z-index cannot escape a clipped ancestor; clipping is opt-in on containers that may host overlays.</li><li>Dropdown, popover and combobox triggers expose expanded state and close with Escape.</li><li>Tooltips supplement labels; they never hide essential information.</li><li>Drawers are for contextual or mobile secondary surfaces, not replacements for every page.</li><li>Confirmation dialogs reuse the canonical modal/action hierarchy.</li></ul></section>
+            <section class="docs-rule-group"><h4>13 · Tables, lists & data</h4><ul><li>Tables prioritize readability and do not draw spreadsheet borders around every cell.</li><li>Administrative data tables use a shared toolbar, scroll container and pagination shell instead of page-specific chrome.</li><li>Bulk selection appears only after rows are selected and keeps the selected count visible.</li><li>Loading, empty and error states stay inside the table contract instead of replacing the whole page.</li><li>Long content truncates only when the column requires it.</li><li>Wide tables scroll horizontally inside their own shell. Standard table pages show 10 or 25 records per page and rely on page scrolling rather than an internal vertical scrollbar.</li><li>Status in dense data remains compact and semantic.</li></ul></section>
+            <section class="docs-rule-group"><h4>14 · Feedback, loading & empty states</h4><ul><li>Alerts communicate persistent page context; toasts communicate transient action results.</li><li>Do not turn every result into success green.</li><li>Skeletons represent content layout; spinners represent a smaller active wait.</li><li>Progress bars show measurable completion and only use semantic colors when the state itself has semantic meaning.</li><li>Empty states explain what is missing and offer one useful next action.</li><li>Loading belongs to the component waiting for data rather than blocking the whole page.</li></ul></section>
             <section class="docs-rule-group"><h4>15 · Responsive & accessibility</h4><ul><li>Desktop and mobile preserve the same visual language.</li><li>Grids collapse when appropriate; navigation transforms rather than merely shrinking.</li><li>Visible focus is never removed.</li><li>Tabs, accordions and dropdowns expose their state with ARIA.</li><li>Respect <code>prefers-reduced-motion</code>.</li></ul></section>
             <section class="docs-rule-group"><h4>16 · Code hygiene & prohibited patterns</h4><ul><li>No Bootstrap or heavy UI framework unless deliberately approved later.</li><li>No decorative color gradients in the core system. Structural line patterns are allowed for the ruled-note body and the documentation hero grid.</li><li>No reusable inline CSS in product screens.</li><li>No arbitrary page-specific clones of shared components.</li><li>No backend, authentication or product business logic inside the UI library.</li><li>Use Flaticon UIcons consistently for the current icon language.</li></ul></section>
             <section class="docs-rule-group"><h4>17 · React migration contract</h4><ul><li>HTML/CSS remains the visual specification until screens are approved.</li><li>React components map to the approved library rather than inventing a second design system.</li><li>Props represent deliberate variants that already exist in the contract.</li><li>The shared system should prevent the “90% consistent, 10% floating” problem by construction.</li></ul></section>
@@ -520,7 +520,7 @@
 
     <footer class="docs-footer">
       <div class="docs-footer__block docs-footer__block--main"><div class="docs-footer__block-inner diarito-container docs-container"><div class="docs-footer__main">
-        <div class="docs-footer__brand"><a class="diarito-brand" href="#overview"><span class="diarito-brand__mark">D</span><span>Diarito</span></a><p>A reusable HTML, CSS and native JavaScript design system for a quieter, more consistent Diarito.</p><span class="diarito-tag diarito-tag--gray">UI Library v2.2.5</span></div>
+        <div class="docs-footer__brand"><a class="diarito-brand" href="#overview"><span class="diarito-brand__mark">D</span><span>Diarito</span></a><p>A reusable HTML, CSS and native JavaScript design system for a quieter, more consistent Diarito.</p><span class="diarito-tag diarito-tag--gray">UI Library v2.3.0</span></div>
         <div class="docs-footer__links"><div class="docs-footer__group"><span class="docs-footer__label">Library</span><a href="#foundation">Foundation</a><a href="#components">Components</a><a href="#feedback">Feedback</a><a href="#data">Data</a></div><div class="docs-footer__group"><span class="docs-footer__label">Product patterns</span><a href="#feed">Feed</a><a href="#patterns">Diarito patterns</a><a href="#rules">Rules</a></div><div class="docs-footer__group"><span class="docs-footer__label">Project</span><a href="https://github.com/nickramen/diarito-ui">GitHub</a><a href="README.md">README</a><a href="docs/CHANGELOG.md">Changelog</a></div></div>
       </div></div></div>
       <div class="docs-footer__block docs-footer__block--social"><div class="docs-footer__block-inner diarito-container docs-container"><span class="docs-footer__label">Diarito around the web</span><div class="docs-footer__social-grid"><a class="docs-footer__social-link" href="#" aria-label="Discord demo link"><i class="fi fi-rr-users-alt"></i><span>Discord</span></a><a class="docs-footer__social-link" href="#" aria-label="X demo link"><i class="fi fi-rr-at"></i><span>X</span></a><a class="docs-footer__social-link" href="#" aria-label="Reddit demo link"><i class="fi fi-rr-comment-alt"></i><span>Reddit</span></a><a class="docs-footer__social-link" href="#" aria-label="TikTok demo link"><i class="fi fi-rr-play-alt"></i><span>TikTok</span></a><a class="docs-footer__social-link" href="#" aria-label="Instagram demo link"><i class="fi fi-rr-camera"></i><span>Instagram</span></a></div></div></div>
@@ -528,7 +528,7 @@
     </footer>
   </main>
 
-  <script src="assets/js/diarito.js?v=2.2.5"></script>
-  <script src="assets/js/library-docs.js?v=2.2.5"></script>
+  <script src="assets/js/diarito.js?v=2.3.0"></script>
+  <script src="assets/js/library-docs.js?v=2.3.0"></script>
 </body>
 </html>
