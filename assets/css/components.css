@@ -412,6 +412,15 @@
 }
 .diarito-spinner--sm { width: .9rem; height: .9rem; border-width: 1.5px; }
 .diarito-spinner--lg { width: 1.7rem; height: 1.7rem; border-width: 2.5px; }
+.diarito-button--primary .diarito-spinner,
+.diarito-button--brand .diarito-spinner {
+  border-color: color-mix(in srgb, var(--diarito-color-action-fg) 34%, transparent);
+  border-top-color: var(--diarito-color-action-fg);
+}
+.diarito-button--danger .diarito-spinner {
+  border-color: color-mix(in srgb, var(--diarito-white) 34%, transparent);
+  border-top-color: var(--diarito-white);
+}
 @keyframes diarito-spin { to { transform: rotate(360deg); } }
 .diarito-skeleton {
   display: block;
