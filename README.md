@@ -1,13 +1,24 @@
-# Diarito UI Library 2.2.4
+# Diarito UI Library 2.2.5
 
 Diarito's reusable HTML, CSS and native JavaScript design system.
 
-Version 2.2.4 tightens responsive containers, hero grid treatment and data-table scrolling while keeping the HTML + CSS + native-JS architecture.
+Version 2.2.5 refines the page-shell demo, ruled notes, table row actions, navigation borders and hero grid while keeping the HTML + CSS + native-JS architecture.
 
 
 
 
 
+
+
+## 2.2.5 page shell, row actions and ruled-note refinement
+
+- Removed the Page shell demo's double horizontal gutter by letting the inner container own the spacing.
+- Changed the ruled-note line treatment so the first text line has no horizontal rule above it.
+- Added functional row-action dropdowns to all data-table rows.
+- Added reusable portaled dropdown support so menus can escape horizontal table overflow.
+- Shortened the table primary action from `Add member` to `Add`.
+- Added a top border to the sticky documentation navstrip.
+- Increased the hero grid from 10px x 10px to 20px x 20px.
 
 ## 2.2.4 responsive containers, hero grid and table refinement
 
