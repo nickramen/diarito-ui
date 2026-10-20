@@ -1,9 +1,22 @@
-# Diarito UI Library 2.2.0
+# Diarito UI Library 2.2.1
 
 Diarito's reusable HTML, CSS and native JavaScript design system.
 
-Version 2.2.0 refines navigation, overlays, feed, tags, accordion, governance and footer structure while preserving the theme-ready component contract.
+Version 2.2.1 applies focused visual-QA refinements to the 2.2 component system without changing the HTML + CSS + native-JS architecture.
 
+
+
+## 2.2.1 visual QA refinement
+
+- Removed the sticky-header compositing seam by using the page background directly and dropping the translucent backdrop blur.
+- Matched the 16px and 12px radius samples to the same bordered surface style.
+- Normalized label-to-control spacing by preventing stretched grid tracks in form fields.
+- Made every alert dismissible and kept dismiss-button hover visually unchanged.
+- Moved the Actions dropdown to the end of the overlay demo.
+- Expanded the activity chart to fill its chart card instead of sitting at an intrinsic SVG width.
+- Set mock-window body padding to `0 var(--diarito-space-5)`.
+- Added two longer note-card examples: standard contained and ruled notebook.
+- Removed the Quick actions pattern from the canonical library.
 
 ## 2.2.0 interaction and governance refinement
 
@@ -59,7 +72,7 @@ Components consume semantic roles such as `--diarito-color-surface`, `--diarito-
 
 ## Visual direction
 
-- Soft gray documentation canvas with white content/showcase surfaces.
+- White documentation canvas with white bordered content/showcase surfaces.
 - Light gray large panels for grouping and feature areas.
 - White nested UI surfaces.
 - Black / near-black for primary actions and strongest hierarchy.
