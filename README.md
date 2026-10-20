@@ -1,8 +1,18 @@
-# Diarito UI Library 2.0.0
+# Diarito UI Library 2.0.1
 
 Diarito's reusable HTML, CSS and native JavaScript design system.
 
-Version 2.0.0 is a full visual reset. It keeps the existing Diarito fonts and the reusable architecture, but rebuilds the component styling from scratch around a quieter neutral-first interface.
+Version 2.0.1 refines the 2.0 neutral-first reset while keeping the existing Diarito fonts and reusable architecture.
+
+## 2.0.1 refinement
+
+- Every library section now shares one centered max-width and the same horizontal margins.
+- The showcase is one vertical column instead of a bento grid.
+- Lime and purple remain palette tokens but are not applied to library components.
+- State colors use Tailwind 500 values: red `#EF4444`, yellow `#EAB308`, green `#22C55E`, blue `#3B82F6`.
+- Buttons, badges, chips, statuses and alerts are borderless.
+- Cards, tables, form controls and overlays keep borders when they provide real structure.
+- Alerts no longer use a left border.
 
 ## Visual direction
 
@@ -10,9 +20,7 @@ Version 2.0.0 is a full visual reset. It keeps the existing Diarito fonts and th
 - Light gray large panels for grouping and feature areas.
 - White nested UI surfaces.
 - Black / near-black for primary actions and strongest hierarchy.
-- Lime `#F1FF9C` as the main Diarito brand color.
-- Purple `#CFA8FF` as a controlled accent color.
-- Olive `#7E9026` as strong supporting brand tone when needed.
+- Lime `#F1FF9C`, Purple `#CFA8FF`, and Olive `#7E9026` remain brand palette tokens, but the component library stays neutral and does not use them to style generic controls.
 - Thin gray borders, generous radius, restrained shadows.
 - Semantic red / yellow / green / blue reserved for state communication only.
 
@@ -80,8 +88,6 @@ diarito-section--compact
 diarito-section--flush
 diarito-section--soft
 diarito-section--dark
-diarito-section--lime
-diarito-section--purple
 
 diarito-container--sm
 diarito-container--md

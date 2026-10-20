@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.0.1 - Single-column neutral refinement
+
+- Unified topbar, hero, sticky navigation, sections and footer to one shared max-width.
+- Changed the component showcase from bento-style columns to one centered scrolling column.
+- Kept lime and purple as palette tokens only; removed their use from active library components.
+- Switched semantic states to Tailwind 500: red `#EF4444`, yellow `#EAB308`, green `#22C55E`, blue `#3B82F6`.
+- Removed borders from buttons, badges, chips, statuses and alerts.
+- Removed the alert left-border treatment.
+- Kept structural borders on cards, tables, form fields and overlays.
+
+
 ## 2.0.0 - Neutral-first visual reset
 
 - Rebuilt the active UI component library from scratch while keeping the existing Diarito fonts.

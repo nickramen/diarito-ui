@@ -6,8 +6,6 @@
 .diarito-text-center { text-align: center; }
 .diarito-bg-soft { background: var(--diarito-gray-050) !important; }
 .diarito-bg-panel { background: var(--diarito-gray-100) !important; }
-.diarito-bg-lime { background: var(--diarito-lime) !important; }
-.diarito-bg-purple { background: var(--diarito-purple) !important; }
 .diarito-visually-hidden {
   position: absolute !important;
   width: 1px !important;

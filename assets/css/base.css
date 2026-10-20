@@ -26,7 +26,7 @@ small { font-size: var(--diarito-text-xs); }
 hr { border: 0; border-top: var(--diarito-border); margin: var(--diarito-space-7) 0; }
 code, kbd, pre { font-family: var(--diarito-font-mono); }
 
-::selection { color: var(--diarito-black); background: var(--diarito-purple); }
+::selection { color: var(--diarito-black); background: var(--diarito-gray-200); }
 :focus-visible { outline: none; box-shadow: var(--diarito-focus-ring); }
 
 .fi { line-height: 1; }
