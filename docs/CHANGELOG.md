@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.0.2 - Documentation canvas and footer refinement
+
+- Changed the library page canvas to soft gray with white bordered showcase cards.
+- Removed duplicate topbar section navigation and kept the sticky navigation strip as the single section navigator.
+- Standardized section spacing and showcase padding.
+- Rebuilt the footer with brand/project link groups, social-channel cards, and a compact copyright row.
+- Kept footer and documentation chrome neutral with no theme toggle and no decorative brand colors.
+
 ## 2.0.1 - Single-column neutral refinement
 
 - Unified topbar, hero, sticky navigation, sections and footer to one shared max-width.
