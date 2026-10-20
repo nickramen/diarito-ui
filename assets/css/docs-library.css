@@ -12,14 +12,14 @@
   background-image:
     linear-gradient(to right, color-mix(in srgb, var(--diarito-color-border-strong) 42%, transparent) 1px, transparent 1px),
     linear-gradient(to bottom, color-mix(in srgb, var(--diarito-color-border-strong) 42%, transparent) 1px, transparent 1px);
-  background-size: 10px 10px;
+  background-size: 20px 20px;
 }
 .docs-hero__inner { position: relative; }
 .docs-hero h1 { max-width: 58rem; font-size: var(--diarito-text-4xl); }
 .docs-hero p { max-width: 44rem; margin-top: var(--diarito-space-5); font-size: var(--diarito-text-lg); }
 .docs-hero__meta { display: flex; flex-wrap: wrap; gap: var(--diarito-space-2); margin-top: var(--diarito-space-5); }
 
-.docs-navstrip { position: sticky; top: 4rem; z-index: 50; border-top: 0; border-bottom: var(--diarito-border); background: color-mix(in srgb, var(--diarito-color-surface) 96%, transparent); backdrop-filter: blur(14px); }
+.docs-navstrip { position: sticky; top: 4rem; z-index: 50; border-top: var(--diarito-border); border-bottom: var(--diarito-border); background: color-mix(in srgb, var(--diarito-color-surface) 96%, transparent); backdrop-filter: blur(14px); }
 .docs-navstrip__inner { display: flex; overflow-x: auto; overflow-y: hidden; scrollbar-width: none; }
 .docs-navstrip__inner::-webkit-scrollbar { display: none; }
 .docs-navstrip a { position: relative; flex: 0 0 auto; padding: .85rem 1rem; color: var(--diarito-color-text-muted); font-size: var(--diarito-text-sm); }
