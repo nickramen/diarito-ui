@@ -1,8 +1,15 @@
-# Diarito UI Library 1.3.0
+# Diarito UI Library 1.3.1
 
 Diarito's reusable HTML, CSS and native JavaScript component system.
 
 This phase deliberately does **not** use React. The goal is to lock the visual contract first so a future React implementation can map stable HTML/CSS components to reusable React components without visual drift.
+
+## 1.3.1 brand-role refinement
+
+- Lime `#F1FF9C` is now the **primary** brand and interaction color.
+- Purple `#CFA8FF` is now the **accent** color.
+- Olive `#7E9026` remains the stronger supporting tone.
+- Generic components now prefer semantic role tokens instead of hard-coding raw brand colors.
 
 ## 1.3.0 feed-first direction
 
@@ -135,11 +142,11 @@ The same rule applies to status, alerts and other component families.
 
 ## Tokens
 
-Brand:
+Brand roles:
 
-- Purple `#CFA8FF`
-- Lime `#F1FF9C`
-- Olive `#7E9026`
+- Primary: Lime `#F1FF9C`
+- Accent: Purple `#CFA8FF`
+- Strong support: Olive `#7E9026`
 
 Semantic states:
 

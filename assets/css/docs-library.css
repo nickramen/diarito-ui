@@ -37,7 +37,7 @@
   display: grid;
   place-items: center;
   border-radius: 50%;
-  background: var(--diarito-purple);
+  background: var(--diarito-color-primary);
   font-family: var(--diarito-font-display);
   font-size: 1.05rem;
 }
@@ -84,7 +84,7 @@
 
 .docs-feed-tabs a:hover,
 .docs-feed-tabs a.is-active { color: var(--diarito-ink); }
-.docs-feed-tabs a.is-active::after { background: var(--diarito-olive); }
+.docs-feed-tabs a.is-active::after { background: var(--diarito-color-primary-strong); }
 
 .docs-topbar__actions {
   display: flex;
