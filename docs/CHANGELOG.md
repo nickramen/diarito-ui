@@ -1,5 +1,21 @@
 # Changelog
 
+## 2.5.0 - Consolidation and missing product patterns
+
+- Reworked Button Group to use a quiet selected surface while preserving independent pressed states.
+- Moved Input Group and Combobox / autocomplete demos into the Forms showcase.
+- Added a real @mention combobox example.
+- Changed Dropzone to the standard white surface.
+- Made Confirmation Dialog reuse the exact canonical Modal anatomy.
+- Changed inline autosave state colors to semantic Tailwind 500 bases.
+- Added functional portaled dropdown actions to both Note Cards.
+- Added generic copy-to-clipboard behavior for Input Group actions.
+- Added Link preview / embed.
+- Added Quoted / reposted entry.
+- Added Share & access panel.
+- Added Draft entry row.
+- Expanded governance rules to clarify Button Group vs Tabs, form composition, modal confirmation, autosave color and product-pattern reuse.
+
 ## 2.4.0 - Diarito product-language layer
 
 - Added Entry / post composer.
