@@ -131,13 +131,44 @@
         </article>
 
         <article class="docs-showcase is-wide">
-          <div class="docs-showcase__head"><div><h3>Forms</h3><p>Theme-aware surface controls, thin borders and a restrained neutral focus ring.</p></div></div>
-          <div class="diarito-card diarito-card--flat"><div class="diarito-card__body docs-demo-grid">
-            <label class="diarito-field"><span class="diarito-label">Title</span><input class="diarito-input" placeholder="Untitled note"><span class="diarito-help">Keep it easy to recognize later.</span></label>
-            <label class="diarito-field"><span class="diarito-label">Collection</span><select class="diarito-select"><option>Personal</option><option>Work</option><option>Language practice</option></select></label>
-            <label class="diarito-field"><span class="diarito-label">Search</span><span class="diarito-search"><i class="fi fi-rr-search"></i><input class="diarito-input" placeholder="Search Diarito"></span></label>
-            <label class="diarito-field is-error"><span class="diarito-label">Username</span><input class="diarito-input" value="taken-name"><span class="diarito-help">This username is already taken.</span></label>
-            <label class="diarito-field" style="grid-column:1/-1"><span class="diarito-label">Note</span><textarea class="diarito-textarea" placeholder="Write something..."></textarea></label>
+          <div class="docs-showcase__head"><div><h3>Forms</h3><p>Text fields, input groups and searchable comboboxes belong to one form system instead of living as unrelated component demos.</p></div></div>
+          <div class="diarito-card diarito-card--flat"><div class="diarito-card__body docs-demo-stack">
+            <div class="docs-demo-group"><span class="docs-demo-group__label">Base fields</span><div class="docs-demo-grid">
+              <label class="diarito-field"><span class="diarito-label">Title</span><input class="diarito-input" placeholder="Untitled note"><span class="diarito-help">Keep it easy to recognize later.</span></label>
+              <label class="diarito-field"><span class="diarito-label">Collection</span><select class="diarito-select"><option>Personal</option><option>Work</option><option>Language practice</option></select></label>
+              <label class="diarito-field"><span class="diarito-label">Search</span><span class="diarito-search"><i class="fi fi-rr-search"></i><input class="diarito-input" placeholder="Search Diarito"></span></label>
+              <label class="diarito-field is-error"><span class="diarito-label">Username</span><input class="diarito-input" value="taken-name"><span class="diarito-help">This username is already taken.</span></label>
+              <label class="diarito-field" style="grid-column:1/-1"><span class="diarito-label">Note</span><textarea class="diarito-textarea" placeholder="Write something..."></textarea></label>
+            </div></div>
+
+            <div class="docs-demo-group"><span class="docs-demo-group__label">Input groups</span><div class="docs-demo-grid">
+              <div class="diarito-field"><label class="diarito-label" for="input-group-username">Username</label><span class="diarito-input-group"><span class="diarito-input-group__addon">@</span><input class="diarito-input" id="input-group-username" value="nickramen"></span></div>
+              <div class="diarito-field"><label class="diarito-label" for="input-group-share">Share link</label><span class="diarito-input-group"><input class="diarito-input" id="input-group-share" value="diarito.app/n/nickramen" readonly><button class="diarito-button diarito-button--secondary" type="button" data-diarito-copy="input-group-share">Copy</button></span></div>
+            </div></div>
+
+            <div class="docs-demo-group"><span class="docs-demo-group__label">Combobox / autocomplete</span><div class="docs-demo-grid">
+              <div class="diarito-field"><label class="diarito-label" for="learning-language-combobox">Learning language</label>
+                <div class="diarito-combobox" data-diarito-combobox>
+                  <div class="diarito-combobox__control"><input class="diarito-input" id="learning-language-combobox" type="text" placeholder="Search languages..." role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="language-combobox-options" autocomplete="off" data-diarito-combobox-input><i class="fi fi-rr-angle-small-down"></i></div>
+                  <div class="diarito-combobox__menu" id="language-combobox-options" role="listbox" data-diarito-combobox-menu hidden>
+                    <button class="diarito-combobox__option" type="button" role="option" data-diarito-combobox-option data-diarito-combobox-value="ko" data-diarito-combobox-label="Korean"><span>Korean</span><span class="diarito-help">한국어</span></button>
+                    <button class="diarito-combobox__option" type="button" role="option" data-diarito-combobox-option data-diarito-combobox-value="es" data-diarito-combobox-label="Spanish"><span>Spanish</span><span class="diarito-help">Español</span></button>
+                    <button class="diarito-combobox__option" type="button" role="option" data-diarito-combobox-option data-diarito-combobox-value="en" data-diarito-combobox-label="English"><span>English</span><span class="diarito-help">English</span></button>
+                    <button class="diarito-combobox__option" type="button" role="option" data-diarito-combobox-option data-diarito-combobox-value="ja" data-diarito-combobox-label="Japanese"><span>Japanese</span><span class="diarito-help">日本語</span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="diarito-field"><label class="diarito-label" for="mention-combobox">Mention someone</label>
+                <div class="diarito-combobox" data-diarito-combobox>
+                  <div class="diarito-combobox__control"><input class="diarito-input" id="mention-combobox" type="text" placeholder="@username" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="mention-combobox-options" autocomplete="off" data-diarito-combobox-input><i class="fi fi-rr-angle-small-down"></i></div>
+                  <div class="diarito-combobox__menu" id="mention-combobox-options" role="listbox" data-diarito-combobox-menu hidden>
+                    <button class="diarito-combobox__option" type="button" role="option" data-diarito-combobox-option data-diarito-combobox-value="yuna" data-diarito-combobox-label="@yuna"><span>@yuna</span><span class="diarito-help">Korean · Spanish</span></button>
+                    <button class="diarito-combobox__option" type="button" role="option" data-diarito-combobox-option data-diarito-combobox-value="sowon" data-diarito-combobox-label="@sowon"><span>@sowon</span><span class="diarito-help">Korean · English</span></button>
+                    <button class="diarito-combobox__option" type="button" role="option" data-diarito-combobox-option data-diarito-combobox-value="mari" data-diarito-combobox-label="@mari"><span>@mari</span><span class="diarito-help">Spanish · English</span></button>
+                  </div>
+                </div>
+              </div>
+            </div></div>
           </div></div>
         </article>
 
@@ -168,36 +199,14 @@
         </article>
 
         <article class="docs-showcase">
-          <div class="docs-showcase__head"><div><h3>Button group</h3><p>Related actions share one quiet container instead of becoming a row of unrelated buttons.</p></div></div>
+          <div class="docs-showcase__head"><div><h3>Button group</h3><p>Visually similar to a segmented/tabs control, but semantically different: each action can stay pressed independently. Useful for editor formatting and compact toolbars.</p></div></div>
           <div class="docs-demo-stack">
             <div class="diarito-button-group" role="group" aria-label="Editor formatting">
-              <button class="diarito-button diarito-button--ghost is-active" type="button" aria-pressed="true"><i class="fi fi-rr-bold"></i> Bold</button>
-              <button class="diarito-button diarito-button--ghost" type="button" aria-pressed="false"><i class="fi fi-rr-italic"></i> Italic</button>
-              <button class="diarito-button diarito-button--ghost" type="button" aria-pressed="false"><i class="fi fi-rr-link-alt"></i> Link</button>
+              <button class="diarito-button diarito-button--ghost is-active" type="button" data-diarito-toggle="bold" aria-pressed="true"><i class="fi fi-rr-bold"></i> Bold</button>
+              <button class="diarito-button diarito-button--ghost" type="button" data-diarito-toggle="italic" aria-pressed="false"><i class="fi fi-rr-italic"></i> Italic</button>
+              <button class="diarito-button diarito-button--ghost" type="button" data-diarito-toggle="underline" aria-pressed="false"><i class="fi fi-rr-underline"></i> Underline</button>
             </div>
-          </div>
-        </article>
-
-        <article class="docs-showcase">
-          <div class="docs-showcase__head"><div><h3>Input group</h3><p>Prefixes, suffixes and related actions share the field border without creating nested controls.</p></div></div>
-          <div class="docs-demo-stack">
-            <div class="diarito-field"><label class="diarito-label" for="input-group-username">Username</label><span class="diarito-input-group"><span class="diarito-input-group__addon">@</span><input class="diarito-input" id="input-group-username" value="nickramen"></span></div>
-            <div class="diarito-field"><label class="diarito-label" for="input-group-share">Share link</label><span class="diarito-input-group"><input class="diarito-input" id="input-group-share" value="diarito.app/n/nickramen"><button class="diarito-button diarito-button--secondary" type="button">Copy</button></span></div>
-          </div>
-        </article>
-
-        <article class="docs-showcase">
-          <div class="docs-showcase__head"><div><h3>Combobox / autocomplete</h3><p>Searchable options for languages, people and collections without replacing the visible label.</p></div></div>
-          <div class="diarito-field"><label class="diarito-label" for="learning-language-combobox">Learning language</label>
-            <div class="diarito-combobox" data-diarito-combobox>
-              <div class="diarito-combobox__control"><input class="diarito-input" id="learning-language-combobox" type="text" placeholder="Search languages..." role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="language-combobox-options" autocomplete="off" data-diarito-combobox-input><i class="fi fi-rr-angle-small-down"></i></div>
-              <div class="diarito-combobox__menu" id="language-combobox-options" role="listbox" data-diarito-combobox-menu hidden>
-                <button class="diarito-combobox__option" type="button" role="option" data-diarito-combobox-option data-diarito-combobox-value="ko" data-diarito-combobox-label="Korean"><span>Korean</span><span class="diarito-help">한국어</span></button>
-                <button class="diarito-combobox__option" type="button" role="option" data-diarito-combobox-option data-diarito-combobox-value="es" data-diarito-combobox-label="Spanish"><span>Spanish</span><span class="diarito-help">Español</span></button>
-                <button class="diarito-combobox__option" type="button" role="option" data-diarito-combobox-option data-diarito-combobox-value="en" data-diarito-combobox-label="English"><span>English</span><span class="diarito-help">English</span></button>
-                <button class="diarito-combobox__option" type="button" role="option" data-diarito-combobox-option data-diarito-combobox-value="ja" data-diarito-combobox-label="Japanese"><span>Japanese</span><span class="diarito-help">日本語</span></button>
-              </div>
-            </div>
+            <span class="diarito-help">Unlike Tabs, turning on Bold does not turn off Italic.</span>
           </div>
         </article>
 
@@ -336,7 +345,8 @@
           <button class="diarito-button diarito-button--danger" type="button" data-diarito-modal-open="confirm-delete-note"><i class="fi fi-rr-trash"></i> Delete note</button>
         </article>
         <dialog class="diarito-modal diarito-confirm" id="confirm-delete-note">
-          <div class="diarito-modal__body diarito-confirm__content"><span class="diarito-confirm__icon"><i class="fi fi-rr-trash"></i></span><div><h3>Delete this note?</h3><p>This removes the note from your collection. This demo does not delete anything.</p></div></div>
+          <div class="diarito-modal__header"><h3>Delete this note?</h3><button class="diarito-button diarito-button--ghost diarito-button--icon diarito-button--sm" type="button" data-diarito-modal-close aria-label="Close"><i class="fi fi-rr-cross-small"></i></button></div>
+          <div class="diarito-modal__body"><p>This removes the note from your collection. This demo does not delete anything.</p></div>
           <div class="diarito-modal__footer"><button class="diarito-button diarito-button--ghost" type="button" data-diarito-modal-close>Cancel</button><button class="diarito-button diarito-button--danger" type="button" data-diarito-modal-close>Delete note</button></div>
         </dialog>
       </div>
