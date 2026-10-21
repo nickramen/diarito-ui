@@ -193,6 +193,21 @@
     });
   });
 
+  document.querySelectorAll('[data-diarito-copy]').forEach((button) => {
+    button.addEventListener('click', async () => {
+      const target = document.getElementById(button.dataset.diaritoCopy || '');
+      const value = target?.value ?? target?.textContent ?? '';
+      if (!value) return;
+      try {
+        await navigator.clipboard.writeText(value);
+        button.dispatchEvent(new CustomEvent('diarito:copied', { bubbles: true, detail: { value } }));
+        window.DiaritoToast?.show({ title: 'Copied', message: 'The link is ready to paste.', state: 'success' });
+      } catch (_) {
+        window.DiaritoToast?.show({ title: 'Could not copy', message: 'Select and copy the value manually.', state: 'error' });
+      }
+    });
+  });
+
   const closeCombobox = (root) => {
     const input = root.querySelector('[data-diarito-combobox-input]');
     const menu = root.querySelector('[data-diarito-combobox-menu]');

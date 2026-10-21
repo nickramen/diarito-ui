@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Diarito UI Library 2.4.0</title>
+  <title>Diarito UI Library 2.5.0</title>
   <meta name="description" content="Diarito HTML, CSS and native JavaScript UI component library.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Englebert&family=Noto+Sans+KR:wght@400;500;600;700&family=Poor+Story&family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
-  <link rel="stylesheet" href="assets/css/diarito-system.css?v=2.4.0">
-  <link rel="stylesheet" href="assets/css/docs-library.css?v=2.4.0">
+  <link rel="stylesheet" href="assets/css/diarito-system.css?v=2.5.0">
+  <link rel="stylesheet" href="assets/css/docs-library.css?v=2.5.0">
 </head>
 <body class="docs-body">
   <header class="docs-topbar">
@@ -20,7 +20,7 @@
         <span>Diarito</span>
       </a>
       <div class="docs-topbar__actions">
-        <span class="diarito-tag">v2.4.0</span>
+        <span class="diarito-tag">v2.5.0</span>
         <button class="diarito-button diarito-button--secondary" type="button" data-diarito-theme-toggle aria-pressed="false" aria-label="Switch to dark theme"><i class="fi fi-rr-moon"></i><span data-diarito-theme-label>Dark</span></button>
         <a class="diarito-button diarito-button--primary" href="#components">View components</a>
       </div>
@@ -32,7 +32,7 @@
       <div class="docs-hero__inner diarito-container docs-container">
         <span class="diarito-kicker">Diarito UI Library · HTML + CSS + JS</span>
         <h1 class="diarito-display">A quieter system with stronger structure.</h1>
-        <p>Version 2.4.0 turns the generic system into a Diarito product language with reusable writing, publishing, diary and community patterns, still in HTML + CSS + native JavaScript.</p>
+        <p>Version 2.5.0 refines forms, grouped actions, dialogs and note actions, then adds the remaining sharing, draft and repost patterns needed for a more complete Diarito product language.</p>
         <div class="docs-hero__meta">
           <span class="diarito-chip"><i class="fi fi-rr-code-simple"></i> HTML + CSS</span>
           <span class="diarito-chip"><i class="fi fi-rr-settings-sliders"></i> Native JS only</span>
@@ -131,13 +131,44 @@
         </article>
 
         <article class="docs-showcase is-wide">
-          <div class="docs-showcase__head"><div><h3>Forms</h3><p>Theme-aware surface controls, thin borders and a restrained neutral focus ring.</p></div></div>
-          <div class="diarito-card diarito-card--flat"><div class="diarito-card__body docs-demo-grid">
-            <label class="diarito-field"><span class="diarito-label">Title</span><input class="diarito-input" placeholder="Untitled note"><span class="diarito-help">Keep it easy to recognize later.</span></label>
-            <label class="diarito-field"><span class="diarito-label">Collection</span><select class="diarito-select"><option>Personal</option><option>Work</option><option>Language practice</option></select></label>
-            <label class="diarito-field"><span class="diarito-label">Search</span><span class="diarito-search"><i class="fi fi-rr-search"></i><input class="diarito-input" placeholder="Search Diarito"></span></label>
-            <label class="diarito-field is-error"><span class="diarito-label">Username</span><input class="diarito-input" value="taken-name"><span class="diarito-help">This username is already taken.</span></label>
-            <label class="diarito-field" style="grid-column:1/-1"><span class="diarito-label">Note</span><textarea class="diarito-textarea" placeholder="Write something..."></textarea></label>
+          <div class="docs-showcase__head"><div><h3>Forms</h3><p>Text fields, input groups and searchable comboboxes belong to one form system instead of living as unrelated component demos.</p></div></div>
+          <div class="diarito-card diarito-card--flat"><div class="diarito-card__body docs-demo-stack">
+            <div class="docs-demo-group"><span class="docs-demo-group__label">Base fields</span><div class="docs-demo-grid">
+              <label class="diarito-field"><span class="diarito-label">Title</span><input class="diarito-input" placeholder="Untitled note"><span class="diarito-help">Keep it easy to recognize later.</span></label>
+              <label class="diarito-field"><span class="diarito-label">Collection</span><select class="diarito-select"><option>Personal</option><option>Work</option><option>Language practice</option></select></label>
+              <label class="diarito-field"><span class="diarito-label">Search</span><span class="diarito-search"><i class="fi fi-rr-search"></i><input class="diarito-input" placeholder="Search Diarito"></span></label>
+              <label class="diarito-field is-error"><span class="diarito-label">Username</span><input class="diarito-input" value="taken-name"><span class="diarito-help">This username is already taken.</span></label>
+              <label class="diarito-field" style="grid-column:1/-1"><span class="diarito-label">Note</span><textarea class="diarito-textarea" placeholder="Write something..."></textarea></label>
+            </div></div>
+
+            <div class="docs-demo-group"><span class="docs-demo-group__label">Input groups</span><div class="docs-demo-grid">
+              <div class="diarito-field"><label class="diarito-label" for="input-group-username">Username</label><span class="diarito-input-group"><span class="diarito-input-group__addon">@</span><input class="diarito-input" id="input-group-username" value="nickramen"></span></div>
+              <div class="diarito-field"><label class="diarito-label" for="input-group-share">Share link</label><span class="diarito-input-group"><input class="diarito-input" id="input-group-share" value="diarito.app/n/nickramen" readonly><button class="diarito-button diarito-button--secondary" type="button" data-diarito-copy="input-group-share">Copy</button></span></div>
+            </div></div>
+
+            <div class="docs-demo-group"><span class="docs-demo-group__label">Combobox / autocomplete</span><div class="docs-demo-grid">
+              <div class="diarito-field"><label class="diarito-label" for="learning-language-combobox">Learning language</label>
+                <div class="diarito-combobox" data-diarito-combobox>
+                  <div class="diarito-combobox__control"><input class="diarito-input" id="learning-language-combobox" type="text" placeholder="Search languages..." role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="language-combobox-options" autocomplete="off" data-diarito-combobox-input><i class="fi fi-rr-angle-small-down"></i></div>
+                  <div class="diarito-combobox__menu" id="language-combobox-options" role="listbox" data-diarito-combobox-menu hidden>
+                    <button class="diarito-combobox__option" type="button" role="option" data-diarito-combobox-option data-diarito-combobox-value="ko" data-diarito-combobox-label="Korean"><span>Korean</span><span class="diarito-help">한국어</span></button>
+                    <button class="diarito-combobox__option" type="button" role="option" data-diarito-combobox-option data-diarito-combobox-value="es" data-diarito-combobox-label="Spanish"><span>Spanish</span><span class="diarito-help">Español</span></button>
+                    <button class="diarito-combobox__option" type="button" role="option" data-diarito-combobox-option data-diarito-combobox-value="en" data-diarito-combobox-label="English"><span>English</span><span class="diarito-help">English</span></button>
+                    <button class="diarito-combobox__option" type="button" role="option" data-diarito-combobox-option data-diarito-combobox-value="ja" data-diarito-combobox-label="Japanese"><span>Japanese</span><span class="diarito-help">日本語</span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="diarito-field"><label class="diarito-label" for="mention-combobox">Mention someone</label>
+                <div class="diarito-combobox" data-diarito-combobox>
+                  <div class="diarito-combobox__control"><input class="diarito-input" id="mention-combobox" type="text" placeholder="@username" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="mention-combobox-options" autocomplete="off" data-diarito-combobox-input><i class="fi fi-rr-angle-small-down"></i></div>
+                  <div class="diarito-combobox__menu" id="mention-combobox-options" role="listbox" data-diarito-combobox-menu hidden>
+                    <button class="diarito-combobox__option" type="button" role="option" data-diarito-combobox-option data-diarito-combobox-value="yuna" data-diarito-combobox-label="@yuna"><span>@yuna</span><span class="diarito-help">Korean · Spanish</span></button>
+                    <button class="diarito-combobox__option" type="button" role="option" data-diarito-combobox-option data-diarito-combobox-value="sowon" data-diarito-combobox-label="@sowon"><span>@sowon</span><span class="diarito-help">Korean · English</span></button>
+                    <button class="diarito-combobox__option" type="button" role="option" data-diarito-combobox-option data-diarito-combobox-value="mari" data-diarito-combobox-label="@mari"><span>@mari</span><span class="diarito-help">Spanish · English</span></button>
+                  </div>
+                </div>
+              </div>
+            </div></div>
           </div></div>
         </article>
 
@@ -168,36 +199,14 @@
         </article>
 
         <article class="docs-showcase">
-          <div class="docs-showcase__head"><div><h3>Button group</h3><p>Related actions share one quiet container instead of becoming a row of unrelated buttons.</p></div></div>
+          <div class="docs-showcase__head"><div><h3>Button group</h3><p>Visually similar to a segmented/tabs control, but semantically different: each action can stay pressed independently. Useful for editor formatting and compact toolbars.</p></div></div>
           <div class="docs-demo-stack">
             <div class="diarito-button-group" role="group" aria-label="Editor formatting">
-              <button class="diarito-button diarito-button--ghost is-active" type="button" aria-pressed="true"><i class="fi fi-rr-bold"></i> Bold</button>
-              <button class="diarito-button diarito-button--ghost" type="button" aria-pressed="false"><i class="fi fi-rr-italic"></i> Italic</button>
-              <button class="diarito-button diarito-button--ghost" type="button" aria-pressed="false"><i class="fi fi-rr-link-alt"></i> Link</button>
+              <button class="diarito-button diarito-button--ghost is-active" type="button" data-diarito-toggle="bold" aria-pressed="true"><i class="fi fi-rr-bold"></i> Bold</button>
+              <button class="diarito-button diarito-button--ghost" type="button" data-diarito-toggle="italic" aria-pressed="false"><i class="fi fi-rr-italic"></i> Italic</button>
+              <button class="diarito-button diarito-button--ghost" type="button" data-diarito-toggle="underline" aria-pressed="false"><i class="fi fi-rr-underline"></i> Underline</button>
             </div>
-          </div>
-        </article>
-
-        <article class="docs-showcase">
-          <div class="docs-showcase__head"><div><h3>Input group</h3><p>Prefixes, suffixes and related actions share the field border without creating nested controls.</p></div></div>
-          <div class="docs-demo-stack">
-            <div class="diarito-field"><label class="diarito-label" for="input-group-username">Username</label><span class="diarito-input-group"><span class="diarito-input-group__addon">@</span><input class="diarito-input" id="input-group-username" value="nickramen"></span></div>
-            <div class="diarito-field"><label class="diarito-label" for="input-group-share">Share link</label><span class="diarito-input-group"><input class="diarito-input" id="input-group-share" value="diarito.app/n/nickramen"><button class="diarito-button diarito-button--secondary" type="button">Copy</button></span></div>
-          </div>
-        </article>
-
-        <article class="docs-showcase">
-          <div class="docs-showcase__head"><div><h3>Combobox / autocomplete</h3><p>Searchable options for languages, people and collections without replacing the visible label.</p></div></div>
-          <div class="diarito-field"><label class="diarito-label" for="learning-language-combobox">Learning language</label>
-            <div class="diarito-combobox" data-diarito-combobox>
-              <div class="diarito-combobox__control"><input class="diarito-input" id="learning-language-combobox" type="text" placeholder="Search languages..." role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="language-combobox-options" autocomplete="off" data-diarito-combobox-input><i class="fi fi-rr-angle-small-down"></i></div>
-              <div class="diarito-combobox__menu" id="language-combobox-options" role="listbox" data-diarito-combobox-menu hidden>
-                <button class="diarito-combobox__option" type="button" role="option" data-diarito-combobox-option data-diarito-combobox-value="ko" data-diarito-combobox-label="Korean"><span>Korean</span><span class="diarito-help">한국어</span></button>
-                <button class="diarito-combobox__option" type="button" role="option" data-diarito-combobox-option data-diarito-combobox-value="es" data-diarito-combobox-label="Spanish"><span>Spanish</span><span class="diarito-help">Español</span></button>
-                <button class="diarito-combobox__option" type="button" role="option" data-diarito-combobox-option data-diarito-combobox-value="en" data-diarito-combobox-label="English"><span>English</span><span class="diarito-help">English</span></button>
-                <button class="diarito-combobox__option" type="button" role="option" data-diarito-combobox-option data-diarito-combobox-value="ja" data-diarito-combobox-label="Japanese"><span>Japanese</span><span class="diarito-help">日本語</span></button>
-              </div>
-            </div>
+            <span class="diarito-help">Unlike Tabs, turning on Bold does not turn off Italic.</span>
           </div>
         </article>
 
@@ -336,7 +345,8 @@
           <button class="diarito-button diarito-button--danger" type="button" data-diarito-modal-open="confirm-delete-note"><i class="fi fi-rr-trash"></i> Delete note</button>
         </article>
         <dialog class="diarito-modal diarito-confirm" id="confirm-delete-note">
-          <div class="diarito-modal__body diarito-confirm__content"><span class="diarito-confirm__icon"><i class="fi fi-rr-trash"></i></span><div><h3>Delete this note?</h3><p>This removes the note from your collection. This demo does not delete anything.</p></div></div>
+          <div class="diarito-modal__header"><h3>Delete this note?</h3><button class="diarito-button diarito-button--ghost diarito-button--icon diarito-button--sm" type="button" data-diarito-modal-close aria-label="Close"><i class="fi fi-rr-cross-small"></i></button></div>
+          <div class="diarito-modal__body"><p>This removes the note from your collection. This demo does not delete anything.</p></div>
           <div class="diarito-modal__footer"><button class="diarito-button diarito-button--ghost" type="button" data-diarito-modal-close>Cancel</button><button class="diarito-button diarito-button--danger" type="button" data-diarito-modal-close>Delete note</button></div>
         </dialog>
       </div>
@@ -567,17 +577,52 @@
           <div class="diarito-streak"><div class="diarito-streak__summary"><div><strong>14 days</strong><span> current writing streak</span></div><span>28-day view</span></div><div class="diarito-streak-grid" aria-label="Writing activity for the last 28 days"><span class="diarito-streak-day" data-level="0" title="No entry"></span><span class="diarito-streak-day" data-level="1" title="1 short entry"></span><span class="diarito-streak-day" data-level="2"></span><span class="diarito-streak-day" data-level="0"></span><span class="diarito-streak-day" data-level="3"></span><span class="diarito-streak-day" data-level="4"></span><span class="diarito-streak-day" data-level="2"></span><span class="diarito-streak-day" data-level="1"></span><span class="diarito-streak-day" data-level="3"></span><span class="diarito-streak-day" data-level="2"></span><span class="diarito-streak-day" data-level="4"></span><span class="diarito-streak-day" data-level="4"></span><span class="diarito-streak-day" data-level="3"></span><span class="diarito-streak-day" data-level="2"></span><span class="diarito-streak-day" data-level="1"></span><span class="diarito-streak-day" data-level="2"></span><span class="diarito-streak-day" data-level="3"></span><span class="diarito-streak-day" data-level="4"></span><span class="diarito-streak-day" data-level="4"></span><span class="diarito-streak-day" data-level="3"></span><span class="diarito-streak-day" data-level="2"></span><span class="diarito-streak-day" data-level="4"></span><span class="diarito-streak-day" data-level="4"></span><span class="diarito-streak-day" data-level="4"></span><span class="diarito-streak-day" data-level="3"></span><span class="diarito-streak-day" data-level="4"></span><span class="diarito-streak-day" data-level="4"></span><span class="diarito-streak-day" data-level="4"></span></div></div>
         </article>
 
+        <article class="docs-showcase is-full">
+          <div class="docs-showcase__head"><div><h3>Link preview / embed</h3><p>Shared URLs need a compact preview inside entries without becoming a new card system. It reuses the same border, radius and neutral surfaces.</p></div></div>
+          <a class="diarito-link-preview" href="#" aria-label="Open example link preview">
+            <span class="diarito-link-preview__media"><i class="fi fi-rr-link-alt"></i></span>
+            <span class="diarito-link-preview__body"><span class="diarito-link-preview__domain">example.com</span><strong>Keeping a small daily writing habit</strong><p>A short article about remembering more by writing less, more consistently.</p></span>
+          </a>
+        </article>
+
+        <article class="docs-showcase is-full">
+          <div class="docs-showcase__head"><div><h3>Quoted / reposted entry</h3><p>Community reposts should preserve the original author and text without nesting a full Entry Card inside another Entry Card.</p></div></div>
+          <article class="diarito-card diarito-entry-card">
+            <div class="diarito-card__body diarito-entry-card__body"><p>I keep coming back to this because it describes exactly why short entries work better for me.</p>
+              <div class="diarito-quote-entry"><div class="diarito-quote-entry__header"><span class="diarito-avatar diarito-avatar--sm">Y</span><strong>yuna</strong><span>· yesterday</span></div><div class="diarito-quote-entry__body"><p>Write enough context that future-you knows why it mattered, but not so much that writing becomes homework.</p></div></div>
+            </div>
+            <footer class="diarito-card__footer"><div class="diarito-entry-actions"><button class="diarito-entry-action" type="button" data-diarito-toggle="quote-like" aria-pressed="false"><i class="fi fi-rr-heart"></i> 12</button><button class="diarito-entry-action" type="button"><i class="fi fi-rr-comment"></i> 3</button><button class="diarito-entry-action" type="button"><i class="fi fi-rr-share"></i> Share</button></div></footer>
+          </article>
+        </article>
+
+        <article class="docs-showcase is-full">
+          <div class="docs-showcase__head"><div><h3>Share & access panel</h3><p>Sharing composes visibility, member identity and the existing input-group/copy behavior instead of inventing a separate permissions UI.</p></div></div>
+          <div class="diarito-card diarito-card--flat"><div class="diarito-card__body diarito-share-access">
+            <div class="diarito-share-access__section"><div><strong>Who can read this entry?</strong><p class="diarito-help">Choose the audience before sharing a link.</p></div><div class="diarito-segmented" data-diarito-segmented aria-label="Share audience"><button class="diarito-segmented__item" type="button" aria-pressed="false" data-diarito-segment="private"><i class="fi fi-rr-lock"></i> Private</button><button class="diarito-segmented__item is-active" type="button" aria-pressed="true" data-diarito-segment="shared"><i class="fi fi-rr-users"></i> Shared</button><button class="diarito-segmented__item" type="button" aria-pressed="false" data-diarito-segment="public"><i class="fi fi-rr-globe"></i> Public</button></div></div>
+            <div class="diarito-share-access__section"><div><strong>People with access</strong><p class="diarito-help">Direct access remains explicit even when the entry is not public.</p></div><div class="diarito-share-access__people"><div class="diarito-share-person"><span class="diarito-avatar diarito-avatar--sm">Y</span><div class="diarito-share-person__copy"><strong>Yuna</strong><span>@yuna</span></div><span class="diarito-tag diarito-tag--gray">Can read</span></div><div class="diarito-share-person"><span class="diarito-avatar diarito-avatar--sm">S</span><div class="diarito-share-person__copy"><strong>Sowon</strong><span>@sowon</span></div><span class="diarito-tag diarito-tag--gray">Can read</span></div></div><button class="diarito-button diarito-button--secondary" type="button"><i class="fi fi-rr-user-add"></i> Add people</button></div>
+            <div class="diarito-share-access__section"><label class="diarito-label" for="share-access-link">Share link</label><span class="diarito-input-group"><input class="diarito-input" id="share-access-link" value="diarito.app/e/remember-this" readonly><button class="diarito-button diarito-button--secondary" type="button" data-diarito-copy="share-access-link">Copy</button></span></div>
+          </div></div>
+        </article>
+
+        <article class="docs-showcase is-full">
+          <div class="docs-showcase__head"><div><h3>Draft entry row</h3><p>Drafts need a compact reusable list pattern rather than shrinking a full note card into a table row.</p></div></div>
+          <div class="diarito-card diarito-card--flat"><div class="diarito-card__body diarito-draft-list">
+            <div class="diarito-draft-row"><div class="diarito-draft-row__copy"><strong>Things I learned on the bus today</strong><span>I finally understood why that phrase sounded different when...</span><div class="diarito-draft-row__meta"><span class="diarito-save-state diarito-save-state--saved"><i class="fi fi-rr-check-circle"></i> Saved</span><span class="diarito-help">Edited 8m ago</span></div></div><div class="diarito-icon-actions"><button class="diarito-button diarito-button--secondary" type="button">Continue</button><div class="diarito-dropdown" data-diarito-dropdown><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" data-diarito-dropdown-trigger aria-expanded="false" aria-label="Draft actions"><i class="fi fi-rr-menu-dots-vertical"></i></button><div class="diarito-dropdown__menu" data-diarito-dropdown-menu hidden><button class="diarito-dropdown__item" type="button">Duplicate</button><button class="diarito-dropdown__item" type="button">Discard</button></div></div></div></div>
+            <div class="diarito-draft-row"><div class="diarito-draft-row__copy"><strong>Untitled entry</strong><span>오늘은...</span><div class="diarito-draft-row__meta"><span class="diarito-save-state diarito-save-state--unsaved"><i class="fi fi-rr-triangle-warning"></i> Unsaved changes</span><span class="diarito-help">Edited just now</span></div></div><div class="diarito-icon-actions"><button class="diarito-button diarito-button--secondary" type="button">Continue</button><div class="diarito-dropdown" data-diarito-dropdown><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" data-diarito-dropdown-trigger aria-expanded="false" aria-label="Draft actions"><i class="fi fi-rr-menu-dots-vertical"></i></button><div class="diarito-dropdown__menu" data-diarito-dropdown-menu hidden><button class="diarito-dropdown__item" type="button">Duplicate</button><button class="diarito-dropdown__item" type="button">Discard</button></div></div></div></div>
+          </div></div>
+        </article>
+
         <article class="docs-showcase"><div class="docs-showcase__head"><div><h3>Note cards</h3><p>Both variants use the same card header/body/footer contract. Only the ruled body changes the writing surface.</p></div></div>
           <div class="diarito-note-grid">
             <article class="diarito-card diarito-card--clip diarito-note-card">
               <header class="diarito-card__header diarito-note-card__header"><div class="diarito-note-card__meta"><span>Today · 3:12 PM</span><span class="diarito-visual-state is-pinned"><i class="fi fi-rr-thumbtack"></i> Pinned</span></div><h3>Ideas for the next iteration</h3></header>
               <div class="diarito-card__body diarito-note-card__body"><p>Keep the library strict enough that future screens rarely need local CSS. The useful part of the system is not that every page looks identical; it is that the shared pieces always behave like the same product.</p><p>When a new screen needs something different, the first question should be whether the component contract needs to grow, not whether that page deserves its own private styling universe.</p></div>
-              <footer class="diarito-card__footer diarito-note-card__footer"><div class="docs-demo-row"><span class="diarito-tag diarito-tag--dark">product</span><span class="diarito-tag diarito-tag--dark">ideas</span></div><div class="diarito-icon-actions"><button class="diarito-button diarito-button--ghost diarito-button--icon" aria-label="Locked note"><i class="fi fi-rr-lock"></i></button><button class="diarito-button diarito-button--ghost diarito-button--icon" aria-label="More note actions"><i class="fi fi-rr-menu-dots-vertical"></i></button></div></footer>
+              <footer class="diarito-card__footer diarito-note-card__footer"><div class="docs-demo-row"><span class="diarito-tag diarito-tag--dark">product</span><span class="diarito-tag diarito-tag--dark">ideas</span></div><div class="diarito-icon-actions"><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" aria-label="Locked note"><i class="fi fi-rr-lock"></i></button><div class="diarito-dropdown" data-diarito-dropdown data-diarito-dropdown-portal><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" data-diarito-dropdown-trigger aria-expanded="false" aria-label="More note actions"><i class="fi fi-rr-menu-dots-vertical"></i></button><div class="diarito-dropdown__menu" data-diarito-dropdown-menu hidden><button class="diarito-dropdown__item" type="button"><i class="fi fi-rr-pencil"></i> Edit</button><button class="diarito-dropdown__item" type="button"><i class="fi fi-rr-copy"></i> Duplicate</button><button class="diarito-dropdown__item" type="button"><i class="fi fi-rr-folder"></i> Move to collection</button><button class="diarito-dropdown__item" type="button"><i class="fi fi-rr-archive"></i> Archive</button></div></div></div></footer>
             </article>
             <article class="diarito-card diarito-card--clip diarito-note-card">
               <header class="diarito-card__header diarito-note-card__header"><div class="diarito-note-card__meta"><span>Yesterday · 9:40 PM</span><span class="diarito-visual-state"><i class="fi fi-rr-bookmark"></i> Journal</span></div><h3>Things I want to remember from today</h3></header>
               <div class="diarito-card__body diarito-note-card__body diarito-note-card__body--ruled"><p>I noticed that the phrases I remember best are the ones attached to an actual moment, not the ones I copied into a vocabulary list because a textbook told me they were useful.</p><p>Tomorrow I want to write down fewer things, but give each one enough context that I can understand why I saved it when I come back later.</p></div>
-              <footer class="diarito-card__footer diarito-note-card__footer"><div class="docs-demo-row"><span class="diarito-tag diarito-tag--dark">journal</span><span class="diarito-tag diarito-tag--gray">language</span></div><div class="diarito-icon-actions"><button class="diarito-button diarito-button--ghost diarito-button--icon" aria-label="Private note"><i class="fi fi-rr-lock"></i></button><button class="diarito-button diarito-button--ghost diarito-button--icon" aria-label="More note actions"><i class="fi fi-rr-menu-dots-vertical"></i></button></div></footer>
+              <footer class="diarito-card__footer diarito-note-card__footer"><div class="docs-demo-row"><span class="diarito-tag diarito-tag--dark">journal</span><span class="diarito-tag diarito-tag--gray">language</span></div><div class="diarito-icon-actions"><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" aria-label="Private note"><i class="fi fi-rr-lock"></i></button><div class="diarito-dropdown" data-diarito-dropdown data-diarito-dropdown-portal><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" data-diarito-dropdown-trigger aria-expanded="false" aria-label="More note actions"><i class="fi fi-rr-menu-dots-vertical"></i></button><div class="diarito-dropdown__menu" data-diarito-dropdown-menu hidden><button class="diarito-dropdown__item" type="button"><i class="fi fi-rr-pencil"></i> Edit</button><button class="diarito-dropdown__item" type="button"><i class="fi fi-rr-copy"></i> Duplicate</button><button class="diarito-dropdown__item" type="button"><i class="fi fi-rr-folder"></i> Move to collection</button><button class="diarito-dropdown__item" type="button"><i class="fi fi-rr-archive"></i> Archive</button></div></div></div></footer>
             </article>
           </div>
         </article>
@@ -603,16 +648,16 @@
             <section class="docs-rule-group"><h4>06 · Layout & spacing</h4><ul><li>Pages use <code>.diarito-section</code> + <code>.diarito-container</code> as the page-level contract.</li><li>Peer sections share the same max-width unless a deliberate reading-width pattern says otherwise.</li><li>Spacing comes from the shared scale.</li><li>Editorial/product documentation favors one central scrolling column over dashboard fragmentation.</li></ul></section>
             <section class="docs-rule-group"><h4>07 · Borders, radius & shadows</h4><ul><li>Cards, tables, form controls and overlays may use structural 1px borders.</li><li>Buttons, badges, tags, alerts, tabs and pagination remain borderless.</li><li>No border-left-only state accents.</li><li>Use the shared sharper radius scale.</li><li>Shadows are subtle and compact; no large spaced/blurred decorative shadows.</li></ul></section>
             <section class="docs-rule-group"><h4>08 · Cards & surfaces</h4><ul><li>Cards use semantic surfaces, structural borders and shared radius tokens.</li><li>Cards do not clip overlays by default; use <code>.diarito-card--clip</code> only when content genuinely needs clipping.</li><li>Header/body/footer separators are structural, not decoration.</li></ul></section>
-            <section class="docs-rule-group"><h4>09 · Buttons & actions</h4><ul><li>Small is the default button size; medium and large are opt-in.</li><li>Buttons use no border and do not jump on hover.</li><li>Icon-only buttons require an accessible label.</li><li>Button groups are for tightly related actions; unrelated CTAs remain visually separate.</li></ul></section>
-            <section class="docs-rule-group"><h4>10 · Forms</h4><ul><li>Inputs, selects and textareas use a semantic surface, neutral 1px border and visible focus state.</li><li>Form controls stay medium-height even though buttons default small.</li><li>Desktop forms may use columns; mobile collapses them when needed.</li><li>Input groups share one structural border rather than nesting multiple bordered controls.</li><li>Comboboxes keep visible labels separate from stored values and remain keyboard usable.</li><li>Dropzones handle file selection and drag/drop presentation only; upload business logic belongs to the product layer.</li></ul></section>
+            <section class="docs-rule-group"><h4>09 · Buttons & actions</h4><ul><li>Small is the default button size; medium and large are opt-in.</li><li>Buttons use no border and do not jump on hover.</li><li>Icon-only buttons require an accessible label.</li><li>Button groups visually resemble segmented controls, but each action may remain pressed independently; Tabs switch content panels and are mutually selected.</li><li>Unrelated CTAs remain visually separate.</li></ul></section>
+            <section class="docs-rule-group"><h4>10 · Forms</h4><ul><li>Inputs, selects, textareas, input groups and comboboxes belong to one form system and should be documented together.</li><li>Inputs, selects and textareas use a semantic surface, neutral 1px border and visible focus state.</li><li>Form controls stay medium-height even though buttons default small.</li><li>Desktop forms may use columns; mobile collapses them when needed.</li><li>Input groups share one structural border rather than nesting multiple bordered controls.</li><li>Comboboxes keep visible labels separate from stored values and remain keyboard usable.</li><li>Dropzones use the normal white surface; drag/drop state changes interaction feedback, not the entire visual language.</li><li>Upload business logic belongs to the product layer.</li></ul></section>
             <section class="docs-rule-group"><h4>11 · Navigation, tabs & accordion</h4><ul><li>Tabs have normal and selected states; avoid decorative hover choreography.</li><li>Segmented controls are for compact mode choices, not page-level navigation.</li><li>Breadcrumbs communicate hierarchy; pagination communicates position in a result set.</li><li>Scrollable tab rows hide their native scrollbar while remaining scrollable.</li><li>Accordions use accessible buttons with <code>aria-expanded</code>, smooth transitions and reduced-motion support.</li><li>Sticky navigation must not create stray borders or lines while scrolling.</li></ul></section>
-            <section class="docs-rule-group"><h4>12 · Overlays & dialogs</h4><ul><li>Overlay z-index values come from the shared layer scale.</li><li>A higher z-index cannot escape a clipped ancestor; clipping is opt-in on containers that may host overlays.</li><li>Dropdown, popover and combobox triggers expose expanded state and close with Escape.</li><li>Tooltips supplement labels; they never hide essential information.</li><li>Drawers are for contextual or mobile secondary surfaces, not replacements for every page.</li><li>Confirmation dialogs reuse the canonical modal/action hierarchy.</li></ul></section>
+            <section class="docs-rule-group"><h4>12 · Overlays & dialogs</h4><ul><li>Overlay z-index values come from the shared layer scale.</li><li>A higher z-index cannot escape a clipped ancestor; clipping is opt-in on containers that may host overlays.</li><li>Dropdown, popover and combobox triggers expose expanded state and close with Escape.</li><li>Tooltips supplement labels; they never hide essential information.</li><li>Drawers are for contextual or mobile secondary surfaces, not replacements for every page.</li><li>Confirmation dialogs use the exact same header/body/footer modal anatomy; only the message and destructive action differ.</li></ul></section>
             <section class="docs-rule-group"><h4>13 · Tables, lists & data</h4><ul><li>Tables prioritize readability and do not draw spreadsheet borders around every cell.</li><li>Administrative data tables use a shared toolbar, scroll container and pagination shell instead of page-specific chrome.</li><li>Bulk selection appears only after rows are selected and keeps the selected count visible.</li><li>Loading, empty and error states stay inside the table contract instead of replacing the whole page.</li><li>Long content truncates only when the column requires it.</li><li>Wide tables scroll horizontally inside their own shell. Standard table pages show 10 or 25 records per page and rely on page scrolling rather than an internal vertical scrollbar.</li><li>Status in dense data remains compact and semantic.</li></ul></section>
-            <section class="docs-rule-group"><h4>14 · Feedback, loading & empty states</h4><ul><li>Alerts communicate persistent page context; toasts communicate transient action results.</li><li>Do not turn every result into success green.</li><li>Skeletons represent content layout; spinners represent a smaller active wait.</li><li>Progress bars show measurable completion and only use semantic colors when the state itself has semantic meaning.</li><li>Empty states explain what is missing and offer one useful next action.</li><li>Loading belongs to the component waiting for data rather than blocking the whole page.</li></ul></section>
+            <section class="docs-rule-group"><h4>14 · Feedback, loading & empty states</h4><ul><li>Alerts communicate persistent page context; toasts communicate transient action results.</li><li>Do not turn every result into success green.</li><li>Skeletons represent content layout; spinners represent a smaller active wait.</li><li>Progress bars show measurable completion and only use semantic colors when the state itself has semantic meaning.</li><li>Inline autosave states use the semantic Tailwind 500 base so they stay lighter than alert/status text.</li><li>Empty states explain what is missing and offer one useful next action.</li><li>Loading belongs to the component waiting for data rather than blocking the whole page.</li></ul></section>
             <section class="docs-rule-group"><h4>15 · Responsive & accessibility</h4><ul><li>Desktop and mobile preserve the same visual language.</li><li>Grids collapse when appropriate; navigation transforms rather than merely shrinking.</li><li>Visible focus is never removed.</li><li>Tabs, accordions and dropdowns expose their state with ARIA.</li><li>Respect <code>prefers-reduced-motion</code>.</li></ul></section>
             <section class="docs-rule-group"><h4>16 · Code hygiene & prohibited patterns</h4><ul><li>No Bootstrap or heavy UI framework unless deliberately approved later.</li><li>No decorative color gradients in the core system. Structural line patterns are allowed for the ruled-note body and the documentation hero grid.</li><li>No reusable inline CSS in product screens.</li><li>No arbitrary page-specific clones of shared components.</li><li>No backend, authentication or product business logic inside the UI library.</li><li>Use Flaticon UIcons consistently for the current icon language.</li></ul></section>
             <section class="docs-rule-group"><h4>17 · React migration contract</h4><ul><li>HTML/CSS remains the visual specification until screens are approved.</li><li>React components map to the approved library rather than inventing a second design system.</li><li>Props represent deliberate variants that already exist in the contract.</li><li>The shared system should prevent the “90% consistent, 10% floating” problem by construction.</li></ul></section>
-            <section class="docs-rule-group"><h4>18 · Diarito product patterns</h4><ul><li>Published entries, private notes and feed items share primitives but remain distinct product patterns.</li><li>Entry actions reuse the same action contract in cards, feeds and comments.</li><li>Visibility, mood and language-practice controls compose existing segmented, tag and card components instead of creating new control families.</li><li>Autosave state stays inline with writing; transient publish results use toast feedback.</li><li>Community patterns preserve identity context with avatars, usernames, timestamps and accessible action labels.</li><li>Diary-specific patterns such as date dividers, prompts and streaks should feel quieter than the writing itself.</li></ul></section>
+            <section class="docs-rule-group"><h4>18 · Diarito product patterns</h4><ul><li>Published entries, private notes and feed items share primitives but remain distinct product patterns.</li><li>Entry actions reuse the same action contract in cards, feeds and comments.</li><li>Visibility, mood and language-practice controls compose existing segmented, tag and card components instead of creating new control families.</li><li>Autosave state stays inline with writing; transient publish results use toast feedback.</li><li>Link previews, quoted entries, share/access panels and draft rows compose existing primitives instead of nesting full screens or cards inside each other.</li><li>Community patterns preserve identity context with avatars, usernames, timestamps and accessible action labels.</li><li>Diary-specific patterns such as date dividers, prompts and streaks should feel quieter than the writing itself.</li></ul></section>
             <section class="docs-rule-group"><h4>19 · Final review checklist</h4><ol><li>Does it reuse an existing component?</li><li>Does it use semantic tokens rather than raw values?</li><li>Does it align to the correct section/container width?</li><li>Are spacing and radius values from the scale?</li><li>Do semantic states use the correct meaning and accessible text?</li><li>Does it work in light and dark?</li><li>Does it remain usable on mobile and keyboard?</li><li>Would it still make sense outside this one screen?</li></ol></section>
           </div>
         </article>
@@ -621,7 +666,7 @@
 
     <footer class="docs-footer">
       <div class="docs-footer__block docs-footer__block--main"><div class="docs-footer__block-inner diarito-container docs-container"><div class="docs-footer__main">
-        <div class="docs-footer__brand"><a class="diarito-brand" href="#overview"><span class="diarito-brand__mark">D</span><span>Diarito</span></a><p>A reusable HTML, CSS and native JavaScript design system for a quieter, more consistent Diarito.</p><span class="diarito-tag diarito-tag--gray">UI Library v2.4.0</span></div>
+        <div class="docs-footer__brand"><a class="diarito-brand" href="#overview"><span class="diarito-brand__mark">D</span><span>Diarito</span></a><p>A reusable HTML, CSS and native JavaScript design system for a quieter, more consistent Diarito.</p><span class="diarito-tag diarito-tag--gray">UI Library v2.5.0</span></div>
         <div class="docs-footer__links"><div class="docs-footer__group"><span class="docs-footer__label">Library</span><a href="#foundation">Foundation</a><a href="#components">Components</a><a href="#feedback">Feedback</a><a href="#data">Data</a></div><div class="docs-footer__group"><span class="docs-footer__label">Product patterns</span><a href="#feed">Feed</a><a href="#patterns">Diarito patterns</a><a href="#rules">Rules</a></div><div class="docs-footer__group"><span class="docs-footer__label">Project</span><a href="https://github.com/nickramen/diarito-ui">GitHub</a><a href="README.md">README</a><a href="docs/CHANGELOG.md">Changelog</a></div></div>
       </div></div></div>
       <div class="docs-footer__block docs-footer__block--social"><div class="docs-footer__block-inner diarito-container docs-container"><span class="docs-footer__label">Diarito around the web</span><div class="docs-footer__social-grid"><a class="docs-footer__social-link" href="#" aria-label="Discord demo link"><i class="fi fi-rr-users-alt"></i><span>Discord</span></a><a class="docs-footer__social-link" href="#" aria-label="X demo link"><i class="fi fi-rr-at"></i><span>X</span></a><a class="docs-footer__social-link" href="#" aria-label="Reddit demo link"><i class="fi fi-rr-comment-alt"></i><span>Reddit</span></a><a class="docs-footer__social-link" href="#" aria-label="TikTok demo link"><i class="fi fi-rr-play-alt"></i><span>TikTok</span></a><a class="docs-footer__social-link" href="#" aria-label="Instagram demo link"><i class="fi fi-rr-camera"></i><span>Instagram</span></a></div></div></div>
@@ -629,7 +674,7 @@
     </footer>
   </main>
 
-  <script src="assets/js/diarito.js?v=2.4.0"></script>
-  <script src="assets/js/library-docs.js?v=2.4.0"></script>
+  <script src="assets/js/diarito.js?v=2.5.0"></script>
+  <script src="assets/js/library-docs.js?v=2.5.0"></script>
 </body>
 </html>

@@ -362,9 +362,9 @@
 .diarito-prompt-card__question { max-width: 40rem; margin: 0; font-size: clamp(1.5rem,4vw,2.2rem); line-height: 1.1; letter-spacing: -.025em; }
 
 .diarito-save-state { display: inline-flex; align-items: center; gap: .4rem; min-height: 1.75rem; color: var(--diarito-color-text-muted); font-size: var(--diarito-text-xs); }
-.diarito-save-state--saving { color: var(--diarito-info-text); }
-.diarito-save-state--saved { color: var(--diarito-success-text); }
-.diarito-save-state--unsaved { color: var(--diarito-warning-text); }
+.diarito-save-state--saving { color: var(--diarito-info); }
+.diarito-save-state--saved { color: var(--diarito-success); }
+.diarito-save-state--unsaved { color: var(--diarito-warning); }
 .diarito-save-state--draft { color: var(--diarito-color-text-muted); }
 
 .diarito-notification-item { display: grid; grid-template-columns: auto minmax(0,1fr) auto; align-items: start; gap: var(--diarito-space-3); padding: var(--diarito-space-4); border-bottom: var(--diarito-border); }
@@ -411,4 +411,67 @@
   .diarito-media-group__item--wide { grid-column: auto; }
   .diarito-language-practice__row { grid-template-columns: 1fr; gap: var(--diarito-space-2); }
   .diarito-streak-grid { grid-template-columns: repeat(7,1fr); }
+}
+
+
+/* Link preview */
+.diarito-link-preview {
+  display: grid;
+  grid-template-columns: minmax(8rem,.32fr) minmax(0,1fr);
+  overflow: hidden;
+  border: var(--diarito-border-strong);
+  border-radius: var(--diarito-radius-md);
+  color: var(--diarito-color-text-strong);
+  background: var(--diarito-color-surface);
+}
+.diarito-link-preview__media {
+  min-height: 9rem;
+  display: grid;
+  place-items: center;
+  color: var(--diarito-color-text-muted);
+  background: var(--diarito-color-control);
+}
+.diarito-link-preview__body { min-width: 0; display: grid; align-content: center; gap: .35rem; padding: var(--diarito-space-4); }
+.diarito-link-preview__domain { color: var(--diarito-color-text-muted); font-size: var(--diarito-text-xs); }
+.diarito-link-preview__body p { margin: 0; color: var(--diarito-color-text-secondary); font-size: var(--diarito-text-sm); }
+
+/* Quoted / reposted entry */
+.diarito-quote-entry {
+  display: grid;
+  gap: var(--diarito-space-3);
+  padding: var(--diarito-space-4);
+  border: var(--diarito-border-strong);
+  border-radius: var(--diarito-radius-md);
+  background: var(--diarito-color-surface-soft);
+}
+.diarito-quote-entry__header { display: flex; align-items: center; gap: var(--diarito-space-2); color: var(--diarito-color-text-muted); font-size: var(--diarito-text-xs); }
+.diarito-quote-entry__header strong { color: var(--diarito-color-text-strong); }
+.diarito-quote-entry__body { color: var(--diarito-color-text-secondary); font-size: var(--diarito-text-sm); }
+.diarito-quote-entry__body p { margin: 0; }
+
+/* Share & access */
+.diarito-share-access { display: grid; gap: var(--diarito-space-5); }
+.diarito-share-access__section { display: grid; gap: var(--diarito-space-3); }
+.diarito-share-access__section + .diarito-share-access__section { padding-top: var(--diarito-space-5); border-top: var(--diarito-border); }
+.diarito-share-access__people { display: grid; gap: var(--diarito-space-2); }
+.diarito-share-person { display: flex; align-items: center; gap: var(--diarito-space-3); padding: var(--diarito-space-2) 0; }
+.diarito-share-person__copy { min-width: 0; flex: 1; }
+.diarito-share-person__copy strong,
+.diarito-share-person__copy span { display: block; }
+.diarito-share-person__copy span { margin-top: .1rem; color: var(--diarito-color-text-muted); font-size: var(--diarito-text-xs); }
+
+/* Draft rows */
+.diarito-draft-list { display: grid; }
+.diarito-draft-row { display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: var(--diarito-space-4); padding: var(--diarito-space-4) 0; border-bottom: var(--diarito-border); }
+.diarito-draft-row:last-child { border-bottom: 0; }
+.diarito-draft-row__copy { min-width: 0; }
+.diarito-draft-row__copy strong,
+.diarito-draft-row__copy span { display: block; }
+.diarito-draft-row__copy span { margin-top: .25rem; overflow: hidden; color: var(--diarito-color-text-muted); font-size: var(--diarito-text-xs); text-overflow: ellipsis; white-space: nowrap; }
+.diarito-draft-row__meta { display: flex; align-items: center; gap: var(--diarito-space-3); margin-top: .45rem; }
+
+@media (max-width: 48rem) {
+  .diarito-link-preview { grid-template-columns: 1fr; }
+  .diarito-link-preview__media { min-height: 7rem; }
+  .diarito-draft-row { grid-template-columns: 1fr; }
 }

@@ -1,8 +1,8 @@
-# Diarito UI Library 2.4.0
+# Diarito UI Library 2.5.0
 
 Diarito's reusable HTML, CSS and native JavaScript design system.
 
-Version 2.4.0 adds the Diarito-specific writing, publishing, diary and community pattern layer while keeping the library HTML + CSS + native JavaScript only.
+Version 2.5.0 consolidates the component library around clearer form, action, dialog and diary-sharing contracts while keeping the system HTML + CSS + native JavaScript only.
 
 
 
@@ -11,6 +11,38 @@ Version 2.4.0 adds the Diarito-specific writing, publishing, diary and community
 
 
 
+
+
+## 2.5.0 consolidation and missing product patterns
+
+This release refines existing contracts before adding more UI:
+
+- Button groups now use the same quiet selected-surface language as segmented/tabs, while remaining independently toggleable.
+- Input groups and combobox/autocomplete examples now live inside the canonical Forms showcase.
+- Dropzones use the standard white surface instead of a gray filled panel.
+- Confirmation dialogs use the exact same modal header/body/footer anatomy as regular modals.
+- Draft/autosave semantic text uses the Tailwind 500 base colors.
+- Both Note Card ellipsis actions now open the reusable portaled dropdown.
+- Added generic copy-to-clipboard behavior for existing Input Group copy actions.
+
+Four additional Diarito patterns were added after reviewing the diary/posting workflow:
+
+1. Link preview / embed.
+2. Quoted / reposted entry.
+3. Share & access panel.
+4. Draft entry row.
+
+A real @mention example was added through the existing combobox contract rather than introducing another autocomplete component.
+
+Reusable additions:
+
+```text
+diarito-link-preview
+diarito-quote-entry
+diarito-share-access / diarito-share-person
+diarito-draft-list / diarito-draft-row
+data-diarito-copy
+```
 
 ## 2.4.0 Diarito product-language layer
 
@@ -335,6 +367,7 @@ diarito-button--block
 - drawer / offcanvas open/close;
 - popover open/close;
 - toast creation/dismissal;
+- copy-to-clipboard actions;
 - dismissible feedback;
 - bulk-table selection;
 - Escape handling for reusable overlays.
@@ -355,6 +388,10 @@ React remains out of scope for this phase. Once real screens are visually approv
 .diarito-entry-card      -> <EntryCard />
 .diarito-entry-actions   -> <EntryActions />
 .diarito-comment         -> <Comment />
+.diarito-link-preview    -> <LinkPreview />
+.diarito-quote-entry     -> <QuotedEntry />
+.diarito-share-access    -> <ShareAccess />
+.diarito-draft-row       -> <DraftRow />
 .diarito-note-card       -> <NoteCard />
 .diarito-collection-item -> <CollectionItem />
 ```
