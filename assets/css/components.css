@@ -185,15 +185,25 @@
   display: inline-flex;
   align-items: center;
   gap: .15rem;
-  padding: .2rem;
+  padding: .25rem;
   border-radius: var(--diarito-radius-sm);
   background: var(--diarito-color-control);
 }
-.diarito-button-group .diarito-button { min-width: 0; }
+.diarito-button-group .diarito-button {
+  min-width: 0;
+  color: var(--diarito-color-text-muted);
+  background: transparent;
+  box-shadow: none;
+}
+.diarito-button-group .diarito-button:hover {
+  color: var(--diarito-color-text-strong);
+  background: transparent;
+}
 .diarito-button-group .diarito-button.is-active,
 .diarito-button-group .diarito-button[aria-pressed="true"] {
-  color: var(--diarito-color-action-fg);
-  background: var(--diarito-color-action-bg);
+  color: var(--diarito-color-text-strong);
+  background: var(--diarito-color-surface);
+  box-shadow: var(--diarito-shadow-xs);
 }
 .diarito-button-group--block { width: 100%; }
 .diarito-button-group--block .diarito-button { flex: 1 1 0; }
@@ -285,15 +295,18 @@
   border: 1px dashed var(--diarito-color-border-strong);
   border-radius: var(--diarito-radius-md);
   color: var(--diarito-color-text-secondary);
-  background: var(--diarito-color-surface-soft);
+  background: var(--diarito-color-surface);
   text-align: center;
   cursor: pointer;
   transition: border-color var(--diarito-transition-fast), background var(--diarito-transition-fast);
 }
-.diarito-dropzone:hover,
-.diarito-dropzone.is-dragover {
+.diarito-dropzone:hover {
   border-color: var(--diarito-color-text-subtle);
-  background: var(--diarito-color-control);
+  background: var(--diarito-color-surface-soft);
+}
+.diarito-dropzone.is-dragover {
+  border-color: var(--diarito-color-action-bg);
+  background: var(--diarito-color-surface-soft);
 }
 .diarito-dropzone input[type="file"] { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
 .diarito-dropzone__icon { width: 3rem; height: 3rem; display: grid; place-items: center; border-radius: var(--diarito-radius-sm); color: var(--diarito-color-text-strong); background: var(--diarito-color-control); }
@@ -496,10 +509,9 @@
 .diarito-popover__panel[hidden] { display: none; }
 .diarito-popover__panel p { margin: .35rem 0 0; color: var(--diarito-color-text-muted); font-size: var(--diarito-text-sm); }
 
-/* Confirmation dialog */
-.diarito-confirm { width: min(calc(100% - 2rem), 28rem); }
-.diarito-confirm__content { display: grid; justify-items: center; gap: var(--diarito-space-3); text-align: center; }
-.diarito-confirm__icon { width: 3rem; height: 3rem; display: grid; place-items: center; border-radius: var(--diarito-radius-sm); color: var(--diarito-error-text); background: var(--diarito-error-soft); }
+/* Confirmation dialogs reuse the canonical modal structure.
+   The semantic class is intentionally visual-rule free. */
+.diarito-confirm {}
 
 /* Motion preferences */
 @media (prefers-reduced-motion: reduce) {
