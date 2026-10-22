@@ -189,4 +189,43 @@
     });
   });
 
+
+  document.querySelectorAll('[data-demo-reply-composer]').forEach((composer) => {
+    const input = composer.querySelector('[data-demo-reply-input]');
+    const submit = composer.querySelector('[data-demo-reply-submit]');
+    const list = composer.parentElement?.querySelector('[data-demo-reply-list]');
+    if (!input || !submit || !list) return;
+
+    const publishReply = () => {
+      const value = input.value.trim();
+      if (!value) return;
+      const article = document.createElement('article');
+      article.className = 'diarito-comment';
+      article.innerHTML = `
+        <span class="diarito-avatar">N</span>
+        <div class="diarito-comment__main">
+          <div class="diarito-comment__header"><strong>nickramen</strong><span>· now</span></div>
+          <div class="diarito-comment__body"><p></p></div>
+          <div class="diarito-comment__actions"><button class="diarito-entry-action" type="button">Reply</button></div>
+        </div>`;
+      article.querySelector('p').textContent = value;
+      list.prepend(article);
+      input.value = '';
+      input.focus();
+    };
+
+    submit.addEventListener('click', publishReply);
+    input.addEventListener('keydown', (event) => {
+      if ((event.ctrlKey || event.metaKey) && event.key === 'Enter') publishReply();
+    });
+  });
+
+  document.querySelectorAll('[data-diarito-toggle="accept-correction"]').forEach((button) => {
+    button.addEventListener('diarito:togglechange', (event) => {
+      button.innerHTML = event.detail?.active
+        ? '<i class="fi fi-rr-check"></i> Accepted'
+        : '<i class="fi fi-rr-check"></i> Accept suggestion';
+    });
+  });
+
 })();
