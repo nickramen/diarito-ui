@@ -1,5 +1,18 @@
 # Changelog
 
+## 2.6.0 - Diary interaction completion
+
+- Matched Button Group sizing more closely to the Tabs visual rhythm while preserving independent pressed states.
+- Kept Dropzone on the canonical surface color during hover and drag-over.
+- Added Inline reply composer.
+- Added Long entry / Read more.
+- Added Profile / author header.
+- Added Mention token with reusable remove behavior.
+- Added Language correction / suggestion.
+- Added generic expandable-entry behavior.
+- Added demo reply publishing and correction acceptance.
+- Extended Diarito product-pattern governance for replies, long posts, profiles, mentions and corrections.
+
 ## 2.5.0 - Consolidation and missing product patterns
 
 - Reworked Button Group to use a quiet selected surface while preserving independent pressed states.
