@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Diarito UI Library 2.5.0</title>
+  <title>Diarito UI Library 2.6.0</title>
   <meta name="description" content="Diarito HTML, CSS and native JavaScript UI component library.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Englebert&family=Noto+Sans+KR:wght@400;500;600;700&family=Poor+Story&family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
-  <link rel="stylesheet" href="assets/css/diarito-system.css?v=2.5.0">
-  <link rel="stylesheet" href="assets/css/docs-library.css?v=2.5.0">
+  <link rel="stylesheet" href="assets/css/diarito-system.css?v=2.6.0">
+  <link rel="stylesheet" href="assets/css/docs-library.css?v=2.6.0">
 </head>
 <body class="docs-body">
   <header class="docs-topbar">
@@ -20,7 +20,7 @@
         <span>Diarito</span>
       </a>
       <div class="docs-topbar__actions">
-        <span class="diarito-tag">v2.5.0</span>
+        <span class="diarito-tag">v2.6.0</span>
         <button class="diarito-button diarito-button--secondary" type="button" data-diarito-theme-toggle aria-pressed="false" aria-label="Switch to dark theme"><i class="fi fi-rr-moon"></i><span data-diarito-theme-label>Dark</span></button>
         <a class="diarito-button diarito-button--primary" href="#components">View components</a>
       </div>
@@ -32,7 +32,7 @@
       <div class="docs-hero__inner diarito-container docs-container">
         <span class="diarito-kicker">Diarito UI Library · HTML + CSS + JS</span>
         <h1 class="diarito-display">A quieter system with stronger structure.</h1>
-        <p>Version 2.5.0 refines forms, grouped actions, dialogs and note actions, then adds the remaining sharing, draft and repost patterns needed for a more complete Diarito product language.</p>
+        <p>Version 2.6.0 completes the next layer of Diarito interaction patterns with inline replies, long-entry expansion, full profile identity, mention tokens and language correction feedback.</p>
         <div class="docs-hero__meta">
           <span class="diarito-chip"><i class="fi fi-rr-code-simple"></i> HTML + CSS</span>
           <span class="diarito-chip"><i class="fi fi-rr-settings-sliders"></i> Native JS only</span>
@@ -719,7 +719,7 @@
             <section class="docs-rule-group"><h4>15 · Responsive & accessibility</h4><ul><li>Desktop and mobile preserve the same visual language.</li><li>Grids collapse when appropriate; navigation transforms rather than merely shrinking.</li><li>Visible focus is never removed.</li><li>Tabs, accordions and dropdowns expose their state with ARIA.</li><li>Respect <code>prefers-reduced-motion</code>.</li></ul></section>
             <section class="docs-rule-group"><h4>16 · Code hygiene & prohibited patterns</h4><ul><li>No Bootstrap or heavy UI framework unless deliberately approved later.</li><li>No decorative color gradients in the core system. Structural line patterns are allowed for the ruled-note body and the documentation hero grid.</li><li>No reusable inline CSS in product screens.</li><li>No arbitrary page-specific clones of shared components.</li><li>No backend, authentication or product business logic inside the UI library.</li><li>Use Flaticon UIcons consistently for the current icon language.</li></ul></section>
             <section class="docs-rule-group"><h4>17 · React migration contract</h4><ul><li>HTML/CSS remains the visual specification until screens are approved.</li><li>React components map to the approved library rather than inventing a second design system.</li><li>Props represent deliberate variants that already exist in the contract.</li><li>The shared system should prevent the “90% consistent, 10% floating” problem by construction.</li></ul></section>
-            <section class="docs-rule-group"><h4>18 · Diarito product patterns</h4><ul><li>Published entries, private notes and feed items share primitives but remain distinct product patterns.</li><li>Entry actions reuse the same action contract in cards, feeds and comments.</li><li>Visibility, mood and language-practice controls compose existing segmented, tag and card components instead of creating new control families.</li><li>Autosave state stays inline with writing; transient publish results use toast feedback.</li><li>Link previews, quoted entries, share/access panels and draft rows compose existing primitives instead of nesting full screens or cards inside each other.</li><li>Community patterns preserve identity context with avatars, usernames, timestamps and accessible action labels.</li><li>Diary-specific patterns such as date dividers, prompts and streaks should feel quieter than the writing itself.</li></ul></section>
+            <section class="docs-rule-group"><h4>18 · Diarito product patterns</h4><ul><li>Published entries, private notes and feed items share primitives but remain distinct product patterns.</li><li>Entry actions reuse the same action contract in cards, feeds and comments.</li><li>Visibility, mood and language-practice controls compose existing segmented, tag and card components instead of creating new control families.</li><li>Autosave state stays inline with writing; transient publish results use toast feedback.</li><li>Link previews, quoted entries, share/access panels and draft rows compose existing primitives instead of nesting full screens or cards inside each other.</li><li>Inline reply composers stay attached to the conversation they affect; they do not open a modal for ordinary replies.</li><li>Long entries collapse inside the existing entry card and preserve the same card contract when expanded.</li><li>Profile headers expand identity context while member mini-profiles remain compact popover/discovery surfaces.</li><li>Mention tokens are selected identities, not a second autocomplete system.</li><li>Language corrections compare original and suggestion without turning Diarito into a separate translation workspace.</li><li>Community patterns preserve identity context with avatars, usernames, timestamps and accessible action labels.</li><li>Diary-specific patterns such as date dividers, prompts and streaks should feel quieter than the writing itself.</li></ul></section>
             <section class="docs-rule-group"><h4>19 · Final review checklist</h4><ol><li>Does it reuse an existing component?</li><li>Does it use semantic tokens rather than raw values?</li><li>Does it align to the correct section/container width?</li><li>Are spacing and radius values from the scale?</li><li>Do semantic states use the correct meaning and accessible text?</li><li>Does it work in light and dark?</li><li>Does it remain usable on mobile and keyboard?</li><li>Would it still make sense outside this one screen?</li></ol></section>
           </div>
         </article>
@@ -728,7 +728,7 @@
 
     <footer class="docs-footer">
       <div class="docs-footer__block docs-footer__block--main"><div class="docs-footer__block-inner diarito-container docs-container"><div class="docs-footer__main">
-        <div class="docs-footer__brand"><a class="diarito-brand" href="#overview"><span class="diarito-brand__mark">D</span><span>Diarito</span></a><p>A reusable HTML, CSS and native JavaScript design system for a quieter, more consistent Diarito.</p><span class="diarito-tag diarito-tag--gray">UI Library v2.5.0</span></div>
+        <div class="docs-footer__brand"><a class="diarito-brand" href="#overview"><span class="diarito-brand__mark">D</span><span>Diarito</span></a><p>A reusable HTML, CSS and native JavaScript design system for a quieter, more consistent Diarito.</p><span class="diarito-tag diarito-tag--gray">UI Library v2.6.0</span></div>
         <div class="docs-footer__links"><div class="docs-footer__group"><span class="docs-footer__label">Library</span><a href="#foundation">Foundation</a><a href="#components">Components</a><a href="#feedback">Feedback</a><a href="#data">Data</a></div><div class="docs-footer__group"><span class="docs-footer__label">Product patterns</span><a href="#feed">Feed</a><a href="#patterns">Diarito patterns</a><a href="#rules">Rules</a></div><div class="docs-footer__group"><span class="docs-footer__label">Project</span><a href="https://github.com/nickramen/diarito-ui">GitHub</a><a href="README.md">README</a><a href="docs/CHANGELOG.md">Changelog</a></div></div>
       </div></div></div>
       <div class="docs-footer__block docs-footer__block--social"><div class="docs-footer__block-inner diarito-container docs-container"><span class="docs-footer__label">Diarito around the web</span><div class="docs-footer__social-grid"><a class="docs-footer__social-link" href="#" aria-label="Discord demo link"><i class="fi fi-rr-users-alt"></i><span>Discord</span></a><a class="docs-footer__social-link" href="#" aria-label="X demo link"><i class="fi fi-rr-at"></i><span>X</span></a><a class="docs-footer__social-link" href="#" aria-label="Reddit demo link"><i class="fi fi-rr-comment-alt"></i><span>Reddit</span></a><a class="docs-footer__social-link" href="#" aria-label="TikTok demo link"><i class="fi fi-rr-play-alt"></i><span>TikTok</span></a><a class="docs-footer__social-link" href="#" aria-label="Instagram demo link"><i class="fi fi-rr-camera"></i><span>Instagram</span></a></div></div></div>
@@ -736,7 +736,7 @@
     </footer>
   </main>
 
-  <script src="assets/js/diarito.js?v=2.5.0"></script>
-  <script src="assets/js/library-docs.js?v=2.5.0"></script>
+  <script src="assets/js/diarito.js?v=2.6.0"></script>
+  <script src="assets/js/library-docs.js?v=2.6.0"></script>
 </body>
 </html>
