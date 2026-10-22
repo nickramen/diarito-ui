@@ -1,8 +1,8 @@
-# Diarito UI Library 2.5.0
+# Diarito UI Library 2.6.0
 
 Diarito's reusable HTML, CSS and native JavaScript design system.
 
-Version 2.5.0 consolidates the component library around clearer form, action, dialog and diary-sharing contracts while keeping the system HTML + CSS + native JavaScript only.
+Version 2.6.0 adds the remaining high-value diary/posting interaction patterns while keeping the system HTML + CSS + native JavaScript only.
 
 
 
@@ -12,6 +12,37 @@ Version 2.5.0 consolidates the component library around clearer form, action, di
 
 
 
+
+
+## 2.6.0 interaction patterns for real diary screens
+
+This release keeps the 2.5.0 consolidation work and adds five missing patterns that appear naturally in real Diarito screens:
+
+1. Inline reply composer.
+2. Long entry / Read more.
+3. Profile / author header.
+4. Mention token.
+5. Language correction / suggestion.
+
+Additional refinements:
+
+- Button Group sizing now matches the visual rhythm of Tabs more closely while preserving independent `aria-pressed` states.
+- Dropzone keeps the canonical surface color on hover and drag-over; interaction is communicated through the border rather than filling the area gray.
+- Added generic read-more behavior.
+- Added generic removable-token behavior.
+- Added demo reply publishing and correction-accept states.
+
+Reusable additions:
+
+```text
+diarito-reply-composer
+diarito-expandable-entry
+diarito-profile-header
+diarito-mention-token
+diarito-correction
+data-diarito-expandable
+data-diarito-token-remove
+```
 
 ## 2.5.0 consolidation and missing product patterns
 
@@ -368,6 +399,8 @@ diarito-button--block
 - popover open/close;
 - toast creation/dismissal;
 - copy-to-clipboard actions;
+- long-entry read-more expansion;
+- removable mention/token actions;
 - dismissible feedback;
 - bulk-table selection;
 - Escape handling for reusable overlays.
@@ -388,6 +421,11 @@ React remains out of scope for this phase. Once real screens are visually approv
 .diarito-entry-card      -> <EntryCard />
 .diarito-entry-actions   -> <EntryActions />
 .diarito-comment         -> <Comment />
+.diarito-reply-composer  -> <ReplyComposer />
+.diarito-expandable-entry -> <ExpandableEntry />
+.diarito-profile-header  -> <ProfileHeader />
+.diarito-mention-token   -> <MentionToken />
+.diarito-correction      -> <LanguageCorrection />
 .diarito-link-preview    -> <LinkPreview />
 .diarito-quote-entry     -> <QuotedEntry />
 .diarito-share-access    -> <ShareAccess />
