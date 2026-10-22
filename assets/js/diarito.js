@@ -166,6 +166,34 @@
     button.addEventListener('click', () => button.closest('[data-diarito-dismissible]')?.remove());
   });
 
+  document.querySelectorAll('[data-diarito-expandable]').forEach((root) => {
+    const toggle = root.querySelector('[data-diarito-expandable-toggle]');
+    if (!toggle) return;
+    const collapsedLabel = toggle.dataset.diaritoCollapsedLabel || toggle.textContent.trim() || 'Read more';
+    const expandedLabel = toggle.dataset.diaritoExpandedLabel || 'Show less';
+
+    toggle.addEventListener('click', () => {
+      const expanded = !root.classList.contains('is-expanded');
+      root.classList.toggle('is-expanded', expanded);
+      toggle.setAttribute('aria-expanded', String(expanded));
+      const label = expanded ? expandedLabel : collapsedLabel;
+      const icon = expanded ? 'fi fi-rr-angle-small-up' : 'fi fi-rr-angle-small-down';
+      toggle.innerHTML = `${label} <i class="${icon}"></i>`;
+    });
+  });
+
+  document.querySelectorAll('[data-diarito-token-remove]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const token = button.closest('.diarito-mention-token');
+      const label = token?.textContent.trim() || 'mention';
+      token?.remove();
+      button.dispatchEvent(new CustomEvent('diarito:tokenremove', {
+        bubbles: true,
+        detail: { label }
+      }));
+    });
+  });
+
   document.querySelectorAll('[data-diarito-segmented]').forEach((root) => {
     const items = [...root.querySelectorAll('[data-diarito-segment]')];
     items.forEach((item) => item.addEventListener('click', () => {
