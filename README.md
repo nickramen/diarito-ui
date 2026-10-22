@@ -1,8 +1,8 @@
-# Diarito UI Library 2.8.0
+# Diarito UI Library 2.9.0
 
 Diarito's reusable HTML, CSS and native JavaScript design system.
 
-Version 2.8.0 refines the OIO, correction and published-entry visuals and introduces an experimental mixed feed for evaluating Daily Question responses with the Note card language.
+Version 2.9.0 unifies the Diary entry and Note card visual language into one canonical Diary entry family.
 
 
 
@@ -13,6 +13,29 @@ Version 2.8.0 refines the OIO, correction and published-entry visuals and introd
 
 
 
+
+## 2.9.0 unified Diary entry family
+
+- Diary entry bodies now use the ruled writing treatment that previously made Note cards visually distinct.
+- Entry footers use icon + numeric count for likes, comments, corrections, saves and shares.
+- Public visibility is implicit; the Community label/icon is removed from Diary entry footers.
+- Added an optional private-entry lock indicator for owner-profile contexts.
+- Diary entry examples now cover text-only, single-image and multi-image gallery variants.
+- Media stays at the end of the entry body; tags sit before media.
+- Added a compact gallery layout with a +N overlay for additional photos.
+- Daily Question responses now use the same Diary entry card rather than a separate Note card surface.
+- Removed Note cards as a standalone documented component; compact Note previews are reframed as Entry previews.
+- Legacy Note card CSS remains temporarily for compatibility but is no longer the canonical product surface.
+
+Reusable additions:
+
+```text
+diarito-entry-gallery
+diarito-entry-gallery__item
+diarito-entry-gallery__item--more
+diarito-entry-card__privacy
+diarito-daily-response-card__question
+```
 
 ## 2.8.0 visual refinement and mixed-feed experiment
 
@@ -469,7 +492,6 @@ React remains out of scope for this phase. Once real screens are visually approv
 .diarito-quote-entry     -> <QuotedEntry />
 .diarito-share-access    -> <ShareAccess />
 .diarito-draft-row       -> <DraftRow />
-.diarito-note-card       -> <NoteCard />
 .diarito-collection-item -> <CollectionItem />
 ```
 

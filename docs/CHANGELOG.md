@@ -1,5 +1,18 @@
 # Changelog
 
+## 2.9.0 - Unified Diary entry family
+
+- Merged the ruled Note card writing treatment into the canonical Diary entry body.
+- Simplified Diary entry actions to icon + count and added correction counts before saves.
+- Removed Community visibility metadata from published-entry footers.
+- Added an optional lock treatment for private entries in owner-profile contexts.
+- Added text-only, single-image and multi-image Diary entry examples.
+- Added a responsive photo gallery with +N overflow overlay.
+- Kept tags on Diary entries and moved media to the end of the body.
+- Converted Daily Question responses to the same Diary entry component.
+- Removed Note cards as a standalone documentation showcase and reframed Note previews as Entry previews.
+
+
 ## 2.8.0 - Visual refinement and mixed feed experiment
 
 - Reworked OIO to match the shared card/progress language.
