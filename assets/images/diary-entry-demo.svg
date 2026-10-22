@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+<title id="title">Quiet cafe study moment</title>
+<desc id="desc">A stylized cafe table with a notebook, coffee cup, plant and window light.</desc>
+<defs>
+  <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#f7f5ef"/>
+    <stop offset="1" stop-color="#e9edf0"/>
+  </linearGradient>
+  <linearGradient id="window" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#dfeef4"/>
+    <stop offset="1" stop-color="#f8fbfc"/>
+  </linearGradient>
+</defs>
+<rect width="1200" height="760" fill="url(#wall)"/>
+<rect x="690" y="70" width="390" height="330" rx="18" fill="#fff" stroke="#d7dce0" stroke-width="8"/>
+<rect x="718" y="98" width="334" height="274" rx="8" fill="url(#window)"/>
+<path d="M718 290c90-78 158-66 220 0 40 42 75 54 114 22v60H718z" fill="#c8d7ca"/>
+<path d="M718 322c92-40 180-24 334 20v30H718z" fill="#aebfae"/>
+<rect y="480" width="1200" height="280" fill="#73706c"/>
+<ellipse cx="610" cy="515" rx="475" ry="72" fill="#8b8782"/>
+<rect x="214" y="438" width="470" height="220" rx="16" fill="#f7f1df" stroke="#d8d0bc" stroke-width="6" transform="rotate(-4 214 438)"/>
+<line x1="280" y1="500" x2="596" y2="478" stroke="#d1c8b8" stroke-width="4"/>
+<line x1="286" y1="544" x2="603" y2="522" stroke="#d1c8b8" stroke-width="4"/>
+<line x1="291" y1="588" x2="610" y2="566" stroke="#d1c8b8" stroke-width="4"/>
+<path d="M311 492c72 18 128 18 183-2" fill="none" stroke="#70767c" stroke-width="7" stroke-linecap="round"/>
+<path d="M321 536c58 12 115 11 180-3" fill="none" stroke="#70767c" stroke-width="7" stroke-linecap="round"/>
+<g transform="translate(720 430)">
+  <ellipse cx="115" cy="162" rx="118" ry="32" fill="#66635f" opacity=".22"/>
+  <rect x="28" y="28" width="150" height="132" rx="34" fill="#f4f4f2"/>
+  <path d="M178 68h38c42 0 42 62 0 62h-38" fill="none" stroke="#f4f4f2" stroke-width="24"/>
+  <ellipse cx="103" cy="53" rx="62" ry="18" fill="#6f4c39"/>
+  <path d="M69 53c28 10 50 10 70 0" fill="none" stroke="#d9c0aa" stroke-width="5" opacity=".75"/>
+</g>
+<g transform="translate(110 180)">
+  <rect x="36" y="185" width="122" height="148" rx="18" fill="#e6e1d7"/>
+  <path d="M99 192c-35-54-34-104 1-150 36 48 35 98-1 150z" fill="#607867"/>
+  <path d="M79 192c-58-35-81-76-69-124 54 20 78 61 69 124z" fill="#78907b"/>
+  <path d="M119 192c59-34 84-75 75-124-56 18-81 59-75 124z" fill="#718873"/>
+</g>
+<circle cx="1010" cy="130" r="42" fill="#f0df9e" opacity=".7"/>
+</svg>
