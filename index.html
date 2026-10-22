@@ -509,6 +509,21 @@
           </article>
         </article>
 
+        <article class="docs-showcase is-full">
+          <div class="docs-showcase__head"><div><h3>Long entry / Read more</h3><p>Feed cards can collapse long diary entries without creating a second post-card variant. The content simply expands inside the existing entry contract.</p></div></div>
+          <article class="diarito-card diarito-entry-card diarito-expandable-entry" data-diarito-expandable>
+            <header class="diarito-card__header diarito-entry-card__header"><div class="diarito-entry-card__identity"><span class="diarito-avatar">N</span><div class="diarito-entry-card__identity-copy"><strong>nickramen</strong><span>@nickramen · 2h</span></div></div></header>
+            <div class="diarito-card__body diarito-entry-card__body diarito-expandable-entry__body" id="long-entry-demo-body">
+              <h3>Things I noticed after slowing down today</h3>
+              <p>I normally write the conclusion first and then try to remember what actually happened. Today I tried the opposite. I wrote down the tiny sequence of things while they were still ordinary enough to feel unimportant.</p>
+              <p>The bus was late. I heard the same Korean expression three different times. At lunch I finally used it without planning to. Nobody reacted because, naturally, other people do not hold a press conference every time you remember a phrase correctly.</p>
+              <p>That was useful to notice. A diary does not need to prove that the day was important. Sometimes it just needs enough detail that next month I can remember what the day actually felt like.</p>
+              <p>I also noticed that the entries I return to are rarely the polished ones. They are the ones with specific details: what I ate, what someone said, what I misunderstood, what made me laugh five minutes later.</p>
+            </div>
+            <footer class="diarito-card__footer"><button class="diarito-button diarito-button--ghost diarito-expandable-entry__toggle" type="button" data-diarito-expandable-toggle data-diarito-collapsed-label="Read more" data-diarito-expanded-label="Show less" aria-expanded="false" aria-controls="long-entry-demo-body">Read more <i class="fi fi-rr-angle-small-down"></i></button></footer>
+          </article>
+        </article>
+
         <article class="docs-showcase">
           <div class="docs-showcase__head"><div><h3>Post action bar</h3><p>One shared interaction row for entry cards, detail views and feed items.</p></div></div>
           <div class="diarito-entry-actions"><button class="diarito-entry-action" type="button" data-diarito-toggle="like" aria-pressed="false"><i class="fi fi-rr-heart"></i> Like</button><button class="diarito-entry-action" type="button"><i class="fi fi-rr-comment"></i> Comment</button><button class="diarito-entry-action" type="button" data-diarito-toggle="bookmark" aria-pressed="true"><i class="fi fi-rr-bookmark"></i> Saved</button><button class="diarito-entry-action" type="button"><i class="fi fi-rr-share"></i> Share</button></div>
@@ -519,6 +534,29 @@
           <div class="diarito-comment-thread">
             <article class="diarito-comment"><span class="diarito-avatar">S</span><div class="diarito-comment__main"><div class="diarito-comment__header"><strong>sowon</strong><span>· 18 min</span></div><div class="diarito-comment__body"><p>I like that you wrote down what went well instead of only what you want to correct next time.</p></div><div class="diarito-comment__actions"><button class="diarito-entry-action" type="button" data-diarito-toggle="comment-like" aria-pressed="false"><i class="fi fi-rr-heart"></i> 4</button><button class="diarito-entry-action" type="button">Reply</button></div><div class="diarito-comment__replies"><article class="diarito-comment"><span class="diarito-avatar diarito-avatar--sm">N</span><div class="diarito-comment__main"><div class="diarito-comment__header"><strong>nickramen</strong><span>· 9 min</span></div><div class="diarito-comment__body"><p>Exactly. My diary has enough evidence against me already.</p></div><div class="diarito-comment__actions"><button class="diarito-entry-action" type="button" data-diarito-toggle="reply-like" aria-pressed="false"><i class="fi fi-rr-heart"></i> 2</button><button class="diarito-entry-action" type="button">Reply</button></div></div></article></div></div></article>
             <article class="diarito-comment"><span class="diarito-avatar">M</span><div class="diarito-comment__main"><div class="diarito-comment__header"><strong>mari</strong><span>· 7 min</span></div><div class="diarito-comment__body"><p>That sentence also sounds really natural in Korean.</p></div><div class="diarito-comment__actions"><button class="diarito-entry-action" type="button" data-diarito-toggle="comment-like" aria-pressed="false"><i class="fi fi-rr-heart"></i> 1</button><button class="diarito-entry-action" type="button">Reply</button></div></div></article>
+          </div>
+        </article>
+
+        <article class="docs-showcase is-full">
+          <div class="docs-showcase__head"><div><h3>Inline reply composer</h3><p>A reply field belongs directly beneath the conversation it affects. It reuses the avatar, small buttons and textarea language instead of opening a modal.</p></div></div>
+          <div class="diarito-card diarito-card--flat"><div class="diarito-card__body docs-demo-stack">
+            <div class="diarito-reply-composer" data-demo-reply-composer>
+              <span class="diarito-avatar">N</span>
+              <div class="diarito-reply-composer__main">
+                <textarea class="diarito-reply-composer__field" rows="2" placeholder="Write a reply..." data-demo-reply-input></textarea>
+                <div class="diarito-reply-composer__actions"><div class="diarito-reply-composer__tools"><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" aria-label="Add mention"><i class="fi fi-rr-at"></i></button><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" aria-label="Add attachment"><i class="fi fi-rr-clip"></i></button></div><button class="diarito-button diarito-button--primary" type="button" data-demo-reply-submit>Reply</button></div>
+              </div>
+            </div>
+            <div class="diarito-comment-thread" data-demo-reply-list></div>
+          </div></div>
+        </article>
+
+        <article class="docs-showcase">
+          <div class="docs-showcase__head"><div><h3>Mention tokens</h3><p>Selected mentions become compact identity tokens. This reuses avatar styling and adds only a small removable wrapper.</p></div></div>
+          <div class="docs-demo-row">
+            <span class="diarito-mention-token"><span class="diarito-avatar">Y</span>@yuna<button class="diarito-mention-token__remove" type="button" data-diarito-token-remove aria-label="Remove @yuna"><i class="fi fi-rr-cross-small"></i></button></span>
+            <span class="diarito-mention-token"><span class="diarito-avatar">S</span>@sowon<button class="diarito-mention-token__remove" type="button" data-diarito-token-remove aria-label="Remove @sowon"><i class="fi fi-rr-cross-small"></i></button></span>
+            <span class="diarito-mention-token"><span class="diarito-avatar">M</span>@mari<button class="diarito-mention-token__remove" type="button" data-diarito-token-remove aria-label="Remove @mari"><i class="fi fi-rr-cross-small"></i></button></span>
           </div>
         </article>
 
@@ -562,6 +600,18 @@
           <div class="diarito-card diarito-card--flat"><div class="diarito-notification-item is-unread"><span class="diarito-avatar">Y</span><div class="diarito-notification-item__copy"><p><strong>yuna</strong> commented on <strong>A small thing I want to remember</strong>.</p><span class="diarito-notification-item__meta">12 minutes ago</span></div><span class="diarito-badge">New</span></div><div class="diarito-notification-item"><span class="diarito-icon-box"><i class="fi fi-rr-users"></i></span><div class="diarito-notification-item__copy"><p><strong>Sowon</strong> shared the collection <strong>Actually useful Korean</strong> with you.</p><span class="diarito-notification-item__meta">1 hour ago</span></div><span></span></div></div>
         </article>
 
+        <article class="docs-showcase is-full">
+          <div class="docs-showcase__head"><div><h3>Profile / author header</h3><p>The full identity surface for profile pages. It composes avatars, tags, metadata and the existing follow action instead of enlarging the mini-profile card.</p></div></div>
+          <div class="diarito-card diarito-card--flat"><div class="diarito-card__body diarito-profile-header">
+            <div class="diarito-profile-header__main">
+              <div class="diarito-profile-header__identity"><span class="diarito-avatar diarito-avatar--lg">Y</span><div class="diarito-profile-header__copy"><h3>Yuna</h3><span class="diarito-profile-header__handle">@yuna</span><p class="diarito-profile-header__bio">Writing small daily notes while learning Spanish. Mostly language practice, places I want to remember and things that were funnier later.</p></div></div>
+              <div class="diarito-profile-header__actions"><button class="diarito-button diarito-button--secondary" type="button"><i class="fi fi-rr-envelope"></i> Message</button><button class="diarito-button diarito-button--primary" type="button" data-diarito-toggle="follow" aria-pressed="false"><i class="fi fi-rr-user-add"></i> Follow</button></div>
+            </div>
+            <div class="docs-demo-row"><span class="diarito-tag diarito-tag--dark">Korean</span><span class="diarito-tag diarito-tag--gray">Learning Spanish</span></div>
+            <div class="diarito-profile-header__meta"><span><strong>86</strong> entries</span><span><strong>312</strong> followers</span><span><strong>128</strong> following</span><span><strong>14</strong> day streak</span></div>
+          </div></div>
+        </article>
+
         <article class="docs-showcase">
           <div class="docs-showcase__head"><div><h3>Member mini profile</h3><p>Compact identity context for popovers, mentions and community discovery.</p></div></div>
           <div class="diarito-member-mini"><div class="diarito-member-mini__identity"><span class="diarito-avatar diarito-avatar--lg">Y</span><div class="diarito-member-mini__copy"><strong>Yuna</strong><span>@yuna · Korean → Spanish</span></div></div><div class="diarito-member-mini__stats"><div class="diarito-member-mini__stat"><strong>86</strong><span>entries</span></div><div class="diarito-member-mini__stat"><strong>14</strong><span>day streak</span></div><div class="diarito-member-mini__stat"><strong>312</strong><span>followers</span></div></div><button class="diarito-button diarito-button--primary diarito-button--block" type="button" data-diarito-toggle="follow" aria-pressed="false"><i class="fi fi-rr-user-add"></i> Follow</button></div>
@@ -570,6 +620,18 @@
         <article class="docs-showcase is-full">
           <div class="docs-showcase__head"><div><h3>Language practice block</h3><p>Original thought, practice version and optional correction live together without turning Diarito into a translation dashboard.</p></div></div>
           <div class="diarito-card diarito-card--flat"><div class="diarito-card__body diarito-language-practice"><div class="diarito-language-practice__row"><span class="diarito-language-practice__label">Original · ES</span><div class="diarito-language-practice__content"><p>Hoy me dio pena hablar primero, pero al final participé más de lo que esperaba.</p></div></div><div class="diarito-language-practice__row"><span class="diarito-language-practice__label">Practice · KO</span><div class="diarito-language-practice__content"><p>오늘 먼저 말하기가 조금 부끄러웠지만, 결국 생각보다 많이 참여했다.</p></div></div><div class="diarito-language-practice__row"><span class="diarito-language-practice__label">Note</span><div class="diarito-language-practice__content"><p><span class="diarito-tag diarito-tag--info">Suggestion</span> “부끄러웠지만” works here, but the exact nuance depends on why you felt hesitant.</p></div></div></div></div>
+        </article>
+
+        <article class="docs-showcase is-full">
+          <div class="docs-showcase__head"><div><h3>Language correction / suggestion</h3><p>Community language feedback needs a focused pattern that compares the original and suggestion without becoming a separate translation product.</p></div></div>
+          <div class="diarito-card diarito-card--flat"><div class="diarito-card__body diarito-correction">
+            <div class="diarito-correction__pair">
+              <div class="diarito-correction__panel"><span>Original</span><p>오늘 회의에서 말하는 것을 조금 무서웠어요.</p></div>
+              <div class="diarito-correction__panel"><span>Suggestion</span><p>오늘 회의에서 말하는 게 조금 긴장됐어요.</p></div>
+            </div>
+            <div class="diarito-correction__note"><i class="fi fi-rr-info"></i><span><strong>Why?</strong> “긴장됐어요” sounds more natural here if you mean you felt nervous rather than literally afraid.</span></div>
+            <div class="diarito-correction__actions"><button class="diarito-button diarito-button--primary" type="button" data-diarito-toggle="accept-correction" aria-pressed="false"><i class="fi fi-rr-check"></i> Accept suggestion</button><button class="diarito-button diarito-button--ghost" type="button">Ignore</button></div>
+          </div></div>
         </article>
 
         <article class="docs-showcase">
