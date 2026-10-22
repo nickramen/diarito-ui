@@ -1,8 +1,8 @@
-# Diarito UI Library 2.7.0
+# Diarito UI Library 2.8.0
 
 Diarito's reusable HTML, CSS and native JavaScript design system.
 
-Version 2.7.0 tightens the post-card layout, semantic states and avatar system, then adds the missing learning-flow patterns needed for the Diarito MVP.
+Version 2.8.0 refines the OIO, correction and published-entry visuals and introduces an experimental mixed feed for evaluating Daily Question responses with the Note card language.
 
 
 
@@ -13,6 +13,19 @@ Version 2.7.0 tightens the post-card layout, semantic states and avatar system, 
 
 
 
+
+## 2.8.0 visual refinement and mixed-feed experiment
+
+- Reworked OIO into one shared step surface and reused the existing progress component.
+- Reused the Quoted / reposted entry language for selected correction text.
+- Changed Diary entry / post card documentation to a two-card row with independent heights.
+- Added a media-enabled diary entry example.
+- Unified Diary entry and Note card title typography.
+- Added an experimental mixed feed rather than replacing the existing canonical feed.
+- Added a Daily Question response variant that borrows the Note card writing surface while retaining social post metadata and interactions.
+- Added a local demo image asset for media examples.
+
+The mixed feed remains explicitly experimental so we can judge whether Daily Question responses deserve a distinct note-like visual treatment before making it canonical.
 
 ## 2.7.0 learning-flow and identity refinements
 
