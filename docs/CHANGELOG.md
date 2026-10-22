@@ -1,5 +1,19 @@
 # Changelog
 
+## 2.7.0 - OIO flow, avatar system and card alignment
+
+- Split Diary entry / post card footer into left-side interactions and right-side entry metadata.
+- Changed light-mode semantic text colors from Tailwind 700 shades to their Tailwind 500 state colors.
+- Kept semantic labels at font weight 500.
+- Expanded avatars to xs, sm, default, lg, xl and profile sizes.
+- Added photo-aware avatars with automatic initial fallback.
+- Increased the Profile / author header avatar to the profile size.
+- Added OIO learning progress.
+- Added Human correction composer.
+- Added Try Again / rewrite.
+- Added Community publication warning.
+
+
 ## 2.6.0 - Diary interaction completion
 
 - Matched Button Group sizing more closely to the Tabs visual rhythm while preserving independent pressed states.
