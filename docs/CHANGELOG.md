@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.8.0 - Visual refinement and mixed feed experiment
+
+- Reworked OIO to match the shared card/progress language.
+- Reused the Quoted / reposted entry pattern for correction selections.
+- Added two side-by-side Diary entry examples with independent heights.
+- Added an entry-media example and local demo image asset.
+- Unified Diary entry and Note card title typography.
+- Added an experimental mixed feed alongside the existing canonical feed.
+- Added a Daily Question response card that borrows Note card styling while preserving author, metadata and social actions.
+
+
 ## 2.7.0 - OIO flow, avatar system and card alignment
 
 - Split Diary entry / post card footer into left-side interactions and right-side entry metadata.
