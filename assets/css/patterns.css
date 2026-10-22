@@ -760,3 +760,10 @@
 .diarito-daily-response-card .diarito-note-card__body { font-size: var(--diarito-text-base); }
 .diarito-daily-response-card .diarito-note-card__footer { flex-wrap: wrap; }
 .diarito-daily-response-card .diarito-entry-meta { margin-left: auto; }
+
+
+@media (max-width: 680px) {
+  .diarito-daily-response-card__author { grid-template-columns: auto minmax(0,1fr); }
+  .diarito-daily-response-card__author .diarito-tag { grid-column: 2; justify-self: start; }
+  .diarito-daily-response-card .diarito-entry-meta { width: 100%; margin-left: 0; justify-content: flex-start; }
+}
