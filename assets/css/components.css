@@ -191,9 +191,14 @@
 }
 .diarito-button-group .diarito-button {
   min-width: 0;
+  min-height: 2.35rem;
+  padding: .55rem .85rem;
+  border-radius: calc(var(--diarito-radius-sm) - .2rem);
   color: var(--diarito-color-text-muted);
   background: transparent;
   box-shadow: none;
+  font-size: var(--diarito-text-sm);
+  font-weight: var(--diarito-weight-medium);
 }
 .diarito-button-group .diarito-button:hover {
   color: var(--diarito-color-text-strong);
@@ -302,11 +307,11 @@
 }
 .diarito-dropzone:hover {
   border-color: var(--diarito-color-text-subtle);
-  background: var(--diarito-color-surface-soft);
+  background: var(--diarito-color-surface);
 }
 .diarito-dropzone.is-dragover {
   border-color: var(--diarito-color-action-bg);
-  background: var(--diarito-color-surface-soft);
+  background: var(--diarito-color-surface);
 }
 .diarito-dropzone input[type="file"] { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
 .diarito-dropzone__icon { width: 3rem; height: 3rem; display: grid; place-items: center; border-radius: var(--diarito-radius-sm); color: var(--diarito-color-text-strong); background: var(--diarito-color-control); }
