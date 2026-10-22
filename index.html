@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Diarito UI Library 2.8.0</title>
+  <title>Diarito UI Library 2.9.0</title>
   <meta name="description" content="Diarito HTML, CSS and native JavaScript UI component library.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Englebert&family=Noto+Sans+KR:wght@400;500;600;700&family=Poor+Story&family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
-  <link rel="stylesheet" href="assets/css/diarito-system.css?v=2.8.0">
-  <link rel="stylesheet" href="assets/css/docs-library.css?v=2.8.0">
+  <link rel="stylesheet" href="assets/css/diarito-system.css?v=2.9.0">
+  <link rel="stylesheet" href="assets/css/docs-library.css?v=2.9.0">
 </head>
 <body class="docs-body">
   <header class="docs-topbar">
@@ -20,7 +20,7 @@
         <span>Diarito</span>
       </a>
       <div class="docs-topbar__actions">
-        <span class="diarito-tag">v2.8.0</span>
+        <span class="diarito-tag">v2.9.0</span>
         <button class="diarito-button diarito-button--secondary" type="button" data-diarito-theme-toggle aria-pressed="false" aria-label="Switch to dark theme"><i class="fi fi-rr-moon"></i><span data-diarito-theme-label>Dark</span></button>
         <a class="diarito-button diarito-button--primary" href="#components">View components</a>
       </div>
@@ -32,7 +32,7 @@
       <div class="docs-hero__inner diarito-container docs-container">
         <span class="diarito-kicker">Diarito UI Library · HTML + CSS + JS</span>
         <h1 class="diarito-display">A quieter system with stronger structure.</h1>
-        <p>Version 2.8.0 refines OIO, corrections and published-entry cards, then adds an experimental mixed feed for testing Daily Question responses with the Note card language.</p>
+        <p>Version 2.9.0 unifies Diary entries with the ruled Note card writing surface, simplifies interaction counters and adds single-image and gallery media examples.</p>
         <div class="docs-hero__meta">
           <span class="diarito-chip"><i class="fi fi-rr-code-simple"></i> HTML + CSS</span>
           <span class="diarito-chip"><i class="fi fi-rr-settings-sliders"></i> Native JS only</span>
@@ -225,7 +225,7 @@
         <article class="docs-showcase">
           <div class="docs-showcase__head"><div><h3>Breadcrumbs</h3><p>Location hierarchy for collections, settings and deeper management views.</p></div></div>
           <nav class="diarito-breadcrumbs" aria-label="Breadcrumb">
-            <ol><li><a href="#overview">Diarito</a></li><li><a href="#patterns">Collections</a></li><li><a href="#patterns">Language practice</a></li><li aria-current="page">Meeting notes</li></ol>
+            <ol><li><a href="#overview">Diarito</a></li><li><a href="#patterns">Collections</a></li><li><a href="#patterns">Language practice</a></li><li aria-current="page">A sentence I finally used</li></ol>
           </nav>
         </article>
 
@@ -429,7 +429,7 @@
                 <tbody>
                   <tr><td class="diarito-data-table__select-cell"><label class="diarito-choice"><input type="checkbox" data-diarito-row-select aria-label="Select Meeting notes"></label></td><td><strong>Meeting notes</strong></td><td>Work</td><td><span class="diarito-status diarito-status--success">Synced</span></td><td>8m ago</td></tr>
                   <tr><td class="diarito-data-table__select-cell"><label class="diarito-choice"><input type="checkbox" data-diarito-row-select aria-label="Select Useful Korean"></label></td><td><strong>Useful Korean</strong></td><td>Language</td><td><span class="diarito-status diarito-status--info">Shared</span></td><td>1h ago</td></tr>
-                  <tr><td class="diarito-data-table__select-cell"><label class="diarito-choice"><input type="checkbox" data-diarito-row-select aria-label="Select Places to visit"></label></td><td><strong>Places to visit</strong></td><td>Travel</td><td><span class="diarito-status">Private</span></td><td>2d ago</td></tr>
+                  <tr><td class="diarito-data-table__select-cell"><label class="diarito-choice"><input type="checkbox" data-diarito-row-select aria-label="Select A walk I want to remember"></label></td><td><strong>Places to visit</strong></td><td>Travel</td><td><span class="diarito-status">Private</span></td><td>2d ago</td></tr>
                 </tbody>
               </table>
             </div>
@@ -474,9 +474,9 @@
         </article>
 
         <article class="docs-showcase is-full">
-          <div class="docs-showcase__head"><div><h3>Mixed feed experiment · Diary + Daily Question</h3><p>An experimental feed that keeps normal diary entries as published-entry cards while Daily Question responses borrow the warmer Note card writing surface. This is intentionally a comparison, not yet the canonical feed.</p></div><span class="diarito-tag diarito-tag--gray">Experiment</span></div>
+          <div class="docs-showcase__head"><div><h3>Unified feed experiment · Diary + Daily Question</h3><p>Both free-writing entries and Daily Question responses now use the same Diary entry card. The prompt is context inside the entry, not a separate card type.</p></div><span class="diarito-tag diarito-tag--gray">Experiment</span></div>
           <div class="diarito-mock-window">
-            <div class="diarito-mock-window__bar"><div class="diarito-mock-window__dots"><span></span><span></span><span></span></div><span style="margin-left:auto">diarito · mixed feed experiment</span></div>
+            <div class="diarito-mock-window__bar"><div class="diarito-mock-window__dots"><span></span><span></span><span></span></div><span style="margin-left:auto">diarito · unified feed experiment</span></div>
             <div class="diarito-mock-window__body diarito-feed-demo">
               <div class="diarito-reading">
                 <div class="diarito-feed-switch"><button class="is-active" type="button">For you</button><button type="button">Following</button><button type="button">Practice</button></div>
@@ -484,22 +484,24 @@
                   <article class="diarito-card diarito-entry-card diarito-mixed-feed__item">
                     <header class="diarito-card__header diarito-entry-card__header"><div class="diarito-entry-card__identity"><span class="diarito-avatar">Y</span><div class="diarito-entry-card__identity-copy"><strong>yuna</strong><span>@yuna · 18 min</span></div></div><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" aria-label="Entry actions"><i class="fi fi-rr-menu-dots-vertical"></i></button></header>
                     <div class="diarito-card__body diarito-entry-card__body"><h3>I spoke before I had time to overthink it</h3><p>오늘은 처음으로 문장을 머릿속에서 완벽하게 만들기 전에 그냥 말해봤다. It was messy, but the conversation kept moving, which felt more useful than being perfect.</p><div class="docs-demo-row"><span class="diarito-tag diarito-tag--dark">journal</span><span class="diarito-tag diarito-tag--gray">한국어</span></div></div>
-                    <footer class="diarito-card__footer diarito-entry-card__footer"><div class="diarito-entry-actions"><button class="diarito-entry-action" type="button"><i class="fi fi-rr-heart"></i> 31</button><button class="diarito-entry-action" type="button"><i class="fi fi-rr-comment"></i> 7</button><button class="diarito-entry-action" type="button"><i class="fi fi-rr-bookmark"></i> Save</button></div><div class="diarito-entry-meta"><span class="diarito-entry-meta__item"><i class="fi fi-rr-globe"></i> Community</span><span class="diarito-entry-meta__item">112 words</span></div></footer>
+                    <footer class="diarito-card__footer diarito-entry-card__footer"><div class="diarito-entry-actions"><button class="diarito-entry-action" type="button" aria-label="31 likes"><i class="fi fi-rr-heart"></i> 31</button><button class="diarito-entry-action" type="button" aria-label="7 comments"><i class="fi fi-rr-comment"></i> 7</button><button class="diarito-entry-action" type="button" aria-label="2 corrections"><i class="fi fi-rr-pencil"></i> 2</button><button class="diarito-entry-action" type="button" aria-label="13 saves"><i class="fi fi-rr-bookmark"></i> 13</button><button class="diarito-entry-action" type="button" aria-label="5 shares"><i class="fi fi-rr-share"></i> 5</button></div><div class="diarito-entry-meta"><span class="diarito-entry-meta__item">112 words</span></div></footer>
                   </article>
 
-                  <article class="diarito-card diarito-card--clip diarito-note-card diarito-daily-response-card diarito-mixed-feed__item">
-                    <header class="diarito-card__header diarito-note-card__header">
-                      <div class="diarito-daily-response-card__author"><span class="diarito-avatar">S</span><div class="diarito-entry-card__identity-copy"><strong>sowon</strong><span>@sowon · 42 min</span></div><span class="diarito-tag diarito-tag--dark">Daily Question</span></div>
+                  <article class="diarito-card diarito-entry-card diarito-daily-response-card diarito-mixed-feed__item">
+                    <header class="diarito-card__header diarito-entry-card__header"><div class="diarito-entry-card__identity"><span class="diarito-avatar">S</span><div class="diarito-entry-card__identity-copy"><strong>sowon</strong><span>@sowon · 42 min</span></div></div><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" aria-label="Entry actions"><i class="fi fi-rr-menu-dots-vertical"></i></button></header>
+                    <div class="diarito-card__body diarito-entry-card__body">
+                      <span class="diarito-daily-response-card__question"><i class="fi fi-rr-interrogation"></i> Daily Question</span>
                       <h3>What small moment made your day better?</h3>
-                    </header>
-                    <div class="diarito-card__body diarito-note-card__body diarito-note-card__body--ruled"><p>Encontré una cafetería pequeña cerca del trabajo y la señora recordó mi pedido de ayer. No fue nada grande, pero me hizo sentir que ya tengo un lugar conocido en la ciudad.</p></div>
-                    <footer class="diarito-card__footer diarito-note-card__footer"><div class="diarito-entry-actions"><button class="diarito-entry-action" type="button"><i class="fi fi-rr-heart"></i> 46</button><button class="diarito-entry-action" type="button"><i class="fi fi-rr-comment"></i> 12</button><button class="diarito-entry-action" type="button"><i class="fi fi-rr-bookmark"></i> Save</button></div><div class="diarito-entry-meta"><span class="diarito-entry-meta__item">Español</span><span class="diarito-entry-meta__item"><i class="fi fi-rr-globe"></i> Community</span></div></footer>
+                      <p>Encontré una cafetería pequeña cerca del trabajo y la señora recordó mi pedido de ayer. No fue nada grande, pero me hizo sentir que ya tengo un lugar conocido en la ciudad.</p>
+                      <div class="docs-demo-row"><span class="diarito-tag diarito-tag--dark">daily question</span><span class="diarito-tag diarito-tag--gray">Español</span></div>
+                    </div>
+                    <footer class="diarito-card__footer diarito-entry-card__footer"><div class="diarito-entry-actions"><button class="diarito-entry-action" type="button" aria-label="46 likes"><i class="fi fi-rr-heart"></i> 46</button><button class="diarito-entry-action" type="button" aria-label="12 comments"><i class="fi fi-rr-comment"></i> 12</button><button class="diarito-entry-action" type="button" aria-label="4 corrections"><i class="fi fi-rr-pencil"></i> 4</button><button class="diarito-entry-action" type="button" aria-label="18 saves"><i class="fi fi-rr-bookmark"></i> 18</button><button class="diarito-entry-action" type="button" aria-label="7 shares"><i class="fi fi-rr-share"></i> 7</button></div><div class="diarito-entry-meta"><span class="diarito-entry-meta__item">76 words</span></div></footer>
                   </article>
 
                   <article class="diarito-card diarito-entry-card diarito-mixed-feed__item">
                     <header class="diarito-card__header diarito-entry-card__header"><div class="diarito-entry-card__identity"><span class="diarito-avatar">N</span><div class="diarito-entry-card__identity-copy"><strong>nickramen</strong><span>@nickramen · 1h</span></div></div><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" aria-label="Entry actions"><i class="fi fi-rr-menu-dots-vertical"></i></button></header>
-                    <div class="diarito-card__body diarito-entry-card__body"><h3>Studying somewhere that doesn’t feel like studying</h3><p>I wrote down three phrases while drinking coffee instead of opening another giant vocabulary list. Apparently tricking myself into studying still counts.</p><figure class="diarito-entry-card__media"><img src="assets/images/diary-entry-demo.svg" alt="A quiet cafe table with a notebook and coffee cup"></figure><div class="docs-demo-row"><span class="diarito-tag diarito-tag--dark">daily life</span><span class="diarito-tag diarito-tag--gray">Korean</span></div></div>
-                    <footer class="diarito-card__footer diarito-entry-card__footer"><div class="diarito-entry-actions"><button class="diarito-entry-action" type="button"><i class="fi fi-rr-heart"></i> 20</button><button class="diarito-entry-action" type="button"><i class="fi fi-rr-comment"></i> 4</button><button class="diarito-entry-action" type="button"><i class="fi fi-rr-bookmark"></i> Save</button></div><div class="diarito-entry-meta"><span class="diarito-entry-meta__item"><i class="fi fi-rr-globe"></i> Community</span><span class="diarito-entry-meta__item">88 words</span></div></footer>
+                    <div class="diarito-card__body diarito-entry-card__body"><h3>Studying somewhere that doesn’t feel like studying</h3><p>I wrote down three phrases while drinking coffee instead of opening another giant vocabulary list. Apparently tricking myself into studying still counts.</p><div class="docs-demo-row"><span class="diarito-tag diarito-tag--dark">daily life</span><span class="diarito-tag diarito-tag--gray">Korean</span></div><figure class="diarito-entry-card__media"><img src="assets/images/diary-entry-demo.svg" alt="A quiet cafe table with a notebook and coffee cup"></figure></div>
+                    <footer class="diarito-card__footer diarito-entry-card__footer"><div class="diarito-entry-actions"><button class="diarito-entry-action" type="button" aria-label="20 likes"><i class="fi fi-rr-heart"></i> 20</button><button class="diarito-entry-action" type="button" aria-label="4 comments"><i class="fi fi-rr-comment"></i> 4</button><button class="diarito-entry-action" type="button" aria-label="1 correction"><i class="fi fi-rr-pencil"></i> 1</button><button class="diarito-entry-action" type="button" aria-label="8 saves"><i class="fi fi-rr-bookmark"></i> 8</button><button class="diarito-entry-action" type="button" aria-label="2 shares"><i class="fi fi-rr-share"></i> 2</button></div><div class="diarito-entry-meta"><span class="diarito-entry-meta__item">88 words</span></div></footer>
                   </article>
                 </div>
               </div>
@@ -533,29 +535,78 @@
         </article>
 
         <article class="docs-showcase is-full">
-          <div class="docs-showcase__head"><div><h3>Diary entry / post card</h3><p>Two published-entry examples share the same contract without forcing equal heights. The second example shows the optional media treatment.</p></div></div>
+          <div class="docs-showcase__head"><div><h3>Diary entry / post card</h3><p>The unified diary surface now carries the ruled writing style directly. These three examples show text-only, single-image and multi-image entries without forcing equal heights.</p></div></div>
           <div class="diarito-entry-card-grid">
             <article class="diarito-card diarito-entry-card">
               <header class="diarito-card__header diarito-entry-card__header">
                 <div class="diarito-entry-card__identity"><span class="diarito-avatar">Y</span><div class="diarito-entry-card__identity-copy"><strong>yuna</strong><span>@yuna · Today at 2:18 PM</span></div></div>
-                <div class="diarito-dropdown" data-diarito-dropdown><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" data-diarito-dropdown-trigger aria-expanded="false" aria-label="Entry actions"><i class="fi fi-rr-menu-dots-vertical"></i></button><div class="diarito-dropdown__menu" data-diarito-dropdown-menu hidden><button class="diarito-dropdown__item" type="button">Save</button><button class="diarito-dropdown__item" type="button">Share</button><button class="diarito-dropdown__item" type="button">Report</button></div></div>
+                <div class="diarito-dropdown" data-diarito-dropdown><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" data-diarito-dropdown-trigger aria-expanded="false" aria-label="Entry actions"><i class="fi fi-rr-menu-dots-vertical"></i></button><div class="diarito-dropdown__menu" data-diarito-dropdown-menu hidden><button class="diarito-dropdown__item" type="button">Edit</button><button class="diarito-dropdown__item" type="button">Copy link</button><button class="diarito-dropdown__item" type="button">Report</button></div></div>
               </header>
-              <div class="diarito-card__body diarito-entry-card__body"><h3>A small thing I want to remember</h3><p>오늘 회의에서 완벽하게 말하지 못했지만, 그래도 끝까지 한국어로 설명했다. I normally remember the mistakes first, so I’m writing down the part that actually went well.</p><div class="docs-demo-row"><span class="diarito-tag diarito-tag--dark">journal</span><span class="diarito-tag diarito-tag--gray">한국어</span></div></div>
-              <footer class="diarito-card__footer diarito-entry-card__footer"><div class="diarito-entry-actions"><button class="diarito-entry-action" type="button" data-diarito-toggle="like" aria-pressed="false"><i class="fi fi-rr-heart"></i> 24</button><button class="diarito-entry-action" type="button"><i class="fi fi-rr-comment"></i> 8</button><button class="diarito-entry-action" type="button" data-diarito-toggle="bookmark" aria-pressed="false"><i class="fi fi-rr-bookmark"></i> Save</button><button class="diarito-entry-action" type="button"><i class="fi fi-rr-share"></i> Share</button></div><div class="diarito-entry-meta"><span class="diarito-entry-meta__item"><i class="fi fi-rr-globe"></i> Community</span><span class="diarito-entry-meta__item">126 words</span><span class="diarito-entry-meta__item">Edited</span></div></footer>
+              <div class="diarito-card__body diarito-entry-card__body">
+                <h3>A small thing I want to remember</h3>
+                <p>오늘 회의에서 완벽하게 말하지 못했지만, 그래도 끝까지 한국어로 설명했다. I normally remember the mistakes first, so I’m writing down the part that actually went well.</p>
+                <div class="docs-demo-row"><span class="diarito-tag diarito-tag--dark">journal</span><span class="diarito-tag diarito-tag--gray">한국어</span></div>
+              </div>
+              <footer class="diarito-card__footer diarito-entry-card__footer">
+                <div class="diarito-entry-actions">
+                  <button class="diarito-entry-action" type="button" data-diarito-toggle="like" aria-pressed="false" aria-label="24 likes"><i class="fi fi-rr-heart"></i> 24</button>
+                  <button class="diarito-entry-action" type="button" aria-label="8 comments"><i class="fi fi-rr-comment"></i> 8</button>
+                  <button class="diarito-entry-action" type="button" aria-label="3 corrections"><i class="fi fi-rr-pencil"></i> 3</button>
+                  <button class="diarito-entry-action" type="button" data-diarito-toggle="bookmark" aria-pressed="false" aria-label="11 saves"><i class="fi fi-rr-bookmark"></i> 11</button>
+                  <button class="diarito-entry-action" type="button" aria-label="4 shares"><i class="fi fi-rr-share"></i> 4</button>
+                </div>
+                <div class="diarito-entry-meta"><span class="diarito-entry-meta__item">126 words</span><span class="diarito-entry-meta__item">Edited</span></div>
+              </footer>
             </article>
 
             <article class="diarito-card diarito-entry-card">
               <header class="diarito-card__header diarito-entry-card__header">
                 <div class="diarito-entry-card__identity"><span class="diarito-avatar">S</span><div class="diarito-entry-card__identity-copy"><strong>sowon</strong><span>@sowon · Today at 4:05 PM</span></div></div>
-                <div class="diarito-dropdown" data-diarito-dropdown><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" data-diarito-dropdown-trigger aria-expanded="false" aria-label="Entry actions"><i class="fi fi-rr-menu-dots-vertical"></i></button><div class="diarito-dropdown__menu" data-diarito-dropdown-menu hidden><button class="diarito-dropdown__item" type="button">Save</button><button class="diarito-dropdown__item" type="button">Share</button><button class="diarito-dropdown__item" type="button">Report</button></div></div>
+                <div class="diarito-dropdown" data-diarito-dropdown><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" data-diarito-dropdown-trigger aria-expanded="false" aria-label="Entry actions"><i class="fi fi-rr-menu-dots-vertical"></i></button><div class="diarito-dropdown__menu" data-diarito-dropdown-menu hidden><button class="diarito-dropdown__item" type="button">Edit</button><button class="diarito-dropdown__item" type="button">Copy link</button><button class="diarito-dropdown__item" type="button">Report</button></div></div>
               </header>
               <div class="diarito-card__body diarito-entry-card__body">
                 <h3>The phrase I finally used without thinking</h3>
                 <p>Hoy pedí café completamente en español y no preparé la frase antes. It was tiny, but it felt different because I actually used what I had been practicing.</p>
-                <figure class="diarito-entry-card__media"><img src="assets/images/diary-entry-demo.svg" alt="A quiet cafe table with a notebook and coffee cup"></figure>
                 <div class="docs-demo-row"><span class="diarito-tag diarito-tag--dark">daily life</span><span class="diarito-tag diarito-tag--gray">Español</span></div>
+                <figure class="diarito-entry-card__media"><img src="assets/images/diary-entry-demo.svg" alt="A quiet cafe table with a notebook and coffee cup"></figure>
               </div>
-              <footer class="diarito-card__footer diarito-entry-card__footer"><div class="diarito-entry-actions"><button class="diarito-entry-action" type="button" data-diarito-toggle="like-photo-entry" aria-pressed="false"><i class="fi fi-rr-heart"></i> 18</button><button class="diarito-entry-action" type="button"><i class="fi fi-rr-comment"></i> 5</button><button class="diarito-entry-action" type="button" data-diarito-toggle="bookmark-photo-entry" aria-pressed="false"><i class="fi fi-rr-bookmark"></i> Save</button><button class="diarito-entry-action" type="button"><i class="fi fi-rr-share"></i> Share</button></div><div class="diarito-entry-meta"><span class="diarito-entry-meta__item"><i class="fi fi-rr-globe"></i> Community</span><span class="diarito-entry-meta__item">94 words</span></div></footer>
+              <footer class="diarito-card__footer diarito-entry-card__footer">
+                <div class="diarito-entry-actions">
+                  <button class="diarito-entry-action" type="button" data-diarito-toggle="like-photo-entry" aria-pressed="false" aria-label="18 likes"><i class="fi fi-rr-heart"></i> 18</button>
+                  <button class="diarito-entry-action" type="button" aria-label="5 comments"><i class="fi fi-rr-comment"></i> 5</button>
+                  <button class="diarito-entry-action" type="button" aria-label="2 corrections"><i class="fi fi-rr-pencil"></i> 2</button>
+                  <button class="diarito-entry-action" type="button" data-diarito-toggle="bookmark-photo-entry" aria-pressed="false" aria-label="9 saves"><i class="fi fi-rr-bookmark"></i> 9</button>
+                  <button class="diarito-entry-action" type="button" aria-label="3 shares"><i class="fi fi-rr-share"></i> 3</button>
+                </div>
+                <div class="diarito-entry-meta"><span class="diarito-entry-meta__item">94 words</span></div>
+              </footer>
+            </article>
+
+            <article class="diarito-card diarito-entry-card">
+              <header class="diarito-card__header diarito-entry-card__header">
+                <div class="diarito-entry-card__identity"><span class="diarito-avatar">M</span><div class="diarito-entry-card__identity-copy"><strong>mari</strong><span>@mari · Yesterday at 8:41 PM</span></div></div>
+                <div class="diarito-dropdown" data-diarito-dropdown><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" data-diarito-dropdown-trigger aria-expanded="false" aria-label="Entry actions"><i class="fi fi-rr-menu-dots-vertical"></i></button><div class="diarito-dropdown__menu" data-diarito-dropdown-menu hidden><button class="diarito-dropdown__item" type="button">Edit</button><button class="diarito-dropdown__item" type="button">Copy link</button><button class="diarito-dropdown__item" type="button">Report</button></div></div>
+              </header>
+              <div class="diarito-card__body diarito-entry-card__body">
+                <h3>Three little pieces of yesterday</h3>
+                <p>I walked home instead of taking the bus, stopped at the market, and stayed outside long enough to notice how different the neighborhood feels after dark.</p>
+                <div class="docs-demo-row"><span class="diarito-tag diarito-tag--dark">photo diary</span><span class="diarito-tag diarito-tag--gray">daily life</span><span class="diarito-tag diarito-tag--gray">Español</span></div>
+                <figure class="diarito-entry-gallery" aria-label="Photo gallery with five photos">
+                  <span class="diarito-entry-gallery__item"><img src="assets/images/diary-gallery-walk.svg" alt="Evening walk through green hills"></span>
+                  <span class="diarito-entry-gallery__item"><img src="assets/images/diary-gallery-market.svg" alt="Colorful market stand"></span>
+                  <span class="diarito-entry-gallery__item diarito-entry-gallery__item--more" data-more="+2"><img src="assets/images/diary-gallery-night.svg" alt="City buildings at night"></span>
+                </figure>
+              </div>
+              <footer class="diarito-card__footer diarito-entry-card__footer">
+                <div class="diarito-entry-actions">
+                  <button class="diarito-entry-action" type="button" aria-label="32 likes"><i class="fi fi-rr-heart"></i> 32</button>
+                  <button class="diarito-entry-action" type="button" aria-label="10 comments"><i class="fi fi-rr-comment"></i> 10</button>
+                  <button class="diarito-entry-action" type="button" aria-label="4 corrections"><i class="fi fi-rr-pencil"></i> 4</button>
+                  <button class="diarito-entry-action" type="button" aria-label="15 saves"><i class="fi fi-rr-bookmark"></i> 15</button>
+                  <button class="diarito-entry-action" type="button" aria-label="6 shares"><i class="fi fi-rr-share"></i> 6</button>
+                </div>
+                <div class="diarito-entry-meta"><span class="diarito-entry-meta__item">138 words</span><span class="diarito-entry-meta__item">Edited</span></div>
+              </footer>
             </article>
           </div>
         </article>
@@ -576,8 +627,8 @@
         </article>
 
         <article class="docs-showcase">
-          <div class="docs-showcase__head"><div><h3>Post action bar</h3><p>One shared interaction row for entry cards, detail views and feed items.</p></div></div>
-          <div class="diarito-entry-actions"><button class="diarito-entry-action" type="button" data-diarito-toggle="like" aria-pressed="false"><i class="fi fi-rr-heart"></i> Like</button><button class="diarito-entry-action" type="button"><i class="fi fi-rr-comment"></i> Comment</button><button class="diarito-entry-action" type="button" data-diarito-toggle="bookmark" aria-pressed="true"><i class="fi fi-rr-bookmark"></i> Saved</button><button class="diarito-entry-action" type="button"><i class="fi fi-rr-share"></i> Share</button></div>
+          <div class="docs-showcase__head"><div><h3>Post action bar</h3><p>Icon + count only: likes, comments, corrections, saves and shares. Public visibility is implicit; private entries can show a lock when viewed in their owner’s profile.</p></div></div>
+          <div class="diarito-entry-actions"><button class="diarito-entry-action" type="button" aria-label="24 likes"><i class="fi fi-rr-heart"></i> 24</button><button class="diarito-entry-action" type="button" aria-label="8 comments"><i class="fi fi-rr-comment"></i> 8</button><button class="diarito-entry-action" type="button" aria-label="3 corrections"><i class="fi fi-rr-pencil"></i> 3</button><button class="diarito-entry-action" type="button" aria-label="11 saves"><i class="fi fi-rr-bookmark"></i> 11</button><button class="diarito-entry-action" type="button" aria-label="4 shares"><i class="fi fi-rr-share"></i> 4</button></div>
         </article>
 
         <article class="docs-showcase is-full">
@@ -770,21 +821,7 @@
           </div></div>
         </article>
 
-        <article class="docs-showcase"><div class="docs-showcase__head"><div><h3>Note cards</h3><p>Both variants use the same card header/body/footer contract. Only the ruled body changes the writing surface.</p></div></div>
-          <div class="diarito-note-grid">
-            <article class="diarito-card diarito-card--clip diarito-note-card">
-              <header class="diarito-card__header diarito-note-card__header"><div class="diarito-note-card__meta"><span>Today · 3:12 PM</span><span class="diarito-visual-state is-pinned"><i class="fi fi-rr-thumbtack"></i> Pinned</span></div><h3>Ideas for the next iteration</h3></header>
-              <div class="diarito-card__body diarito-note-card__body"><p>Keep the library strict enough that future screens rarely need local CSS. The useful part of the system is not that every page looks identical; it is that the shared pieces always behave like the same product.</p><p>When a new screen needs something different, the first question should be whether the component contract needs to grow, not whether that page deserves its own private styling universe.</p></div>
-              <footer class="diarito-card__footer diarito-note-card__footer"><div class="docs-demo-row"><span class="diarito-tag diarito-tag--dark">product</span><span class="diarito-tag diarito-tag--dark">ideas</span></div><div class="diarito-icon-actions"><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" aria-label="Locked note"><i class="fi fi-rr-lock"></i></button><div class="diarito-dropdown" data-diarito-dropdown data-diarito-dropdown-portal><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" data-diarito-dropdown-trigger aria-expanded="false" aria-label="More note actions"><i class="fi fi-rr-menu-dots-vertical"></i></button><div class="diarito-dropdown__menu" data-diarito-dropdown-menu hidden><button class="diarito-dropdown__item" type="button"><i class="fi fi-rr-pencil"></i> Edit</button><button class="diarito-dropdown__item" type="button"><i class="fi fi-rr-copy"></i> Duplicate</button><button class="diarito-dropdown__item" type="button"><i class="fi fi-rr-folder"></i> Move to collection</button><button class="diarito-dropdown__item" type="button"><i class="fi fi-rr-archive"></i> Archive</button></div></div></div></footer>
-            </article>
-            <article class="diarito-card diarito-card--clip diarito-note-card">
-              <header class="diarito-card__header diarito-note-card__header"><div class="diarito-note-card__meta"><span>Yesterday · 9:40 PM</span><span class="diarito-visual-state"><i class="fi fi-rr-bookmark"></i> Journal</span></div><h3>Things I want to remember from today</h3></header>
-              <div class="diarito-card__body diarito-note-card__body diarito-note-card__body--ruled"><p>I noticed that the phrases I remember best are the ones attached to an actual moment, not the ones I copied into a vocabulary list because a textbook told me they were useful.</p><p>Tomorrow I want to write down fewer things, but give each one enough context that I can understand why I saved it when I come back later.</p></div>
-              <footer class="diarito-card__footer diarito-note-card__footer"><div class="docs-demo-row"><span class="diarito-tag diarito-tag--dark">journal</span><span class="diarito-tag diarito-tag--gray">language</span></div><div class="diarito-icon-actions"><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" aria-label="Private note"><i class="fi fi-rr-lock"></i></button><div class="diarito-dropdown" data-diarito-dropdown data-diarito-dropdown-portal><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" data-diarito-dropdown-trigger aria-expanded="false" aria-label="More note actions"><i class="fi fi-rr-menu-dots-vertical"></i></button><div class="diarito-dropdown__menu" data-diarito-dropdown-menu hidden><button class="diarito-dropdown__item" type="button"><i class="fi fi-rr-pencil"></i> Edit</button><button class="diarito-dropdown__item" type="button"><i class="fi fi-rr-copy"></i> Duplicate</button><button class="diarito-dropdown__item" type="button"><i class="fi fi-rr-folder"></i> Move to collection</button><button class="diarito-dropdown__item" type="button"><i class="fi fi-rr-archive"></i> Archive</button></div></div></div></footer>
-            </article>
-          </div>
-        </article>
-        <article class="docs-showcase"><div class="docs-showcase__head"><div><h3>Note previews</h3><p>Compact reading for search, panels and lists.</p></div></div><div class="diarito-card diarito-card--flat"><div class="diarito-card__body"><div class="diarito-note-preview"><span class="diarito-icon-box"><i class="fi fi-rr-document"></i></span><div class="diarito-note-preview__copy"><strong>Meeting notes</strong><span>Decisions, next steps and the thing everyone forgets...</span></div><span class="diarito-help">8m</span></div><div class="diarito-note-preview"><span class="diarito-icon-box"><i class="fi fi-rr-document"></i></span><div class="diarito-note-preview__copy"><strong>Places to visit</strong><span>Santa Lucía, Cantarranas, Valle de Ángeles...</span></div><span class="diarito-help">2d</span></div></div></div></article>
+        <article class="docs-showcase"><div class="docs-showcase__head"><div><h3>Entry previews</h3><p>Compact Diary entry reading for search, panels and lists without introducing another card type.</p></div></div><div class="diarito-card diarito-card--flat"><div class="diarito-card__body"><div class="diarito-note-preview"><span class="diarito-icon-box"><i class="fi fi-rr-document"></i></span><div class="diarito-note-preview__copy"><strong>Meeting notes</strong><span>A short diary excerpt that can surface in search...</span></div><span class="diarito-help">8m</span></div><div class="diarito-note-preview"><span class="diarito-icon-box"><i class="fi fi-rr-document"></i></span><div class="diarito-note-preview__copy"><strong>Places to visit</strong><span>A compact preview of another diary entry...</span></div><span class="diarito-help">2d</span></div></div></div></article>
         <article class="docs-showcase"><div class="docs-showcase__head"><div><h3>Collections</h3><p>Folder rows reuse the same icon, button and metadata pieces.</p></div></div><div class="docs-demo-stack"><div class="diarito-collection-item"><span class="diarito-icon-box"><i class="fi fi-rr-folder"></i></span><div class="diarito-collection-item__content"><strong>Work</strong><span>18 notes · updated today</span></div><button class="diarito-button diarito-button--ghost diarito-button--icon diarito-button--sm"><i class="fi fi-rr-menu-dots-vertical"></i></button></div><div class="diarito-collection-item"><span class="diarito-icon-box"><i class="fi fi-rr-folder"></i></span><div class="diarito-collection-item__content"><strong>Travel</strong><span>7 notes · updated 2 days ago</span></div><button class="diarito-button diarito-button--ghost diarito-button--icon diarito-button--sm"><i class="fi fi-rr-menu-dots-vertical"></i></button></div></div></article>
         
 
@@ -824,7 +861,7 @@
 
     <footer class="docs-footer">
       <div class="docs-footer__block docs-footer__block--main"><div class="docs-footer__block-inner diarito-container docs-container"><div class="docs-footer__main">
-        <div class="docs-footer__brand"><a class="diarito-brand" href="#overview"><span class="diarito-brand__mark">D</span><span>Diarito</span></a><p>A reusable HTML, CSS and native JavaScript design system for a quieter, more consistent Diarito.</p><span class="diarito-tag diarito-tag--gray">UI Library v2.8.0</span></div>
+        <div class="docs-footer__brand"><a class="diarito-brand" href="#overview"><span class="diarito-brand__mark">D</span><span>Diarito</span></a><p>A reusable HTML, CSS and native JavaScript design system for a quieter, more consistent Diarito.</p><span class="diarito-tag diarito-tag--gray">UI Library v2.9.0</span></div>
         <div class="docs-footer__links"><div class="docs-footer__group"><span class="docs-footer__label">Library</span><a href="#foundation">Foundation</a><a href="#components">Components</a><a href="#feedback">Feedback</a><a href="#data">Data</a></div><div class="docs-footer__group"><span class="docs-footer__label">Product patterns</span><a href="#feed">Feed</a><a href="#patterns">Diarito patterns</a><a href="#rules">Rules</a></div><div class="docs-footer__group"><span class="docs-footer__label">Project</span><a href="https://github.com/nickramen/diarito-ui">GitHub</a><a href="README.md">README</a><a href="docs/CHANGELOG.md">Changelog</a></div></div>
       </div></div></div>
       <div class="docs-footer__block docs-footer__block--social"><div class="docs-footer__block-inner diarito-container docs-container"><span class="docs-footer__label">Diarito around the web</span><div class="docs-footer__social-grid"><a class="docs-footer__social-link" href="#" aria-label="Discord demo link"><i class="fi fi-rr-users-alt"></i><span>Discord</span></a><a class="docs-footer__social-link" href="#" aria-label="X demo link"><i class="fi fi-rr-at"></i><span>X</span></a><a class="docs-footer__social-link" href="#" aria-label="Reddit demo link"><i class="fi fi-rr-comment-alt"></i><span>Reddit</span></a><a class="docs-footer__social-link" href="#" aria-label="TikTok demo link"><i class="fi fi-rr-play-alt"></i><span>TikTok</span></a><a class="docs-footer__social-link" href="#" aria-label="Instagram demo link"><i class="fi fi-rr-camera"></i><span>Instagram</span></a></div></div></div>
@@ -832,7 +869,7 @@
     </footer>
   </main>
 
-  <script src="assets/js/diarito.js?v=2.8.0"></script>
-  <script src="assets/js/library-docs.js?v=2.8.0"></script>
+  <script src="assets/js/diarito.js?v=2.9.0"></script>
+  <script src="assets/js/library-docs.js?v=2.9.0"></script>
 </body>
 </html>
