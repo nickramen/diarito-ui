@@ -704,7 +704,7 @@
 
 /* Human correction composer */
 .diarito-correction-composer { display: grid; gap: var(--diarito-space-4); }
-.diarito-correction-composer__selection .diarito-quote-entry__body { font-size: var(--diarito-text-base); }
+.diarito-correction-composer__selection .diarito-quote-entry__body { font-size: var(--diarito-text-md); }
 .diarito-correction-composer__grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: var(--diarito-space-3); }
 .diarito-correction-composer__actions { display: flex; justify-content: flex-end; gap: var(--diarito-space-2); flex-wrap: wrap; }
 
@@ -757,7 +757,7 @@
 }
 .diarito-daily-response-card__author .diarito-tag { justify-self: end; }
 .diarito-daily-response-card .diarito-note-card__header { gap: var(--diarito-space-4); }
-.diarito-daily-response-card .diarito-note-card__body { font-size: var(--diarito-text-base); }
+.diarito-daily-response-card .diarito-note-card__body { font-size: var(--diarito-text-md); }
 .diarito-daily-response-card .diarito-note-card__footer { flex-wrap: wrap; }
 .diarito-daily-response-card .diarito-entry-meta { margin-left: auto; }
 
