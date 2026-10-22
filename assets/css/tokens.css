@@ -25,11 +25,11 @@
   --diarito-success: #22C55E;
   --diarito-info: #3B82F6;
 
-  /* State text: Tailwind 700 in the default light theme */
-  --diarito-error-text: #B91C1C;
-  --diarito-warning-text: #A16207;
-  --diarito-success-text: #15803D;
-  --diarito-info-text: #1D4ED8;
+  /* State text: Tailwind 500 in the default light theme */
+  --diarito-error-text: #EF4444;
+  --diarito-warning-text: #EAB308;
+  --diarito-success-text: #22C55E;
+  --diarito-info-text: #3B82F6;
 
   /* Theme roles: components consume these, not raw light/dark colors */
   --diarito-color-bg: var(--diarito-white);

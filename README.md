@@ -1,8 +1,8 @@
-# Diarito UI Library 2.6.0
+# Diarito UI Library 2.7.0
 
 Diarito's reusable HTML, CSS and native JavaScript design system.
 
-Version 2.6.0 adds the remaining high-value diary/posting interaction patterns while keeping the system HTML + CSS + native JavaScript only.
+Version 2.7.0 tightens the post-card layout, semantic states and avatar system, then adds the missing learning-flow patterns needed for the Diarito MVP.
 
 
 
@@ -13,6 +13,32 @@ Version 2.6.0 adds the remaining high-value diary/posting interaction patterns w
 
 
 
+
+## 2.7.0 learning-flow and identity refinements
+
+- Entry-card interactions stay on the left while visibility/word-count/edit metadata align right.
+- Semantic state text now uses the Tailwind 500 state color in light mode and font weight 500.
+- Avatar sizes now include xs, sm, default, lg, xl and profile.
+- Avatars support real photos with automatic initial fallback when a photo is missing or fails to load.
+- Profile / author header uses the larger profile avatar size.
+- Added OIO learning progress.
+- Added Human correction composer.
+- Added Try Again / rewrite.
+- Added Community publication warning.
+
+Reusable additions:
+
+```text
+diarito-avatar--xs
+diarito-avatar--xl
+diarito-avatar--profile
+data-diarito-avatar
+data-diarito-avatar-image
+diarito-oio-progress
+diarito-correction-composer
+diarito-rewrite
+diarito-publication-warning
+```
 
 ## 2.6.0 interaction patterns for real diary screens
 

@@ -77,7 +77,7 @@
 
         <article class="docs-showcase is-narrow">
           <div class="docs-showcase__head">
-            <div><h3>State colors</h3><p>Tailwind 500 drives the state; Tailwind 700 colors the label text in light mode.</p></div>
+            <div><h3>State colors</h3><p>Tailwind 500 drives both the semantic state and its label text. State labels stay at font weight 500.</p></div>
           </div>
           <div class="docs-demo-stack">
             <span class="diarito-status diarito-status--success">Success</span>
@@ -193,7 +193,8 @@
         <article class="docs-showcase">
           <div class="docs-showcase__head"><div><h3>Avatars & icon boxes</h3><p>Avatars identify people. Icon boxes give standalone actions or concepts a consistent visual container.</p></div></div>
           <div class="docs-demo-stack">
-            <div class="docs-demo-group"><span class="docs-demo-group__label">Avatars · default / large</span><div class="docs-demo-row"><span class="diarito-avatar">N</span><span class="diarito-avatar diarito-avatar--lg">D</span></div></div>
+            <div class="docs-demo-group"><span class="docs-demo-group__label">Avatar sizes · xs / sm / default / lg / xl / profile</span><div class="docs-demo-row"><span class="diarito-avatar diarito-avatar--xs">N</span><span class="diarito-avatar diarito-avatar--sm">N</span><span class="diarito-avatar">N</span><span class="diarito-avatar diarito-avatar--lg">N</span><span class="diarito-avatar diarito-avatar--xl">N</span><span class="diarito-avatar diarito-avatar--profile">N</span></div></div>
+            <div class="docs-demo-group"><span class="docs-demo-group__label">Photo when available / initial fallback</span><div class="docs-demo-row"><span class="diarito-avatar diarito-avatar--xl" data-diarito-avatar><img src="https://i.pravatar.cc/160?img=47" alt="Example profile photo" data-diarito-avatar-image><span class="diarito-avatar__fallback" aria-hidden="true">Y</span></span><span class="diarito-avatar diarito-avatar--xl" data-diarito-avatar><img src="./assets/images/avatar-not-found.jpg" alt="" data-diarito-avatar-image><span class="diarito-avatar__fallback" aria-hidden="true">N</span></span></div></div>
             <div class="docs-demo-group"><span class="docs-demo-group__label">Icon boxes · one style / optional large</span><div class="docs-demo-row"><span class="diarito-icon-box"><i class="fi fi-rr-document"></i></span><span class="diarito-icon-box"><i class="fi fi-rr-folder"></i></span><span class="diarito-icon-box diarito-icon-box--lg"><i class="fi fi-rr-sparkles"></i></span></div></div>
           </div>
         </article>
@@ -505,7 +506,7 @@
               <div class="diarito-dropdown" data-diarito-dropdown><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" data-diarito-dropdown-trigger aria-expanded="false" aria-label="Entry actions"><i class="fi fi-rr-menu-dots-vertical"></i></button><div class="diarito-dropdown__menu" data-diarito-dropdown-menu hidden><button class="diarito-dropdown__item" type="button">Save</button><button class="diarito-dropdown__item" type="button">Share</button><button class="diarito-dropdown__item" type="button">Report</button></div></div>
             </header>
             <div class="diarito-card__body diarito-entry-card__body"><h3>A small thing I want to remember</h3><p>오늘 회의에서 완벽하게 말하지 못했지만, 그래도 끝까지 한국어로 설명했다. I normally remember the mistakes first, so I’m writing down the part that actually went well.</p><div class="docs-demo-row"><span class="diarito-tag diarito-tag--dark">journal</span><span class="diarito-tag diarito-tag--gray">한국어</span></div></div>
-            <footer class="diarito-card__footer diarito-entry-card__footer"><div class="diarito-entry-meta"><span class="diarito-entry-meta__item"><i class="fi fi-rr-globe"></i> Community</span><span class="diarito-entry-meta__item">126 words</span><span class="diarito-entry-meta__item">Edited</span></div><div class="diarito-entry-actions"><button class="diarito-entry-action" type="button" data-diarito-toggle="like" aria-pressed="false"><i class="fi fi-rr-heart"></i> 24</button><button class="diarito-entry-action" type="button"><i class="fi fi-rr-comment"></i> 8</button><button class="diarito-entry-action" type="button" data-diarito-toggle="bookmark" aria-pressed="false"><i class="fi fi-rr-bookmark"></i> Save</button><button class="diarito-entry-action" type="button"><i class="fi fi-rr-share"></i> Share</button></div></footer>
+            <footer class="diarito-card__footer diarito-entry-card__footer"><div class="diarito-entry-actions"><button class="diarito-entry-action" type="button" data-diarito-toggle="like" aria-pressed="false"><i class="fi fi-rr-heart"></i> 24</button><button class="diarito-entry-action" type="button"><i class="fi fi-rr-comment"></i> 8</button><button class="diarito-entry-action" type="button" data-diarito-toggle="bookmark" aria-pressed="false"><i class="fi fi-rr-bookmark"></i> Save</button><button class="diarito-entry-action" type="button"><i class="fi fi-rr-share"></i> Share</button></div><div class="diarito-entry-meta"><span class="diarito-entry-meta__item"><i class="fi fi-rr-globe"></i> Community</span><span class="diarito-entry-meta__item">126 words</span><span class="diarito-entry-meta__item">Edited</span></div></footer>
           </article>
         </article>
 
@@ -604,7 +605,7 @@
           <div class="docs-showcase__head"><div><h3>Profile / author header</h3><p>The full identity surface for profile pages. It composes avatars, tags, metadata and the existing follow action instead of enlarging the mini-profile card.</p></div></div>
           <div class="diarito-card diarito-card--flat"><div class="diarito-card__body diarito-profile-header">
             <div class="diarito-profile-header__main">
-              <div class="diarito-profile-header__identity"><span class="diarito-avatar diarito-avatar--lg">Y</span><div class="diarito-profile-header__copy"><h3>Yuna</h3><span class="diarito-profile-header__handle">@yuna</span><p class="diarito-profile-header__bio">Writing small daily notes while learning Spanish. Mostly language practice, places I want to remember and things that were funnier later.</p></div></div>
+              <div class="diarito-profile-header__identity"><span class="diarito-avatar diarito-avatar--profile" data-diarito-avatar><img src="https://i.pravatar.cc/200?img=47" alt="Yuna" data-diarito-avatar-image><span class="diarito-avatar__fallback" aria-hidden="true">Y</span></span><div class="diarito-profile-header__copy"><h3>Yuna</h3><span class="diarito-profile-header__handle">@yuna</span><p class="diarito-profile-header__bio">Writing small daily notes while learning Spanish. Mostly language practice, places I want to remember and things that were funnier later.</p></div></div>
               <div class="diarito-profile-header__actions"><button class="diarito-button diarito-button--secondary" type="button"><i class="fi fi-rr-envelope"></i> Message</button><button class="diarito-button diarito-button--primary" type="button" data-diarito-toggle="follow" aria-pressed="false"><i class="fi fi-rr-user-add"></i> Follow</button></div>
             </div>
             <div class="docs-demo-row"><span class="diarito-tag diarito-tag--dark">Korean</span><span class="diarito-tag diarito-tag--gray">Learning Spanish</span></div>
@@ -632,6 +633,48 @@
             <div class="diarito-correction__note"><i class="fi fi-rr-info"></i><span><strong>Why?</strong> “긴장됐어요” sounds more natural here if you mean you felt nervous rather than literally afraid.</span></div>
             <div class="diarito-correction__actions"><button class="diarito-button diarito-button--primary" type="button" data-diarito-toggle="accept-correction" aria-pressed="false"><i class="fi fi-rr-check"></i> Accept suggestion</button><button class="diarito-button diarito-button--ghost" type="button">Ignore</button></div>
           </div></div>
+        </article>
+
+        <article class="docs-showcase is-full">
+          <div class="docs-showcase__head"><div><h3>OIO learning progress</h3><p>Shows the learning cycle as Output → Input → Output, so progress reflects practice completed rather than only login streaks.</p></div></div>
+          <div class="diarito-card diarito-card--flat"><div class="diarito-card__body diarito-oio-progress">
+            <div class="diarito-oio-progress__steps">
+              <div class="diarito-oio-step is-complete"><div class="diarito-oio-step__top"><span class="diarito-oio-step__dot"></span>Output</div><strong>Diary written</strong></div>
+              <div class="diarito-oio-step is-complete"><div class="diarito-oio-step__top"><span class="diarito-oio-step__dot"></span>Input</div><strong>Feedback reviewed</strong></div>
+              <div class="diarito-oio-step is-current"><div class="diarito-oio-step__top"><span class="diarito-oio-step__dot"></span>Output</div><strong>Rewrite what you learned</strong></div>
+            </div>
+            <div class="diarito-oio-progress__summary"><strong>2 of 3 steps complete.</strong> Finish the rewrite to complete this OIO cycle.</div>
+          </div></div>
+        </article>
+
+        <article class="docs-showcase is-full">
+          <div class="docs-showcase__head"><div><h3>Human correction composer</h3><p>For community corrections: preserve the selected fragment, then ask for a replacement and a useful explanation.</p></div></div>
+          <div class="diarito-card diarito-card--flat"><div class="diarito-card__body diarito-correction-composer">
+            <div class="diarito-correction-composer__selection"><span>Selected text</span>I have 25 years.</div>
+            <div class="diarito-correction-composer__grid">
+              <label class="diarito-field"><span class="diarito-label">Replace with</span><input class="diarito-input" value="I am 25 years old."></label>
+              <label class="diarito-field"><span class="diarito-label">Correction type</span><select class="diarito-select"><option>Grammar</option><option>Naturalness</option><option>Vocabulary</option><option>Cultural note</option></select></label>
+            </div>
+            <label class="diarito-field"><span class="diarito-label">Explanation</span><textarea class="diarito-textarea" rows="3">In English, age is expressed using “to be”.</textarea></label>
+            <div class="diarito-correction-composer__actions"><button class="diarito-button diarito-button--ghost" type="button">Cancel</button><button class="diarito-button diarito-button--primary" type="button">Submit correction</button></div>
+          </div></div>
+        </article>
+
+        <article class="docs-showcase is-full">
+          <div class="docs-showcase__head"><div><h3>Try Again / rewrite</h3><p>The second Output in OIO. It keeps the accepted feedback visible while the learner writes a better version.</p></div></div>
+          <div class="diarito-card diarito-card--flat"><div class="diarito-card__body diarito-rewrite">
+            <div class="diarito-rewrite__context">
+              <div class="diarito-rewrite__context-item"><span>Original</span><p>Yesterday I go to my friend's house.</p></div>
+              <div class="diarito-rewrite__context-item"><span>Accepted correction</span><p>Yesterday I went to my friend's house.</p></div>
+            </div>
+            <label class="diarito-field"><span class="diarito-label">Try again</span><textarea class="diarito-textarea diarito-rewrite__editor" placeholder="Rewrite it using what you learned..."></textarea><span class="diarito-help">Use the correction without copying blindly. The goal is to produce the language again.</span></label>
+            <div class="diarito-correction-composer__actions"><button class="diarito-button diarito-button--secondary" type="button">Save draft</button><button class="diarito-button diarito-button--primary" type="button">Complete OIO cycle</button></div>
+          </div></div>
+        </article>
+
+        <article class="docs-showcase">
+          <div class="docs-showcase__head"><div><h3>Community publication warning</h3><p>Diary content can be personal. Reuse this warning before an entry becomes visible to other people.</p></div></div>
+          <div class="diarito-publication-warning"><span class="diarito-icon-box"><i class="fi fi-rr-shield-check"></i></span><div class="diarito-publication-warning__copy"><strong>You’re sharing a personal diary entry</strong><p>People in the community will be able to read this entry and suggest corrections. Review names, locations or details you may not want to share.</p></div></div>
         </article>
 
         <article class="docs-showcase">
@@ -706,7 +749,7 @@
             <section class="docs-rule-group"><h4>02 · Component governance</h4><ul><li>If a shared component exists, a screen does not recreate its radius, height, color, border or hover behavior.</li><li>New reusable variants are added to the library first, then consumed by screens.</li><li>Product patterns compose existing primitives before introducing new visual rules.</li><li>Page CSS may arrange components; it may not redefine their visual internals.</li></ul></section>
             <section class="docs-rule-group"><h4>03 · Tokens & themes</h4><ul><li>New colors, spacing, radii, shadows and z-index values become tokens before component literals.</li><li>Light is the default theme. Dark and future themes override semantic roles instead of component CSS.</li><li>The library does not force OS-theme detection or persistence.</li></ul></section>
             <section class="docs-rule-group"><h4>04 · Typography</h4><ul><li>Roboto and Noto Sans KR are the operational UI pair.</li><li>Englebert and Poor Story are display fonts for short expressive moments, not forms, tables or long body text.</li><li>Labels stay visible; placeholders never replace labels.</li></ul></section>
-            <section class="docs-rule-group"><h4>05 · Color & semantic states</h4><ul><li>Success, warning, error and info use Tailwind 500 as their semantic base.</li><li>State text uses Tailwind 700 in light mode and contrast-safe semantic text roles in dark mode.</li><li>Important meaning never depends on color alone.</li><li>Do not introduce isolated hex values when a semantic token exists.</li></ul></section>
+            <section class="docs-rule-group"><h4>05 · Color & semantic states</h4><ul><li>Success, warning, error and info use Tailwind 500 as their semantic base.</li><li>State text uses the Tailwind 500 semantic color in light mode and contrast-safe semantic text roles in dark mode. Semantic labels use font weight 500.</li><li>Important meaning never depends on color alone.</li><li>Do not introduce isolated hex values when a semantic token exists.</li></ul></section>
             <section class="docs-rule-group"><h4>06 · Layout & spacing</h4><ul><li>Pages use <code>.diarito-section</code> + <code>.diarito-container</code> as the page-level contract.</li><li>Peer sections share the same max-width unless a deliberate reading-width pattern says otherwise.</li><li>Spacing comes from the shared scale.</li><li>Editorial/product documentation favors one central scrolling column over dashboard fragmentation.</li></ul></section>
             <section class="docs-rule-group"><h4>07 · Borders, radius & shadows</h4><ul><li>Cards, tables, form controls and overlays may use structural 1px borders.</li><li>Buttons, badges, tags, alerts, tabs and pagination remain borderless.</li><li>No border-left-only state accents.</li><li>Use the shared sharper radius scale.</li><li>Shadows are subtle and compact; no large spaced/blurred decorative shadows.</li></ul></section>
             <section class="docs-rule-group"><h4>08 · Cards & surfaces</h4><ul><li>Cards use semantic surfaces, structural borders and shared radius tokens.</li><li>Cards do not clip overlays by default; use <code>.diarito-card--clip</code> only when content genuinely needs clipping.</li><li>Header/body/footer separators are structural, not decoration.</li></ul></section>

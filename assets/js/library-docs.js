@@ -228,4 +228,27 @@
     });
   });
 
+
+  document.querySelectorAll('[data-diarito-avatar]').forEach((avatar) => {
+    const image = avatar.querySelector('[data-diarito-avatar-image]');
+    if (!image) {
+      avatar.classList.add('is-fallback');
+      return;
+    }
+    const showPhoto = () => {
+      avatar.classList.remove('is-fallback');
+      avatar.classList.add('has-photo');
+    };
+    const showFallback = () => {
+      avatar.classList.remove('has-photo');
+      avatar.classList.add('is-fallback');
+    };
+    image.addEventListener('load', showPhoto);
+    image.addEventListener('error', showFallback);
+    if (image.complete) {
+      if (image.naturalWidth > 0) showPhoto();
+      else showFallback();
+    }
+  });
+
 })();
