@@ -108,7 +108,7 @@
 
 /* Cards */
 .diarito-card { overflow: visible; border: var(--diarito-border-strong); border-radius: var(--diarito-radius-md); background: var(--diarito-color-surface); box-shadow: var(--diarito-shadow-xs); }
-.diarito-card__header, .diarito-card__body, .diarito-card__footer { padding: var(--diarito-space-5); }
+.diarito-card__header, .diarito-card__body, .diarito-card__footer { padding: var(--diarito-space-4); }
 .diarito-card__header { border-bottom: var(--diarito-border); }
 .diarito-card__footer { border-top: var(--diarito-border); }
 .diarito-card--flat { box-shadow: none; }
