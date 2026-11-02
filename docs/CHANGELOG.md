@@ -1,5 +1,24 @@
 # Changelog
 
+## 2.12.0 - Overlays + advanced social/gamification
+
+- Compacted Modal header/body/footer to the same density as canonical cards.
+- Restyled Drawer / offcanvas as a floating rounded Diarito panel.
+- Restyled Mobile bottom sheet with Diarito action rows and improved responsive behavior.
+- Added a visible Product utilities index with direct links to the 2.11 utilities.
+- Added Reaction picker.
+- Added Reputation card.
+- Added Leaderboard.
+- Added Correction voting.
+- Added Chat / direct messages.
+- Added Audio player / recorder with MediaRecorder support.
+- Added Achievements.
+- Added XP / level progression.
+- Added Quests / challenges.
+- Added Marketplace browse/listing and detail patterns.
+- Added reusable native-JS behavior for reactions, correction voting, chat and audio recording/playback.
+
+
 ## 2.11.0 - Reusable product utilities
 
 - Added Inline text selection toolbar.
