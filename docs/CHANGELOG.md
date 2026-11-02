@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.9.1 - Diary surface cleanup
+
+- Removed horizontal rules from Diary entry cards.
+- Removed the Unified feed experiment / Daily Question comparison.
+- Removed focus-ring/accent-border emphasis from entry, feed, reply and generic textarea writing surfaces.
+- Kept normal focus treatment for inputs and selects.
+
+
 ## 2.9.0 - Unified Diary entry family
 
 - Merged the ruled Note card writing treatment into the canonical Diary entry body.
