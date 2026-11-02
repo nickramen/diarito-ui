@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Diarito UI Library 2.9.0</title>
+  <title>Diarito UI Library 2.9.1</title>
   <meta name="description" content="Diarito HTML, CSS and native JavaScript UI component library.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Englebert&family=Noto+Sans+KR:wght@400;500;600;700&family=Poor+Story&family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
-  <link rel="stylesheet" href="assets/css/diarito-system.css?v=2.9.0">
-  <link rel="stylesheet" href="assets/css/docs-library.css?v=2.9.0">
+  <link rel="stylesheet" href="assets/css/diarito-system.css?v=2.9.1">
+  <link rel="stylesheet" href="assets/css/docs-library.css?v=2.9.1">
 </head>
 <body class="docs-body">
   <header class="docs-topbar">
@@ -20,7 +20,7 @@
         <span>Diarito</span>
       </a>
       <div class="docs-topbar__actions">
-        <span class="diarito-tag">v2.9.0</span>
+        <span class="diarito-tag">v2.9.1</span>
         <button class="diarito-button diarito-button--secondary" type="button" data-diarito-theme-toggle aria-pressed="false" aria-label="Switch to dark theme"><i class="fi fi-rr-moon"></i><span data-diarito-theme-label>Dark</span></button>
         <a class="diarito-button diarito-button--primary" href="#components">View components</a>
       </div>
@@ -32,7 +32,7 @@
       <div class="docs-hero__inner diarito-container docs-container">
         <span class="diarito-kicker">Diarito UI Library · HTML + CSS + JS</span>
         <h1 class="diarito-display">A quieter system with stronger structure.</h1>
-        <p>Version 2.9.0 unifies Diary entries with the ruled Note card writing surface, simplifies interaction counters and adds single-image and gallery media examples.</p>
+        <p>Version 2.9.1 keeps Diary entries clean and unruled, removes the feed experiment, and makes writing surfaces stay visually quiet while focused.</p>
         <div class="docs-hero__meta">
           <span class="diarito-chip"><i class="fi fi-rr-code-simple"></i> HTML + CSS</span>
           <span class="diarito-chip"><i class="fi fi-rr-settings-sliders"></i> Native JS only</span>
@@ -473,42 +473,7 @@
           </div>
         </article>
 
-        <article class="docs-showcase is-full">
-          <div class="docs-showcase__head"><div><h3>Unified feed experiment · Diary + Daily Question</h3><p>Both free-writing entries and Daily Question responses now use the same Diary entry card. The prompt is context inside the entry, not a separate card type.</p></div><span class="diarito-tag diarito-tag--gray">Experiment</span></div>
-          <div class="diarito-mock-window">
-            <div class="diarito-mock-window__bar"><div class="diarito-mock-window__dots"><span></span><span></span><span></span></div><span style="margin-left:auto">diarito · unified feed experiment</span></div>
-            <div class="diarito-mock-window__body diarito-feed-demo">
-              <div class="diarito-reading">
-                <div class="diarito-feed-switch"><button class="is-active" type="button">For you</button><button type="button">Following</button><button type="button">Practice</button></div>
-                <div class="diarito-mixed-feed">
-                  <article class="diarito-card diarito-entry-card diarito-mixed-feed__item">
-                    <header class="diarito-card__header diarito-entry-card__header"><div class="diarito-entry-card__identity"><span class="diarito-avatar">Y</span><div class="diarito-entry-card__identity-copy"><strong>yuna</strong><span>@yuna · 18 min</span></div></div><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" aria-label="Entry actions"><i class="fi fi-rr-menu-dots-vertical"></i></button></header>
-                    <div class="diarito-card__body diarito-entry-card__body"><h3>I spoke before I had time to overthink it</h3><p>오늘은 처음으로 문장을 머릿속에서 완벽하게 만들기 전에 그냥 말해봤다. It was messy, but the conversation kept moving, which felt more useful than being perfect.</p><div class="docs-demo-row"><span class="diarito-tag diarito-tag--dark">journal</span><span class="diarito-tag diarito-tag--gray">한국어</span></div></div>
-                    <footer class="diarito-card__footer diarito-entry-card__footer"><div class="diarito-entry-actions"><button class="diarito-entry-action" type="button" aria-label="31 likes"><i class="fi fi-rr-heart"></i> 31</button><button class="diarito-entry-action" type="button" aria-label="7 comments"><i class="fi fi-rr-comment"></i> 7</button><button class="diarito-entry-action" type="button" aria-label="2 corrections"><i class="fi fi-rr-pencil"></i> 2</button><button class="diarito-entry-action" type="button" aria-label="13 saves"><i class="fi fi-rr-bookmark"></i> 13</button><button class="diarito-entry-action" type="button" aria-label="5 shares"><i class="fi fi-rr-share"></i> 5</button></div><div class="diarito-entry-meta"><span class="diarito-entry-meta__item">112 words</span></div></footer>
-                  </article>
-
-                  <article class="diarito-card diarito-entry-card diarito-daily-response-card diarito-mixed-feed__item">
-                    <header class="diarito-card__header diarito-entry-card__header"><div class="diarito-entry-card__identity"><span class="diarito-avatar">S</span><div class="diarito-entry-card__identity-copy"><strong>sowon</strong><span>@sowon · 42 min</span></div></div><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" aria-label="Entry actions"><i class="fi fi-rr-menu-dots-vertical"></i></button></header>
-                    <div class="diarito-card__body diarito-entry-card__body">
-                      <span class="diarito-daily-response-card__question"><i class="fi fi-rr-interrogation"></i> Daily Question</span>
-                      <h3>What small moment made your day better?</h3>
-                      <p>Encontré una cafetería pequeña cerca del trabajo y la señora recordó mi pedido de ayer. No fue nada grande, pero me hizo sentir que ya tengo un lugar conocido en la ciudad.</p>
-                      <div class="docs-demo-row"><span class="diarito-tag diarito-tag--dark">daily question</span><span class="diarito-tag diarito-tag--gray">Español</span></div>
-                    </div>
-                    <footer class="diarito-card__footer diarito-entry-card__footer"><div class="diarito-entry-actions"><button class="diarito-entry-action" type="button" aria-label="46 likes"><i class="fi fi-rr-heart"></i> 46</button><button class="diarito-entry-action" type="button" aria-label="12 comments"><i class="fi fi-rr-comment"></i> 12</button><button class="diarito-entry-action" type="button" aria-label="4 corrections"><i class="fi fi-rr-pencil"></i> 4</button><button class="diarito-entry-action" type="button" aria-label="18 saves"><i class="fi fi-rr-bookmark"></i> 18</button><button class="diarito-entry-action" type="button" aria-label="7 shares"><i class="fi fi-rr-share"></i> 7</button></div><div class="diarito-entry-meta"><span class="diarito-entry-meta__item">76 words</span></div></footer>
-                  </article>
-
-                  <article class="diarito-card diarito-entry-card diarito-mixed-feed__item">
-                    <header class="diarito-card__header diarito-entry-card__header"><div class="diarito-entry-card__identity"><span class="diarito-avatar">N</span><div class="diarito-entry-card__identity-copy"><strong>nickramen</strong><span>@nickramen · 1h</span></div></div><button class="diarito-button diarito-button--ghost diarito-button--icon" type="button" aria-label="Entry actions"><i class="fi fi-rr-menu-dots-vertical"></i></button></header>
-                    <div class="diarito-card__body diarito-entry-card__body"><h3>Studying somewhere that doesn’t feel like studying</h3><p>I wrote down three phrases while drinking coffee instead of opening another giant vocabulary list. Apparently tricking myself into studying still counts.</p><div class="docs-demo-row"><span class="diarito-tag diarito-tag--dark">daily life</span><span class="diarito-tag diarito-tag--gray">Korean</span></div><figure class="diarito-entry-card__media"><img src="assets/images/diary-entry-demo.svg" alt="A quiet cafe table with a notebook and coffee cup"></figure></div>
-                    <footer class="diarito-card__footer diarito-entry-card__footer"><div class="diarito-entry-actions"><button class="diarito-entry-action" type="button" aria-label="20 likes"><i class="fi fi-rr-heart"></i> 20</button><button class="diarito-entry-action" type="button" aria-label="4 comments"><i class="fi fi-rr-comment"></i> 4</button><button class="diarito-entry-action" type="button" aria-label="1 correction"><i class="fi fi-rr-pencil"></i> 1</button><button class="diarito-entry-action" type="button" aria-label="8 saves"><i class="fi fi-rr-bookmark"></i> 8</button><button class="diarito-entry-action" type="button" aria-label="2 shares"><i class="fi fi-rr-share"></i> 2</button></div><div class="diarito-entry-meta"><span class="diarito-entry-meta__item">88 words</span></div></footer>
-                  </article>
-                </div>
               </div>
-            </div>
-          </div>
-        </article>
-      </div>
     </section>
 
     <section class="docs-section diarito-section diarito-container docs-container" id="patterns" data-doc-section>
@@ -864,7 +829,7 @@
 
     <footer class="docs-footer">
       <div class="docs-footer__block docs-footer__block--main"><div class="docs-footer__block-inner diarito-container docs-container"><div class="docs-footer__main">
-        <div class="docs-footer__brand"><a class="diarito-brand" href="#overview"><span class="diarito-brand__mark">D</span><span>Diarito</span></a><p>A reusable HTML, CSS and native JavaScript design system for a quieter, more consistent Diarito.</p><span class="diarito-tag diarito-tag--gray">UI Library v2.9.0</span></div>
+        <div class="docs-footer__brand"><a class="diarito-brand" href="#overview"><span class="diarito-brand__mark">D</span><span>Diarito</span></a><p>A reusable HTML, CSS and native JavaScript design system for a quieter, more consistent Diarito.</p><span class="diarito-tag diarito-tag--gray">UI Library v2.9.1</span></div>
         <div class="docs-footer__links"><div class="docs-footer__group"><span class="docs-footer__label">Library</span><a href="#foundation">Foundation</a><a href="#components">Components</a><a href="#feedback">Feedback</a><a href="#data">Data</a></div><div class="docs-footer__group"><span class="docs-footer__label">Product patterns</span><a href="#feed">Feed</a><a href="#patterns">Diarito patterns</a><a href="#rules">Rules</a></div><div class="docs-footer__group"><span class="docs-footer__label">Project</span><a href="https://github.com/nickramen/diarito-ui">GitHub</a><a href="README.md">README</a><a href="docs/CHANGELOG.md">Changelog</a></div></div>
       </div></div></div>
       <div class="docs-footer__block docs-footer__block--social"><div class="docs-footer__block-inner diarito-container docs-container"><span class="docs-footer__label">Diarito around the web</span><div class="docs-footer__social-grid"><a class="docs-footer__social-link" href="#" aria-label="Discord demo link"><i class="fi fi-rr-users-alt"></i><span>Discord</span></a><a class="docs-footer__social-link" href="#" aria-label="X demo link"><i class="fi fi-rr-at"></i><span>X</span></a><a class="docs-footer__social-link" href="#" aria-label="Reddit demo link"><i class="fi fi-rr-comment-alt"></i><span>Reddit</span></a><a class="docs-footer__social-link" href="#" aria-label="TikTok demo link"><i class="fi fi-rr-play-alt"></i><span>TikTok</span></a><a class="docs-footer__social-link" href="#" aria-label="Instagram demo link"><i class="fi fi-rr-camera"></i><span>Instagram</span></a></div></div></div>
@@ -872,7 +837,7 @@
     </footer>
   </main>
 
-  <script src="assets/js/diarito.js?v=2.9.0"></script>
-  <script src="assets/js/library-docs.js?v=2.9.0"></script>
+  <script src="assets/js/diarito.js?v=2.9.1"></script>
+  <script src="assets/js/library-docs.js?v=2.9.1"></script>
 </body>
 </html>

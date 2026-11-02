@@ -1,8 +1,8 @@
-# Diarito UI Library 2.9.0
+# Diarito UI Library 2.9.1
 
 Diarito's reusable HTML, CSS and native JavaScript design system.
 
-Version 2.9.0 unifies the Diary entry and Note card visual language into one canonical Diary entry family.
+Version 2.9.1 removes the ruled treatment from Diary entries, drops the unified-feed experiment, and keeps writing surfaces visually quiet on focus.
 
 
 
@@ -13,6 +13,13 @@ Version 2.9.0 unifies the Diary entry and Note card visual language into one can
 
 
 
+
+## 2.9.1 diary surface cleanup
+
+- Removed horizontal notebook rules from canonical Diary entry cards.
+- Removed the Unified feed experiment / Daily Question comparison from the documentation.
+- Entry composer, feed composer, reply composer and generic textarea writing surfaces no longer add a focus ring or accent border while typing.
+- Inputs and selects keep their normal focus treatment; this change is limited to writing/text areas.
 
 ## 2.9.0 unified Diary entry family
 

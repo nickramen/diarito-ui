@@ -53,7 +53,9 @@
 .diarito-textarea { min-height: 8rem; padding: .8rem; resize: vertical; }
 .diarito-input::placeholder, .diarito-textarea::placeholder { color: var(--diarito-color-text-subtle); }
 .diarito-input:hover:not(:disabled), .diarito-textarea:hover:not(:disabled), .diarito-select:hover:not(:disabled) { border-color: var(--diarito-color-text-subtle); }
-.diarito-input:focus, .diarito-textarea:focus, .diarito-select:focus { outline: 0; border-color: var(--diarito-color-action-bg); box-shadow: var(--diarito-focus-ring); }
+.diarito-input:focus, .diarito-select:focus { outline: 0; border-color: var(--diarito-color-action-bg); box-shadow: var(--diarito-focus-ring); }
+.diarito-textarea:focus,
+.diarito-textarea:focus-visible { outline: 0; border-color: var(--diarito-color-border-strong); box-shadow: none; }
 .diarito-input:disabled, .diarito-textarea:disabled, .diarito-select:disabled { color: var(--diarito-color-text-muted); background: var(--diarito-color-control); }
 .diarito-field.is-error .diarito-label, .diarito-field.is-error .diarito-help { color: var(--diarito-error); }
 .diarito-field.is-error .diarito-input, .diarito-field.is-error .diarito-textarea, .diarito-field.is-error .diarito-select { border-color: var(--diarito-error); }
