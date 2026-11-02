@@ -737,4 +737,238 @@
     sync();
   });
 
+
+  // Advanced reaction picker
+  document.querySelectorAll('[data-diarito-reaction-root]').forEach((root) => {
+    const trigger = root.querySelector('[data-diarito-reaction-trigger]');
+    const panel = root.querySelector('[data-diarito-reaction-panel]');
+    const summary = root.querySelector('[data-diarito-reaction-summary]');
+    if (!trigger || !panel || !summary) return;
+
+    const close = () => {
+      panel.hidden = true;
+      trigger.setAttribute('aria-expanded', 'false');
+    };
+    const open = () => {
+      panel.hidden = false;
+      trigger.setAttribute('aria-expanded', 'true');
+    };
+    trigger.addEventListener('click', (event) => {
+      event.stopPropagation();
+      panel.hidden ? open() : close();
+    });
+    panel.addEventListener('click', (event) => event.stopPropagation());
+
+    root.querySelectorAll('[data-diarito-reaction]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const key = button.dataset.diaritoReaction;
+        const symbol = button.dataset.reactionSymbol || '•';
+        const active = !button.classList.contains('is-active');
+        button.classList.toggle('is-active', active);
+
+        let countNode = summary.querySelector(`[data-reaction-count="${key}"]`);
+        let chip = countNode?.closest('.diarito-reaction-chip');
+        if (!countNode) {
+          chip = document.createElement('span');
+          chip.className = 'diarito-reaction-chip';
+          chip.innerHTML = `${symbol} <span data-reaction-count="${key}">0</span>`;
+          summary.append(chip);
+          countNode = chip.querySelector('[data-reaction-count]');
+        }
+
+        const current = Number(countNode.textContent || 0);
+        const next = Math.max(0, current + (active ? 1 : -1));
+        countNode.textContent = String(next);
+        if (next === 0) chip?.remove();
+
+        root.dispatchEvent(new CustomEvent('diarito:reactionchange', {
+          bubbles: true,
+          detail: { reaction: key, active, count: next }
+        }));
+      });
+    });
+
+    document.addEventListener('click', close);
+  });
+
+  // Correction voting
+  document.querySelectorAll('[data-diarito-correction-vote]').forEach((root) => {
+    const buttons = [...root.querySelectorAll('[data-diarito-vote]')];
+    buttons.forEach((button) => button.addEventListener('click', () => {
+      const type = button.dataset.diaritoVote;
+      const wasActive = button.classList.contains('is-active');
+
+      buttons.forEach((candidate) => {
+        const candidateType = candidate.dataset.diaritoVote;
+        const wasCandidateActive = candidate.classList.contains('is-active');
+        if (candidate !== button && wasCandidateActive) {
+          candidate.classList.remove('is-active');
+          candidate.setAttribute('aria-pressed', 'false');
+          const candidateCount = root.querySelector(`[data-diarito-vote-count="${candidateType}"]`);
+          if (candidateCount) candidateCount.textContent = String(Math.max(0, Number(candidateCount.textContent || 0) - 1));
+        }
+      });
+
+      const active = !wasActive;
+      button.classList.toggle('is-active', active);
+      button.setAttribute('aria-pressed', String(active));
+      const count = root.querySelector(`[data-diarito-vote-count="${type}"]`);
+      if (count) count.textContent = String(Math.max(0, Number(count.textContent || 0) + (active ? 1 : -1)));
+
+      root.dispatchEvent(new CustomEvent('diarito:correctionvote', {
+        bubbles: true,
+        detail: { vote: active ? type : null }
+      }));
+    }));
+  });
+
+  // Direct-message composer
+  document.querySelectorAll('[data-diarito-chat]').forEach((root) => {
+    const input = root.querySelector('[data-diarito-chat-input]');
+    const send = root.querySelector('[data-diarito-chat-send]');
+    const messages = root.querySelector('[data-diarito-chat-messages]');
+    if (!input || !send || !messages) return;
+
+    const publish = () => {
+      const value = input.value.trim();
+      if (!value) return;
+      const message = document.createElement('div');
+      message.className = 'diarito-chat-message is-you';
+      const paragraph = document.createElement('p');
+      paragraph.textContent = value;
+      const time = document.createElement('time');
+      time.textContent = 'now';
+      message.append(paragraph, time);
+      messages.append(message);
+      input.value = '';
+      messages.scrollTop = messages.scrollHeight;
+      input.focus();
+      root.dispatchEvent(new CustomEvent('diarito:chatsend', { bubbles: true, detail: { text: value } }));
+    };
+
+    send.addEventListener('click', publish);
+    input.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' && !event.shiftKey && (event.ctrlKey || event.metaKey)) {
+        event.preventDefault();
+        publish();
+      }
+    });
+  });
+
+  // Audio recorder/player
+  document.querySelectorAll('[data-diarito-audio]').forEach((root) => {
+    const audio = root.querySelector('[data-diarito-audio-element]');
+    const recordButton = root.querySelector('[data-diarito-audio-record]');
+    const playButton = root.querySelector('[data-diarito-audio-play]');
+    const deleteButton = root.querySelector('[data-diarito-audio-delete]');
+    const status = root.querySelector('[data-diarito-audio-status]');
+    const time = root.querySelector('[data-diarito-audio-time]');
+    if (!audio || !recordButton || !playButton || !status || !time) return;
+
+    let recorder = null;
+    let stream = null;
+    let chunks = [];
+    let objectUrl = '';
+    let startedAt = 0;
+    let timerId = 0;
+
+    const formatTime = (seconds) => {
+      const safe = Math.max(0, Number.isFinite(seconds) ? seconds : 0);
+      const minutes = Math.floor(safe / 60);
+      const secs = Math.floor(safe % 60);
+      return `${String(minutes).padStart(2,'0')}:${String(secs).padStart(2,'0')}`;
+    };
+
+    const stopTimer = () => {
+      if (timerId) window.clearInterval(timerId);
+      timerId = 0;
+    };
+
+    const setReady = () => {
+      root.classList.remove('is-recording');
+      recordButton.innerHTML = '<i class="fi fi-rr-microphone"></i> Record';
+      status.textContent = objectUrl ? 'Recording ready' : 'Ready to record';
+    };
+
+    const stopTracks = () => {
+      stream?.getTracks?.().forEach((track) => track.stop());
+      stream = null;
+    };
+
+    const finishRecording = () => {
+      stopTimer();
+      stopTracks();
+      if (!chunks.length) { setReady(); return; }
+      const blob = new Blob(chunks, { type: recorder?.mimeType || 'audio/webm' });
+      if (objectUrl) URL.revokeObjectURL(objectUrl);
+      objectUrl = URL.createObjectURL(blob);
+      audio.src = objectUrl;
+      playButton.disabled = false;
+      if (deleteButton) deleteButton.disabled = false;
+      setReady();
+      root.dispatchEvent(new CustomEvent('diarito:audiorecorded', { bubbles: true, detail: { blob } }));
+    };
+
+    const startRecording = async () => {
+      if (!navigator.mediaDevices?.getUserMedia || typeof MediaRecorder === 'undefined') {
+        status.textContent = 'Recording is not supported in this browser.';
+        window.DiaritoToast?.show({ title: 'Microphone unavailable', message: 'This browser does not support in-page recording.', state: 'warning' });
+        return;
+      }
+      try {
+        stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        chunks = [];
+        recorder = new MediaRecorder(stream);
+        recorder.addEventListener('dataavailable', (event) => { if (event.data?.size) chunks.push(event.data); });
+        recorder.addEventListener('stop', finishRecording);
+        recorder.start();
+        startedAt = Date.now();
+        root.classList.add('is-recording');
+        recordButton.innerHTML = '<i class="fi fi-rr-stop"></i> Stop';
+        status.textContent = 'Recording…';
+        time.textContent = '00:00';
+        timerId = window.setInterval(() => {
+          time.textContent = formatTime((Date.now() - startedAt) / 1000);
+        }, 250);
+      } catch (_) {
+        stopTracks();
+        status.textContent = 'Microphone permission was not granted.';
+        window.DiaritoToast?.show({ title: 'Microphone blocked', message: 'Allow microphone access to record a voice note.', state: 'info' });
+      }
+    };
+
+    recordButton.addEventListener('click', () => {
+      if (recorder?.state === 'recording') recorder.stop();
+      else startRecording();
+    });
+
+    playButton.addEventListener('click', () => {
+      if (!audio.src) return;
+      if (audio.paused) audio.play().catch(() => {});
+      else audio.pause();
+    });
+
+    audio.addEventListener('play', () => { playButton.innerHTML = '<i class="fi fi-rr-pause"></i>'; });
+    audio.addEventListener('pause', () => { playButton.innerHTML = '<i class="fi fi-rr-play"></i>'; });
+    audio.addEventListener('ended', () => { playButton.innerHTML = '<i class="fi fi-rr-play"></i>'; });
+    audio.addEventListener('loadedmetadata', () => { if (audio.duration) time.textContent = formatTime(audio.duration); });
+    audio.addEventListener('timeupdate', () => {
+      if (!audio.paused) time.textContent = `${formatTime(audio.currentTime)} / ${formatTime(audio.duration)}`;
+    });
+
+    deleteButton?.addEventListener('click', () => {
+      audio.pause();
+      audio.removeAttribute('src');
+      audio.load();
+      if (objectUrl) URL.revokeObjectURL(objectUrl);
+      objectUrl = '';
+      playButton.disabled = true;
+      deleteButton.disabled = true;
+      time.textContent = '00:00';
+      setReady();
+    });
+
+    setReady();
+  });
+
 })();
