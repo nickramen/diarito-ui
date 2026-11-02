@@ -1,8 +1,8 @@
-# Diarito UI Library 2.10.0
+# Diarito UI Library 2.11.0
 
 Diarito's reusable HTML, CSS and native JavaScript design system.
 
-Version 2.10.0 establishes a more compact density for cards, community patterns and attachment-style secondary content.
+Version 2.11.0 adds the reusable product utilities needed for selection-based corrections, media flows, moderation, onboarding, language setup, discovery, notifications and mobile actions.
 
 
 
@@ -13,6 +13,27 @@ Version 2.10.0 establishes a more compact density for cards, community patterns 
 
 
 
+
+## 2.11.0 reusable product utilities
+
+Added 14 reusable Diarito product patterns:
+
+1. Inline text selection toolbar.
+2. Correction anchor / highlighted text.
+3. Media viewer / lightbox.
+4. Media upload queue / reorder.
+5. Report / moderation form.
+6. User safety actions.
+7. Onboarding / multi-step progress.
+8. Language selector / language pair.
+9. Avatar / photo uploader.
+10. Date navigator / diary calendar header.
+11. Grouped search results.
+12. Notification center composition.
+13. Context banner / inline system notice.
+14. Mobile bottom sheet.
+
+Generic native-JavaScript behavior was added for text selection, correction anchors, media viewing, media queue ordering/removal, steppers, language swapping, avatar previews, date navigation, grouped search and notification read state. Report/safety/bottom-sheet patterns deliberately reuse the existing Modal, Dropdown and Drawer contracts.
 
 ## 2.10.0 compact density pass
 
