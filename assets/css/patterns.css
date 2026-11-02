@@ -288,6 +288,13 @@
   line-height: 1.65;
 }
 .diarito-entry-composer__editor::placeholder { color: var(--diarito-color-text-muted); }
+.diarito-entry-composer__editor:focus,
+.diarito-entry-composer__editor:focus-visible,
+.diarito-feed-composer__input:focus,
+.diarito-feed-composer__input:focus-visible {
+  outline: 0;
+  box-shadow: none;
+}
 .diarito-entry-composer__toolbar { display: flex; align-items: center; justify-content: space-between; gap: var(--diarito-space-3); flex-wrap: wrap; }
 .diarito-entry-composer__tools,
 .diarito-entry-composer__actions { display: flex; align-items: center; gap: var(--diarito-space-2); flex-wrap: wrap; }
@@ -300,30 +307,12 @@
 .diarito-entry-card__identity-copy span { display: block; }
 .diarito-entry-card__identity-copy span { margin-top: .1rem; color: var(--diarito-color-text-muted); font-size: var(--diarito-text-xs); }
 .diarito-entry-card__body {
-  --diarito-entry-line-height: 1.9rem;
-  --diarito-entry-line-color: color-mix(in srgb, var(--diarito-color-text-subtle) 46%, transparent);
-  position: relative;
   display: grid;
   gap: var(--diarito-space-4);
   color: var(--diarito-color-text-secondary);
-  line-height: var(--diarito-entry-line-height);
   background: var(--diarito-color-surface);
 }
-.diarito-entry-card__body::before {
-  content: '';
-  position: absolute;
-  inset-inline: 0;
-  top: calc(var(--diarito-space-5) + var(--diarito-entry-line-height) - 1px);
-  bottom: 0;
-  pointer-events: none;
-  background-image: repeating-linear-gradient(
-    to bottom,
-    var(--diarito-entry-line-color) 0 1px,
-    transparent 1px var(--diarito-entry-line-height)
-  );
-}
-.diarito-entry-card__body > * { position: relative; z-index: 1; }
-.diarito-entry-card__body p { margin: 0; line-height: var(--diarito-entry-line-height); }
+.diarito-entry-card__body p { margin: 0; line-height: 1.65; }
 .diarito-entry-card-grid {
   display: grid;
   grid-template-columns: repeat(2,minmax(0,1fr));
@@ -585,9 +574,11 @@
   font: inherit;
   line-height: 1.5;
 }
-.diarito-reply-composer__field:focus {
-  border-color: var(--diarito-color-action-bg);
-  box-shadow: var(--diarito-focus-ring);
+.diarito-reply-composer__field:focus,
+.diarito-reply-composer__field:focus-visible {
+  outline: 0;
+  border-color: var(--diarito-color-border-strong);
+  box-shadow: none;
 }
 .diarito-reply-composer__actions {
   display: flex;
@@ -789,27 +780,4 @@
   .diarito-rewrite__context { grid-template-columns: 1fr; }
   .diarito-oio-step + .diarito-oio-step { border-left: 0; border-top: var(--diarito-border); }
   .diarito-avatar--profile { width: 4.5rem; height: 4.5rem; }
-}
-
-
-/* Mixed feed experiment */
-.diarito-mixed-feed {
-  display: grid;
-  gap: var(--diarito-space-5);
-  padding-block: var(--diarito-space-5);
-}
-.diarito-mixed-feed__item { width: 100%; }
-.diarito-daily-response-card { height: auto; align-self: start; }
-.diarito-daily-response-card__question {
-  display: inline-flex;
-  align-items: center;
-  gap: .45rem;
-  color: var(--diarito-color-text-muted);
-  font-size: var(--diarito-text-xs);
-  font-weight: var(--diarito-weight-medium);
-}
-.diarito-daily-response-card__question i { color: var(--diarito-color-text-strong); }
-
-
-@media (max-width: 680px) {
 }
