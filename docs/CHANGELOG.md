@@ -1,5 +1,24 @@
 # Changelog
 
+## 2.11.0 - Reusable product utilities
+
+- Added Inline text selection toolbar.
+- Added Correction anchor / highlighted text.
+- Added Media viewer / lightbox.
+- Added Media upload queue / reorder.
+- Added Report / moderation form.
+- Added User safety actions.
+- Added Onboarding / multi-step progress.
+- Added Language selector / language pair.
+- Added Avatar / photo uploader.
+- Added Date navigator / diary calendar header.
+- Added Grouped search results.
+- Added Notification center composition.
+- Added Context banner / inline system notice.
+- Added Mobile bottom sheet.
+- Added reusable native-JS behavior for the interactive product utilities.
+
+
 ## 2.10.0 - Compact density pass
 
 - Reduced shared card header/body/footer padding.
