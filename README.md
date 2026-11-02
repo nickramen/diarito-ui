@@ -532,6 +532,20 @@ React remains out of scope for this phase. Once real screens are visually approv
 .diarito-quote-entry     -> <QuotedEntry />
 .diarito-share-access    -> <ShareAccess />
 .diarito-draft-row       -> <DraftRow />
+.diarito-selection-toolbar -> <SelectionToolbar />
+.diarito-correction-anchor -> <CorrectionAnchor />
+.diarito-media-viewer      -> <MediaViewer />
+.diarito-media-queue       -> <MediaQueue />
+.diarito-report-form       -> <ReportForm />
+.diarito-safety-actions    -> <SafetyActions />
+.diarito-stepper           -> <OnboardingStepper />
+.diarito-language-pair     -> <LanguagePair />
+.diarito-avatar-uploader   -> <AvatarUploader />
+.diarito-date-nav          -> <DateNavigator />
+.diarito-search-results    -> <GroupedSearchResults />
+.diarito-notification-center -> <NotificationCenter />
+.diarito-context-banner    -> <ContextBanner />
+.diarito-drawer--bottom    -> <BottomSheet />
 .diarito-collection-item -> <CollectionItem />
 ```
 
