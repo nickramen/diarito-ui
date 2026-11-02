@@ -35,9 +35,9 @@
 .docs-section__intro p { margin-top: .7rem; font-size: var(--diarito-text-lg); }
 
 .docs-showcase-grid { display: grid; grid-template-columns: 1fr; gap: var(--diarito-space-4); }
-.docs-showcase { grid-column: 1; min-width: 0; padding: 2rem; border: var(--diarito-border-strong); border-radius: var(--diarito-radius-lg); background: var(--diarito-color-surface); }
+.docs-showcase { grid-column: 1; min-width: 0; padding: 1.5rem; border: var(--diarito-border-strong); border-radius: var(--diarito-radius-lg); background: var(--diarito-color-surface); }
 .docs-showcase.is-wide, .docs-showcase.is-narrow, .docs-showcase.is-full { grid-column: 1; }
-.docs-showcase__head { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--diarito-space-4); margin-bottom: var(--diarito-space-5); }
+.docs-showcase__head { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--diarito-space-3); margin-bottom: var(--diarito-space-4); }
 .docs-showcase__head h3 { font-size: 1.2rem; }
 .docs-showcase__head p { max-width: 32rem; margin: .4rem 0 0; font-size: var(--diarito-text-sm); }
 .docs-showcase__arrow { color: var(--diarito-color-text-muted); font-size: 1.2rem; }
@@ -75,7 +75,7 @@
 .docs-radius-sample p { margin: .25rem 0 0; font-size: var(--diarito-text-sm); }
 
 .docs-component-table { overflow: hidden; border: var(--diarito-border-strong); border-radius: var(--diarito-radius-md); background: var(--diarito-color-surface); }
-.docs-component-row { display: grid; grid-template-columns: 12rem minmax(0,1fr); gap: var(--diarito-space-5); align-items: start; padding: var(--diarito-space-5); border-bottom: var(--diarito-border); }
+.docs-component-row { display: grid; grid-template-columns: 12rem minmax(0,1fr); gap: var(--diarito-space-4); align-items: start; padding: var(--diarito-space-4); border-bottom: var(--diarito-border); }
 .docs-component-row:last-child { border-bottom: 0; }
 .docs-component-row__label strong, .docs-component-row__label span { display: block; }
 .docs-component-row__label span { margin-top: .2rem; color: var(--diarito-color-text-muted); font-size: var(--diarito-text-xs); }
@@ -83,7 +83,7 @@
 .docs-browser { overflow: hidden; border: var(--diarito-border-strong); border-radius: var(--diarito-radius-md); background: var(--diarito-color-surface); box-shadow: var(--diarito-shadow-xs); }
 .docs-browser__bar { display: flex; align-items: center; gap: .35rem; padding: .65rem .8rem; border-bottom: var(--diarito-border); }
 .docs-browser__bar span { width: .5rem; height: .5rem; border-radius: 50%; background: var(--diarito-color-border-strong); }
-.docs-browser__body { padding: var(--diarito-space-5); }
+.docs-browser__body { padding: var(--diarito-space-4); }
 
 .docs-footer { width: 100%; margin-top: 6rem; color: var(--diarito-color-text-muted); background: var(--diarito-color-surface); font-size: var(--diarito-text-sm); }
 .docs-footer__block { width: 100%; border-top: var(--diarito-border); }

@@ -1,8 +1,8 @@
-# Diarito UI Library 2.9.1
+# Diarito UI Library 2.10.0
 
 Diarito's reusable HTML, CSS and native JavaScript design system.
 
-Version 2.9.1 removes the ruled treatment from Diary entries, drops the unified-feed experiment, and keeps writing surfaces visually quiet on focus.
+Version 2.10.0 establishes a more compact density for cards, community patterns and attachment-style secondary content.
 
 
 
@@ -13,6 +13,18 @@ Version 2.9.1 removes the ruled treatment from Diary entries, drops the unified-
 
 
 
+
+## 2.10.0 compact density pass
+
+- Reduced canonical card header/body/footer padding from space-5 to space-4.
+- Reduced documentation showcase padding and showcase-header spacing.
+- Compacted feed composer and feed-item vertical rhythm.
+- Compacted Notification item and Inline reply composer.
+- Compacted Quoted / reposted entry, link previews, file attachment rows and media placeholders.
+- Reduced attachment-style title emphasis to smaller typography and medium weight.
+- Reduced supporting attachment copy to quieter text sizes/colors.
+- Compacted collection rows, draft rows, correction panels, OIO steps and publication warnings where the same density logic applies.
+- Preserved primary content hierarchy; the density reduction targets containers and secondary/attached content rather than body copy.
 
 ## 2.9.1 diary surface cleanup
 
