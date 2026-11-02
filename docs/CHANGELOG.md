@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.10.0 - Compact density pass
+
+- Reduced shared card header/body/footer padding.
+- Reduced documentation showcase padding and internal spacing.
+- Compacted feed composer/feed items, notifications and inline replies.
+- Compacted quoted/reposted entries, link previews, attachment rows, media placeholders and collection rows.
+- Lowered attachment-style title size/weight and supporting-copy emphasis.
+- Compacted draft rows, correction panels, OIO steps and publication warnings where the same density pattern applies.
+
+
 ## 2.9.1 - Diary surface cleanup
 
 - Removed horizontal rules from Diary entry cards.
