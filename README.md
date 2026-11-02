@@ -1,8 +1,8 @@
-# Diarito UI Library 2.11.0
+# Diarito UI Library 2.12.0
 
 Diarito's reusable HTML, CSS and native JavaScript design system.
 
-Version 2.11.0 adds the reusable product utilities needed for selection-based corrections, media flows, moderation, onboarding, language setup, discovery, notifications and mobile actions.
+Version 2.12.0 refines Diarito overlays and adds reusable advanced social, reputation, gamification, chat, audio and marketplace patterns.
 
 
 
@@ -13,6 +13,32 @@ Version 2.11.0 adds the reusable product utilities needed for selection-based co
 
 
 
+
+## 2.12.0 overlays + advanced social/gamification
+
+Overlay refinements:
+
+- Modal header/body/footer now use the same compact space-4 density as canonical cards.
+- Modal headers use the same title hierarchy as other Diarito surfaces and modal footers use a quiet secondary surface.
+- Drawer / offcanvas is now a floating rounded Diarito panel instead of a generic full-height white slab.
+- Drawer header/body/footer use compact card density.
+- Mobile bottom sheet now has a centered desktop preview, edge-to-edge mobile behavior, a clear drag handle and Diarito action rows.
+- Added a Product utilities index so safety, grouped search, notifications and the other 2.11 patterns are directly discoverable.
+
+Advanced reusable patterns:
+
+1. Reaction picker with multiple simultaneous reactions and live counts.
+2. Reputation card.
+3. Leaderboard.
+4. Correction voting.
+5. Chat / direct messages.
+6. Audio player / recorder using MediaRecorder when available.
+7. Achievements.
+8. XP / level progression.
+9. Quests / challenges.
+10. Marketplace listings and resource detail modal.
+
+The advanced layer is modular. Core Diary entry, writing and correction surfaces do not depend on gamification or marketplace UI.
 
 ## 2.11.0 reusable product utilities
 
@@ -546,6 +572,16 @@ React remains out of scope for this phase. Once real screens are visually approv
 .diarito-notification-center -> <NotificationCenter />
 .diarito-context-banner    -> <ContextBanner />
 .diarito-drawer--bottom    -> <BottomSheet />
+.diarito-reaction-picker   -> <ReactionPicker />
+.diarito-reputation-card   -> <ReputationCard />
+.diarito-leaderboard       -> <Leaderboard />
+.diarito-correction-vote   -> <CorrectionVote />
+.diarito-chat              -> <ChatThread />
+.diarito-audio             -> <AudioRecorderPlayer />
+.diarito-achievement       -> <AchievementCard />
+.diarito-level-card        -> <LevelProgress />
+.diarito-quest-board       -> <QuestBoard />
+.diarito-market-card       -> <MarketplaceCard />
 .diarito-collection-item -> <CollectionItem />
 ```
 
