@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.13.1 - Spanish public landing page
+
+- Translated all visible public landing-page copy to Spanish.
+- Updated `lang`, page title, metadata, navigation, learning-loop copy, feedback example, trust content and CTA/footer text.
+- Kept `ui-components.html` as the English component-library documentation.
+- Updated public asset/version references to 2.13.1.
+
+
 ## 2.13.0 - Public landing page + component library split
 
 - Moved the existing component-library index to `ui-components.html`.
