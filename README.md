@@ -1,8 +1,8 @@
-# Diarito UI Library 2.13.0
+# Diarito UI Library 2.13.1
 
 Diarito's reusable HTML, CSS and native JavaScript design system.
 
-Version 2.13.0 separates the public Diarito landing page from the reusable UI component library.
+Version 2.13.1 translates the public Diarito landing page to Spanish while keeping the UI component library unchanged.
 
 
 
@@ -13,6 +13,13 @@ Version 2.13.0 separates the public Diarito landing page from the reusable UI co
 
 
 
+
+## 2.13.1 Spanish public landing page
+
+- Translated the complete public landing page to Spanish.
+- Updated the document language, page title, meta description, navigation, CTA copy, demo labels, learning principles, learning loop, human-feedback example, trust section and footer.
+- Kept the structure and monochrome visual treatment unchanged.
+- Updated cache-busting/version references to 2.13.1.
 
 ## 2.13.0 public landing page + component library split
 
