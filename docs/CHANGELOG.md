@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.13.0 - Public landing page + component library split
+
+- Moved the existing component-library index to `ui-components.html`.
+- Added a new public-facing Diarito landing page at `index.html`.
+- Added monochrome landing-page styles with no shadows or gradients.
+- Grounded landing copy in the Diarito mission, three learning factors and Write → Exchange → Understand → Make it your own loop.
+- Added a Website link from the UI library back to the landing page.
+- Bumped public asset cache versions to 2.13.0.
+
+
 ## 2.12.0 - Overlays + advanced social/gamification
 
 - Compacted Modal header/body/footer to the same density as canonical cards.

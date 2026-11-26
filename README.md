@@ -1,8 +1,8 @@
-# Diarito UI Library 2.12.0
+# Diarito UI Library 2.13.0
 
 Diarito's reusable HTML, CSS and native JavaScript design system.
 
-Version 2.12.0 refines Diarito overlays and adds reusable advanced social, reputation, gamification, chat, audio and marketplace patterns.
+Version 2.13.0 separates the public Diarito landing page from the reusable UI component library.
 
 
 
@@ -13,6 +13,17 @@ Version 2.12.0 refines Diarito overlays and adds reusable advanced social, reput
 
 
 
+
+## 2.13.0 public landing page + component library split
+
+- Moved the complete UI component library from `index.html` to `ui-components.html`.
+- Replaced the root `index.html` with Diarito's public landing page.
+- Added a dedicated monochrome landing stylesheet at `assets/css/landing.css`.
+- Landing copy is grounded in the team vision: Learn the language of your life; Relevance; Human Connection; Active Ownership; Write → Exchange → Understand → Make it your own.
+- Added public sections for Why Diarito, the learning loop, human feedback and trust.
+- Kept the landing monochrome: white, black and neutral grays only, with no shadows or gradients.
+- Added a Website link from the UI component library back to the landing page.
+- Updated cache-busting/version references to 2.13.0.
 
 ## 2.12.0 overlays + advanced social/gamification
 
