@@ -473,7 +473,7 @@ html[lang="ko"] .landing-cta h2 {
 .landing-cycle-stage {
   position: relative;
   width: min(100%, 58rem);
-  min-height: 30rem;
+  min-height: 34rem;
   margin-inline: auto;
 }
 .landing-cycle-stage--centered {
@@ -527,9 +527,10 @@ html[lang="ko"] .landing-cycle-focus h3 {
 }
 .landing-cycle-focus__media {
   width: min(100%, 34rem);
-  aspect-ratio: 16 / 5.6;
+  aspect-ratio: 2 / 1;
   display: grid;
   place-items: center;
+  flex-shrink: 0;
   margin-top: var(--diarito-space-4);
   overflow: hidden;
   border: var(--diarito-border);
@@ -540,10 +541,11 @@ html[lang="ko"] .landing-cycle-focus h3 {
 .landing-cycle-focus__media--photo {
   position: relative;
 }
-.landing-cycle-focus__media-placeholder {
-  color: var(--diarito-color-text-secondary);
-  font-size: var(--diarito-text-sm);
-  font-weight: var(--diarito-weight-medium);
+.landing-cycle-focus__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .landing-cycle-focus p {
@@ -1015,7 +1017,7 @@ html.is-language-switching [data-i18n] { animation: landing-language-fade 220ms 
     min-height: calc(100svh - 4.1rem);
   }
   .landing-cycle-stage {
-    min-height: 28rem;
+    min-height: 31rem;
   }
   .landing-cycle-focus {
     padding-inline: var(--diarito-space-5);
@@ -1030,7 +1032,7 @@ html.is-language-switching [data-i18n] { animation: landing-language-fade 220ms 
   }
   .landing-cycle-focus__media {
     width: min(100%, 32rem);
-    aspect-ratio: 16 / 6;
+    aspect-ratio: 2 / 1;
     margin-top: var(--diarito-space-4);
   }
   .landing-cycle-focus p {
@@ -1064,7 +1066,7 @@ html.is-language-switching [data-i18n] { animation: landing-language-fade 220ms 
   }
   .landing-cycle-focus__media {
     width: min(100%, 25rem);
-    aspect-ratio: 16 / 7;
+    aspect-ratio: 2 / 1;
     margin-top: var(--diarito-space-3);
     border-radius: var(--diarito-radius-sm);
   }
@@ -1115,4 +1117,21 @@ html.is-language-switching [data-i18n] { animation: landing-language-fade 220ms 
 
 @media (prefers-reduced-motion: reduce) {
   .landing-cycle-focus { transition: none; }
+}
+
+/* Keep the complete photographic story visible on short screens. */
+@media (max-height: 720px) {
+  .landing-cycle-stage {
+    min-height: min(34rem, max(21rem, calc(100svh - 7.5rem)));
+  }
+  .landing-cycle-focus h3 {
+    font-size: clamp(2.5rem, min(12vw, 10svh), 5rem);
+  }
+  .landing-cycle-focus__media {
+    max-width: max(12rem, calc(200svh - 40rem));
+  }
+  .landing-cycle-focus p {
+    font-size: var(--diarito-text-sm);
+    line-height: 1.5;
+  }
 }

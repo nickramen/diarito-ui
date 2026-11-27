@@ -18,7 +18,6 @@
       heroTagline: "Tu mundo, expresado. Nuestros mundos, conectados.",
       heroPrimary: "Ver cómo funciona Diarito",
       heroSecondary: "Por qué empezar desde tu vida",
-      replaceThisImage: "Reemplazar esta imagen",
       whyKicker: "Por qué existe Diarito",
       whyTitle: "Aprender un idioma no es saber más palabras.",
       whyBody: "Es poder expresar lo que es importante para vos. El aprendizaje empieza en tu propia vida: lo que te pasó hoy, lo que sentís ahora y aquello que realmente querés decir.",
@@ -35,13 +34,13 @@
       loopTitle: "Escribí. Intercambiá. Entendé. Hacelo tuyo.",
       loopIntro: "Diarito no termina cuando alguien corrige una oración. Lo aprendido debe volver al uso real para convertirse en algo propio.",
       loop1Title: "Escribí",
-      loop1Body: "Registrá tu día y tus emociones en el idioma que estás aprendiendo.",
+      loop1Body: "Quiso pedir comida en un restaurante coreano, pero no logró hacerse entender. En Diarito escribió en coreano lo que pasó y cómo se sintió.",
       loop2Title: "Intercambiá",
-      loop2Body: "Intercambiá diarios con otras personas y conocé sus mundos mientras compartís el tuyo.",
+      loop2Body: "Compartió su diario y varias personas coreanas leyeron su experiencia. Le ofrecieron expresiones y consejos para comunicarse de forma más natural.",
       loop3Title: "Entendé",
-      loop3Body: "Recibí retroalimentación que explique contexto, naturalidad y matices, no solo gramática.",
+      loop3Body: "Revisó las correcciones y anotó las expresiones que aprendió, comprendiendo su significado y cuándo utilizarlas.",
       loop4Title: "Hacelo tuyo",
-      loop4Body: "Guardá expresiones y volvé a usarlas en tus propias oraciones hasta poder producirlas por tu cuenta.",
+      loop4Body: "Guardó las expresiones, practicó con sus propias oraciones y volvió al restaurante. Esta vez pudo hacer su pedido en coreano.",
       feedbackKicker: "Retroalimentación humana en el centro",
       feedbackTitle: "No solo correcto. Natural para la situación.",
       feedbackTitleLine1: "No solo correcto.",
@@ -125,7 +124,6 @@
       heroTagline: "나의 세계를 표현하고, 우리의 세계를 연결합니다.",
       heroPrimary: "Diarito가 어떻게 작동하는지 보기",
       heroSecondary: "왜 내 삶에서 시작하나요",
-      replaceThisImage: "이미지 교체하기",
       whyKicker: "Diarito가 존재하는 이유",
       whyTitle: "언어는 단어를 많이 아는 것이 아니다.",
       whyBody: "언어는 단어를 많이 아는 것이 아니라, 나에게 중요한 것을 표현할 수 있게 되는 것이다. 배움은 오늘 겪은 일, 지금의 감정, 실제로 표현하고 싶은 것처럼 자신의 삶에서 시작한다.",
@@ -142,13 +140,13 @@
       loopTitle: "쓰고. 교환하고. 이해하고. 내 것으로 만든다.",
       loopIntro: "한 번 교정받고 끝나는 플랫폼이 아니라, 배운 표현이 실제 사용으로 이어지는 구조를 만든다.",
       loop1Title: "쓰기",
-      loop1Body: "나의 하루와 감정을 기록한다.",
+      loop1Body: "멕시코 식당에서 타코를 주문하려 했지만 말이 잘 통하지 않았어요. 그날의 경험과 감정을 Diarito에 스페인어로 기록했어요.",
       loop2Title: "교환하기",
-      loop2Body: "다른 사람과 일기를 교환한다.",
+      loop2Body: "일기를 공유하자 여러 중남미 사람들이 그의 이야기를 읽고 더 자연스럽게 말할 수 있는 표현과 조언을 전해 줬어요.",
       loop3Title: "이해하기",
-      loop3Body: "문맥과 뉘앙스를 포함한 피드백을 받는다.",
+      loop3Body: "받은 피드백을 살펴보고 새로운 표현을 노트에 정리하며 그 의미와 어떤 상황에서 자연스럽게 쓸 수 있는지 이해했어요.",
       loop4Title: "내 것으로 만들기",
-      loop4Body: "표현을 저장하고 실제로 다시 사용한다.",
+      loop4Body: "배운 표현을 저장하고 직접 문장을 만들어 연습한 뒤, 다시 타코를 주문했어요. 이번에는 스페인어로 주문하는 데 성공했어요.",
       feedbackKicker: "사람을 통한 피드백을 핵심 경험으로",
       feedbackTitle: "정답만이 아니라, 상황에 자연스러운 표현.",
       feedbackTitleLine1: "정답만이 아니라,",
@@ -250,6 +248,14 @@
         icon.className = "fi fi-rr-sign-in-alt";
         node.prepend(icon, " ");
       }
+    });
+
+    // The story follows the selected interface language, including on initial load.
+    document.querySelectorAll("[data-cycle-photo]").forEach((photo) => {
+      const source = next === "ko" ? photo.dataset.srcKo : photo.dataset.srcEs;
+      const alt = next === "ko" ? photo.dataset.altKo : photo.dataset.altEs;
+      if (source && photo.getAttribute("src") !== source) photo.setAttribute("src", source);
+      photo.alt = alt || "";
     });
 
     document.querySelectorAll("[data-language-label]").forEach((node) => {
