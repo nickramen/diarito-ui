@@ -1,5 +1,17 @@
 # Changelog
 
+## 2.14.1 - Landing proportion + section cleanup
+
+- Widened the hero text column to keep the H1 within two desktop lines.
+- Removed alternate section backgrounds.
+- Removed section divider borders except for the hero bottom border.
+- Changed the sticky header separator to a top border.
+- Widened title columns in two-column editorial layouts.
+- Bottom-aligned mission, feedback and trust columns.
+- Removed CTA/footer divider lines.
+- Updated public cache/version references to 2.14.1.
+
+
 ## 2.14.0 - Landing hero + bilingual/theme interactions
 
 - Rebuilt the public hero with a two-column marketing layout.
