@@ -169,17 +169,8 @@
               <article class="landing-cycle-focus is-active" data-cycle-step="0">
                 <span class="landing-cycle-focus__step" aria-hidden="true">01</span>
                 <h3 data-i18n="loop1Title">Escribí</h3>
-                <div class="landing-cycle-focus__media" aria-hidden="true">
-                  <svg viewBox="0 0 640 320" focusable="false">
-                    <rect class="cycle-illustration__frame" x="120" y="45" width="400" height="230" rx="18"></rect>
-                    <rect class="cycle-illustration__paper" x="175" y="76" width="290" height="168" rx="10"></rect>
-                    <line class="cycle-illustration__line" x1="215" y1="124" x2="405" y2="124"></line>
-                    <line class="cycle-illustration__line" x1="215" y1="154" x2="382" y2="154"></line>
-                    <line class="cycle-illustration__line" x1="215" y1="184" x2="420" y2="184"></line>
-                    <path class="cycle-illustration__strong" d="M430 72 L474 116 L329 261 L275 271 L285 217 Z"></path>
-                    <path class="cycle-illustration__fill" d="M285 217 L329 261 L275 271 Z"></path>
-                    <circle class="cycle-illustration__dot" cx="200" cy="103" r="7"></circle>
-                  </svg>
+                <div class="landing-cycle-focus__media landing-cycle-focus__media--photo">
+                  <span class="landing-cycle-focus__media-placeholder" data-i18n="replaceThisImage">Reemplazar esta imagen</span>
                 </div>
                 <p data-i18n="loop1Body">Registrá tu día y tus emociones en el idioma que estás aprendiendo.</p>
               </article>
@@ -252,26 +243,44 @@
         <div class="diarito-container diarito-container--lg landing-container landing-human">
           <div class="landing-human__copy" data-reveal>
             <span class="diarito-kicker landing-kicker" data-i18n="feedbackKicker">Retroalimentación humana en el centro</span>
-            <h2 data-i18n="feedbackTitle">No solo correcto. Natural para la situación.</h2>
+            <h2 class="landing-human__title"><span data-i18n="feedbackTitleLine1">No solo correcto.</span><span data-i18n="feedbackTitleLine2">Natural para la situación.</span></h2>
             <p data-i18n="feedbackBody">El significado y la naturalidad cambian según la emoción, la relación, la situación y la cultura. Por eso Diarito considera el intercambio entre personas una parte central del aprendizaje.</p>
             <div class="landing-human__note" data-i18n="feedbackNote">Las personas no son simples herramientas de corrección. La experiencia debe tener valor tanto para quien recibe como para quien ofrece retroalimentación.</div>
           </div>
 
-          <div class="landing-correction" data-reveal data-reveal-delay="100">
-            <div class="landing-correction__header">
-              <div class="landing-correction__header-title"><span class="landing-correction__header-icon" aria-hidden="true"><i class="fi fi-rr-comment-check"></i></span><strong data-i18n="correctionHeader">Corrección sobre un fragmento seleccionado</strong></div>
-              <span>@mari · Español</span>
+          <div class="landing-feedback-demo" data-feedback-demo data-reveal data-reveal-delay="100">
+            <div class="landing-feedback-demo__header">
+              <div class="landing-feedback-demo__header-title">
+                <span class="landing-correction__header-icon" aria-hidden="true"><i class="fi fi-rr-comment-check"></i></span>
+                <strong data-i18n="correctionHeader">Corrección sobre un fragmento seleccionado</strong>
+              </div>
+              <div class="landing-feedback-demo__status" aria-hidden="true">
+                <span class="is-active" data-feedback-dot="0"></span>
+                <span data-feedback-dot="1"></span>
+                <span data-feedback-dot="2"></span>
+              </div>
             </div>
-            <div class="landing-correction__body">
-              <div class="landing-correction__row">
-                <span data-i18n="correctionOriginal">Original</span>
-                <p>Al final yo fui de todos modos.</p>
+
+            <div class="landing-feedback-demo__canvas">
+              <div class="landing-feedback-demo__entry">
+                <div class="landing-feedback-demo__entry-meta"><strong>@nickramen</strong><span data-i18n="feedbackDemoLanguage">Español</span></div>
+                <p data-i18n="feedbackDemoSentence">Hoy pensé que no iba a salir, pero al final yo fui de todos modos.</p>
               </div>
-              <div class="landing-correction__row">
-                <span data-i18n="correctionSuggestion">Sugerencia</span>
-                <p>Al final sí fui.</p>
-              </div>
-              <div class="landing-correction__explain" data-i18n="correctionExplain">Ambas expresiones se entienden, pero “al final sí fui” es una forma más natural de expresar que fuiste a pesar de la duda o la indecisión anterior.</div>
+
+              <button class="landing-feedback-demo__state is-active" type="button" data-feedback-state="0">
+                <span class="landing-feedback-demo__label" data-i18n="correctionOriginal">Original</span>
+                <span class="landing-feedback-demo__value">Al final yo fui de todos modos.</span>
+              </button>
+
+              <button class="landing-feedback-demo__state" type="button" data-feedback-state="1">
+                <span class="landing-feedback-demo__label" data-i18n="correctionSuggestion">Sugerencia</span>
+                <span class="landing-feedback-demo__value">Al final sí fui.</span>
+              </button>
+
+              <button class="landing-feedback-demo__explain" type="button" data-feedback-state="2">
+                <span class="landing-feedback-demo__label" data-i18n="feedbackDemoWhy">Por qué suena más natural</span>
+                <span data-i18n="correctionExplain">Ambas expresiones se entienden, pero “al final sí fui” es una forma más natural de expresar que fuiste a pesar de la duda o la indecisión anterior.</span>
+              </button>
             </div>
           </div>
         </div>
