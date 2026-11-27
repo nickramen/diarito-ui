@@ -231,28 +231,55 @@ body.landing-page *::after { box-sizing: border-box; }
   text-transform: uppercase;
 }
 
-/* Hero */
+/* Hero · photographic background / grid / foreground */
 .landing-hero {
+  --hero-scrim-solid: rgb(255 255 255 / .98);
+  --hero-scrim-near: rgb(255 255 255 / .83);
+  --hero-scrim-mid: rgb(255 255 255 / .18);
+  --hero-scrim-far: rgb(255 255 255 / .02);
+  --hero-glass: rgb(255 255 255 / .72);
+  --hero-glass-border: rgb(255 255 255 / .85);
   position: relative;
+  isolation: isolate;
   overflow: hidden;
   border: 0;
   border-bottom: 1px solid var(--landing-border);
   background-color: var(--landing-bg);
+}
+html[data-theme="dark"] .landing-hero {
+  --hero-scrim-solid: rgb(12 12 12 / .98);
+  --hero-scrim-near: rgb(12 12 12 / .94);
+  --hero-scrim-mid: rgb(12 12 12 / .38);
+  --hero-scrim-far: rgb(12 12 12 / .20);
+  --hero-glass: rgb(20 20 20 / .76);
+  --hero-glass-border: rgb(255 255 255 / .27);
+}
+.landing-hero::before,
+.landing-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.landing-hero::before {
+  z-index: 0;
+  background-image:
+    linear-gradient(to right, var(--hero-scrim-solid) 0%, var(--hero-scrim-near) 36%, var(--hero-scrim-mid) 58%, var(--hero-scrim-far) 100%),
+    url("../images/hero-diarito.webp");
+  background-repeat: no-repeat;
+  background-position: center, center 44%;
+  background-size: cover;
+}
+.landing-hero::after {
+  z-index: 1;
   background-image:
     linear-gradient(to right, var(--landing-grid-line) 1px, transparent 1px),
     linear-gradient(to bottom, var(--landing-grid-line) 1px, transparent 1px);
   background-size: 20px 20px;
 }
-.landing-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: color-mix(in srgb, var(--landing-bg) 72%, transparent);
-}
 .landing-hero__container {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   min-height: clamp(34rem, 72vh, 47rem);
   display: grid;
   grid-template-columns: minmax(0,1.06fr) minmax(28rem,.94fr);
@@ -321,41 +348,16 @@ html[lang="ko"] .landing-hero__copy h1 {
   transform: translate3d(var(--hero-x), var(--hero-y), 0);
   transition: transform 240ms ease-out;
 }
-.landing-hero-media {
-  position: absolute;
-  inset: 2.8rem .25rem 3.1rem 1.2rem;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-  border: 1px solid var(--landing-border-strong);
-  border-radius: 1.25rem;
-  background:
-    linear-gradient(to right, var(--landing-grid-line) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--landing-grid-line) 1px, transparent 1px),
-    var(--landing-surface-soft);
-  background-size: 18px 18px;
-}
-.landing-hero-media__label {
-  display: inline-flex;
-  align-items: center;
-  gap: .45rem;
-  padding: .6rem .8rem;
-  border: 1px solid var(--landing-border-strong);
-  border-radius: var(--landing-radius-sm);
-  color: var(--landing-text);
-  background: var(--landing-bg);
-  font-size: .8rem;
-  font-weight: 600;
-  letter-spacing: .02em;
-}
 .landing-floating-card {
   position: absolute;
   z-index: 2;
-  padding: .82rem .88rem;
-  border: 1px solid var(--landing-border-strong);
-  border-radius: var(--landing-radius-sm);
+  padding: .9rem 1rem;
+  border: 1px solid var(--hero-glass-border);
+  border-radius: var(--diarito-radius-lg);
   color: var(--landing-text);
-  background: var(--landing-surface);
+  background: var(--hero-glass);
+  -webkit-backdrop-filter: blur(16px) saturate(0);
+  backdrop-filter: blur(16px) saturate(0);
   animation: landing-float 5.5s ease-in-out infinite;
 }
 .landing-floating-card--feedback {
@@ -371,35 +373,9 @@ html[lang="ko"] .landing-hero__copy h1 {
 }
 .landing-floating-card--exchange {
   left: -.4rem;
-  top: 11.4rem;
+  top: 14rem;
   width: 10.5rem;
   animation-delay: -2.8s;
-}
-.landing-floating-card--feedback::after,
-.landing-floating-card--saved::after,
-.landing-floating-card--exchange::after {
-  content: "";
-  position: absolute;
-  pointer-events: none;
-  border-color: var(--landing-border-strong);
-}
-.landing-floating-card--saved::after {
-  left: 1.45rem;
-  bottom: -1.35rem;
-  height: 1.35rem;
-  border-left: 1px solid var(--landing-border-strong);
-}
-.landing-floating-card--exchange::after {
-  right: -1.35rem;
-  top: 1.3rem;
-  width: 1.35rem;
-  border-top: 1px solid var(--landing-border-strong);
-}
-.landing-floating-card--feedback::after {
-  left: 1.45rem;
-  top: -1.35rem;
-  height: 1.35rem;
-  border-left: 1px solid var(--landing-border-strong);
 }
 .landing-floating-card__icon {
   width: 1.75rem;
@@ -953,8 +929,15 @@ html.is-language-switching [data-i18n] { animation: landing-language-fade 220ms 
   .landing-human,
   .landing-trust { grid-template-columns: 1fr; }
   .landing-hero__container { gap: 2.5rem; min-height: 0; }
+  .landing-hero::before {
+    background-image:
+      linear-gradient(to bottom, var(--hero-scrim-solid) 0%, var(--hero-scrim-solid) 36%, var(--hero-scrim-near) 45%, var(--hero-scrim-mid) 64%, var(--hero-scrim-far) 100%),
+      url("../images/hero-diarito.webp");
+    background-position: center, right bottom;
+    background-size: 100% 100%, auto 66%;
+  }
   .landing-hero__copy h1 { max-width: 11ch; }
-  .landing-hero-visual { min-height: 29rem; max-width: 43rem; width: 100%; }
+  .landing-hero-visual { min-height: 29rem; max-width: 43rem; width: 100%; justify-self: center; }
   .landing-principles { grid-template-columns: 1fr; }
   .landing-principle { min-height: 0; border-right: 0; border-bottom: 1px solid var(--landing-border); }
   .landing-principle:last-child { border-bottom: 0; }
@@ -978,7 +961,7 @@ html.is-language-switching [data-i18n] { animation: landing-language-fade 220ms 
   html[lang="ko"] .landing-hero__copy h1 { font-size: clamp(2.75rem,12vw,4rem); }
   .landing-hero__lead { font-size: .98rem; }
   .landing-hero-visual { min-height: 25rem; }
-  .landing-hero-media { inset: 3rem .25rem 3.3rem .25rem; }
+  .landing-hero::before { background-size: 100% 100%, auto 50%; background-position: center, 72% bottom; }
   .landing-floating-card--feedback { right: -.15rem; bottom: .25rem; width: min(14rem,62%); }
   .landing-floating-card--saved { right: .25rem; top: .25rem; width: 11.5rem; }
   .landing-floating-card--exchange { left: -.15rem; top: 9.2rem; width: 9.6rem; }
