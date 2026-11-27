@@ -105,7 +105,7 @@
       heroPrimary: "Diarito가 어떻게 작동하는지 보기",
       heroSecondary: "왜 내 삶에서 시작하나요",
       replaceImage: "이미지 교체",
-      replaceThisImage: "이 이미지 교체",
+      replaceThisImage: "이미지 교체하기",
       miniFeedbackKicker: "사람을 통한 피드백",
       miniFeedbackTitle: "문맥에 더 자연스럽게",
       miniFeedbackBody: "단어를 그대로 번역하기보다 상황과 감정에 어울리는 표현을 이해합니다.",
