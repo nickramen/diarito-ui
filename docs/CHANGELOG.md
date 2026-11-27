@@ -1,5 +1,18 @@
 # Changelog
 
+## 2.15.0 - Interactive landing depth
+
+- Separated the hero floating cards and added visual connectors.
+- Added Flaticon icons to hero context cards and the image placeholder.
+- Replaced directional UI arrows with `fi fi-rr-angle-double-right`.
+- Added richer hover/active behavior to the learning principles.
+- Reworked the learning loop into interactive cards with icon-led stages.
+- Added interaction cues to the human-feedback example.
+- Reworked the trust area into interactive cards.
+- Kept the landing monochrome and shadow-free.
+- Bumped public cache/version references to 2.15.0.
+
+
 ## 2.14.1 - Landing proportion + section cleanup
 
 - Widened the hero text column to keep the H1 within two desktop lines.

@@ -162,7 +162,7 @@
       node.textContent = dict[key];
       if (key === "heroPrimary") {
         const icon = document.createElement("i");
-        icon.className = "fi fi-rr-arrow-right";
+        icon.className = "fi fi-rr-angle-double-right";
         node.append(" ", icon);
       }
       if (key === "login") {
