@@ -126,21 +126,35 @@
             </div>
           </div>
 
-          <div class="landing-principles">
-            <article class="landing-principle" data-reveal>
+          <div class="landing-principles landing-concepts">
+            <article class="landing-principle landing-concept-card" data-reveal>
               <div class="landing-principle__top"><span class="landing-principle__number" data-i18n="principle1Label">01 · Relevancia</span><span class="landing-principle__icon" aria-hidden="true"><i class="fi fi-rr-edit"></i></span></div>
               <h3 data-i18n="principle1Title">Empezá desde tu vida.</h3>
               <p data-i18n="principle1Body">Aprendé a partir de lo que viviste hoy, lo que querés decir mañana y lo que sentís en este momento.</p>
+              <div class="landing-concept-visual landing-concept-visual--life" aria-hidden="true">
+                <div class="landing-concept-note"><i class="fi fi-rr-edit"></i><span></span><span></span><span></span></div>
+                <div class="landing-concept-chip"><i class="fi fi-rr-calendar"></i></div>
+              </div>
             </article>
-            <article class="landing-principle" data-reveal data-reveal-delay="70">
+            <article class="landing-principle landing-concept-card" data-reveal data-reveal-delay="70">
               <div class="landing-principle__top"><span class="landing-principle__number" data-i18n="principle2Label">02 · Conexión humana</span><span class="landing-principle__icon" aria-hidden="true"><i class="fi fi-rr-users"></i></span></div>
               <h3 data-i18n="principle2Title">El lenguaje es humano.</h3>
               <p data-i18n="principle2Body">No se trata solo de una oración gramaticalmente correcta, sino de una expresión natural para la situación, la relación, la emoción y la cultura.</p>
+              <div class="landing-concept-visual landing-concept-visual--people" aria-hidden="true">
+                <span class="landing-concept-avatar">Y</span>
+                <span class="landing-concept-connection"><i class="fi fi-rr-arrows-repeat"></i></span>
+                <span class="landing-concept-avatar">M</span>
+              </div>
             </article>
-            <article class="landing-principle" data-reveal data-reveal-delay="140">
+            <article class="landing-principle landing-concept-card" data-reveal data-reveal-delay="140">
               <div class="landing-principle__top"><span class="landing-principle__number" data-i18n="principle3Label">03 · Apropiación activa</span><span class="landing-principle__icon" aria-hidden="true"><i class="fi fi-rr-bookmark"></i></span></div>
               <h3 data-i18n="principle3Title">Hacé tuya la retroalimentación.</h3>
               <p data-i18n="principle3Body">No alcanza con recibir una corrección. Entendela, repetí la expresión y volvé a usarla hasta que forme parte de tu propio lenguaje.</p>
+              <div class="landing-concept-visual landing-concept-visual--ownership" aria-hidden="true">
+                <div class="landing-concept-feedback"><i class="fi fi-rr-comment-check"></i><span></span><span></span></div>
+                <i class="fi fi-rr-angle-double-right"></i>
+                <div class="landing-concept-save"><i class="fi fi-rr-bookmark"></i></div>
+              </div>
             </article>
           </div>
         </div>
@@ -249,12 +263,56 @@
     </main>
 
     <footer class="landing-footer">
-      <div class="landing-container landing-footer__inner">
-        <div class="landing-footer__copy" data-i18n="footerCopy">Diarito · Aprende el idioma de tu vida.</div>
-        <div class="landing-footer__links">
-          <a href="#why" data-i18n="navWhy">Por qué Diarito</a>
-          <a href="#feedback" data-i18n="navFeedback">Retroalimentación humana</a>
-          <a href="ui-components.html" data-i18n="uiComponents">Componentes UI</a>
+      <div class="landing-footer__main">
+        <div class="landing-container landing-footer__grid">
+          <div class="landing-footer__brand">
+            <a class="landing-brand" href="#top" aria-label="Diarito"><span class="landing-brand__mark">D</span><span>Diarito</span></a>
+            <p data-i18n="footerBrandBody">Un espacio para aprender el idioma que necesitás para expresar tu propia vida y conectar con la de otras personas.</p>
+            <span data-i18n="footerBeta">Coreano ↔ Español · Beta A2</span>
+          </div>
+          <div class="landing-footer__column">
+            <strong data-i18n="footerDiarito">Diarito</strong>
+            <a href="#why" data-i18n="navWhy">Por qué Diarito</a>
+            <a href="#how-it-works" data-i18n="navHow">Cómo funciona</a>
+            <a href="#feedback" data-i18n="navFeedback">Retroalimentación humana</a>
+            <a href="#trust" data-i18n="navTrust">Confianza</a>
+          </div>
+          <div class="landing-footer__column">
+            <strong data-i18n="footerLearn">Aprender</strong>
+            <a href="#how-it-works" data-i18n="loop1Title">Escribí</a>
+            <a href="#how-it-works" data-i18n="loop2Title">Intercambiá</a>
+            <a href="#how-it-works" data-i18n="loop3Title">Entendé</a>
+            <a href="#how-it-works" data-i18n="loop4Title">Hacelo tuyo</a>
+          </div>
+          <div class="landing-footer__column">
+            <strong data-i18n="footerInfo">Información</strong>
+            <a href="ui-components.html" data-i18n="uiComponents">Componentes UI</a>
+            <a href="#" data-i18n="footerPrivacy">Privacidad</a>
+            <a href="#" data-i18n="footerTerms">Términos y condiciones</a>
+            <a href="#" data-i18n="footerContact">Contacto</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="landing-footer__social">
+        <div class="landing-container">
+          <span class="landing-footer__social-title" data-i18n="footerSocial">Diarito en la web</span>
+          <div class="landing-social-grid">
+            <a href="#" class="landing-social-link"><i class="fi fi-rr-globe"></i><span>Facebook</span></a>
+            <a href="#" class="landing-social-link"><i class="fi fi-rr-camera"></i><span>Instagram</span></a>
+            <a href="#" class="landing-social-link"><i class="fi fi-rr-video-camera-alt"></i><span>TikTok</span></a>
+            <a href="#" class="landing-social-link"><i class="fi fi-rr-at"></i><span>X</span></a>
+            <a href="#" class="landing-social-link"><i class="fi fi-rr-comment-alt"></i><span>Threads</span></a>
+            <a href="#" class="landing-social-link"><i class="fi fi-rr-envelope"></i><span data-i18n="footerEmail">Correo electrónico</span></a>
+            <a href="#" class="landing-social-link"><i class="fi fi-rr-briefcase"></i><span>LinkedIn</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="landing-footer__bottom">
+        <div class="landing-container landing-footer__bottom-inner">
+          <span data-i18n="footerCopyright">© 2026 Diarito. Todos los derechos reservados.</span>
+          <span data-i18n="footerDeveloped">Diseñado y desarrollado por el equipo de Diarito.</span>
         </div>
       </div>
     </footer>
