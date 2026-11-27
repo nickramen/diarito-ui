@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.18.1 - Centered sticky learning focus
+
+- Removed the learning-cycle left column and its global heading/description.
+- Removed the progress bar and step rail.
+- Centered the active learning step.
+- Replaced the step icon with its 01–04 number.
+- Removed the duplicated small number.
+- Preserved the scroll-driven step changes and mobile sticky behavior.
+- Bumped cache/version references to 2.18.1.
+
+
 ## 2.18.0 - Sticky learning narrative + UI system alignment
 
 - Replaced the circular learning diagram with a sticky scroll-driven four-step experience.
