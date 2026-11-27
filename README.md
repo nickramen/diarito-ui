@@ -1,8 +1,8 @@
-# Diarito UI Library 2.17.0
+# Diarito UI Library 2.18.0
 
 Diarito's reusable HTML, CSS and native JavaScript design system.
 
-Version 2.17.0 replaces the flat learning cards with an interactive circular learning loop and hardens the header separator so only its bottom border remains.
+Version 2.18.0 replaces the circular loop with a scroll-driven sticky narrative and starts consuming the canonical Diarito UI system directly on the public landing.
 
 
 
@@ -13,6 +13,21 @@ Version 2.17.0 replaces the flat learning cards with an interactive circular lea
 
 
 
+
+## 2.18.0 sticky learning narrative + UI system alignment
+
+- Replaced the circular SVG learning loop with a scroll-driven sticky storytelling section.
+- The section remains fixed while page scroll advances through Write / Exchange / Understand / Make it your own.
+- Added a canonical `diarito-progress` bar driven directly by scroll position.
+- Added focused-step transitions and clickable 01–04 navigation.
+- Added a dedicated mobile layout: compact heading, numeric rail and large focused step.
+- Loaded `diarito-system.css` on the public landing.
+- Public sections now also use `diarito-section`; page containers use canonical `diarito-container`.
+- Public action buttons and header controls now consume canonical `diarito-button` variants.
+- Landing semantic variables now alias the UI library theme tokens instead of maintaining a separate light/dark palette.
+- Retained page-specific CSS only for composition, marketing layout and scroll interactions.
+- Kept the header bottom border and no header top border.
+- Updated cache/version references to 2.18.0.
 
 ## 2.17.0 circular learning loop
 
