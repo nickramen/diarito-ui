@@ -19,6 +19,7 @@
       heroPrimary: "Ver cómo funciona Diarito",
       heroSecondary: "Por qué empezar desde tu vida",
       replaceImage: "Reemplazar imagen",
+      replaceThisImage: "Reemplazar esta imagen",
       miniFeedbackKicker: "Retroalimentación humana",
       miniFeedbackTitle: "Más natural en contexto",
       miniFeedbackBody: "“Al final sí fui” expresa mejor la idea sin traducir palabra por palabra.",
@@ -50,12 +51,17 @@
       loop4Body: "Guardá expresiones y volvé a usarlas en tus propias oraciones hasta poder producirlas por tu cuenta.",
       feedbackKicker: "Retroalimentación humana en el centro",
       feedbackTitle: "No solo correcto. Natural para la situación.",
+      feedbackTitleLine1: "No solo correcto.",
+      feedbackTitleLine2: "Natural para la situación.",
       feedbackBody: "El significado y la naturalidad cambian según la emoción, la relación, la situación y la cultura. Por eso Diarito considera el intercambio entre personas una parte central del aprendizaje.",
       feedbackNote: "Las personas no son simples herramientas de corrección. La experiencia debe tener valor tanto para quien recibe como para quien ofrece retroalimentación.",
       correctionHeader: "Corrección sobre un fragmento seleccionado",
       correctionOriginal: "Original",
       correctionSuggestion: "Sugerencia",
       correctionExplain: "Ambas expresiones se entienden, pero “al final sí fui” es una forma más natural de expresar que fuiste a pesar de la duda o la indecisión anterior.",
+      feedbackDemoLanguage: "Español",
+      feedbackDemoSentence: "Hoy pensé que no iba a salir, pero al final yo fui de todos modos.",
+      feedbackDemoWhy: "Por qué suena más natural",
       trustKicker: "La conexión funciona en ambos sentidos",
       trustTitle: "Construir confianza antes de escalar.",
       trust1Title: "Intercambio mutuo",
@@ -99,6 +105,7 @@
       heroPrimary: "Diarito가 어떻게 작동하는지 보기",
       heroSecondary: "왜 내 삶에서 시작하나요",
       replaceImage: "이미지 교체",
+      replaceThisImage: "이 이미지 교체",
       miniFeedbackKicker: "사람을 통한 피드백",
       miniFeedbackTitle: "문맥에 더 자연스럽게",
       miniFeedbackBody: "단어를 그대로 번역하기보다 상황과 감정에 어울리는 표현을 이해합니다.",
@@ -130,12 +137,17 @@
       loop4Body: "표현을 저장하고 실제로 다시 사용한다.",
       feedbackKicker: "사람을 통한 피드백을 핵심 경험으로",
       feedbackTitle: "정답만이 아니라, 상황에 자연스러운 표현.",
+      feedbackTitleLine1: "정답만이 아니라,",
+      feedbackTitleLine2: "상황에 자연스러운 표현.",
       feedbackBody: "언어에는 문법 이상의 것이 있다. 말하는 사람의 감정, 관계, 상황, 문화에 따라 표현의 의미와 자연스러움이 달라진다. 우리는 실제 사람과의 교류를 언어 학습의 핵심으로 여긴다.",
       feedbackNote: "우리는 다른 사람을 단순한 교정 도구로 보지 않는다. 서로의 삶을 이해하고 자신의 언어와 문화를 나누며 양쪽 모두가 배우는 관계를 지향한다.",
       correctionHeader: "선택한 문장에 대한 교정",
       correctionOriginal: "원문",
       correctionSuggestion: "수정 제안",
       correctionExplain: "문법적 정확성뿐 아니라 자연스러움, 뉘앙스, 상황에 따른 표현을 이해할 수 있도록 설명합니다.",
+      feedbackDemoLanguage: "스페인어",
+      feedbackDemoSentence: "Hoy pensé que no iba a salir, pero al final yo fui de todos modos.",
+      feedbackDemoWhy: "왜 더 자연스러운가",
       trustKicker: "연결은 양방향이어야 한다",
       trustTitle: "확장보다 먼저 신뢰를 만든다.",
       trust1Title: "상호 교환",
@@ -331,6 +343,70 @@
     window.addEventListener("scroll", requestUpdate, { passive: true });
     window.addEventListener("resize", requestUpdate);
     update();
+  });
+
+
+  // Human-feedback product demo
+  document.querySelectorAll("[data-feedback-demo]").forEach((demo) => {
+    const states = [...demo.querySelectorAll("[data-feedback-state]")];
+    const dots = [...demo.querySelectorAll("[data-feedback-dot]")];
+    const reducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+    let active = 0;
+    let timer = 0;
+    let paused = false;
+
+    const render = (index) => {
+      active = ((index % states.length) + states.length) % states.length;
+      states.forEach((state, stateIndex) => {
+        const isActive = stateIndex === active;
+        state.classList.toggle("is-active", isActive);
+        if (isActive) state.setAttribute("aria-current", "step");
+        else state.removeAttribute("aria-current");
+      });
+      dots.forEach((dot, dotIndex) => dot.classList.toggle("is-active", dotIndex === active));
+      demo.classList.remove("is-stage-0", "is-stage-1", "is-stage-2");
+      demo.classList.add(`is-stage-${active}`);
+    };
+
+    const stop = () => {
+      if (!timer) return;
+      window.clearInterval(timer);
+      timer = 0;
+    };
+
+    const start = () => {
+      if (reducedMotion || paused || timer || states.length < 2) return;
+      timer = window.setInterval(() => render(active + 1), 2200);
+    };
+
+    states.forEach((state, index) => {
+      state.addEventListener("click", () => {
+        render(index);
+        stop();
+        start();
+      });
+      state.addEventListener("focus", () => {
+        paused = true;
+        stop();
+        render(index);
+      });
+      state.addEventListener("blur", () => {
+        paused = false;
+        start();
+      });
+    });
+
+    demo.addEventListener("pointerenter", () => {
+      paused = true;
+      stop();
+    });
+    demo.addEventListener("pointerleave", () => {
+      paused = false;
+      start();
+    });
+
+    render(0);
+    start();
   });
 
 })();
