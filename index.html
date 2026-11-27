@@ -9,13 +9,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Englebert&family=Noto+Sans+KR:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
-  <link rel="stylesheet" href="assets/css/landing.css?v=2.17.0">
+  <link rel="stylesheet" href="assets/css/diarito-system.css?v=2.18.0">
+  <link rel="stylesheet" href="assets/css/landing.css?v=2.18.0">
 </head>
 <body class="landing-page">
   <div class="landing-shell">
 
     <aside class="landing-announcement" data-landing-announcement>
-      <div class="landing-container landing-announcement__inner">
+      <div class="diarito-container diarito-container--lg landing-container landing-announcement__inner">
         <span class="landing-announcement__eyebrow">Diarito beta</span>
         <p data-i18n="announcement">Empezamos con Coreano ↔ Español y nivel A2 para validar una experiencia de aprendizaje basada en la vida real.</p>
         <a href="#trust" data-i18n="announcementLink">Conocé el enfoque</a>
@@ -24,7 +25,7 @@
     </aside>
 
     <header class="landing-header">
-      <div class="landing-container landing-header__inner">
+      <div class="diarito-container diarito-container--lg landing-container landing-header__inner">
         <a class="landing-brand" href="#top" aria-label="Inicio de Diarito">
           <span class="landing-brand__mark">D</span>
           <span>Diarito</span>
@@ -38,16 +39,16 @@
         </nav>
 
         <div class="landing-header__actions">
-          <button class="landing-control" type="button" data-language-toggle aria-label="Cambiar idioma">
+          <button class="landing-control diarito-button diarito-button--secondary diarito-button--sm" type="button" data-language-toggle aria-label="Cambiar idioma">
             <i class="fi fi-rr-language"></i>
             <span data-language-label>ESP</span>
             <i class="fi fi-rr-angle-small-down"></i>
           </button>
-          <button class="landing-control" type="button" data-theme-toggle aria-pressed="false" aria-label="Cambiar tema">
+          <button class="landing-control diarito-button diarito-button--secondary diarito-button--sm" type="button" data-theme-toggle aria-pressed="false" aria-label="Cambiar tema">
             <i class="fi fi-rr-moon" data-theme-icon></i>
             <span data-theme-label>Oscuro</span>
           </button>
-          <a class="landing-button landing-button--secondary" href="#" data-i18n="login"><i class="fi fi-rr-sign-in-alt"></i> Iniciar sesión</a>
+          <a class="landing-button diarito-button diarito-button--secondary diarito-button--sm" href="#" data-i18n="login"><i class="fi fi-rr-sign-in-alt"></i> Iniciar sesión</a>
         </div>
 
         <details class="landing-mobile-nav">
@@ -60,9 +61,9 @@
               <a href="#trust" data-i18n="navTrust">Confianza</a>
             </nav>
             <div class="landing-mobile-nav__actions">
-              <button class="landing-control" type="button" data-language-toggle><i class="fi fi-rr-language"></i><span data-language-label>ESP</span></button>
-              <button class="landing-control" type="button" data-theme-toggle><i class="fi fi-rr-moon" data-theme-icon></i><span data-theme-label>Oscuro</span></button>
-              <a class="landing-button landing-button--secondary" href="#" data-i18n="login">Iniciar sesión</a>
+              <button class="landing-control diarito-button diarito-button--secondary diarito-button--sm" type="button" data-language-toggle><i class="fi fi-rr-language"></i><span data-language-label>ESP</span></button>
+              <button class="landing-control diarito-button diarito-button--secondary diarito-button--sm" type="button" data-theme-toggle><i class="fi fi-rr-moon" data-theme-icon></i><span data-theme-label>Oscuro</span></button>
+              <a class="landing-button diarito-button diarito-button--secondary diarito-button--sm" href="#" data-i18n="login">Iniciar sesión</a>
             </div>
           </div>
         </details>
@@ -70,8 +71,8 @@
     </header>
 
     <main id="top">
-      <section class="landing-section landing-hero">
-        <div class="landing-container landing-hero__container">
+      <section class="diarito-section landing-section landing-hero">
+        <div class="diarito-container diarito-container--lg landing-container landing-hero__container">
           <div class="landing-hero__copy" data-reveal>
             <div class="landing-hero__badge">
               <span data-i18n="heroBadge">Tu vida primero</span>
@@ -81,8 +82,8 @@
             <p class="landing-hero__lead" data-i18n="heroLead">El estudio de un idioma empieza por hablar, en el idioma que estás aprendiendo, de lo que tenés enfrente, de lo que pasó hoy y de lo que querés hacer mañana. El material de estudio no está solo en libros o listas de palabras: está a tu alrededor.</p>
             <p class="landing-hero__tagline" data-i18n="heroTagline">Tu mundo, expresado. Nuestros mundos, conectados.</p>
             <div class="landing-hero__actions">
-              <a class="landing-button" href="#how-it-works" data-i18n="heroPrimary">Ver cómo funciona Diarito <i class="fi fi-rr-angle-double-right"></i></a>
-              <a class="landing-button landing-button--secondary" href="#why" data-i18n="heroSecondary">Por qué empezar desde tu vida</a>
+              <a class="landing-button diarito-button diarito-button--primary diarito-button--md" href="#how-it-works" data-i18n="heroPrimary">Ver cómo funciona Diarito <i class="fi fi-rr-angle-double-right"></i></a>
+              <a class="landing-button diarito-button diarito-button--secondary diarito-button--md" href="#why" data-i18n="heroSecondary">Por qué empezar desde tu vida</a>
             </div>
           </div>
 
@@ -114,11 +115,11 @@
         </div>
       </section>
 
-      <section class="landing-section" id="why">
-        <div class="landing-container">
+      <section class="diarito-section landing-section" id="why">
+        <div class="diarito-container diarito-container--lg landing-container">
           <div class="landing-statement">
             <div data-reveal>
-              <span class="landing-kicker" data-i18n="whyKicker">Por qué existe Diarito</span>
+              <span class="diarito-kicker landing-kicker" data-i18n="whyKicker">Por qué existe Diarito</span>
               <h2 data-i18n="whyTitle">Aprender un idioma no es saber más palabras.</h2>
             </div>
             <div class="landing-statement__copy" data-reveal data-reveal-delay="80">
@@ -160,60 +161,68 @@
         </div>
       </section>
 
-      <section class="landing-section landing-section--soft" id="how-it-works">
-        <div class="landing-container landing-cycle-layout">
-          <div class="landing-cycle-copy" data-reveal>
-            <span class="landing-kicker" data-i18n="loopKicker">El ciclo de aprendizaje</span>
-            <h2 data-i18n="loopTitle">Escribí. Intercambiá. Entendé. Hacelo tuyo.</h2>
-            <p data-i18n="loopIntro">Diarito no termina cuando alguien corrige una oración. Lo aprendido debe volver al uso real para convertirse en algo propio.</p>
-          </div>
+      <section class="diarito-section diarito-section--flush landing-section landing-cycle-scroll-section" id="how-it-works" data-scroll-cycle>
+        <div class="landing-cycle-sticky">
+          <div class="diarito-container diarito-container--lg landing-container landing-cycle-sticky__container">
+            <div class="landing-cycle-sticky__grid">
+              <div class="landing-cycle-sticky__copy">
+                <span class="diarito-kicker landing-kicker" data-i18n="loopKicker">El ciclo de aprendizaje</span>
+                <h2 data-i18n="loopTitle">Escribí. Intercambiá. Entendé. Hacelo tuyo.</h2>
+                <p data-i18n="loopIntro">Diarito no termina cuando alguien corrige una oración. Lo aprendido debe volver al uso real para convertirse en algo propio.</p>
 
-          <div class="landing-cycle-visual" data-landing-cycle data-reveal data-reveal-delay="100">
-            <svg class="landing-cycle-svg" viewBox="0 0 640 640" role="img" aria-label="Ciclo de aprendizaje de Diarito">
-              <defs>
-                <marker id="cycle-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
-                  <path d="M0 0 L10 5 L0 10 Z" class="landing-cycle-marker"></path>
-                </marker>
-              </defs>
-              <circle class="landing-cycle-guide" cx="320" cy="320" r="210"></circle>
-              <path class="landing-cycle-segment" data-loop-segment="1" d="M320 110 A210 210 0 0 1 530 320" marker-end="url(#cycle-arrow)"></path>
-              <path class="landing-cycle-segment" data-loop-segment="2" d="M530 320 A210 210 0 0 1 320 530" marker-end="url(#cycle-arrow)"></path>
-              <path class="landing-cycle-segment" data-loop-segment="3" d="M320 530 A210 210 0 0 1 110 320" marker-end="url(#cycle-arrow)"></path>
-              <path class="landing-cycle-segment" data-loop-segment="4" d="M110 320 A210 210 0 0 1 320 110" marker-end="url(#cycle-arrow)"></path>
-            </svg>
+                <div class="diarito-progress landing-cycle-progress" aria-label="Progreso del ciclo de aprendizaje">
+                  <div class="diarito-progress__meta">
+                    <span data-cycle-progress-label>01 / 04</span>
+                    <span data-cycle-progress-percent>0%</span>
+                  </div>
+                  <div class="diarito-progress__track">
+                    <div class="diarito-progress__bar" data-cycle-progress-bar style="--diarito-progress-value:0%"></div>
+                  </div>
+                </div>
 
-            <div class="landing-cycle-center" aria-hidden="true">
-              <span class="landing-cycle-center__icon"><i class="fi fi-rr-arrows-repeat"></i></span>
-              <strong>Diarito</strong>
+                <div class="landing-cycle-rail" aria-label="Pasos del ciclo">
+                  <button class="diarito-button diarito-button--ghost landing-cycle-rail__item is-active" type="button" data-cycle-jump="0"><span>01</span><strong data-i18n="loop1Title">Escribí</strong></button>
+                  <button class="diarito-button diarito-button--ghost landing-cycle-rail__item" type="button" data-cycle-jump="1"><span>02</span><strong data-i18n="loop2Title">Intercambiá</strong></button>
+                  <button class="diarito-button diarito-button--ghost landing-cycle-rail__item" type="button" data-cycle-jump="2"><span>03</span><strong data-i18n="loop3Title">Entendé</strong></button>
+                  <button class="diarito-button diarito-button--ghost landing-cycle-rail__item" type="button" data-cycle-jump="3"><span>04</span><strong data-i18n="loop4Title">Hacelo tuyo</strong></button>
+                </div>
+              </div>
+
+              <div class="landing-cycle-stage" aria-live="polite">
+                <article class="landing-cycle-focus is-active" data-cycle-step="0">
+                  <span class="landing-cycle-focus__icon"><i class="fi fi-rr-edit"></i></span>
+                  <span class="landing-cycle-focus__number">01</span>
+                  <h3 data-i18n="loop1Title">Escribí</h3>
+                  <p data-i18n="loop1Body">Registrá tu día y tus emociones en el idioma que estás aprendiendo.</p>
+                </article>
+                <article class="landing-cycle-focus" data-cycle-step="1">
+                  <span class="landing-cycle-focus__icon"><i class="fi fi-rr-users-alt"></i></span>
+                  <span class="landing-cycle-focus__number">02</span>
+                  <h3 data-i18n="loop2Title">Intercambiá</h3>
+                  <p data-i18n="loop2Body">Intercambiá diarios con otras personas y conocé sus mundos mientras compartís el tuyo.</p>
+                </article>
+                <article class="landing-cycle-focus" data-cycle-step="2">
+                  <span class="landing-cycle-focus__icon"><i class="fi fi-rr-comment-check"></i></span>
+                  <span class="landing-cycle-focus__number">03</span>
+                  <h3 data-i18n="loop3Title">Entendé</h3>
+                  <p data-i18n="loop3Body">Recibí retroalimentación que explique contexto, naturalidad y matices, no solo gramática.</p>
+                </article>
+                <article class="landing-cycle-focus" data-cycle-step="3">
+                  <span class="landing-cycle-focus__icon"><i class="fi fi-rr-bookmark"></i></span>
+                  <span class="landing-cycle-focus__number">04</span>
+                  <h3 data-i18n="loop4Title">Hacelo tuyo</h3>
+                  <p data-i18n="loop4Body">Guardá expresiones y volvé a usarlas en tus propias oraciones hasta poder producirlas por tu cuenta.</p>
+                </article>
+              </div>
             </div>
-
-            <article class="landing-cycle-node landing-cycle-node--1" data-loop-step="1" tabindex="0">
-              <span class="landing-cycle-node__icon"><i class="fi fi-rr-edit"></i></span>
-              <div><span class="landing-cycle-node__number">01</span><h3 data-i18n="loop1Title">Escribí</h3><p data-i18n="loop1Body">Registrá tu día y tus emociones en el idioma que estás aprendiendo.</p></div>
-            </article>
-
-            <article class="landing-cycle-node landing-cycle-node--2" data-loop-step="2" tabindex="0">
-              <span class="landing-cycle-node__icon"><i class="fi fi-rr-users-alt"></i></span>
-              <div><span class="landing-cycle-node__number">02</span><h3 data-i18n="loop2Title">Intercambiá</h3><p data-i18n="loop2Body">Intercambiá diarios con otras personas y conocé sus mundos mientras compartís el tuyo.</p></div>
-            </article>
-
-            <article class="landing-cycle-node landing-cycle-node--3" data-loop-step="3" tabindex="0">
-              <span class="landing-cycle-node__icon"><i class="fi fi-rr-comment-check"></i></span>
-              <div><span class="landing-cycle-node__number">03</span><h3 data-i18n="loop3Title">Entendé</h3><p data-i18n="loop3Body">Recibí retroalimentación que explique contexto, naturalidad y matices, no solo gramática.</p></div>
-            </article>
-
-            <article class="landing-cycle-node landing-cycle-node--4" data-loop-step="4" tabindex="0">
-              <span class="landing-cycle-node__icon"><i class="fi fi-rr-bookmark"></i></span>
-              <div><span class="landing-cycle-node__number">04</span><h3 data-i18n="loop4Title">Hacelo tuyo</h3><p data-i18n="loop4Body">Guardá expresiones y volvé a usarlas en tus propias oraciones hasta poder producirlas por tu cuenta.</p></div>
-            </article>
           </div>
         </div>
       </section>
 
-      <section class="landing-section" id="feedback">
-        <div class="landing-container landing-human">
+      <section class="diarito-section landing-section" id="feedback">
+        <div class="diarito-container diarito-container--lg landing-container landing-human">
           <div class="landing-human__copy" data-reveal>
-            <span class="landing-kicker" data-i18n="feedbackKicker">Retroalimentación humana en el centro</span>
+            <span class="diarito-kicker landing-kicker" data-i18n="feedbackKicker">Retroalimentación humana en el centro</span>
             <h2 data-i18n="feedbackTitle">No solo correcto. Natural para la situación.</h2>
             <p data-i18n="feedbackBody">El significado y la naturalidad cambian según la emoción, la relación, la situación y la cultura. Por eso Diarito considera el intercambio entre personas una parte central del aprendizaje.</p>
             <div class="landing-human__note" data-i18n="feedbackNote">Las personas no son simples herramientas de corrección. La experiencia debe tener valor tanto para quien recibe como para quien ofrece retroalimentación.</div>
@@ -239,10 +248,10 @@
         </div>
       </section>
 
-      <section class="landing-section landing-section--soft" id="trust">
-        <div class="landing-container landing-trust">
+      <section class="diarito-section landing-section landing-section--soft" id="trust">
+        <div class="diarito-container diarito-container--lg landing-container landing-trust">
           <div data-reveal>
-            <span class="landing-kicker" data-i18n="trustKicker">La conexión funciona en ambos sentidos</span>
+            <span class="diarito-kicker landing-kicker" data-i18n="trustKicker">La conexión funciona en ambos sentidos</span>
             <h2 data-i18n="trustTitle">Construir confianza antes de escalar.</h2>
           </div>
           <div class="landing-trust__list">
@@ -262,14 +271,14 @@
         </div>
       </section>
 
-      <section class="landing-section landing-cta" id="start">
-        <div class="landing-container">
+      <section class="diarito-section landing-section landing-cta" id="start">
+        <div class="diarito-container diarito-container--lg landing-container">
           <div class="landing-cta__inner" data-reveal>
             <h2 data-i18n="ctaTitle">Tu mundo, expresado. Nuestros mundos, conectados.</h2>
             <p data-i18n="ctaBody">Empezá con algo que realmente quieras decir. Aprendé desde ahí.</p>
             <div class="landing-cta__actions">
-              <a class="landing-button" href="#top" data-i18n="ctaPrimary">Empezar desde tu vida</a>
-              <a class="landing-button landing-button--secondary" href="#how-it-works" data-i18n="ctaSecondary">Ver el ciclo de aprendizaje</a>
+              <a class="landing-button diarito-button diarito-button--primary diarito-button--md" href="#top" data-i18n="ctaPrimary">Empezar desde tu vida</a>
+              <a class="landing-button diarito-button diarito-button--secondary diarito-button--md" href="#how-it-works" data-i18n="ctaSecondary">Ver el ciclo de aprendizaje</a>
             </div>
           </div>
         </div>
@@ -278,7 +287,7 @@
 
     <footer class="landing-footer">
       <div class="landing-footer__main">
-        <div class="landing-container landing-footer__grid">
+        <div class="diarito-container diarito-container--lg landing-container landing-footer__grid">
           <div class="landing-footer__brand">
             <a class="landing-brand" href="#top" aria-label="Diarito"><span class="landing-brand__mark">D</span><span>Diarito</span></a>
             <p data-i18n="footerBrandBody">Un espacio para aprender el idioma que necesitás para expresar tu propia vida y conectar con la de otras personas.</p>
@@ -309,7 +318,7 @@
       </div>
 
       <div class="landing-footer__social">
-        <div class="landing-container">
+        <div class="diarito-container diarito-container--lg landing-container">
           <span class="landing-footer__social-title" data-i18n="footerSocial">Diarito en la web</span>
           <div class="landing-social-grid">
             <a href="#" class="landing-social-link"><i class="fi fi-rr-globe"></i><span>Facebook</span></a>
@@ -324,7 +333,7 @@
       </div>
 
       <div class="landing-footer__bottom">
-        <div class="landing-container landing-footer__bottom-inner">
+        <div class="diarito-container diarito-container--lg landing-container landing-footer__bottom-inner">
           <span data-i18n="footerCopyright">© 2026 Diarito. Todos los derechos reservados.</span>
           <span data-i18n="footerDeveloped">Diseñado y desarrollado por el equipo de Diarito.</span>
         </div>
