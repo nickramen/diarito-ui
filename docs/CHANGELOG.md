@@ -1,5 +1,17 @@
 # Changelog
 
+## 2.16.0 - Conceptual mission + social footer
+
+- Restored header bottom border; removed header top border.
+- Removed `.landing-kicker::before` across the landing.
+- Widened the hero media surface without reducing its height.
+- Reworked the mission principles into conceptual visual cards.
+- Added three-layer footer navigation, social links and legal/development row.
+- Added ES/KR footer translations.
+- Kept public sections divider-free outside the hero/footer structures.
+- Bumped public cache/version references to 2.16.0.
+
+
 ## 2.15.0 - Interactive landing depth
 
 - Separated the hero floating cards and added visual connectors.
