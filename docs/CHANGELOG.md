@@ -1,5 +1,17 @@
 # Changelog
 
+## 2.18.4 - Photo placeholder + interactive feedback demo
+
+- Replaced the Write illustration with a simple localized photo placeholder.
+- Added a radial center-to-edge fade over the grid background.
+- Forced the feedback title into two lines.
+- Rebuilt the feedback card into a three-state animated product demo.
+- Added automatic cycling, manual state selection and reduced-motion handling.
+- Added ES/KR strings for the new UI.
+- Kept the announcement compact on mobile.
+- Bumped cache/version references to 2.18.4.
+
+
 ## 2.18.3 - Compact banner + learning step
 
 - Reduced announcement banner height, type and close control.
