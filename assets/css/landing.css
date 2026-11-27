@@ -875,111 +875,22 @@ html.is-language-switching [data-i18n] { animation: landing-language-fade 220ms 
 }
 
 
-/* 2.16 conceptual principle visuals */
+/* Why Diarito · photographic sequence */
 .landing-concept-card > p { margin-bottom: 1.2rem; }
-.landing-concept-visual {
-  position: relative;
-  min-height: 8.8rem;
-  margin-top: auto;
-  overflow: hidden;
-  border: 1px solid var(--landing-border);
-  border-radius: var(--landing-radius-sm);
-  background:
-    linear-gradient(to right, var(--landing-grid-line) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--landing-grid-line) 1px, transparent 1px),
-    var(--landing-bg);
-  background-size: 16px 16px;
-}
-.landing-concept-visual--life { padding: 1rem; }
-.landing-concept-note {
-  width: 74%;
-  height: 6.2rem;
-  display: grid;
-  align-content: start;
-  gap: .55rem;
-  padding: .8rem;
-  border: 1px solid var(--landing-border-strong);
-  border-radius: var(--landing-radius-xs);
-  background: var(--landing-surface);
-  transform: rotate(-2deg);
-}
-.landing-concept-note i { font-size: .8rem; }
-.landing-concept-note span {
+.landing-concept-photo {
   display: block;
-  height: 1px;
-  background: var(--landing-border);
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 1;
+  object-fit: contain;
+  margin-top: auto;
+  border-radius: var(--landing-radius-sm);
+  background: var(--landing-surface-soft);
+  flex-shrink: 0;
 }
-.landing-concept-note span:nth-of-type(2) { width: 78%; }
-.landing-concept-note span:nth-of-type(3) { width: 58%; }
-.landing-concept-chip {
-  position: absolute;
-  right: 1rem;
-  bottom: 1rem;
-  width: 2.4rem;
-  height: 2.4rem;
-  display: grid;
-  place-items: center;
-  border: 1px solid var(--landing-border-strong);
-  border-radius: 50%;
-  background: var(--landing-surface);
-}
-.landing-concept-visual--people {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-.landing-concept-avatar {
-  width: 3.5rem;
-  height: 3.5rem;
-  display: grid;
-  place-items: center;
-  border: 1px solid var(--landing-border-strong);
-  border-radius: 50%;
-  background: var(--landing-surface);
-  font-weight: 600;
-}
-.landing-concept-connection {
-  width: 2.35rem;
-  height: 2.35rem;
-  display: grid;
-  place-items: center;
-  border: 1px solid var(--landing-border);
-  border-radius: 50%;
-  background: var(--landing-bg);
-  transition: transform var(--landing-transition);
-}
-.landing-concept-card:hover .landing-concept-connection { transform: rotate(180deg); }
-.landing-concept-visual--ownership {
-  display: grid;
-  grid-template-columns: minmax(0,1fr) auto auto;
-  align-items: center;
-  gap: .65rem;
-  padding: 1rem;
-}
-.landing-concept-feedback {
-  min-height: 5rem;
-  display: grid;
-  align-content: start;
-  gap: .55rem;
-  padding: .75rem;
-  border: 1px solid var(--landing-border-strong);
-  border-radius: var(--landing-radius-xs);
-  background: var(--landing-surface);
-}
-.landing-concept-feedback span {
-  height: 1px;
-  background: var(--landing-border);
-}
-.landing-concept-feedback span:last-child { width: 64%; }
-.landing-concept-save {
-  width: 2.5rem;
-  height: 2.5rem;
-  display: grid;
-  place-items: center;
-  border: 1px solid var(--landing-border-strong);
-  border-radius: var(--landing-radius-xs);
-  background: var(--landing-surface);
+@media (max-width: 900px) {
+  .landing-concept-card { border: 1px solid var(--landing-border-strong); }
+  .landing-concept-card:last-child { border: 1px solid var(--landing-border-strong); }
 }
 
 /* Footer · three layers */
