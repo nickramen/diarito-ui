@@ -1,8 +1,8 @@
-# Diarito UI Library 2.18.3
+# Diarito UI Library 2.18.4
 
 Diarito's reusable HTML, CSS and native JavaScript design system.
 
-Version 2.18.3 reduces the announcement height and compacts the sticky learning steps so the full step, image and description fit comfortably within the viewport.
+Version 2.18.4 turns the Write visual into a real photo placeholder and upgrades the human-feedback section into an animated product demo.
 
 
 
@@ -13,6 +13,20 @@ Version 2.18.3 reduces the announcement height and compacts the sticky learning 
 
 
 
+
+## 2.18.4 photo placeholder + interactive feedback demo
+
+- Replaced the Write step illustration with a photo placeholder that only says “Reemplazar esta imagen”.
+- Added a center-visible grid that fades outward into the page background behind the photo placeholder.
+- Removed drawing/icon/button treatment from the Write photo placeholder.
+- Forced the human-feedback heading into two intentional lines without changing its copy.
+- Rebuilt the feedback panel as an interactive app demo with Original → Suggestion → Explanation states.
+- Added automatic cycling between demo states plus click/focus interaction.
+- Added visual state dots, highlighted entry text and active-state movement.
+- Added reduced-motion-safe behavior.
+- Added full ES/KR strings for the new placeholder and feedback demo labels.
+- Kept the announcement compact on mobile as well as desktop.
+- Updated cache/version references to 2.18.4.
 
 ## 2.18.3 compact banner + learning step
 
