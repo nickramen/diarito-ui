@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.18.3 - Compact banner + learning step
+
+- Reduced announcement banner height, type and close control.
+- Compacted sticky learning number, title, illustration and spacing.
+- Reduced illustration footprint so description remains visible within the viewport.
+- Added matching tablet/mobile compaction.
+- Kept sticky scroll state transitions unchanged.
+- Bumped cache/version references to 2.18.3.
+
+
 ## 2.18.2 - Step visuals + language cleanup
 
 - Added four step-specific responsive SVG illustrations to the sticky learning section.
