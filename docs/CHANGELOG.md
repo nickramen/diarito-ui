@@ -1,5 +1,17 @@
 # Changelog
 
+## 2.18.0 - Sticky learning narrative + UI system alignment
+
+- Replaced the circular learning diagram with a sticky scroll-driven four-step experience.
+- Added scroll-controlled focused steps and progress.
+- Added clickable step navigation and dedicated mobile behavior.
+- Loaded the canonical Diarito UI system on the landing.
+- Adopted canonical section, container, button and progress components.
+- Mapped landing semantic roles to shared Diarito tokens.
+- Preserved the existing ES/KR copy.
+- Bumped cache/version references to 2.18.0.
+
+
 ## 2.17.0 - Circular learning loop
 
 - Removed any possible top separator between the announcement and sticky header.
