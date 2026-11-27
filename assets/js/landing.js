@@ -54,7 +54,6 @@
       feedbackTitleLine1: "No solo correcto.",
       feedbackTitleLine2: "Natural para la situación.",
       feedbackBody: "El significado y la naturalidad cambian según la emoción, la relación, la situación y la cultura. Por eso Diarito considera el intercambio entre personas una parte central del aprendizaje.",
-      feedbackNote: "Las personas no son simples herramientas de corrección. La experiencia debe tener valor tanto para quien recibe como para quien ofrece retroalimentación.",
       correctionHeader: "Corrección sobre un fragmento seleccionado",
       correctionOriginal: "Original",
       correctionSuggestion: "Sugerencia",
@@ -91,7 +90,6 @@
       feedbackPublishedTitle: "Corrección de Yuna",
       feedbackPublishedPrefix: "Sugirió:",
       feedbackPublishedStatus: "Retroalimentación enviada",
-      feedbackDemoCaption: "Mirá cómo una corrección nace directamente desde un fragmento del diario.",
       trustKicker: "La conexión funciona en ambos sentidos",
       trustTitle: "Construir confianza antes de escalar.",
       trust1Title: "Intercambio mutuo",
@@ -170,7 +168,6 @@
       feedbackTitleLine1: "정답만이 아니라,",
       feedbackTitleLine2: "상황에 자연스러운 표현.",
       feedbackBody: "언어에는 문법 이상의 것이 있다. 말하는 사람의 감정, 관계, 상황, 문화에 따라 표현의 의미와 자연스러움이 달라진다. 우리는 실제 사람과의 교류를 언어 학습의 핵심으로 여긴다.",
-      feedbackNote: "우리는 다른 사람을 단순한 교정 도구로 보지 않는다. 서로의 삶을 이해하고 자신의 언어와 문화를 나누며 양쪽 모두가 배우는 관계를 지향한다.",
       correctionHeader: "선택한 문장에 대한 교정",
       correctionOriginal: "원문",
       correctionSuggestion: "수정 제안",
@@ -207,7 +204,6 @@
       feedbackPublishedTitle: "Yuna의 교정",
       feedbackPublishedPrefix: "수정 제안:",
       feedbackPublishedStatus: "피드백을 보냈어요",
-      feedbackDemoCaption: "일기에서 문장을 선택해 사람의 교정이 완성되는 과정을 확인해 보세요.",
       trustKicker: "연결은 양방향이어야 한다",
       trustTitle: "확장보다 먼저 신뢰를 만든다.",
       trust1Title: "상호 교환",
@@ -427,7 +423,6 @@
     const published = find("[data-feedback-published]");
     const commentCount = find("[data-feedback-comment-count]");
     const confetti = find("[data-feedback-confetti]");
-    const dots = [...demo.querySelectorAll(".landing-feedback-tablet__steps i")];
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     const phases = ["idle","scrolling","selecting","selected","action","click","modal","typing","submit","send","celebrate","published"];
     const modalPhases = ["modal","typing","submit","send"];
@@ -435,10 +430,9 @@
     let cursorPoint = { x: 0, y: 0 };
     const dict = () => translations[root.lang === "ko" ? "ko" : "es"];
     const wait = (ms, id) => new Promise(resolve => setTimeout(() => resolve(id === runId), ms));
-    const setPhase = (phase, dot = 0) => {
+    const setPhase = (phase) => {
       phases.forEach(name => demo.classList.remove("is-phase-" + name));
       demo.classList.add("is-phase-" + phase);
-      dots.forEach((node, i) => node.classList.toggle("is-active", i === dot));
       sheet.setAttribute("aria-hidden", String(!modalPhases.includes(phase)));
       published.setAttribute("aria-hidden", String(phase !== "published"));
     };
@@ -561,7 +555,7 @@
     const revealPublished = () => {
       mark.classList.add("is-marked");
       commentCount.textContent = "4";
-      setPhase("published",4);
+      setPhase("published");
     };
     const showFinal = () => {
       reset();
@@ -609,7 +603,7 @@
       if (!await wait(430,id)) return;
 
       // The button already exists in the post's action row.
-      setPhase("action",1);
+      setPhase("action");
       const buttonExtra = correct.getBoundingClientRect().bottom - feed.getBoundingClientRect().bottom + 8;
       if (buttonExtra > 0) {
         overlay.replaceChildren(); mark.classList.add("is-marked");
@@ -617,33 +611,33 @@
       }
       if (!await moveCursor(buttonPoint(correct),620,id)) return;
       cursor.classList.add("is-clicking");
-      setPhase("click",1);
+      setPhase("click");
       if (!await wait(420,id)) return;
       cursor.classList.remove("is-visible","is-clicking");
       overlay.replaceChildren(); mark.classList.add("is-marked");
 
-      setPhase("modal",2);
+      setPhase("modal");
       if (!await wait(370,id)) return;
-      setPhase("typing",2);
+      setPhase("typing");
       if (!await typeInto(suggestion,dict().feedbackCorrectionSuggestionValue,id,30)) return;
       if (!await wait(200,id)) return;
       if (!await typeInto(explanation,dict().feedbackCorrectionExplanationValue,id,20)) return;
       if (!await wait(380,id)) return;
 
       showInSheet(submit);
-      setPhase("submit",3);
+      setPhase("submit");
       if (!await wait(120,id)) return;
       const end = buttonPoint(submit);
       setCursor({x:Math.min(device.clientWidth-28,end.x+40),y:Math.max(8,end.y-30)});
       cursor.classList.add("is-visible");
       if (!await moveCursor(end,540,id)) return;
       cursor.classList.add("is-clicking");
-      setPhase("send",3);
+      setPhase("send");
       if (!await wait(420,id)) return;
       cursor.classList.remove("is-visible","is-clicking");
 
       // Close the modal, celebrate from the tablet centre, then insert the correction below @mari.
-      setPhase("celebrate",3);
+      setPhase("celebrate");
       if (!await wait(260,id)) return;
       burst();
       if (!await wait(1250,id)) return;
