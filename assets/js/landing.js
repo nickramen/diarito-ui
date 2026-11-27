@@ -68,6 +68,18 @@
       ctaPrimary: "Empezar desde tu vida",
       ctaSecondary: "Ver el ciclo de aprendizaje",
       footerCopy: "Diarito · Aprende el idioma de tu vida.",
+      footerBrandBody: "Un espacio para aprender el idioma que necesitás para expresar tu propia vida y conectar con la de otras personas.",
+      footerBeta: "Coreano ↔ Español · Beta A2",
+      footerDiarito: "Diarito",
+      footerLearn: "Aprender",
+      footerInfo: "Información",
+      footerPrivacy: "Privacidad",
+      footerTerms: "Términos y condiciones",
+      footerContact: "Contacto",
+      footerSocial: "Diarito en la web",
+      footerEmail: "Correo electrónico",
+      footerCopyright: "© 2026 Diarito. Todos los derechos reservados.",
+      footerDeveloped: "Diseñado y desarrollado por el equipo de Diarito.",
       uiComponents: "Componentes UI"
     },
     ko: {
@@ -135,6 +147,18 @@
       ctaPrimary: "내 삶에서 시작하기",
       ctaSecondary: "학습 루프 보기",
       footerCopy: "Diarito · 내 삶의 언어를 배우세요.",
+      footerBrandBody: "내 삶을 표현하는 데 필요한 언어를 배우고, 다른 사람의 삶과 연결되는 공간입니다.",
+      footerBeta: "한국어 ↔ 스페인어 · A2 베타",
+      footerDiarito: "Diarito",
+      footerLearn: "배우기",
+      footerInfo: "정보",
+      footerPrivacy: "개인정보 보호",
+      footerTerms: "이용약관",
+      footerContact: "문의",
+      footerSocial: "웹에서 만나는 Diarito",
+      footerEmail: "이메일",
+      footerCopyright: "© 2026 Diarito. 모든 권리 보유.",
+      footerDeveloped: "Diarito 팀이 디자인하고 개발했습니다.",
       uiComponents: "UI 컴포넌트"
     }
   };

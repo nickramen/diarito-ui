@@ -1,8 +1,8 @@
-# Diarito UI Library 2.15.0
+# Diarito UI Library 2.16.0
 
 Diarito's reusable HTML, CSS and native JavaScript design system.
 
-Version 2.15.0 improves hero clarity and adds richer monochrome interaction across the public landing without changing the product message.
+Version 2.16.0 refines the hero visual proportions, turns the mission principles into conceptual cards and introduces a three-level social footer.
 
 
 
@@ -13,6 +13,22 @@ Version 2.15.0 improves hero clarity and adds richer monochrome interaction acro
 
 
 
+
+## 2.16.0 conceptual mission + social footer
+
+- Restored the sticky header's bottom border and removed its top border.
+- Removed the decorative `.landing-kicker::before` line from every public section.
+- Rebalanced the hero to give the right-side media surface substantially more width while keeping its height.
+- Widened the hero media placeholder to feel more square/horizontal.
+- Reworked the three mission principles into conceptual cards with mini visual compositions built from the UI system and Flaticon icons.
+- Kept section backgrounds unified and section dividers removed.
+- Added a three-level footer:
+  - multi-column Diarito / learning / information navigation,
+  - social network tiles for Facebook, Instagram, TikTok, X, Threads, email and LinkedIn,
+  - copyright and developed-by row.
+- Added top borders only to the footer's three structural bands.
+- Added full ES/KR footer translations.
+- Updated cache/version references to 2.16.0.
 
 ## 2.15.0 interactive landing depth
 
