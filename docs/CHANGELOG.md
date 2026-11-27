@@ -1,5 +1,18 @@
 # Changelog
 
+## 2.17.0 - Circular learning loop
+
+- Removed any possible top separator between the announcement and sticky header.
+- Kept only the header bottom border.
+- Replaced the four learning cards with a two-column layout and circular SVG loop.
+- Added four interactive SVG arc segments with arrowheads.
+- Connected hover/focus states between learning nodes and SVG segments.
+- Added SVG draw-in animation on reveal.
+- Added mobile vertical connected fallback.
+- Kept all learning-loop copy unchanged in ES/KR.
+- Bumped public cache/version references to 2.17.0.
+
+
 ## 2.16.0 - Conceptual mission + social footer
 
 - Restored header bottom border; removed header top border.
