@@ -164,6 +164,11 @@
         icon.className = "fi fi-rr-arrow-right";
         node.append(" ", icon);
       }
+      if (key === "login") {
+        const icon = document.createElement("i");
+        icon.className = "fi fi-rr-sign-in-alt";
+        node.prepend(icon, " ");
+      }
     });
 
     document.querySelectorAll("[data-language-label]").forEach((node) => {
