@@ -64,6 +64,17 @@
       feedbackDemoWhy: "Por qué suena más natural",
       feedbackFeedTitle: "Comunidad",
       feedbackFeedHint: "Diarios para intercambiar",
+      feedbackTabForYou: "Para vos",
+      feedbackTabFollowing: "Siguiendo",
+      feedbackTabPractice: "Práctica",
+      feedbackComposerPrompt: "¿Qué estás pensando hoy?",
+      feedbackComposerPost: "Publicar",
+      feedbackFirstMeta: "Español · A2 · hace 3 min",
+      feedbackFirstPost: "Esta mañana pedí un café en español. Me puse nervioso, pero entendí la pregunta y pude responder sin usar el traductor.",
+      feedbackThirdMeta: "Español · A2 · hace 24 min",
+      feedbackThirdPost: "Hoy anoté tres expresiones que escuché en una conversación. Quiero usarlas mañana cuando hable con mi amiga.",
+      feedbackFourthMeta: "Español · A2 · hace 41 min",
+      feedbackFourthPost: "Esta tarde caminé por el parque. Intenté describir lo que veía en español y aprendí palabras nuevas.",
       feedbackPostMeta: "Español · A2 · hace 8 min",
       feedbackPostBefore: "Hoy presenté una idea en una reunión. Estaba nerviosa, pero intenté explicar todo con calma. Al final, mi jefa me dijo que ",
       feedbackPostSelected: "mi presentación fue muy comprensible",
@@ -169,6 +180,17 @@
       feedbackDemoWhy: "왜 더 자연스러운가",
       feedbackFeedTitle: "커뮤니티",
       feedbackFeedHint: "교환할 수 있는 일기",
+      feedbackTabForYou: "추천",
+      feedbackTabFollowing: "팔로잉",
+      feedbackTabPractice: "연습",
+      feedbackComposerPrompt: "오늘은 어떤 생각을 했나요?",
+      feedbackComposerPost: "게시하기",
+      feedbackFirstMeta: "한국어 · A2 · 3분 전",
+      feedbackFirstPost: "오늘 아침에 한국어로 커피를 주문했어요. 긴장했지만 질문을 이해하고 번역기 없이 대답했어요.",
+      feedbackThirdMeta: "한국어 · A2 · 24분 전",
+      feedbackThirdPost: "오늘 대화에서 들은 표현 세 개를 적었어요. 내일 친구와 이야기할 때 써 보고 싶어요.",
+      feedbackFourthMeta: "한국어 · A2 · 41분 전",
+      feedbackFourthPost: "오늘 오후에 공원을 산책했어요. 보이는 것을 한국어로 설명해 보면서 새로운 단어를 배웠어요.",
       feedbackPostMeta: "한국어 · A2 · 8분 전",
       feedbackPostBefore: "오늘 회의에서 아이디어를 발표했어요. 많이 긴장했지만 차분하게 설명하려고 했어요. 마지막에 팀장님이 ",
       feedbackPostSelected: "제 발표가 아주 이해 가능했다고",
@@ -179,7 +201,7 @@
       feedbackSelectedLabel: "선택한 문장",
       feedbackSuggestionLabel: "수정 문장",
       feedbackExplanationLabel: "설명",
-      feedbackCorrectionSuggestionValue: "제 발표가 아주 이해하기 쉬웠어요",
+      feedbackCorrectionSuggestionValue: "제 발표가 이해하기 쉬웠다고",
       feedbackCorrectionExplanationValue: "발표가 쉽게 이해됐다는 뜻을 말할 때는 «이해 가능하다»보다 «이해하기 쉽다»가 더 자연스러워요.",
       feedbackSubmit: "피드백 보내기",
       feedbackPublishedTitle: "Yuna의 교정",
@@ -385,119 +407,273 @@
   });
 
 
-  // Human-feedback phone demo: select → correct → explain → publish.
+  // Landscape tablet: real feed scroll, geometry-based selection, correction and confetti.
   document.querySelectorAll("[data-feedback-demo]").forEach((demo) => {
-    const sheet = demo.querySelector("[data-feedback-sheet]");
-    const suggestion = demo.querySelector("[data-feedback-suggestion]");
-    const explanation = demo.querySelector("[data-feedback-explanation]");
-    const dots = [...demo.querySelectorAll(".landing-feedback-phone__steps i")];
-    const reducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
-    const phases = ["idle","selecting","selected","action","click","modal","typing","submit","published"];
-    let runId = 0;
-    let visible = false;
-
-    const languageDict = () => translations[root.lang === "ko" ? "ko" : "es"];
-
-    const wait = (ms, id) => new Promise((resolve) => {
-      window.setTimeout(() => resolve(id === runId), ms);
+    const find = (selector) => demo.querySelector(selector);
+    const device = find("[data-feedback-device]");
+    const viewport = find("[data-feedback-viewport]");
+    const feed = find("[data-feedback-feed]");
+    const tabs = find("[data-feedback-tabs]");
+    const target = find("[data-feedback-target]");
+    const mark = find("[data-demo-selection]");
+    const selected = mark.querySelector("[data-i18n]");
+    const overlay = find("[data-feedback-selection-overlay]");
+    const cursor = find("[data-feedback-cursor]");
+    const correct = find("[data-feedback-correct]");
+    const sheet = find("[data-feedback-sheet]");
+    const suggestion = find("[data-feedback-suggestion]");
+    const explanation = find("[data-feedback-explanation]");
+    const submit = find("[data-feedback-submit]");
+    const published = find("[data-feedback-published]");
+    const commentCount = find("[data-feedback-comment-count]");
+    const confetti = find("[data-feedback-confetti]");
+    const dots = [...demo.querySelectorAll(".landing-feedback-tablet__steps i")];
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const phases = ["idle","scrolling","selecting","selected","action","click","modal","typing","submit","send","celebrate","published"];
+    const modalPhases = ["modal","typing","submit","send"];
+    let runId = 0, visible = false, resizeTimer;
+    let cursorPoint = { x: 0, y: 0 };
+    const dict = () => translations[root.lang === "ko" ? "ko" : "es"];
+    const wait = (ms, id) => new Promise(resolve => setTimeout(() => resolve(id === runId), ms));
+    const setPhase = (phase, dot = 0) => {
+      phases.forEach(name => demo.classList.remove("is-phase-" + name));
+      demo.classList.add("is-phase-" + phase);
+      dots.forEach((node, i) => node.classList.toggle("is-active", i === dot));
+      sheet.setAttribute("aria-hidden", String(!modalPhases.includes(phase)));
+      published.setAttribute("aria-hidden", String(phase !== "published"));
+    };
+    const animate = (ms, id, frame) => new Promise(resolve => {
+      let start;
+      const step = time => {
+        if (id !== runId) return resolve(false);
+        if (start === undefined) start = time;
+        const p = Math.min(1, (time - start) / Math.max(1, ms));
+        frame(p, p < .5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2);
+        if (p < 1) requestAnimationFrame(step);
+        else resolve(true);
+      };
+      requestAnimationFrame(step);
     });
-
-    const setDot = (index) => {
-      dots.forEach((dot, dotIndex) => dot.classList.toggle("is-active", dotIndex === index));
+    const point = (x, y) => {
+      const rect = device.getBoundingClientRect();
+      // Account for the border and any ancestor transform during scroll reveal.
+      const sx = rect.width / device.offsetWidth || 1;
+      const sy = rect.height / device.offsetHeight || 1;
+      return { x: (x - rect.left) / sx - device.clientLeft, y: (y - rect.top) / sy - device.clientTop };
     };
-
-    const setPhase = (phase, dotIndex = 0) => {
-      phases.forEach((name) => demo.classList.remove(`is-phase-${name}`));
-      demo.classList.add(`is-phase-${phase}`);
-      setDot(dotIndex);
-      if (sheet) sheet.setAttribute("aria-hidden", String(!["modal","typing","submit"].includes(phase)));
+    const setCursor = (p) => {
+      cursorPoint = p;
+      cursor.style.left = p.x + "px";
+      cursor.style.top = p.y + "px";
     };
-
-    const typeInto = async (field, value, id, speed = 24) => {
-      if (!field) return true;
+    const moveCursor = (p, ms, id) => {
+      const from = { ...cursorPoint };
+      return animate(ms, id, (_, ease) => setCursor({
+        x: from.x + (p.x - from.x) * ease,
+        y: from.y + (p.y - from.y) * ease
+      }));
+    };
+    const buttonPoint = (button) => {
+      const r = button.getBoundingClientRect();
+      return point(r.left + r.width * .55, r.top + r.height * .52);
+    };
+    const scrollTo = (top, ms, id) => {
+      const from = feed.scrollTop;
+      const end = Math.max(0, Math.min(top, feed.scrollHeight - feed.clientHeight));
+      return animate(ms, id, (_, ease) => { feed.scrollTop = from + (end - from) * ease; });
+    };
+    const targetScroll = () => feed.scrollTop + target.getBoundingClientRect().top - feed.getBoundingClientRect().top - tabs.offsetHeight - 4;
+    const rangeRects = (count) => {
+      const node = selected.firstChild;
+      if (!node || node.nodeType !== Node.TEXT_NODE || !node.length) return [];
+      const range = document.createRange();
+      range.setStart(node, 0);
+      range.setEnd(node, Math.min(node.length, Math.max(1, count)));
+      return [...range.getClientRects()].filter(r => r.width > 0 && r.height > 0);
+    };
+    const drawSelection = (count, handles = false) => {
+      const rects = rangeRects(count);
+      const base = viewport.getBoundingClientRect();
+      const sx = base.width / viewport.offsetWidth || 1;
+      const sy = base.height / viewport.offsetHeight || 1;
+      const clip = feed.getBoundingClientRect();
+      const stickyBottom = tabs.getBoundingClientRect().bottom;
+      overlay.replaceChildren();
+      for (const r of rects) {
+        const top = Math.max(r.top, clip.top, stickyBottom);
+        const bottom = Math.min(r.bottom, clip.bottom);
+        if (bottom <= top) continue;
+        const piece = document.createElement("span");
+        Object.assign(piece.style, { left: (r.left-base.left)/sx+"px", top: (top-base.top)/sy+"px", width: r.width/sx+"px", height: (bottom-top)/sy+"px" });
+        overlay.append(piece);
+      }
+      if (!rects.length) return null;
+      const first = rects[0], last = rects[rects.length-1];
+      if (handles) for (const [x,y] of [[first.left,first.top],[last.right,last.bottom]]) {
+        if (y < stickyBottom || y > clip.bottom) continue;
+        const handle = document.createElement("span");
+        handle.className = "is-handle";
+        handle.style.left = (x-base.left)/sx+"px";
+        handle.style.top = (y-base.top)/sy+"px";
+        overlay.append(handle);
+      }
+      return point(last.right, last.top + last.height * .72);
+    };
+    const showInSheet = (field) => {
+      const box = sheet.getBoundingClientRect(), r = field.getBoundingClientRect();
+      if (r.bottom > box.bottom - 8) sheet.scrollTop += r.bottom - box.bottom + 8;
+      else if (r.top < box.top + 8) sheet.scrollTop -= box.top + 8 - r.top;
+    };
+    const typeInto = async (field, value, id, speed) => {
+      showInSheet(field);
       field.value = "";
-      const chunk = Math.max(1, Math.ceil(value.length / 42));
-      for (let index = chunk; index <= value.length + chunk; index += chunk) {
+      const chunk = Math.max(1, Math.ceil(value.length / 44));
+      for (let n = chunk; n <= value.length + chunk; n += chunk) {
         if (id !== runId) return false;
-        field.value = value.slice(0, Math.min(index, value.length));
-        if (!await wait(speed, id)) return false;
+        field.value = value.slice(0, Math.min(n, value.length));
+        if (!await wait(speed,id)) return false;
       }
       return true;
     };
-
-    const renderReducedMotion = () => {
-      const dict = languageDict();
-      if (suggestion) suggestion.value = dict.feedbackCorrectionSuggestionValue;
-      if (explanation) explanation.value = dict.feedbackCorrectionExplanationValue;
-      setPhase("published", 4);
+    const burst = () => {
+      confetti.replaceChildren();
+      const colors = ["#F4C44D","#59BFA9","#7A9DD8","#E98F8F","#A7A0D4","#E9A35A"];
+      const w = device.clientWidth, h = device.clientHeight;
+      for (let i = 0; i < 42; i++) {
+        const piece = document.createElement("i");
+        const a = i * Math.PI * 2 / 42 + Math.random() * .18;
+        const radius = .16 + Math.random() * .24;
+        const dx = Math.cos(a) * w * radius;
+        const dy = Math.sin(a) * h * radius;
+        const props = { "--dx": dx+"px", "--dy": dy+"px", "--fall": (h*.54+Math.random()*h*.15)+"px", "--spin": ((Math.random()-.5)*740)+"deg", "--size": (5+Math.random()*5)+"px", "--delay": (Math.random()*80)+"ms", "--color": colors[i%colors.length] };
+        Object.entries(props).forEach(([k,v]) => piece.style.setProperty(k,v));
+        confetti.append(piece);
+      }
     };
-
+    const reset = () => {
+      setPhase("idle");
+      feed.scrollTop = 0; sheet.scrollTop = 0;
+      cursor.classList.remove("is-visible","is-clicking");
+      mark.classList.remove("is-marked");
+      overlay.replaceChildren(); confetti.replaceChildren();
+      suggestion.value = ""; explanation.value = ""; commentCount.textContent = "3";
+    };
+    const revealPublished = () => {
+      mark.classList.add("is-marked");
+      commentCount.textContent = "4";
+      setPhase("published",4);
+    };
+    const showFinal = () => {
+      reset();
+      suggestion.value = dict().feedbackCorrectionSuggestionValue;
+      explanation.value = dict().feedbackCorrectionExplanationValue;
+      revealPublished();
+      feed.scrollTop = targetScroll();
+      const extra = published.getBoundingClientRect().bottom - feed.getBoundingClientRect().bottom + 6;
+      if (extra > 0) feed.scrollTop += extra;
+    };
     const run = async () => {
       const id = ++runId;
-      const dict = languageDict();
-      if (suggestion) suggestion.value = "";
-      if (explanation) explanation.value = "";
+      reset();
+      if (reducedMotion.matches) { showFinal(); return; }
+      if (!await wait(900,id)) return;
 
-      if (reducedMotion) {
-        renderReducedMotion();
-        return;
+      // Scroll the actual feed until the second diary reaches the sticky tabs.
+      setPhase("scrolling");
+      if (!await scrollTo(targetScroll(),1100,id)) return;
+      if (!await wait(320,id)) return;
+      // In a compact tablet, bring the selected phrase above the bottom edge.
+      const firstRect = rangeRects(1)[0];
+      if (!firstRect) return;
+      const lastRect = rangeRects(selected.textContent.length).at(-1);
+      const extra = lastRect.bottom - feed.getBoundingClientRect().bottom + 12;
+      if (extra > 0 && !await scrollTo(feed.scrollTop+extra,280,id)) return;
+      const first = rangeRects(1)[0];
+      const initial = point(first.left, first.top + first.height * .72);
+      setCursor({x:Math.min(device.clientWidth-28,initial.x+44),y:Math.min(device.clientHeight-30,initial.y+25)});
+      cursor.classList.add("is-visible");
+      if (!await moveCursor(initial,580,id)) return;
+      if (!await wait(180,id)) return;
+
+      // Every animation frame measures the real selected text range, including line wraps.
+      setPhase("selecting");
+      const total = selected.textContent.length;
+      if (!await animate(1000,id,(_,ease) => {
+        const count = Math.max(1,Math.round(total*ease));
+        const p = drawSelection(count);
+        if (p) setCursor(p);
+      })) return;
+      const last = drawSelection(total,true);
+      if (last) setCursor(last);
+      setPhase("selected");
+      if (!await wait(430,id)) return;
+
+      // The button already exists in the post's action row.
+      setPhase("action",1);
+      const buttonExtra = correct.getBoundingClientRect().bottom - feed.getBoundingClientRect().bottom + 8;
+      if (buttonExtra > 0) {
+        overlay.replaceChildren(); mark.classList.add("is-marked");
+        if (!await scrollTo(feed.scrollTop+buttonExtra,240,id)) return;
       }
+      if (!await moveCursor(buttonPoint(correct),620,id)) return;
+      cursor.classList.add("is-clicking");
+      setPhase("click",1);
+      if (!await wait(420,id)) return;
+      cursor.classList.remove("is-visible","is-clicking");
+      overlay.replaceChildren(); mark.classList.add("is-marked");
 
-      setPhase("idle", 0);
-      if (!await wait(800, id)) return;
+      setPhase("modal",2);
+      if (!await wait(370,id)) return;
+      setPhase("typing",2);
+      if (!await typeInto(suggestion,dict().feedbackCorrectionSuggestionValue,id,30)) return;
+      if (!await wait(200,id)) return;
+      if (!await typeInto(explanation,dict().feedbackCorrectionExplanationValue,id,20)) return;
+      if (!await wait(380,id)) return;
 
-      setPhase("selecting", 0);
-      if (!await wait(1150, id)) return;
+      showInSheet(submit);
+      setPhase("submit",3);
+      if (!await wait(120,id)) return;
+      const end = buttonPoint(submit);
+      setCursor({x:Math.min(device.clientWidth-28,end.x+40),y:Math.max(8,end.y-30)});
+      cursor.classList.add("is-visible");
+      if (!await moveCursor(end,540,id)) return;
+      cursor.classList.add("is-clicking");
+      setPhase("send",3);
+      if (!await wait(420,id)) return;
+      cursor.classList.remove("is-visible","is-clicking");
 
-      setPhase("selected", 0);
-      if (!await wait(520, id)) return;
-
-      setPhase("action", 1);
-      if (!await wait(760, id)) return;
-
-      setPhase("click", 1);
-      if (!await wait(480, id)) return;
-
-      setPhase("modal", 2);
-      if (!await wait(650, id)) return;
-
-      setPhase("typing", 2);
-      if (!await typeInto(suggestion, dict.feedbackCorrectionSuggestionValue, id, 34)) return;
-      if (!await wait(240, id)) return;
-      if (!await typeInto(explanation, dict.feedbackCorrectionExplanationValue, id, 18)) return;
-      if (!await wait(420, id)) return;
-
-      setPhase("submit", 3);
-      if (!await wait(620, id)) return;
-
-      setPhase("published", 4);
-      if (!await wait(2700, id)) return;
-
+      // Close the modal, celebrate from the tablet centre, then insert the correction below @mari.
+      setPhase("celebrate",3);
+      if (!await wait(260,id)) return;
+      burst();
+      if (!await wait(1250,id)) return;
+      confetti.replaceChildren();
+      revealPublished();
+      if (!await wait(380,id)) return;
+      const commentExtra = published.getBoundingClientRect().bottom - feed.getBoundingClientRect().bottom + 8;
+      if (commentExtra > 0 && !await scrollTo(feed.scrollTop+commentExtra,450,id)) return;
+      if (!await wait(2900,id)) return;
       if (visible && id === runId) run();
     };
-
-    const stop = () => { runId += 1; };
-
+    const stop = () => { runId++; cursor.classList.remove("is-visible","is-clicking"); confetti.replaceChildren(); };
     if ("IntersectionObserver" in window) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.target !== demo) return;
-          visible = entry.isIntersecting;
-          if (visible) run();
-          else stop();
-        });
-      }, { threshold: .35 });
+      const observer = new IntersectionObserver(entries => {
+        for (const entry of entries) {
+          if (entry.target !== demo) continue;
+          const next = entry.isIntersecting && entry.intersectionRatio >= .30;
+          if (next === visible) continue;
+          visible = next;
+          if (visible) run(); else stop();
+        }
+      }, { threshold: [.0,.30] });
       observer.observe(demo);
-    } else {
-      visible = true;
-      run();
-    }
-
-    document.addEventListener("diarito:languagechange", () => {
-      if (!visible) return;
-      stop();
-      run();
+    } else { visible = true; run(); }
+    document.addEventListener("diarito:languagechange", () => { if (visible) run(); else { stop(); reset(); } });
+    window.addEventListener("resize", () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => { if (visible) run(); }, 150);
     });
+    reducedMotion.addEventListener?.("change", () => { if (visible) run(); });
   });
 
 })();

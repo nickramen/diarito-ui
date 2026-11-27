@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Englebert&family=Noto+Sans+KR:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
   <link rel="stylesheet" href="assets/css/diarito-system.css?v=2.19.0">
-  <link rel="stylesheet" href="assets/css/landing.css?v=2.19.0">
+  <link rel="stylesheet" href="assets/css/landing.css?v=2.19.0-tablet">
 </head>
 <body class="landing-page">
   <div class="landing-shell">
@@ -216,96 +216,136 @@
             <div class="landing-human__note" data-i18n="feedbackNote">Las personas no son simples herramientas de corrección. La experiencia debe tener valor tanto para quien recibe como para quien ofrece retroalimentación.</div>
           </div>
 
-          <div class="landing-feedback-phone" data-feedback-demo data-reveal data-reveal-delay="100">
-            <div class="landing-feedback-phone__device">
-              <div class="landing-feedback-phone__viewport">
-                <div class="landing-feedback-phone__status" aria-hidden="true">
-                  <span>10:24</span>
-                  <span class="landing-feedback-phone__status-icons"><i></i><i></i><i></i></span>
+          <div class="landing-feedback-tablet" data-feedback-demo data-reveal data-reveal-delay="100">
+            <div class="landing-feedback-tablet__device" data-feedback-device>
+              <div class="landing-feedback-tablet__viewport" data-feedback-viewport>
+                <div class="landing-feedback-tablet__status" aria-hidden="true">
+                  <span>10:24</span><span class="landing-feedback-tablet__status-icons"><i></i><i></i><i></i></span>
                 </div>
-
-                <div class="landing-feedback-phone__appbar">
+                <div class="landing-feedback-tablet__appbar">
                   <strong>Diarito</strong>
-                  <span class="landing-feedback-phone__viewer" aria-label="Yuna">Y</span>
+                  <span class="landing-feedback-tablet__viewer" aria-label="Yuna">Y</span>
                 </div>
-
-                <div class="landing-feedback-phone__feed">
-                  <div class="landing-feedback-phone__feed-label">
-                    <span data-i18n="feedbackFeedTitle">Comunidad</span>
-                    <span data-i18n="feedbackFeedHint">Diarios para intercambiar</span>
-                  </div>
-
-                  <article class="diarito-feed-item landing-demo-post">
-                    <span class="diarito-avatar diarito-avatar--sm landing-demo-post__avatar" aria-hidden="true">M</span>
-                    <div class="diarito-feed-item__main">
-                      <div class="diarito-feed-item__header">
-                        <strong>@mari</strong>
-                        <span data-i18n="feedbackPostMeta">Español · A2 · hace 8 min</span>
-                      </div>
-                      <div class="diarito-feed-item__text landing-demo-post__text">
-                        <p><span data-i18n="feedbackPostBefore">Hoy presenté una idea en una reunión. Estaba nerviosa, pero intenté explicar todo con calma. Al final, mi jefa me dijo que </span><mark class="landing-demo-selection" data-demo-selection><span data-i18n="feedbackPostSelected">mi presentación fue muy comprensible</span><span class="landing-demo-selection__handle landing-demo-selection__handle--start"></span><span class="landing-demo-selection__handle landing-demo-selection__handle--end"></span></mark><span data-i18n="feedbackPostAfter">.</span></p>
-                      </div>
-                      <div class="diarito-feed-actions landing-demo-post__actions">
-                        <button class="diarito-feed-action" type="button" tabindex="-1"><i class="fi fi-rr-heart"></i><span>12</span></button>
-                        <button class="diarito-feed-action" type="button" tabindex="-1"><i class="fi fi-rr-comment-alt"></i><span>3</span></button>
-                        <button class="diarito-feed-action" type="button" tabindex="-1"><i class="fi fi-rr-bookmark"></i><span>4</span></button>
-                      </div>
-
-                      <div class="landing-feedback-published" data-feedback-published>
-                        <span class="diarito-avatar diarito-avatar--xs" aria-hidden="true">Y</span>
-                        <div>
-                          <strong data-i18n="feedbackPublishedTitle">Corrección de Yuna</strong>
-                          <p><span data-i18n="feedbackPublishedPrefix">Sugirió:</span> <q data-i18n="feedbackCorrectionSuggestionValue">mi presentación fue muy clara</q></p>
-                          <small data-i18n="feedbackPublishedStatus">Retroalimentación enviada</small>
+                <div class="landing-feedback-tablet__feed diarito-feed-demo" data-feedback-feed>
+                  <div class="diarito-reading landing-feedback-tablet__reading">
+                    <div class="landing-feedback-tablet__feed-label">
+                      <span data-i18n="feedbackFeedTitle">Comunidad</span><span data-i18n="feedbackFeedHint">Diarios para intercambiar</span>
+                    </div>
+                    <div class="diarito-feed-switch landing-feedback-tablet__tabs" data-feedback-tabs>
+                      <button class="is-active" type="button" tabindex="-1" data-i18n="feedbackTabForYou">Para vos</button>
+                      <button type="button" tabindex="-1" data-i18n="feedbackTabFollowing">Siguiendo</button>
+                      <button type="button" tabindex="-1" data-i18n="feedbackTabPractice">Práctica</button>
+                    </div>
+                    <div class="diarito-feed-composer landing-demo-composer">
+                      <span class="diarito-avatar diarito-avatar--sm" aria-hidden="true">Y</span>
+                      <div class="diarito-feed-composer__body">
+                        <div class="diarito-feed-composer__input landing-demo-composer__prompt" data-i18n="feedbackComposerPrompt">¿Qué estás pensando hoy?</div>
+                        <div class="diarito-feed-composer__toolbar">
+                          <div class="diarito-feed-composer__tools" aria-hidden="true">
+                            <button class="diarito-feed-composer__tool" type="button" tabindex="-1" aria-label="Image"><i class="fi fi-rr-picture"></i></button>
+                            <button class="diarito-feed-composer__tool" type="button" tabindex="-1" aria-label="Tags"><i class="fi fi-rr-tags"></i></button>
+                            <button class="diarito-feed-composer__tool" type="button" tabindex="-1" aria-label="Language"><i class="fi fi-rr-language"></i></button>
+                          </div>
+                          <button class="diarito-button diarito-button--primary diarito-button--sm landing-demo-composer__post" type="button" tabindex="-1" data-i18n="feedbackComposerPost">Publicar</button>
                         </div>
                       </div>
                     </div>
-                  </article>
+                    <article class="diarito-feed-item landing-demo-post">
+                      <span class="diarito-avatar diarito-avatar--sm landing-demo-post__avatar" aria-hidden="true">J</span>
+                      <div class="diarito-feed-item__main">
+                        <div class="diarito-feed-item__header"><strong>@jiho</strong><span data-i18n="feedbackFirstMeta">Español · A2 · hace 3 min</span></div>
+                        <div class="diarito-feed-item__text landing-demo-post__text"><p data-i18n="feedbackFirstPost">Esta mañana pedí un café en español. Me puse nervioso, pero entendí la pregunta y pude responder sin usar el traductor.</p></div>
+                        <div class="diarito-feed-actions landing-demo-post__actions">
+                          <button class="diarito-feed-action" type="button" tabindex="-1"><i class="fi fi-rr-heart"></i><span>18</span></button>
+                          <button class="diarito-feed-action" type="button" tabindex="-1"><i class="fi fi-rr-comment-alt"></i><span>5</span></button>
+                          <button class="diarito-feed-action" type="button" tabindex="-1"><i class="fi fi-rr-bookmark"></i><span>2</span></button>
+                          <button class="landing-feedback-correct diarito-button diarito-button--primary diarito-button--sm" type="button" tabindex="-1"><i class="fi fi-rr-comment-check"></i><span data-i18n="feedbackCorrectAction">Corregir</span></button>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="diarito-feed-item landing-demo-post" data-feedback-target>
+                      <span class="diarito-avatar diarito-avatar--sm landing-demo-post__avatar" aria-hidden="true">M</span>
+                      <div class="diarito-feed-item__main">
+                        <div class="diarito-feed-item__header"><strong>@mari</strong><span data-i18n="feedbackPostMeta">Español · A2 · hace 8 min</span></div>
+                        <div class="diarito-feed-item__text landing-demo-post__text">
+                          <p><span data-i18n="feedbackPostBefore">Hoy presenté una idea en una reunión. Estaba nerviosa, pero intenté explicar todo con calma. Al final, mi jefa me dijo que </span><mark class="landing-demo-selection" data-demo-selection><span data-i18n="feedbackPostSelected">mi presentación fue muy comprensible</span></mark><span data-i18n="feedbackPostAfter">.</span></p>
+                        </div>
+                        <div class="diarito-feed-actions landing-demo-post__actions">
+                          <button class="diarito-feed-action" type="button" tabindex="-1"><i class="fi fi-rr-heart"></i><span>12</span></button>
+                          <button class="diarito-feed-action" type="button" tabindex="-1"><i class="fi fi-rr-comment-alt"></i><span data-feedback-comment-count>3</span></button>
+                          <button class="diarito-feed-action" type="button" tabindex="-1"><i class="fi fi-rr-bookmark"></i><span>4</span></button>
+                          <button class="landing-feedback-correct diarito-button diarito-button--primary diarito-button--sm" type="button" tabindex="-1" data-feedback-correct><i class="fi fi-rr-comment-check"></i><span data-i18n="feedbackCorrectAction">Corregir</span></button>
+                        </div>
+                        <div class="landing-feedback-published" data-feedback-published>
+                          <span class="diarito-avatar diarito-avatar--xs" aria-hidden="true">Y</span>
+                          <div>
+                            <div class="landing-feedback-published__header"><strong>@yuna</strong><small data-i18n="feedbackPublishedTitle">Corrección de Yuna</small></div>
+                            <p><span data-i18n="feedbackPublishedPrefix">Sugirió:</span> <q data-i18n="feedbackCorrectionSuggestionValue">mi presentación fue muy clara</q></p>
+                            <p data-i18n="feedbackCorrectionExplanationValue">Al hablar de una presentación, «clara» suena más natural que «comprensible» porque describe que la información se entendió con facilidad.</p>
+                            <small data-i18n="feedbackPublishedStatus">Retroalimentación enviada</small>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="diarito-feed-item landing-demo-post">
+                      <span class="diarito-avatar diarito-avatar--sm landing-demo-post__avatar" aria-hidden="true">S</span>
+                      <div class="diarito-feed-item__main">
+                        <div class="diarito-feed-item__header"><strong>@sowon</strong><span data-i18n="feedbackThirdMeta">Español · A2 · hace 24 min</span></div>
+                        <div class="diarito-feed-item__text landing-demo-post__text"><p data-i18n="feedbackThirdPost">Hoy anoté tres expresiones que escuché en una conversación. Quiero usarlas mañana cuando hable con mi amiga.</p></div>
+                        <div class="diarito-feed-actions landing-demo-post__actions">
+                          <button class="diarito-feed-action" type="button" tabindex="-1"><i class="fi fi-rr-heart"></i><span>24</span></button>
+                          <button class="diarito-feed-action" type="button" tabindex="-1"><i class="fi fi-rr-comment-alt"></i><span>8</span></button>
+                          <button class="diarito-feed-action" type="button" tabindex="-1"><i class="fi fi-rr-bookmark"></i><span>3</span></button>
+                          <button class="landing-feedback-correct diarito-button diarito-button--primary diarito-button--sm" type="button" tabindex="-1"><i class="fi fi-rr-comment-check"></i><span data-i18n="feedbackCorrectAction">Corregir</span></button>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="diarito-feed-item landing-demo-post">
+                      <span class="diarito-avatar diarito-avatar--sm landing-demo-post__avatar" aria-hidden="true">A</span>
+                      <div class="diarito-feed-item__main">
+                        <div class="diarito-feed-item__header"><strong>@alex</strong><span data-i18n="feedbackFourthMeta">Español · A2 · hace 41 min</span></div>
+                        <div class="diarito-feed-item__text landing-demo-post__text"><p data-i18n="feedbackFourthPost">Esta tarde caminé por el parque. Intenté describir lo que veía en español y aprendí palabras nuevas.</p></div>
+                        <div class="diarito-feed-actions landing-demo-post__actions">
+                          <button class="diarito-feed-action" type="button" tabindex="-1"><i class="fi fi-rr-heart"></i><span>9</span></button>
+                          <button class="diarito-feed-action" type="button" tabindex="-1"><i class="fi fi-rr-comment-alt"></i><span>2</span></button>
+                          <button class="diarito-feed-action" type="button" tabindex="-1"><i class="fi fi-rr-bookmark"></i><span>1</span></button>
+                          <button class="landing-feedback-correct diarito-button diarito-button--primary diarito-button--sm" type="button" tabindex="-1"><i class="fi fi-rr-comment-check"></i><span data-i18n="feedbackCorrectAction">Corregir</span></button>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
                 </div>
+                <div class="landing-demo-selection-overlay" data-feedback-selection-overlay aria-hidden="true"></div>
               </div>
-
-              <button class="landing-feedback-correct diarito-button diarito-button--primary diarito-button--sm" type="button" tabindex="-1" data-feedback-correct>
-                <i class="fi fi-rr-comment-check"></i><span data-i18n="feedbackCorrectAction">Corregir</span>
-              </button>
-
-              <span class="landing-feedback-cursor" aria-hidden="true"><i class="fi fi-rr-cursor"></i></span>
-              <div class="landing-feedback-phone__blur" aria-hidden="true"></div>
-
+              <div class="landing-feedback-tablet__blur" aria-hidden="true"></div>
               <div class="landing-feedback-sheet" data-feedback-sheet aria-hidden="true">
                 <div class="landing-feedback-sheet__header">
-                  <div>
-                    <span class="diarito-kicker" data-i18n="feedbackCorrectionKicker">Retroalimentación</span>
-                    <strong data-i18n="feedbackCorrectionTitle">Corrección humana</strong>
-                  </div>
+                  <div><span class="diarito-kicker" data-i18n="feedbackCorrectionKicker">Retroalimentación</span><strong data-i18n="feedbackCorrectionTitle">Corrección humana</strong></div>
                   <span class="landing-feedback-sheet__from">Yuna → @mari</span>
                 </div>
-
                 <div class="landing-feedback-sheet__selected">
-                  <span data-i18n="feedbackSelectedLabel">Texto seleccionado</span>
-                  <q data-i18n="feedbackPostSelected">mi presentación fue muy comprensible</q>
+                  <span data-i18n="feedbackSelectedLabel">Texto seleccionado</span><q data-i18n="feedbackPostSelected">mi presentación fue muy comprensible</q>
                 </div>
-
                 <div class="diarito-field">
                   <label class="diarito-label" for="demo-suggestion" data-i18n="feedbackSuggestionLabel">Texto sugerido</label>
                   <input id="demo-suggestion" class="diarito-input" type="text" readonly tabindex="-1" data-feedback-suggestion>
                 </div>
-
                 <div class="diarito-field">
                   <label class="diarito-label" for="demo-explanation" data-i18n="feedbackExplanationLabel">Explicación</label>
                   <textarea id="demo-explanation" class="diarito-textarea" readonly tabindex="-1" data-feedback-explanation></textarea>
                 </div>
-
                 <button class="diarito-button diarito-button--primary diarito-button--block landing-feedback-submit" type="button" tabindex="-1" data-feedback-submit>
                   <i class="fi fi-rr-paper-plane"></i><span data-i18n="feedbackSubmit">Enviar retroalimentación</span>
                 </button>
               </div>
-            </div>
-
-            <div class="landing-feedback-phone__caption">
-              <span data-i18n="feedbackDemoCaption">Mirá cómo una corrección nace directamente desde un fragmento del diario.</span>
-              <span class="landing-feedback-phone__steps" aria-hidden="true">
-                <i class="is-active"></i><i></i><i></i><i></i><i></i>
+              <div class="landing-feedback-confetti" data-feedback-confetti aria-hidden="true"></div>
+              <span class="landing-feedback-cursor" data-feedback-cursor aria-hidden="true">
+                <svg viewBox="0 0 24 28" width="24" height="28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 1.5 2.5 22 8.2 16.5 13.6 25.5 17.3 23.2 11.9 14.4 20.5 13.6Z" fill="var(--diarito-color-surface)" stroke="var(--diarito-color-text-strong)" stroke-width="2" stroke-linejoin="round"/></svg>
               </span>
+            </div>
+            <div class="landing-feedback-tablet__caption">
+              <span data-i18n="feedbackDemoCaption">Mirá cómo una corrección nace directamente desde un fragmento del diario.</span>
+              <span class="landing-feedback-tablet__steps" aria-hidden="true"><i class="is-active"></i><i></i><i></i><i></i><i></i></span>
             </div>
           </div>
         </div>
@@ -404,6 +444,6 @@
     </footer>
   </div>
 
-  <script src="assets/js/landing.js?v=2.19.0"></script>
+  <script src="assets/js/landing.js?v=2.19.0-tablet"></script>
 </body>
 </html>
