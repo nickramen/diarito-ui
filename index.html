@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,87 +9,104 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Englebert&family=Noto+Sans+KR:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
-  <link rel="stylesheet" href="assets/css/landing.css?v=2.13.1">
+  <link rel="stylesheet" href="assets/css/landing.css?v=2.14.0">
 </head>
 <body class="landing-page">
   <div class="landing-shell">
+
+    <aside class="landing-announcement" data-landing-announcement>
+      <div class="landing-container landing-announcement__inner">
+        <span class="landing-announcement__eyebrow">Diarito beta</span>
+        <p data-i18n="announcement">Empezamos con Coreano ↔ Español y nivel A2 para validar una experiencia de aprendizaje basada en la vida real.</p>
+        <a href="#trust" data-i18n="announcementLink">Conocé el enfoque</a>
+        <button type="button" data-landing-announcement-close aria-label="Cerrar anuncio"><i class="fi fi-rr-cross-small"></i></button>
+      </div>
+    </aside>
+
     <header class="landing-header">
-      <div class="landing-header__inner landing-container">
+      <div class="landing-container landing-header__inner">
         <a class="landing-brand" href="#top" aria-label="Inicio de Diarito">
           <span class="landing-brand__mark">D</span>
           <span>Diarito</span>
         </a>
 
         <nav class="landing-nav" aria-label="Navegación principal">
-          <a href="#why">Por qué Diarito</a>
-          <a href="#how-it-works">Cómo funciona</a>
-          <a href="#feedback">Retroalimentación humana</a>
-          <a href="#trust">Confianza</a>
+          <a href="#why" data-i18n="navWhy">Por qué Diarito</a>
+          <a href="#how-it-works" data-i18n="navHow">Cómo funciona</a>
+          <a href="#feedback" data-i18n="navFeedback">Retroalimentación humana</a>
+          <a href="#trust" data-i18n="navTrust">Confianza</a>
         </nav>
 
         <div class="landing-header__actions">
-          <a class="landing-button landing-button--ghost" href="#how-it-works">Ver cómo funciona</a>
-          <a class="landing-button" href="#start">Empezar desde tu vida</a>
+          <button class="landing-control" type="button" data-language-toggle aria-label="Cambiar idioma">
+            <i class="fi fi-rr-language"></i>
+            <span data-language-label>ESP</span>
+            <i class="fi fi-rr-angle-small-down"></i>
+          </button>
+          <button class="landing-control" type="button" data-theme-toggle aria-pressed="false" aria-label="Cambiar tema">
+            <i class="fi fi-rr-moon" data-theme-icon></i>
+            <span data-theme-label>Oscuro</span>
+          </button>
+          <a class="landing-button landing-button--secondary" href="#" data-i18n="login"><i class="fi fi-rr-sign-in-alt"></i> Iniciar sesión</a>
         </div>
 
         <details class="landing-mobile-nav">
           <summary aria-label="Abrir navegación"><i class="fi fi-rr-menu-burger"></i></summary>
-          <nav class="landing-mobile-nav__panel" aria-label="Navegación móvil">
-            <a href="#why">Por qué Diarito</a>
-            <a href="#how-it-works">Cómo funciona</a>
-            <a href="#feedback">Retroalimentación humana</a>
-            <a href="#trust">Confianza</a>
-            <a href="#start">Empezar desde tu vida</a>
-          </nav>
+          <div class="landing-mobile-nav__panel">
+            <nav aria-label="Navegación móvil">
+              <a href="#why" data-i18n="navWhy">Por qué Diarito</a>
+              <a href="#how-it-works" data-i18n="navHow">Cómo funciona</a>
+              <a href="#feedback" data-i18n="navFeedback">Retroalimentación humana</a>
+              <a href="#trust" data-i18n="navTrust">Confianza</a>
+            </nav>
+            <div class="landing-mobile-nav__actions">
+              <button class="landing-control" type="button" data-language-toggle><i class="fi fi-rr-language"></i><span data-language-label>ESP</span></button>
+              <button class="landing-control" type="button" data-theme-toggle><i class="fi fi-rr-moon" data-theme-icon></i><span data-theme-label>Oscuro</span></button>
+              <a class="landing-button landing-button--secondary" href="#" data-i18n="login">Iniciar sesión</a>
+            </div>
+          </div>
         </details>
       </div>
     </header>
 
     <main id="top">
-      <section class="landing-hero">
-        <div class="landing-container landing-hero__grid">
-          <div class="landing-hero__copy">
-            <span class="landing-kicker">Aprendizaje de idiomas que empieza en tu vida</span>
-            <h1>Aprende el idioma de tu vida.</h1>
-            <p class="landing-hero__lead">Escribí sobre lo que te pasó hoy, lo que sentiste y lo que realmente querés decir. Recibí retroalimentación de otras personas, entendé el contexto detrás de cada expresión y volvé a usarla hasta hacerla tuya.</p>
-            <p class="landing-hero__tagline">Tu mundo, expresado. Nuestros mundos, conectados.</p>
-            <div class="landing-hero__actions">
-              <a class="landing-button" href="#how-it-works">Ver cómo funciona Diarito</a>
-              <a class="landing-button landing-button--secondary" href="#why">Por qué empezar desde tu vida</a>
+      <section class="landing-section landing-hero">
+        <div class="landing-container landing-hero__container">
+          <div class="landing-hero__copy" data-reveal>
+            <div class="landing-hero__badge">
+              <span data-i18n="heroBadge">Tu vida primero</span>
+              <i class="fi fi-rr-arrow-right"></i>
             </div>
-            <p class="landing-hero__note">No es otra secuencia de lecciones. Es un espacio para aprender el idioma que necesitás para expresar tu propio mundo.</p>
+            <h1 data-i18n="heroTitle">Aprende el idioma de tu vida.</h1>
+            <p class="landing-hero__lead" data-i18n="heroLead">El estudio de un idioma empieza por hablar, en el idioma que estás aprendiendo, de lo que tenés enfrente, de lo que pasó hoy y de lo que querés hacer mañana. El material de estudio no está solo en libros o listas de palabras: está a tu alrededor.</p>
+            <p class="landing-hero__tagline" data-i18n="heroTagline">Tu mundo, expresado. Nuestros mundos, conectados.</p>
+            <div class="landing-hero__actions">
+              <a class="landing-button" href="#how-it-works" data-i18n="heroPrimary">Ver cómo funciona Diarito <i class="fi fi-rr-arrow-right"></i></a>
+              <a class="landing-button landing-button--secondary" href="#why" data-i18n="heroSecondary">Por qué empezar desde tu vida</a>
+            </div>
           </div>
 
-          <div class="landing-demo" aria-label="Ejemplo de diario y retroalimentación en Diarito">
-            <div class="landing-demo__bar">
-              <span class="landing-demo__dot"></span>
-              <span class="landing-demo__dot"></span>
-              <span class="landing-demo__dot"></span>
-              <span class="landing-demo__label">diario → retroalimentación → apropiación</span>
+          <div class="landing-hero-visual" data-reveal data-reveal-delay="120">
+            <div class="landing-hero-media" data-hero-media>
+              <span class="landing-hero-media__label" data-i18n="replaceImage">Reemplazar imagen</span>
             </div>
-            <div class="landing-demo__body">
-              <article class="landing-entry">
-                <header class="landing-entry__header">
-                  <span class="landing-entry__avatar">Y</span>
-                  <div class="landing-entry__identity">
-                    <strong>yuna</strong>
-                    <span>Coreano → Español · hoy</span>
-                  </div>
-                </header>
-                <div class="landing-entry__content">
-                  <h3>오늘은 괜히 긴장했다.</h3>
-                  <p>Estaba nerviosa, pero <span class="landing-highlight">al final sí hablé</span>. No fue perfecto, pero pude explicar lo que quería decir.</p>
-                  <div class="landing-feedback">
-                    <div class="landing-feedback__top">
-                      <strong>Retroalimentación humana</strong>
-                      <span>el contexto importa</span>
-                    </div>
-                    <p><strong>“Al final sí hablé”</strong> suena natural aquí porque estás contando lo que ocurrió después de sentirte nerviosa. Expresa mejor la idea que una traducción palabra por palabra.</p>
-                    <div class="landing-feedback__save"><i class="fi fi-rr-bookmark"></i> Guardar expresión · volver a usarla después</div>
-                  </div>
-                </div>
-              </article>
-            </div>
+
+            <article class="landing-floating-card landing-floating-card--feedback" data-float="slow">
+              <span class="landing-floating-card__kicker" data-i18n="miniFeedbackKicker">Retroalimentación humana</span>
+              <strong data-i18n="miniFeedbackTitle">Más natural en contexto</strong>
+              <p data-i18n="miniFeedbackBody">“Al final sí fui” expresa mejor la idea sin traducir palabra por palabra.</p>
+            </article>
+
+            <article class="landing-floating-card landing-floating-card--saved" data-float="fast">
+              <div class="landing-floating-card__row"><span data-i18n="miniSaved">Expresiones guardadas</span><strong>12</strong></div>
+              <div class="landing-mini-progress"><span style="width:68%"></span></div>
+            </article>
+
+            <article class="landing-floating-card landing-floating-card--exchange" data-float="medium">
+              <span class="landing-floating-card__kicker" data-i18n="miniExchange">Intercambio</span>
+              <div class="landing-avatar-pair"><span>Y</span><span>M</span></div>
+              <strong data-i18n="miniExchangeBody">Coreano ↔ Español</strong>
+            </article>
           </div>
         </div>
       </section>
@@ -97,30 +114,30 @@
       <section class="landing-section" id="why">
         <div class="landing-container">
           <div class="landing-statement">
-            <div>
-              <span class="landing-kicker">Por qué existe Diarito</span>
-              <h2>Aprender un idioma no es saber más palabras.</h2>
+            <div data-reveal>
+              <span class="landing-kicker" data-i18n="whyKicker">Por qué existe Diarito</span>
+              <h2 data-i18n="whyTitle">Aprender un idioma no es saber más palabras.</h2>
             </div>
-            <div class="landing-statement__copy">
-              <p>Es poder expresar lo que es importante para vos. Tu día, tus emociones, lo que te rodea y lo que querés decir después son el punto de partida del aprendizaje.</p>
+            <div class="landing-statement__copy" data-reveal data-reveal-delay="80">
+              <p data-i18n="whyBody">Es poder expresar lo que es importante para vos. El aprendizaje empieza en tu propia vida: lo que te pasó hoy, lo que sentís ahora y aquello que realmente querés decir.</p>
             </div>
           </div>
 
-          <div class="landing-principles" aria-label="Principios de aprendizaje de Diarito">
-            <article class="landing-principle">
-              <span class="landing-principle__number">01 · Relevancia</span>
-              <h3>Empezá desde tu vida.</h3>
-              <p>Aprendé a partir de lo que viviste hoy, lo que sentís ahora y lo que realmente querés expresar.</p>
+          <div class="landing-principles">
+            <article class="landing-principle" data-reveal>
+              <span class="landing-principle__number" data-i18n="principle1Label">01 · Relevancia</span>
+              <h3 data-i18n="principle1Title">Empezá desde tu vida.</h3>
+              <p data-i18n="principle1Body">Aprendé a partir de lo que viviste hoy, lo que querés decir mañana y lo que sentís en este momento.</p>
             </article>
-            <article class="landing-principle">
-              <span class="landing-principle__number">02 · Conexión humana</span>
-              <h3>El lenguaje es humano.</h3>
-              <p>Aprendé qué suena natural según la situación, la relación, la emoción y la cultura, no solamente qué es gramaticalmente correcto.</p>
+            <article class="landing-principle" data-reveal data-reveal-delay="70">
+              <span class="landing-principle__number" data-i18n="principle2Label">02 · Conexión humana</span>
+              <h3 data-i18n="principle2Title">El lenguaje es humano.</h3>
+              <p data-i18n="principle2Body">No se trata solo de una oración gramaticalmente correcta, sino de una expresión natural para la situación, la relación, la emoción y la cultura.</p>
             </article>
-            <article class="landing-principle">
-              <span class="landing-principle__number">03 · Apropiación activa</span>
-              <h3>Hacé tuya la retroalimentación.</h3>
-              <p>Entendé una corrección, guardá la expresión útil, volvé a usarla y convertí ese aprendizaje en lenguaje que podás producir por tu cuenta.</p>
+            <article class="landing-principle" data-reveal data-reveal-delay="140">
+              <span class="landing-principle__number" data-i18n="principle3Label">03 · Apropiación activa</span>
+              <h3 data-i18n="principle3Title">Hacé tuya la retroalimentación.</h3>
+              <p data-i18n="principle3Body">No alcanza con recibir una corrección. Entendela, repetí la expresión y volvé a usarla hasta que forme parte de tu propio lenguaje.</p>
             </article>
           </div>
         </div>
@@ -128,35 +145,35 @@
 
       <section class="landing-section landing-section--soft" id="how-it-works">
         <div class="landing-container">
-          <div class="landing-section-head">
-            <span class="landing-kicker">El ciclo de aprendizaje</span>
-            <h2>Escribí. Intercambiá. Entendé. Hacelo tuyo.</h2>
-            <p>Diarito está pensado para que la retroalimentación no termine en una sola oración corregida. Lo que aprendés debe volver a aparecer en tu propia forma de usar el idioma.</p>
+          <div class="landing-section-head" data-reveal>
+            <span class="landing-kicker" data-i18n="loopKicker">El ciclo de aprendizaje</span>
+            <h2 data-i18n="loopTitle">Escribí. Intercambiá. Entendé. Hacelo tuyo.</h2>
+            <p data-i18n="loopIntro">Diarito no termina cuando alguien corrige una oración. Lo aprendido debe volver al uso real para convertirse en algo propio.</p>
           </div>
 
           <div class="landing-loop">
-            <article class="landing-loop__step">
+            <article class="landing-loop__step" data-reveal>
               <span class="landing-loop__index">01</span>
               <span class="landing-loop__arrow">→</span>
-              <h3>Escribí</h3>
-              <p>Registrá tu día, tus pensamientos y aquello que querés expresar en el idioma que estás aprendiendo.</p>
+              <h3 data-i18n="loop1Title">Escribí</h3>
+              <p data-i18n="loop1Body">Registrá tu día y tus emociones en el idioma que estás aprendiendo.</p>
             </article>
-            <article class="landing-loop__step">
+            <article class="landing-loop__step" data-reveal data-reveal-delay="60">
               <span class="landing-loop__index">02</span>
               <span class="landing-loop__arrow">→</span>
-              <h3>Intercambiá</h3>
-              <p>Compartí diarios con otras personas y aprendé a través de sus vidas reales, no solamente con ejercicios aislados.</p>
+              <h3 data-i18n="loop2Title">Intercambiá</h3>
+              <p data-i18n="loop2Body">Intercambiá diarios con otras personas y conocé sus mundos mientras compartís el tuyo.</p>
             </article>
-            <article class="landing-loop__step">
+            <article class="landing-loop__step" data-reveal data-reveal-delay="120">
               <span class="landing-loop__index">03</span>
               <span class="landing-loop__arrow">→</span>
-              <h3>Entendé</h3>
-              <p>Recibí retroalimentación que explique gramática, naturalidad, matices y por qué una expresión encaja mejor en ese contexto.</p>
+              <h3 data-i18n="loop3Title">Entendé</h3>
+              <p data-i18n="loop3Body">Recibí retroalimentación que explique contexto, naturalidad y matices, no solo gramática.</p>
             </article>
-            <article class="landing-loop__step">
+            <article class="landing-loop__step" data-reveal data-reveal-delay="180">
               <span class="landing-loop__index">04</span>
-              <h3>Hacelo tuyo</h3>
-              <p>Guardá expresiones útiles, repasálas, reescribí lo aprendido y volvé a usarlas en tus propias oraciones.</p>
+              <h3 data-i18n="loop4Title">Hacelo tuyo</h3>
+              <p data-i18n="loop4Body">Guardá expresiones y volvé a usarlas en tus propias oraciones hasta poder producirlas por tu cuenta.</p>
             </article>
           </div>
         </div>
@@ -164,28 +181,28 @@
 
       <section class="landing-section" id="feedback">
         <div class="landing-container landing-human">
-          <div class="landing-human__copy">
-            <span class="landing-kicker">Retroalimentación humana en el centro</span>
-            <h2>No solo correcto. Natural para la situación.</h2>
-            <p>El lenguaje cambia con las emociones, las relaciones, el contexto y la cultura. Diarito hace de la retroalimentación humana una parte central de la experiencia para que puedas entender por qué una expresión funciona mejor que otra.</p>
-            <div class="landing-human__note">Las personas no son herramientas de corrección. El intercambio debe ser significativo para ambos lados: entender el mundo de otra persona mientras compartís tu propio idioma y cultura.</div>
+          <div class="landing-human__copy" data-reveal>
+            <span class="landing-kicker" data-i18n="feedbackKicker">Retroalimentación humana en el centro</span>
+            <h2 data-i18n="feedbackTitle">No solo correcto. Natural para la situación.</h2>
+            <p data-i18n="feedbackBody">El significado y la naturalidad cambian según la emoción, la relación, la situación y la cultura. Por eso Diarito considera el intercambio entre personas una parte central del aprendizaje.</p>
+            <div class="landing-human__note" data-i18n="feedbackNote">Las personas no son simples herramientas de corrección. La experiencia debe tener valor tanto para quien recibe como para quien ofrece retroalimentación.</div>
           </div>
 
-          <div class="landing-correction">
+          <div class="landing-correction" data-reveal data-reveal-delay="100">
             <div class="landing-correction__header">
-              <strong>Corrección sobre un fragmento seleccionado</strong>
+              <strong data-i18n="correctionHeader">Corrección sobre un fragmento seleccionado</strong>
               <span>@mari · Español</span>
             </div>
             <div class="landing-correction__body">
               <div class="landing-correction__row">
-                <span>Original</span>
+                <span data-i18n="correctionOriginal">Original</span>
                 <p>Al final yo fui de todos modos.</p>
               </div>
               <div class="landing-correction__row">
-                <span>Sugerencia</span>
+                <span data-i18n="correctionSuggestion">Sugerencia</span>
                 <p>Al final sí fui.</p>
               </div>
-              <div class="landing-correction__explain">Ambas expresiones se entienden, pero <strong>“al final sí fui”</strong> es una forma más natural de expresar que fuiste a pesar de la duda o la indecisión anterior.</div>
+              <div class="landing-correction__explain" data-i18n="correctionExplain">Ambas expresiones se entienden, pero “al final sí fui” es una forma más natural de expresar que fuiste a pesar de la duda o la indecisión anterior.</div>
             </div>
           </div>
         </div>
@@ -193,34 +210,36 @@
 
       <section class="landing-section landing-section--soft" id="trust">
         <div class="landing-container landing-trust">
-          <div>
-            <span class="landing-kicker">La conexión funciona en ambos sentidos</span>
-            <h2>Construir confianza antes de escalar.</h2>
+          <div data-reveal>
+            <span class="landing-kicker" data-i18n="trustKicker">La conexión funciona en ambos sentidos</span>
+            <h2 data-i18n="trustTitle">Construir confianza antes de escalar.</h2>
           </div>
           <div class="landing-trust__list">
-            <article class="landing-trust__item">
+            <article class="landing-trust__item" data-reveal>
               <span>01</span>
-              <div><strong>Intercambio mutuo</strong><p>Dar y recibir retroalimentación debe sentirse útil, respetuoso y humano para ambos lados.</p></div>
+              <div><strong data-i18n="trust1Title">Intercambio mutuo</strong><p data-i18n="trust1Body">Entender la vida de otra persona y compartir tu propio idioma y cultura debe generar aprendizaje en ambos sentidos.</p></div>
             </article>
-            <article class="landing-trust__item">
+            <article class="landing-trust__item" data-reveal data-reveal-delay="70">
               <span>02</span>
-              <div><strong>Reconocimiento por contribuir</strong><p>Las personas que ayudan deben ser reconocidas por la calidad de lo que aportan, no solamente por cuánto publican.</p></div>
+              <div><strong data-i18n="trust2Title">Reconocimiento por contribuir</strong><p data-i18n="trust2Body">La contribución útil debe ser reconocida, especialmente cuando mejora la experiencia de aprendizaje de otra persona.</p></div>
             </article>
-            <article class="landing-trust__item">
+            <article class="landing-trust__item" data-reveal data-reveal-delay="140">
               <span>03</span>
-              <div><strong>Privacidad y control</strong><p>Tu escritura puede ser personal. La visibilidad, los reportes y los bloqueos deben dejar claro quién puede ver e interactuar con tu mundo.</p></div>
+              <div><strong data-i18n="trust3Title">Privacidad y control</strong><p data-i18n="trust3Body">La confianza requiere reportes, bloqueos y controles claros sobre quién puede ver e interactuar con lo que escribís.</p></div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="landing-cta" id="start">
-        <div class="landing-container landing-cta__inner">
-          <h2>Tu mundo, expresado. Nuestros mundos, conectados.</h2>
-          <p>Empezá con un día, una emoción o una oración que realmente querás decir. Aprendé desde ahí.</p>
-          <div class="landing-cta__actions">
-            <a class="landing-button" href="#top">Empezar desde tu vida</a>
-            <a class="landing-button landing-button--secondary" href="#how-it-works">Ver el ciclo de aprendizaje</a>
+      <section class="landing-section landing-cta" id="start">
+        <div class="landing-container">
+          <div class="landing-cta__inner" data-reveal>
+            <h2 data-i18n="ctaTitle">Tu mundo, expresado. Nuestros mundos, conectados.</h2>
+            <p data-i18n="ctaBody">Empezá con algo que realmente quieras decir. Aprendé desde ahí.</p>
+            <div class="landing-cta__actions">
+              <a class="landing-button" href="#top" data-i18n="ctaPrimary">Empezar desde tu vida</a>
+              <a class="landing-button landing-button--secondary" href="#how-it-works" data-i18n="ctaSecondary">Ver el ciclo de aprendizaje</a>
+            </div>
           </div>
         </div>
       </section>
@@ -228,14 +247,16 @@
 
     <footer class="landing-footer">
       <div class="landing-container landing-footer__inner">
-        <div class="landing-footer__copy">Diarito · Aprende el idioma de tu vida.</div>
+        <div class="landing-footer__copy" data-i18n="footerCopy">Diarito · Aprende el idioma de tu vida.</div>
         <div class="landing-footer__links">
-          <a href="#why">Por qué Diarito</a>
-          <a href="#feedback">Retroalimentación humana</a>
-          <a href="ui-components.html">Componentes UI</a>
+          <a href="#why" data-i18n="navWhy">Por qué Diarito</a>
+          <a href="#feedback" data-i18n="navFeedback">Retroalimentación humana</a>
+          <a href="ui-components.html" data-i18n="uiComponents">Componentes UI</a>
         </div>
       </div>
     </footer>
   </div>
+
+  <script src="assets/js/landing.js?v=2.14.0"></script>
 </body>
 </html>
