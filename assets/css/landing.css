@@ -1041,13 +1041,13 @@ html.is-language-switching [data-i18n] { animation: landing-language-fade 220ms 
   .landing-container { padding-inline: 2rem; }
   .landing-section { padding-block: 4.5rem; }
   .landing-announcement__inner {
-    min-height: 4.5rem;
+    min-height: 3.1rem;
     justify-content: flex-start;
     padding-right: 3.3rem;
   }
   .landing-announcement__eyebrow,
   .landing-announcement a { display: none; }
-  .landing-announcement p { max-width: 33rem; text-align: left; font-size: .75rem; line-height: 1.45; }
+  .landing-announcement p { max-width: 33rem; text-align: left; font-size: .7rem; line-height: 1.35; }
   .landing-announcement button { right: 2rem; }
   .landing-header__inner { min-height: 4.1rem; }
   .landing-mobile-nav__panel { right: 2rem; left: 2rem; }
