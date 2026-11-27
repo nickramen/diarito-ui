@@ -1,5 +1,6 @@
 (() => {
   const root = document.documentElement;
+  root.classList.add("has-js");
 
   const translations = {
     es: {
