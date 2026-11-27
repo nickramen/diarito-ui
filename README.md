@@ -1,8 +1,8 @@
-# Diarito UI Library 2.13.1
+# Diarito UI Library 2.14.0
 
 Diarito's reusable HTML, CSS and native JavaScript design system.
 
-Version 2.13.1 translates the public Diarito landing page to Spanish while keeping the UI component library unchanged.
+Version 2.14.0 rebuilds the public landing hero, adds ES/KR language switching, light/dark themes and subtle microinteractions.
 
 
 
@@ -13,6 +13,21 @@ Version 2.13.1 translates the public Diarito landing page to Spanish while keepi
 
 
 
+
+## 2.14.0 landing hero + bilingual/theme interactions
+
+- Rebuilt the public hero using a two-column product-marketing layout inspired by the supplied Preply reference.
+- Added a black informational banner above navigation.
+- Added header controls for Español / 한국어, Light / Dark theme and Login.
+- Added a large hero media placeholder labeled “Reemplazar imagen” plus floating mini feedback/progress/exchange cards.
+- Restored the component-library grid matrix treatment behind the public hero.
+- Added full Spanish/Korean landing translations. Korean copy stays grounded in the supplied Sowon vision text; Spanish is its faithful translation.
+- Standardized public layout around section vertical padding and container horizontal padding.
+- Mobile containers now keep at least 2rem padding on each side.
+- Added scroll reveals, floating hero cards, hover movement, language-change fades and subtle pointer parallax.
+- Added reduced-motion support.
+- Added `assets/js/landing.js` for language, theme, announcement and microinteraction behavior.
+- Updated public asset/cache versions to 2.14.0.
 
 ## 2.13.1 Spanish public landing page
 

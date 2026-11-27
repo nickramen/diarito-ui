@@ -1,5 +1,20 @@
 # Changelog
 
+## 2.14.0 - Landing hero + bilingual/theme interactions
+
+- Rebuilt the public hero with a two-column marketing layout.
+- Added an informational black announcement banner.
+- Added Login, ES/KR language switch and Light/Dark theme controls.
+- Added hero image placeholder and floating micro-metric cards.
+- Restored the Diarito grid matrix background treatment in the hero.
+- Added full Spanish/Korean public landing translations.
+- Added section/container spacing conventions with minimum 2rem mobile side padding.
+- Added subtle reveal, hover, float, language-fade and hero parallax microinteractions.
+- Added reduced-motion support.
+- Added `assets/js/landing.js`.
+- Bumped public cache/version references to 2.14.0.
+
+
 ## 2.13.1 - Spanish public landing page
 
 - Translated all visible public landing-page copy to Spanish.
