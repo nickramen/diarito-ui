@@ -1,8 +1,8 @@
-# Diarito UI Library 2.18.2
+# Diarito UI Library 2.18.3
 
 Diarito's reusable HTML, CSS and native JavaScript design system.
 
-Version 2.18.2 adds a distinct illustration to each sticky learning step and removes the remaining English-facing copy from the Spanish/Korean landing.
+Version 2.18.3 reduces the announcement height and compacts the sticky learning steps so the full step, image and description fit comfortably within the viewport.
 
 
 
@@ -13,6 +13,18 @@ Version 2.18.2 adds a distinct illustration to each sticky learning step and rem
 
 
 
+
+## 2.18.3 compact banner + learning step
+
+- Reduced the black announcement banner height and its internal typography/controls.
+- Reduced sticky learning stage height from the oversized previous composition.
+- Reduced step number, title and illustration scale.
+- Reduced vertical gaps around the number, title, media and description.
+- Reduced the learning illustration width and height while keeping the same visual concept.
+- Reduced body copy size slightly so the complete description remains visible in the same viewport.
+- Added matching compact sizing for tablet and mobile breakpoints.
+- Kept the centered sticky scroll behavior unchanged.
+- Updated cache/version references to 2.18.3.
 
 ## 2.18.2 step visuals + language cleanup
 
