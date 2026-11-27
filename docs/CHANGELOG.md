@@ -1,5 +1,17 @@
 # Changelog
 
+## 2.19.0 - Phone correction walkthrough + cycle background
+
+- Replaced all four learning-step illustrations with image placeholders.
+- Moved the faded grid to the full sticky learning-section background.
+- Rebuilt human feedback as a vertical Diarito feed demo inside a phone.
+- Added animated text selection, Flaticon cursor movement, Corregir action, button bounce, screen blur, human-correction sheet, typed suggestion/explanation, submit interaction and published correction state.
+- Added equivalent Spanish and Korean correction examples.
+- Reused canonical Diarito form/feed/button patterns.
+- Added visibility-aware looping, language-change restart and reduced-motion final state.
+- Bumped cache/version references to 2.19.0.
+
+
 ## 2.18.4 - Photo placeholder + interactive feedback demo
 
 - Replaced the Write illustration with a simple localized photo placeholder.

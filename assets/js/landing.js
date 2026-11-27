@@ -22,7 +22,7 @@
       replaceThisImage: "Reemplazar esta imagen",
       miniFeedbackKicker: "Retroalimentación humana",
       miniFeedbackTitle: "Más natural en contexto",
-      miniFeedbackBody: "“Al final sí fui” expresa mejor la idea sin traducir palabra por palabra.",
+      miniFeedbackBody: "“Mi presentación fue muy clara” suena más natural al hablar de una presentación.",
       miniSaved: "Expresiones guardadas",
       miniExchange: "Intercambio",
       miniExchangeBody: "Coreano ↔ Español",
@@ -62,6 +62,25 @@
       feedbackDemoLanguage: "Español",
       feedbackDemoSentence: "Hoy pensé que no iba a salir, pero al final yo fui de todos modos.",
       feedbackDemoWhy: "Por qué suena más natural",
+      feedbackFeedTitle: "Comunidad",
+      feedbackFeedHint: "Diarios para intercambiar",
+      feedbackPostMeta: "Español · A2 · hace 8 min",
+      feedbackPostBefore: "Hoy presenté una idea en una reunión. Estaba nerviosa, pero intenté explicar todo con calma. Al final, mi jefa me dijo que ",
+      feedbackPostSelected: "mi presentación fue muy comprensible",
+      feedbackPostAfter: ".",
+      feedbackCorrectAction: "Corregir",
+      feedbackCorrectionKicker: "Retroalimentación",
+      feedbackCorrectionTitle: "Corrección humana",
+      feedbackSelectedLabel: "Texto seleccionado",
+      feedbackSuggestionLabel: "Texto sugerido",
+      feedbackExplanationLabel: "Explicación",
+      feedbackCorrectionSuggestionValue: "mi presentación fue muy clara",
+      feedbackCorrectionExplanationValue: "Al hablar de una presentación, «clara» suena más natural que «comprensible» porque describe que la información se entendió con facilidad.",
+      feedbackSubmit: "Enviar retroalimentación",
+      feedbackPublishedTitle: "Corrección de Yuna",
+      feedbackPublishedPrefix: "Sugirió:",
+      feedbackPublishedStatus: "Retroalimentación enviada",
+      feedbackDemoCaption: "Mirá cómo una corrección nace directamente desde un fragmento del diario.",
       trustKicker: "La conexión funciona en ambos sentidos",
       trustTitle: "Construir confianza antes de escalar.",
       trust1Title: "Intercambio mutuo",
@@ -108,7 +127,7 @@
       replaceThisImage: "이미지 교체하기",
       miniFeedbackKicker: "사람을 통한 피드백",
       miniFeedbackTitle: "문맥에 더 자연스럽게",
-      miniFeedbackBody: "단어를 그대로 번역하기보다 상황과 감정에 어울리는 표현을 이해합니다.",
+      miniFeedbackBody: "발표를 설명할 때는 “이해하기 쉬웠다”가 더 자연스러운 표현입니다.",
       miniSaved: "저장한 표현",
       miniExchange: "교환",
       miniExchangeBody: "한국어 ↔ 스페인어",
@@ -148,6 +167,25 @@
       feedbackDemoLanguage: "스페인어",
       feedbackDemoSentence: "Hoy pensé que no iba a salir, pero al final yo fui de todos modos.",
       feedbackDemoWhy: "왜 더 자연스러운가",
+      feedbackFeedTitle: "커뮤니티",
+      feedbackFeedHint: "교환할 수 있는 일기",
+      feedbackPostMeta: "한국어 · A2 · 8분 전",
+      feedbackPostBefore: "오늘 회의에서 아이디어를 발표했어요. 많이 긴장했지만 차분하게 설명하려고 했어요. 마지막에 팀장님이 ",
+      feedbackPostSelected: "제 발표가 아주 이해 가능했다고",
+      feedbackPostAfter: " 말했어요.",
+      feedbackCorrectAction: "교정하기",
+      feedbackCorrectionKicker: "사람을 통한 피드백",
+      feedbackCorrectionTitle: "사람의 교정",
+      feedbackSelectedLabel: "선택한 문장",
+      feedbackSuggestionLabel: "수정 문장",
+      feedbackExplanationLabel: "설명",
+      feedbackCorrectionSuggestionValue: "제 발표가 아주 이해하기 쉬웠어요",
+      feedbackCorrectionExplanationValue: "발표가 쉽게 이해됐다는 뜻을 말할 때는 «이해 가능하다»보다 «이해하기 쉽다»가 더 자연스러워요.",
+      feedbackSubmit: "피드백 보내기",
+      feedbackPublishedTitle: "Yuna의 교정",
+      feedbackPublishedPrefix: "수정 제안:",
+      feedbackPublishedStatus: "피드백을 보냈어요",
+      feedbackDemoCaption: "일기에서 문장을 선택해 사람의 교정이 완성되는 과정을 확인해 보세요.",
       trustKicker: "연결은 양방향이어야 한다",
       trustTitle: "확장보다 먼저 신뢰를 만든다.",
       trust1Title: "상호 교환",
@@ -217,6 +255,7 @@
     document.title = meta[next].title;
     document.querySelector('meta[name="description"]')?.setAttribute("content", meta[next].description);
     if (persist) localStorage.setItem("diarito-language", next);
+    document.dispatchEvent(new CustomEvent("diarito:languagechange", { detail: { language: next } }));
     window.setTimeout(() => root.classList.remove("is-language-switching"), 240);
   };
 
@@ -346,67 +385,119 @@
   });
 
 
-  // Human-feedback product demo
+  // Human-feedback phone demo: select → correct → explain → publish.
   document.querySelectorAll("[data-feedback-demo]").forEach((demo) => {
-    const states = [...demo.querySelectorAll("[data-feedback-state]")];
-    const dots = [...demo.querySelectorAll("[data-feedback-dot]")];
+    const sheet = demo.querySelector("[data-feedback-sheet]");
+    const suggestion = demo.querySelector("[data-feedback-suggestion]");
+    const explanation = demo.querySelector("[data-feedback-explanation]");
+    const dots = [...demo.querySelectorAll(".landing-feedback-phone__steps i")];
     const reducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
-    let active = 0;
-    let timer = 0;
-    let paused = false;
+    const phases = ["idle","selecting","selected","action","click","modal","typing","submit","published"];
+    let runId = 0;
+    let visible = false;
 
-    const render = (index) => {
-      active = ((index % states.length) + states.length) % states.length;
-      states.forEach((state, stateIndex) => {
-        const isActive = stateIndex === active;
-        state.classList.toggle("is-active", isActive);
-        if (isActive) state.setAttribute("aria-current", "step");
-        else state.removeAttribute("aria-current");
-      });
-      dots.forEach((dot, dotIndex) => dot.classList.toggle("is-active", dotIndex === active));
-      demo.classList.remove("is-stage-0", "is-stage-1", "is-stage-2");
-      demo.classList.add(`is-stage-${active}`);
-    };
+    const languageDict = () => translations[root.lang === "ko" ? "ko" : "es"];
 
-    const stop = () => {
-      if (!timer) return;
-      window.clearInterval(timer);
-      timer = 0;
-    };
-
-    const start = () => {
-      if (reducedMotion || paused || timer || states.length < 2) return;
-      timer = window.setInterval(() => render(active + 1), 2200);
-    };
-
-    states.forEach((state, index) => {
-      state.addEventListener("click", () => {
-        render(index);
-        stop();
-        start();
-      });
-      state.addEventListener("focus", () => {
-        paused = true;
-        stop();
-        render(index);
-      });
-      state.addEventListener("blur", () => {
-        paused = false;
-        start();
-      });
+    const wait = (ms, id) => new Promise((resolve) => {
+      window.setTimeout(() => resolve(id === runId), ms);
     });
 
-    demo.addEventListener("pointerenter", () => {
-      paused = true;
+    const setDot = (index) => {
+      dots.forEach((dot, dotIndex) => dot.classList.toggle("is-active", dotIndex === index));
+    };
+
+    const setPhase = (phase, dotIndex = 0) => {
+      phases.forEach((name) => demo.classList.remove(`is-phase-${name}`));
+      demo.classList.add(`is-phase-${phase}`);
+      setDot(dotIndex);
+      if (sheet) sheet.setAttribute("aria-hidden", String(!["modal","typing","submit"].includes(phase)));
+    };
+
+    const typeInto = async (field, value, id, speed = 24) => {
+      if (!field) return true;
+      field.value = "";
+      const chunk = Math.max(1, Math.ceil(value.length / 42));
+      for (let index = chunk; index <= value.length + chunk; index += chunk) {
+        if (id !== runId) return false;
+        field.value = value.slice(0, Math.min(index, value.length));
+        if (!await wait(speed, id)) return false;
+      }
+      return true;
+    };
+
+    const renderReducedMotion = () => {
+      const dict = languageDict();
+      if (suggestion) suggestion.value = dict.feedbackCorrectionSuggestionValue;
+      if (explanation) explanation.value = dict.feedbackCorrectionExplanationValue;
+      setPhase("published", 4);
+    };
+
+    const run = async () => {
+      const id = ++runId;
+      const dict = languageDict();
+      if (suggestion) suggestion.value = "";
+      if (explanation) explanation.value = "";
+
+      if (reducedMotion) {
+        renderReducedMotion();
+        return;
+      }
+
+      setPhase("idle", 0);
+      if (!await wait(800, id)) return;
+
+      setPhase("selecting", 0);
+      if (!await wait(1150, id)) return;
+
+      setPhase("selected", 0);
+      if (!await wait(520, id)) return;
+
+      setPhase("action", 1);
+      if (!await wait(760, id)) return;
+
+      setPhase("click", 1);
+      if (!await wait(480, id)) return;
+
+      setPhase("modal", 2);
+      if (!await wait(650, id)) return;
+
+      setPhase("typing", 2);
+      if (!await typeInto(suggestion, dict.feedbackCorrectionSuggestionValue, id, 34)) return;
+      if (!await wait(240, id)) return;
+      if (!await typeInto(explanation, dict.feedbackCorrectionExplanationValue, id, 18)) return;
+      if (!await wait(420, id)) return;
+
+      setPhase("submit", 3);
+      if (!await wait(620, id)) return;
+
+      setPhase("published", 4);
+      if (!await wait(2700, id)) return;
+
+      if (visible && id === runId) run();
+    };
+
+    const stop = () => { runId += 1; };
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.target !== demo) return;
+          visible = entry.isIntersecting;
+          if (visible) run();
+          else stop();
+        });
+      }, { threshold: .35 });
+      observer.observe(demo);
+    } else {
+      visible = true;
+      run();
+    }
+
+    document.addEventListener("diarito:languagechange", () => {
+      if (!visible) return;
       stop();
+      run();
     });
-    demo.addEventListener("pointerleave", () => {
-      paused = false;
-      start();
-    });
-
-    render(0);
-    start();
   });
 
 })();
