@@ -1,8 +1,8 @@
-# Diarito UI Library 2.18.4
+# Diarito UI Library 2.19.0
 
 Diarito's reusable HTML, CSS and native JavaScript design system.
 
-Version 2.18.4 turns the Write visual into a real photo placeholder and upgrades the human-feedback section into an animated product demo.
+Version 2.19.0 turns human feedback into a full phone-based product walkthrough and moves the learning grid treatment behind the entire sticky cycle.
 
 
 
@@ -13,6 +13,33 @@ Version 2.18.4 turns the Write visual into a real photo placeholder and upgrades
 
 
 
+
+## 2.19.0 phone correction walkthrough + cycle background
+
+- Converted all four sticky learning visuals into clean image placeholders labeled “Reemplazar esta imagen”.
+- Removed the remaining learning-step SVG drawings.
+- Moved the grid treatment from the image area to the full sticky learning-section background.
+- Added a radial center-out fade so the grid is strongest in the middle and disappears into the page background at the edges.
+- Rebuilt the human-feedback demo as a vertical phone showing the Diarito community feed.
+- The current viewer is Yuna; the corrected diary post belongs to @mari.
+- Replaced the previous weak correction example with a naturalness example that works in both Spanish and Korean.
+- Added the complete animated flow:
+  1. cursor moves to the diary phrase,
+  2. text selection expands,
+  3. Corregir appears,
+  4. cursor moves and clicks,
+  5. button performs a bounce/pop interaction,
+  6. feed blurs,
+  7. Corrección humana sheet opens,
+  8. suggestion and explanation type into canonical Diarito form fields,
+  9. Enviar retroalimentación is triggered,
+  10. the correction appears under the original post like feed activity.
+- Uses the verified Flaticon `fi fi-rr-cursor` cursor icon.
+- Reuses canonical Diarito feed, avatar, field, input, textarea and button patterns.
+- Demo starts only when visible and restarts on ES/KR language changes.
+- Reduced-motion users receive the final published state without the animation sequence.
+- Updated hero mini-feedback copy to use the new correction example.
+- Updated cache/version references to 2.19.0.
 
 ## 2.18.4 photo placeholder + interactive feedback demo
 
