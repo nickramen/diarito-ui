@@ -703,9 +703,9 @@ html[lang="ko"] .landing-cycle-copy h2 {
 .has-js .landing-cycle-visual.is-visible .landing-cycle-segment {
   stroke-dashoffset: 0;
 }
-.landing-cycle-segment:nth-of-type(3) { transition-delay: 80ms; }
-.landing-cycle-segment:nth-of-type(4) { transition-delay: 160ms; }
-.landing-cycle-segment:nth-of-type(5) { transition-delay: 240ms; }
+.landing-cycle-segment[data-loop-segment="2"] { transition-delay: 80ms; }
+.landing-cycle-segment[data-loop-segment="3"] { transition-delay: 160ms; }
+.landing-cycle-segment[data-loop-segment="4"] { transition-delay: 240ms; }
 .landing-cycle-segment.is-active {
   stroke-width: 4;
   opacity: 1;
