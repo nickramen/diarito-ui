@@ -4,6 +4,7 @@
 
   const translations = {
     es: {
+      announcementEyebrow: "Diarito · versión beta",
       announcement: "Empezamos con Coreano ↔ Español y nivel A2 para validar una experiencia de aprendizaje basada en la vida real.",
       announcementLink: "Conocé el enfoque",
       navWhy: "Por qué Diarito",
@@ -69,7 +70,7 @@
       ctaSecondary: "Ver el ciclo de aprendizaje",
       footerCopy: "Diarito · Aprende el idioma de tu vida.",
       footerBrandBody: "Un espacio para aprender el idioma que necesitás para expresar tu propia vida y conectar con la de otras personas.",
-      footerBeta: "Coreano ↔ Español · Beta A2",
+      footerBeta: "Coreano ↔ Español · versión beta · A2",
       footerDiarito: "Diarito",
       footerLearn: "Aprender",
       footerInfo: "Información",
@@ -80,9 +81,10 @@
       footerEmail: "Correo electrónico",
       footerCopyright: "© 2026 Diarito. Todos los derechos reservados.",
       footerDeveloped: "Diseñado y desarrollado por el equipo de Diarito.",
-      uiComponents: "Componentes UI"
+      uiComponents: "Componentes de interfaz"
     },
     ko: {
+      announcementEyebrow: "Diarito · 베타 버전",
       announcement: "처음부터 모든 언어와 모든 학습 수준을 지원하기보다 한국어 ↔ 스페인어, A2 수준에서 학습 경험이 실제로 효과적인지 검증합니다.",
       announcementLink: "접근 방식 보기",
       navWhy: "왜 Diarito인가",
@@ -92,7 +94,7 @@
       login: "로그인",
       heroBadge: "내 삶에서 시작하기",
       heroTitle: "내 삶의 언어를 배우세요.",
-      heroLead: "당장 내 앞에 있는 것들, 오늘 일어난 일들, 내일 할 일들을 target language로 말하는 것에서 언어 공부는 시작된다. 공부 자료는 책, 교과서, 단어장에 있는 것이 아니라 내 주변에 있다.",
+      heroLead: "당장 내 앞에 있는 것들, 오늘 일어난 일들, 내일 할 일들을 지금 배우고 있는 언어로 말하는 것에서 언어 공부는 시작된다. 공부 자료는 책, 교과서, 단어장에 있는 것이 아니라 내 주변에 있다.",
       heroTagline: "나의 세계를 표현하고, 우리의 세계를 연결합니다.",
       heroPrimary: "Diarito가 어떻게 작동하는지 보기",
       heroSecondary: "왜 내 삶에서 시작하나요",
@@ -106,25 +108,25 @@
       whyKicker: "Diarito가 존재하는 이유",
       whyTitle: "언어는 단어를 많이 아는 것이 아니다.",
       whyBody: "언어는 단어를 많이 아는 것이 아니라, 나에게 중요한 것을 표현할 수 있게 되는 것이다. 배움은 오늘 겪은 일, 지금의 감정, 실제로 표현하고 싶은 것처럼 자신의 삶에서 시작한다.",
-      principle1Label: "01 · Relevance",
+      principle1Label: "01 · 나와 관련 있는 언어",
       principle1Title: "내 삶에서 시작한다.",
       principle1Body: "오늘 겪은 일, 내일 하고 싶은 말, 지금 느끼는 감정처럼 실제로 표현하고 싶은 것에서 배움을 시작한다.",
-      principle2Label: "02 · Human Connection",
+      principle2Label: "02 · 사람을 통한 이해",
       principle2Title: "언어는 사람을 통해 이해한다.",
       principle2Body: "단순히 문법적으로 맞는 문장이 아니라, 상황과 감정, 관계와 문화에 어울리는 자연스러운 표현을 배운다.",
-      principle3Label: "03 · Active Ownership",
+      principle3Label: "03 · 내 것으로 만드는 학습",
       principle3Title: "배운 표현을 내 것으로 만든다.",
       principle3Body: "피드백을 받는 데서 끝나지 않고, 왜 고쳤는지 이해하고 배운 표현을 반복해서 사용하며 결국 스스로 표현할 수 있게 된다.",
       loopKicker: "학습 루프",
-      loopTitle: "Write. Exchange. Understand. Make it your own.",
+      loopTitle: "쓰고. 교환하고. 이해하고. 내 것으로 만든다.",
       loopIntro: "한 번 교정받고 끝나는 플랫폼이 아니라, 배운 표현이 실제 사용으로 이어지는 구조를 만든다.",
-      loop1Title: "Write",
+      loop1Title: "쓰기",
       loop1Body: "나의 하루와 감정을 기록한다.",
-      loop2Title: "Exchange",
+      loop2Title: "교환하기",
       loop2Body: "다른 사람과 일기를 교환한다.",
-      loop3Title: "Understand",
+      loop3Title: "이해하기",
       loop3Body: "문맥과 뉘앙스를 포함한 피드백을 받는다.",
-      loop4Title: "Make it your own",
+      loop4Title: "내 것으로 만들기",
       loop4Body: "표현을 저장하고 실제로 다시 사용한다.",
       feedbackKicker: "사람을 통한 피드백을 핵심 경험으로",
       feedbackTitle: "정답만이 아니라, 상황에 자연스러운 표현.",
@@ -148,7 +150,7 @@
       ctaSecondary: "학습 루프 보기",
       footerCopy: "Diarito · 내 삶의 언어를 배우세요.",
       footerBrandBody: "내 삶을 표현하는 데 필요한 언어를 배우고, 다른 사람의 삶과 연결되는 공간입니다.",
-      footerBeta: "한국어 ↔ 스페인어 · A2 베타",
+      footerBeta: "한국어 ↔ 스페인어 · A2 · 베타 버전",
       footerDiarito: "Diarito",
       footerLearn: "배우기",
       footerInfo: "정보",
@@ -159,7 +161,7 @@
       footerEmail: "이메일",
       footerCopyright: "© 2026 Diarito. 모든 권리 보유.",
       footerDeveloped: "Diarito 팀이 디자인하고 개발했습니다.",
-      uiComponents: "UI 컴포넌트"
+      uiComponents: "인터페이스 구성요소"
     }
   };
 
