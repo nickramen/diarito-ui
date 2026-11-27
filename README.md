@@ -1,8 +1,8 @@
-# Diarito UI Library 2.14.1
+# Diarito UI Library 2.15.0
 
 Diarito's reusable HTML, CSS and native JavaScript design system.
 
-Version 2.14.1 refines public landing proportions, section surfaces and two-column alignment without changing copy.
+Version 2.15.0 improves hero clarity and adds richer monochrome interaction across the public landing without changing the product message.
 
 
 
@@ -13,6 +13,20 @@ Version 2.14.1 refines public landing proportions, section surfaces and two-colu
 
 
 
+
+## 2.15.0 interactive landing depth
+
+- Repositioned hero floating cards so feedback, saved expressions and exchange no longer visually collide.
+- Added thin connector lines from floating cards to the main hero media surface.
+- Added Flaticon icons to hero floating cards and the image placeholder.
+- Standardized directional UI arrows on `fi fi-rr-angle-double-right`.
+- Added Flaticon icon anchors to the three learning principles.
+- Added animated underline/hover behavior to principle cards.
+- Reworked the learning loop from a flat strip into four bordered interactive steps with icons and double-angle connectors.
+- Added Flaticon feedback iconography and row-level hover movement to the human-feedback example.
+- Reworked the trust list into interactive bordered cards with Flaticon icons.
+- Preserved the monochrome, no-shadow visual system.
+- Updated public cache/version references to 2.15.0.
 
 ## 2.14.1 landing proportion + section cleanup
 
