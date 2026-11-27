@@ -1,4 +1,4 @@
-/* Diarito public landing · 2.14.0 */
+/* Diarito public landing · 2.14.1 */
 :root {
   --landing-bg: #ffffff;
   --landing-surface: #ffffff;
@@ -57,10 +57,11 @@ button, input, textarea, select { font: inherit; }
 }
 .landing-section {
   padding-block: clamp(4.75rem, 8vw, 7.5rem);
-  border-top: 1px solid var(--landing-border);
+  border: 0;
+  background: var(--landing-bg);
   scroll-margin-top: 5rem;
 }
-.landing-section--soft { background: var(--landing-surface-soft); }
+.landing-section--soft { background: var(--landing-bg); }
 
 /* Announcement */
 .landing-announcement {
@@ -123,7 +124,8 @@ button, input, textarea, select { font: inherit; }
   position: sticky;
   top: 0;
   z-index: 50;
-  border-bottom: 1px solid var(--landing-border);
+  border-top: 1px solid var(--landing-border);
+  border-bottom: 0;
   background: color-mix(in srgb, var(--landing-bg) 94%, transparent);
   backdrop-filter: blur(14px);
   transition: background-color var(--landing-transition), border-color var(--landing-transition);
@@ -290,7 +292,8 @@ button, input, textarea, select { font: inherit; }
 .landing-hero {
   position: relative;
   overflow: hidden;
-  border-top: 0;
+  border: 0;
+  border-bottom: 1px solid var(--landing-border);
   background-color: var(--landing-bg);
   background-image:
     linear-gradient(to right, var(--landing-grid-line) 1px, transparent 1px),
@@ -309,8 +312,8 @@ button, input, textarea, select { font: inherit; }
   z-index: 1;
   min-height: clamp(34rem, 72vh, 47rem);
   display: grid;
-  grid-template-columns: minmax(0,1.05fr) minmax(28rem,.95fr);
-  gap: clamp(3rem,6vw,6rem);
+  grid-template-columns: minmax(0,1.28fr) minmax(24rem,.72fr);
+  gap: clamp(2.5rem,4.5vw,4.5rem);
   align-items: center;
 }
 .landing-hero__copy { min-width: 0; }
@@ -329,7 +332,7 @@ button, input, textarea, select { font: inherit; }
 }
 .landing-hero__badge i { font-size: .75rem; }
 .landing-hero__copy h1 {
-  max-width: 10.5ch;
+  max-width: 14ch;
   margin: 1.35rem 0 1.25rem;
   font-family: Englebert, "Noto Sans KR", Roboto, sans-serif;
   font-size: clamp(4.2rem, 7vw, 7.1rem);
@@ -496,9 +499,9 @@ html[lang="ko"] .landing-hero__copy h1 {
 /* Mission / principles */
 .landing-statement {
   display: grid;
-  grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr);
-  gap: clamp(2.5rem,6vw,5rem);
-  align-items: start;
+  grid-template-columns: minmax(0,1.18fr) minmax(0,.82fr);
+  gap: clamp(2.5rem,5vw,4.5rem);
+  align-items: end;
 }
 .landing-statement h2,
 .landing-section-head h2,
@@ -520,7 +523,7 @@ html[lang="ko"] .landing-cta h2 {
   font-weight: 700;
   letter-spacing: -.04em;
 }
-.landing-statement h2 { max-width: 13ch; font-size: clamp(3rem,5vw,5rem); }
+.landing-statement h2 { max-width: none; font-size: clamp(3rem,4.6vw,4.8rem); }
 .landing-statement__copy { max-width: 46rem; }
 .landing-statement__copy p {
   margin: 0;
@@ -602,11 +605,11 @@ html[lang="ko"] .landing-cta h2 {
 /* Feedback */
 .landing-human {
   display: grid;
-  grid-template-columns: minmax(0,.85fr) minmax(0,1.15fr);
-  gap: clamp(3rem,7vw,6rem);
-  align-items: center;
+  grid-template-columns: minmax(0,1.12fr) minmax(0,.88fr);
+  gap: clamp(3rem,5vw,4.5rem);
+  align-items: end;
 }
-.landing-human__copy h2 { font-size: clamp(3rem,5vw,4.8rem); }
+.landing-human__copy h2 { max-width: 14ch; font-size: clamp(3rem,4.5vw,4.6rem); }
 .landing-human__copy > p { margin: 1rem 0 0; color: var(--landing-text-secondary); line-height: 1.75; }
 .landing-human__note {
   margin-top: 1.35rem;
@@ -649,11 +652,11 @@ html[lang="ko"] .landing-cta h2 {
 /* Trust */
 .landing-trust {
   display: grid;
-  grid-template-columns: minmax(0,.75fr) minmax(0,1.25fr);
-  gap: clamp(3rem,7vw,6rem);
-  align-items: start;
+  grid-template-columns: minmax(0,1.12fr) minmax(0,.88fr);
+  gap: clamp(3rem,5vw,4.5rem);
+  align-items: end;
 }
-.landing-trust h2 { font-size: clamp(3rem,5vw,4.7rem); }
+.landing-trust h2 { max-width: 14ch; font-size: clamp(3rem,4.5vw,4.6rem); }
 .landing-trust__list { border-top: 1px solid var(--landing-border-strong); }
 .landing-trust__item {
   display: grid;
@@ -667,7 +670,7 @@ html[lang="ko"] .landing-cta h2 {
 .landing-trust__item p { margin: .32rem 0 0; color: var(--landing-text-secondary); font-size: .84rem; line-height: 1.62; }
 
 /* CTA */
-.landing-cta { text-align: center; border-top-color: var(--landing-border-strong); }
+.landing-cta { text-align: center; border: 0; }
 .landing-cta__inner { max-width: 54rem; margin-inline: auto; }
 .landing-cta h2 { font-size: clamp(3.5rem,7vw,6.6rem); line-height: .95; }
 .landing-cta p {
@@ -680,7 +683,7 @@ html[lang="ko"] .landing-cta h2 {
 .landing-cta__actions { display: flex; justify-content: center; gap: .65rem; margin-top: 1.8rem; flex-wrap: wrap; }
 
 /* Footer */
-.landing-footer { padding-block: 2rem; border-top: 1px solid var(--landing-border); }
+.landing-footer { padding-block: 2rem; border-top: 0; }
 .landing-footer__inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 .landing-footer__copy { color: var(--landing-text-muted); font-size: .74rem; }
 .landing-footer__links { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
@@ -707,8 +710,8 @@ html.is-language-switching [data-i18n] { animation: landing-language-fade 220ms 
 /* Responsive */
 @media (max-width: 1100px) {
   .landing-nav { display: none; }
-  .landing-hero__container { grid-template-columns: minmax(0,1fr) minmax(24rem,.9fr); gap: 3rem; }
-  .landing-hero__copy h1 { font-size: clamp(4rem,8vw,6.2rem); }
+  .landing-hero__container { grid-template-columns: minmax(0,1.18fr) minmax(22rem,.82fr); gap: 2.5rem; }
+  .landing-hero__copy h1 { max-width: 14ch; font-size: clamp(4rem,7.5vw,6rem); }
 }
 @media (max-width: 900px) {
   .landing-header__actions { display: none; }

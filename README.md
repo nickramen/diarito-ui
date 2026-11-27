@@ -1,8 +1,8 @@
-# Diarito UI Library 2.14.0
+# Diarito UI Library 2.14.1
 
 Diarito's reusable HTML, CSS and native JavaScript design system.
 
-Version 2.14.0 rebuilds the public landing hero, adds ES/KR language switching, light/dark themes and subtle microinteractions.
+Version 2.14.1 refines public landing proportions, section surfaces and two-column alignment without changing copy.
 
 
 
@@ -13,6 +13,20 @@ Version 2.14.0 rebuilds the public landing hero, adds ES/KR language switching, 
 
 
 
+
+## 2.14.1 landing proportion + section cleanup
+
+- Widened the hero copy column and reduced the visual column so the main headline stays within two lines on desktop.
+- Increased the headline width without changing its text.
+- Removed alternate section backgrounds; public sections now use the same page background in both themes.
+- Removed section top/bottom divider lines.
+- Kept only the hero bottom border as the public section divider.
+- Moved the header separator to a top border.
+- Widened the title side of two-column editorial layouts.
+- Bottom-aligned the two columns in mission, human-feedback and trust layouts.
+- Widened large section titles so they target a maximum of roughly two lines on desktop.
+- Removed the CTA/footer divider lines.
+- Updated cache/version references to 2.14.1.
 
 ## 2.14.0 landing hero + bilingual/theme interactions
 
