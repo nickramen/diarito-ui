@@ -19,12 +19,6 @@
       heroPrimary: "Ver cómo funciona Diarito",
       heroSecondary: "Por qué empezar desde tu vida",
       replaceThisImage: "Reemplazar esta imagen",
-      miniFeedbackKicker: "Retroalimentación humana",
-      miniFeedbackTitle: "Más natural en contexto",
-      miniFeedbackBody: "“Mi presentación fue muy clara” suena más natural al hablar de una presentación.",
-      miniSaved: "Expresiones guardadas",
-      miniExchange: "Intercambio",
-      miniExchangeBody: "Coreano ↔ Español",
       whyKicker: "Por qué existe Diarito",
       whyTitle: "Aprender un idioma no es saber más palabras.",
       whyBody: "Es poder expresar lo que es importante para vos. El aprendizaje empieza en tu propia vida: lo que te pasó hoy, lo que sentís ahora y aquello que realmente querés decir.",
@@ -132,12 +126,6 @@
       heroPrimary: "Diarito가 어떻게 작동하는지 보기",
       heroSecondary: "왜 내 삶에서 시작하나요",
       replaceThisImage: "이미지 교체하기",
-      miniFeedbackKicker: "사람을 통한 피드백",
-      miniFeedbackTitle: "문맥에 더 자연스럽게",
-      miniFeedbackBody: "발표를 설명할 때는 “이해하기 쉬웠다”가 더 자연스러운 표현입니다.",
-      miniSaved: "저장한 표현",
-      miniExchange: "교환",
-      miniExchangeBody: "한국어 ↔ 스페인어",
       whyKicker: "Diarito가 존재하는 이유",
       whyTitle: "언어는 단어를 많이 아는 것이 아니다.",
       whyBody: "언어는 단어를 많이 아는 것이 아니라, 나에게 중요한 것을 표현할 수 있게 되는 것이다. 배움은 오늘 겪은 일, 지금의 감정, 실제로 표현하고 싶은 것처럼 자신의 삶에서 시작한다.",
@@ -343,22 +331,6 @@
     revealNodes.forEach((node) => observer.observe(node));
   } else {
     revealNodes.forEach((node) => node.classList.add("is-visible"));
-  }
-
-  // Subtle hero parallax. Decorative only.
-  const heroVisual = document.querySelector(".landing-hero-visual");
-  if (heroVisual && !window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches) {
-    heroVisual.addEventListener("pointermove", (event) => {
-      const rect = heroVisual.getBoundingClientRect();
-      const x = ((event.clientX - rect.left) / rect.width - .5) * 8;
-      const y = ((event.clientY - rect.top) / rect.height - .5) * 8;
-      heroVisual.style.setProperty("--hero-x", `${x}px`);
-      heroVisual.style.setProperty("--hero-y", `${y}px`);
-    });
-    heroVisual.addEventListener("pointerleave", () => {
-      heroVisual.style.setProperty("--hero-x", "0px");
-      heroVisual.style.setProperty("--hero-y", "0px");
-    });
   }
 
   // Scroll-driven centered learning focus
