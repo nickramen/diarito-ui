@@ -40,7 +40,7 @@ body.landing-page *::after { box-sizing: border-box; }
 
 /* Announcement */
 .landing-announcement {
-  max-height: 5rem;
+  max-height: 3.25rem;
   border: 0 !important;
   color: #ffffff;
   background: #111111;
@@ -52,7 +52,7 @@ body.landing-page *::after { box-sizing: border-box; }
   opacity: 0;
 }
 .landing-announcement__inner {
-  min-height: 3.9rem;
+  min-height: 2.85rem;
   border: 0 !important;
   display: flex;
   align-items: center;
@@ -61,31 +61,31 @@ body.landing-page *::after { box-sizing: border-box; }
   position: relative;
 }
 .landing-announcement__eyebrow {
-  padding: .28rem .45rem;
+  padding: .2rem .38rem;
   border: 1px solid rgb(255 255 255 / .42);
   border-radius: var(--landing-radius-xs);
-  font-size: .7rem;
+  font-size: .64rem;
   font-weight: 600;
   letter-spacing: .05em;
   text-transform: uppercase;
 }
 .landing-announcement p {
   margin: 0;
-  font-size: .82rem;
+  font-size: .74rem;
   font-weight: 500;
   text-align: center;
 }
 .landing-announcement a {
   color: #ffffff;
-  font-size: .78rem;
+  font-size: .72rem;
   font-weight: 600;
   text-underline-offset: .18rem;
 }
 .landing-announcement button {
   position: absolute;
   right: clamp(2rem,4vw,4.5rem);
-  width: 2.2rem;
-  height: 2.2rem;
+  width: 1.8rem;
+  height: 1.8rem;
   display: grid;
   place-items: center;
   border: 0;
@@ -597,12 +597,12 @@ html[lang="ko"] .landing-cta h2 {
   background: var(--landing-bg);
 }
 .landing-cycle-sticky__container {
-  padding-block: var(--diarito-space-8);
+  padding-block: var(--diarito-space-5);
 }
 .landing-cycle-stage {
   position: relative;
-  width: min(100%, 64rem);
-  min-height: 42rem;
+  width: min(100%, 58rem);
+  min-height: 30rem;
   margin-inline: auto;
 }
 .landing-cycle-stage--centered {
@@ -616,7 +616,7 @@ html[lang="ko"] .landing-cta h2 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding-inline: var(--diarito-space-7);
+  padding-inline: var(--diarito-space-5);
   opacity: 0;
   text-align: center;
   transform: translateY(2rem) scale(.985);
@@ -629,11 +629,11 @@ html[lang="ko"] .landing-cta h2 {
   pointer-events: auto;
 }
 .landing-cycle-focus__step {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 3rem;
+  height: 3rem;
   display: grid;
   place-items: center;
-  margin-bottom: var(--diarito-space-7);
+  margin-bottom: var(--diarito-space-4);
   border-radius: 50%;
   color: var(--diarito-color-action-fg);
   background: var(--diarito-color-action-bg);
@@ -644,7 +644,7 @@ html[lang="ko"] .landing-cta h2 {
 .landing-cycle-focus h3 {
   margin: 0;
   font-family: var(--diarito-font-display);
-  font-size: clamp(5rem,11vw,9rem);
+  font-size: clamp(4.2rem,7vw,6.4rem);
   font-weight: var(--diarito-weight-regular);
   line-height: .88;
   letter-spacing: -.045em;
@@ -655,9 +655,9 @@ html[lang="ko"] .landing-cycle-focus h3 {
   letter-spacing: -.055em;
 }
 .landing-cycle-focus__media {
-  width: min(100%, 42rem);
-  aspect-ratio: 16 / 7;
-  margin-top: var(--diarito-space-6);
+  width: min(100%, 34rem);
+  aspect-ratio: 16 / 5.6;
+  margin-top: var(--diarito-space-4);
   overflow: hidden;
   border: var(--diarito-border);
   border-radius: var(--diarito-radius-md);
@@ -711,11 +711,11 @@ html[lang="ko"] .landing-cycle-focus h3 {
   fill: var(--diarito-color-text-strong);
 }
 .landing-cycle-focus p {
-  width: min(100%, 38rem);
-  margin: var(--diarito-space-5) auto 0;
+  width: min(100%, 36rem);
+  margin: var(--diarito-space-3) auto 0;
   color: var(--diarito-color-text-secondary);
-  font-size: var(--diarito-text-lg);
-  line-height: 1.7;
+  font-size: var(--diarito-text-md);
+  line-height: 1.6;
 }
 
 /* Feedback */
@@ -1160,27 +1160,28 @@ html.is-language-switching [data-i18n] { animation: landing-language-fade 220ms 
     min-height: calc(100svh - 4.1rem);
   }
   .landing-cycle-stage {
-    min-height: 35rem;
+    min-height: 28rem;
   }
   .landing-cycle-focus {
     padding-inline: var(--diarito-space-5);
   }
   .landing-cycle-focus__step {
-    width: 3.2rem;
-    height: 3.2rem;
-    margin-bottom: var(--diarito-space-6);
+    width: 2.8rem;
+    height: 2.8rem;
+    margin-bottom: var(--diarito-space-4);
   }
   .landing-cycle-focus h3 {
-    font-size: clamp(4.7rem,16vw,7rem);
+    font-size: clamp(4rem,12vw,5.8rem);
   }
   .landing-cycle-focus__media {
-    width: min(100%, 36rem);
-    margin-top: var(--diarito-space-5);
+    width: min(100%, 32rem);
+    aspect-ratio: 16 / 6;
+    margin-top: var(--diarito-space-4);
   }
   .landing-cycle-focus p {
-    width: min(100%, 34rem);
-    margin-top: var(--diarito-space-4);
-    font-size: var(--diarito-text-md);
+    width: min(100%, 32rem);
+    margin-top: var(--diarito-space-3);
+    font-size: var(--diarito-text-sm);
   }
 }
 @media (max-width: 680px) {
@@ -1189,34 +1190,34 @@ html.is-language-switching [data-i18n] { animation: landing-language-fade 220ms 
     align-items: center;
   }
   .landing-cycle-sticky__container {
-    padding-block: var(--diarito-space-5);
+    padding-block: var(--diarito-space-3);
   }
   .landing-cycle-stage {
-    min-height: min(32rem, calc(100svh - 7rem));
+    min-height: min(27rem, calc(100svh - 6.5rem));
   }
   .landing-cycle-focus {
     padding-inline: 0;
   }
   .landing-cycle-focus__step {
-    width: 2.9rem;
-    height: 2.9rem;
-    margin-bottom: var(--diarito-space-5);
+    width: 2.6rem;
+    height: 2.6rem;
+    margin-bottom: var(--diarito-space-3);
     font-size: var(--diarito-text-sm);
   }
   .landing-cycle-focus h3 {
-    font-size: clamp(4rem,20vw,5.8rem);
+    font-size: clamp(3.4rem,17vw,4.8rem);
   }
   .landing-cycle-focus__media {
-    width: min(100%, 28rem);
-    aspect-ratio: 16 / 8;
-    margin-top: var(--diarito-space-4);
+    width: min(100%, 25rem);
+    aspect-ratio: 16 / 7;
+    margin-top: var(--diarito-space-3);
     border-radius: var(--diarito-radius-sm);
   }
   .landing-cycle-focus p {
-    width: min(100%, 28rem);
-    margin-top: var(--diarito-space-3);
-    font-size: var(--diarito-text-sm);
-    line-height: 1.65;
+    width: min(100%, 26rem);
+    margin-top: var(--diarito-space-2);
+    font-size: var(--diarito-text-xs);
+    line-height: 1.55;
   }
 }
 @media (prefers-reduced-motion: reduce) {
