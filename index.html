@@ -9,15 +9,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Englebert&family=Noto+Sans+KR:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
-  <link rel="stylesheet" href="assets/css/diarito-system.css?v=2.18.1">
-  <link rel="stylesheet" href="assets/css/landing.css?v=2.18.1">
+  <link rel="stylesheet" href="assets/css/diarito-system.css?v=2.18.2">
+  <link rel="stylesheet" href="assets/css/landing.css?v=2.18.2">
 </head>
 <body class="landing-page">
   <div class="landing-shell">
 
     <aside class="landing-announcement" data-landing-announcement>
       <div class="diarito-container diarito-container--lg landing-container landing-announcement__inner">
-        <span class="landing-announcement__eyebrow">Diarito beta</span>
+        <span class="landing-announcement__eyebrow" data-i18n="announcementEyebrow">Diarito · versión beta</span>
         <p data-i18n="announcement">Empezamos con Coreano ↔ Español y nivel A2 para validar una experiencia de aprendizaje basada en la vida real.</p>
         <a href="#trust" data-i18n="announcementLink">Conocé el enfoque</a>
         <button type="button" data-landing-announcement-close aria-label="Cerrar anuncio"><i class="fi fi-rr-cross-small"></i></button>
@@ -165,29 +165,84 @@
         <div class="landing-cycle-sticky">
           <div class="diarito-container diarito-container--lg landing-container landing-cycle-sticky__container">
             <div class="landing-cycle-stage landing-cycle-stage--centered" aria-live="polite">
+
               <article class="landing-cycle-focus is-active" data-cycle-step="0">
                 <span class="landing-cycle-focus__step" aria-hidden="true">01</span>
                 <h3 data-i18n="loop1Title">Escribí</h3>
+                <div class="landing-cycle-focus__media" aria-hidden="true">
+                  <svg viewBox="0 0 640 320" focusable="false">
+                    <rect class="cycle-illustration__frame" x="120" y="45" width="400" height="230" rx="18"></rect>
+                    <rect class="cycle-illustration__paper" x="175" y="76" width="290" height="168" rx="10"></rect>
+                    <line class="cycle-illustration__line" x1="215" y1="124" x2="405" y2="124"></line>
+                    <line class="cycle-illustration__line" x1="215" y1="154" x2="382" y2="154"></line>
+                    <line class="cycle-illustration__line" x1="215" y1="184" x2="420" y2="184"></line>
+                    <path class="cycle-illustration__strong" d="M430 72 L474 116 L329 261 L275 271 L285 217 Z"></path>
+                    <path class="cycle-illustration__fill" d="M285 217 L329 261 L275 271 Z"></path>
+                    <circle class="cycle-illustration__dot" cx="200" cy="103" r="7"></circle>
+                  </svg>
+                </div>
                 <p data-i18n="loop1Body">Registrá tu día y tus emociones en el idioma que estás aprendiendo.</p>
               </article>
 
               <article class="landing-cycle-focus" data-cycle-step="1">
                 <span class="landing-cycle-focus__step" aria-hidden="true">02</span>
                 <h3 data-i18n="loop2Title">Intercambiá</h3>
+                <div class="landing-cycle-focus__media" aria-hidden="true">
+                  <svg viewBox="0 0 640 320" focusable="false">
+                    <rect class="cycle-illustration__paper" x="90" y="70" width="190" height="185" rx="14"></rect>
+                    <rect class="cycle-illustration__paper" x="360" y="70" width="190" height="185" rx="14"></rect>
+                    <circle class="cycle-illustration__strong" cx="185" cy="118" r="26"></circle>
+                    <circle class="cycle-illustration__strong" cx="455" cy="118" r="26"></circle>
+                    <line class="cycle-illustration__line" x1="135" y1="174" x2="235" y2="174"></line>
+                    <line class="cycle-illustration__line" x1="135" y1="204" x2="220" y2="204"></line>
+                    <line class="cycle-illustration__line" x1="405" y1="174" x2="505" y2="174"></line>
+                    <line class="cycle-illustration__line" x1="420" y1="204" x2="505" y2="204"></line>
+                    <path class="cycle-illustration__strong" d="M290 122 C323 91 351 91 384 122"></path>
+                    <path class="cycle-illustration__strong" d="M384 122 L365 103 M384 122 L363 137"></path>
+                    <path class="cycle-illustration__strong" d="M350 200 C317 231 289 231 256 200"></path>
+                    <path class="cycle-illustration__strong" d="M256 200 L275 219 M256 200 L277 185"></path>
+                  </svg>
+                </div>
                 <p data-i18n="loop2Body">Intercambiá diarios con otras personas y conocé sus mundos mientras compartís el tuyo.</p>
               </article>
 
               <article class="landing-cycle-focus" data-cycle-step="2">
                 <span class="landing-cycle-focus__step" aria-hidden="true">03</span>
                 <h3 data-i18n="loop3Title">Entendé</h3>
+                <div class="landing-cycle-focus__media" aria-hidden="true">
+                  <svg viewBox="0 0 640 320" focusable="false">
+                    <rect class="cycle-illustration__frame" x="90" y="55" width="460" height="210" rx="18"></rect>
+                    <line class="cycle-illustration__line" x1="140" y1="115" x2="350" y2="115"></line>
+                    <rect class="cycle-illustration__highlight" x="140" y="142" width="175" height="26" rx="6"></rect>
+                    <line class="cycle-illustration__line" x1="140" y1="202" x2="315" y2="202"></line>
+                    <path class="cycle-illustration__paper" d="M375 105 H500 A14 14 0 0 1 514 119 V193 A14 14 0 0 1 500 207 H431 L402 234 L408 207 H375 A14 14 0 0 1 361 193 V119 A14 14 0 0 1 375 105 Z"></path>
+                    <path class="cycle-illustration__strong" d="M397 157 L423 181 L476 132"></path>
+                  </svg>
+                </div>
                 <p data-i18n="loop3Body">Recibí retroalimentación que explique contexto, naturalidad y matices, no solo gramática.</p>
               </article>
 
               <article class="landing-cycle-focus" data-cycle-step="3">
                 <span class="landing-cycle-focus__step" aria-hidden="true">04</span>
                 <h3 data-i18n="loop4Title">Hacelo tuyo</h3>
+                <div class="landing-cycle-focus__media" aria-hidden="true">
+                  <svg viewBox="0 0 640 320" focusable="false">
+                    <rect class="cycle-illustration__paper" x="100" y="72" width="170" height="176" rx="14"></rect>
+                    <rect class="cycle-illustration__paper" x="370" y="72" width="170" height="176" rx="14"></rect>
+                    <line class="cycle-illustration__line" x1="135" y1="126" x2="230" y2="126"></line>
+                    <line class="cycle-illustration__line" x1="135" y1="160" x2="220" y2="160"></line>
+                    <line class="cycle-illustration__line" x1="405" y1="126" x2="505" y2="126"></line>
+                    <line class="cycle-illustration__strong" x1="405" y1="160" x2="485" y2="160"></line>
+                    <path class="cycle-illustration__strong" d="M286 131 C325 100 356 101 394 132"></path>
+                    <path class="cycle-illustration__strong" d="M394 132 L373 113 M394 132 L370 146"></path>
+                    <path class="cycle-illustration__strong" d="M477 72 V121 L455 105 L433 121 V72"></path>
+                    <circle class="cycle-illustration__dot" cx="320" cy="206" r="24"></circle>
+                    <path class="cycle-illustration__strong" d="M309 206 L318 215 L334 196"></path>
+                  </svg>
+                </div>
                 <p data-i18n="loop4Body">Guardá expresiones y volvé a usarlas en tus propias oraciones hasta poder producirlas por tu cuenta.</p>
               </article>
+
             </div>
           </div>
         </div>
@@ -265,7 +320,7 @@
           <div class="landing-footer__brand">
             <a class="landing-brand" href="#top" aria-label="Diarito"><span class="landing-brand__mark">D</span><span>Diarito</span></a>
             <p data-i18n="footerBrandBody">Un espacio para aprender el idioma que necesitás para expresar tu propia vida y conectar con la de otras personas.</p>
-            <span data-i18n="footerBeta">Coreano ↔ Español · Beta A2</span>
+            <span data-i18n="footerBeta">Coreano ↔ Español · versión beta · A2</span>
           </div>
           <div class="landing-footer__column">
             <strong data-i18n="footerDiarito">Diarito</strong>
@@ -283,7 +338,7 @@
           </div>
           <div class="landing-footer__column">
             <strong data-i18n="footerInfo">Información</strong>
-            <a href="ui-components.html" data-i18n="uiComponents">Componentes UI</a>
+            <a href="ui-components.html" data-i18n="uiComponents">Componentes de interfaz</a>
             <a href="#" data-i18n="footerPrivacy">Privacidad</a>
             <a href="#" data-i18n="footerTerms">Términos y condiciones</a>
             <a href="#" data-i18n="footerContact">Contacto</a>
@@ -315,6 +370,6 @@
     </footer>
   </div>
 
-  <script src="assets/js/landing.js?v=2.18.1"></script>
+  <script src="assets/js/landing.js?v=2.18.2"></script>
 </body>
 </html>

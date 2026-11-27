@@ -1,8 +1,8 @@
-# Diarito UI Library 2.18.1
+# Diarito UI Library 2.18.2
 
 Diarito's reusable HTML, CSS and native JavaScript design system.
 
-Version 2.18.1 simplifies the sticky learning narrative to a single centered focused step that changes as the user scrolls.
+Version 2.18.2 adds a distinct illustration to each sticky learning step and removes the remaining English-facing copy from the Spanish/Korean landing.
 
 
 
@@ -13,6 +13,26 @@ Version 2.18.1 simplifies the sticky learning narrative to a single centered foc
 
 
 
+
+## 2.18.2 step visuals + language cleanup
+
+- Added a distinct monochrome inline SVG illustration to each sticky learning step:
+  - writing / diary,
+  - diary exchange,
+  - contextual feedback,
+  - save and reuse.
+- Each illustration changes automatically with its active scroll step.
+- Kept the centered number → title → illustration → description hierarchy.
+- Made the step visuals responsive and theme-aware through shared UI tokens.
+- Removed the remaining English-facing Korean strings:
+  - `target language`,
+  - Relevance / Human Connection / Active Ownership,
+  - Write / Exchange / Understand / Make it your own,
+  - UI Components.
+- Added localized announcement eyebrow text.
+- Updated beta/footer/interface labels in ES/KR.
+- Updated Korean theme-toggle labels to native Korean wording.
+- Updated cache/version references to 2.18.2.
 
 ## 2.18.1 centered sticky learning focus
 

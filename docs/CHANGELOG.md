@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.18.2 - Step visuals + language cleanup
+
+- Added four step-specific responsive SVG illustrations to the sticky learning section.
+- Visuals now change together with the active scroll step.
+- Removed remaining English-facing copy from the Korean landing, including `target language` and English learning labels.
+- Localized the announcement eyebrow, beta/footer/interface labels and Korean theme labels.
+- Kept all illustrations monochrome and token-driven.
+- Bumped cache/version references to 2.18.2.
+
+
 ## 2.18.1 - Centered sticky learning focus
 
 - Removed the learning-cycle left column and its global heading/description.
