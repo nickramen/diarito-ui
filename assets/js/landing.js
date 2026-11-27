@@ -291,4 +291,29 @@
       heroVisual.style.setProperty("--hero-y", "0px");
     });
   }
+
+  // Circular learning loop interaction
+  document.querySelectorAll('[data-landing-cycle]').forEach((cycle) => {
+    const nodes = [...cycle.querySelectorAll('[data-loop-step]')];
+    const segments = [...cycle.querySelectorAll('[data-loop-segment]')];
+
+    const setActive = (index) => {
+      nodes.forEach((node) => node.classList.toggle('is-active', node.dataset.loopStep === index));
+      segments.forEach((segment) => segment.classList.toggle('is-active', segment.dataset.loopSegment === index));
+    };
+
+    const clearActive = () => {
+      nodes.forEach((node) => node.classList.remove('is-active'));
+      segments.forEach((segment) => segment.classList.remove('is-active'));
+    };
+
+    nodes.forEach((node) => {
+      const index = node.dataset.loopStep;
+      node.addEventListener('pointerenter', () => setActive(index));
+      node.addEventListener('pointerleave', clearActive);
+      node.addEventListener('focus', () => setActive(index));
+      node.addEventListener('blur', clearActive);
+    });
+  });
+
 })();

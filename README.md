@@ -1,8 +1,8 @@
-# Diarito UI Library 2.16.0
+# Diarito UI Library 2.17.0
 
 Diarito's reusable HTML, CSS and native JavaScript design system.
 
-Version 2.16.0 refines the hero visual proportions, turns the mission principles into conceptual cards and introduces a three-level social footer.
+Version 2.17.0 replaces the flat learning cards with an interactive circular learning loop and hardens the header separator so only its bottom border remains.
 
 
 
@@ -13,6 +13,20 @@ Version 2.16.0 refines the hero visual proportions, turns the mission principles
 
 
 
+
+## 2.17.0 circular learning loop
+
+- Hardened the announcement/header boundary so neither the banner nor the header inner can render a top separator.
+- Kept the sticky header's single bottom border.
+- Replaced the four-card learning loop with a two-column editorial layout.
+- Added an SVG circular flow with four directional arc segments and arrowheads.
+- Positioned Write / Exchange / Understand / Make it your own around the cycle as HTML nodes rather than boxed cards.
+- Added hover/focus interaction so each node activates its corresponding SVG segment.
+- Added animated SVG path drawing when the cycle enters the viewport.
+- Added a central Diarito loop marker with a subtle rotation interaction.
+- On mobile, the SVG collapses into a vertical connected sequence for readability.
+- Kept the existing ES/KR copy unchanged.
+- Updated public cache/version references to 2.17.0.
 
 ## 2.16.0 conceptual mission + social footer
 

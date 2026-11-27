@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Englebert&family=Noto+Sans+KR:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
-  <link rel="stylesheet" href="assets/css/landing.css?v=2.16.0">
+  <link rel="stylesheet" href="assets/css/landing.css?v=2.17.0">
 </head>
 <body class="landing-page">
   <div class="landing-shell">
@@ -161,36 +161,50 @@
       </section>
 
       <section class="landing-section landing-section--soft" id="how-it-works">
-        <div class="landing-container">
-          <div class="landing-section-head" data-reveal>
+        <div class="landing-container landing-cycle-layout">
+          <div class="landing-cycle-copy" data-reveal>
             <span class="landing-kicker" data-i18n="loopKicker">El ciclo de aprendizaje</span>
             <h2 data-i18n="loopTitle">Escribí. Intercambiá. Entendé. Hacelo tuyo.</h2>
             <p data-i18n="loopIntro">Diarito no termina cuando alguien corrige una oración. Lo aprendido debe volver al uso real para convertirse en algo propio.</p>
           </div>
 
-          <div class="landing-loop">
-            <article class="landing-loop__step" data-reveal>
-              <div class="landing-loop__top"><span class="landing-loop__index">01</span><span class="landing-loop__icon" aria-hidden="true"><i class="fi fi-rr-edit"></i></span></div>
-              <span class="landing-loop__arrow" aria-hidden="true"><i class="fi fi-rr-angle-double-right"></i></span>
-              <h3 data-i18n="loop1Title">Escribí</h3>
-              <p data-i18n="loop1Body">Registrá tu día y tus emociones en el idioma que estás aprendiendo.</p>
+          <div class="landing-cycle-visual" data-landing-cycle data-reveal data-reveal-delay="100">
+            <svg class="landing-cycle-svg" viewBox="0 0 640 640" role="img" aria-label="Ciclo de aprendizaje de Diarito">
+              <defs>
+                <marker id="cycle-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+                  <path d="M0 0 L10 5 L0 10 Z" class="landing-cycle-marker"></path>
+                </marker>
+              </defs>
+              <circle class="landing-cycle-guide" cx="320" cy="320" r="210"></circle>
+              <path class="landing-cycle-segment" data-loop-segment="1" d="M320 110 A210 210 0 0 1 530 320" marker-end="url(#cycle-arrow)"></path>
+              <path class="landing-cycle-segment" data-loop-segment="2" d="M530 320 A210 210 0 0 1 320 530" marker-end="url(#cycle-arrow)"></path>
+              <path class="landing-cycle-segment" data-loop-segment="3" d="M320 530 A210 210 0 0 1 110 320" marker-end="url(#cycle-arrow)"></path>
+              <path class="landing-cycle-segment" data-loop-segment="4" d="M110 320 A210 210 0 0 1 320 110" marker-end="url(#cycle-arrow)"></path>
+            </svg>
+
+            <div class="landing-cycle-center" aria-hidden="true">
+              <span class="landing-cycle-center__icon"><i class="fi fi-rr-arrows-repeat"></i></span>
+              <strong>Diarito</strong>
+            </div>
+
+            <article class="landing-cycle-node landing-cycle-node--1" data-loop-step="1" tabindex="0">
+              <span class="landing-cycle-node__icon"><i class="fi fi-rr-edit"></i></span>
+              <div><span class="landing-cycle-node__number">01</span><h3 data-i18n="loop1Title">Escribí</h3><p data-i18n="loop1Body">Registrá tu día y tus emociones en el idioma que estás aprendiendo.</p></div>
             </article>
-            <article class="landing-loop__step" data-reveal data-reveal-delay="60">
-              <div class="landing-loop__top"><span class="landing-loop__index">02</span><span class="landing-loop__icon" aria-hidden="true"><i class="fi fi-rr-users-alt"></i></span></div>
-              <span class="landing-loop__arrow" aria-hidden="true"><i class="fi fi-rr-angle-double-right"></i></span>
-              <h3 data-i18n="loop2Title">Intercambiá</h3>
-              <p data-i18n="loop2Body">Intercambiá diarios con otras personas y conocé sus mundos mientras compartís el tuyo.</p>
+
+            <article class="landing-cycle-node landing-cycle-node--2" data-loop-step="2" tabindex="0">
+              <span class="landing-cycle-node__icon"><i class="fi fi-rr-users-alt"></i></span>
+              <div><span class="landing-cycle-node__number">02</span><h3 data-i18n="loop2Title">Intercambiá</h3><p data-i18n="loop2Body">Intercambiá diarios con otras personas y conocé sus mundos mientras compartís el tuyo.</p></div>
             </article>
-            <article class="landing-loop__step" data-reveal data-reveal-delay="120">
-              <div class="landing-loop__top"><span class="landing-loop__index">03</span><span class="landing-loop__icon" aria-hidden="true"><i class="fi fi-rr-comment-check"></i></span></div>
-              <span class="landing-loop__arrow" aria-hidden="true"><i class="fi fi-rr-angle-double-right"></i></span>
-              <h3 data-i18n="loop3Title">Entendé</h3>
-              <p data-i18n="loop3Body">Recibí retroalimentación que explique contexto, naturalidad y matices, no solo gramática.</p>
+
+            <article class="landing-cycle-node landing-cycle-node--3" data-loop-step="3" tabindex="0">
+              <span class="landing-cycle-node__icon"><i class="fi fi-rr-comment-check"></i></span>
+              <div><span class="landing-cycle-node__number">03</span><h3 data-i18n="loop3Title">Entendé</h3><p data-i18n="loop3Body">Recibí retroalimentación que explique contexto, naturalidad y matices, no solo gramática.</p></div>
             </article>
-            <article class="landing-loop__step" data-reveal data-reveal-delay="180">
-              <div class="landing-loop__top"><span class="landing-loop__index">04</span><span class="landing-loop__icon" aria-hidden="true"><i class="fi fi-rr-bookmark"></i></span></div>
-              <h3 data-i18n="loop4Title">Hacelo tuyo</h3>
-              <p data-i18n="loop4Body">Guardá expresiones y volvé a usarlas en tus propias oraciones hasta poder producirlas por tu cuenta.</p>
+
+            <article class="landing-cycle-node landing-cycle-node--4" data-loop-step="4" tabindex="0">
+              <span class="landing-cycle-node__icon"><i class="fi fi-rr-bookmark"></i></span>
+              <div><span class="landing-cycle-node__number">04</span><h3 data-i18n="loop4Title">Hacelo tuyo</h3><p data-i18n="loop4Body">Guardá expresiones y volvé a usarlas en tus propias oraciones hasta poder producirlas por tu cuenta.</p></div>
             </article>
           </div>
         </div>
@@ -318,6 +332,6 @@
     </footer>
   </div>
 
-  <script src="assets/js/landing.js?v=2.16.0"></script>
+  <script src="assets/js/landing.js?v=2.17.0"></script>
 </body>
 </html>
