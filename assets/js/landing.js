@@ -221,8 +221,8 @@
     document.querySelectorAll("[data-theme-label]").forEach((label) => {
       const language = root.lang === "ko" ? "ko" : "es";
       label.textContent = next === "dark"
-        ? (language === "ko" ? "라이트" : "Claro")
-        : (language === "ko" ? "다크" : "Oscuro");
+        ? (language === "ko" ? "밝게" : "Claro")
+        : (language === "ko" ? "어둡게" : "Oscuro");
     });
 
     if (persist) localStorage.setItem("diarito-theme", next);
