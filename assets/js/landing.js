@@ -292,13 +292,9 @@
     });
   }
 
-  // Scroll-driven sticky learning cycle
+  // Scroll-driven centered learning focus
   document.querySelectorAll("[data-scroll-cycle]").forEach((section) => {
     const panels = [...section.querySelectorAll("[data-cycle-step]")];
-    const railItems = [...section.querySelectorAll("[data-cycle-jump]")];
-    const progressBar = section.querySelector("[data-cycle-progress-bar]");
-    const progressLabel = section.querySelector("[data-cycle-progress-label]");
-    const progressPercent = section.querySelector("[data-cycle-progress-percent]");
     const header = document.querySelector(".landing-header");
     let activeIndex = -1;
     let raf = 0;
@@ -308,37 +304,20 @@
       activeIndex = index;
 
       panels.forEach((panel, panelIndex) => {
-        panel.classList.toggle("is-active", panelIndex === index);
-        panel.setAttribute("aria-hidden", String(panelIndex !== index));
+        const active = panelIndex === index;
+        panel.classList.toggle("is-active", active);
+        panel.setAttribute("aria-hidden", String(!active));
       });
-
-      railItems.forEach((item, itemIndex) => {
-        const active = itemIndex === index;
-        item.classList.toggle("is-active", active);
-        if (active) item.setAttribute("aria-current", "step");
-        else item.removeAttribute("aria-current");
-      });
-    };
-
-    const metrics = () => {
-      const headerHeight = header?.offsetHeight || 0;
-      const sectionTop = section.getBoundingClientRect().top + window.scrollY;
-      const travel = Math.max(1, section.offsetHeight - window.innerHeight + headerHeight);
-      return { headerHeight, sectionTop, travel };
     };
 
     const update = () => {
       raf = 0;
-      const { headerHeight, sectionTop, travel } = metrics();
+      const headerHeight = header?.offsetHeight || 0;
+      const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+      const travel = Math.max(1, section.offsetHeight - window.innerHeight + headerHeight);
       const current = window.scrollY - sectionTop + headerHeight;
       const progress = Math.min(1, Math.max(0, current / travel));
       const index = Math.min(panels.length - 1, Math.floor(progress * panels.length));
-      const percent = Math.round(progress * 100);
-
-      if (progressBar) progressBar.style.setProperty("--diarito-progress-value", `${percent}%`);
-      if (progressLabel) progressLabel.textContent = `${String(index + 1).padStart(2, "0")} / ${String(panels.length).padStart(2, "0")}`;
-      if (progressPercent) progressPercent.textContent = `${percent}%`;
-
       setActive(index);
     };
 
@@ -346,17 +325,6 @@
       if (raf) return;
       raf = window.requestAnimationFrame(update);
     };
-
-    railItems.forEach((item, index) => {
-      item.addEventListener("click", () => {
-        const { headerHeight, sectionTop, travel } = metrics();
-        const targetProgress = panels.length <= 1 ? 0 : index / (panels.length - 1);
-        window.scrollTo({
-          top: sectionTop - headerHeight + (travel * targetProgress),
-          behavior: window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches ? "auto" : "smooth"
-        });
-      });
-    });
 
     window.addEventListener("scroll", requestUpdate, { passive: true });
     window.addEventListener("resize", requestUpdate);

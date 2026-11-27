@@ -1,8 +1,8 @@
-# Diarito UI Library 2.18.0
+# Diarito UI Library 2.18.1
 
 Diarito's reusable HTML, CSS and native JavaScript design system.
 
-Version 2.18.0 replaces the circular loop with a scroll-driven sticky narrative and starts consuming the canonical Diarito UI system directly on the public landing.
+Version 2.18.1 simplifies the sticky learning narrative to a single centered focused step that changes as the user scrolls.
 
 
 
@@ -13,6 +13,18 @@ Version 2.18.0 replaces the circular loop with a scroll-driven sticky narrative 
 
 
 
+
+## 2.18.1 centered sticky learning focus
+
+- Removed the entire left column from the learning-cycle section.
+- Removed the cycle kicker, global cycle title, explanatory paragraph, progress bar and 01–04 rail.
+- The sticky section now shows only one centered learning step at a time.
+- The step number replaces the previous icon.
+- Removed the duplicated small number between the icon area and step title.
+- Kept scroll-driven transitions through Write / Exchange / Understand / Make it your own.
+- Centered title and description on desktop and mobile.
+- Simplified responsive behavior for a cleaner mobile sticky experience.
+- Updated cache/version references to 2.18.1.
 
 ## 2.18.0 sticky learning narrative + UI system alignment
 
