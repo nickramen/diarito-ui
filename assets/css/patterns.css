@@ -1095,7 +1095,7 @@ html[data-theme="dark"] .diarito-brand__mark { border-color: #777; }
 .diarito-correction-diff__added { color: #166534; background: #dcfce7; text-decoration: none; }
 html[data-theme="dark"] .diarito-correction-diff__removed { color: var(--diarito-error-text); background: var(--diarito-error-soft); }
 html[data-theme="dark"] .diarito-correction-diff__added { color: var(--diarito-success-text); background: var(--diarito-success-soft); }
-.diarito-thread { border-top: 0; padding-top: .8rem; }
+.diarito-thread { border-top: 1px dashed var(--diarito-color-border-strong); padding-top: .8rem; }
 .diarito-thread[hidden], .diarito-thread [hidden] { display: none !important; }
 .diarito-thread__identity { display: flex; align-items: center; gap: .55rem; flex-wrap: wrap; }
 .diarito-thread__identity > div { min-width: 0; }
