@@ -263,6 +263,9 @@ html[data-theme="dark"] .landing-hero {
     linear-gradient(to right, var(--landing-grid-line) 1px, transparent 1px),
     linear-gradient(to bottom, var(--landing-grid-line) 1px, transparent 1px);
   background-size: 20px 20px;
+  /* Fade the grid itself, not the photograph. */
+  -webkit-mask-image: linear-gradient(to right, #000 0%, #000 30%, transparent 48%);
+  mask-image: linear-gradient(to right, #000 0%, #000 30%, transparent 48%);
 }
 .landing-hero__container {
   position: relative;
@@ -912,6 +915,10 @@ html.is-language-switching [data-i18n] { animation: landing-language-fade 220ms 
   .landing-nav { display: none; }
   .landing-header__actions { display: none; }
   .landing-mobile-nav { display: block; margin-left: auto; }
+  .landing-hero::after {
+    -webkit-mask-image: linear-gradient(to right, #000 0%, #000 25%, transparent 44%);
+    mask-image: linear-gradient(to right, #000 0%, #000 25%, transparent 44%);
+  }
   .landing-hero__container { grid-template-columns: minmax(0,1.24fr) minmax(0,.76fr); gap: 2.5rem; }
   .landing-hero__copy h1 { max-width: 100%; font-size: clamp(3rem,5.3vw,5.8rem); }
 }
@@ -924,7 +931,8 @@ html.is-language-switching [data-i18n] { animation: landing-language-fade 220ms 
   .landing-section.landing-hero {
     padding-block: 0;
   }
-  .landing-hero::after { display: block; }
+  /* The copy already has its own grid on narrow screens; leave the separate photo clean. */
+  .landing-hero::after { display: none; }
   .landing-hero__container {
     gap: 0;
     min-height: 0;
