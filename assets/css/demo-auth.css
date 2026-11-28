@@ -1,0 +1,59 @@
+/* Diarito demo · the compact form is a composition of UI Library controls. */
+.auth-form--compact { gap: .85rem; margin-top: 1.2rem; }
+.auth-form--compact .diarito-field { gap: .35rem; }
+.auth-form--compact .diarito-help { line-height: 1.45; }
+.auth-form--compact > button { min-height: 2.375rem; margin-top: .1rem; }
+.auth-panel__body .auth-switch { margin-top: 1rem; }
+.auth-form--compact .auth-error { margin: 0; }
+.auth-error { border-inline-start: 2px solid var(--diarito-error); padding: .55rem .7rem; color: var(--diarito-color-text-strong); font-size: .875rem; line-height: 1.5; background: var(--diarito-error-soft); }
+.auth-error[hidden] { display: none; }
+.auth-password-wrap { position: relative; }
+.auth-password-wrap .diarito-input { padding-inline-end: 2.8rem; }
+.auth-password-toggle { display: grid; place-items: center; position: absolute; inset-inline-end: 0; top: 0; width: 2.5rem; height: 2.375rem; color: var(--diarito-color-text-secondary); border: 0; background: transparent; border-radius: var(--diarito-radius-sm); }
+.auth-consent { align-items: flex-start; line-height: 1.45; }
+.auth-consent a { text-decoration: underline; text-underline-offset: .15em; }
+.auth-demo-access { border-top: 1px dashed var(--diarito-color-border-strong); margin-top: 1.1rem; padding-top: 1rem; display: grid; gap: .55rem; }
+.auth-demo-access > button { width: 100%; }
+.auth-demo-access details { color: var(--diarito-color-text-muted); font-size: .875rem; }
+.auth-demo-access summary { cursor: pointer; padding: .45rem 0; }
+.auth-demo-access details p { margin: .35rem 0; color: var(--diarito-color-text-muted); }
+.auth-intro-small { font-size: .875rem; line-height: 1.6; margin: .65rem 0 0; color: var(--diarito-color-text-secondary); }
+.auth-form-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .8rem; }
+.auth-fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+.auth-fieldset legend { margin-bottom: .35rem; }
+.auth-fieldset > p { margin: 0 0 .6rem; }
+.onboarding-layout { max-width: 66rem; display: grid; grid-template-columns: minmax(0,1fr) minmax(22rem,1fr); gap: clamp(2rem,5vw,4rem); align-items: center; }
+.onboarding-layout .auth-panel { max-width: 33rem; }
+.onboarding-story { background: var(--diarito-color-surface); border-radius: var(--diarito-radius-lg); overflow: hidden; }
+.onboarding-story > img { width: 100%; aspect-ratio: 1.15; object-fit: cover; object-position: center; }
+.onboarding-story > div { padding: 1.6rem; }
+.onboarding-story h2 { font-family: var(--diarito-font-display); font-size: 2.5rem; font-weight: 400; margin: .55rem 0; line-height: 1.1; }
+html[lang="ko"] .onboarding-story h2 { font-family: var(--diarito-font-ui); font-size: 2rem; font-weight: 600; }
+.onboarding-story p:last-child { margin: .7rem 0 0; color: var(--diarito-color-text-secondary); }
+.onboarding-progress { margin-bottom: 1.25rem; }
+.onboarding-progress__track { display: flex; gap: .4rem; margin-top: .7rem; }
+.onboarding-progress__track span { width: 100%; height: 3px; background: var(--diarito-color-border); border-radius: 2px; }
+.onboarding-progress__track .is-complete { background: var(--diarito-color-text-strong); }
+.onboarding-choices { display: grid; gap: .5rem; }
+.onboarding-choice { padding: .7rem .75rem; border: var(--diarito-border-strong); border-radius: var(--diarito-radius-sm); cursor: pointer; }
+.onboarding-choice:has(input:checked) { border-color: var(--diarito-color-text-strong); background: var(--diarito-color-surface-soft); }
+.onboarding-controls { display: flex; justify-content: flex-end; gap: .5rem; margin-top: .6rem; }
+.onboarding-controls button { min-height: 2.5rem; }
+.onboarding-controls > :last-child { flex: 1; }
+.onboarding-photo { display: flex; align-items: center; gap: 1rem; padding-block: .5rem; }
+.onboarding-photo strong, .onboarding-photo > div > span { display: block; }
+.onboarding-photo strong { font-size: 1.1rem; color: var(--diarito-color-text-strong); }
+.onboarding-photo > div > span { font-size: .875rem; color: var(--diarito-color-text-muted); }
+.onboarding-avatar { width: 5rem; height: 5rem; display: grid; place-items: center; overflow: hidden; border-radius: 50%; background: var(--diarito-color-panel); color: var(--diarito-color-text-strong); font-size: 2rem; font-weight: 600; flex: 0 0 auto; }
+.onboarding-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.auth-file-input { max-width: 100%; color: var(--diarito-color-text-secondary); font-size: .875rem; }
+.auth-file-input::file-selector-button { min-height: 2.5rem; padding: .55rem .7rem; margin-inline-end: .65rem; border: var(--diarito-border-strong); border-radius: var(--diarito-radius-xs); background: var(--diarito-color-surface); color: var(--diarito-color-text-strong); font: inherit; cursor: pointer; }
+.onboarding-next { display: flex; gap: .8rem; padding: 1rem; background: var(--diarito-color-surface-soft); border: 1px dashed var(--diarito-color-border-strong); border-radius: var(--diarito-radius-sm); margin-top: .2rem; }
+.onboarding-next i { margin-top: .2rem; }
+.onboarding-next strong { font-size: .875rem; color: var(--diarito-color-text-strong); }
+.onboarding-next p { font-size: .875rem; line-height: 1.5; color: var(--diarito-color-text-secondary); margin: .35rem 0 0; }
+@media(max-width:900px) { .onboarding-layout { grid-template-columns: 1fr; } .onboarding-story { display: none; } }
+@media(max-width:480px) { .auth-panel__body { padding: 1.25rem; } .onboarding-layout { padding-inline: 1rem; } .auth-form-grid { gap: .6rem; } .onboarding-controls { margin-top: .3rem; } }
+
+.auth-demo-note { margin: 0; line-height: 1.55; }
+.auth-demo-note code { font-size: inherit; overflow-wrap: anywhere; }

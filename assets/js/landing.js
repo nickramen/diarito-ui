@@ -1,5 +1,7 @@
 (() => {
   const root = document.documentElement;
+  const readPreference = key => { try { return localStorage.getItem(key); } catch { return null; } };
+  const writePreference = (key,value) => { try { localStorage.setItem(key,value); } catch { /* Public pages remain usable without stored preferences. */ } };
   root.classList.add("has-js");
 
   const translations = {
@@ -26,6 +28,7 @@
       "countryKorea": "Corea del Sur",
       "countryColombia": "Colombia",
       "navHome": "Inicio",
+      "navLeaderboard": "Leaderboard",
       "navRecent": "Últimos diarios",
       "communityExplore": "Explorá los diarios de la comunidad",
       "testimonialsKicker": "Voces de la comunidad · testimonios ficticios",
@@ -96,9 +99,9 @@
       "membershipLanguages": "Coreano ↔ Español",
       "membershipLevel": "Nivel inicial de la beta: A2",
       "membershipJoin": "Unite por $7",
-      "membershipPreview": "Inscripción y pago aún no habilitados.",
-      "membershipPendingTitle": "La membresía aún no está disponible.",
-      "membershipPendingBody": "Esta versión muestra la propuesta de acceso a Diarito. Todavía no es posible registrarse ni realizar un pago desde esta página.",
+      "membershipPreview": "Podés probar el registro de la demo. Los pagos aún no están habilitados.",
+      "membershipPendingTitle": "Podés recorrer la demo de Diarito.",
+      "membershipPendingBody": "Creá una cuenta local para explorar Diarito. Los pagos de la membresía aún no están habilitados.",
       "membershipIncludes": "¿Qué incluye tu membresía?",
       "benefitDiaryTitle": "Tu diario personal",
       "benefitDiaryBody": "Escribí sobre tu día, tus experiencias y emociones.",
@@ -274,7 +277,7 @@
       "blog3P2": "Al día siguiente, intentá recordarla sin mirar tus notas. Si aparece una oportunidad de usarla en una conversación o un diario, aprovechala. Así empezás a transformar una expresión que reconocés en una que podés producir.",
       "loginMetaTitle": "Iniciar sesión · Diarito",
       "signupMetaTitle": "Registrate · Diarito",
-      "authMetaDescription": "Pantallas de acceso y registro de Diarito. La autenticación aún no está habilitada.",
+      "authMetaDescription": "Creá tu cuenta de demostración y practicá español o coreano con tu propio diario.",
       "loginTitle": "Iniciar sesión",
       "loginIntro": "Iniciá sesión para continuar tu aprendizaje y tus conversaciones.",
       "signupTitle": "Crear cuenta",
@@ -284,7 +287,7 @@
       "authUsername": "Nombre de usuario",
       "authLearning": "Idioma que estás aprendiendo",
       "authSelect": "Seleccioná un idioma",
-      "authPending": "Acceso y registro aún no disponibles.",
+      "authPending": "Demo local: tu cuenta y tus diarios se guardan en este navegador.",
       "authNoAccount": "¿Todavía no tenés cuenta?",
       "authHasAccount": "¿Ya tenés cuenta?",
       "authCreate": "Crear cuenta",
@@ -314,6 +317,7 @@
       "countryKorea": "대한민국",
       "countryColombia": "콜롬비아",
       "navHome": "홈",
+      "navLeaderboard": "활동 순위",
       "navRecent": "최근 일기",
       "communityExplore": "커뮤니티 일기 둘러보기",
       "testimonialsKicker": "커뮤니티의 목소리 · 가상 후기",
@@ -384,9 +388,9 @@
       "membershipLanguages": "한국어 ↔ 스페인어",
       "membershipLevel": "베타 시작 수준: A2",
       "membershipJoin": "$7에 함께하기",
-      "membershipPreview": "가입 및 결제는 아직 준비 중이에요.",
-      "membershipPendingTitle": "아직 멤버십에 가입할 수 없어요.",
-      "membershipPendingBody": "현재 페이지는 Diarito 멤버십의 안내용 버전이에요. 아직 이 페이지에서 가입하거나 결제할 수 없어요.",
+      "membershipPreview": "데모 회원가입을 체험할 수 있어요. 결제는 아직 지원하지 않아요.",
+      "membershipPendingTitle": "Diarito 데모를 둘러보세요.",
+      "membershipPendingBody": "로컬 계정을 만들고 Diarito를 체험해 보세요. 멤버십 결제는 아직 지원하지 않아요.",
       "membershipIncludes": "멤버십에 포함된 기능",
       "benefitDiaryTitle": "나만의 일기",
       "benefitDiaryBody": "하루의 경험과 감정을 기록해요.",
@@ -562,7 +566,7 @@
       "blog3P2": "다음 날에는 기록을 보지 않고 그 표현을 떠올려 보세요. 대화나 일기에 사용할 기회가 생기면 활용해 보세요. 이렇게 알아보던 표현을 스스로 사용할 수 있는 표현으로 만들어 가요.",
       "loginMetaTitle": "로그인 · Diarito",
       "signupMetaTitle": "회원가입 · Diarito",
-      "authMetaDescription": "Diarito 로그인 및 회원가입 화면. 인증 기능은 아직 준비 중입니다.",
+      "authMetaDescription": "데모 계정을 만들고 나만의 일기로 스페인어나 한국어를 연습해 보세요.",
       "loginTitle": "로그인",
       "loginIntro": "로그인하고 학습과 대화를 이어 가세요.",
       "signupTitle": "계정 만들기",
@@ -572,7 +576,7 @@
       "authUsername": "사용자 이름",
       "authLearning": "학습 중인 언어",
       "authSelect": "언어 선택",
-      "authPending": "로그인과 회원가입을 준비 중이에요.",
+      "authPending": "로컬 데모: 계정과 일기는 이 브라우저에 저장돼요.",
       "authNoAccount": "아직 계정이 없나요?",
       "authHasAccount": "이미 계정이 있나요?",
       "authCreate": "계정 만들기",
@@ -641,7 +645,7 @@
     const pageMeta = {"membership":["membershipMetaTitle","membershipMetaDescription"],"blog":["blogMetaTitle","blogMetaDescription"],"login":["loginMetaTitle","authMetaDescription"],"signup":["signupMetaTitle","authMetaDescription"]}[page];
     document.title = publicFeedPage ? dict.feedMetaTitle : pageMeta ? dict[pageMeta[0]] : meta[next].title;
     document.querySelector('meta[name="description"]')?.setAttribute("content", publicFeedPage ? dict.feedMetaDescription : pageMeta ? dict[pageMeta[1]] : meta[next].description);
-    if (persist) localStorage.setItem("diarito-language", next);
+    if (persist) writePreference("diarito-language", next);
     document.dispatchEvent(new CustomEvent("diarito:languagechange", { detail: { language: next } }));
     window.setTimeout(() => root.classList.remove("is-language-switching"), 240);
   };
@@ -663,11 +667,11 @@
         : (language === "ko" ? "어둡게" : "Oscuro");
     });
 
-    if (persist) localStorage.setItem("diarito-theme", next);
+    if (persist) writePreference("diarito-theme", next);
   };
 
-  const savedLanguage = localStorage.getItem("diarito-language");
-  const savedTheme = localStorage.getItem("diarito-theme");
+  const savedLanguage = readPreference("diarito-language");
+  const savedTheme = readPreference("diarito-theme");
   const preferredTheme = window.matchMedia?.("(prefers-color-scheme: dark)")?.matches ? "dark" : "light";
 
   setLanguage(savedLanguage || "es", false);

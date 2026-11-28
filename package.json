@@ -1,0 +1,11 @@
+{
+  "name": "diarito-ui",
+  "version": "2.20.0",
+  "private": true,
+  "description": "Diarito MVP V1 browser-local demo and shared UI library",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.cjs",
+    "check": "node scripts/check.mjs"
+  }
+}

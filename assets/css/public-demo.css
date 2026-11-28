@@ -1,0 +1,30 @@
+/* Public beta pages compose the established site and UI Library. */
+.landing-header [hidden] { display: none !important; }
+.public-demo-section { padding-block: clamp(2rem,5vw,4rem); }
+.public-demo-reading { width: min(100%,52rem); margin-inline: auto; }
+.public-demo-intro { text-align: center; padding-bottom: clamp(1.75rem,4vw,3rem); }
+.public-demo-intro h1 { font-family: var(--diarito-font-display); font-size: clamp(2.5rem,5vw,4rem); font-weight: 400; margin: .65rem 0; }
+html[lang="ko"] .public-demo-intro h1 { font-family: var(--diarito-font-ui); font-size: clamp(2rem,4vw,3rem); font-weight: 700; }
+.public-demo-intro > p { max-width: 38rem; margin: .8rem auto 0; line-height: 1.7; color: var(--diarito-color-text-secondary); }
+.public-demo-notice { color: var(--diarito-color-text-muted); font-size: .875rem; padding: .9rem 1rem; border: 1px dashed var(--diarito-color-border-strong); border-radius: var(--diarito-radius-sm); background: var(--diarito-color-surface-soft); line-height: 1.6; }
+.public-guideline { padding-block: 1.4rem; border-bottom: var(--diarito-border); }
+.public-guideline h2 { font-size: 1.2rem; line-height: 1.35; margin: 0 0 .65rem; }
+.public-guideline p { margin: 0; line-height: 1.75; color: var(--diarito-color-text-secondary); }
+.public-guideline-actions { display: flex; justify-content: center; margin-top: 2rem; }
+.public-activity-table-wrap { width: 100%; overflow-x: auto; }
+.public-activity-table { border-collapse: collapse; width: 100%; text-align: start; }
+.public-activity-table th { text-align: start; font-size: .875rem; color: var(--diarito-color-text-secondary); font-weight: 500; padding: .9rem .75rem; border-bottom: var(--diarito-border-strong); white-space: nowrap; }
+.public-activity-table td { padding: 1rem .75rem; border-bottom: var(--diarito-border); font-size: .875rem; }
+.public-activity-rank { color: var(--diarito-color-text-muted); width: 4.5rem; }
+.public-activity-person { display: flex; align-items: center; gap: .8rem; width: fit-content; }
+.public-activity-person > span > strong, .public-activity-person > span > span { display: block; }
+.public-activity-person strong { color: var(--diarito-color-text-strong); font-weight: 600; font-size: 1rem; }
+.public-activity-person > span > span { color: var(--diarito-color-text-muted); font-size: .8125rem; margin-top: .15rem; }
+.public-activity-table .public-activity-count { text-align: end; }
+.public-activity-count strong { font-weight: 600; color: var(--diarito-color-text-strong); }
+.public-activity-footer { display: flex; align-items: center; gap: 2rem; margin-top: 1.5rem; }
+.public-activity-footer p { margin: 0; font-size: .875rem; line-height: 1.6; }
+.public-activity-empty { padding: 2rem 1rem; text-align: center; }
+.public-activity-empty h2 { font-size: 1.4rem; margin-bottom: .7rem; }
+@media(min-width:1101px) and (max-width:1250px) { .landing-nav { gap: .75rem; } .landing-header__inner { gap: 1rem; } }
+@media(max-width:600px) { .public-activity-table th,.public-activity-table td { padding-inline: .4rem; } .public-activity-language { display: none; } .public-activity-rank { width: 2.75rem; } .public-activity-table th:last-child { white-space: normal; max-width: 6rem; } .public-activity-person { gap: .55rem; } .public-activity-person .diarito-avatar { width: 2.25rem; height: 2.25rem; flex: 0 0 auto; } .public-activity-footer { flex-direction: column; align-items: stretch; gap: 1rem; } }

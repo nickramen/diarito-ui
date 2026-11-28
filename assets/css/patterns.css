@@ -1089,7 +1089,7 @@ html[data-theme="dark"] .diarito-brand__mark { border-color: #777; }
   transform: translate(calc(-1 * var(--portrait-x, 50%)), calc(-1 * var(--portrait-y, 30%)));
 }
 /* Inline editorial feedback. Semantic color is reserved for the actual edit. */
-.diarito-correction-diff { margin: 0; padding: .7rem .8rem; border: var(--diarito-border); border-radius: var(--diarito-radius-sm); background: var(--diarito-color-surface); color: var(--diarito-color-text-secondary); font-size: var(--diarito-text-sm); line-height: 1.9; overflow-wrap: anywhere; }
+.diarito-correction-diff { margin: 0; padding: .7rem .8rem; border: 1px dashed var(--diarito-color-border-strong); border-radius: var(--diarito-radius-sm); background: var(--diarito-color-surface); color: var(--diarito-color-text-secondary); font-size: var(--diarito-text-sm); line-height: 1.9; overflow-wrap: anywhere; }
 .diarito-correction-diff__removed, .diarito-correction-diff__added { border-radius: .16rem; padding: .08em .16em; box-decoration-break: clone; -webkit-box-decoration-break: clone; font-weight: var(--diarito-weight-medium); }
 .diarito-correction-diff__removed { color: #a71d20; background: #fce3e4; text-decoration: line-through; text-decoration-thickness: 1.5px; }
 .diarito-correction-diff__added { color: #166534; background: #dcfce7; text-decoration: none; }
@@ -1115,3 +1115,11 @@ html[data-theme="dark"] .diarito-correction-diff__added { color: var(--diarito-s
 .diarito-thread__like { position: static; display: inline-flex; align-items: center; justify-content: center; gap: .3rem; min-width: 2rem; min-height: 2rem; padding: .3rem .25rem; text-decoration: none; font-size: .85rem; }
 .diarito-thread__like[aria-pressed="true"] { color: var(--diarito-error-text); }
 .diarito-thread__likes { font-size: var(--diarito-text-xs); font-weight: var(--diarito-weight-medium); }
+
+/* Relative reply time stays next to the handle; the full date is available on hover. */
+.diarito-thread__time { display: inline; margin-inline-start: .35rem; color: var(--diarito-color-text-muted); font-size: var(--diarito-text-xs); white-space: nowrap; }
+.diarito-thread__time::before { content: "·"; margin-inline-end: .35rem; }
+/* Several selected fragments can belong to one person's correction. */
+.diarito-correction-group { border: 1px dashed var(--diarito-color-border-strong); border-radius: var(--diarito-radius-sm); padding: .8rem; }
+.diarito-correction-group > .diarito-correction-diff { padding: 0; border: 0; }
+.diarito-correction-group > .diarito-correction-diff + .diarito-correction-diff { margin-top: .8rem; }

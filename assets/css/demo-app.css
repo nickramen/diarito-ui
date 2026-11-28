@@ -1,0 +1,170 @@
+/* App layouts compose the shared Diarito components. */
+.demo-app { background: var(--diarito-color-bg); color: var(--diarito-color-text-strong); }
+.demo-app button, .demo-app a { -webkit-tap-highlight-color: transparent; }
+.demo-app button { cursor: pointer; }
+.demo-app a { text-underline-offset: .18em; }
+.demo-app :focus-visible { outline: 2px solid var(--diarito-color-text-strong); outline-offset: 3px; }
+.demo-app [hidden] { display: none !important; }
+.demo-skip { position: fixed; left: 1rem; top: -5rem; padding: .8rem; z-index: 100; background: var(--diarito-color-surface); }
+.demo-skip:focus { top: 1rem; }
+.demo-banner { background: var(--diarito-color-action-bg); color: var(--diarito-color-action-fg); padding: .45rem 1rem; text-align: center; font-size: .75rem; line-height: 1.5; }
+.demo-banner a { color: inherit; margin-left: .5rem; }
+.app-header { position: sticky; top: 0; z-index: 12; height: 4.4rem; padding: 0 max(1rem, calc((100vw - 82rem)/2)); display: flex; align-items: center; justify-content: space-between; gap: 1rem; border-bottom: var(--diarito-border); background: var(--diarito-color-bg); }
+.app-brand { display: inline-flex; align-items: center; gap: .6rem; color: inherit; text-decoration: none; font-family: var(--diarito-font-display); font-size: 1.85rem; }
+.app-brand__mark { height: 1.2rem; width: 1.2rem; background: currentColor; border-radius: .16rem; }
+.app-header__actions, .app-toolbar, .app-actions { display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; }
+.app-header__actions { flex-wrap: nowrap; }
+.app-layout { display: grid; grid-template-columns: 13rem minmax(0, 42rem) minmax(13rem, 18rem); max-width: 82rem; margin: 0 auto; gap: 2rem; padding: 2rem 1rem 4rem; align-items: start; }
+.app-sidebar { position: sticky; top: 6.4rem; }
+.app-sidebar nav { display: grid; gap: .3rem; }
+.app-nav-link { display: flex; align-items: center; gap: .7rem; color: var(--diarito-color-text-secondary); text-decoration: none; border-radius: var(--diarito-radius-xs); padding: .8rem .7rem; font-size: .9rem; }
+.app-nav-link i { font-size: 1.05rem; }
+.app-nav-link[aria-current="page"] { background: var(--diarito-color-control); color: var(--diarito-color-text-strong); font-weight: 600; }
+.app-nav-link:hover { background: var(--diarito-color-surface-soft); }
+.app-nav-link .app-count { margin-left: auto; }
+.app-sidebar__bottom { border-top: var(--diarito-border); margin-top: 1.2rem; padding-top: 1rem; }
+.app-sidebar__user { display: flex; gap: .65rem; align-items: center; margin: 1.5rem .6rem .5rem; }
+.app-small { font-size: .8125rem; color: var(--diarito-color-text-muted); line-height: 1.6; }
+.app-muted { color: var(--diarito-color-text-muted); }
+.app-count { border-radius: var(--diarito-radius-xs); padding: .18rem .4rem; font-size: .7rem; background: var(--diarito-color-control); font-variant-numeric: tabular-nums; }
+.app-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; margin-bottom: 1.4rem; }
+.app-heading h1 { margin: 0 0 .35rem; font-size: 1.5rem; line-height: 1.2; letter-spacing: -.035em; }
+.app-heading p { margin: 0; color: var(--diarito-color-text-secondary); font-size: .9rem; line-height: 1.6; }
+.app-kicker { font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 600; color: var(--diarito-color-text-muted); margin: 0 0 .6rem; }
+.app-tabs { display: flex; align-items: center; flex-wrap: wrap; gap: .25rem; border-bottom: var(--diarito-border); margin-bottom: .5rem; }
+.app-tabs button { border: 0; border-bottom: 2px solid transparent; background: transparent; color: var(--diarito-color-text-muted); font-size: .875rem; min-height: 2.8rem; padding: .75rem .8rem; }
+.app-tabs button[aria-pressed="true"] { color: var(--diarito-color-text-strong); border-bottom-color: currentColor; font-weight: 600; }
+.app-prompt { display: flex; align-items: center; gap: 1rem; border: 1px dashed var(--diarito-color-border-strong); padding: 1rem; border-radius: var(--diarito-radius-sm); margin-bottom: 1.5rem; background: var(--diarito-color-surface-soft); }
+.app-prompt > i { font-size: 1.3rem; }
+.app-prompt p { margin: .3rem 0 0; color: var(--diarito-color-text-secondary); font-size: .875rem; }
+.app-prompt > div { flex: 1; }
+.app-prompt .diarito-button { flex-shrink: 0; }
+.app-feed-post { padding: 1.5rem 0; border-bottom: var(--diarito-border); }
+.app-feed-post:first-child { padding-top: 1.2rem; }
+.app-post-head { display: flex; align-items: flex-start; gap: .65rem; margin-bottom: 1rem; }
+.app-post-person { min-width: 0; flex: 1; }
+.app-post-person a { color: inherit; text-decoration: none; font-weight: 600; font-size: .9rem; }
+.app-post-person a:hover { text-decoration: underline; }
+.app-post-meta { display: flex; flex-wrap: wrap; align-items: center; gap: .3rem; font-size: .75rem; color: var(--diarito-color-text-muted); margin-top: .15rem; line-height: 1.6; }
+.app-post-title { font-size: 1.1rem; line-height: 1.45; margin: 0 0 .6rem; }
+.app-post-text { white-space: pre-wrap; overflow-wrap: anywhere; margin: 0; line-height: 1.8; font-size: 1rem; color: var(--diarito-color-text-strong); }
+.app-post-photo { width: 100%; max-height: 23rem; object-fit: cover; border-radius: var(--diarito-radius-sm); margin: 1rem 0 .2rem; background: var(--diarito-color-surface-soft); }
+.app-post-tags { display: flex; gap: .4rem; margin-top: 1rem; flex-wrap: wrap; }
+.app-post-actions { display: flex; gap: .45rem; align-items: center; margin-top: .75rem; }
+.app-post-actions .diarito-feed-action { cursor: pointer; }
+.app-post-actions .diarito-feed-action[aria-pressed="true"] { color: var(--diarito-error-text); }
+.app-post-actions .app-correct { margin-left: auto; }
+.app-read-more { display: inline-block; border: 0; background: transparent; color: var(--diarito-color-text-secondary); font-weight: 600; font-size: .875rem; padding: .5rem 0; }
+.app-preview-replies { border-top: 1px dashed var(--diarito-color-border-strong); margin-top: .8rem; padding-top: .6rem; }
+.app-reply-preview { padding: .55rem 0; }
+.app-reply-preview__head { display: flex; align-items: center; gap: .5rem; }
+.app-reply-preview__head a { text-decoration: none; color: inherit; font-size: .875rem; font-weight: 600; }
+.app-reply-preview__head time { font-size: .75rem; color: var(--diarito-color-text-muted); }
+.app-reply-preview__head > i { margin-left: auto; color: var(--diarito-color-text-muted); }
+.app-reply-preview p { margin: .5rem 0 0; font-size: .875rem; line-height: 1.65; white-space: pre-wrap; }
+.app-reply-preview .diarito-correction-diff { margin-top: .5rem; border-style: dashed; }
+.app-avatar { flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; overflow: hidden; width: 2.5rem; height: 2.5rem; border-radius: 50%; background: var(--diarito-color-control); color: var(--diarito-color-text-strong); font-size: .9rem; font-weight: 500; }
+.app-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.app-avatar--sm { width: 1.85rem; height: 1.85rem; font-size: .75rem; }
+.app-avatar--lg { width: 5rem; height: 5rem; font-size: 1.7rem; }
+.app-empty { padding: 3rem 1.5rem; text-align: center; border: 1px dashed var(--diarito-color-border-strong); border-radius: var(--diarito-radius-sm); margin: 1rem 0; }
+.app-empty > i { font-size: 1.8rem; color: var(--diarito-color-text-muted); }
+.app-empty h2 { font-size: 1.15rem; margin: 1rem 0 .6rem; }
+.app-empty p { font-size: .9rem; color: var(--diarito-color-text-secondary); line-height: 1.7; }
+.app-aside { position: sticky; top: 6.4rem; }
+.app-aside-section { margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: var(--diarito-border); }
+.app-aside h2 { font-size: .9rem; margin: 0 0 .8rem; }
+.app-aside p { font-size: .875rem; color: var(--diarito-color-text-secondary); line-height: 1.7; }
+.app-oio { display: flex; flex-direction: column; gap: .6rem; padding: 0; list-style: none; font-size: .875rem; }
+.app-oio li { display: flex; gap: .6rem; align-items: flex-start; }
+.app-oio span { font-size: .75rem; width: 1.4rem; height: 1.4rem; display: grid; place-items: center; border: var(--diarito-border-strong); border-radius: 50%; flex-shrink: 0; }
+.app-person-row { display: flex; align-items: center; gap: .65rem; padding: .7rem 0; }
+.app-person-row > div { flex: 1; min-width: 0; }
+.app-person-row a { color: inherit; text-decoration: none; font-weight: 600; font-size: .875rem; }
+.app-person-row p { margin: 0; }
+.app-form { display: grid; gap: 1.1rem; }
+.app-form .diarito-field { gap: .4rem; }
+.app-form-row { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1rem; }
+.app-form .diarito-textarea { font-size: 1rem; line-height: 1.8; }
+.app-editor-text { min-height: 19rem; }
+.app-form-help { margin: .3rem 0 0; font-size: .8125rem; line-height: 1.6; color: var(--diarito-color-text-secondary); }
+.app-error { color: var(--diarito-error-text); font-size: .875rem; line-height: 1.6; }
+.app-inline-notice { border: 1px dashed var(--diarito-color-border-strong); border-radius: var(--diarito-radius-sm); padding: 1rem; font-size: .875rem; line-height: 1.65; }
+.app-form-footer { display: flex; justify-content: space-between; align-items: center; gap: .6rem; flex-wrap: wrap; padding-top: .4rem; }
+.app-photo-preview { position: relative; }
+.app-photo-preview img { max-height: 15rem; width: 100%; object-fit: contain; border-radius: .5rem; background: var(--diarito-color-surface-soft); }
+.app-profile-header { padding-bottom: 1.5rem; }
+.app-profile-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
+.app-profile-header h1 { font-size: 1.65rem; margin: .7rem 0 .2rem; letter-spacing: -.03em; }
+.app-profile-header p { line-height: 1.7; margin: .6rem 0; }
+.app-profile-stats { display: flex; gap: 1.5rem; margin-top: 1rem; font-size: .875rem; }
+.app-profile-stats strong { display: block; font-size: 1.2rem; margin-bottom: .2rem; }
+.app-section { border-top: var(--diarito-border); padding: 1.4rem 0; }
+.app-section h2 { font-size: 1.1rem; margin: 0 0 1rem; }
+.app-collection-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1rem; }
+.app-collection { text-align: left; display: block; width: 100%; padding: 1.25rem; border: var(--diarito-border); border-radius: var(--diarito-radius-sm); background: var(--diarito-color-surface); color: inherit; }
+.app-collection:hover { border-color: var(--diarito-color-text-muted); }
+.app-collection > i { font-size: 1.4rem; }
+.app-collection strong { display: block; margin: 1.2rem 0 .3rem; font-size: 1rem; }
+.app-word { border-bottom: var(--diarito-border); padding: 1.25rem 0; }
+.app-word > header { display: flex; gap: 1rem; align-items: start; justify-content: space-between; }
+.app-word h3 { font-size: 1.15rem; margin: 0; }
+.app-word p { margin: .5rem 0; font-size: .9rem; line-height: 1.6; }
+.app-word blockquote { margin: .6rem 0; padding: .6rem 1rem; border-left: 2px solid var(--diarito-color-border-strong); color: var(--diarito-color-text-secondary); font-size: .9rem; }
+.app-notification { display: flex; gap: .75rem; padding: 1rem; border-bottom: var(--diarito-border); }
+.app-notification.is-unread { background: var(--diarito-color-surface-soft); }
+.app-notification p { margin: 0 0 .4rem; font-size: .9rem; line-height: 1.6; }
+.app-notification > div { flex: 1; min-width: 0; }
+.app-table { width: 100%; border-collapse: collapse; font-size: .875rem; }
+.app-table th { text-align: left; font-size: .75rem; color: var(--diarito-color-text-muted); font-weight: 500; border-bottom: var(--diarito-border); padding: .8rem .5rem; }
+.app-table td { padding: .85rem .5rem; border-bottom: var(--diarito-border); }
+.app-table th:last-child,.app-table td:last-child { text-align: right; }
+.app-table .app-person-row { padding: 0; }
+.app-report { border: var(--diarito-border); border-radius: var(--diarito-radius-sm); padding: 1rem; margin-bottom: 1rem; }
+.app-report h3 { font-size: .95rem; margin: 0 0 .5rem; }
+.app-report p { font-size: .875rem; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; }
+.app-mobile-nav { display: none; }
+.app-toast { position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%); max-width: min(34rem,calc(100% - 2rem)); color: var(--diarito-color-action-fg); background: var(--diarito-color-action-bg); padding: .85rem 1.2rem; border-radius: var(--diarito-radius-sm); z-index: 150; box-shadow: var(--diarito-shadow-md); font-size: .875rem; line-height: 1.5; }
+.utility-dialog { border: var(--diarito-border-strong); border-radius: var(--diarito-radius-md); padding: 1.5rem; width: min(31rem,calc(100% - 2rem)); max-height: calc(100dvh - 3rem); overflow: auto; color: var(--diarito-color-text-strong); background: var(--diarito-color-surface); }
+.utility-dialog::backdrop { background: var(--diarito-color-backdrop); backdrop-filter: blur(4px); }
+.utility-dialog__head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
+.utility-dialog h2 { font-size: 1.25rem; margin: 0; }
+.utility-dialog p { font-size: .9rem; line-height: 1.65; }
+.app-menu { position: relative; }
+.app-menu > summary { cursor: pointer; list-style: none; display: grid; place-items: center; width: 2rem; height: 2rem; border-radius: var(--diarito-radius-xs); }
+.app-menu > summary::-webkit-details-marker { display: none; }
+.app-menu[open] > summary { background: var(--diarito-color-control); }
+.app-menu__panel { position: absolute; top: calc(100% + .3rem); right: 0; min-width: 12rem; background: var(--diarito-color-surface); border: var(--diarito-border-strong); border-radius: var(--diarito-radius-sm); box-shadow: var(--diarito-shadow-md); z-index: 10; padding: .35rem; }
+.app-menu__panel button,.app-menu__panel a { display: flex; width: 100%; align-items: center; gap: .5rem; border: 0; padding: .75rem; background: transparent; color: var(--diarito-color-text-strong); text-align: left; text-decoration: none; font-size: .875rem; }
+.app-menu__panel button:hover,.app-menu__panel a:hover { background: var(--diarito-color-control); }
+.app-steps-line { display: flex; gap: .5rem; margin-bottom: 1.5rem; font-size: .75rem; color: var(--diarito-color-text-muted); }
+.app-steps-line span { border-bottom: 2px solid var(--diarito-color-border); padding-bottom: .55rem; flex: 1; }
+.app-steps-line .is-active { color: var(--diarito-color-text-strong); border-bottom-color: currentColor; font-weight: 600; }
+.app-guidelines { font-size: 1rem; line-height: 1.85; }
+.app-guidelines h2 { font-size: 1.1rem; margin-top: 1.5rem; }
+.app-loading { padding: 2rem; text-align: center; }
+@media (max-width: 1160px) { .app-layout { grid-template-columns: 12rem minmax(0,42rem); max-width: 62rem; } .app-aside { display: none; } }
+@media (max-width: 720px) {
+  .app-header { height: 3.8rem; padding-inline: 1rem; }
+  .app-header__question { display: none; }
+  .app-layout { display: block; padding: 1.5rem 1rem 6rem; }
+  .app-sidebar { display: none; }
+  .app-mobile-nav { display: flex; justify-content: space-around; position: fixed; bottom: 0; left: 0; right: 0; z-index: 15; background: var(--diarito-color-surface); border-top: var(--diarito-border); padding: .4rem .2rem max(.5rem,env(safe-area-inset-bottom)); }
+  .app-mobile-nav .app-nav-link { display: grid; place-items: center; padding: .35rem .5rem; gap: .3rem; font-size: .625rem; }
+  .app-mobile-nav .app-nav-link i { font-size: 1.15rem; }
+  .app-mobile-nav .app-count { display: none; }
+  .app-toast { bottom: 5.5rem; }
+  .app-heading h1 { font-size: 1.4rem; }
+  .app-prompt { flex-wrap: wrap; }
+  .app-prompt .diarito-button { margin-left: 2.3rem; }
+  .app-form-row { grid-template-columns: 1fr; }
+  .app-collection-grid { gap: .6rem; }
+  .app-collection { padding: 1rem; }
+  .app-editor-text { min-height: 17rem; }
+  .app-profile-stats { gap: 1rem; }
+  .app-post-actions { gap: .15rem; }
+  .app-post-photo { max-height: 19rem; }
+  .app-banner-detail { display: none; }
+  .app-header .diarito-button--icon { width: 2.4rem; min-height: 2.4rem; }
+}
+@media (prefers-reduced-motion: reduce) { .demo-app * { scroll-behavior: auto !important; transition: none !important; } }

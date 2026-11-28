@@ -1,3 +1,14 @@
+# 2.20.0 — MVP V1 browser-local demo
+
+- Enables registration, login/logout, unique local accounts and resumable ES/KO onboarding with optional photo.
+- Adds daily-question challenge, diary CRUD with three privacy modes and a chronological 26-post Community feed.
+- Implements grouped human fragment corrections, selective acceptance, preserved originals, clean versions and OIO rewrites.
+- Provides an explicitly labeled rule-based AI demonstration, with truthful unmatched-text behavior.
+- Adds profiles, connection requests, basic word collections, activity leaderboard, notifications and local moderation.
+- Adds compact shared inputs, reply timestamps and dashed correction containers.
+- Preserves the public website and UI Library; adds public guidelines and leaderboard.
+- Adds portable data export/import and meaningful storage/controller tests. Full walkthrough and production gaps: MVP-V1-DEMO.md.
+
 # Changelog
 
 ## 2.19.0 - Phone correction walkthrough + cycle background

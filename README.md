@@ -1,6 +1,21 @@
-# Diarito UI Library 2.19.0
+# Diarito UI Library 2.20.0
 
 Diarito's reusable HTML, CSS and native JavaScript design system.
+
+## MVP V1 demo · 2.20.0
+
+Diarito now includes a browser-local account and diary experience: onboarding, daily question, chronological feed, human corrections by selected fragments, accepted clean versions and rewrites. Public discovery and the component library are preserved.
+
+Start with `login.html` on HTTPS or localhost. Read [the complete demo guide](docs/MVP-V1-DEMO.md) for accounts, a presentation walkthrough, scope decisions and production prerequisites. `python3 scripts/serve-demo.py` serves the downloaded project locally. No package installation is needed to use the demo.
+
+The AI panel is an explicitly labeled, limited local simulation. Browser-local accounts and moderation are demonstration features, not server security or a production-ready public beta. All initial identities and stories are fictional.
+
+Validation: `node scripts/check.mjs`, `node --test tests/*.test.cjs`, `node scripts/build.mjs`.
+
+### Earlier UI Library releases
+
+The historical notes below describe earlier versions and are retained as a changelog. Disabled authentication described in 2.19.0 has been replaced by the local demo in 2.20.0.
+
 
 Version 2.19.0 presents human feedback in an animated landscape tablet walkthrough and moves the learning grid treatment behind the entire sticky cycle.
 
