@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-thin-rounded/css/uicons-thin-rounded.css">
   <link rel="stylesheet" href="assets/css/diarito-system.css?v=2.19.0">
   <link rel="preload" as="image" href="assets/images/hero-diarito.webp">
-  <link rel="stylesheet" href="assets/css/landing.css?v=2.19.0-community-r3">
+  <link rel="stylesheet" href="assets/css/landing.css?v=2.19.0-public-r1">
 </head>
 <body class="landing-page">
   <div class="landing-shell">
@@ -22,32 +22,32 @@
         <span class="landing-announcement__eyebrow" data-i18n="announcementEyebrow">Diarito · versión beta</span>
         <p data-i18n="announcement">Empezamos con Coreano ↔ Español y nivel A2 para validar una experiencia de aprendizaje basada en la vida real.</p>
         <a href="#community" data-i18n="announcementLink">Conocé el enfoque</a>
-        <button type="button" data-landing-announcement-close aria-label="Cerrar anuncio"><i class="fi fi-rr-cross-small"></i></button>
+        <button type="button" data-landing-announcement-close aria-label="Cerrar anuncio" data-i18n-aria="ariaCloseAnnouncement"><i class="fi fi-rr-cross-small"></i></button>
       </div>
     </aside>
 
     <header class="landing-header">
       <div class="diarito-container diarito-container--lg landing-container landing-header__inner">
-        <a class="landing-brand" href="#top" aria-label="Inicio de Diarito">
+        <a class="landing-brand" href="#top" aria-label="Inicio de Diarito" data-i18n-aria="ariaHome">
           <span class="landing-brand__mark">D</span>
           <span>Diarito</span>
         </a>
 
-        <nav class="landing-nav" aria-label="Navegación principal">
-          <a href="#why" data-i18n="navWhy">Por qué Diarito</a>
+        <nav class="landing-nav" aria-label="Navegación principal" data-i18n-aria="ariaMainNav">
+          <a href="#top" data-i18n="navHome" aria-current="page">Inicio</a>
+          <a href="recent-diaries.html" data-i18n="navRecent">Últimos diarios</a>
           <a href="#how-it-works" data-i18n="navHow">Cómo funciona</a>
-          <a href="#feedback" data-i18n="navFeedback">Retroalimentación humana</a>
           <a href="#community" data-i18n="navCommunity">Comunidad</a>
           <a href="#membership" data-i18n="navMembership">Membresía</a>
         </nav>
 
         <div class="landing-header__actions">
-          <button class="landing-control diarito-button diarito-button--secondary diarito-button--sm" type="button" data-language-toggle aria-label="Cambiar idioma">
+          <button class="landing-control diarito-button diarito-button--secondary diarito-button--sm" type="button" data-language-toggle aria-label="Cambiar idioma" data-i18n-aria="ariaLanguage">
             <i class="fi fi-rr-language"></i>
             <span data-language-label>ESP</span>
             <i class="fi fi-rr-angle-small-down"></i>
           </button>
-          <button class="landing-control diarito-button diarito-button--secondary diarito-button--sm" type="button" data-theme-toggle aria-pressed="false" aria-label="Cambiar tema">
+          <button class="landing-control diarito-button diarito-button--secondary diarito-button--sm" type="button" data-theme-toggle aria-pressed="false" aria-label="Cambiar tema" data-i18n-aria="ariaTheme">
             <i class="fi fi-rr-moon" data-theme-icon></i>
             <span data-theme-label>Oscuro</span>
           </button>
@@ -55,14 +55,16 @@
         </div>
 
         <details class="landing-mobile-nav">
-          <summary aria-label="Abrir navegación"><i class="fi fi-rr-menu-burger"></i></summary>
+          <summary aria-label="Abrir navegación" data-i18n-aria="ariaMenu"><i class="fi fi-rr-menu-burger"></i></summary>
           <div class="landing-mobile-nav__panel">
-            <nav aria-label="Navegación móvil">
-              <a href="#why" data-i18n="navWhy">Por qué Diarito</a>
-              <a href="#how-it-works" data-i18n="navHow">Cómo funciona</a>
-              <a href="#feedback" data-i18n="navFeedback">Retroalimentación humana</a>
-              <a href="#community" data-i18n="navCommunity">Comunidad</a>
-              <a href="#membership" data-i18n="navMembership">Membresía</a>
+            <nav aria-label="Navegación móvil" data-i18n-aria="ariaMobileNav">
+          <a href="#top" data-i18n="navHome" aria-current="page">Inicio</a>
+          <a href="recent-diaries.html" data-i18n="navRecent">Últimos diarios</a>
+          <a href="#why" data-i18n="navWhy">Por qué Diarito</a>
+          <a href="#how-it-works" data-i18n="navHow">Cómo funciona</a>
+          <a href="#feedback" data-i18n="navFeedback">Retroalimentación humana</a>
+          <a href="#community" data-i18n="navCommunity">Comunidad</a>
+          <a href="#membership" data-i18n="navMembership">Membresía</a>
             </nav>
             <div class="landing-mobile-nav__actions">
               <button class="landing-control diarito-button diarito-button--secondary diarito-button--sm" type="button" data-language-toggle><i class="fi fi-rr-language"></i><span data-language-label>ESP</span></button>
@@ -325,6 +327,7 @@
               <li><span class="landing-community__icon" aria-hidden="true"><i class="fi fi-rr-globe"></i></span><div><strong data-i18n="communityDiscoverTitle">Descubrí otros mundos</strong><p data-i18n="communityDiscoverBody">Conocé otras experiencias y culturas a través de los diarios de la comunidad.</p></div></li>
               <li><span class="landing-community__icon" aria-hidden="true"><i class="fi fi-rr-users"></i></span><div><strong data-i18n="communityGrowTitle">Crecé junto a otros</strong><p data-i18n="communityGrowBody">Aprender y aportar son dos partes de la misma experiencia.</p></div></li>
             </ul>
+            <a class="landing-button diarito-button diarito-button--secondary diarito-button--md landing-community__explore" href="recent-diaries.html"><span data-i18n="communityExplore">Explorá los diarios de la comunidad</span><i class="fi fi-rr-angle-double-right" aria-hidden="true"></i></a>
           </div>
           <div class="landing-community__photos" data-reveal data-reveal-delay="80" aria-hidden="true">
             <img src="assets/images/cycle-es-02.webp" width="1200" height="600" alt="" loading="lazy" decoding="async">
@@ -344,6 +347,43 @@
             <article><span class="landing-community__icon" aria-hidden="true"><i class="fi fi-rr-lock"></i></span><div><strong data-i18n="mistakesChoiceTitle">Vos decidís qué compartís.</strong><p data-i18n="mistakesChoiceBody">Tu diario es tuyo. Elegí qué historias querés compartir con la comunidad y cuáles preferís guardar para vos.</p></div></article>
             <article><span class="landing-community__icon" aria-hidden="true"><i class="fi fi-rr-heart"></i></span><div><strong data-i18n="mistakesRespectTitle">El error es parte del proceso.</strong><p data-i18n="mistakesRespectBody">Acá, una corrección es una oportunidad para aprender, no un motivo para juzgar a alguien.</p></div></article>
           </div>
+        </div>
+      </section>
+
+      <section class="diarito-section landing-section landing-testimonials" id="testimonials">
+        <div class="diarito-container diarito-container--lg landing-container">
+          <div class="landing-testimonials__intro" data-reveal>
+            <span class="diarito-kicker landing-kicker" data-i18n="testimonialsKicker">Voces de la comunidad</span>
+            <h2 data-i18n="testimonialsTitle">Lo que queremos construir juntos.</h2>
+            <p data-i18n="testimonialsBody">Cada persona tiene sus propios motivos para aprender un idioma y conectar con otros.</p>
+          </div>
+          <div class="landing-testimonials__grid">
+            <article class="landing-testimonial" data-reveal data-reveal-delay="0">
+              <span class="landing-testimonial__quote" aria-hidden="true">“</span>
+              <h3 data-i18n="testimonial1Title">Aprender con mi propia vida</h3>
+              <blockquote><p data-i18n="testimonial1Body">Me gustaría practicar con las cosas que me pasan todos los días, no con frases que nunca voy a usar.</p></blockquote>
+              <span class="landing-testimonial__example" data-i18n="testimonialExample">Ejemplo de testimonio</span>
+            </article>
+            <article class="landing-testimonial" data-reveal data-reveal-delay="60">
+              <span class="landing-testimonial__quote" aria-hidden="true">“</span>
+              <h3 data-i18n="testimonial2Title">Entender, no solo corregir</h3>
+              <blockquote><p data-i18n="testimonial2Body">Quiero que alguien me explique por qué una expresión suena más natural y en qué situación usarla.</p></blockquote>
+              <span class="landing-testimonial__example" data-i18n="testimonialExample">Ejemplo de testimonio</span>
+            </article>
+            <article class="landing-testimonial" data-reveal data-reveal-delay="120">
+              <span class="landing-testimonial__quote" aria-hidden="true">“</span>
+              <h3 data-i18n="testimonial3Title">Aprender sin miedo</h3>
+              <blockquote><p data-i18n="testimonial3Body">Quiero poder equivocarme sin sentir que tengo que hablar perfecto desde el principio.</p></blockquote>
+              <span class="landing-testimonial__example" data-i18n="testimonialExample">Ejemplo de testimonio</span>
+            </article>
+            <article class="landing-testimonial" data-reveal data-reveal-delay="180">
+              <span class="landing-testimonial__quote" aria-hidden="true">“</span>
+              <h3 data-i18n="testimonial4Title">Compartir lo que sé</h3>
+              <blockquote><p data-i18n="testimonial4Body">Me gustaría ayudar a alguien con mi idioma mientras descubro su cultura y aprendo el suyo.</p></blockquote>
+              <span class="landing-testimonial__example" data-i18n="testimonialExample">Ejemplo de testimonio</span>
+            </article>
+          </div>
+          <p class="landing-testimonials__notice" data-i18n="testimonialsNotice">Testimonios de ejemplo. Son textos ficticios para mostrar el diseño; todavía no son opiniones de miembros reales.</p>
         </div>
       </section>
 
@@ -409,6 +449,8 @@
           </div>
           <div class="landing-footer__column">
             <strong data-i18n="footerDiarito">Diarito</strong>
+            <a href="#top" data-i18n="navHome">Inicio</a>
+            <a href="recent-diaries.html" data-i18n="navRecent">Últimos diarios</a>
             <a href="#why" data-i18n="navWhy">Por qué Diarito</a>
             <a href="#how-it-works" data-i18n="navHow">Cómo funciona</a>
             <a href="#feedback" data-i18n="navFeedback">Retroalimentación humana</a>
@@ -456,6 +498,6 @@
     </footer>
   </div>
 
-  <script src="assets/js/landing.js?v=2.19.0-community-r3"></script>
+  <script src="assets/js/landing.js?v=2.19.0-public-r1"></script>
 </body>
 </html>

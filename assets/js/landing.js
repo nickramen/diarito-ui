@@ -4,6 +4,57 @@
 
   const translations = {
     es: {
+      navHome: "Inicio",
+      navRecent: "Últimos diarios",
+      communityExplore: "Explorá los diarios de la comunidad",
+      testimonialsKicker: "Voces de la comunidad",
+      testimonialsTitle: "Lo que queremos construir juntos.",
+      testimonialsBody: "Cada persona tiene sus propios motivos para aprender un idioma y conectar con otros.",
+      testimonialsNotice: "Testimonios de ejemplo. Son textos ficticios para mostrar el diseño; todavía no son opiniones de miembros reales.",
+      testimonialExample: "Ejemplo de testimonio",
+      testimonial1Title: "Aprender con mi propia vida",
+      testimonial1Body: "Me gustaría practicar con las cosas que me pasan todos los días, no con frases que nunca voy a usar.",
+      testimonial2Title: "Entender, no solo corregir",
+      testimonial2Body: "Quiero que alguien me explique por qué una expresión suena más natural y en qué situación usarla.",
+      testimonial3Title: "Aprender sin miedo",
+      testimonial3Body: "Quiero poder equivocarme sin sentir que tengo que hablar perfecto desde el principio.",
+      testimonial4Title: "Compartir lo que sé",
+      testimonial4Body: "Me gustaría ayudar a alguien con mi idioma mientras descubro su cultura y aprendo el suyo.",
+      feedMetaTitle: "Últimos diarios · Diarito",
+      feedMetaDescription: "Explorá diarios de ejemplo en español y coreano y descubrí cómo funciona el intercambio de idiomas en Diarito.",
+      feedKicker: "Historias de todos los días",
+      feedTitle: "Últimos diarios",
+      feedIntro: "Un café, una conversación, un pequeño logro. Descubrí cómo otras personas cuentan su día en el idioma que están aprendiendo.",
+      feedDemoNotice: "Vista de demostración: todos los diarios, perfiles y correcciones de esta página son ejemplos ficticios, no publicaciones de usuarios reales.",
+      feedFilterLabel: "Filtrar diarios por idioma",
+      feedAll: "Todos",
+      feedSpanish: "Español",
+      feedKorean: "Coreano",
+      feedCountOne: "diario de ejemplo",
+      feedCountMany: "diarios de ejemplo",
+      feedPublic: "Público",
+      feedSample: "Ejemplo",
+      feedLike: "Me gusta",
+      feedComment: "Comentar",
+      feedSave: "Guardar",
+      feedCorrect: "Corregir",
+      feedActionHint: "Unite a la comunidad para interactuar",
+      feedCorrectionExample: "Ver ejemplo de retroalimentación",
+      feedOriginal: "Original",
+      feedSuggested: "Sugerencia",
+      feedExplanation: "Explicación",
+      feedJoinKicker: "Tu historia también tiene un lugar",
+      feedJoinTitle: "Conocé el mundo de otras personas. Compartí el tuyo.",
+      feedJoinBody: "Unite a la comunidad para compartir tus diarios, aprender de personas que hablan el idioma que querés aprender y ayudar a otros con el tuyo.",
+      feedJoinButton: "Unite a Diarito por $7",
+      feedBack: "Volver al inicio",
+      ariaLanguage: "Cambiar idioma",
+      ariaTheme: "Cambiar tema",
+      ariaMenu: "Abrir navegación",
+      ariaMainNav: "Navegación principal",
+      ariaMobileNav: "Navegación móvil",
+      ariaCloseAnnouncement: "Cerrar anuncio",
+      ariaHome: "Inicio de Diarito",
       navCommunity: "Comunidad",
       navMembership: "Membresía",
       announcementLink: "Conocé el enfoque",
@@ -149,6 +200,57 @@
       uiComponents: "Componentes de interfaz"
     },
     ko: {
+      navHome: "홈",
+      navRecent: "최근 일기",
+      communityExplore: "커뮤니티 일기 둘러보기",
+      testimonialsKicker: "커뮤니티의 목소리",
+      testimonialsTitle: "함께 만들어 가고 싶은 배움.",
+      testimonialsBody: "언어를 배우고 다른 사람과 연결되고 싶은 이유는 저마다 달라요.",
+      testimonialsNotice: "후기 예시입니다. 화면 구성을 보여 주기 위한 가상의 글이며, 실제 회원의 후기가 아닙니다.",
+      testimonialExample: "후기 예시",
+      testimonial1Title: "내 삶에서 시작하는 배움",
+      testimonial1Body: "실제로 쓰지 않을 문장보다 매일 경험하는 일들로 연습하고 싶어요.",
+      testimonial2Title: "교정보다 중요한 이해",
+      testimonial2Body: "왜 어떤 표현이 더 자연스러운지, 어떤 상황에서 쓰는지 설명을 듣고 싶어요.",
+      testimonial3Title: "실수를 두려워하지 않는 배움",
+      testimonial3Body: "처음부터 완벽하게 말해야 한다는 부담 없이 실수하며 배우고 싶어요.",
+      testimonial4Title: "내가 아는 것을 나누기",
+      testimonial4Body: "내 언어를 배우는 사람을 돕고, 그 사람의 문화와 언어도 알아가고 싶어요.",
+      feedMetaTitle: "최근 일기 · Diarito",
+      feedMetaDescription: "한국어와 스페인어로 작성된 일기 예시를 둘러보고 Diarito의 언어 교류를 알아보세요.",
+      feedKicker: "일상의 작은 이야기",
+      feedTitle: "최근 일기",
+      feedIntro: "커피 한 잔, 짧은 대화, 작은 성취. 다른 사람들이 배우고 있는 언어로 하루를 어떻게 기록하는지 만나 보세요.",
+      feedDemoNotice: "데모 화면: 이 페이지의 일기, 프로필과 교정은 모두 가상의 예시이며 실제 회원이 게시한 콘텐츠가 아닙니다.",
+      feedFilterLabel: "일기 언어별 필터",
+      feedAll: "전체",
+      feedSpanish: "스페인어",
+      feedKorean: "한국어",
+      feedCountOne: "개의 일기 예시",
+      feedCountMany: "개의 일기 예시",
+      feedPublic: "공개",
+      feedSample: "예시",
+      feedLike: "좋아요",
+      feedComment: "댓글",
+      feedSave: "저장",
+      feedCorrect: "교정하기",
+      feedActionHint: "커뮤니티에 가입하면 함께 소통할 수 있어요",
+      feedCorrectionExample: "피드백 예시 보기",
+      feedOriginal: "원문",
+      feedSuggested: "추천 표현",
+      feedExplanation: "설명",
+      feedJoinKicker: "당신의 이야기도 함께할 수 있어요",
+      feedJoinTitle: "다른 사람의 세계를 만나고, 나의 세계를 나눠요.",
+      feedJoinBody: "커뮤니티에 가입해 일기를 공유하고, 배우고 싶은 언어를 쓰는 사람들에게 배우며, 내 언어를 배우는 사람도 도와주세요.",
+      feedJoinButton: "$7에 Diarito 함께하기",
+      feedBack: "홈으로 돌아가기",
+      ariaLanguage: "언어 변경",
+      ariaTheme: "테마 변경",
+      ariaMenu: "메뉴 열기",
+      ariaMainNav: "주 메뉴",
+      ariaMobileNav: "모바일 메뉴",
+      ariaCloseAnnouncement: "안내 닫기",
+      ariaHome: "Diarito 홈",
       navCommunity: "커뮤니티",
       navMembership: "멤버십",
       announcementLink: "Diarito의 방향 알아보기",
@@ -328,6 +430,16 @@
       }
     });
 
+    document.querySelectorAll("[data-i18n-aria]").forEach((node) => {
+      if (dict[node.dataset.i18nAria]) node.setAttribute("aria-label", dict[node.dataset.i18nAria]);
+    });
+    document.querySelectorAll("[data-public-photo]").forEach((node) => {
+      node.alt = next === "ko" ? node.dataset.altKo : node.dataset.altEs;
+    });
+    document.querySelectorAll("[data-public-explanation]").forEach((node) => {
+      node.textContent = next === "ko" ? node.dataset.textKo : node.dataset.textEs;
+    });
+
     // The story follows the selected interface language, including on initial load.
     document.querySelectorAll("[data-cycle-photo], [data-why-photo]").forEach((photo) => {
       const source = next === "ko" ? photo.dataset.srcKo : photo.dataset.srcEs;
@@ -340,8 +452,9 @@
       node.textContent = next === "ko" ? "한국어" : "ESP";
     });
 
-    document.title = meta[next].title;
-    document.querySelector('meta[name="description"]')?.setAttribute("content", meta[next].description);
+    const publicFeedPage = document.querySelector("[data-public-feed-page]");
+    document.title = publicFeedPage ? dict.feedMetaTitle : meta[next].title;
+    document.querySelector('meta[name="description"]')?.setAttribute("content", publicFeedPage ? dict.feedMetaDescription : meta[next].description);
     if (persist) localStorage.setItem("diarito-language", next);
     document.dispatchEvent(new CustomEvent("diarito:languagechange", { detail: { language: next } }));
     window.setTimeout(() => root.classList.remove("is-language-switching"), 240);
@@ -395,6 +508,38 @@
     link.addEventListener("click", () => {
       link.closest("details")?.removeAttribute("open");
     });
+  });
+
+  // Public diary preview: filter by the language of the entry, not the interface.
+  document.querySelectorAll("[data-public-feed-page]").forEach((page) => {
+    const entries = [...page.querySelectorAll("[data-public-diary]")];
+    const filters = [...page.querySelectorAll("[data-public-filter]")];
+    const count = page.querySelector("[data-public-count]");
+    let active = "all";
+    const applyFilter = () => {
+      const language = root.lang === "ko" ? "ko" : "es";
+      const dict = translations[language];
+      let shown = 0;
+      entries.forEach((entry) => {
+        const visible = active === "all" || entry.dataset.language === active;
+        entry.hidden = !visible;
+        if (visible) shown++;
+      });
+      filters.forEach((button) => {
+        const selected = button.dataset.publicFilter === active;
+        button.classList.toggle("is-active", selected);
+        button.setAttribute("aria-pressed", String(selected));
+      });
+      if (count) count.textContent = language === "ko"
+        ? shown + dict.feedCountMany
+        : shown + " " + (shown === 1 ? dict.feedCountOne : dict.feedCountMany);
+    };
+    filters.forEach((button) => button.addEventListener("click", () => {
+      active = button.dataset.publicFilter;
+      applyFilter();
+    }));
+    document.addEventListener("diarito:languagechange", applyFilter);
+    applyFilter();
   });
 
   // Scroll reveal

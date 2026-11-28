@@ -14,6 +14,15 @@ Version 2.19.0 presents human feedback in an animated landscape tablet walkthrou
 
 
 
+## 2.19.0 public discovery and testimonial layout
+
+- Adds four explicitly fictional testimonial examples before membership; replace them with consented, verified user feedback before a real launch. No fabricated star ratings.
+- Adds `recent-diaries.html`, a guest-mode discovery feed using the canonical feed-item, avatar, media, tag, attachment and action patterns.
+- Fifteen fictional public diary entries (eight Korean, seven Spanish), six existing photographic attachments and two contextual correction examples; no live user data or invented engagement metrics.
+- Visitors can filter by diary language; interface language and theme are shared with the homepage. Diary text stays in its original language.
+- Guest interaction links lead to the closing membership invitation rather than simulating writes to a nonexistent backend.
+- Adds Inicio / Últimos diarios to shared navigation, a discovery link in the community section and a return-to-membership CTA.
+
 ## 2.19.0 community and membership landing revision
 
 - Replaces the internal trust/scale messaging with a reciprocal community section and a respectful learning section.
