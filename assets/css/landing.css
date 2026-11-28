@@ -126,17 +126,8 @@ body.landing-page *::after { box-sizing: border-box; }
   letter-spacing: -.02em;
   white-space: nowrap;
 }
-.landing-brand__mark {
-  width: 2rem;
-  height: 2rem;
-  display: grid;
-  place-items: center;
-  border: 1px solid var(--landing-border-strong);
-  border-radius: .55rem;
-  font-family: Englebert, Roboto, sans-serif;
-  font-size: 1.22rem;
-  font-weight: 400;
-}
+.landing-brand__mark { width: 2rem; height: 2rem; flex: 0 0 auto; display: block; border: 1px solid #111; border-radius: .5rem; background: #111; }
+html[data-theme="dark"] .landing-brand__mark { border-color: #777; }
 .landing-nav {
   display: flex;
   align-items: center;
@@ -1350,3 +1341,57 @@ html[lang="ko"] .landing-testimonials h2, html[lang="ko"] .public-feed__intro h1
   .public-feed__illustrative { text-align: left; }
   .public-feed__meta { flex-direction: column; align-items: flex-start; gap: .25rem; }
 }
+
+/* Public site pages */
+.landing-membership__join-link { margin-top: 1.6rem; justify-content: center; gap: .55rem; width: 100%; text-align: center; }
+.public-page-hero { padding-block: clamp(3.5rem,7vw,6.5rem); text-align: center; }
+.public-page-hero--grid { background-image: linear-gradient(to right,var(--landing-grid-line) 1px,transparent 1px),linear-gradient(to bottom,var(--landing-grid-line) 1px,transparent 1px); background-size: 20px 20px; }
+.public-page-hero__inner { max-width: 54rem; margin-inline: auto; }
+.public-page-hero h1,.auth-panel h1 { font-family: Englebert,"Noto Sans KR",Roboto,sans-serif; font-size: clamp(3.3rem,6.4vw,6rem); font-weight: 400; letter-spacing: -.035em; line-height: 1.03; margin: .8rem 0 0; text-wrap: balance; }
+.public-page-hero p,.public-page-heading p,.auth-intro { max-width: 42rem; margin: 1rem auto 0; font-size: 1rem; line-height: 1.7; color: var(--landing-text-secondary); }
+.public-page-heading { text-align: center; max-width: 49rem; margin: 0 auto 2.8rem; }
+.public-page-heading h2,.blog-article h2 { font-family: Englebert,"Noto Sans KR",Roboto,sans-serif; font-weight: 400; font-size: clamp(2.8rem,4.5vw,4.6rem); letter-spacing: -.025em; line-height: 1.06; margin: .7rem 0 0; text-wrap: balance; }
+html[lang="ko"] .public-page-hero h1,html[lang="ko"] .auth-panel h1,html[lang="ko"] .public-page-heading h2,html[lang="ko"] .blog-article h2 { font-family: "Noto Sans KR",Roboto,sans-serif; font-weight: 700; font-size: clamp(2.1rem,4.2vw,3.8rem); line-height: 1.2; word-break: keep-all; overflow-wrap: anywhere; }
+.membership-features { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1rem; max-width: 68rem; margin-inline: auto; align-items: stretch; }
+.membership-feature { display: flex; flex-direction: column; min-width: 0; border: 1px solid var(--landing-border); box-shadow: none; border-radius: var(--landing-radius-md); background: transparent; }
+.membership-feature .diarito-card__body { flex: 1; padding: clamp(1.25rem,2.5vw,2rem); }
+.membership-feature__top { display: flex; align-items: center; justify-content: space-between; color: var(--landing-text-muted); font-size: .75rem; }
+.membership-feature h3 { font-size: 1.15rem; font-weight: 600; margin: 1rem 0 .6rem; color: var(--landing-text); }
+.membership-feature p { margin: 0; font-size: .94rem; color: var(--landing-text-secondary); line-height: 1.7; }
+.membership-feature__example { display: grid; gap: .5rem; padding: 1.15rem clamp(1.25rem,2.5vw,2rem); background: transparent; border-top: 1px solid var(--landing-border); }
+.membership-feature__example p { font-size: .87rem; }
+.membership-faq { border-top: 1px solid var(--landing-border); }
+.membership-faq details { border-bottom: 1px solid var(--landing-border); }
+.membership-faq summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; list-style: none; cursor: pointer; padding: 1.1rem 0; font-weight: 600; font-size: .96rem; }
+.membership-faq summary::-webkit-details-marker { display: none; }
+.membership-faq details[open] summary i { transform: rotate(180deg); }
+.membership-faq p { margin: 0 0 1.15rem; color: var(--landing-text-secondary); line-height: 1.7; }
+.membership-faq > a { margin-top: 1.5rem; }
+.blog-list-section { padding-top: 0; }
+.blog-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1rem; }
+.blog-card { display: flex; flex-direction: column; min-width: 0; border: 1px solid var(--landing-border); background: transparent; box-shadow: none; overflow: hidden; }
+.blog-card__image { display: block; }
+.blog-card__image img,.blog-article figure img { width: 100%; height: auto; aspect-ratio: 2/1; object-fit: cover; }
+.blog-card .diarito-card__body { display: flex; flex-direction: column; flex: 1; align-items: flex-start; gap: .8rem; padding: 1.4rem; }
+.blog-card h2 { margin: 0; font-size: 1.2rem; line-height: 1.35; color: var(--landing-text); }
+.blog-card p { margin: 0 0 .5rem; color: var(--landing-text-secondary); font-size: .92rem; line-height: 1.65; }
+.blog-card .landing-button { margin-top: auto; }
+.blog-article { border-top: 1px solid var(--landing-border); }
+.blog-article figure { margin: 1.6rem 0; border-radius: var(--landing-radius-md); overflow: hidden; }
+.blog-article p { font-size: 1rem; line-height: 1.85; color: var(--landing-text-secondary); margin: 0 0 1.2rem; }
+.blog-article .landing-button { margin-top: .5rem; }
+.auth-section { padding-block: clamp(2rem,4vw,4rem); }
+.auth-layout { display: grid; grid-template-columns: minmax(0,1fr) minmax(20rem,.78fr); align-items: center; gap: clamp(2rem,5vw,5rem); max-width: 70rem; }
+.auth-visual { align-self: stretch; min-height: 30rem; border-radius: var(--landing-radius-md); overflow: hidden; background: var(--landing-control); }
+.auth-visual img { width: 100%; height: 100%; min-height: 30rem; object-fit: cover; object-position: 75% center; }
+.auth-panel { min-width: 0; max-width: 31rem; width: 100%; margin-inline: auto; }
+.auth-panel h1 { font-size: clamp(2.9rem,4.4vw,4.7rem); text-wrap: pretty; }
+.auth-intro { font-size: .94rem; }
+.auth-form { display: grid; gap: 1rem; margin-top: 1.7rem; }
+.auth-form .diarito-input,.auth-form .diarito-select { width: 100%; }
+.auth-form > button { width: 100%; margin-top: .3rem; }
+.auth-notice { color: var(--landing-text-muted); font-size: .79rem; line-height: 1.6; margin-top: .9rem; }
+.auth-switch { margin-top: 1.4rem; font-size: .88rem; color: var(--landing-text-secondary); }
+.auth-switch a { font-weight: 600; color: var(--landing-text); text-underline-offset: .2rem; }
+@media (max-width: 900px) { .blog-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } .auth-layout { grid-template-columns: 1fr; } .auth-visual { display: none; } }
+@media (max-width: 620px) { .membership-features,.blog-grid { grid-template-columns: 1fr; } .public-page-hero h1 { font-size: clamp(2.85rem,11vw,4rem); } .public-page-heading { margin-bottom: 1.8rem; } .auth-panel { max-width: none; } }

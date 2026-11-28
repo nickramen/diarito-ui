@@ -8,7 +8,8 @@
   padding-block: .8rem;
 }
 .diarito-brand { display: inline-flex; align-items: center; gap: .65rem; font-weight: var(--diarito-weight-bold); }
-.diarito-brand__mark { width: 2rem; height: 2rem; display: grid; place-items: center; border-radius: var(--diarito-radius-sm); color: var(--diarito-color-text-strong); background: var(--diarito-color-control); font-family: var(--diarito-font-display); font-size: 1.15rem; }
+.diarito-brand__mark { width: 2rem; height: 2rem; flex: 0 0 auto; display: block; border-radius: var(--diarito-radius-sm); border: 1px solid #111; background: #111; color: transparent; }
+html[data-theme="dark"] .diarito-brand__mark { border-color: #777; }
 .diarito-nav { display: flex; align-items: center; gap: .25rem; }
 .diarito-nav a { padding: .55rem .7rem; border-radius: var(--diarito-radius-sm); color: var(--diarito-color-text-muted); font-size: var(--diarito-text-sm); }
 .diarito-nav a:hover, .diarito-nav a.is-active { color: var(--diarito-color-text-strong); background: var(--diarito-color-control); }
@@ -1096,13 +1097,12 @@ html[data-theme="dark"] .diarito-correction-diff__removed { color: var(--diarito
 html[data-theme="dark"] .diarito-correction-diff__added { color: var(--diarito-success-text); background: var(--diarito-success-soft); }
 .diarito-thread { border-top: var(--diarito-border); padding-top: .8rem; }
 .diarito-thread[hidden], .diarito-thread [hidden] { display: none !important; }
-.diarito-thread__toolbar { display: flex; flex-wrap: wrap; gap: .6rem 1rem; justify-content: space-between; align-items: center; margin-bottom: .7rem; }
-.diarito-thread__title { color: var(--diarito-color-text-muted); font-size: var(--diarito-text-xs); }
+.diarito-thread__toolbar { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; margin-bottom: .7rem; }
 .diarito-thread__filters { display: flex; flex-wrap: wrap; gap: .25rem; }
 .diarito-thread__filters button { border: 1px solid transparent; border-radius: var(--diarito-radius-xs); padding: .3rem .55rem; background: transparent; color: var(--diarito-color-text-secondary); font-size: var(--diarito-text-xs); }
 .diarito-thread__filters button.is-active, .diarito-thread__filters button:hover { color: var(--diarito-color-text-strong); background: var(--diarito-color-control); }
 .diarito-thread__filters button:focus-visible { outline: 2px solid var(--diarito-color-text-strong); outline-offset: 2px; }
-.diarito-thread__reply { border-left: 1px solid var(--diarito-color-border-strong); padding: .65rem 0 .5rem .85rem; margin: .25rem 0 .65rem; }
+.diarito-thread__reply { position: relative; border-left: 1px solid var(--diarito-color-border-strong); padding: .65rem 2.2rem .5rem .85rem; margin: .25rem 0 .65rem; }
 .diarito-thread__identity { display: flex; align-items: center; gap: .55rem; flex-wrap: wrap; }
 .diarito-thread__identity > div { min-width: 0; }
 .diarito-thread__identity strong { display: block; color: var(--diarito-color-text-strong); font-size: var(--diarito-text-sm); font-weight: var(--diarito-weight-semibold); line-height: 1.3; }
@@ -1113,6 +1113,8 @@ html[data-theme="dark"] .diarito-correction-diff__added { color: var(--diarito-s
 .diarito-thread__explanation { margin: .55rem 0 .2rem; color: var(--diarito-color-text-secondary); font-size: var(--diarito-text-sm); line-height: 1.65; }
 .diarito-thread__operation { display: block; font-size: var(--diarito-text-xs); color: var(--diarito-color-text-muted); margin-top: .35rem; }
 .diarito-thread__actions { display: flex; justify-content: flex-start; margin-top: .3rem; }
-.diarito-thread__vote { text-decoration: none; }
 .diarito-thread__empty { color: var(--diarito-color-text-muted); margin: .4rem 0 .8rem; font-size: var(--diarito-text-sm); }
-.diarito-thread__join { display: inline-block; color: var(--diarito-color-text-secondary); font-size: var(--diarito-text-xs); text-underline-offset: .16rem; padding: .35rem 0; }
+
+.diarito-thread__likes { font-size: var(--diarito-text-xs); color: var(--diarito-color-text-muted); font-weight: var(--diarito-weight-medium); }
+.diarito-thread__like { position: absolute; right: 0; top: .55rem; padding: .4rem; min-width: 2rem; min-height: 2rem; display: inline-grid; place-items: center; text-decoration: none; font-size: .98rem; }
+.diarito-thread__like[aria-pressed="true"] { color: var(--diarito-error-text); }

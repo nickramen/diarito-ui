@@ -14,6 +14,15 @@ Version 2.19.0 presents human feedback in an animated landscape tablet walkthrou
 
 
 
+## 2.19.0 public pages and unified reply likes
+
+- Four public destinations: Home, Recent diaries, Membership and Blog. Login and signup are separate visual previews, without authentication or collection of credentials.
+- Membership details describe the eight planned beta features with examples, the $7 pricing block and unresolved billing interval.
+- Blog includes three original bilingual articles with full reading sections.
+- Black square brand mark and SVG favicon throughout the public site and component library.
+- Simplifies conversation previews and uses the same heart and likes count for comments and corrections; visitor reactions lead to the membership invitation.
+- Shared language, theme and navigation across pages.
+
 ## 2.19.0 editorial corrections and public feed refinement
 
 - Adds fictional testimonial identities, cropped photographic avatars, country and learning language; retains one concise disclosure in the section kicker.
