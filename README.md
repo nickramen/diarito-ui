@@ -14,6 +14,14 @@ Version 2.19.0 presents human feedback in an animated landscape tablet walkthrou
 
 
 
+## 2.19.0 public site polish
+
+- Public diaries start with left-aligned language tabs and posts. The visual title, introduction and count are removed; fictional fixture disclosure is retained discreetly at the closing invitation.
+- Removes reply-level filters, labels and left border. Replies show their type through a comment or pencil icon, followed by a heart and count. The conversation toggle and post language filters remain.
+- Reuses the membership FAQ on the homepage after pricing and before the closing CTA, with keyboard-accessible native details, smooth height animation and reduced-motion support.
+- All public hero areas share the existing grid; the feed uses only a compact grid-backed tab strip. The top banner is shortened and linked to membership.
+- Removes hover transformations and background changes from the three Why Diarito cards; initial reveal remains unchanged.
+
 ## 2.19.0 public pages and unified reply likes
 
 - Four public destinations: Home, Recent diaries, Membership and Blog. Login and signup are separate visual previews, without authentication or collection of credentials.

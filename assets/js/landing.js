@@ -12,7 +12,7 @@
       "diffRemoved": "Eliminado",
       "threadCollapse": "Ocultar conversación",
       "threadExpand": "Ver conversación",
-      "threadEmpty": "No hay respuestas de este tipo en la vista previa.",
+      "threadEmpty": "Todavía no hay respuestas en este ejemplo.",
       "threadFilterLabel": "Filtrar respuestas",
       "threadComment": "Comentario",
       "threadCorrection": "Corrección",
@@ -44,7 +44,7 @@
       "feedKicker": "Historias de todos los días",
       "feedTitle": "Últimos diarios",
       "feedIntro": "Un café, una conversación, un pequeño logro. Descubrí cómo otras personas cuentan su día en el idioma que están aprendiendo.",
-      "feedDemoNotice": "Vista previa · perfiles, diarios y cifras ficticios.",
+      "feedDemoNotice": "Diarios, perfiles y cifras ilustrativos.",
       "feedFilterLabel": "Filtrar diarios por idioma",
       "feedAll": "Todos",
       "feedSpanish": "Español",
@@ -122,7 +122,7 @@
       "ctaPrimary": "Unite a Diarito por $7",
       "ctaSecondary": "Ver cómo funciona Diarito",
       "announcementEyebrow": "Diarito · versión beta",
-      "announcement": "Empezamos con Coreano ↔ Español y nivel A2 para validar una experiencia de aprendizaje basada en la vida real.",
+      "announcement": "Aprendé y conectá con Diarito por $7.",
       "navWhy": "Por qué Diarito",
       "navHow": "Cómo funciona",
       "navFeedback": "Retroalimentación humana",
@@ -287,7 +287,9 @@
       "authPending": "El acceso y el registro están en preparación. Esta pantalla no envía ni guarda datos.",
       "authNoAccount": "¿Todavía no tenés cuenta?",
       "authHasAccount": "¿Ya tenés cuenta?",
-      "authCreate": "Crear cuenta"
+      "authCreate": "Crear cuenta",
+      "faqKicker": "Antes de unirte",
+      "faqTitle": "Preguntas frecuentes"
     },
     "ko": {
       "timeHours": "시간",
@@ -298,7 +300,7 @@
       "diffRemoved": "삭제",
       "threadCollapse": "대화 숨기기",
       "threadExpand": "대화 보기",
-      "threadEmpty": "미리보기에 해당하는 답글이 없어요.",
+      "threadEmpty": "이 예시에는 아직 답글이 없어요.",
       "threadFilterLabel": "답글 유형 필터",
       "threadComment": "댓글",
       "threadCorrection": "교정",
@@ -330,7 +332,7 @@
       "feedKicker": "일상의 작은 이야기",
       "feedTitle": "최근 일기",
       "feedIntro": "커피 한 잔, 짧은 대화, 작은 성취. 다른 사람들이 배우고 있는 언어로 하루를 어떻게 기록하는지 만나 보세요.",
-      "feedDemoNotice": "미리보기 · 가상의 프로필, 일기 및 수치입니다.",
+      "feedDemoNotice": "일기, 프로필 및 수치는 예시입니다.",
       "feedFilterLabel": "일기 언어별 필터",
       "feedAll": "전체",
       "feedSpanish": "스페인어",
@@ -357,7 +359,7 @@
       "ariaHome": "Diarito 홈",
       "navCommunity": "커뮤니티",
       "navMembership": "멤버십",
-      "announcementLink": "Diarito의 방향 알아보기",
+      "announcementLink": "멤버십 알아보기",
       "communityKicker": "함께 배우는 커뮤니티",
       "communityTitle": "다른 사람에게 배우고, 다른 사람의 배움을 도와요.",
       "communityBody": "누군가에게는 당신의 언어도 배우고 싶은 언어예요. Diarito에서 내가 아는 것을 나누고, 다른 사람들의 삶과 생각을 만나며 함께 배워요.",
@@ -408,7 +410,7 @@
       "ctaPrimary": "$7에 Diarito 함께하기",
       "ctaSecondary": "Diarito 학습 과정 보기",
       "announcementEyebrow": "Diarito · 베타 버전",
-      "announcement": "처음부터 모든 언어와 모든 학습 수준을 지원하기보다 한국어 ↔ 스페인어, A2 수준에서 학습 경험이 실제로 효과적인지 검증합니다.",
+      "announcement": "$7에 Diarito에서 함께 배우고 교류해요.",
       "navWhy": "왜 Diarito인가",
       "navHow": "어떻게 배우나요",
       "navFeedback": "사람을 통한 피드백",
@@ -573,7 +575,9 @@
       "authPending": "로그인과 회원가입을 준비 중이에요. 이 화면에서는 데이터를 전송하거나 저장하지 않습니다.",
       "authNoAccount": "아직 계정이 없나요?",
       "authHasAccount": "이미 계정이 있나요?",
-      "authCreate": "계정 만들기"
+      "authCreate": "계정 만들기",
+      "faqKicker": "가입하기 전에",
+      "faqTitle": "자주 묻는 질문"
     }
   };
 
@@ -692,70 +696,76 @@
     });
   });
 
-  // Public diary preview: filter by the language of the entry, not the interface.
+  // Filter the public diaries by entry language.
   document.querySelectorAll("[data-public-feed-page]").forEach((page) => {
     const entries = [...page.querySelectorAll("[data-public-diary]")];
     const filters = [...page.querySelectorAll("[data-public-filter]")];
-    const count = page.querySelector("[data-public-count]");
-    let active = "all";
-    const applyFilter = () => {
-      const language = root.lang === "ko" ? "ko" : "es";
-      const dict = translations[language];
-      let shown = 0;
-      entries.forEach((entry) => {
-        const visible = active === "all" || entry.dataset.language === active;
-        entry.hidden = !visible;
-        if (visible) shown++;
-      });
+    const applyFilter = (active) => {
+      entries.forEach((entry) => { entry.hidden = active !== "all" && entry.dataset.language !== active; });
       filters.forEach((button) => {
         const selected = button.dataset.publicFilter === active;
         button.classList.toggle("is-active", selected);
         button.setAttribute("aria-pressed", String(selected));
       });
-      if (count) count.textContent = language === "ko"
-        ? shown + dict.feedCountMany
-        : shown + " " + (shown === 1 ? dict.feedCountOne : dict.feedCountMany);
     };
-    filters.forEach((button) => button.addEventListener("click", () => {
-      active = button.dataset.publicFilter;
-      applyFilter();
-    }));
-    document.addEventListener("diarito:languagechange", applyFilter);
-    applyFilter();
+    filters.forEach((button) => button.addEventListener("click", () => applyFilter(button.dataset.publicFilter)));
+    applyFilter("all");
   });
 
-  // Each guest conversation has an independent filter and expandable preview.
+  // Keep the comment button as an independent conversation toggle.
   document.querySelectorAll("[data-public-diary]").forEach((entry) => {
     const thread = entry.querySelector("[data-public-thread]");
     const toggle = entry.querySelector("[data-thread-toggle]");
     if (!thread || !toggle) return;
-    const filters = [...thread.querySelectorAll("[data-thread-filter]")];
-    const replies = [...thread.querySelectorAll("[data-thread-reply]")];
-    const empty = thread.querySelector("[data-thread-empty]");
-    let active = "all";
-    const update = () => {
-      let visible = 0;
-      replies.forEach((reply) => {
-        const show = active === "all" || reply.dataset.threadReply === active;
-        reply.hidden = !show;
-        if (show) visible++;
-      });
-      filters.forEach((button) => {
-        const selected = button.dataset.threadFilter === active;
-        button.classList.toggle("is-active", selected);
-        button.setAttribute("aria-pressed", String(selected));
-      });
-      if (empty) empty.hidden = visible !== 0;
-    };
     toggle.addEventListener("click", () => {
       thread.hidden = !thread.hidden;
       toggle.setAttribute("aria-expanded", String(!thread.hidden));
     });
-    filters.forEach((button) => button.addEventListener("click", () => {
-      active = button.dataset.threadFilter;
-      update();
-    }));
-    update();
+  });
+
+  // Smooth FAQ: native details and keyboard behavior, with reversible height animation.
+  document.querySelectorAll("[data-faq-item]").forEach((item) => {
+    const summary = item.querySelector("summary");
+    const answer = item.querySelector(".membership-faq__answer");
+    if (!summary || !answer || typeof item.animate !== "function") return;
+    let animation = null;
+    let targetOpen = item.open;
+    const clear = () => {
+      item.style.height = "";
+      item.style.overflow = "";
+      item.classList.remove("is-animating");
+    };
+    summary.addEventListener("click", (event) => {
+      if (window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches) {
+        if (animation) { animation.cancel(); animation = null; }
+        clear();
+        item.open = !targetOpen;
+        targetOpen = item.open;
+        event.preventDefault();
+        return;
+      }
+      event.preventDefault();
+      const from = item.getBoundingClientRect().height;
+      targetOpen = !targetOpen;
+      if (animation) { animation.cancel(); animation = null; }
+      item.style.height = from + "px";
+      item.style.overflow = "hidden";
+      item.classList.add("is-animating");
+      if (targetOpen) item.open = true;
+      const border = item.offsetHeight - item.clientHeight;
+      const to = summary.getBoundingClientRect().height + (targetOpen ? answer.getBoundingClientRect().height : 0) + border;
+      const current = item.animate([{height: from + "px"}, {height: to + "px"}], {
+        duration: 250, easing: "cubic-bezier(.2,.75,.25,1)", fill: "both"
+      });
+      animation = current;
+      current.onfinish = () => {
+        if (animation !== current) return;
+        item.open = targetOpen;
+        current.cancel();
+        animation = null;
+        clear();
+      };
+    });
   });
 
   // Scroll reveal

@@ -10,9 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Englebert&family=Noto+Sans+KR:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-thin-rounded/css/uicons-thin-rounded.css">
-  <link rel="stylesheet" href="assets/css/diarito-system.css?v=2.19.0-pages-r1">
-  <link rel="stylesheet" href="assets/css/landing.css?v=2.19.0-pages-r1">
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg?v=2.19.0-pages-r1">
+  <link rel="stylesheet" href="assets/css/diarito-system.css?v=2.19.0-polish-r1">
+  <link rel="stylesheet" href="assets/css/landing.css?v=2.19.0-polish-r1">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg?v=2.19.0-polish-r1">
 </head>
 <body class="landing-page">
   <div class="landing-shell">
@@ -20,8 +20,8 @@
     <aside class="landing-announcement" data-landing-announcement>
       <div class="diarito-container diarito-container--lg landing-container landing-announcement__inner">
         <span class="landing-announcement__eyebrow" data-i18n="announcementEyebrow">Diarito · versión beta</span>
-        <p data-i18n="announcement">Empezamos con Coreano ↔ Español y nivel A2 para validar una experiencia de aprendizaje basada en la vida real.</p>
-        <a href="index.html#community" data-i18n="announcementLink">Conocé el enfoque</a>
+        <p data-i18n="announcement">Aprendé y conectá con Diarito por $7.</p>
+        <a href="membership.html" data-i18n="announcementLink">Conocé el enfoque</a>
         <button type="button" data-landing-announcement-close aria-label="Cerrar anuncio" data-i18n-aria="ariaCloseAnnouncement"><i class="fi fi-rr-cross-small"></i></button>
       </div>
     </aside>
@@ -77,18 +77,14 @@
     <main id="top" data-public-feed-page>
       <section class="diarito-section landing-section public-feed" aria-labelledby="recent-title">
         <div class="diarito-container diarito-container--lg landing-container">
-          <header class="public-feed__intro diarito-reading">
-            <span class="diarito-kicker landing-kicker" data-i18n="feedKicker">Historias de todos los días</span>
-            <h1 id="recent-title" data-i18n="feedTitle">Últimos diarios</h1>
-            <p data-i18n="feedIntro">Un café, una conversación, un pequeño logro. Descubrí cómo otras personas cuentan su día en el idioma que están aprendiendo.</p>
-          </header>
+          <h1 id="recent-title" class="diarito-visually-hidden" data-i18n="feedTitle">Últimos diarios</h1>
           <div class="diarito-reading public-feed__reading">
-            <div class="diarito-feed-switch public-feed__switch" role="group" aria-label="Filtrar diarios por idioma" data-i18n-aria="feedFilterLabel">
+            <div class="public-feed__filter-grid"><div class="diarito-feed-switch public-feed__switch" role="group" aria-label="Filtrar diarios por idioma" data-i18n-aria="feedFilterLabel">
               <button class="is-active" type="button" data-public-filter="all" aria-pressed="true" data-i18n="feedAll">Todos</button>
               <button type="button" data-public-filter="es" aria-pressed="false" data-i18n="feedSpanish">Español</button>
               <button type="button" data-public-filter="ko" aria-pressed="false" data-i18n="feedKorean">Coreano</button>
-            </div>
-            <div class="public-feed__meta"><span data-public-count aria-live="polite">15 diarios</span><span class="public-feed__illustrative" data-i18n="feedDemoNotice">Vista previa · perfiles, diarios y cifras ficticios.</span><span id="feed-action-hint" class="diarito-visually-hidden" data-i18n="feedActionHint">Unite a la comunidad para interactuar</span></div>
+            </div></div>
+            <span id="feed-action-hint" class="diarito-visually-hidden" data-i18n="feedActionHint">Unite a la comunidad para interactuar</span>
             <div class="diarito-feed" data-public-feed>
             <article class="diarito-feed-item public-feed__item" data-public-diary data-language="ko" id="diary-01">
  <header class="public-feed__identity"><span class="diarito-avatar diarito-avatar--portrait" aria-hidden="true"><img src="assets/images/why-01-relevance.webp" alt="" loading="lazy" decoding="async" style="--portrait-x:41%;--portrait-y:23%;--portrait-scale:2.35"></span><div class="public-feed__identity-copy"><strong>Mateo R.</strong><div class="diarito-feed-item__header"><span>@mateo.r</span><span>· A2</span><span>· <span data-i18n="feedPublic">Público</span></span><span>· 8 <span data-i18n="timeMinutes">min</span></span></div></div></header>
@@ -103,15 +99,10 @@
      <a class="diarito-feed-action public-feed__correct" href="#join-community" aria-describedby="feed-action-hint"><i class="fi fi-rr-pencil" aria-hidden="true"></i><span data-i18n="feedCorrect">Corregir</span></a>
    </div>
    <section class="diarito-thread public-feed__thread" id="thread-01" data-public-thread>
-   <div class="diarito-thread__toolbar">
-     
-     <div class="diarito-thread__filters" role="group" aria-label="Filtrar respuestas" data-i18n-aria="threadFilterLabel">
-       <button type="button" data-thread-filter="all" aria-pressed="true" class="is-active" data-i18n="threadAll">Todos</button><button type="button" data-thread-filter="comment" aria-pressed="false" class="" data-i18n="threadComments">Comentarios</button><button type="button" data-thread-filter="correction" aria-pressed="false" class="" data-i18n="threadCorrections">Correcciones</button>
-     </div>
-   </div>
-   <div class="diarito-thread__reply" data-thread-reply="comment"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--sm" aria-hidden="true">하</span><div><strong>하나</strong><span>@hana.day</span></div><span class="diarito-thread__kind" data-i18n="threadComment">Comentario</span></div><p class="diarito-thread__comment" lang="ko">고양이를 만나면 하루가 조금 더 특별해지는 것 같아요. 저도 고양이를 좋아해요!</p><div class="diarito-thread__actions"><span class="diarito-thread__likes">42 <span data-i18n="feedLike">Me gusta</span></span><a class="diarito-feed-action diarito-thread__like" href="#join-community" aria-label="Me gusta" data-i18n-aria="feedLike" aria-describedby="feed-action-hint"><i class="fi fi-rr-heart" aria-hidden="true"></i></a></div></div>
-<div class="diarito-thread__reply" data-thread-reply="correction"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--portrait diarito-avatar--sm" aria-hidden="true"><img src="assets/images/why-ko-01.webp" alt="" loading="lazy" decoding="async" style="--portrait-x:39%;--portrait-y:24%;--portrait-scale:2.35"></span><div><strong>이지연</strong><span>@jiyeon.lee</span></div><span class="diarito-thread__kind" data-i18n="threadCorrection">Corrección</span></div><div class="diarito-thread__correction"><p class="diarito-correction-diff" lang="ko">고양이<del class="diarito-correction-diff__removed">는</del> <ins class="diarito-correction-diff__added">가</ins> <del class="diarito-correction-diff__removed">나를</del> <ins class="diarito-correction-diff__added">저를</ins> 계속 바라봤어요.</p><p class="diarito-thread__explanation" data-public-explanation data-text-es="Aquí «가» introduce al gato como sujeto y «저» mantiene el registro cortés de la oración." data-text-ko="이 문맥에서는 고양이가 주어라는 점을 나타내는 ‘가’가 자연스럽고, 해요체에는 ‘저’가 잘 어울려요.">Aquí «가» introduce al gato como sujeto y «저» mantiene el registro cortés de la oración.</p></div><div class="diarito-thread__actions"><span class="diarito-thread__likes">18 <span data-i18n="feedLike">Me gusta</span></span><a class="diarito-feed-action diarito-thread__like" href="#join-community" aria-label="Me gusta" data-i18n-aria="feedLike" aria-describedby="feed-action-hint"><i class="fi fi-rr-heart" aria-hidden="true"></i></a></div></div>
-   <p class="diarito-thread__empty" data-thread-empty hidden data-i18n="threadEmpty">No hay respuestas de este tipo en la vista previa.</p>
+   
+   <div class="diarito-thread__reply" data-thread-reply="comment"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--sm" aria-hidden="true">하</span><div><strong>하나</strong><span>@hana.day</span></div><div class="diarito-thread__actions"><span class="diarito-thread__kind" aria-label="Comentario" data-i18n-aria="threadComment"><i class="fi fi-rr-comment" aria-hidden="true"></i></span><a class="diarito-feed-action diarito-thread__like" href="#join-community" aria-describedby="feed-action-hint"><i class="fi fi-rr-heart" aria-hidden="true"></i><span class="diarito-visually-hidden" data-i18n="feedLike">Me gusta</span><span class="diarito-thread__likes">42</span></a></div></div><p class="diarito-thread__comment" lang="ko">고양이를 만나면 하루가 조금 더 특별해지는 것 같아요. 저도 고양이를 좋아해요!</p></div>
+<div class="diarito-thread__reply" data-thread-reply="correction"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--portrait diarito-avatar--sm" aria-hidden="true"><img src="assets/images/why-ko-01.webp" alt="" loading="lazy" decoding="async" style="--portrait-x:39%;--portrait-y:24%;--portrait-scale:2.35"></span><div><strong>이지연</strong><span>@jiyeon.lee</span></div><div class="diarito-thread__actions"><span class="diarito-thread__kind" aria-label="Corrección" data-i18n-aria="threadCorrection"><i class="fi fi-rr-pencil" aria-hidden="true"></i></span><a class="diarito-feed-action diarito-thread__like" href="#join-community" aria-describedby="feed-action-hint"><i class="fi fi-rr-heart" aria-hidden="true"></i><span class="diarito-visually-hidden" data-i18n="feedLike">Me gusta</span><span class="diarito-thread__likes">18</span></a></div></div><div class="diarito-thread__correction"><p class="diarito-correction-diff" lang="ko">고양이<del class="diarito-correction-diff__removed">는</del> <ins class="diarito-correction-diff__added">가</ins> <del class="diarito-correction-diff__removed">나를</del> <ins class="diarito-correction-diff__added">저를</ins> 계속 바라봤어요.</p><p class="diarito-thread__explanation" data-public-explanation data-text-es="Aquí «가» introduce al gato como sujeto y «저» mantiene el registro cortés de la oración." data-text-ko="이 문맥에서는 고양이가 주어라는 점을 나타내는 ‘가’가 자연스럽고, 해요체에는 ‘저’가 잘 어울려요.">Aquí «가» introduce al gato como sujeto y «저» mantiene el registro cortés de la oración.</p></div></div>
+   <p class="diarito-thread__empty" data-thread-empty hidden data-i18n="threadEmpty">Todavía no hay respuestas en este ejemplo.</p>
    
  </section>
  </div>
@@ -129,15 +120,10 @@
      <a class="diarito-feed-action public-feed__correct" href="#join-community" aria-describedby="feed-action-hint"><i class="fi fi-rr-pencil" aria-hidden="true"></i><span data-i18n="feedCorrect">Corregir</span></a>
    </div>
    <section class="diarito-thread public-feed__thread" id="thread-02" data-public-thread>
-   <div class="diarito-thread__toolbar">
-     
-     <div class="diarito-thread__filters" role="group" aria-label="Filtrar respuestas" data-i18n-aria="threadFilterLabel">
-       <button type="button" data-thread-filter="all" aria-pressed="true" class="is-active" data-i18n="threadAll">Todos</button><button type="button" data-thread-filter="comment" aria-pressed="false" class="" data-i18n="threadComments">Comentarios</button><button type="button" data-thread-filter="correction" aria-pressed="false" class="" data-i18n="threadCorrections">Correcciones</button>
-     </div>
-   </div>
-   <div class="diarito-thread__reply" data-thread-reply="comment"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--portrait diarito-avatar--sm" aria-hidden="true"><img src="assets/images/why-01-relevance.webp" alt="" loading="lazy" decoding="async" style="--portrait-x:41%;--portrait-y:23%;--portrait-scale:2.35"></span><div><strong>Mateo R.</strong><span>@mateo.r</span></div><span class="diarito-thread__kind" data-i18n="threadComment">Comentario</span></div><p class="diarito-thread__comment" lang="es">¡Qué bonito! Me pasó algo parecido de camino al trabajo.</p><div class="diarito-thread__actions"><span class="diarito-thread__likes">16 <span data-i18n="feedLike">Me gusta</span></span><a class="diarito-feed-action diarito-thread__like" href="#join-community" aria-label="Me gusta" data-i18n-aria="feedLike" aria-describedby="feed-action-hint"><i class="fi fi-rr-heart" aria-hidden="true"></i></a></div></div>
-<div class="diarito-thread__reply" data-thread-reply="correction"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--sm" aria-hidden="true">A</span><div><strong>Andrés</strong><span>@andres.es</span></div><span class="diarito-thread__kind" data-i18n="threadCorrection">Corrección</span></div><div class="diarito-thread__correction"><p class="diarito-correction-diff" lang="es">Me quedé un rato mirándolo porque era <del class="diarito-correction-diff__removed">muy tranquilo</del> <ins class="diarito-correction-diff__added">muy dócil</ins>.</p><p class="diarito-thread__explanation" data-public-explanation data-text-es="Si querés expresar que se dejaba acercar, «dócil» es más preciso. «Tranquilo» también es correcto si describís su comportamiento." data-text-ko="사람이 다가가도 경계하지 않았다는 뜻이라면 ‘dócil’이 더 구체적이에요. 차분한 행동을 말한다면 ‘tranquilo’도 맞아요.">Si querés expresar que se dejaba acercar, «dócil» es más preciso. «Tranquilo» también es correcto si describís su comportamiento.</p></div><div class="diarito-thread__actions"><span class="diarito-thread__likes">9 <span data-i18n="feedLike">Me gusta</span></span><a class="diarito-feed-action diarito-thread__like" href="#join-community" aria-label="Me gusta" data-i18n-aria="feedLike" aria-describedby="feed-action-hint"><i class="fi fi-rr-heart" aria-hidden="true"></i></a></div></div>
-   <p class="diarito-thread__empty" data-thread-empty hidden data-i18n="threadEmpty">No hay respuestas de este tipo en la vista previa.</p>
+   
+   <div class="diarito-thread__reply" data-thread-reply="comment"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--portrait diarito-avatar--sm" aria-hidden="true"><img src="assets/images/why-01-relevance.webp" alt="" loading="lazy" decoding="async" style="--portrait-x:41%;--portrait-y:23%;--portrait-scale:2.35"></span><div><strong>Mateo R.</strong><span>@mateo.r</span></div><div class="diarito-thread__actions"><span class="diarito-thread__kind" aria-label="Comentario" data-i18n-aria="threadComment"><i class="fi fi-rr-comment" aria-hidden="true"></i></span><a class="diarito-feed-action diarito-thread__like" href="#join-community" aria-describedby="feed-action-hint"><i class="fi fi-rr-heart" aria-hidden="true"></i><span class="diarito-visually-hidden" data-i18n="feedLike">Me gusta</span><span class="diarito-thread__likes">16</span></a></div></div><p class="diarito-thread__comment" lang="es">¡Qué bonito! Me pasó algo parecido de camino al trabajo.</p></div>
+<div class="diarito-thread__reply" data-thread-reply="correction"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--sm" aria-hidden="true">A</span><div><strong>Andrés</strong><span>@andres.es</span></div><div class="diarito-thread__actions"><span class="diarito-thread__kind" aria-label="Corrección" data-i18n-aria="threadCorrection"><i class="fi fi-rr-pencil" aria-hidden="true"></i></span><a class="diarito-feed-action diarito-thread__like" href="#join-community" aria-describedby="feed-action-hint"><i class="fi fi-rr-heart" aria-hidden="true"></i><span class="diarito-visually-hidden" data-i18n="feedLike">Me gusta</span><span class="diarito-thread__likes">9</span></a></div></div><div class="diarito-thread__correction"><p class="diarito-correction-diff" lang="es">Me quedé un rato mirándolo porque era <del class="diarito-correction-diff__removed">muy tranquilo</del> <ins class="diarito-correction-diff__added">muy dócil</ins>.</p><p class="diarito-thread__explanation" data-public-explanation data-text-es="Si querés expresar que se dejaba acercar, «dócil» es más preciso. «Tranquilo» también es correcto si describís su comportamiento." data-text-ko="사람이 다가가도 경계하지 않았다는 뜻이라면 ‘dócil’이 더 구체적이에요. 차분한 행동을 말한다면 ‘tranquilo’도 맞아요.">Si querés expresar que se dejaba acercar, «dócil» es más preciso. «Tranquilo» también es correcto si describís su comportamiento.</p></div></div>
+   <p class="diarito-thread__empty" data-thread-empty hidden data-i18n="threadEmpty">Todavía no hay respuestas en este ejemplo.</p>
    
  </section>
  </div>
@@ -155,14 +141,9 @@
      <a class="diarito-feed-action public-feed__correct" href="#join-community" aria-describedby="feed-action-hint"><i class="fi fi-rr-pencil" aria-hidden="true"></i><span data-i18n="feedCorrect">Corregir</span></a>
    </div>
    <section class="diarito-thread public-feed__thread" id="thread-03" data-public-thread hidden>
-   <div class="diarito-thread__toolbar">
-     
-     <div class="diarito-thread__filters" role="group" aria-label="Filtrar respuestas" data-i18n-aria="threadFilterLabel">
-       <button type="button" data-thread-filter="all" aria-pressed="true" class="is-active" data-i18n="threadAll">Todos</button><button type="button" data-thread-filter="comment" aria-pressed="false" class="" data-i18n="threadComments">Comentarios</button><button type="button" data-thread-filter="correction" aria-pressed="false" class="" data-i18n="threadCorrections">Correcciones</button>
-     </div>
-   </div>
-   <div class="diarito-thread__reply" data-thread-reply="comment"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--sm" aria-hidden="true">서</span><div><strong>서연</strong><span>@seoyeon.k</span></div><span class="diarito-thread__kind" data-i18n="threadComment">Comentario</span></div><p class="diarito-thread__comment" lang="ko">따뜻한 커피 한 잔이 정말 큰 힘이 될 때가 있죠.</p><div class="diarito-thread__actions"><span class="diarito-thread__likes">8 <span data-i18n="feedLike">Me gusta</span></span><a class="diarito-feed-action diarito-thread__like" href="#join-community" aria-label="Me gusta" data-i18n-aria="feedLike" aria-describedby="feed-action-hint"><i class="fi fi-rr-heart" aria-hidden="true"></i></a></div></div>
-   <p class="diarito-thread__empty" data-thread-empty hidden data-i18n="threadEmpty">No hay respuestas de este tipo en la vista previa.</p>
+   
+   <div class="diarito-thread__reply" data-thread-reply="comment"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--sm" aria-hidden="true">서</span><div><strong>서연</strong><span>@seoyeon.k</span></div><div class="diarito-thread__actions"><span class="diarito-thread__kind" aria-label="Comentario" data-i18n-aria="threadComment"><i class="fi fi-rr-comment" aria-hidden="true"></i></span><a class="diarito-feed-action diarito-thread__like" href="#join-community" aria-describedby="feed-action-hint"><i class="fi fi-rr-heart" aria-hidden="true"></i><span class="diarito-visually-hidden" data-i18n="feedLike">Me gusta</span><span class="diarito-thread__likes">8</span></a></div></div><p class="diarito-thread__comment" lang="ko">따뜻한 커피 한 잔이 정말 큰 힘이 될 때가 있죠.</p></div>
+   <p class="diarito-thread__empty" data-thread-empty hidden data-i18n="threadEmpty">Todavía no hay respuestas en este ejemplo.</p>
    
  </section>
  </div>
@@ -180,14 +161,9 @@
      <a class="diarito-feed-action public-feed__correct" href="#join-community" aria-describedby="feed-action-hint"><i class="fi fi-rr-pencil" aria-hidden="true"></i><span data-i18n="feedCorrect">Corregir</span></a>
    </div>
    <section class="diarito-thread public-feed__thread" id="thread-04" data-public-thread>
-   <div class="diarito-thread__toolbar">
-     
-     <div class="diarito-thread__filters" role="group" aria-label="Filtrar respuestas" data-i18n-aria="threadFilterLabel">
-       <button type="button" data-thread-filter="all" aria-pressed="true" class="is-active" data-i18n="threadAll">Todos</button><button type="button" data-thread-filter="comment" aria-pressed="false" class="" data-i18n="threadComments">Comentarios</button><button type="button" data-thread-filter="correction" aria-pressed="false" class="" data-i18n="threadCorrections">Correcciones</button>
-     </div>
-   </div>
-   <div class="diarito-thread__reply" data-thread-reply="comment"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--portrait diarito-avatar--sm" aria-hidden="true"><img src="assets/images/cycle-es-03.webp" alt="" loading="lazy" decoding="async" style="--portrait-x:48%;--portrait-y:27%;--portrait-scale:2.15"></span><div><strong>Sofía M.</strong><span>@sofia.m</span></div><span class="diarito-thread__kind" data-i18n="threadComment">Comentario</span></div><p class="diarito-thread__comment" lang="es">¡Qué alegría! La próxima vez te va a salir todavía más natural.</p><div class="diarito-thread__actions"><span class="diarito-thread__likes">114 <span data-i18n="feedLike">Me gusta</span></span><a class="diarito-feed-action diarito-thread__like" href="#join-community" aria-label="Me gusta" data-i18n-aria="feedLike" aria-describedby="feed-action-hint"><i class="fi fi-rr-heart" aria-hidden="true"></i></a></div></div>
-   <p class="diarito-thread__empty" data-thread-empty hidden data-i18n="threadEmpty">No hay respuestas de este tipo en la vista previa.</p>
+   
+   <div class="diarito-thread__reply" data-thread-reply="comment"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--portrait diarito-avatar--sm" aria-hidden="true"><img src="assets/images/cycle-es-03.webp" alt="" loading="lazy" decoding="async" style="--portrait-x:48%;--portrait-y:27%;--portrait-scale:2.15"></span><div><strong>Sofía M.</strong><span>@sofia.m</span></div><div class="diarito-thread__actions"><span class="diarito-thread__kind" aria-label="Comentario" data-i18n-aria="threadComment"><i class="fi fi-rr-comment" aria-hidden="true"></i></span><a class="diarito-feed-action diarito-thread__like" href="#join-community" aria-describedby="feed-action-hint"><i class="fi fi-rr-heart" aria-hidden="true"></i><span class="diarito-visually-hidden" data-i18n="feedLike">Me gusta</span><span class="diarito-thread__likes">114</span></a></div></div><p class="diarito-thread__comment" lang="es">¡Qué alegría! La próxima vez te va a salir todavía más natural.</p></div>
+   <p class="diarito-thread__empty" data-thread-empty hidden data-i18n="threadEmpty">Todavía no hay respuestas en este ejemplo.</p>
    
  </section>
  </div>
@@ -205,14 +181,9 @@
      <a class="diarito-feed-action public-feed__correct" href="#join-community" aria-describedby="feed-action-hint"><i class="fi fi-rr-pencil" aria-hidden="true"></i><span data-i18n="feedCorrect">Corregir</span></a>
    </div>
    <section class="diarito-thread public-feed__thread" id="thread-05" data-public-thread>
-   <div class="diarito-thread__toolbar">
-     
-     <div class="diarito-thread__filters" role="group" aria-label="Filtrar respuestas" data-i18n-aria="threadFilterLabel">
-       <button type="button" data-thread-filter="all" aria-pressed="true" class="is-active" data-i18n="threadAll">Todos</button><button type="button" data-thread-filter="comment" aria-pressed="false" class="" data-i18n="threadComments">Comentarios</button><button type="button" data-thread-filter="correction" aria-pressed="false" class="" data-i18n="threadCorrections">Correcciones</button>
-     </div>
-   </div>
-   <div class="diarito-thread__reply" data-thread-reply="correction"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--portrait diarito-avatar--sm" aria-hidden="true"><img src="assets/images/cycle-ko-03.webp" alt="" loading="lazy" decoding="async" style="--portrait-x:58%;--portrait-y:25%;--portrait-scale:2.2"></span><div><strong>김민준</strong><span>@minjun.kim</span></div><span class="diarito-thread__kind" data-i18n="threadCorrection">Corrección</span></div><div class="diarito-thread__correction"><p class="diarito-correction-diff" lang="ko">직원<del class="diarito-correction-diff__removed">이</del> <ins class="diarito-correction-diff__added">분이</ins> 제 말을 이해해서 정말 기뻤어요.</p><p class="diarito-thread__explanation" data-public-explanation data-text-es="Agregar «분» es una forma más respetuosa de referirse a quien te atendió. No es obligatorio, pero aporta ese matiz." data-text-ko="‘직원분’이라고 하면 상대를 조금 더 공손하게 표현할 수 있어요. 필수 교정은 아니고 표현의 뉘앙스예요.">Agregar «분» es una forma más respetuosa de referirse a quien te atendió. No es obligatorio, pero aporta ese matiz.</p></div><div class="diarito-thread__actions"><span class="diarito-thread__likes">36 <span data-i18n="feedLike">Me gusta</span></span><a class="diarito-feed-action diarito-thread__like" href="#join-community" aria-label="Me gusta" data-i18n-aria="feedLike" aria-describedby="feed-action-hint"><i class="fi fi-rr-heart" aria-hidden="true"></i></a></div></div>
-   <p class="diarito-thread__empty" data-thread-empty hidden data-i18n="threadEmpty">No hay respuestas de este tipo en la vista previa.</p>
+   
+   <div class="diarito-thread__reply" data-thread-reply="correction"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--portrait diarito-avatar--sm" aria-hidden="true"><img src="assets/images/cycle-ko-03.webp" alt="" loading="lazy" decoding="async" style="--portrait-x:58%;--portrait-y:25%;--portrait-scale:2.2"></span><div><strong>김민준</strong><span>@minjun.kim</span></div><div class="diarito-thread__actions"><span class="diarito-thread__kind" aria-label="Corrección" data-i18n-aria="threadCorrection"><i class="fi fi-rr-pencil" aria-hidden="true"></i></span><a class="diarito-feed-action diarito-thread__like" href="#join-community" aria-describedby="feed-action-hint"><i class="fi fi-rr-heart" aria-hidden="true"></i><span class="diarito-visually-hidden" data-i18n="feedLike">Me gusta</span><span class="diarito-thread__likes">36</span></a></div></div><div class="diarito-thread__correction"><p class="diarito-correction-diff" lang="ko">직원<del class="diarito-correction-diff__removed">이</del> <ins class="diarito-correction-diff__added">분이</ins> 제 말을 이해해서 정말 기뻤어요.</p><p class="diarito-thread__explanation" data-public-explanation data-text-es="Agregar «분» es una forma más respetuosa de referirse a quien te atendió. No es obligatorio, pero aporta ese matiz." data-text-ko="‘직원분’이라고 하면 상대를 조금 더 공손하게 표현할 수 있어요. 필수 교정은 아니고 표현의 뉘앙스예요.">Agregar «분» es una forma más respetuosa de referirse a quien te atendió. No es obligatorio, pero aporta ese matiz.</p></div></div>
+   <p class="diarito-thread__empty" data-thread-empty hidden data-i18n="threadEmpty">Todavía no hay respuestas en este ejemplo.</p>
    
  </section>
  </div>
@@ -230,14 +201,9 @@
      <a class="diarito-feed-action public-feed__correct" href="#join-community" aria-describedby="feed-action-hint"><i class="fi fi-rr-pencil" aria-hidden="true"></i><span data-i18n="feedCorrect">Corregir</span></a>
    </div>
    <section class="diarito-thread public-feed__thread" id="thread-06" data-public-thread hidden>
-   <div class="diarito-thread__toolbar">
-     
-     <div class="diarito-thread__filters" role="group" aria-label="Filtrar respuestas" data-i18n-aria="threadFilterLabel">
-       <button type="button" data-thread-filter="all" aria-pressed="true" class="is-active" data-i18n="threadAll">Todos</button><button type="button" data-thread-filter="comment" aria-pressed="false" class="" data-i18n="threadComments">Comentarios</button><button type="button" data-thread-filter="correction" aria-pressed="false" class="" data-i18n="threadCorrections">Correcciones</button>
-     </div>
-   </div>
-   <div class="diarito-thread__reply" data-thread-reply="comment"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--sm" aria-hidden="true">V</span><div><strong>Valentina</strong><span>@vale.s</span></div><span class="diarito-thread__kind" data-i18n="threadComment">Comentario</span></div><p class="diarito-thread__comment" lang="es">¡En algunos países también se escucha «berenjena»! ¿Qué receta vas a preparar?</p><div class="diarito-thread__actions"><span class="diarito-thread__likes">12 <span data-i18n="feedLike">Me gusta</span></span><a class="diarito-feed-action diarito-thread__like" href="#join-community" aria-label="Me gusta" data-i18n-aria="feedLike" aria-describedby="feed-action-hint"><i class="fi fi-rr-heart" aria-hidden="true"></i></a></div></div>
-   <p class="diarito-thread__empty" data-thread-empty hidden data-i18n="threadEmpty">No hay respuestas de este tipo en la vista previa.</p>
+   
+   <div class="diarito-thread__reply" data-thread-reply="comment"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--sm" aria-hidden="true">V</span><div><strong>Valentina</strong><span>@vale.s</span></div><div class="diarito-thread__actions"><span class="diarito-thread__kind" aria-label="Comentario" data-i18n-aria="threadComment"><i class="fi fi-rr-comment" aria-hidden="true"></i></span><a class="diarito-feed-action diarito-thread__like" href="#join-community" aria-describedby="feed-action-hint"><i class="fi fi-rr-heart" aria-hidden="true"></i><span class="diarito-visually-hidden" data-i18n="feedLike">Me gusta</span><span class="diarito-thread__likes">12</span></a></div></div><p class="diarito-thread__comment" lang="es">¡En algunos países también se escucha «berenjena»! ¿Qué receta vas a preparar?</p></div>
+   <p class="diarito-thread__empty" data-thread-empty hidden data-i18n="threadEmpty">Todavía no hay respuestas en este ejemplo.</p>
    
  </section>
  </div>
@@ -255,14 +221,9 @@
      <a class="diarito-feed-action public-feed__correct" href="#join-community" aria-describedby="feed-action-hint"><i class="fi fi-rr-pencil" aria-hidden="true"></i><span data-i18n="feedCorrect">Corregir</span></a>
    </div>
    <section class="diarito-thread public-feed__thread" id="thread-07" data-public-thread>
-   <div class="diarito-thread__toolbar">
-     
-     <div class="diarito-thread__filters" role="group" aria-label="Filtrar respuestas" data-i18n-aria="threadFilterLabel">
-       <button type="button" data-thread-filter="all" aria-pressed="true" class="is-active" data-i18n="threadAll">Todos</button><button type="button" data-thread-filter="comment" aria-pressed="false" class="" data-i18n="threadComments">Comentarios</button><button type="button" data-thread-filter="correction" aria-pressed="false" class="" data-i18n="threadCorrections">Correcciones</button>
-     </div>
-   </div>
-   <div class="diarito-thread__reply" data-thread-reply="correction"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--portrait diarito-avatar--sm" aria-hidden="true"><img src="assets/images/cycle-ko-03.webp" alt="" loading="lazy" decoding="async" style="--portrait-x:58%;--portrait-y:25%;--portrait-scale:2.2"></span><div><strong>김민준</strong><span>@minjun.kim</span></div><span class="diarito-thread__kind" data-i18n="threadCorrection">Corrección</span></div><div class="diarito-thread__correction"><p class="diarito-correction-diff" lang="ko"><del class="diarito-correction-diff__removed">같이 주말에</del> <ins class="diarito-correction-diff__added">주말에 같이</ins> 영화를 보기로 했어요.</p><span class="diarito-thread__operation" data-i18n="diffOrder">Cambio de orden</span><p class="diarito-thread__explanation" data-public-explanation data-text-es="Colocar primero el momento («주말에») hace que el orden suene más natural en este contexto." data-text-ko="시간을 나타내는 ‘주말에’를 먼저 두면 이 문맥에서 어순이 더 자연스러워요.">Colocar primero el momento («주말에») hace que el orden suene más natural en este contexto.</p></div><div class="diarito-thread__actions"><span class="diarito-thread__likes">11 <span data-i18n="feedLike">Me gusta</span></span><a class="diarito-feed-action diarito-thread__like" href="#join-community" aria-label="Me gusta" data-i18n-aria="feedLike" aria-describedby="feed-action-hint"><i class="fi fi-rr-heart" aria-hidden="true"></i></a></div></div>
-   <p class="diarito-thread__empty" data-thread-empty hidden data-i18n="threadEmpty">No hay respuestas de este tipo en la vista previa.</p>
+   
+   <div class="diarito-thread__reply" data-thread-reply="correction"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--portrait diarito-avatar--sm" aria-hidden="true"><img src="assets/images/cycle-ko-03.webp" alt="" loading="lazy" decoding="async" style="--portrait-x:58%;--portrait-y:25%;--portrait-scale:2.2"></span><div><strong>김민준</strong><span>@minjun.kim</span></div><div class="diarito-thread__actions"><span class="diarito-thread__kind" aria-label="Corrección" data-i18n-aria="threadCorrection"><i class="fi fi-rr-pencil" aria-hidden="true"></i></span><a class="diarito-feed-action diarito-thread__like" href="#join-community" aria-describedby="feed-action-hint"><i class="fi fi-rr-heart" aria-hidden="true"></i><span class="diarito-visually-hidden" data-i18n="feedLike">Me gusta</span><span class="diarito-thread__likes">11</span></a></div></div><div class="diarito-thread__correction"><p class="diarito-correction-diff" lang="ko"><del class="diarito-correction-diff__removed">같이 주말에</del> <ins class="diarito-correction-diff__added">주말에 같이</ins> 영화를 보기로 했어요.</p><span class="diarito-thread__operation" data-i18n="diffOrder">Cambio de orden</span><p class="diarito-thread__explanation" data-public-explanation data-text-es="Colocar primero el momento («주말에») hace que el orden suene más natural en este contexto." data-text-ko="시간을 나타내는 ‘주말에’를 먼저 두면 이 문맥에서 어순이 더 자연스러워요.">Colocar primero el momento («주말에») hace que el orden suene más natural en este contexto.</p></div></div>
+   <p class="diarito-thread__empty" data-thread-empty hidden data-i18n="threadEmpty">Todavía no hay respuestas en este ejemplo.</p>
    
  </section>
  </div>
@@ -280,15 +241,10 @@
      <a class="diarito-feed-action public-feed__correct" href="#join-community" aria-describedby="feed-action-hint"><i class="fi fi-rr-pencil" aria-hidden="true"></i><span data-i18n="feedCorrect">Corregir</span></a>
    </div>
    <section class="diarito-thread public-feed__thread" id="thread-08" data-public-thread>
-   <div class="diarito-thread__toolbar">
-     
-     <div class="diarito-thread__filters" role="group" aria-label="Filtrar respuestas" data-i18n-aria="threadFilterLabel">
-       <button type="button" data-thread-filter="all" aria-pressed="true" class="is-active" data-i18n="threadAll">Todos</button><button type="button" data-thread-filter="comment" aria-pressed="false" class="" data-i18n="threadComments">Comentarios</button><button type="button" data-thread-filter="correction" aria-pressed="false" class="" data-i18n="threadCorrections">Correcciones</button>
-     </div>
-   </div>
-   <div class="diarito-thread__reply" data-thread-reply="correction"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--portrait diarito-avatar--sm" aria-hidden="true"><img src="assets/images/cycle-es-03.webp" alt="" loading="lazy" decoding="async" style="--portrait-x:48%;--portrait-y:27%;--portrait-scale:2.15"></span><div><strong>Sofía M.</strong><span>@sofia.m</span></div><span class="diarito-thread__kind" data-i18n="threadCorrection">Corrección</span></div><div class="diarito-thread__correction"><p class="diarito-correction-diff" lang="es">Ayer tuve <del class="diarito-correction-diff__removed">un</del> <ins class="diarito-correction-diff__added">una</ins> reunión muy larga.</p><p class="diarito-thread__explanation" data-public-explanation data-text-es="«Reunión» es un sustantivo femenino; por eso corresponde «una»." data-text-ko="‘reunión’은 여성 명사이므로 부정관사 ‘una’를 써야 해요.">«Reunión» es un sustantivo femenino; por eso corresponde «una».</p></div><div class="diarito-thread__actions"><span class="diarito-thread__likes">27 <span data-i18n="feedLike">Me gusta</span></span><a class="diarito-feed-action diarito-thread__like" href="#join-community" aria-label="Me gusta" data-i18n-aria="feedLike" aria-describedby="feed-action-hint"><i class="fi fi-rr-heart" aria-hidden="true"></i></a></div></div>
-<div class="diarito-thread__reply" data-thread-reply="comment"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--sm" aria-hidden="true">A</span><div><strong>Andrés</strong><span>@andres.es</span></div><span class="diarito-thread__kind" data-i18n="threadComment">Comentario</span></div><p class="diarito-thread__comment" lang="es">Me alegra que tu compañero te hiciera reír. Espero que hoy tengas un día más tranquilo.</p><div class="diarito-thread__actions"><span class="diarito-thread__likes">8 <span data-i18n="feedLike">Me gusta</span></span><a class="diarito-feed-action diarito-thread__like" href="#join-community" aria-label="Me gusta" data-i18n-aria="feedLike" aria-describedby="feed-action-hint"><i class="fi fi-rr-heart" aria-hidden="true"></i></a></div></div>
-   <p class="diarito-thread__empty" data-thread-empty hidden data-i18n="threadEmpty">No hay respuestas de este tipo en la vista previa.</p>
+   
+   <div class="diarito-thread__reply" data-thread-reply="correction"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--portrait diarito-avatar--sm" aria-hidden="true"><img src="assets/images/cycle-es-03.webp" alt="" loading="lazy" decoding="async" style="--portrait-x:48%;--portrait-y:27%;--portrait-scale:2.15"></span><div><strong>Sofía M.</strong><span>@sofia.m</span></div><div class="diarito-thread__actions"><span class="diarito-thread__kind" aria-label="Corrección" data-i18n-aria="threadCorrection"><i class="fi fi-rr-pencil" aria-hidden="true"></i></span><a class="diarito-feed-action diarito-thread__like" href="#join-community" aria-describedby="feed-action-hint"><i class="fi fi-rr-heart" aria-hidden="true"></i><span class="diarito-visually-hidden" data-i18n="feedLike">Me gusta</span><span class="diarito-thread__likes">27</span></a></div></div><div class="diarito-thread__correction"><p class="diarito-correction-diff" lang="es">Ayer tuve <del class="diarito-correction-diff__removed">un</del> <ins class="diarito-correction-diff__added">una</ins> reunión muy larga.</p><p class="diarito-thread__explanation" data-public-explanation data-text-es="«Reunión» es un sustantivo femenino; por eso corresponde «una»." data-text-ko="‘reunión’은 여성 명사이므로 부정관사 ‘una’를 써야 해요.">«Reunión» es un sustantivo femenino; por eso corresponde «una».</p></div></div>
+<div class="diarito-thread__reply" data-thread-reply="comment"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--sm" aria-hidden="true">A</span><div><strong>Andrés</strong><span>@andres.es</span></div><div class="diarito-thread__actions"><span class="diarito-thread__kind" aria-label="Comentario" data-i18n-aria="threadComment"><i class="fi fi-rr-comment" aria-hidden="true"></i></span><a class="diarito-feed-action diarito-thread__like" href="#join-community" aria-describedby="feed-action-hint"><i class="fi fi-rr-heart" aria-hidden="true"></i><span class="diarito-visually-hidden" data-i18n="feedLike">Me gusta</span><span class="diarito-thread__likes">8</span></a></div></div><p class="diarito-thread__comment" lang="es">Me alegra que tu compañero te hiciera reír. Espero que hoy tengas un día más tranquilo.</p></div>
+   <p class="diarito-thread__empty" data-thread-empty hidden data-i18n="threadEmpty">Todavía no hay respuestas en este ejemplo.</p>
    
  </section>
  </div>
@@ -306,14 +262,9 @@
      <a class="diarito-feed-action public-feed__correct" href="#join-community" aria-describedby="feed-action-hint"><i class="fi fi-rr-pencil" aria-hidden="true"></i><span data-i18n="feedCorrect">Corregir</span></a>
    </div>
    <section class="diarito-thread public-feed__thread" id="thread-09" data-public-thread hidden>
-   <div class="diarito-thread__toolbar">
-     
-     <div class="diarito-thread__filters" role="group" aria-label="Filtrar respuestas" data-i18n-aria="threadFilterLabel">
-       <button type="button" data-thread-filter="all" aria-pressed="true" class="is-active" data-i18n="threadAll">Todos</button><button type="button" data-thread-filter="comment" aria-pressed="false" class="" data-i18n="threadComments">Comentarios</button><button type="button" data-thread-filter="correction" aria-pressed="false" class="" data-i18n="threadCorrections">Correcciones</button>
-     </div>
-   </div>
-   <div class="diarito-thread__reply" data-thread-reply="comment"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--portrait diarito-avatar--sm" aria-hidden="true"><img src="assets/images/why-ko-01.webp" alt="" loading="lazy" decoding="async" style="--portrait-x:39%;--portrait-y:24%;--portrait-scale:2.35"></span><div><strong>이지연</strong><span>@jiyeon.lee</span></div><span class="diarito-thread__kind" data-i18n="threadComment">Comentario</span></div><p class="diarito-thread__comment" lang="ko">배운 표현으로 직접 문장을 써 보는 게 정말 좋은 연습이에요.</p><div class="diarito-thread__actions"><span class="diarito-thread__likes">21 <span data-i18n="feedLike">Me gusta</span></span><a class="diarito-feed-action diarito-thread__like" href="#join-community" aria-label="Me gusta" data-i18n-aria="feedLike" aria-describedby="feed-action-hint"><i class="fi fi-rr-heart" aria-hidden="true"></i></a></div></div>
-   <p class="diarito-thread__empty" data-thread-empty hidden data-i18n="threadEmpty">No hay respuestas de este tipo en la vista previa.</p>
+   
+   <div class="diarito-thread__reply" data-thread-reply="comment"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--portrait diarito-avatar--sm" aria-hidden="true"><img src="assets/images/why-ko-01.webp" alt="" loading="lazy" decoding="async" style="--portrait-x:39%;--portrait-y:24%;--portrait-scale:2.35"></span><div><strong>이지연</strong><span>@jiyeon.lee</span></div><div class="diarito-thread__actions"><span class="diarito-thread__kind" aria-label="Comentario" data-i18n-aria="threadComment"><i class="fi fi-rr-comment" aria-hidden="true"></i></span><a class="diarito-feed-action diarito-thread__like" href="#join-community" aria-describedby="feed-action-hint"><i class="fi fi-rr-heart" aria-hidden="true"></i><span class="diarito-visually-hidden" data-i18n="feedLike">Me gusta</span><span class="diarito-thread__likes">21</span></a></div></div><p class="diarito-thread__comment" lang="ko">배운 표현으로 직접 문장을 써 보는 게 정말 좋은 연습이에요.</p></div>
+   <p class="diarito-thread__empty" data-thread-empty hidden data-i18n="threadEmpty">Todavía no hay respuestas en este ejemplo.</p>
    
  </section>
  </div>
@@ -331,14 +282,9 @@
      <a class="diarito-feed-action public-feed__correct" href="#join-community" aria-describedby="feed-action-hint"><i class="fi fi-rr-pencil" aria-hidden="true"></i><span data-i18n="feedCorrect">Corregir</span></a>
    </div>
    <section class="diarito-thread public-feed__thread" id="thread-10" data-public-thread>
-   <div class="diarito-thread__toolbar">
-     
-     <div class="diarito-thread__filters" role="group" aria-label="Filtrar respuestas" data-i18n-aria="threadFilterLabel">
-       <button type="button" data-thread-filter="all" aria-pressed="true" class="is-active" data-i18n="threadAll">Todos</button><button type="button" data-thread-filter="comment" aria-pressed="false" class="" data-i18n="threadComments">Comentarios</button><button type="button" data-thread-filter="correction" aria-pressed="false" class="" data-i18n="threadCorrections">Correcciones</button>
-     </div>
-   </div>
-   <div class="diarito-thread__reply" data-thread-reply="correction"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--portrait diarito-avatar--sm" aria-hidden="true"><img src="assets/images/why-01-relevance.webp" alt="" loading="lazy" decoding="async" style="--portrait-x:41%;--portrait-y:23%;--portrait-scale:2.35"></span><div><strong>Mateo R.</strong><span>@mateo.r</span></div><span class="diarito-thread__kind" data-i18n="threadCorrection">Corrección</span></div><div class="diarito-thread__correction"><p class="diarito-correction-diff" lang="es">Entendí algunas palabras, pero todavía me cuesta <del class="diarito-correction-diff__removed">seguirla</del> <ins class="diarito-correction-diff__added">seguir la canción</ins>.</p><p class="diarito-thread__explanation" data-public-explanation data-text-es="La frase original es válida. Hacer explícita «la canción» puede facilitar la comprensión si el contexto no está claro." data-text-ko="원문도 맞아요. 문맥이 분명하지 않을 때는 ‘la canción’을 명시하면 의미가 더 명확해져요.">La frase original es válida. Hacer explícita «la canción» puede facilitar la comprensión si el contexto no está claro.</p></div><div class="diarito-thread__actions"><span class="diarito-thread__likes">6 <span data-i18n="feedLike">Me gusta</span></span><a class="diarito-feed-action diarito-thread__like" href="#join-community" aria-label="Me gusta" data-i18n-aria="feedLike" aria-describedby="feed-action-hint"><i class="fi fi-rr-heart" aria-hidden="true"></i></a></div></div>
-   <p class="diarito-thread__empty" data-thread-empty hidden data-i18n="threadEmpty">No hay respuestas de este tipo en la vista previa.</p>
+   
+   <div class="diarito-thread__reply" data-thread-reply="correction"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--portrait diarito-avatar--sm" aria-hidden="true"><img src="assets/images/why-01-relevance.webp" alt="" loading="lazy" decoding="async" style="--portrait-x:41%;--portrait-y:23%;--portrait-scale:2.35"></span><div><strong>Mateo R.</strong><span>@mateo.r</span></div><div class="diarito-thread__actions"><span class="diarito-thread__kind" aria-label="Corrección" data-i18n-aria="threadCorrection"><i class="fi fi-rr-pencil" aria-hidden="true"></i></span><a class="diarito-feed-action diarito-thread__like" href="#join-community" aria-describedby="feed-action-hint"><i class="fi fi-rr-heart" aria-hidden="true"></i><span class="diarito-visually-hidden" data-i18n="feedLike">Me gusta</span><span class="diarito-thread__likes">6</span></a></div></div><div class="diarito-thread__correction"><p class="diarito-correction-diff" lang="es">Entendí algunas palabras, pero todavía me cuesta <del class="diarito-correction-diff__removed">seguirla</del> <ins class="diarito-correction-diff__added">seguir la canción</ins>.</p><p class="diarito-thread__explanation" data-public-explanation data-text-es="La frase original es válida. Hacer explícita «la canción» puede facilitar la comprensión si el contexto no está claro." data-text-ko="원문도 맞아요. 문맥이 분명하지 않을 때는 ‘la canción’을 명시하면 의미가 더 명확해져요.">La frase original es válida. Hacer explícita «la canción» puede facilitar la comprensión si el contexto no está claro.</p></div></div>
+   <p class="diarito-thread__empty" data-thread-empty hidden data-i18n="threadEmpty">Todavía no hay respuestas en este ejemplo.</p>
    
  </section>
  </div>
@@ -356,14 +302,9 @@
      <a class="diarito-feed-action public-feed__correct" href="#join-community" aria-describedby="feed-action-hint"><i class="fi fi-rr-pencil" aria-hidden="true"></i><span data-i18n="feedCorrect">Corregir</span></a>
    </div>
    <section class="diarito-thread public-feed__thread" id="thread-11" data-public-thread>
-   <div class="diarito-thread__toolbar">
-     
-     <div class="diarito-thread__filters" role="group" aria-label="Filtrar respuestas" data-i18n-aria="threadFilterLabel">
-       <button type="button" data-thread-filter="all" aria-pressed="true" class="is-active" data-i18n="threadAll">Todos</button><button type="button" data-thread-filter="comment" aria-pressed="false" class="" data-i18n="threadComments">Comentarios</button><button type="button" data-thread-filter="correction" aria-pressed="false" class="" data-i18n="threadCorrections">Correcciones</button>
-     </div>
-   </div>
-   <div class="diarito-thread__reply" data-thread-reply="correction"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--portrait diarito-avatar--sm" aria-hidden="true"><img src="assets/images/why-ko-01.webp" alt="" loading="lazy" decoding="async" style="--portrait-x:39%;--portrait-y:24%;--portrait-scale:2.35"></span><div><strong>이지연</strong><span>@jiyeon.lee</span></div><span class="diarito-thread__kind" data-i18n="threadCorrection">Corrección</span></div><div class="diarito-thread__correction"><p class="diarito-correction-diff" lang="ko">사람들이 바쁘게 <del class="diarito-correction-diff__removed">계속 </del>걸어 다니는 모습이 재미있었어요.</p><p class="diarito-thread__explanation" data-public-explanation data-text-es="Se puede omitir «계속» si lo que querés destacar es que caminaban apresuradamente." data-text-ko="바쁘게 걷는 모습을 강조하려면 ‘계속’을 생략해도 자연스러워요.">Se puede omitir «계속» si lo que querés destacar es que caminaban apresuradamente.</p></div><div class="diarito-thread__actions"><span class="diarito-thread__likes">7 <span data-i18n="feedLike">Me gusta</span></span><a class="diarito-feed-action diarito-thread__like" href="#join-community" aria-label="Me gusta" data-i18n-aria="feedLike" aria-describedby="feed-action-hint"><i class="fi fi-rr-heart" aria-hidden="true"></i></a></div></div>
-   <p class="diarito-thread__empty" data-thread-empty hidden data-i18n="threadEmpty">No hay respuestas de este tipo en la vista previa.</p>
+   
+   <div class="diarito-thread__reply" data-thread-reply="correction"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--portrait diarito-avatar--sm" aria-hidden="true"><img src="assets/images/why-ko-01.webp" alt="" loading="lazy" decoding="async" style="--portrait-x:39%;--portrait-y:24%;--portrait-scale:2.35"></span><div><strong>이지연</strong><span>@jiyeon.lee</span></div><div class="diarito-thread__actions"><span class="diarito-thread__kind" aria-label="Corrección" data-i18n-aria="threadCorrection"><i class="fi fi-rr-pencil" aria-hidden="true"></i></span><a class="diarito-feed-action diarito-thread__like" href="#join-community" aria-describedby="feed-action-hint"><i class="fi fi-rr-heart" aria-hidden="true"></i><span class="diarito-visually-hidden" data-i18n="feedLike">Me gusta</span><span class="diarito-thread__likes">7</span></a></div></div><div class="diarito-thread__correction"><p class="diarito-correction-diff" lang="ko">사람들이 바쁘게 <del class="diarito-correction-diff__removed">계속 </del>걸어 다니는 모습이 재미있었어요.</p><p class="diarito-thread__explanation" data-public-explanation data-text-es="Se puede omitir «계속» si lo que querés destacar es que caminaban apresuradamente." data-text-ko="바쁘게 걷는 모습을 강조하려면 ‘계속’을 생략해도 자연스러워요.">Se puede omitir «계속» si lo que querés destacar es que caminaban apresuradamente.</p></div></div>
+   <p class="diarito-thread__empty" data-thread-empty hidden data-i18n="threadEmpty">Todavía no hay respuestas en este ejemplo.</p>
    
  </section>
  </div>
@@ -381,14 +322,9 @@
      <a class="diarito-feed-action public-feed__correct" href="#join-community" aria-describedby="feed-action-hint"><i class="fi fi-rr-pencil" aria-hidden="true"></i><span data-i18n="feedCorrect">Corregir</span></a>
    </div>
    <section class="diarito-thread public-feed__thread" id="thread-12" data-public-thread hidden>
-   <div class="diarito-thread__toolbar">
-     
-     <div class="diarito-thread__filters" role="group" aria-label="Filtrar respuestas" data-i18n-aria="threadFilterLabel">
-       <button type="button" data-thread-filter="all" aria-pressed="true" class="is-active" data-i18n="threadAll">Todos</button><button type="button" data-thread-filter="comment" aria-pressed="false" class="" data-i18n="threadComments">Comentarios</button><button type="button" data-thread-filter="correction" aria-pressed="false" class="" data-i18n="threadCorrections">Correcciones</button>
-     </div>
-   </div>
-   <div class="diarito-thread__reply" data-thread-reply="comment"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--sm" aria-hidden="true">V</span><div><strong>Valentina</strong><span>@vale.s</span></div><span class="diarito-thread__kind" data-i18n="threadComment">Comentario</span></div><p class="diarito-thread__comment" lang="es">¡Yo también tengo ganas de viajar! Ojalá puedas practicar mucho.</p><div class="diarito-thread__actions"><span class="diarito-thread__likes">11 <span data-i18n="feedLike">Me gusta</span></span><a class="diarito-feed-action diarito-thread__like" href="#join-community" aria-label="Me gusta" data-i18n-aria="feedLike" aria-describedby="feed-action-hint"><i class="fi fi-rr-heart" aria-hidden="true"></i></a></div></div>
-   <p class="diarito-thread__empty" data-thread-empty hidden data-i18n="threadEmpty">No hay respuestas de este tipo en la vista previa.</p>
+   
+   <div class="diarito-thread__reply" data-thread-reply="comment"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--sm" aria-hidden="true">V</span><div><strong>Valentina</strong><span>@vale.s</span></div><div class="diarito-thread__actions"><span class="diarito-thread__kind" aria-label="Comentario" data-i18n-aria="threadComment"><i class="fi fi-rr-comment" aria-hidden="true"></i></span><a class="diarito-feed-action diarito-thread__like" href="#join-community" aria-describedby="feed-action-hint"><i class="fi fi-rr-heart" aria-hidden="true"></i><span class="diarito-visually-hidden" data-i18n="feedLike">Me gusta</span><span class="diarito-thread__likes">11</span></a></div></div><p class="diarito-thread__comment" lang="es">¡Yo también tengo ganas de viajar! Ojalá puedas practicar mucho.</p></div>
+   <p class="diarito-thread__empty" data-thread-empty hidden data-i18n="threadEmpty">Todavía no hay respuestas en este ejemplo.</p>
    
  </section>
  </div>
@@ -406,14 +342,9 @@
      <a class="diarito-feed-action public-feed__correct" href="#join-community" aria-describedby="feed-action-hint"><i class="fi fi-rr-pencil" aria-hidden="true"></i><span data-i18n="feedCorrect">Corregir</span></a>
    </div>
    <section class="diarito-thread public-feed__thread" id="thread-13" data-public-thread hidden>
-   <div class="diarito-thread__toolbar">
-     
-     <div class="diarito-thread__filters" role="group" aria-label="Filtrar respuestas" data-i18n-aria="threadFilterLabel">
-       <button type="button" data-thread-filter="all" aria-pressed="true" class="is-active" data-i18n="threadAll">Todos</button><button type="button" data-thread-filter="comment" aria-pressed="false" class="" data-i18n="threadComments">Comentarios</button><button type="button" data-thread-filter="correction" aria-pressed="false" class="" data-i18n="threadCorrections">Correcciones</button>
-     </div>
-   </div>
    
-   <p class="diarito-thread__empty" data-thread-empty data-i18n="threadEmpty">No hay respuestas de este tipo en la vista previa.</p>
+   
+   <p class="diarito-thread__empty" data-thread-empty data-i18n="threadEmpty">Todavía no hay respuestas en este ejemplo.</p>
    
  </section>
  </div>
@@ -431,14 +362,9 @@
      <a class="diarito-feed-action public-feed__correct" href="#join-community" aria-describedby="feed-action-hint"><i class="fi fi-rr-pencil" aria-hidden="true"></i><span data-i18n="feedCorrect">Corregir</span></a>
    </div>
    <section class="diarito-thread public-feed__thread" id="thread-14" data-public-thread>
-   <div class="diarito-thread__toolbar">
-     
-     <div class="diarito-thread__filters" role="group" aria-label="Filtrar respuestas" data-i18n-aria="threadFilterLabel">
-       <button type="button" data-thread-filter="all" aria-pressed="true" class="is-active" data-i18n="threadAll">Todos</button><button type="button" data-thread-filter="comment" aria-pressed="false" class="" data-i18n="threadComments">Comentarios</button><button type="button" data-thread-filter="correction" aria-pressed="false" class="" data-i18n="threadCorrections">Correcciones</button>
-     </div>
-   </div>
-   <div class="diarito-thread__reply" data-thread-reply="correction"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--portrait diarito-avatar--sm" aria-hidden="true"><img src="assets/images/cycle-es-03.webp" alt="" loading="lazy" decoding="async" style="--portrait-x:48%;--portrait-y:27%;--portrait-scale:2.15"></span><div><strong>Sofía M.</strong><span>@sofia.m</span></div><span class="diarito-thread__kind" data-i18n="threadCorrection">Corrección</span></div><div class="diarito-thread__correction"><p class="diarito-correction-diff" lang="es">Este fin de semana quiero ir <ins class="diarito-correction-diff__added">a </ins>un parque.</p><p class="diarito-thread__explanation" data-public-explanation data-text-es="Después de «ir», usamos «a» para indicar el destino." data-text-ko="장소로 이동한다는 뜻의 ‘ir’ 뒤에는 목적지를 나타내는 전치사 ‘a’를 써요.">Después de «ir», usamos «a» para indicar el destino.</p></div><div class="diarito-thread__actions"><span class="diarito-thread__likes">13 <span data-i18n="feedLike">Me gusta</span></span><a class="diarito-feed-action diarito-thread__like" href="#join-community" aria-label="Me gusta" data-i18n-aria="feedLike" aria-describedby="feed-action-hint"><i class="fi fi-rr-heart" aria-hidden="true"></i></a></div></div>
-   <p class="diarito-thread__empty" data-thread-empty hidden data-i18n="threadEmpty">No hay respuestas de este tipo en la vista previa.</p>
+   
+   <div class="diarito-thread__reply" data-thread-reply="correction"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--portrait diarito-avatar--sm" aria-hidden="true"><img src="assets/images/cycle-es-03.webp" alt="" loading="lazy" decoding="async" style="--portrait-x:48%;--portrait-y:27%;--portrait-scale:2.15"></span><div><strong>Sofía M.</strong><span>@sofia.m</span></div><div class="diarito-thread__actions"><span class="diarito-thread__kind" aria-label="Corrección" data-i18n-aria="threadCorrection"><i class="fi fi-rr-pencil" aria-hidden="true"></i></span><a class="diarito-feed-action diarito-thread__like" href="#join-community" aria-describedby="feed-action-hint"><i class="fi fi-rr-heart" aria-hidden="true"></i><span class="diarito-visually-hidden" data-i18n="feedLike">Me gusta</span><span class="diarito-thread__likes">13</span></a></div></div><div class="diarito-thread__correction"><p class="diarito-correction-diff" lang="es">Este fin de semana quiero ir <ins class="diarito-correction-diff__added">a </ins>un parque.</p><p class="diarito-thread__explanation" data-public-explanation data-text-es="Después de «ir», usamos «a» para indicar el destino." data-text-ko="장소로 이동한다는 뜻의 ‘ir’ 뒤에는 목적지를 나타내는 전치사 ‘a’를 써요.">Después de «ir», usamos «a» para indicar el destino.</p></div></div>
+   <p class="diarito-thread__empty" data-thread-empty hidden data-i18n="threadEmpty">Todavía no hay respuestas en este ejemplo.</p>
    
  </section>
  </div>
@@ -456,14 +382,9 @@
      <a class="diarito-feed-action public-feed__correct" href="#join-community" aria-describedby="feed-action-hint"><i class="fi fi-rr-pencil" aria-hidden="true"></i><span data-i18n="feedCorrect">Corregir</span></a>
    </div>
    <section class="diarito-thread public-feed__thread" id="thread-15" data-public-thread hidden>
-   <div class="diarito-thread__toolbar">
-     
-     <div class="diarito-thread__filters" role="group" aria-label="Filtrar respuestas" data-i18n-aria="threadFilterLabel">
-       <button type="button" data-thread-filter="all" aria-pressed="true" class="is-active" data-i18n="threadAll">Todos</button><button type="button" data-thread-filter="comment" aria-pressed="false" class="" data-i18n="threadComments">Comentarios</button><button type="button" data-thread-filter="correction" aria-pressed="false" class="" data-i18n="threadCorrections">Correcciones</button>
-     </div>
-   </div>
-   <div class="diarito-thread__reply" data-thread-reply="comment"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--sm" aria-hidden="true">하</span><div><strong>하나</strong><span>@hana.day</span></div><span class="diarito-thread__kind" data-i18n="threadComment">Comentario</span></div><p class="diarito-thread__comment" lang="ko">친구가 이해했다는 것만으로도 좋은 시작이에요. 계속 써 보세요!</p><div class="diarito-thread__actions"><span class="diarito-thread__likes">14 <span data-i18n="feedLike">Me gusta</span></span><a class="diarito-feed-action diarito-thread__like" href="#join-community" aria-label="Me gusta" data-i18n-aria="feedLike" aria-describedby="feed-action-hint"><i class="fi fi-rr-heart" aria-hidden="true"></i></a></div></div>
-   <p class="diarito-thread__empty" data-thread-empty hidden data-i18n="threadEmpty">No hay respuestas de este tipo en la vista previa.</p>
+   
+   <div class="diarito-thread__reply" data-thread-reply="comment"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--sm" aria-hidden="true">하</span><div><strong>하나</strong><span>@hana.day</span></div><div class="diarito-thread__actions"><span class="diarito-thread__kind" aria-label="Comentario" data-i18n-aria="threadComment"><i class="fi fi-rr-comment" aria-hidden="true"></i></span><a class="diarito-feed-action diarito-thread__like" href="#join-community" aria-describedby="feed-action-hint"><i class="fi fi-rr-heart" aria-hidden="true"></i><span class="diarito-visually-hidden" data-i18n="feedLike">Me gusta</span><span class="diarito-thread__likes">14</span></a></div></div><p class="diarito-thread__comment" lang="ko">친구가 이해했다는 것만으로도 좋은 시작이에요. 계속 써 보세요!</p></div>
+   <p class="diarito-thread__empty" data-thread-empty hidden data-i18n="threadEmpty">Todavía no hay respuestas en este ejemplo.</p>
    
  </section>
  </div>
@@ -478,6 +399,7 @@
             <span class="diarito-kicker landing-kicker" data-i18n="feedJoinKicker">Tu historia también tiene un lugar</span>
             <h2 data-i18n="feedJoinTitle">Conocé el mundo de otras personas. Compartí el tuyo.</h2>
             <p data-i18n="feedJoinBody">Unite a la comunidad para compartir tus diarios, aprender de personas que hablan el idioma que querés aprender y ayudar a otros con el tuyo.</p>
+            <p class="public-feed__sample-note" data-i18n="feedDemoNotice">Diarios, perfiles y cifras ilustrativos.</p>
             <div class="landing-cta__actions">
               <a class="landing-button diarito-button diarito-button--primary diarito-button--md" href="membership.html#membership"><span data-i18n="feedJoinButton">Unite a Diarito por $7</span><i class="fi fi-rr-angle-double-right" aria-hidden="true"></i></a>
               <a class="landing-button diarito-button diarito-button--secondary diarito-button--md" href="index.html#top" data-i18n="feedBack">Volver al inicio</a>
@@ -543,6 +465,6 @@
     </footer>
   </div>
 
-  <script src="assets/js/landing.js?v=2.19.0-pages-r1"></script>
+  <script src="assets/js/landing.js?v=2.19.0-polish-r1"></script>
 </body>
 </html>
