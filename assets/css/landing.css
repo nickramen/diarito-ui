@@ -812,7 +812,7 @@ html[lang="ko"] .landing-community h2, html[lang="ko"] .landing-confidence h2, h
   display: grid;
   grid-template-columns: repeat(2,minmax(0,1fr));
   align-items: stretch;
-  gap: .9rem;
+  gap: 1.1rem;
 }
 .landing-confidence__principles article {
   display: flex;
@@ -824,14 +824,14 @@ html[lang="ko"] .landing-community h2, html[lang="ko"] .landing-confidence h2, h
   border-radius: var(--landing-radius-md);
   background: var(--landing-surface);
 }
-.landing-confidence__principles article:first-child { margin-bottom: 1.35rem; }
-.landing-confidence__principles article:last-child { margin-top: 1.35rem; }
+.landing-confidence__principles article:first-child { transform: translateY(-1.8rem); }
+.landing-confidence__principles article:last-child { transform: translateY(1.8rem); }
 .landing-confidence__principles strong { font-size: 1rem; }
 .landing-confidence__principles p { margin-top: .55rem; }
 @media (max-width: 620px) {
   .landing-confidence__principles { grid-template-columns: 1fr; gap: .75rem; }
   .landing-confidence__principles article:first-child,
-  .landing-confidence__principles article:last-child { margin: 0; }
+  .landing-confidence__principles article:last-child { transform: none; }
 }
 /* Membership · single beta offer, no assumed billing interval */
 .landing-membership__intro { text-align: center; max-width: 48rem; margin-inline: auto; }
@@ -1302,21 +1302,24 @@ html[lang="ko"] .landing-testimonials h2, html[lang="ko"] .public-feed__intro h1
 .landing-testimonial h3 { margin: 1rem 0 .65rem; color: var(--landing-text); font-weight: 600; font-size: 1.05rem; line-height: 1.4; }
 .landing-testimonial blockquote { margin: 0 0 1rem; border: 0; padding: 0; color: var(--landing-text-secondary); }
 .landing-testimonial blockquote p { margin: 0; font-size: .95rem; line-height: 1.7; }
-.landing-testimonial__example { color: var(--landing-text-muted); font-size: .72rem; margin-top: auto; }
-.landing-testimonials__notice { margin: 1.8rem 0 0; padding-top: 1rem; border-top: 1px solid var(--landing-border); font-size: .78rem; color: var(--landing-text-muted); text-align: center; line-height: 1.55; }
 .public-feed { padding-block: clamp(2.8rem,5vw,5rem); }
 .public-feed__intro { margin-bottom: 2rem; text-align: left; }
 .public-feed__intro h1 { font-size: clamp(3.4rem,6vw,5.7rem); }
 .public-feed__intro > p { max-width: 40rem; }
-.public-feed__notice { display: flex; align-items: flex-start; gap: .7rem; padding: .9rem 1rem; border: 1px solid var(--landing-border); border-radius: var(--landing-radius-sm); background: var(--landing-bg); font-size: .78rem; line-height: 1.6; color: var(--landing-text-secondary); margin-bottom: 1.25rem; }
-.public-feed__notice i { margin-top: .15rem; flex: 0 0 auto; }
-.public-feed__notice p { margin: 0; }
 .public-feed__switch { position: relative; top: auto; z-index: 1; background: var(--landing-bg); backdrop-filter: none; }
 .public-feed__switch button { cursor: pointer; }
 .public-feed__meta { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .45rem 1rem; padding: .8rem 0; color: var(--landing-text-muted); font-size: .72rem; line-height: 1.5; }
-.public-feed__item { padding-block: 1.35rem; scroll-margin-top: 6rem; }
+.public-feed__item { display: block; padding-block: 1.55rem; scroll-margin-top: 6rem; }
+.public-feed__identity { display: flex; align-items: center; gap: .75rem; margin-bottom: .85rem; }
+.public-feed__identity-copy { min-width: 0; }
+.public-feed__identity-copy > strong { display: block; color: var(--landing-text); font-weight: 600; line-height: 1.35; font-size: .94rem; }
+.public-feed__identity-copy .diarito-feed-item__header { margin: .18rem 0 0; gap: .3rem; }
+.public-feed__item .diarito-feed-item__main { width: 100%; }
+.public-feed__illustrative { text-align: right; }
+.public-feed__comments[aria-expanded="true"] { color: var(--landing-text); }
+.public-feed__item .diarito-feed-item__text p { color: var(--landing-text); }
 .public-feed__item[hidden] { display: none; }
-.public-feed__item .diarito-feed-item__header { margin-bottom: .55rem; }
+.public-feed__item .diarito-feed-item__header { margin-bottom: 0; }
 .public-feed__item .diarito-feed-item__text { font-size: .96rem; line-height: 1.72; overflow-wrap: anywhere; }
 .public-feed__item [lang="ko"] { font-family: "Noto Sans KR", Roboto, sans-serif; word-break: keep-all; overflow-wrap: anywhere; }
 .public-feed__item .diarito-feed-item__tags { margin-top: .7rem; }
@@ -1325,12 +1328,6 @@ html[lang="ko"] .landing-testimonials h2, html[lang="ko"] .public-feed__intro h1
 .public-feed__item .diarito-feed-actions { gap: .15rem; }
 .public-feed__item .diarito-feed-action { text-decoration: none; white-space: nowrap; }
 .public-feed__correct { margin-left: auto; }
-.public-feed__correction { border-color: var(--landing-border); background: transparent; }
-.public-feed__correction summary { cursor: pointer; color: var(--landing-text); font-size: .85rem; font-weight: 600; }
-.public-feed__correction > div { padding-top: .8rem; }
-.public-feed__correction span { display: block; font-size: .7rem; color: var(--landing-text-muted); font-weight: 600; margin-bottom: .15rem; }
-.public-feed__correction p { margin: 0 0 .75rem; color: var(--landing-text-secondary); font-size: .84rem; line-height: 1.65; }
-.public-feed__correction p:last-child { margin-bottom: 0; }
 .public-feed__join { border-top: 1px solid var(--landing-border); }
 .public-feed__join .landing-button { gap: .55rem; }
 @media (max-width: 950px) { .landing-testimonials__grid { grid-template-columns: repeat(2,minmax(0,1fr)); row-gap: 2rem; } }
@@ -1341,4 +1338,15 @@ html[lang="ko"] .landing-testimonials h2, html[lang="ko"] .public-feed__intro h1
   .public-feed__item { gap: .65rem; }
   .public-feed__item .diarito-feed-action { font-size: .7rem; padding-inline: .35rem; }
   .public-feed__correct { margin-left: 0; }
+}
+
+/* Testimonial identity blocks; photos are crops of the fictional story cast. */
+.landing-testimonial__profile { display: flex; align-items: center; gap: .75rem; margin-top: auto; padding-top: .45rem; }
+.landing-testimonial__profile > div { min-width: 0; }
+.landing-testimonial__profile strong { display: block; color: var(--landing-text); font-size: .85rem; font-weight: 600; line-height: 1.4; }
+.landing-testimonial__profile > div > span { display: block; margin-top: .2rem; color: var(--landing-text-muted); font-size: .72rem; line-height: 1.45; }
+.public-feed__thread { margin-top: .8rem; }
+@media (max-width: 560px) {
+  .public-feed__illustrative { text-align: left; }
+  .public-feed__meta { flex-direction: column; align-items: flex-start; gap: .25rem; }
 }

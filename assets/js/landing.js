@@ -4,14 +4,36 @@
 
   const translations = {
     es: {
+      timeHours: "h",
+      timeMinutes: "min",
+      diffExplanation: "Por qué",
+      diffOrder: "Cambio de orden",
+      diffAdded: "Agregado",
+      diffRemoved: "Eliminado",
+      threadCollapse: "Ocultar conversación",
+      threadExpand: "Ver conversación",
+      threadPreview: "Vista previa de la conversación",
+      threadJoin: "Unite para participar en la conversación",
+      threadEmpty: "No hay respuestas de este tipo en la vista previa.",
+      threadFilterLabel: "Filtrar respuestas",
+      threadUseful: "Útil",
+      threadComment: "Comentario",
+      threadCorrection: "Corrección",
+      threadCorrections: "Correcciones",
+      threadComments: "Comentarios",
+      threadAll: "Todos",
+      learningSpanish: "Aprende español",
+      learningKorean: "Aprende coreano",
+      countryMexico: "México",
+      countryHonduras: "Honduras",
+      countryKorea: "Corea del Sur",
+      countryColombia: "Colombia",
       navHome: "Inicio",
       navRecent: "Últimos diarios",
       communityExplore: "Explorá los diarios de la comunidad",
-      testimonialsKicker: "Voces de la comunidad",
+      testimonialsKicker: "Voces de la comunidad · testimonios ficticios",
       testimonialsTitle: "Lo que queremos construir juntos.",
       testimonialsBody: "Cada persona tiene sus propios motivos para aprender un idioma y conectar con otros.",
-      testimonialsNotice: "Testimonios de ejemplo. Son textos ficticios para mostrar el diseño; todavía no son opiniones de miembros reales.",
-      testimonialExample: "Ejemplo de testimonio",
       testimonial1Title: "Aprender con mi propia vida",
       testimonial1Body: "Me gustaría practicar con las cosas que me pasan todos los días, no con frases que nunca voy a usar.",
       testimonial2Title: "Entender, no solo corregir",
@@ -25,24 +47,19 @@
       feedKicker: "Historias de todos los días",
       feedTitle: "Últimos diarios",
       feedIntro: "Un café, una conversación, un pequeño logro. Descubrí cómo otras personas cuentan su día en el idioma que están aprendiendo.",
-      feedDemoNotice: "Vista de demostración: todos los diarios, perfiles y correcciones de esta página son ejemplos ficticios, no publicaciones de usuarios reales.",
+      feedDemoNotice: "Vista previa · perfiles, diarios y cifras ficticios.",
       feedFilterLabel: "Filtrar diarios por idioma",
       feedAll: "Todos",
       feedSpanish: "Español",
       feedKorean: "Coreano",
-      feedCountOne: "diario de ejemplo",
-      feedCountMany: "diarios de ejemplo",
+      feedCountOne: "diario",
+      feedCountMany: "diarios",
       feedPublic: "Público",
-      feedSample: "Ejemplo",
       feedLike: "Me gusta",
-      feedComment: "Comentar",
+      feedComment: "Comentarios",
       feedSave: "Guardar",
       feedCorrect: "Corregir",
       feedActionHint: "Unite a la comunidad para interactuar",
-      feedCorrectionExample: "Ver ejemplo de retroalimentación",
-      feedOriginal: "Original",
-      feedSuggested: "Sugerencia",
-      feedExplanation: "Explicación",
       feedJoinKicker: "Tu historia también tiene un lugar",
       feedJoinTitle: "Conocé el mundo de otras personas. Compartí el tuyo.",
       feedJoinBody: "Unite a la comunidad para compartir tus diarios, aprender de personas que hablan el idioma que querés aprender y ayudar a otros con el tuyo.",
@@ -200,14 +217,36 @@
       uiComponents: "Componentes de interfaz"
     },
     ko: {
+      timeHours: "시간",
+      timeMinutes: "분",
+      diffExplanation: "설명",
+      diffOrder: "어순 변경",
+      diffAdded: "추가",
+      diffRemoved: "삭제",
+      threadCollapse: "대화 숨기기",
+      threadExpand: "대화 보기",
+      threadPreview: "대화 미리보기",
+      threadJoin: "커뮤니티에 가입해 대화에 참여해 보세요",
+      threadEmpty: "미리보기에 해당하는 답글이 없어요.",
+      threadFilterLabel: "답글 유형 필터",
+      threadUseful: "도움이 됐어요",
+      threadComment: "댓글",
+      threadCorrection: "교정",
+      threadCorrections: "교정",
+      threadComments: "댓글",
+      threadAll: "전체",
+      learningSpanish: "스페인어 학습 중",
+      learningKorean: "한국어 학습 중",
+      countryMexico: "멕시코",
+      countryHonduras: "온두라스",
+      countryKorea: "대한민국",
+      countryColombia: "콜롬비아",
       navHome: "홈",
       navRecent: "최근 일기",
       communityExplore: "커뮤니티 일기 둘러보기",
-      testimonialsKicker: "커뮤니티의 목소리",
+      testimonialsKicker: "커뮤니티의 목소리 · 가상 후기",
       testimonialsTitle: "함께 만들어 가고 싶은 배움.",
       testimonialsBody: "언어를 배우고 다른 사람과 연결되고 싶은 이유는 저마다 달라요.",
-      testimonialsNotice: "후기 예시입니다. 화면 구성을 보여 주기 위한 가상의 글이며, 실제 회원의 후기가 아닙니다.",
-      testimonialExample: "후기 예시",
       testimonial1Title: "내 삶에서 시작하는 배움",
       testimonial1Body: "실제로 쓰지 않을 문장보다 매일 경험하는 일들로 연습하고 싶어요.",
       testimonial2Title: "교정보다 중요한 이해",
@@ -221,24 +260,19 @@
       feedKicker: "일상의 작은 이야기",
       feedTitle: "최근 일기",
       feedIntro: "커피 한 잔, 짧은 대화, 작은 성취. 다른 사람들이 배우고 있는 언어로 하루를 어떻게 기록하는지 만나 보세요.",
-      feedDemoNotice: "데모 화면: 이 페이지의 일기, 프로필과 교정은 모두 가상의 예시이며 실제 회원이 게시한 콘텐츠가 아닙니다.",
+      feedDemoNotice: "미리보기 · 가상의 프로필, 일기 및 수치입니다.",
       feedFilterLabel: "일기 언어별 필터",
       feedAll: "전체",
       feedSpanish: "스페인어",
       feedKorean: "한국어",
-      feedCountOne: "개의 일기 예시",
-      feedCountMany: "개의 일기 예시",
+      feedCountOne: "개의 일기",
+      feedCountMany: "개의 일기",
       feedPublic: "공개",
-      feedSample: "예시",
       feedLike: "좋아요",
       feedComment: "댓글",
       feedSave: "저장",
       feedCorrect: "교정하기",
       feedActionHint: "커뮤니티에 가입하면 함께 소통할 수 있어요",
-      feedCorrectionExample: "피드백 예시 보기",
-      feedOriginal: "원문",
-      feedSuggested: "추천 표현",
-      feedExplanation: "설명",
       feedJoinKicker: "당신의 이야기도 함께할 수 있어요",
       feedJoinTitle: "다른 사람의 세계를 만나고, 나의 세계를 나눠요.",
       feedJoinBody: "커뮤니티에 가입해 일기를 공유하고, 배우고 싶은 언어를 쓰는 사람들에게 배우며, 내 언어를 배우는 사람도 도와주세요.",
@@ -540,6 +574,40 @@
     }));
     document.addEventListener("diarito:languagechange", applyFilter);
     applyFilter();
+  });
+
+  // Each guest conversation has an independent filter and expandable preview.
+  document.querySelectorAll("[data-public-diary]").forEach((entry) => {
+    const thread = entry.querySelector("[data-public-thread]");
+    const toggle = entry.querySelector("[data-thread-toggle]");
+    if (!thread || !toggle) return;
+    const filters = [...thread.querySelectorAll("[data-thread-filter]")];
+    const replies = [...thread.querySelectorAll("[data-thread-reply]")];
+    const empty = thread.querySelector("[data-thread-empty]");
+    let active = "all";
+    const update = () => {
+      let visible = 0;
+      replies.forEach((reply) => {
+        const show = active === "all" || reply.dataset.threadReply === active;
+        reply.hidden = !show;
+        if (show) visible++;
+      });
+      filters.forEach((button) => {
+        const selected = button.dataset.threadFilter === active;
+        button.classList.toggle("is-active", selected);
+        button.setAttribute("aria-pressed", String(selected));
+      });
+      if (empty) empty.hidden = visible !== 0;
+    };
+    toggle.addEventListener("click", () => {
+      thread.hidden = !thread.hidden;
+      toggle.setAttribute("aria-expanded", String(!thread.hidden));
+    });
+    filters.forEach((button) => button.addEventListener("click", () => {
+      active = button.dataset.threadFilter;
+      update();
+    }));
+    update();
   });
 
   // Scroll reveal

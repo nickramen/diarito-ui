@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Englebert&family=Noto+Sans+KR:wght@400;500;600;700&family=Poor+Story&family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
-  <link rel="stylesheet" href="assets/css/diarito-system.css?v=2.19.0">
+  <link rel="stylesheet" href="assets/css/diarito-system.css?v=2.19.0-thread-r1">
   <link rel="stylesheet" href="assets/css/docs-library.css?v=2.19.0">
 </head>
 <body class="docs-body">
@@ -727,6 +727,17 @@
             </div>
             <div class="diarito-correction__note"><i class="fi fi-rr-info"></i><span><strong>Why?</strong> “긴장됐어요” sounds more natural here if you mean you felt nervous rather than literally afraid.</span></div>
             <div class="diarito-correction__actions"><button class="diarito-button diarito-button--primary" type="button" data-diarito-toggle="accept-correction" aria-pressed="false"><i class="fi fi-rr-check"></i> Accept suggestion</button><button class="diarito-button diarito-button--ghost" type="button">Ignore</button></div>
+          </div></div>
+        </article>
+
+        <article class="docs-showcase is-full" id="pattern-inline-correction">
+          <div class="docs-showcase__head"><div><h3>Inline editorial corrections</h3><p>Render only the selected sentence in a community correction. Removed text uses a red strike-through, added text uses a green highlight, and replacement or reordering combines both operations. Use semantic del/ins elements and a short explanation.</p></div></div>
+          <div class="diarito-card diarito-card--flat"><div class="diarito-card__body diarito-stack">
+            <p class="diarito-correction-diff" lang="es">Ayer tuve <del class="diarito-correction-diff__removed">un</del> <ins class="diarito-correction-diff__added">una</ins> reunión muy larga.</p>
+            <p class="diarito-correction-diff" lang="es">Quiero ir <ins class="diarito-correction-diff__added">a </ins>un parque.</p>
+            <p class="diarito-correction-diff" lang="es">Hoy <del class="diarito-correction-diff__removed">yo </del>salí temprano.</p>
+            <p class="diarito-correction-diff" lang="ko"><del class="diarito-correction-diff__removed">같이 주말에</del> <ins class="diarito-correction-diff__added">주말에 같이</ins> 영화를 보기로 했어요.</p>
+            <div class="diarito-thread"><div class="diarito-thread__reply"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--sm">M</span><div><strong>Mateo</strong><span>@mateo.r</span></div><span class="diarito-thread__kind">Correction</span></div><div class="diarito-thread__correction"><p class="diarito-correction-diff" lang="es">Ayer tuve <del class="diarito-correction-diff__removed">un</del> <ins class="diarito-correction-diff__added">una</ins> reunión muy larga.</p><p class="diarito-thread__explanation">Reunión is feminine, so use una.</p></div><div class="diarito-thread__actions"><button class="diarito-feed-action diarito-thread__vote" type="button" data-diarito-toggle="demo-inline-upvote" aria-pressed="false"><i class="fi fi-rr-angle-small-up" aria-hidden="true"></i> Useful · 27</button></div></div></div>
           </div></div>
         </article>
 

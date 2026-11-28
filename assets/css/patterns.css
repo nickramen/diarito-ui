@@ -1078,3 +1078,41 @@
   .diarito-quest { grid-template-columns: auto minmax(0,1fr); }
   .diarito-quest__reward { grid-column: 2; text-align: left; }
 }
+
+/* Portrait crop for an existing photographic avatar; no new avatar primitive. */
+.diarito-avatar.diarito-avatar--portrait img {
+  inset: auto; left: 50%; top: 50%; max-width: none;
+  width: calc(200% * var(--portrait-scale, 2));
+  height: calc(100% * var(--portrait-scale, 2));
+  object-fit: fill;
+  transform: translate(calc(-1 * var(--portrait-x, 50%)), calc(-1 * var(--portrait-y, 30%)));
+}
+/* Inline editorial feedback. Semantic color is reserved for the actual edit. */
+.diarito-correction-diff { margin: 0; padding: .7rem .8rem; border: var(--diarito-border); border-radius: var(--diarito-radius-sm); background: var(--diarito-color-surface); color: var(--diarito-color-text-strong); font-size: var(--diarito-text-sm); line-height: 1.9; overflow-wrap: anywhere; }
+.diarito-correction-diff__removed, .diarito-correction-diff__added { border-radius: .16rem; padding: .08em .16em; box-decoration-break: clone; -webkit-box-decoration-break: clone; font-weight: var(--diarito-weight-medium); }
+.diarito-correction-diff__removed { color: #a71d20; background: #fce3e4; text-decoration: line-through; text-decoration-thickness: 1.5px; }
+.diarito-correction-diff__added { color: #166534; background: #dcfce7; text-decoration: none; }
+html[data-theme="dark"] .diarito-correction-diff__removed { color: var(--diarito-error-text); background: var(--diarito-error-soft); }
+html[data-theme="dark"] .diarito-correction-diff__added { color: var(--diarito-success-text); background: var(--diarito-success-soft); }
+.diarito-thread { border-top: var(--diarito-border); padding-top: .8rem; }
+.diarito-thread[hidden], .diarito-thread [hidden] { display: none !important; }
+.diarito-thread__toolbar { display: flex; flex-wrap: wrap; gap: .6rem 1rem; justify-content: space-between; align-items: center; margin-bottom: .7rem; }
+.diarito-thread__title { color: var(--diarito-color-text-muted); font-size: var(--diarito-text-xs); }
+.diarito-thread__filters { display: flex; flex-wrap: wrap; gap: .25rem; }
+.diarito-thread__filters button { border: 1px solid transparent; border-radius: var(--diarito-radius-xs); padding: .3rem .55rem; background: transparent; color: var(--diarito-color-text-secondary); font-size: var(--diarito-text-xs); }
+.diarito-thread__filters button.is-active, .diarito-thread__filters button:hover { color: var(--diarito-color-text-strong); background: var(--diarito-color-control); }
+.diarito-thread__filters button:focus-visible { outline: 2px solid var(--diarito-color-text-strong); outline-offset: 2px; }
+.diarito-thread__reply { border-left: 1px solid var(--diarito-color-border-strong); padding: .65rem 0 .5rem .85rem; margin: .25rem 0 .65rem; }
+.diarito-thread__identity { display: flex; align-items: center; gap: .55rem; flex-wrap: wrap; }
+.diarito-thread__identity > div { min-width: 0; }
+.diarito-thread__identity strong { display: block; color: var(--diarito-color-text-strong); font-size: var(--diarito-text-sm); font-weight: var(--diarito-weight-semibold); line-height: 1.3; }
+.diarito-thread__identity > div > span { display: block; color: var(--diarito-color-text-muted); font-size: var(--diarito-text-xs); }
+.diarito-thread__kind { margin-left: auto; font-size: var(--diarito-text-xs); color: var(--diarito-color-text-muted); }
+.diarito-thread__comment { color: var(--diarito-color-text-strong); margin: .6rem 0 .25rem; font-size: var(--diarito-text-sm); line-height: 1.6; }
+.diarito-thread__correction { margin-top: .7rem; }
+.diarito-thread__explanation { margin: .55rem 0 .2rem; color: var(--diarito-color-text-secondary); font-size: var(--diarito-text-sm); line-height: 1.65; }
+.diarito-thread__operation { display: block; font-size: var(--diarito-text-xs); color: var(--diarito-color-text-muted); margin-top: .35rem; }
+.diarito-thread__actions { display: flex; justify-content: flex-start; margin-top: .3rem; }
+.diarito-thread__vote { text-decoration: none; }
+.diarito-thread__empty { color: var(--diarito-color-text-muted); margin: .4rem 0 .8rem; font-size: var(--diarito-text-sm); }
+.diarito-thread__join { display: inline-block; color: var(--diarito-color-text-secondary); font-size: var(--diarito-text-xs); text-underline-offset: .16rem; padding: .35rem 0; }

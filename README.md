@@ -14,6 +14,15 @@ Version 2.19.0 presents human feedback in an animated landscape tablet walkthrou
 
 
 
+## 2.19.0 editorial corrections and public feed refinement
+
+- Adds fictional testimonial identities, cropped photographic avatars, country and learning language; retains one concise disclosure in the section kicker.
+- Reflows the public diary feed into an avatar/identity header above full-width body and media. Adds illustrative likes, reply and save counts and a concise preview disclosure.
+- Replaces the correction accordion with visible inline editorial changes: red strike-through for deletion, green highlight for insertion, both for replacements and reordering.
+- Adds at most two example replies per conversation, independent all/comment/correction filters, correction usefulness upvotes and guest membership links.
+- Adds the reusable diff/thread pattern and examples to the UI library. Guest votes and other member actions do not create real data.
+- Increases the vertical offset of the two confidence cards; stacks without offset on mobile.
+
 ## 2.19.0 public discovery and testimonial layout
 
 - Adds four explicitly fictional testimonial examples before membership; replace them with consented, verified user feedback before a real launch. No fabricated star ratings.
