@@ -1347,9 +1347,11 @@ html[lang="ko"] .public-page-hero h1,html[lang="ko"] .auth-panel h1,html[lang="k
 .membership-feature p { margin: 0; font-size: .94rem; color: var(--landing-text-secondary); line-height: 1.7; }
 .membership-feature__example { display: grid; gap: .5rem; padding: 1.15rem clamp(1.25rem,2.5vw,2rem); background: transparent; border-top: 1px solid var(--landing-border); }
 .membership-feature__example p { font-size: .87rem; }
+.membership-hero { border-bottom: 1px solid var(--landing-border); }
+.blog-intro-grid > .landing-section { background: transparent; }
 .blog-list-section { padding-top: 0; }
 .blog-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1rem; }
-.blog-card { display: flex; flex-direction: column; min-width: 0; border: 1px solid var(--landing-border); background: transparent; box-shadow: none; overflow: hidden; }
+.blog-card { display: flex; flex-direction: column; min-width: 0; border: 1px solid var(--landing-border); background: var(--landing-bg); box-shadow: none; overflow: hidden; }
 .blog-card__image { display: block; }
 .blog-card__image img,.blog-article figure img { width: 100%; height: auto; aspect-ratio: 2/1; object-fit: cover; }
 .blog-card .diarito-card__body { display: flex; flex-direction: column; flex: 1; align-items: flex-start; gap: .8rem; padding: 1.4rem; }
@@ -1364,10 +1366,10 @@ html[lang="ko"] .public-page-hero h1,html[lang="ko"] .auth-panel h1,html[lang="k
 .auth-layout { display: grid; grid-template-columns: minmax(0,1fr) minmax(20rem,.78fr); align-items: center; gap: clamp(2rem,5vw,5rem); max-width: 70rem; }
 .auth-visual { align-self: stretch; min-height: 30rem; border-radius: var(--landing-radius-md); overflow: hidden; background: var(--landing-control); }
 .auth-visual img { width: 100%; height: 100%; min-height: 30rem; object-fit: cover; object-position: 75% center; }
-.auth-panel { min-width: 0; max-width: 31rem; width: 100%; margin-inline: auto; }
-.auth-panel h1 { font-size: clamp(2.9rem,4.4vw,4.7rem); text-wrap: pretty; }
-.auth-intro { font-size: .94rem; }
-.auth-form { display: grid; gap: 1rem; margin-top: 1.7rem; }
+.auth-panel { min-width: 0; max-width: 31rem; width: 100%; margin-inline: auto; border: 1px solid var(--landing-border); border-radius: var(--landing-radius-md); background: var(--landing-bg); box-shadow: none; }
+.auth-panel__body { padding: clamp(1.5rem,3vw,2.25rem); }
+.auth-panel h1, html[lang="ko"] .auth-panel h1 { margin: 0; font-family: Roboto,"Noto Sans KR",sans-serif; font-size: clamp(1.55rem,2.5vw,2rem); font-weight: 600; line-height: 1.25; letter-spacing: -.025em; text-wrap: pretty; }
+.auth-form { display: grid; gap: 1rem; margin-top: 1.5rem; }
 .auth-form .diarito-input,.auth-form .diarito-select { width: 100%; }
 .auth-form > button { width: 100%; margin-top: .3rem; }
 .auth-notice { color: var(--landing-text-muted); font-size: .79rem; line-height: 1.6; margin-top: .9rem; }
@@ -1381,11 +1383,7 @@ html[lang="ko"] .public-page-hero h1,html[lang="ko"] .auth-panel h1,html[lang="k
 .landing-announcement a { color: #fff; text-decoration: none; border-bottom: 1px solid #fff; padding-bottom: .1rem; white-space: nowrap; }
 .landing-announcement a:hover { opacity: .85; }
 .public-feed.landing-section { padding-top: .75rem; padding-bottom: clamp(2rem,4vw,4rem); }
-.public-feed__filter-grid {
-  background-image: linear-gradient(to right,var(--landing-grid-line) 1px,transparent 1px),linear-gradient(to bottom,var(--landing-grid-line) 1px,transparent 1px);
-  background-size: 20px 20px;
-}
-.public-feed__switch { background: transparent; }
+.public-feed__switch { background: var(--landing-bg); }
 .public-feed__switch button { text-align: left; padding-inline: .8rem; }
 .public-feed__switch button.is-active::after { left: 0; right: 0; }
 .public-feed__item:first-of-type { padding-top: 1.2rem; }
