@@ -259,7 +259,7 @@ html[data-theme="dark"] .landing-hero {
 .landing-hero__photo {
   z-index: 0;
   background-image:
-    linear-gradient(to right, var(--hero-scrim-solid) 0%, var(--hero-scrim-near) 36%, var(--hero-scrim-mid) 58%, var(--hero-scrim-far) 100%),
+    linear-gradient(to right, var(--hero-scrim-solid) 0%, var(--hero-scrim-near) 43%, var(--hero-scrim-mid) 65%, var(--hero-scrim-far) 100%),
     url("../images/hero-diarito.webp");
   background-repeat: no-repeat;
   background-position: center, center 44%;
@@ -278,7 +278,7 @@ html[data-theme="dark"] .landing-hero {
   z-index: 2;
   min-height: clamp(34rem, 72vh, 47rem);
   display: grid;
-  grid-template-columns: minmax(0,1.06fr) minmax(28rem,.94fr);
+  grid-template-columns: minmax(0,1.24fr) minmax(0,.76fr);
   gap: clamp(2.5rem,4vw,4rem);
   align-items: center;
 }
@@ -305,8 +305,11 @@ html[data-theme="dark"] .landing-hero {
   font-weight: 400;
   line-height: .98;
   letter-spacing: -.035em;
-  text-wrap: balance;
+  text-wrap: wrap;
 }
+.landing-hero__title-start,
+.landing-hero__title-end { display: block; }
+.landing-hero__title-end { text-wrap: balance; }
 html[lang="ko"] .landing-hero__copy h1 {
   max-width: 100%;
   font-family: "Noto Sans KR", Roboto, sans-serif;
@@ -924,7 +927,7 @@ html.is-language-switching [data-i18n] { animation: landing-language-fade 220ms 
   .landing-nav { display: none; }
   .landing-header__actions { display: none; }
   .landing-mobile-nav { display: block; margin-left: auto; }
-  .landing-hero__container { grid-template-columns: minmax(0,1.18fr) minmax(22rem,.82fr); gap: 2.5rem; }
+  .landing-hero__container { grid-template-columns: minmax(0,1.24fr) minmax(0,.76fr); gap: 2.5rem; }
   .landing-hero__copy h1 { max-width: 100%; font-size: clamp(3rem,5.3vw,5.8rem); }
 }
 @media (max-width: 900px) {
@@ -946,7 +949,7 @@ html.is-language-switching [data-i18n] { animation: landing-language-fade 220ms 
       linear-gradient(to bottom, var(--landing-grid-line) 1px, transparent 1px);
     background-size: 20px 20px;
   }
-  .landing-hero__copy h1 { max-width: 22ch; }
+  .landing-hero__copy h1 { max-width: 100%; }
   .landing-hero__photo {
     position: relative;
     inset: auto;
