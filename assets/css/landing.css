@@ -345,7 +345,9 @@ html[lang="ko"] .landing-hero__copy h1 {
 .landing-statement h2,
 .landing-section-head h2,
 .landing-human__copy h2,
-.landing-trust h2,
+.landing-community h2,
+.landing-confidence h2,
+.landing-membership h2,
 .landing-cta h2 {
   margin: .75rem 0 0;
   font-family: Englebert, "Noto Sans KR", Roboto, sans-serif;
@@ -356,7 +358,9 @@ html[lang="ko"] .landing-hero__copy h1 {
 html[lang="ko"] .landing-statement h2,
 html[lang="ko"] .landing-section-head h2,
 html[lang="ko"] .landing-human__copy h2,
-html[lang="ko"] .landing-trust h2,
+html[lang="ko"] .landing-community h2,
+html[lang="ko"] .landing-confidence h2,
+html[lang="ko"] .landing-membership h2,
 html[lang="ko"] .landing-cta h2 {
   font-family: "Noto Sans KR", Roboto, sans-serif;
   font-weight: 700;
@@ -718,55 +722,151 @@ html[lang="ko"] .landing-cycle-focus h3 {
 .landing-feedback-published p { margin: .12rem 0; color: var(--diarito-color-text-secondary); font-size: .72rem; line-height: 1.4; }
 .landing-feedback-published small { color: var(--diarito-color-text-muted); font-size: .63rem; }
 
-/* Trust */
-.landing-trust {
+/* Community · reciprocity, not a second product feature list */
+.landing-community {
   display: grid;
-  grid-template-columns: minmax(0,34rem) minmax(0,34rem);
-  gap: clamp(2rem,4vw,4rem);
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr);
   align-items: center;
   justify-content: center;
+  gap: clamp(2rem,5vw,5rem);
 }
-.landing-trust > * { width: 100%; min-width: 0; justify-self: center; }
-.landing-trust h2 { max-width: 14ch; font-size: clamp(3rem,4.5vw,4.6rem); }
-.landing-trust__list {
-  display: grid;
-  gap: .75rem;
+.landing-community > * { min-width: 0; }
+.landing-community h2, .landing-confidence h2, .landing-membership h2 {
+  font-size: clamp(3rem,4.5vw,4.8rem);
+  line-height: 1.03;
 }
-.landing-trust__item {
+html[lang="ko"] .landing-community h2, html[lang="ko"] .landing-confidence h2, html[lang="ko"] .landing-membership h2 {
+  font-size: clamp(2.3rem,3.8vw,3.9rem);
+  line-height: 1.18;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+.landing-community__lead, .landing-confidence__copy > p, .landing-membership__intro > p {
+  max-width: 43rem;
+  margin: 1.15rem 0 0;
+  color: var(--landing-text-secondary);
+  line-height: 1.75;
+  font-size: 1rem;
+}
+.landing-community__points, .landing-membership__benefits { list-style: none; padding: 0; margin: 0; }
+.landing-community__points { display: grid; gap: 1.1rem; margin-top: 1.75rem; }
+.landing-community__points li, .landing-confidence__principles article {
   display: grid;
   grid-template-columns: auto minmax(0,1fr);
-  gap: 1rem;
-  padding: 1rem;
-  border: 1px solid var(--landing-border);
-  border-radius: var(--landing-radius-sm);
-  background: var(--landing-surface);
-  transition: transform var(--landing-transition), border-color var(--landing-transition), background-color var(--landing-transition);
+  gap: .8rem;
+  align-items: start;
 }
-.landing-trust__item:hover,
-.landing-trust__item:active {
-  border-color: var(--landing-border-strong);
-  background: var(--landing-control);
-  transform: translateX(4px);
-}
-.landing-trust__icon {
-  width: 2.2rem;
-  height: 2.2rem;
+.landing-community__icon, .landing-membership__benefit-icon {
   display: grid;
   place-items: center;
-  border: 1px solid var(--landing-border);
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.25rem;
   border-radius: 50%;
+  border: 1px solid var(--landing-border);
+  color: var(--landing-text);
   background: var(--landing-bg);
-  font-size: .78rem;
-  transition: transform var(--landing-transition);
+  font-size: .9rem;
 }
-.landing-trust__item:hover .landing-trust__icon { transform: rotate(5deg); }
-.landing-trust__item strong { display: block; font-size: .92rem; font-weight: 600; }
-.landing-trust__item p { margin: .32rem 0 0; color: var(--landing-text-secondary); font-size: .84rem; line-height: 1.62; }
+.landing-community__points strong, .landing-confidence__principles strong, .landing-membership__benefit strong {
+  display: block;
+  color: var(--landing-text);
+  font-size: .92rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+.landing-community__points p, .landing-confidence__principles p, .landing-membership__benefit p {
+  margin: .22rem 0 0;
+  color: var(--landing-text-secondary);
+  font-size: .86rem;
+  line-height: 1.6;
+}
+.landing-community__photos {
+  display: grid;
+  gap: .35rem;
+  overflow: hidden;
+  border-radius: var(--landing-radius-md);
+  align-self: center;
+}
+.landing-community__photos img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 1;
+  object-fit: contain;
+}
+/* Confidence · a human promise, with the existing sharing model */
+.landing-confidence {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+  gap: clamp(2rem,5vw,5rem);
+  align-items: center;
+}
+.landing-confidence__principles {
+  display: grid;
+  gap: 1.35rem;
+}
+.landing-confidence__principles article + article {
+  padding-top: 1.35rem;
+  border-top: 1px solid var(--landing-border);
+}
+/* Membership · single beta offer, no assumed billing interval */
+.landing-membership__intro { text-align: center; max-width: 48rem; margin-inline: auto; }
+.landing-membership__intro > p { margin-inline: auto; }
+.landing-membership__card {
+  display: grid;
+  grid-template-columns: minmax(0,.68fr) minmax(0,1.32fr);
+  align-items: stretch;
+  width: min(100%,68rem);
+  margin: clamp(2rem,4vw,3rem) auto 0;
+  border: 1px solid var(--landing-border-strong);
+  border-radius: var(--landing-radius-md);
+  background: var(--landing-surface);
+  overflow: hidden;
+}
+.landing-membership__offer, .landing-membership__includes { min-width: 0; padding: clamp(1.5rem,3vw,2.5rem); }
+.landing-membership__offer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid var(--landing-border);
+  background: var(--landing-surface-soft);
+}
+.landing-membership__offer h3, .landing-membership__includes h3 { margin: 0; color: var(--landing-text); font-size: 1.2rem; font-weight: 600; line-height: 1.4; }
+.landing-membership__price-label { margin-top: 1.75rem; color: var(--landing-text-muted); font-size: .8rem; }
+.landing-membership__price { font-size: clamp(4.5rem,8vw,6rem); letter-spacing: -.065em; font-weight: 700; line-height: 1.06; margin-top: .1rem; font-variant-numeric: lining-nums tabular-nums; }
+.landing-membership__languages { color: var(--landing-text); font-weight: 600; font-size: .95rem; margin: .85rem 0 .2rem; }
+.landing-membership__level { color: var(--landing-text-secondary); font-size: .82rem; margin: 0; }
+.landing-membership__join { margin-top: 1.6rem; }
+.landing-membership__join summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: .6rem; width: 100%; text-align: center; }
+.landing-membership__join summary::-webkit-details-marker { display: none; }
+.landing-membership__join summary::marker { content: ""; }
+.landing-membership__notice { margin-top: .8rem; border: 1px solid var(--landing-border); border-radius: var(--landing-radius-sm); background: var(--landing-bg); padding: .8rem; font-size: .82rem; line-height: 1.5; }
+.landing-membership__notice p { margin: .35rem 0 0; color: var(--landing-text-secondary); }
+.landing-membership__preview { margin: .7rem 0 0; color: var(--landing-text-muted); font-size: .75rem; line-height: 1.5; text-align: center; }
+.landing-membership__benefits { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.35rem 1.5rem; margin-top: 1.6rem; }
+.landing-membership__benefit { display: grid; grid-template-columns: auto minmax(0,1fr); align-items: start; gap: .65rem; }
+.landing-membership__benefit-icon { width: 1.9rem; height: 1.9rem; font-size: .78rem; }
+.landing-membership__benefit p { font-size: .8rem; }
+.landing-membership__card strong, .landing-membership__card p { overflow-wrap: anywhere; }
+@media (max-width: 900px) {
+  .landing-community, .landing-confidence { grid-template-columns: 1fr; }
+  .landing-community__photos { width: min(100%,44rem); justify-self: center; }
+  .landing-membership__card { grid-template-columns: 1fr; max-width: 44rem; }
+  .landing-membership__offer { border-right: 0; border-bottom: 1px solid var(--landing-border); }
+}
+@media (max-width: 620px) {
+  .landing-community h2, .landing-confidence h2, .landing-membership h2 { font-size: clamp(2.65rem,10vw,3.6rem); }
+  html[lang="ko"] .landing-community h2, html[lang="ko"] .landing-confidence h2, html[lang="ko"] .landing-membership h2 { font-size: clamp(2rem,8.5vw,2.8rem); }
+  .landing-membership__benefits { grid-template-columns: 1fr; gap: 1.1rem; }
+  .landing-membership__offer, .landing-membership__includes { padding: 1.25rem; }
+}
 
 /* CTA */
 .landing-cta { text-align: center; border: 0; }
 .landing-cta__inner { max-width: 54rem; margin-inline: auto; }
-.landing-cta h2 { font-size: clamp(3.5rem,7vw,6.6rem); line-height: .95; }
+.landing-cta h2 { font-size: clamp(3.15rem,6vw,5.7rem); line-height: 1.02; }
+html[lang="ko"] .landing-cta h2 { font-size: clamp(2.5rem,5vw,4.8rem); line-height: 1.18; word-break: keep-all; overflow-wrap: anywhere; }
 .landing-cta p {
   max-width: 38rem;
   margin: 1.1rem auto 0;
@@ -798,6 +898,8 @@ html.is-language-switching [data-i18n] { animation: landing-language-fade 220ms 
 /* Responsive */
 @media (max-width: 1100px) {
   .landing-nav { display: none; }
+  .landing-header__actions { display: none; }
+  .landing-mobile-nav { display: block; margin-left: auto; }
   .landing-hero__container { grid-template-columns: minmax(0,1.18fr) minmax(22rem,.82fr); gap: 2.5rem; }
   .landing-hero__copy h1 { max-width: 14ch; font-size: clamp(4rem,7.5vw,6rem); }
 }
@@ -806,8 +908,7 @@ html.is-language-switching [data-i18n] { animation: landing-language-fade 220ms 
   .landing-mobile-nav { display: block; }
   .landing-hero__container,
   .landing-statement,
-  .landing-human,
-  .landing-trust { grid-template-columns: 1fr; }
+  .landing-human { grid-template-columns: 1fr; }
   .landing-section.landing-hero {
     padding-block: 0;
   }
@@ -1078,9 +1179,8 @@ html.is-language-switching [data-i18n] { animation: landing-language-fade 220ms 
   }
 }
 @media (max-width: 1100px) {
-  .landing-human, .landing-trust { grid-template-columns: 1fr; gap: var(--diarito-space-8); }
+  .landing-human { grid-template-columns: 1fr; gap: var(--diarito-space-8); }
   .landing-human__copy { max-width: 46rem; }
-  .landing-trust > * { max-width: 46rem; }
   .landing-feedback-tablet { width: min(100%, 46rem); }
 }
 @media (max-width: 680px) {

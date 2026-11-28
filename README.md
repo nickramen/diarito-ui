@@ -14,6 +14,14 @@ Version 2.19.0 presents human feedback in an animated landscape tablet walkthrou
 
 
 
+## 2.19.0 community and membership landing revision
+
+- Replaces the internal trust/scale messaging with a reciprocal community section and a respectful learning section.
+- Adds a single $7 membership offer covering the existing planned diary, exchange, correction, saved-expression, practice, progress and sharing patterns.
+- Billing interval, enrollment and checkout are intentionally not assumed; the membership button discloses that registration and payment are not available in this UI prototype.
+- Reuses the approved Korean and Latin American community photo collages; existing hero, cat stories, scroll-driven learning cycle and tablet animation remain unchanged.
+- Localizes all new copy in Spanish and Korean, updates navigation links, and preserves responsive and dark-mode behavior.
+
 ## 2.19.0 tablet correction walkthrough + cycle background
 
 - Keeps the four sticky learning image placeholders and the section-wide fading grid.

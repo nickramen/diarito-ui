@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-thin-rounded/css/uicons-thin-rounded.css">
   <link rel="stylesheet" href="assets/css/diarito-system.css?v=2.19.0">
   <link rel="preload" as="image" href="assets/images/hero-diarito.webp">
-  <link rel="stylesheet" href="assets/css/landing.css?v=2.19.0-cycle-r1">
+  <link rel="stylesheet" href="assets/css/landing.css?v=2.19.0-community-r1">
 </head>
 <body class="landing-page">
   <div class="landing-shell">
@@ -21,7 +21,7 @@
       <div class="diarito-container diarito-container--lg landing-container landing-announcement__inner">
         <span class="landing-announcement__eyebrow" data-i18n="announcementEyebrow">Diarito · versión beta</span>
         <p data-i18n="announcement">Empezamos con Coreano ↔ Español y nivel A2 para validar una experiencia de aprendizaje basada en la vida real.</p>
-        <a href="#trust" data-i18n="announcementLink">Conocé el enfoque</a>
+        <a href="#community" data-i18n="announcementLink">Conocé el enfoque</a>
         <button type="button" data-landing-announcement-close aria-label="Cerrar anuncio"><i class="fi fi-rr-cross-small"></i></button>
       </div>
     </aside>
@@ -37,7 +37,8 @@
           <a href="#why" data-i18n="navWhy">Por qué Diarito</a>
           <a href="#how-it-works" data-i18n="navHow">Cómo funciona</a>
           <a href="#feedback" data-i18n="navFeedback">Retroalimentación humana</a>
-          <a href="#trust" data-i18n="navTrust">Confianza</a>
+          <a href="#community" data-i18n="navCommunity">Comunidad</a>
+          <a href="#membership" data-i18n="navMembership">Membresía</a>
         </nav>
 
         <div class="landing-header__actions">
@@ -60,7 +61,8 @@
               <a href="#why" data-i18n="navWhy">Por qué Diarito</a>
               <a href="#how-it-works" data-i18n="navHow">Cómo funciona</a>
               <a href="#feedback" data-i18n="navFeedback">Retroalimentación humana</a>
-              <a href="#trust" data-i18n="navTrust">Confianza</a>
+              <a href="#community" data-i18n="navCommunity">Comunidad</a>
+              <a href="#membership" data-i18n="navMembership">Membresía</a>
             </nav>
             <div class="landing-mobile-nav__actions">
               <button class="landing-control diarito-button diarito-button--secondary diarito-button--sm" type="button" data-language-toggle><i class="fi fi-rr-language"></i><span data-language-label>ESP</span></button>
@@ -312,25 +314,72 @@
         </div>
       </section>
 
-      <section class="diarito-section landing-section landing-section--soft" id="trust">
-        <div class="diarito-container diarito-container--lg landing-container landing-trust">
-          <div data-reveal>
-            <span class="diarito-kicker landing-kicker" data-i18n="trustKicker">La conexión funciona en ambos sentidos</span>
-            <h2 data-i18n="trustTitle">Construir confianza antes de escalar.</h2>
+      <section class="diarito-section landing-section landing-section--soft" id="community">
+        <div class="diarito-container diarito-container--lg landing-container landing-community">
+          <div class="landing-community__copy" data-reveal>
+            <span class="diarito-kicker landing-kicker" data-i18n="communityKicker">Una comunidad que aprende junta</span>
+            <h2 data-i18n="communityTitle">Aprendé de otros. Ayudá a otros a aprender.</h2>
+            <p class="landing-community__lead" data-i18n="communityBody">Tu idioma también es el que alguien más está aprendiendo. En Diarito, compartí lo que sabés, descubrí otras formas de ver el mundo y aprendé junto a personas que también tienen algo que contar.</p>
+            <ul class="landing-community__points">
+              <li><span class="landing-community__icon" aria-hidden="true"><i class="fi fi-rr-comment-alt"></i></span><div><strong data-i18n="communityShareTitle">Compartí tu idioma</strong><p data-i18n="communityShareBody">Ayudá a alguien a encontrar una expresión más natural y explicale por qué funciona en ese contexto.</p></div></li>
+              <li><span class="landing-community__icon" aria-hidden="true"><i class="fi fi-rr-globe"></i></span><div><strong data-i18n="communityDiscoverTitle">Descubrí otros mundos</strong><p data-i18n="communityDiscoverBody">Conocé otras experiencias y culturas a través de los diarios de la comunidad.</p></div></li>
+              <li><span class="landing-community__icon" aria-hidden="true"><i class="fi fi-rr-users"></i></span><div><strong data-i18n="communityGrowTitle">Crecé junto a otros</strong><p data-i18n="communityGrowBody">Aprender y aportar son dos partes de la misma experiencia.</p></div></li>
+            </ul>
           </div>
-          <div class="landing-trust__list">
-            <article class="landing-trust__item" data-reveal>
-              <span class="landing-trust__icon" aria-hidden="true"><i class="fi fi-rr-arrows-retweet"></i></span>
-              <div><strong data-i18n="trust1Title">Intercambio mutuo</strong><p data-i18n="trust1Body">Entender la vida de otra persona y compartir tu propio idioma y cultura debe generar aprendizaje en ambos sentidos.</p></div>
-            </article>
-            <article class="landing-trust__item" data-reveal data-reveal-delay="70">
-              <span class="landing-trust__icon" aria-hidden="true"><i class="fi fi-rr-star"></i></span>
-              <div><strong data-i18n="trust2Title">Reconocimiento por contribuir</strong><p data-i18n="trust2Body">La contribución útil debe ser reconocida, especialmente cuando mejora la experiencia de aprendizaje de otra persona.</p></div>
-            </article>
-            <article class="landing-trust__item" data-reveal data-reveal-delay="140">
-              <span class="landing-trust__icon" aria-hidden="true"><i class="fi fi-rr-shield-check"></i></span>
-              <div><strong data-i18n="trust3Title">Privacidad y control</strong><p data-i18n="trust3Body">La confianza requiere reportes, bloqueos y controles claros sobre quién puede ver e interactuar con lo que escribís.</p></div>
-            </article>
+          <div class="landing-community__photos" data-reveal data-reveal-delay="80" aria-hidden="true">
+            <img src="assets/images/cycle-es-02.webp" width="1200" height="600" alt="" loading="lazy" decoding="async">
+            <img src="assets/images/cycle-ko-02.webp" width="1200" height="600" alt="" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </section>
+
+      <section class="diarito-section landing-section" id="confidence">
+        <div class="diarito-container diarito-container--lg landing-container landing-confidence">
+          <div class="landing-confidence__copy" data-reveal>
+            <span class="diarito-kicker landing-kicker" data-i18n="mistakesKicker">No necesitás hablar perfecto</span>
+            <h2 data-i18n="mistakesTitle">Equivocarte también es aprender.</h2>
+            <p data-i18n="mistakesBody">No tenés que esperar a dominar un idioma para empezar a usarlo. Escribí a tu ritmo, recibí retroalimentación con respeto y volvé a intentarlo con más confianza.</p>
+          </div>
+          <div class="landing-confidence__principles" data-reveal data-reveal-delay="80">
+            <article><span class="landing-community__icon" aria-hidden="true"><i class="fi fi-rr-lock"></i></span><div><strong data-i18n="mistakesChoiceTitle">Vos decidís qué compartís.</strong><p data-i18n="mistakesChoiceBody">Tu diario es tuyo. Elegí qué historias querés compartir con la comunidad y cuáles preferís guardar para vos.</p></div></article>
+            <article><span class="landing-community__icon" aria-hidden="true"><i class="fi fi-rr-heart"></i></span><div><strong data-i18n="mistakesRespectTitle">El error es parte del proceso.</strong><p data-i18n="mistakesRespectBody">Acá, una corrección es una oportunidad para aprender, no un motivo para juzgar a alguien.</p></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="diarito-section landing-section" id="membership">
+        <div class="diarito-container diarito-container--lg landing-container landing-membership">
+          <header class="landing-membership__intro" data-reveal>
+            <span class="diarito-kicker landing-kicker" data-i18n="membershipKicker">Formá parte de Diarito</span>
+            <h2 data-i18n="membershipTitle">Una comunidad. Una membresía.</h2>
+            <p data-i18n="membershipBody">Aprendé desde tu vida, conectá con otras personas y convertí la retroalimentación en expresiones que podés usar en el mundo real.</p>
+          </header>
+          <div class="landing-membership__card" data-reveal data-reveal-delay="80">
+            <div class="landing-membership__offer">
+              <h3 data-i18n="membershipPlan">Membresía Diarito</h3>
+              <span class="landing-membership__price-label" data-i18n="membershipPriceLabel">Precio de membresía</span>
+              <div class="landing-membership__price">$7</div>
+              <p class="landing-membership__languages" data-i18n="membershipLanguages">Coreano ↔ Español</p>
+              <p class="landing-membership__level" data-i18n="membershipLevel">Nivel inicial de la beta: A2</p>
+              <details class="landing-membership__join">
+                <summary class="landing-button diarito-button diarito-button--primary diarito-button--md"><span data-i18n="membershipJoin">Unite por $7</span><i class="fi fi-rr-angle-double-right" aria-hidden="true"></i></summary>
+                <div class="landing-membership__notice" role="status"><strong data-i18n="membershipPendingTitle">La membresía aún no está disponible.</strong><p data-i18n="membershipPendingBody">Esta versión muestra la propuesta de acceso a Diarito. Todavía no es posible registrarse ni realizar un pago desde esta página.</p></div>
+              </details>
+              <p class="landing-membership__preview" data-i18n="membershipPreview">Inscripción y pago aún no habilitados.</p>
+            </div>
+            <div class="landing-membership__includes">
+              <h3 data-i18n="membershipIncludes">¿Qué incluye tu membresía?</h3>
+              <ul class="landing-membership__benefits">
+                <li class="landing-membership__benefit"><span class="landing-membership__benefit-icon" aria-hidden="true"><i class="fi fi-rr-edit"></i></span><div><strong data-i18n="benefitDiaryTitle">Tu diario personal</strong><p data-i18n="benefitDiaryBody">Escribí sobre tu día, tus experiencias y emociones.</p></div></li>
+                <li class="landing-membership__benefit"><span class="landing-membership__benefit-icon" aria-hidden="true"><i class="fi fi-rr-users"></i></span><div><strong data-i18n="benefitCommunityTitle">Comunidad e intercambio</strong><p data-i18n="benefitCommunityBody">Leé diarios, compartí los tuyos y conectá con otros miembros.</p></div></li>
+                <li class="landing-membership__benefit"><span class="landing-membership__benefit-icon" aria-hidden="true"><i class="fi fi-rr-comment-alt"></i></span><div><strong data-i18n="benefitReceiveTitle">Retroalimentación humana</strong><p data-i18n="benefitReceiveBody">Recibí correcciones y explicaciones sobre contexto y naturalidad.</p></div></li>
+                <li class="landing-membership__benefit"><span class="landing-membership__benefit-icon" aria-hidden="true"><i class="fi fi-rr-comment-check"></i></span><div><strong data-i18n="benefitGiveTitle">Ayudá a otros a aprender</strong><p data-i18n="benefitGiveBody">Corregí diarios y compartí lo que sabés de tu idioma.</p></div></li>
+                <li class="landing-membership__benefit"><span class="landing-membership__benefit-icon" aria-hidden="true"><i class="fi fi-rr-bookmark"></i></span><div><strong data-i18n="benefitSaveTitle">Expresiones guardadas</strong><p data-i18n="benefitSaveBody">Conservá las expresiones útiles para volver a consultarlas.</p></div></li>
+                <li class="landing-membership__benefit"><span class="landing-membership__benefit-icon" aria-hidden="true"><i class="fi fi-rr-pencil"></i></span><div><strong data-i18n="benefitPracticeTitle">Práctica y reescritura</strong><p data-i18n="benefitPracticeBody">Usá las correcciones para producir nuevas oraciones con tus propias palabras.</p></div></li>
+                <li class="landing-membership__benefit"><span class="landing-membership__benefit-icon" aria-hidden="true"><i class="fi fi-rr-chart-line-up"></i></span><div><strong data-i18n="benefitProgressTitle">Seguimiento de tu aprendizaje</strong><p data-i18n="benefitProgressBody">Revisá tu actividad y el progreso de tus ciclos de escritura, retroalimentación y práctica.</p></div></li>
+                <li class="landing-membership__benefit"><span class="landing-membership__benefit-icon" aria-hidden="true"><i class="fi fi-rr-lock"></i></span><div><strong data-i18n="benefitPrivacyTitle">Control de lo que compartís</strong><p data-i18n="benefitPrivacyBody">Elegí qué entradas mantenés privadas y cuáles publicás.</p></div></li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -338,11 +387,12 @@
       <section class="diarito-section landing-section landing-cta" id="start">
         <div class="diarito-container diarito-container--lg landing-container">
           <div class="landing-cta__inner" data-reveal>
-            <h2 data-i18n="ctaTitle">Tu mundo, expresado. Nuestros mundos, conectados.</h2>
-            <p data-i18n="ctaBody">Empezá con algo que realmente quieras decir. Aprendé desde ahí.</p>
+            <span class="diarito-kicker landing-kicker" data-i18n="ctaKicker">Todo empieza con tu historia</span>
+            <h2 data-i18n="ctaTitle">Tu vida ya tiene historias. Empezá a contarlas en otro idioma.</h2>
+            <p data-i18n="ctaBody">Conectá con otras personas y convertí tus experiencias cotidianas en oportunidades de aprendizaje.</p>
             <div class="landing-cta__actions">
-              <a class="landing-button diarito-button diarito-button--primary diarito-button--md" href="#top" data-i18n="ctaPrimary">Empezar desde tu vida</a>
-              <a class="landing-button diarito-button diarito-button--secondary diarito-button--md" href="#how-it-works" data-i18n="ctaSecondary">Ver el ciclo de aprendizaje</a>
+              <a class="landing-button diarito-button diarito-button--primary diarito-button--md" href="#membership" data-i18n="ctaPrimary">Unite a Diarito por $7</a>
+              <a class="landing-button diarito-button diarito-button--secondary diarito-button--md" href="#how-it-works" data-i18n="ctaSecondary">Ver cómo funciona Diarito</a>
             </div>
           </div>
         </div>
@@ -362,7 +412,8 @@
             <a href="#why" data-i18n="navWhy">Por qué Diarito</a>
             <a href="#how-it-works" data-i18n="navHow">Cómo funciona</a>
             <a href="#feedback" data-i18n="navFeedback">Retroalimentación humana</a>
-            <a href="#trust" data-i18n="navTrust">Confianza</a>
+            <a href="#community" data-i18n="navCommunity">Comunidad</a>
+            <a href="#membership" data-i18n="navMembership">Membresía</a>
           </div>
           <div class="landing-footer__column">
             <strong data-i18n="footerLearn">Aprender</strong>
@@ -405,6 +456,6 @@
     </footer>
   </div>
 
-  <script src="assets/js/landing.js?v=2.19.0-why-r2"></script>
+  <script src="assets/js/landing.js?v=2.19.0-community-r1"></script>
 </body>
 </html>
