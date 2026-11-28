@@ -3,15 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Diarito UI Library 2.19.0</title>
+  <title>Diarito UI Library 2.20.0</title>
   <meta name="description" content="Diarito HTML, CSS and native JavaScript UI component library.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Englebert&family=Noto+Sans+KR:wght@400;500;600;700&family=Poor+Story&family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
-  <link rel="stylesheet" href="assets/css/diarito-system.css?v=2.19.0-reply-dashed-r1">
-  <link rel="stylesheet" href="assets/css/docs-library.css?v=2.19.0">
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg?v=2.19.0-polish-r1">
+  <link rel="stylesheet" href="assets/css/diarito-system.css?v=2.20.0">
+  <link rel="stylesheet" href="assets/css/docs-library.css?v=2.20.0">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg?v=2.20.0">
+  <link rel="stylesheet" href="assets/css/public-demo.css?v=2.20.0">
 </head>
 <body class="docs-body">
   <header class="docs-topbar">
@@ -22,7 +23,7 @@
       </a>
       <div class="docs-topbar__actions">
         <a class="diarito-button diarito-button--ghost" href="index.html"><i class="fi fi-rr-home"></i> Website</a>
-        <span class="diarito-tag">v2.19.0</span>
+        <span class="diarito-tag">v2.20.0</span>
         <button class="diarito-button diarito-button--secondary" type="button" data-diarito-theme-toggle aria-pressed="false" aria-label="Switch to dark theme"><i class="fi fi-rr-moon"></i><span data-diarito-theme-label>Dark</span></button>
         <a class="diarito-button diarito-button--primary" href="#components">View components</a>
       </div>
@@ -34,7 +35,7 @@
       <div class="docs-hero__inner diarito-container docs-container">
         <span class="diarito-kicker">Diarito UI Library · HTML + CSS + JS</span>
         <h1 class="diarito-display">A quieter system with stronger structure.</h1>
-        <p>Version 2.19.0 moves the component library to a dedicated page while the root index becomes Diarito’s public landing page.</p>
+        <p>Version 2.20.0 moves the component library to a dedicated page while the root index becomes Diarito’s public landing page.</p>
         <div class="docs-hero__meta">
           <span class="diarito-chip"><i class="fi fi-rr-code-simple"></i> HTML + CSS</span>
           <span class="diarito-chip"><i class="fi fi-rr-settings-sliders"></i> Native JS only</span>
@@ -172,7 +173,16 @@
               </div>
             </div></div>
           </div></div>
-        </article>
+
+          <div class="diarito-card diarito-card--flat"><div class="diarito-card__body diarito-stack">
+            <h4>Compact input and select</h4>
+            <p class="diarito-help">Use <code>diarito-input--compact</code> and <code>diarito-select--compact</code> in account forms and short editing panels. Height: 38px; input text: 16px. Border, radius, focus, errors and theme inherit the same controls above.</p>
+            <div class="diarito-grid diarito-grid--2">
+              <label class="diarito-field" for="compact-username"><span class="diarito-label">Username</span><input id="compact-username" class="diarito-input diarito-input--compact" value="nickramen" autocomplete="off"></label>
+              <label class="diarito-field" for="compact-language"><span class="diarito-label">Learning language</span><select id="compact-language" class="diarito-select diarito-select--compact"><option>Korean</option><option>Spanish</option></select></label>
+            </div>
+          </div></div>
+</article>
 
         <article class="docs-showcase is-narrow">
           <div class="docs-showcase__head"><div><h3>Selection controls</h3><p>Native behavior, one visual language.</p></div></div>
@@ -732,15 +742,21 @@
         </article>
 
         <article class="docs-showcase is-full" id="pattern-inline-correction">
-          <div class="docs-showcase__head"><div><h3>Inline editorial corrections</h3><p>Render only the selected sentence in a community correction. Removed text uses a red strike-through, added text uses a green highlight, and replacement or reordering combines both operations. Use semantic del/ins elements and a short explanation.</p></div></div>
+          <div class="docs-showcase__head"><div><h3>Inline editorial corrections</h3><p>Render only the selected sentence in a community correction. Removed text uses a red strike-through, added text uses a green highlight, and replacement or reordering combines both operations. Use semantic del/ins elements and a short explanation. A dashed border groups related fragments from one correction; compact relative time appears next to the author handle.</p></div></div>
           <div class="diarito-card diarito-card--flat"><div class="diarito-card__body diarito-stack">
             <p class="diarito-correction-diff" lang="es">Ayer tuve <del class="diarito-correction-diff__removed">un</del> <ins class="diarito-correction-diff__added">una</ins> reunión muy larga.</p>
             <p class="diarito-correction-diff" lang="es">Quiero ir <ins class="diarito-correction-diff__added">a </ins>un parque.</p>
             <p class="diarito-correction-diff" lang="es">Hoy <del class="diarito-correction-diff__removed">yo </del>salí temprano.</p>
             <p class="diarito-correction-diff" lang="ko"><del class="diarito-correction-diff__removed">같이 주말에</del> <ins class="diarito-correction-diff__added">주말에 같이</ins> 영화를 보기로 했어요.</p>
-            <div class="diarito-thread"><div class="diarito-thread__reply"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--sm">M</span><div><strong>Mateo</strong><span>@mateo.r</span></div><div class="diarito-thread__actions"><span class="diarito-thread__kind" aria-label="Correction"><i class="fi fi-rr-pencil" aria-hidden="true"></i></span><button class="diarito-feed-action diarito-thread__like" type="button" data-diarito-toggle="demo-inline-like" aria-pressed="false" aria-label="Like correction"><i class="fi fi-rr-heart" aria-hidden="true"></i><span class="diarito-thread__likes">27</span></button></div></div><div class="diarito-thread__correction"><p class="diarito-correction-diff" lang="es">Ayer tuve <del class="diarito-correction-diff__removed">un</del> <ins class="diarito-correction-diff__added">una</ins> reunión muy larga.</p><p class="diarito-thread__explanation">Reunión is feminine, so use una.</p></div></div></div>
+            <div class="diarito-thread"><div class="diarito-thread__reply"><div class="diarito-thread__identity"><span class="diarito-avatar diarito-avatar--sm">M</span><div><strong>Mateo</strong><span>@mateo.r<time class="diarito-thread__time" datetime="2026-11-28T00:45:27Z" data-relative-time="2026-11-28T00:45:27Z" data-demo-age-minutes="120" title="2026-11-28T00:45:27Z">2h</time></span></div><div class="diarito-thread__actions"><span class="diarito-thread__kind" aria-label="Correction"><i class="fi fi-rr-pencil" aria-hidden="true"></i></span><button class="diarito-feed-action diarito-thread__like" type="button" data-diarito-toggle="demo-inline-like" aria-pressed="false" aria-label="Like correction"><i class="fi fi-rr-heart" aria-hidden="true"></i><span class="diarito-thread__likes">27</span></button></div></div><div class="diarito-thread__correction"><p class="diarito-correction-diff" lang="es">Ayer tuve <del class="diarito-correction-diff__removed">un</del> <ins class="diarito-correction-diff__added">una</ins> reunión muy larga.</p><p class="diarito-thread__explanation">Reunión is feminine, so use una.</p></div></div></div>
           </div></div>
-        </article>
+
+          <div class="diarito-correction-group" aria-label="One correction with two selected fragments">
+            <p class="diarito-correction-diff" lang="es">Ayer tuve <del class="diarito-correction-diff__removed">un</del> <ins class="diarito-correction-diff__added">una</ins> reunión muy larga.</p>
+            <p class="diarito-correction-diff" lang="es">Después <del class="diarito-correction-diff__removed">voy</del> <ins class="diarito-correction-diff__added">fui</ins> a tomar un café.</p>
+            <p class="diarito-thread__explanation">One correction can contain several selected fragments. Explain each change in the review view.</p>
+          </div>
+</article>
 
         <article class="docs-showcase is-full">
           <div class="docs-showcase__head"><div><h3>OIO learning progress</h3><p>Shows the learning cycle as Output → Input → Output, so progress reflects practice completed rather than only login streaks.</p></div></div>
@@ -1061,7 +1077,7 @@
         </article>
 
         <article class="docs-showcase"><div class="docs-showcase__head"><div><h3>Collections</h3><p>Folder rows reuse the same icon, button and metadata pieces.</p></div></div><div class="docs-demo-stack"><div class="diarito-collection-item"><span class="diarito-icon-box"><i class="fi fi-rr-folder"></i></span><div class="diarito-collection-item__content"><strong>Work</strong><span>18 notes · updated today</span></div><button class="diarito-button diarito-button--ghost diarito-button--icon diarito-button--sm"><i class="fi fi-rr-menu-dots-vertical"></i></button></div><div class="diarito-collection-item"><span class="diarito-icon-box"><i class="fi fi-rr-folder"></i></span><div class="diarito-collection-item__content"><strong>Travel</strong><span>7 notes · updated 2 days ago</span></div><button class="diarito-button diarito-button--ghost diarito-button--icon diarito-button--sm"><i class="fi fi-rr-menu-dots-vertical"></i></button></div></div></article>
-        
+
 
         <article class="docs-showcase is-full"><div class="docs-showcase__head"><div><h3>Page shell</h3><p>Sections and containers remain the page-level contract for static HTML now and React later.</p></div></div><div class="diarito-mock-window"><div class="diarito-mock-window__bar"><div class="diarito-mock-window__dots"><span></span><span></span><span></span></div></div><div class="diarito-mock-window__body diarito-page-shell-demo"><div class="diarito-container diarito-container--md"><div class="diarito-topbar"><a class="diarito-brand"><span class="diarito-brand__mark" aria-hidden="true"></span><span>Diarito</span></a><div class="diarito-nav"><a class="is-active">Home</a><a>Notes</a><a>Community</a></div><button class="diarito-button diarito-button--primary diarito-button--sm">New note</button></div></div><section class="diarito-section diarito-section--compact"><div class="diarito-container diarito-container--md"><div class="diarito-section-header"><div class="diarito-section-header__copy"><span class="diarito-kicker">Your notes</span><h2>Everything worth keeping.</h2><p>Page-level spacing and hierarchy without inventing new component styles.</p></div><div class="diarito-section-header__actions"><button class="diarito-button diarito-button--secondary">Filter</button></div></div><div class="diarito-grid diarito-grid--3"><article class="diarito-card"><div class="diarito-card__body">Card</div></article><article class="diarito-card"><div class="diarito-card__body">Card</div></article><article class="diarito-card"><div class="diarito-card__body">Card</div></article></div></div></section></div></div></article>
       </div>
@@ -1099,7 +1115,7 @@
 
     <footer class="docs-footer">
       <div class="docs-footer__block docs-footer__block--main"><div class="docs-footer__block-inner diarito-container docs-container"><div class="docs-footer__main">
-        <div class="docs-footer__brand"><a class="diarito-brand" href="#overview"><span class="diarito-brand__mark" aria-hidden="true"></span><span>Diarito</span></a><p>A reusable HTML, CSS and native JavaScript design system for a quieter, more consistent Diarito.</p><span class="diarito-tag diarito-tag--gray">UI Library v2.19.0</span></div>
+        <div class="docs-footer__brand"><a class="diarito-brand" href="#overview"><span class="diarito-brand__mark" aria-hidden="true"></span><span>Diarito</span></a><p>A reusable HTML, CSS and native JavaScript design system for a quieter, more consistent Diarito.</p><span class="diarito-tag diarito-tag--gray">UI Library v2.20.0</span></div>
         <div class="docs-footer__links"><div class="docs-footer__group"><span class="docs-footer__label">Library</span><a href="#foundation">Foundation</a><a href="#components">Components</a><a href="#feedback">Feedback</a><a href="#data">Data</a></div><div class="docs-footer__group"><span class="docs-footer__label">Product patterns</span><a href="#feed">Feed</a><a href="#patterns">Diarito patterns</a><a href="#rules">Rules</a></div><div class="docs-footer__group"><span class="docs-footer__label">Project</span><a href="https://github.com/nickramen/diarito-ui">GitHub</a><a href="README.md">README</a><a href="docs/CHANGELOG.md">Changelog</a></div></div>
       </div></div></div>
       <div class="docs-footer__block docs-footer__block--social"><div class="docs-footer__block-inner diarito-container docs-container"><span class="docs-footer__label">Diarito around the web</span><div class="docs-footer__social-grid"><a class="docs-footer__social-link" href="#" aria-label="Discord demo link"><i class="fi fi-rr-users-alt"></i><span>Discord</span></a><a class="docs-footer__social-link" href="#" aria-label="X demo link"><i class="fi fi-rr-at"></i><span>X</span></a><a class="docs-footer__social-link" href="#" aria-label="Reddit demo link"><i class="fi fi-rr-comment-alt"></i><span>Reddit</span></a><a class="docs-footer__social-link" href="#" aria-label="TikTok demo link"><i class="fi fi-rr-play-alt"></i><span>TikTok</span></a><a class="docs-footer__social-link" href="#" aria-label="Instagram demo link"><i class="fi fi-rr-camera"></i><span>Instagram</span></a></div></div></div>
@@ -1107,7 +1123,10 @@
     </footer>
   </main>
 
-  <script src="assets/js/diarito.js?v=2.19.0"></script>
-  <script src="assets/js/library-docs.js?v=2.19.0"></script>
+  <script src="assets/js/diarito.js?v=2.20.0"></script>
+  <script src="assets/js/library-docs.js?v=2.20.0"></script>
+  <script src="assets/js/demo-seed.js?v=2.20.0"></script>
+  <script src="assets/js/demo-store.js?v=2.20.0"></script>
+  <script src="assets/js/public-demo.js?v=2.20.0"></script>
 </body>
 </html>

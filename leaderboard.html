@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Leaderboard · Diarito</title>
+  <meta name="description" content="La actividad de escritura de la comunidad de Diarito, calculada con los diarios visibles en esta demo local.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Englebert&family=Noto+Sans+KR:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-thin-rounded/css/uicons-thin-rounded.css">
+  <link rel="stylesheet" href="assets/css/diarito-system.css?v=2.20.0">
+  <link rel="stylesheet" href="assets/css/landing.css?v=2.20.0">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg?v=2.20.0">
+  <link rel="stylesheet" href="assets/css/public-demo.css?v=2.20.0">
+</head>
+<body class="landing-page">
+  <div class="landing-shell">
+
+    <aside class="landing-announcement" data-landing-announcement>
+      <div class="diarito-container diarito-container--lg landing-container landing-announcement__inner">
+        <span class="landing-announcement__eyebrow" data-i18n="announcementEyebrow">Diarito · versión beta</span>
+        <p data-i18n="announcement">Aprendé y conectá con Diarito por $7.</p>
+        <a href="membership.html" data-i18n="announcementLink">Conocé el enfoque</a>
+        <button type="button" data-landing-announcement-close aria-label="Cerrar anuncio" data-i18n-aria="ariaCloseAnnouncement"><i class="fi fi-rr-cross-small"></i></button>
+      </div>
+    </aside>
+
+    <header class="landing-header">
+      <div class="diarito-container diarito-container--lg landing-container landing-header__inner">
+        <a class="landing-brand" href="index.html#top" aria-label="Inicio de Diarito" data-i18n-aria="ariaHome">
+          <span class="landing-brand__mark" aria-hidden="true"></span>
+          <span>Diarito</span>
+        </a>
+
+        <nav class="landing-nav" aria-label="Navegación principal" data-i18n-aria="ariaMainNav">
+          <a href="index.html" data-i18n="navHome">Inicio</a>
+          <a href="recent-diaries.html" data-i18n="navRecent">Últimos diarios</a>
+          <a href="leaderboard.html" data-i18n="navLeaderboard">Leaderboard</a>
+          <a href="membership.html" data-i18n="navMembership">Membresía</a>
+          <a href="blog.html" data-i18n="navBlog">Blog</a>
+        </nav>
+
+        <div class="landing-header__actions">
+          <button class="landing-control diarito-button diarito-button--secondary diarito-button--sm" type="button" data-language-toggle aria-label="Cambiar idioma" data-i18n-aria="ariaLanguage">
+            <i class="fi fi-rr-language"></i>
+            <span data-language-label>ESP</span>
+            <i class="fi fi-rr-angle-small-down"></i>
+          </button>
+          <button class="landing-control diarito-button diarito-button--secondary diarito-button--sm" type="button" data-theme-toggle aria-pressed="false" aria-label="Cambiar tema" data-i18n-aria="ariaTheme">
+            <i class="fi fi-rr-moon" data-theme-icon></i>
+            <span data-theme-label>Oscuro</span>
+          </button>
+          <a class="landing-button diarito-button diarito-button--secondary diarito-button--sm" href="login.html" data-i18n="login"><i class="fi fi-rr-sign-in-alt"></i> Iniciar sesión</a>
+          <a class="landing-button diarito-button diarito-button--primary diarito-button--sm" href="signup.html" data-i18n="navSignup">Registrate</a>
+        </div>
+
+        <details class="landing-mobile-nav">
+          <summary aria-label="Abrir navegación" data-i18n-aria="ariaMenu"><i class="fi fi-rr-menu-burger"></i></summary>
+          <div class="landing-mobile-nav__panel">
+            <nav aria-label="Navegación móvil" data-i18n-aria="ariaMobileNav">
+          <a href="index.html" data-i18n="navHome">Inicio</a>
+          <a href="recent-diaries.html" data-i18n="navRecent">Últimos diarios</a>
+          <a href="leaderboard.html" data-i18n="navLeaderboard">Leaderboard</a>
+          <a href="membership.html" data-i18n="navMembership">Membresía</a>
+          <a href="blog.html" data-i18n="navBlog">Blog</a>
+        </nav>
+            <div class="landing-mobile-nav__actions">
+              <button class="landing-control diarito-button diarito-button--secondary diarito-button--sm" type="button" data-language-toggle><i class="fi fi-rr-language"></i><span data-language-label>ESP</span></button>
+              <button class="landing-control diarito-button diarito-button--secondary diarito-button--sm" type="button" data-theme-toggle><i class="fi fi-rr-moon" data-theme-icon></i><span data-theme-label>Oscuro</span></button>
+              <a class="landing-button diarito-button diarito-button--secondary diarito-button--sm" href="login.html" data-i18n="login">Iniciar sesión</a>
+          <a class="landing-button diarito-button diarito-button--primary diarito-button--sm" href="signup.html" data-i18n="navSignup">Registrate</a>
+            </div>
+          </div>
+        </details>
+      </div>
+    </header>
+
+    <main id="top" data-public-page="leaderboard">
+<section class="public-demo-section"><div class="diarito-container landing-container"><div class="public-demo-reading"><header class="public-demo-intro"><span data-public-copy data-es="Historias que se suman" data-ko="함께 쌓이는 이야기" class="diarito-kicker">Historias que se suman</span><h1 data-public-copy data-es="Leaderboard" data-ko="활동 순위">Leaderboard</h1><p data-public-copy data-es="Cada diario es una nueva oportunidad para practicar. Conocé a quienes están compartiendo más historias con la comunidad." data-ko="일기 한 편마다 새로운 연습이 시작돼요. 커뮤니티에 이야기를 나누는 회원들을 만나 보세요.">Cada diario es una nueva oportunidad para practicar. Conocé a quienes están compartiendo más historias con la comunidad.</p></header><p data-public-copy data-es="Demo local con perfiles e historias ficticias. La actividad se calcula a partir de los diarios de Comunidad visibles en este navegador." data-ko="가상의 프로필과 이야기를 담은 로컬 데모예요. 이 브라우저에서 볼 수 있는 커뮤니티 일기를 기준으로 집계해요." class="public-demo-notice">Demo local con perfiles e historias ficticias. La actividad se calcula a partir de los diarios de Comunidad visibles en este navegador.</p><div data-public-leaderboard><p role="status">Cargando la actividad…</p><noscript>Activá JavaScript para ver la actividad de esta demo.</noscript></div></div></div></section>
+    </main>
+
+    <footer class="landing-footer">
+      <div class="landing-footer__main">
+        <div class="diarito-container diarito-container--lg landing-container landing-footer__grid">
+          <div class="landing-footer__brand">
+            <a class="landing-brand" href="index.html#top" aria-label="Diarito"><span class="landing-brand__mark" aria-hidden="true"></span><span>Diarito</span></a>
+            <p data-i18n="footerBrandBody">Un espacio para aprender el idioma que necesitás para expresar tu propia vida y conectar con la de otras personas.</p>
+            <span data-i18n="footerBeta">Coreano ↔ Español · versión beta · A2</span>
+          </div>
+          <div class="landing-footer__column">
+            <strong data-i18n="footerDiarito">Diarito</strong>
+            <a href="index.html" data-i18n="navHome">Inicio</a>
+          <a href="recent-diaries.html" data-i18n="navRecent">Últimos diarios</a>
+          <a href="leaderboard.html" data-i18n="navLeaderboard">Leaderboard</a>
+          <a href="membership.html" data-i18n="navMembership">Membresía</a>
+          <a href="blog.html" data-i18n="navBlog">Blog</a>
+          </div>
+          <div class="landing-footer__column">
+            <strong data-i18n="footerLearn">Aprender</strong>
+            <a href="index.html#how-it-works" data-i18n="loop1Title">Escribí</a>
+            <a href="index.html#how-it-works" data-i18n="loop2Title">Intercambiá</a>
+            <a href="index.html#how-it-works" data-i18n="loop3Title">Entendé</a>
+            <a href="index.html#how-it-works" data-i18n="loop4Title">Hacelo tuyo</a>
+          </div>
+          <div class="landing-footer__column">
+            <strong data-i18n="footerInfo">Información</strong>
+            <a href="ui-components.html" data-i18n="uiComponents">Componentes de interfaz</a>
+            <a href="guidelines.html" data-public-guidelines>Normas de la comunidad</a>
+            <a href="#" data-i18n="footerPrivacy">Privacidad</a>
+            <a href="#" data-i18n="footerTerms">Términos y condiciones</a>
+            <a href="#" data-i18n="footerContact">Contacto</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="landing-footer__social">
+        <div class="diarito-container diarito-container--lg landing-container">
+          <span class="landing-footer__social-title" data-i18n="footerSocial">Diarito en la web</span>
+          <div class="landing-social-grid">
+            <a href="#" class="landing-social-link"><i class="fi fi-rr-globe"></i><span>Facebook</span></a>
+            <a href="#" class="landing-social-link"><i class="fi fi-rr-camera"></i><span>Instagram</span></a>
+            <a href="#" class="landing-social-link"><i class="fi fi-rr-video-camera-alt"></i><span>TikTok</span></a>
+            <a href="#" class="landing-social-link"><i class="fi fi-rr-at"></i><span>X</span></a>
+            <a href="#" class="landing-social-link"><i class="fi fi-rr-comment-alt"></i><span>Threads</span></a>
+            <a href="#" class="landing-social-link"><i class="fi fi-rr-envelope"></i><span data-i18n="footerEmail">Correo electrónico</span></a>
+            <a href="#" class="landing-social-link"><i class="fi fi-rr-briefcase"></i><span>LinkedIn</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="landing-footer__bottom">
+        <div class="diarito-container diarito-container--lg landing-container landing-footer__bottom-inner">
+          <span data-i18n="footerCopyright">© 2026 Diarito. Todos los derechos reservados.</span>
+          <span data-i18n="footerDeveloped">Diseñado y desarrollado por el equipo de Diarito.</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/js/landing.js?v=2.20.0"></script>
+  <script src="assets/js/demo-seed.js?v=2.20.0"></script>
+  <script src="assets/js/demo-store.js?v=2.20.0"></script>
+  <script src="assets/js/public-demo.js?v=2.20.0"></script>
+</body>
+</html>

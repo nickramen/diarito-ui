@@ -51,6 +51,16 @@
 }
 .diarito-input, .diarito-select { min-height: var(--diarito-control-height); padding: .68rem .8rem; }
 .diarito-textarea { min-height: 8rem; padding: .8rem; resize: vertical; }
+/* Compact controls reuse the same tokens, focus and validation states.
+   Keep 16px input text so mobile browsers do not zoom on focus. */
+.diarito-input--compact, .diarito-select--compact {
+  min-height: 2.375rem;
+  height: 2.375rem;
+  padding: .375rem .7rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
 .diarito-input::placeholder, .diarito-textarea::placeholder { color: var(--diarito-color-text-subtle); }
 .diarito-input:hover:not(:disabled), .diarito-textarea:hover:not(:disabled), .diarito-select:hover:not(:disabled) { border-color: var(--diarito-color-text-subtle); }
 .diarito-input:focus, .diarito-select:focus { outline: 0; border-color: var(--diarito-color-action-bg); box-shadow: var(--diarito-focus-ring); }

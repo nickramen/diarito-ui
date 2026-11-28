@@ -10,10 +10,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Englebert&family=Noto+Sans+KR:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-thin-rounded/css/uicons-thin-rounded.css">
-  <link rel="stylesheet" href="assets/css/diarito-system.css?v=2.19.0-layout-r1">
+  <link rel="stylesheet" href="assets/css/diarito-system.css?v=2.20.0">
   <link rel="preload" as="image" href="assets/images/hero-diarito.webp">
-  <link rel="stylesheet" href="assets/css/landing.css?v=2.19.0-hero-grid-r1">
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg?v=2.19.0-layout-r1">
+  <link rel="stylesheet" href="assets/css/landing.css?v=2.20.0">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg?v=2.20.0">
+  <link rel="stylesheet" href="assets/css/public-demo.css?v=2.20.0">
 </head>
 <body class="landing-page">
   <div class="landing-shell">
@@ -37,6 +38,7 @@
         <nav class="landing-nav" aria-label="Navegación principal" data-i18n-aria="ariaMainNav">
           <a href="index.html" data-i18n="navHome" aria-current="page">Inicio</a>
           <a href="recent-diaries.html" data-i18n="navRecent">Últimos diarios</a>
+          <a href="leaderboard.html" data-i18n="navLeaderboard">Leaderboard</a>
           <a href="membership.html" data-i18n="navMembership">Membresía</a>
           <a href="blog.html" data-i18n="navBlog">Blog</a>
         </nav>
@@ -61,6 +63,7 @@
             <nav aria-label="Navegación móvil" data-i18n-aria="ariaMobileNav">
           <a href="index.html" data-i18n="navHome" aria-current="page">Inicio</a>
           <a href="recent-diaries.html" data-i18n="navRecent">Últimos diarios</a>
+          <a href="leaderboard.html" data-i18n="navLeaderboard">Leaderboard</a>
           <a href="membership.html" data-i18n="navMembership">Membresía</a>
           <a href="blog.html" data-i18n="navBlog">Blog</a>
         </nav>
@@ -400,7 +403,7 @@
               <p class="landing-membership__languages" data-i18n="membershipLanguages">Coreano ↔ Español</p>
               <p class="landing-membership__level" data-i18n="membershipLevel">Nivel inicial de la beta: A2</p>
               <a href="membership.html#membership" class="landing-button diarito-button diarito-button--primary diarito-button--md landing-membership__join-link"><i class="fi fi-rr-angle-double-right" aria-hidden="true"></i><span data-i18n="membershipDetails">Conocé la membresía</span></a>
-              <p class="landing-membership__preview" data-i18n="membershipPreview">Inscripción y pago aún no habilitados.</p>
+              <p class="landing-membership__preview" data-i18n="membershipPreview">Podés probar el registro de la demo. Los pagos aún no están habilitados.</p>
             </div>
             <div class="landing-membership__includes">
               <h3 data-i18n="membershipIncludes">¿Qué incluye tu membresía?</h3>
@@ -473,6 +476,7 @@
             <strong data-i18n="footerDiarito">Diarito</strong>
             <a href="index.html" data-i18n="navHome">Inicio</a>
           <a href="recent-diaries.html" data-i18n="navRecent">Últimos diarios</a>
+          <a href="leaderboard.html" data-i18n="navLeaderboard">Leaderboard</a>
           <a href="membership.html" data-i18n="navMembership">Membresía</a>
           <a href="blog.html" data-i18n="navBlog">Blog</a>
           </div>
@@ -486,6 +490,7 @@
           <div class="landing-footer__column">
             <strong data-i18n="footerInfo">Información</strong>
             <a href="ui-components.html" data-i18n="uiComponents">Componentes de interfaz</a>
+            <a href="guidelines.html" data-public-guidelines>Normas de la comunidad</a>
             <a href="#" data-i18n="footerPrivacy">Privacidad</a>
             <a href="#" data-i18n="footerTerms">Términos y condiciones</a>
             <a href="#" data-i18n="footerContact">Contacto</a>
@@ -517,6 +522,9 @@
     </footer>
   </div>
 
-  <script src="assets/js/landing.js?v=2.19.0-layout-r1"></script>
+  <script src="assets/js/landing.js?v=2.20.0"></script>
+  <script src="assets/js/demo-seed.js?v=2.20.0"></script>
+  <script src="assets/js/demo-store.js?v=2.20.0"></script>
+  <script src="assets/js/public-demo.js?v=2.20.0"></script>
 </body>
 </html>
